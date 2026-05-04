@@ -1,60 +1,60 @@
-# Users & Roles
+# Người Dùng & Phân Quyền (Users & Roles)
 
-## Users
+## Users (Người dùng)
 
-Manage team members under **Admin → Users**.
+Quản lý các thành viên trong team dưới menu **Admin → Users**.
 
-### Inviting a User
+### Mời người dùng (Inviting a User)
 
-1. Go to **Admin → Users → Invite User**
-2. Enter their email address
-3. Assign one or more roles
-4. Click **Send Invite**
+1. Đi tới **Admin → Users → Invite User**
+2. Nhập địa chỉ email của họ
+3. Gán một hoặc nhiều quyền (roles)
+4. Nhấn **Send Invite**
 
-The user receives an email with a link to set their password.
+Người dùng sẽ nhận được một email kèm theo link để thiết lập mật khẩu của họ.
 
-### User Status
+### Trạng Thái Người Dùng (User Status)
 
-| Status | Description |
+| Trạng Thái | Mô Tả |
 |--------|-------------|
-| **Active** | Can log in and use Semantix |
-| **Inactive** | Account disabled — cannot log in |
+| **Active** | Có thể đăng nhập và sử dụng Semantix |
+| **Inactive** | Tài khoản bị vô hiệu hóa — không thể đăng nhập |
 
 ---
 
-## Roles
+## Roles (Phân Quyền)
 
-Roles control what users can see and do in Semantix.
+Phân quyền kiểm soát những gì người dùng có thể xem và thực hiện trong Semantix.
 
-### Default Roles
+### Các Quyền Mặc Định (Default Roles)
 
-| Role | Description |
+| Quyền | Mô Tả |
 |------|-------------|
-| **Admin** | Full access to everything |
-| **User** | Can view dashboards and use AI chat |
+| **Admin** | Có toàn quyền truy cập vào mọi thứ |
+| **User** | Có thể xem dashboards và sử dụng AI chat |
 
-### Creating Custom Roles
+### Tạo Quyền Tùy Chỉnh (Custom Roles)
 
-1. Go to **Admin → Roles → New Role**
-2. Give it a name (e.g. "Data Analyst", "Asia Sales Team")
-3. Select permissions
-4. Click **Save**
-5. Assign users to this role from the **Users** page
+1. Đi tới **Admin → Roles → New Role**
+2. Đặt tên cho quyền (ví dụ: "Data Analyst", "Asia Sales Team")
+3. Chọn các quyền chi tiết (permissions)
+4. Nhấn **Save**
+5. Gán người dùng vào quyền này từ trang **Users**
 
-### Permissions
+### Các Quyền Chi Tiết (Permissions)
 
-| Permission | Description |
+| Quyền | Mô Tả |
 |------------|-------------|
-| `view:dashboards` | View shared dashboards |
-| `edit:dashboards` | Create and edit dashboards |
-| `use:chat` | Use AI chat |
-| `manage:connections` | Create/edit database connections |
-| `manage:contexts` | Create/edit data contexts |
-| `manage:users` | Invite and manage users |
-| `admin:all` | Full admin access |
+| `view:dashboards` | Xem các dashboard được chia sẻ |
+| `edit:dashboards` | Tạo và chỉnh sửa dashboards |
+| `use:chat` | Sử dụng AI chat |
+| `manage:connections` | Tạo/chỉnh sửa các connection database |
+| `manage:contexts` | Tạo/chỉnh sửa các data context |
+| `manage:users` | Mời và quản lý người dùng |
+| `admin:all` | Có toàn quyền truy cập admin |
 
 ---
 
-## Row-Level Security by Role
+## Row-Level Security theo Role
 
-Roles can also have **data access policies** attached to them at the context level. See [Row-Level Security](../contexts/rls.md).
+Các role cũng có thể đính kèm **chính sách truy cập dữ liệu** ở cấp độ context. Xem thêm phần [Row-Level Security](../contexts/rls.md).

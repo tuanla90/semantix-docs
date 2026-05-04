@@ -1,41 +1,41 @@
-# Scheduled Reports
+# Báo Cáo Định Kỳ (Scheduled Reports)
 
-Automatically generate and email reports on a schedule — daily, weekly, or monthly.
+Tự động tạo và gửi báo cáo qua email theo lịch trình — hàng ngày, hàng tuần hoặc hàng tháng.
 
-## Supported Formats
+## Các Định Dạng Hỗ Trợ
 
-- **PDF** — full dashboard snapshot
-- **CSV** — raw data export
-- **Excel (XLSX)** — formatted spreadsheet
+- **PDF** — ảnh chụp toàn bộ dashboard
+- **CSV** — xuất dữ liệu thô (raw data)
+- **Excel (XLSX)** — bảng tính đã được định dạng
 
-## Setting Up a Scheduled Report
+## Thiết Lập Một Báo Cáo Định Kỳ
 
-1. Go to **Admin → Reports → New Report**
-2. Configure:
+1. Đi tới **Admin → Reports → New Report**
+2. Cấu hình:
 
-| Field | Description |
+| Trường | Mô Tả |
 |-------|-------------|
-| **Name** | Report name |
-| **Dashboard** | The dashboard to export |
-| **Format** | PDF, CSV, or XLSX |
-| **Schedule** | Cron expression or preset (daily, weekly, monthly) |
-| **Recipients** | Email addresses to send to |
-| **Subject** | Email subject line |
+| **Name** | Tên báo cáo |
+| **Dashboard** | Dashboard cần xuất báo cáo |
+| **Format** | PDF, CSV, hoặc XLSX |
+| **Schedule** | Lịch trình dưới dạng biểu thức Cron hoặc tùy chọn có sẵn (hàng ngày, hàng tuần, hàng tháng) |
+| **Recipients** | Các địa chỉ email người nhận |
+| **Subject** | Tiêu đề email |
 
-3. Click **Save**
+3. Nhấn **Save**
 
-## Schedule Examples
+## Các Ví Dụ Về Lịch Trình (Schedule Examples)
 
-| Preset | Cron | Description |
+| Tùy Chọn Có Sẵn | Cron | Mô Tả |
 |--------|------|-------------|
-| Daily at 8am | `0 8 * * *` | Every day at 08:00 |
-| Weekly Monday | `0 9 * * 1` | Every Monday at 09:00 |
-| Monthly 1st | `0 7 1 * *` | 1st of every month at 07:00 |
+| Daily at 8am | `0 8 * * *` | Hàng ngày vào lúc 08:00 sáng |
+| Weekly Monday | `0 9 * * 1` | Thứ Hai hàng tuần lúc 09:00 sáng |
+| Monthly 1st | `0 7 1 * *` | Ngày 1 hàng tháng lúc 07:00 sáng |
 
-## Requirements
+## Các Yêu Cầu
 
-- `CRON_SECRET` must be set in your environment variables
-- An email provider (SMTP) must be configured in **Admin → Settings → Email**
-- The cron job must call `/api/cron/reports` with the correct Bearer token on schedule
+- Biến `CRON_SECRET` phải được thiết lập trong biến môi trường (environment variables)
+- Một nhà cung cấp email (email provider - SMTP) phải được cấu hình trong **Admin → Settings → Email**
+- Lịch trình cron job phải gọi đến endpoint `/api/cron/reports` bằng Bearer token chính xác theo đúng lịch trình
 
-> 💡 Use a service like Railway Cron, Vercel Cron, or a system crontab to trigger the endpoint on schedule.
+> 💡 Có thể sử dụng các dịch vụ như Railway Cron, Vercel Cron, hoặc một crontab của hệ thống để gọi tới endpoint theo lịch trình.

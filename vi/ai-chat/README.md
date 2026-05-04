@@ -1,59 +1,59 @@
-# AI Chat & Natural Language Queries
+# AI Chat & Truy Vấn Bằng Ngôn Ngữ Tự Nhiên
 
-## Overview
+## Tổng Quan
 
-Semantix lets you query your data by asking questions in plain English (or any language). No SQL knowledge required.
+Semantix cho phép bạn truy vấn dữ liệu bằng cách đặt câu hỏi bằng ngôn ngữ tự nhiên (tiếng Anh, tiếng Việt, hoặc bất kỳ ngôn ngữ nào). Không yêu cầu kiến thức về SQL.
 
-## Starting a Chat
+## Bắt Đầu Trò Chuyện (Chat)
 
-1. Go to **Analysis** from the main navigation
-2. Select a **Context** (your data source)
-3. Type your question in the chat box
+1. Đi tới **Analysis** từ thanh điều hướng chính
+2. Chọn một **Context** (nguồn dữ liệu của bạn)
+3. Nhập câu hỏi của bạn vào khung chat
 
-## Example Questions
+## Các Câu Hỏi Ví Dụ
 
 ```
-Show me total sales by region for last month
-Which customers spent more than $10,000 in Q4?
-Compare revenue between 2023 and 2024 by category
-What is our average order value this week?
-List the top 10 products by units sold
+Hiển thị tổng doanh thu theo khu vực của tháng trước
+Những khách hàng nào đã chi tiêu hơn 10.000$ trong quý 4?
+So sánh doanh thu giữa năm 2023 và 2024 theo từng danh mục
+Giá trị trung bình của mỗi đơn hàng trong tuần này là bao nhiêu?
+Liệt kê top 10 sản phẩm theo số lượng đã bán
 ```
 
-## How It Works
+## Cách Hoạt Động
 
-1. **Intent Extraction** — The AI understands what you're asking and maps it to your data model
-2. **SQL Generation** — Semantix generates the appropriate SQL query
-3. **Execution** — The query runs against your database
-4. **Visualization** — Results are displayed as a table or chart automatically
+1. **Hiểu ý định (Intent Extraction)** — AI hiểu được bạn đang hỏi gì và ánh xạ (map) nó vào mô hình dữ liệu của bạn
+2. **Tạo SQL (SQL Generation)** — Semantix sinh ra câu truy vấn SQL phù hợp
+3. **Thực thi (Execution)** — Truy vấn được chạy trên database của bạn
+4. **Trực quan hóa (Visualization)** — Kết quả tự động được hiển thị dưới dạng bảng hoặc biểu đồ
 
-## Chat Features
+## Các Tính Năng Của Chat
 
-| Feature | Description |
+| Tính Năng | Mô Tả |
 |---------|-------------|
-| **Follow-up questions** | Ask follow-up questions in the same session |
-| **Chart suggestions** | Semantix auto-suggests the best chart type |
-| **SQL preview** | Click "View SQL" to see the generated query |
-| **Save to dashboard** | Pin any result directly to a dashboard |
-| **Export** | Download results as CSV or Excel |
+| **Follow-up questions** | Đặt các câu hỏi tiếp nối trong cùng một phiên làm việc |
+| **Chart suggestions** | Semantix tự động đề xuất loại biểu đồ phù hợp nhất |
+| **SQL preview** | Nhấn "View SQL" để xem câu truy vấn được sinh ra |
+| **Save to dashboard** | Ghim trực tiếp bất kỳ kết quả nào vào một dashboard |
+| **Export** | Tải kết quả xuống dưới dạng CSV hoặc Excel |
 
-## Analysis Modes
+## Các Chế Độ Phân Tích (Analysis Modes)
 
-| Mode | Description |
+| Chế Độ | Mô Tả |
 |------|-------------|
-| **Structured** | Standard NL → SQL → Chart flow |
-| **Agentic** | AI agent that can run multiple queries and combine results |
+| **Structured** | Luồng tiêu chuẩn: Ngôn ngữ tự nhiên (NL) → SQL → Biểu đồ |
+| **Agentic** | Một AI agent có thể chạy nhiều truy vấn và kết hợp các kết quả lại với nhau |
 
-## Tips for Better Results
+## Mẹo Để Có Kết Quả Tốt Hơn
 
-- Be specific about time periods: *"last 30 days"*, *"Q3 2024"*, *"year to date"*
-- Mention the metric clearly: *"total revenue"*, *"unique users"*, *"average basket size"*
-- If results look wrong, try rephrasing or checking your context's column definitions
+- Hãy cụ thể về khoảng thời gian: *"30 ngày qua"*, *"Quý 3 năm 2024"*, *"từ đầu năm đến nay"*
+- Nêu rõ metric muốn xem: *"tổng doanh thu"*, *"số lượng người dùng duy nhất (unique users)"*, *"kích thước giỏ hàng trung bình"*
+- Nếu kết quả có vẻ sai, hãy thử diễn đạt lại câu hỏi hoặc kiểm tra định nghĩa các cột trong context của bạn
 
-## Advanced Analysis
+## Phân Tích Nâng Cao (Advanced Analysis)
 
-For complex analytical patterns, use the built-in advanced analysis types:
+Đối với các mô hình phân tích phức tạp, hãy sử dụng các loại phân tích nâng cao được tích hợp sẵn:
 
-- [Cohort Analysis](cohort.md)
-- [RFM Analysis](rfm.md)
-- [Funnel Analysis](funnel.md)
+- [Phân Tích Cohort (Cohort Analysis)](cohort.md)
+- [Phân Tích RFM (RFM Analysis)](rfm.md)
+- [Phân Tích Phễu (Funnel Analysis)](funnel.md)

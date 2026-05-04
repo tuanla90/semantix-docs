@@ -1,55 +1,55 @@
 # Microsoft Teams
 
-Connect Semantix to Microsoft Teams to query data and receive alerts directly in Teams channels.
+Kết nối Semantix với Microsoft Teams để truy vấn dữ liệu và nhận cảnh báo trực tiếp trong các kênh Teams.
 
-## Features
+## Các Tính Năng
 
-- Ask natural language questions in any Teams channel or chat
-- Results displayed as rich Adaptive Cards
-- Clarification prompts when the question is ambiguous
+- Đặt các câu hỏi bằng ngôn ngữ tự nhiên trong bất kỳ kênh hoặc chat nào trên Teams
+- Kết quả được hiển thị dưới dạng các Adaptive Cards phong phú
+- Có các lời nhắc làm rõ (clarification prompts) khi câu hỏi không rõ ràng
 
-## Setup
+## Thiết Lập
 
-### Step 1 — Register an Azure Bot
+### Bước 1 — Đăng Ký Một Azure Bot
 
-1. Go to [portal.azure.com](https://portal.azure.com)
-2. Create a new **Azure Bot** resource
-3. Note the **App ID** and create a **Client Secret**
-4. Under **Channels**, enable **Microsoft Teams**
-5. Set the **Messaging Endpoint** to:
+1. Đi tới [portal.azure.com](https://portal.azure.com)
+2. Tạo một tài nguyên **Azure Bot** mới
+3. Lưu ý **App ID** và tạo một **Client Secret**
+4. Trong phần **Channels**, bật tính năng **Microsoft Teams**
+5. Thiết lập **Messaging Endpoint** thành:
    ```
    https://your-semantix-domain.com/api/teams/webhook?channelId=CHANNEL_ID
    ```
 
-### Step 2 — Connect in Semantix
+### Bước 2 — Kết Nối Trong Semantix
 
-1. Go to **Admin → Channels → New Channel → Microsoft Teams**
-2. Enter:
-   - **App ID** — from the Azure Bot registration
-   - **App Password** — the client secret
-   - **Default Context ID** — the context users will query
-   - **Semantix API Key** — for executing queries
-3. Copy the generated **Channel ID**
-4. Update the Azure Bot Messaging Endpoint with this Channel ID
-5. Click **Save**
+1. Đi tới **Admin → Channels → New Channel → Microsoft Teams**
+2. Nhập vào:
+   - **App ID** — lấy từ Azure Bot đã đăng ký
+   - **App Password** — lấy từ client secret
+   - **Default Context ID** — context mà người dùng sẽ truy vấn
+   - **Semantix API Key** — để thực thi truy vấn
+3. Sao chép **Channel ID** đã được sinh ra
+4. Cập nhật Azure Bot Messaging Endpoint với Channel ID này
+5. Nhấn **Save**
 
-### Step 3 — Install the Bot in Teams
+### Bước 3 — Cài Đặt Bot Vào Teams
 
-1. In Teams, go to **Apps → Upload a custom app**
-2. Upload the bot manifest or add it via the App ID
-3. Add the bot to the desired channel or chat
+1. Trong Teams, đi tới **Apps → Upload a custom app**
+2. Tải lên file bot manifest hoặc thêm nó thông qua App ID
+3. Thêm bot vào kênh hoặc chat mong muốn
 
-## Querying in Teams
+## Truy Vấn Trong Teams
 
-Mention the bot or send a message in a connected chat:
+Nhắc đến (Mention) bot hoặc gửi một tin nhắn trong một nhóm chat đã được kết nối:
 
 ```
-@SemantixBot Show me weekly revenue trend
-@SemantixBot Which products are underperforming?
+@SemantixBot Hiển thị xu hướng doanh thu hàng tuần
+@SemantixBot Những sản phẩm nào đang hoạt động kém hiệu quả?
 ```
 
-Results appear as Adaptive Cards with data tables and a link to view full results in Semantix.
+Kết quả sẽ xuất hiện dưới dạng các Adaptive Cards kèm theo các bảng dữ liệu và một link để xem kết quả đầy đủ trên Semantix.
 
-## Security
+## Bảo Mật
 
-Teams webhook requests are validated using JWT tokens signed by Microsoft's Bot Framework — only legitimate Teams messages are processed.
+Các webhook requests trên Teams được xác thực (validated) bằng các JWT tokens có chữ ký số của Microsoft's Bot Framework — đảm bảo chỉ xử lý những tin nhắn Teams hợp lệ.

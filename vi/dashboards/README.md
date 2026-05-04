@@ -1,54 +1,54 @@
 # Dashboards
 
-Dashboards let you save, organize, and share your most important data visualizations.
+Dashboards cho phép bạn lưu, sắp xếp và chia sẻ các hiển thị dữ liệu quan trọng nhất của mình.
 
-## Creating a Dashboard
+## Tạo một Dashboard
 
-1. Go to **Dashboards → New Dashboard**
-2. Give it a name and optional description
-3. Click **Create**
+1. Đi tới **Dashboards → New Dashboard**
+2. Đặt tên và thêm mô tả (tùy chọn)
+3. Nhấn **Create**
 
-## Adding Widgets
+## Thêm Widget
 
-You can add widgets to a dashboard in two ways:
+Bạn có thể thêm widget vào dashboard theo hai cách:
 
-**From a chat result:**
-1. Ask a question in AI Chat
-2. Click the **pin icon** on any result
-3. Select the target dashboard
+**Từ kết quả chat:**
+1. Đặt một câu hỏi trong AI Chat
+2. Nhấn vào **biểu tượng ghim (pin icon)** trên bất kỳ kết quả nào
+3. Chọn dashboard đích
 
-**From the dashboard editor:**
-1. Open a dashboard → click **Add Widget**
-2. Choose the chart type and configure the query
-3. Click **Save**
+**Từ trình chỉnh sửa dashboard:**
+1. Mở một dashboard → nhấn **Add Widget**
+2. Chọn loại biểu đồ và cấu hình truy vấn
+3. Nhấn **Save**
 
-## Chart Types
+## Các Loại Biểu Đồ (Chart Types)
 
-| Type | Best For |
+| Loại | Tốt nhất cho |
 |------|----------|
-| **Bar** | Comparing categories |
-| **Line** | Trends over time |
-| **Area** | Cumulative trends |
-| **Pie / Donut** | Part-to-whole relationships |
-| **Scorecard** | Single KPI metrics |
-| **Table** | Detailed row-level data |
-| **Scatter** | Correlation between two metrics |
-| **Treemap** | Hierarchical proportions |
-| **Funnel** | Conversion steps |
-| **Radar** | Multi-dimension comparisons |
+| **Bar** | So sánh các danh mục |
+| **Line** | Xu hướng theo thời gian |
+| **Area** | Xu hướng tích lũy |
+| **Pie / Donut** | Tỷ lệ thành phần trong tổng thể |
+| **Scorecard** | Các chỉ số KPI đơn lẻ |
+| **Table** | Dữ liệu chi tiết từng dòng |
+| **Scatter** | Mối tương quan giữa hai metric |
+| **Treemap** | Tỷ lệ phân cấp |
+| **Funnel** | Các bước chuyển đổi |
+| **Radar** | So sánh đa chiều |
 
-## Dashboard Features
+## Các Tính Năng Của Dashboard
 
-| Feature | Description |
+| Tính Năng | Mô Tả |
 |---------|-------------|
-| **Auto-refresh** | Set dashboards to refresh every N minutes |
-| **Filters** | Add global filters that apply to all widgets |
-| **Share link** | Share a read-only URL with your team |
-| **Embed** | Embed dashboards in external apps via iframe |
-| **Export** | Export dashboard as PDF or schedule email delivery |
-| **Resize & reorder** | Drag and resize widgets freely |
+| **Auto-refresh** | Đặt dashboards tự động làm mới mỗi N phút |
+| **Filters** | Thêm các bộ lọc chung áp dụng cho tất cả các widget |
+| **Share link** | Chia sẻ URL chỉ đọc (read-only) với team của bạn |
+| **Embed** | Nhúng dashboards vào các ứng dụng bên ngoài qua iframe |
+| **Export** | Xuất dashboard dưới dạng PDF hoặc lên lịch gửi email |
+| **Resize & reorder** | Kéo thả và thay đổi kích thước các widget tự do |
 
-## Next Steps
+## Bước Tiếp Theo
 
-- [Embedding Dashboards](embed.md)
-- [Charts & Widget Configuration](charts.md)
+- [Nhúng Dashboards (Embedding Dashboards)](embed.md)
+- [Biểu Đồ & Cấu Hình Widget](charts.md)

@@ -1,32 +1,32 @@
 # Google Sheets
 
-Connect Google Sheets as a data source using a **Service Account**.
+Kết nối Google Sheets như một nguồn dữ liệu bằng cách sử dụng **Service Account** (Tài khoản dịch vụ).
 
-## Prerequisites
+## Điều Kiện Tiên Quyết
 
-1. A Google Cloud project with the **Google Sheets API** and **Google Drive API** enabled
-2. A Service Account with a JSON key file
+1. Một dự án trên Google Cloud đã được bật **Google Sheets API** và **Google Drive API**
+2. Một Service Account kèm theo file key định dạng JSON
 
-## Setup in Google Cloud
+## Thiết Lập Trong Google Cloud
 
-1. Go to [console.cloud.google.com](https://console.cloud.google.com)
-2. Create a new project (or use an existing one)
-3. Enable **Google Sheets API** and **Google Drive API**
-4. Go to **IAM & Admin → Service Accounts → Create Service Account**
-5. Download the **JSON key file**
-6. Share your Google Sheet with the service account email (e.g. `semantix@your-project.iam.gserviceaccount.com`) with **Viewer** access
+1. Đi tới [console.cloud.google.com](https://console.cloud.google.com)
+2. Tạo một project mới (hoặc dùng project có sẵn)
+3. Bật **Google Sheets API** và **Google Drive API**
+4. Đi tới **IAM & Admin → Service Accounts → Create Service Account**
+5. Tải xuống **file key JSON**
+6. Chia sẻ file Google Sheet của bạn cho địa chỉ email của service account (ví dụ: `semantix@your-project.iam.gserviceaccount.com`) với quyền **Người xem (Viewer)**
 
-## Connect in Semantix
+## Kết Nối Trong Semantix
 
-1. Go to **Admin → Connections → New Connection → Google Sheets**
-2. Paste the contents of the JSON key file into the **Service Account Key** field
-3. Click **Test Connection → Save**
+1. Đi tới **Admin → Connections → New Connection → Google Sheets**
+2. Dán nội dung của file key JSON vào trường **Service Account Key**
+3. Nhấn **Test Connection → Save**
 
-## Browsing Sheets
+## Duyệt Danh Sách Các Sheets
 
-Once connected, Semantix can:
-- List all spreadsheets accessible to the service account
-- Browse individual sheet tabs
-- Auto-detect column headers and data types
+Sau khi kết nối, Semantix có thể:
+- Liệt kê tất cả các file bảng tính (spreadsheets) mà service account có quyền truy cập
+- Duyệt qua các sheet tab (trang tính) riêng lẻ
+- Tự động phát hiện các tiêu đề cột (column headers) và kiểu dữ liệu (data types)
 
-> 💡 The service account can only access sheets that have been explicitly shared with its email address.
+> 💡 Service account chỉ có thể truy cập những bảng tính đã được chia sẻ công khai với địa chỉ email của nó một cách rõ ràng.

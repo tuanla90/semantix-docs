@@ -1,44 +1,44 @@
-# Funnel Analysis
+# Phân Tích Phễu (Funnel Analysis)
 
-Funnel Analysis tracks how users progress through a series of steps — and where they drop off.
+Phân Tích Phễu theo dõi cách người dùng trải qua một loạt các bước — và vị trí mà họ bỏ cuộc (drop off).
 
-## Use Cases
+## Các Use Cases
 
-- E-commerce: *View product → Add to cart → Checkout → Purchase*
-- SaaS onboarding: *Sign up → Activate → First action → Upgrade*
-- Marketing: *Ad click → Landing page → Form submit → Qualified lead*
+- Thương mại điện tử (E-commerce): *Xem sản phẩm → Thêm vào giỏ → Thanh toán → Mua hàng*
+- Đăng ký phần mềm (SaaS onboarding): *Đăng ký → Kích hoạt → Hành động đầu tiên → Nâng cấp*
+- Marketing: *Nhấn vào quảng cáo → Trang đích (Landing page) → Điền form → Trở thành Lead chất lượng*
 
-## Setting Up a Funnel
+## Thiết Lập Phân Tích Phễu
 
-1. Open a context → **Advanced Analysis tab**
-2. Click **Add → Funnel**
-3. Configure:
+1. Mở một context → tab **Advanced Analysis**
+2. Nhấn **Add → Funnel**
+3. Cấu hình:
 
-| Field | Description |
+| Trường | Mô Tả |
 |-------|-------------|
-| **Entity Column** | User/session identifier |
-| **Time Dimension** | Event timestamp |
-| **Steps** | Ordered list of events/actions |
-| **Conversion Window** | Max time between steps (e.g. 7 days) |
+| **Entity Column** | Định danh người dùng/phiên truy cập (user/session identifier) |
+| **Time Dimension** | Dấu thời gian diễn ra sự kiện (Event timestamp) |
+| **Steps** | Danh sách các sự kiện/hành động đã được sắp xếp theo thứ tự |
+| **Conversion Window** | Thời gian tối đa giữa các bước (ví dụ: 7 days) |
 
-## Reading the Funnel Chart
+## Đọc Biểu Đồ Phễu
 
-The output shows each step with:
-- **Total users** who reached this step
-- **Conversion rate** from the previous step
-- **Drop-off rate** at this step
+Kết quả đầu ra hiển thị mỗi bước với:
+- **Total users (Tổng số người dùng)** đã đạt tới bước này
+- **Conversion rate (Tỷ lệ chuyển đổi)** từ bước trước đó
+- **Drop-off rate (Tỷ lệ rời bỏ)** ở bước này
 
 ```
-Step 1: View Product     → 10,000 users  (100%)
-Step 2: Add to Cart      →  3,200 users  (32%)
-Step 3: Begin Checkout   →  1,800 users  (56%)
-Step 4: Complete Payment →  1,200 users  (67%)
+Bước 1: Xem sản phẩm            → 10,000 người  (100%)
+Bước 2: Thêm vào giỏ            →  3,200 người  (32%)
+Bước 3: Bắt đầu thanh toán      →  1,800 người  (56%)
+Bước 4: Hoàn thành thanh toán   →  1,200 người  (67%)
 
-Overall conversion: 12%
+Tỷ lệ chuyển đổi tổng thể: 12%
 ```
 
-## Tips
+## Các Mẹo (Tips)
 
-- Keep funnels to 3–7 steps for clarity
-- Use a realistic conversion window (too short = undercount, too long = noise)
-- Segment funnels by user attributes (e.g. traffic source, device) for deeper insights
+- Giữ cho phễu từ 3–7 bước để dễ dàng theo dõi
+- Sử dụng khung thời gian chuyển đổi thực tế (ngắn quá = đếm sót, dài quá = nhiễu)
+- Phân khúc các phễu (segment funnels) theo thuộc tính người dùng (ví dụ: nguồn traffic, thiết bị) để có cái nhìn sâu sắc hơn

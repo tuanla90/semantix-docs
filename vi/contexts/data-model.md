@@ -1,58 +1,58 @@
-# Building a Data Model
+# Xây Dựng Data Model
 
-## Step 1 — Create a Context
+## Bước 1 — Tạo Một Context
 
-1. Go to **Admin → Contexts → New Context**
-2. Give it a name (e.g. "Sales Analytics")
-3. Select the **Connection** to use
-4. Click **Save**
+1. Đi tới **Admin → Contexts → New Context**
+2. Đặt tên cho context (ví dụ: "Sales Analytics")
+3. Chọn **Connection** để sử dụng
+4. Nhấn **Save**
 
-## Step 2 — Add Tables
+## Bước 2 — Thêm Các Bảng (Add Tables)
 
-1. Open the context → **Scope tab**
-2. Click **Add Table**
-3. Select tables from your database schema
-4. Assign a friendly **Display Name** if needed
-5. Choose which **Columns** to include (you can hide sensitive columns)
+1. Mở context → tab **Scope**
+2. Nhấn **Add Table**
+3. Chọn các bảng từ schema database của bạn
+4. Đặt một tên hiển thị thân thiện (**Display Name**) nếu cần
+5. Chọn các **Columns** (cột) muốn đưa vào (bạn có thể bỏ chọn các cột nhạy cảm để ẩn chúng)
 
-## Step 3 — Define Relationships
+## Bước 3 — Định Nghĩa Các Quan Hệ (Relationships)
 
-If your data spans multiple tables, define how they join:
+Nếu dữ liệu của bạn nằm rải rác trên nhiều bảng, hãy định nghĩa cách chúng nối (join) với nhau:
 
-1. In the **Scope tab** → **Relationships**
-2. Click **Add Relationship**
-3. Select the **From Table**, **From Column**, **To Table**, and **To Column**
-4. Choose the join type (**LEFT JOIN** recommended for most cases)
+1. Trong tab **Scope** → **Relationships**
+2. Nhấn **Add Relationship**
+3. Chọn **From Table**, **From Column**, **To Table**, và **To Column**
+4. Chọn loại join (khuyên dùng **LEFT JOIN** cho hầu hết các trường hợp)
 
-## Step 4 — Add Calculated Columns
+## Bước 4 — Thêm Calculated Columns
 
-Calculated columns let you define business logic once:
+Calculated columns cho phép bạn định nghĩa logic nghiệp vụ một lần duy nhất:
 
-1. Go to the **Model tab** → **Calculated Columns**
-2. Click **Add**
-3. Enter a name and SQL expression, e.g.:
+1. Đi tới tab **Model** → **Calculated Columns**
+2. Nhấn **Add**
+3. Nhập tên và biểu thức SQL, ví dụ:
    ```sql
    price * quantity
    ```
-4. Set the data type (Number, Text, Date)
+4. Chọn kiểu dữ liệu (Number, Text, Date)
 
-## Step 5 — Define Metrics
+## Bước 5 — Định Nghĩa Metrics
 
-Metrics are aggregated measures the AI can use directly:
+Metrics là các thước đo đã được tổng hợp (aggregated measures) mà AI có thể sử dụng trực tiếp:
 
-| Example Metric | Expression |
+| Ví Dụ Metric | Biểu Thức |
 |---------------|------------|
 | Total Revenue | `SUM(orders.price * orders.quantity)` |
 | Avg Order Value | `AVG(orders.total)` |
 | Unique Customers | `COUNT(DISTINCT orders.customer_id)` |
 
-## Step 6 — Configure an Assistant
+## Bước 6 — Cấu Hình Assistant
 
-Assign an AI Assistant to the context so users can start chatting:
+Gán một AI Assistant cho context để người dùng có thể bắt đầu chat:
 
-1. Go to the **Overview tab** → **Assistant**
-2. Select an existing assistant or create one
+1. Đi tới tab **Overview** → **Assistant**
+2. Chọn một assistant có sẵn hoặc tạo mới
 
-## Step 7 — Test It
+## Bước 7 — Kiểm Tra (Test It)
 
-Use the **Query Preview** panel on the context page to test natural language questions before sharing with your team.
+Sử dụng bảng **Query Preview** trên trang context để kiểm tra các câu hỏi bằng ngôn ngữ tự nhiên trước khi chia sẻ với team của bạn.

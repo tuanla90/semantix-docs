@@ -1,58 +1,58 @@
 # SSO (SAML / OIDC)
 
-Semantix supports Single Sign-On via **SAML 2.0** and **OpenID Connect (OIDC)**.
+Semantix hỗ trợ Đăng Nhập Một Lần (Single Sign-On) thông qua **SAML 2.0** và **OpenID Connect (OIDC)**.
 
-## Supported Providers
+## Các Provider Được Hỗ Trợ
 
-| Protocol | Compatible With |
+| Giao Thức | Tương Thích Với |
 |----------|----------------|
-| SAML 2.0 | Okta, Azure AD, Google Workspace, OneLogin, any SAML IdP |
-| OIDC | Google, Microsoft, Auth0, Keycloak, any OIDC provider |
+| SAML 2.0 | Okta, Azure AD, Google Workspace, OneLogin, bất kỳ IdP SAML nào |
+| OIDC | Google, Microsoft, Auth0, Keycloak, bất kỳ provider OIDC nào |
 
-## Setting Up SSO
+## Thiết Lập SSO
 
-### Step 1 — Create an SSO Configuration
+### Bước 1 — Tạo Cấu Hình SSO
 
-1. Go to **Admin → SSO → New Configuration**
-2. Choose the protocol: **SAML** or **OIDC**
-3. Enter your IdP details (see below)
-4. Click **Save**
+1. Đi tới **Admin → SSO → New Configuration**
+2. Chọn giao thức: **SAML** hoặc **OIDC**
+3. Nhập chi tiết IdP của bạn (xem bên dưới)
+4. Nhấn **Save**
 
-### SAML Configuration
+### Cấu Hình SAML
 
-| Field | Description |
+| Trường | Mô Tả |
 |-------|-------------|
-| **Entity ID / Issuer** | Your IdP's entity ID |
-| **SSO URL** | Your IdP's SAML login endpoint |
-| **Certificate** | Your IdP's X.509 certificate (for signature verification) |
+| **Entity ID / Issuer** | Entity ID của IdP của bạn |
+| **SSO URL** | Endpoint đăng nhập SAML của IdP của bạn |
+| **Certificate** | Chứng chỉ X.509 của IdP (dành cho xác minh chữ ký) |
 
-**Semantix SP Metadata:**
+**Metadata của Semantix SP:**
 - **ACS URL (callback):** `https://your-domain.com/api/auth/sso/{id}/callback`
 - **SP Entity ID:** `https://your-domain.com/api/auth/sso/{id}/metadata`
 
-### OIDC Configuration
+### Cấu Hình OIDC
 
-| Field | Description |
+| Trường | Mô Tả |
 |-------|-------------|
-| **Issuer URL** | Your IdP's issuer URL (e.g. `https://accounts.google.com`) |
-| **Client ID** | OAuth client ID |
-| **Client Secret** | OAuth client secret |
+| **Issuer URL** | URL nhà phát hành (issuer) của IdP của bạn (ví dụ: `https://accounts.google.com`) |
+| **Client ID** | ID client OAuth |
+| **Client Secret** | Secret client OAuth |
 
-**Redirect URI to register with your IdP:**
+**Redirect URI cần đăng ký với IdP của bạn:**
 ```
 https://your-domain.com/api/auth/sso/{id}/callback
 ```
 
-### Step 2 — Enable Auto-Provisioning (Optional)
+### Bước 2 — Bật Tính Năng Tự Động Cấp Tài Khoản (Tùy chọn)
 
-When enabled, users who log in via SSO for the first time are automatically created in Semantix with the **Default Role** you specify.
+Khi được bật, những người dùng đăng nhập qua SSO lần đầu tiên sẽ tự động được tạo tài khoản trong Semantix với **Default Role** do bạn chỉ định.
 
-If disabled, only users who already exist in Semantix can log in via SSO.
+Nếu tắt, chỉ những người dùng đã có tài khoản sẵn trong Semantix mới có thể đăng nhập qua SSO.
 
-### Step 3 — Test the Connection
+### Bước 3 — Kiểm Tra Kết Nối
 
-1. Click **Test SSO** on the configuration page
-2. You'll be redirected to your IdP login page
-3. After successful login, you'll be redirected back to Semantix
+1. Nhấn **Test SSO** trên trang cấu hình
+2. Bạn sẽ được chuyển hướng đến trang đăng nhập IdP của bạn
+3. Sau khi đăng nhập thành công, bạn sẽ được chuyển hướng trở lại Semantix
 
-> 💡 Keep at least one local admin account active in case SSO is misconfigured.
+> 💡 Nên giữ ít nhất một tài khoản admin đăng nhập kiểu local đang hoạt động, phòng trường hợp SSO bị cấu hình sai dẫn đến mất quyền truy cập.

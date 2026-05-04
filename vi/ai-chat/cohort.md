@@ -1,34 +1,34 @@
-# Cohort Analysis
+# Phân Tích Cohort (Cohort Analysis)
 
-Cohort Analysis groups users by a shared characteristic (typically their first activity date) and tracks their behavior over time.
+Phân Tích Cohort nhóm những người dùng có chung một đặc điểm (thường là ngày họ hoạt động lần đầu tiên) và theo dõi hành vi của họ theo thời gian.
 
-## Use Cases
+## Các Use Cases
 
-- Retention tracking: *"What % of January sign-ups are still active after 3 months?"*
-- Revenue cohorts: *"How much does each acquisition cohort generate over 12 months?"*
-- Churn analysis: *"Which cohorts have the highest drop-off in month 2?"*
+- Theo dõi tỷ lệ giữ chân (Retention): *"Có bao nhiêu % lượt đăng ký của tháng 1 vẫn đang hoạt động sau 3 tháng?"*
+- Doanh thu theo cohort: *"Mỗi cohort mang lại bao nhiêu doanh thu trong 12 tháng?"*
+- Phân tích tỷ lệ rời bỏ (Churn): *"Những cohort nào có tỷ lệ rời bỏ cao nhất vào tháng thứ 2?"*
 
-## Setting Up a Cohort Analysis
+## Thiết Lập Phân Tích Cohort
 
-1. Open a context → **Advanced Analysis tab**
-2. Click **Add → Cohort**
-3. Configure:
+1. Mở một context → tab **Advanced Analysis**
+2. Nhấn **Add → Cohort**
+3. Cấu hình:
 
-| Field | Description |
+| Trường | Mô Tả |
 |-------|-------------|
-| **Entity Column** | The user/customer identifier (e.g. `user_id`) |
-| **Time Dimension** | The event date column (e.g. `created_at`) |
-| **Value Metric** | Optional — measure to aggregate (e.g. `revenue`) |
-| **Cohort Period** | Week or Month |
+| **Entity Column** | Định danh người dùng/khách hàng (ví dụ: `user_id`) |
+| **Time Dimension** | Cột chứa ngày diễn ra sự kiện (ví dụ: `created_at`) |
+| **Value Metric** | Tùy chọn — thước đo để tổng hợp (ví dụ: `revenue`) |
+| **Cohort Period** | Theo tuần (Week) hoặc theo tháng (Month) |
 
-4. Click **Save**
+4. Nhấn **Save**
 
-## Reading the Cohort Table
+## Đọc Bảng Cohort
 
-The output is a matrix where:
-- **Rows** = cohort groups (e.g. Jan 2024, Feb 2024)
-- **Columns** = periods after first activity (Period 0, Period 1, Period 2...)
-- **Values** = retention rate (%) or aggregated metric
+Kết quả đầu ra là một ma trận trong đó:
+- **Rows (Dòng)** = các nhóm cohort (ví dụ: Jan 2024, Feb 2024)
+- **Columns (Cột)** = các chu kỳ sau lần hoạt động đầu tiên (Period 0, Period 1, Period 2...)
+- **Values (Giá trị)** = Tỷ lệ giữ chân (%) hoặc thước đo đã được tổng hợp
 
 | Cohort | Period 0 | Period 1 | Period 2 | Period 3 |
 |--------|----------|----------|----------|----------|
@@ -36,4 +36,4 @@ The output is a matrix where:
 | Feb 2024 | 100% | 52% | 38% | 31% |
 | Mar 2024 | 100% | 48% | 35% | — |
 
-> 💡 Period 0 always shows 100% as it represents the cohort's first period.
+> 💡 Period 0 luôn hiển thị 100% vì nó đại diện cho chu kỳ đầu tiên của cohort.

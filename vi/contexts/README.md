@@ -1,38 +1,38 @@
 # Contexts & Data Models
 
-## What is a Context?
+## Context Là Gì?
 
-A **Context** is a semantic layer that sits between your raw database and the AI. It tells Semantix:
+Một **Context** (Ngữ cảnh) là một lớp ngữ nghĩa (semantic layer) nằm giữa database thô của bạn và AI. Nó báo cho Semantix biết:
 
-- Which tables and columns are available
-- How tables relate to each other (joins)
-- What metrics and calculated columns exist
-- Who can access what data (Row-Level Security)
+- Những bảng (tables) và cột (columns) nào có sẵn
+- Cách các bảng liên kết với nhau (joins/relations)
+- Những metric và cột tính toán (calculated columns) nào tồn tại
+- Ai có quyền truy cập vào dữ liệu nào (Row-Level Security)
 
-Think of a Context as a **virtual data model** — your users interact with business-friendly names and concepts, not raw table schemas.
+Hãy nghĩ về một Context như một **mô hình dữ liệu ảo (virtual data model)** — người dùng của bạn sẽ tương tác bằng các tên gọi và khái niệm thân thiện với nghiệp vụ kinh doanh, thay vì cấu trúc bảng thô.
 
-## Why Contexts Matter
+## Tại Sao Contexts Lại Quan Trọng
 
-Without a context, the AI would need to figure out your entire database schema every time a user asks a question. With a context:
+Nếu không có context, AI sẽ phải phân tích toàn bộ cấu trúc database của bạn mỗi lần người dùng đặt câu hỏi. Khi có context:
 
-- Queries are faster and more accurate
-- You control exactly what data is exposed
-- Business logic (e.g. "Revenue = price × quantity") is defined once
-- Sensitive columns can be hidden from specific users
+- Các truy vấn (queries) sẽ nhanh hơn và chính xác hơn
+- Bạn kiểm soát chính xác những dữ liệu nào được phép truy xuất
+- Logic nghiệp vụ (ví dụ: "Doanh thu = giá × số lượng") chỉ cần định nghĩa một lần
+- Các cột chứa dữ liệu nhạy cảm có thể được ẩn đi đối với một số người dùng cụ thể
 
-## Context Components
+## Các Thành Phần Của Context
 
-| Component | Description |
+| Thành Phần | Mô Tả |
 |-----------|-------------|
-| **Tables** | The database tables included in this context |
-| **Columns** | Selected columns with friendly display names |
-| **Relationships** | Foreign key joins between tables |
-| **Calculated Columns** | SQL expressions (e.g. `price * quantity`) |
-| **Metrics** | Aggregated measures (e.g. `SUM(revenue)`) |
-| **KPIs** | Key business metrics displayed on the context overview |
-| **Access Policies** | Row-level filters per role |
+| **Tables** | Các bảng database được đưa vào context này |
+| **Columns** | Các cột được chọn cùng tên hiển thị thân thiện |
+| **Relationships** | Các phép nối (joins) qua khóa ngoại giữa các bảng |
+| **Calculated Columns** | Các biểu thức SQL (ví dụ: `price * quantity`) |
+| **Metrics** | Các thước đo được tổng hợp (ví dụ: `SUM(revenue)`) |
+| **KPIs** | Các metric kinh doanh chính hiển thị trên trang tổng quan của context |
+| **Access Policies** | Các bộ lọc dòng (row-level filters) theo từng role |
 
-## Next Steps
+## Bước Tiếp Theo
 
-- [Building a Data Model](data-model.md)
+- [Xây Dựng Data Model](data-model.md)
 - [Row-Level Security](rls.md)

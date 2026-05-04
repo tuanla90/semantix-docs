@@ -1,33 +1,33 @@
-# Connections
+# Kết Nối (Connections)
 
-A **Connection** is how Semantix accesses your data. You can connect to multiple databases and data sources simultaneously.
+Một **Connection** là cách Semantix truy cập vào dữ liệu của bạn. Bạn có thể kết nối tới nhiều database và nguồn dữ liệu cùng một lúc.
 
-## Supported Data Sources
+## Các Nguồn Dữ Liệu Hỗ Trợ
 
-| Type | Engine |
+| Loại | Engine |
 |------|--------|
-| **Relational** | PostgreSQL, MySQL, SQL Server (MSSQL), SQLite |
-| **Cloud Data Warehouses** | BigQuery, Snowflake, Redshift, ClickHouse, Databricks, Trino/Presto |
+| **Cơ sở dữ liệu quan hệ (Relational)** | PostgreSQL, MySQL, SQL Server (MSSQL), SQLite |
+| **Kho dữ liệu đám mây (Cloud Data Warehouses)** | BigQuery, Snowflake, Redshift, ClickHouse, Databricks, Trino/Presto |
 | **File / Spreadsheet** | Google Sheets, DuckDB |
-| **Other** | Webhook (custom HTTP adapter) |
+| **Khác** | Webhook (custom HTTP adapter) |
 
-## Managing Connections
+## Quản Lý Kết Nối
 
-Go to **Admin → Connections** to view, create, edit, or delete connections.
+Đi tới **Admin → Connections** để xem, tạo, chỉnh sửa, hoặc xóa các kết nối.
 
-### Connection Health
+### Trạng Thái Kết Nối (Connection Health)
 
-Semantix automatically checks the health of each connection on a schedule. You can see the status (Healthy / Unhealthy) on the connections list page.
+Semantix tự động kiểm tra trạng thái của từng kết nối theo lịch trình. Bạn có thể xem trạng thái (Khỏe mạnh / Có vấn đề) trên trang danh sách các kết nối.
 
-### Security
+### Bảo Mật
 
-- All credentials are **encrypted at rest** using AES-256 before being stored in the database
-- Connection configs are never exposed in API responses
-- Each connection can be scoped to specific data models
+- Tất cả các thông tin đăng nhập đều được **mã hóa ở trạng thái nghỉ (encrypted at rest)** bằng thuật toán AES-256 trước khi lưu vào database
+- Các cấu hình kết nối không bao giờ bị lộ ra ngoài qua các phản hồi (responses) API
+- Mỗi kết nối có thể được giới hạn phạm vi (scoped) cho các data model cụ thể
 
-## Next Steps
+## Bước Tiếp Theo
 
-Pick your database type to get started:
+Chọn loại database của bạn để bắt đầu:
 
 - [PostgreSQL / Redshift](postgresql.md)
 - [MySQL](mysql.md)

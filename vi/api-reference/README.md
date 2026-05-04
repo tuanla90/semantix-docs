@@ -1,6 +1,6 @@
-# API Reference
+# Tài Liệu API (API Reference)
 
-The Semantix Public API lets you query data, manage dashboards, and generate embed tokens programmatically.
+Public API của Semantix cho phép bạn truy vấn dữ liệu, quản lý dashboards và tạo embed tokens một cách tự động hóa (programmatically).
 
 ## Base URL
 
@@ -8,36 +8,36 @@ The Semantix Public API lets you query data, manage dashboards, and generate emb
 https://your-semantix-domain.com/api/v1
 ```
 
-## Authentication
+## Xác Thực (Authentication)
 
-All API requests require a **Bearer token** in the `Authorization` header:
+Tất cả các API request đều yêu cầu một **Bearer token** trong header `Authorization`:
 
 ```bash
 Authorization: Bearer sk_live_your_api_key
 ```
 
-### Getting an API Key
+### Cách Lấy API Key
 
-1. Go to **Admin → API Keys → New API Key**
-2. Give it a name and select the required scopes
-3. Copy the key — **it will only be shown once**
+1. Đi tới **Admin → API Keys → New API Key**
+2. Đặt tên và chọn các scopes cần thiết
+3. Sao chép key này — **nó sẽ chỉ được hiển thị một lần duy nhất**
 
-### Available Scopes
+### Các Scopes Có Sẵn
 
-| Scope | Description |
+| Scope | Mô Tả |
 |-------|-------------|
-| `execute:query` | Run NL or raw SQL queries |
-| `read:dashboards` | List and read dashboards |
-| `manage:embeds` | Generate embed tokens |
-| `*` | All scopes |
+| `execute:query` | Chạy truy vấn NL (ngôn ngữ tự nhiên) hoặc SQL thô |
+| `read:dashboards` | Liệt kê và xem chi tiết dashboards |
+| `manage:embeds` | Tạo embed tokens |
+| `*` | Tất cả scopes |
 
-## Rate Limiting
+## Giới Hạn Request (Rate Limiting)
 
-| Limit | Value |
+| Giới Hạn | Giá Trị |
 |-------|-------|
-| Requests per hour | 1,000 per API key |
+| Request mỗi giờ | 1,000 cho mỗi API key |
 
-Rate limit headers are included in every response:
+Các header về giới hạn request được trả về trong mọi response:
 
 ```
 X-RateLimit-Limit: 1000
@@ -45,9 +45,9 @@ X-RateLimit-Remaining: 987
 X-RateLimit-Reset: 1714300800
 ```
 
-## Response Format
+## Định Dạng Phản Hồi (Response Format)
 
-All endpoints return JSON:
+Tất cả các endpoint đều trả về JSON:
 
 ```json
 {
@@ -61,19 +61,19 @@ All endpoints return JSON:
 }
 ```
 
-Errors return:
+Các lỗi sẽ được trả về dạng:
 
 ```json
 {
-  "error": "Description of what went wrong"
+  "error": "Mô tả vấn đề xảy ra"
 }
 ```
 
 ## Endpoints
 
-| Method | Endpoint | Scope | Description |
+| Phương Thức (Method) | Endpoint | Scope | Mô Tả |
 |--------|----------|-------|-------------|
-| POST | [/v1/query](query.md) | `execute:query` | Run a NL or SQL query |
-| GET | [/v1/dashboards](dashboards.md) | `read:dashboards` | List dashboards |
-| GET | [/v1/dashboards/:id](dashboards.md) | `read:dashboards` | Get a dashboard |
-| POST | [/v1/embed/token](embed-token.md) | `manage:embeds` | Generate embed token |
+| POST | [/v1/query](query.md) | `execute:query` | Chạy một truy vấn NL hoặc SQL |
+| GET | [/v1/dashboards](dashboards.md) | `read:dashboards` | Liệt kê các dashboards |
+| GET | [/v1/dashboards/:id](dashboards.md) | `read:dashboards` | Lấy thông tin một dashboard |
+| POST | [/v1/embed/token](embed-token.md) | `manage:embeds` | Tạo embed token |

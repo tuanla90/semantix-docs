@@ -1,38 +1,38 @@
-# System Requirements
+# Yêu Cầu Hệ Thống
 
-## For Self-Hosted Deployments
+## Dành Cho Triển Khai Self-Hosted
 
-| Component | Minimum | Recommended |
+| Thành Phần | Tối Thiểu | Khuyến Nghị |
 |-----------|---------|-------------|
 | CPU | 2 vCPU | 4 vCPU |
 | RAM | 2 GB | 4 GB |
-| Storage | 10 GB | 20 GB |
+| Lưu Trữ | 10 GB | 20 GB |
 | Node.js | 18+ | 20+ |
-| PostgreSQL | 14+ | 15+ (for the app database) |
+| PostgreSQL | 14+ | 15+ (dành cho database của ứng dụng) |
 
-## Supported Browsers
+## Trình Duyệt Hỗ Trợ
 
-| Browser | Minimum Version |
+| Trình Duyệt | Phiên Bản Tối Thiểu |
 |---------|----------------|
 | Chrome | 110+ |
 | Firefox | 110+ |
 | Safari | 16+ |
 | Edge | 110+ |
 
-## Network Requirements
+## Yêu Cầu Mạng
 
-- Outbound access to your database hosts
-- Outbound HTTPS for AI provider APIs (OpenAI, Anthropic, Google, etc.)
-- Port 3000 (default) or your configured port
+- Truy cập outbound tới các host database của bạn
+- Outbound HTTPS cho các API của AI provider (OpenAI, Anthropic, Google, v.v.)
+- Port 3000 (mặc định) hoặc port do bạn cấu hình
 
-## Required Environment Variables
+## Các Biến Môi Trường (Environment Variables) Bắt Buộc
 
-| Variable | Description | Required |
+| Biến | Mô Tả | Bắt Buộc |
 |----------|-------------|----------|
-| `DATABASE_URL` | PostgreSQL connection URL for the app database | ✅ |
-| `AUTH_SECRET` | Random secret for session signing (min 32 chars) | ✅ |
-| `NEXTAUTH_URL` | Public URL of your Semantix instance | ✅ |
-| `ENCRYPTION_KEY` | Key for encrypting stored credentials | ✅ |
-| `CRON_SECRET` | Secret to protect cron endpoints | ✅ |
+| `DATABASE_URL` | PostgreSQL connection URL cho database của ứng dụng | ✅ |
+| `AUTH_SECRET` | Secret ngẫu nhiên để ký session (tối thiểu 32 ký tự) | ✅ |
+| `NEXTAUTH_URL` | Public URL của instance Semantix của bạn | ✅ |
+| `ENCRYPTION_KEY` | Key dùng để mã hóa thông tin đăng nhập được lưu trữ | ✅ |
+| `CRON_SECRET` | Secret để bảo vệ các cron endpoint | ✅ |
 
-> ⚠️ Never share or commit your `.env` file to version control.
+> ⚠️ Không bao giờ chia sẻ hoặc commit file `.env` của bạn lên version control.

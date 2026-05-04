@@ -1,46 +1,46 @@
-# RFM Analysis
+# Phân Tích RFM
 
-RFM stands for **Recency, Frequency, Monetary** — a customer segmentation model that scores customers based on their purchasing behavior.
+RFM là viết tắt của **Recency (Gần đây), Frequency (Tần suất), Monetary (Tiền tệ)** — một mô hình phân khúc khách hàng nhằm chấm điểm khách hàng dựa trên hành vi mua hàng của họ.
 
-## RFM Dimensions
+## Các Chiều Của RFM
 
-| Dimension | Question | Example |
+| Chiều | Câu Hỏi | Ví Dụ |
 |-----------|----------|---------|
-| **Recency** | How recently did the customer buy? | Last purchase 5 days ago |
-| **Frequency** | How often do they buy? | 12 orders in the last year |
-| **Monetary** | How much do they spend? | $3,400 total spend |
+| **Recency** | Khách hàng đã mua hàng gần đây nhất vào lúc nào? | Lần mua gần nhất cách đây 5 ngày |
+| **Frequency** | Họ mua hàng thường xuyên như thế nào? | 12 đơn hàng trong năm qua |
+| **Monetary** | Họ đã chi tiêu bao nhiêu tiền? | Tổng mức chi tiêu là 3.400$ |
 
-## Use Cases
+## Các Use Cases
 
-- Identify your best customers (high R, F, and M scores)
-- Find customers at risk of churning (low Recency)
-- Target win-back campaigns for lapsed customers
-- Personalize promotions by segment
+- Xác định các khách hàng tốt nhất của bạn (điểm R, F, và M cao)
+- Tìm các khách hàng có nguy cơ rời bỏ (điểm Recency thấp)
+- Lên chiến dịch để thu hút lại các khách hàng đã mất
+- Cá nhân hóa các chương trình khuyến mãi theo từng phân khúc
 
-## Setting Up RFM Analysis
+## Thiết Lập Phân Tích RFM
 
-1. Open a context → **Advanced Analysis tab**
-2. Click **Add → RFM**
-3. Configure:
+1. Mở một context → tab **Advanced Analysis**
+2. Nhấn **Add → RFM**
+3. Cấu hình:
 
-| Field | Description |
+| Trường | Mô Tả |
 |-------|-------------|
-| **Entity Column** | Customer identifier (e.g. `customer_id`) |
-| **Time Dimension** | Order/event date (e.g. `order_date`) |
-| **Value Metric** | Revenue or order value (e.g. `SUM(total)`) |
+| **Entity Column** | Định danh khách hàng (ví dụ: `customer_id`) |
+| **Time Dimension** | Ngày đặt hàng/sự kiện (ví dụ: `order_date`) |
+| **Value Metric** | Doanh thu hoặc giá trị đơn hàng (ví dụ: `SUM(total)`) |
 
-4. Click **Save**
+4. Nhấn **Save**
 
-## RFM Segments
+## Phân Khúc RFM
 
-Semantix automatically assigns each customer to a segment based on their combined RFM score:
+Semantix tự động gán từng khách hàng vào một phân khúc dựa trên điểm RFM tổng hợp của họ:
 
-| Segment | Description |
+| Phân Khúc | Mô Tả |
 |---------|-------------|
-| 🥇 Champions | Bought recently, buy often, spend the most |
-| 💛 Loyal Customers | Buy regularly with good spend |
-| 🌱 Potential Loyalists | Recent buyers with average frequency |
-| 🆕 New Customers | Bought very recently for the first time |
-| ⚠️ At Risk | Good historical customers who haven't bought recently |
-| 💤 Hibernating | Low R, F, and M — nearly lost |
-| ❌ Lost | Haven't purchased in a very long time |
+| 🥇 Champions (Nhà vô địch) | Mua hàng gần đây nhất, mua thường xuyên, chi tiêu nhiều nhất |
+| 💛 Loyal Customers (Khách hàng trung thành) | Mua hàng thường xuyên với mức chi tiêu tốt |
+| 🌱 Potential Loyalists (Tiềm năng trung thành) | Khách mua hàng gần đây với tần suất trung bình |
+| 🆕 New Customers (Khách hàng mới) | Vừa mua hàng lần đầu tiên trong thời gian rất gần đây |
+| ⚠️ At Risk (Có nguy cơ rời bỏ) | Từng là khách hàng tốt trong lịch sử nhưng không mua hàng dạo gần đây |
+| 💤 Hibernating (Ngủ đông) | Điểm R, F, M thấp — gần như đã mất |
+| ❌ Lost (Đã mất) | Đã không mua hàng trong một thời gian rất dài |

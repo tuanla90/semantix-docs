@@ -1,6 +1,6 @@
 # POST /v1/embed/token
 
-Generate a signed JWT token to embed a dashboard in an external application.
+Tạo một JWT token đã được ký để nhúng dashboard vào ứng dụng bên ngoài.
 
 ## Request
 
@@ -21,13 +21,13 @@ Content-Type: application/json
 }
 ```
 
-| Field | Type | Required | Description |
+| Trường | Kiểu Dữ Liệu | Bắt Buộc | Mô Tả |
 |-------|------|----------|-------------|
-| `dashboardId` | string | ✅ | ID of the dashboard to embed |
-| `expiryDays` | number | ❌ | Token validity in days (max 365, default 30) |
-| `lockedFilters` | object | ❌ | Filters baked into the token — users cannot override these |
+| `dashboardId` | string | ✅ | ID của dashboard cần nhúng |
+| `expiryDays` | number | ❌ | Thời hạn hợp lệ của token tính bằng ngày (tối đa 365, mặc định 30) |
+| `lockedFilters` | object | ❌ | Các bộ lọc được nhúng cứng vào token — người dùng không thể ghi đè (override) các bộ lọc này |
 
-## Response
+## Phản Hồi (Response)
 
 ```json
 {
@@ -39,9 +39,9 @@ Content-Type: application/json
 }
 ```
 
-## Using the Token
+## Sử Dụng Token
 
-Render the dashboard in an iframe on your frontend:
+Render dashboard trong một iframe ở phía frontend của bạn:
 
 ```html
 <iframe
@@ -52,14 +52,14 @@ Render the dashboard in an iframe on your frontend:
 ></iframe>
 ```
 
-## Security Notes
+## Lưu Ý Về Bảo Mật (Security Notes)
 
-- **Never generate embed tokens on the frontend** — your API key would be exposed
-- Generate tokens on your **backend server** and pass them to the frontend
-- Use `lockedFilters` to enforce data isolation per user/tenant
-- Tokens expire after `expiryDays` — generate a fresh token for each session if needed
+- **Không bao giờ tạo embed tokens ở frontend** — API key của bạn sẽ bị lộ
+- Hãy tạo tokens ở **backend server** của bạn và truyền chúng tới frontend
+- Sử dụng `lockedFilters` để bắt buộc việc cách ly dữ liệu (data isolation) cho mỗi người dùng/khách thuê (tenant)
+- Các tokens sẽ hết hạn sau số ngày `expiryDays` — hãy tạo một token mới cho mỗi phiên (session) nếu cần
 
-## Example — Node.js Backend
+## Ví Dụ — Node.js Backend
 
 ```javascript
 // Server-side only
@@ -79,5 +79,5 @@ const res = await fetch('https://your-domain.com/api/v1/embed/token', {
 });
 
 const { data } = await res.json();
-// Pass data.token to the frontend
+// Truyền data.token sang frontend
 ```

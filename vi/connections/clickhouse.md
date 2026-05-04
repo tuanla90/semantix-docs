@@ -1,20 +1,20 @@
 # ClickHouse
 
-## Required Fields
+## Các Trường Bắt Buộc
 
-| Field | Description | Default |
+| Trường | Mô Tả | Mặc Định |
 |-------|-------------|---------|
-| Host | ClickHouse server hostname | |
-| Port | HTTP interface port | `8443` (HTTPS) / `8123` (HTTP) |
-| Database | Database name | |
-| Username | ClickHouse user | |
-| Password | User password | |
-| Protocol | `https` or `http` | `https` |
+| Host | Hostname của server ClickHouse | |
+| Port | Cổng giao tiếp HTTP | `8443` (HTTPS) / `8123` (HTTP) |
+| Database | Tên database | |
+| Username | Tài khoản ClickHouse | |
+| Password | Mật khẩu | |
+| Protocol | `https` hoặc `http` | `https` |
 
-## Steps
+## Các Bước Thực Hiện
 
-1. Go to **Admin → Connections → New Connection → ClickHouse**
-2. Fill in the connection details
-3. Click **Test Connection → Save**
+1. Đi tới **Admin → Connections → New Connection → ClickHouse**
+2. Điền thông tin chi tiết kết nối
+3. Nhấn **Test Connection → Save**
 
-> ⚠️ For ClickHouse Cloud, always use `https` with port `8443`.
+> ⚠️ Đối với ClickHouse Cloud, luôn sử dụng `https` với cổng `8443`.

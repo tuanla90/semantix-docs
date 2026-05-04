@@ -1,6 +1,6 @@
 # POST /v1/query
 
-Execute a query against your data — either via natural language or raw SQL.
+Thực thi một truy vấn trên dữ liệu của bạn — thông qua ngôn ngữ tự nhiên (NL) hoặc SQL thô.
 
 ## Request
 
@@ -10,9 +10,9 @@ Authorization: Bearer sk_live_your_api_key
 Content-Type: application/json
 ```
 
-## Mode 1 — Natural Language Query
+## Chế Độ 1 (Mode 1) — Truy Vấn Bằng Ngôn Ngữ Tự Nhiên
 
-Ask a question in plain English using a configured context:
+Hỏi một câu bằng ngôn ngữ tự nhiên sử dụng context đã được cấu hình:
 
 ```json
 {
@@ -21,14 +21,14 @@ Ask a question in plain English using a configured context:
 }
 ```
 
-| Field | Type | Required | Description |
+| Trường | Kiểu Dữ Liệu | Bắt Buộc | Mô Tả |
 |-------|------|----------|-------------|
-| `contextId` | string (UUID) | ✅ | ID of the context to query |
-| `question` | string | ✅ | Natural language question (max 5,000 chars) |
+| `contextId` | string (UUID) | ✅ | ID của context cần truy vấn |
+| `question` | string | ✅ | Câu hỏi bằng ngôn ngữ tự nhiên (tối đa 5.000 ký tự) |
 
-## Mode 2 — Raw SQL Query
+## Chế Độ 2 (Mode 2) — Truy Vấn SQL Thô
 
-Execute SQL directly against a connection:
+Thực thi lệnh SQL trực tiếp qua một connection:
 
 ```json
 {
@@ -37,14 +37,14 @@ Execute SQL directly against a connection:
 }
 ```
 
-| Field | Type | Required | Description |
+| Trường | Kiểu Dữ Liệu | Bắt Buộc | Mô Tả |
 |-------|------|----------|-------------|
-| `connectionId` | string (UUID) | ✅ | ID of the connection to query |
-| `sql` | string | ✅ | SQL query to execute (max 50,000 chars) |
+| `connectionId` | string (UUID) | ✅ | ID của connection cần truy vấn |
+| `sql` | string | ✅ | Truy vấn SQL cần thực thi (tối đa 50.000 ký tự) |
 
-> ⚠️ Raw SQL requires the `execute:query` scope and runs directly on your database. Use with care.
+> ⚠️ SQL thô yêu cầu scope `execute:query` và chạy trực tiếp trên database của bạn. Cần sử dụng cẩn thận.
 
-## Response
+## Phản Hồi (Response)
 
 ```json
 {
@@ -62,7 +62,7 @@ Execute SQL directly against a connection:
 }
 ```
 
-## Example — cURL
+## Ví Dụ — cURL
 
 ```bash
 curl -X POST https://your-domain.com/api/v1/query \
@@ -74,7 +74,7 @@ curl -X POST https://your-domain.com/api/v1/query \
   }'
 ```
 
-## Example — JavaScript
+## Ví Dụ — JavaScript
 
 ```javascript
 const response = await fetch('https://your-domain.com/api/v1/query', {

@@ -1,49 +1,49 @@
 # API Keys
 
-API Keys allow external applications to access the Semantix API.
+API Keys cho phép các ứng dụng bên ngoài truy cập vào API của Semantix.
 
-## Creating an API Key
+## Tạo API Key
 
-1. Go to **Admin → API Keys → New API Key**
-2. Enter a descriptive name (e.g. "Production Backend", "Analytics Dashboard")
-3. Select the required **scopes**
-4. Optionally set an **expiry date**
-5. Optionally set an **IP whitelist** (restrict to specific IPs)
-6. Click **Create**
-7. **Copy the key immediately** — it will not be shown again
+1. Đi tới **Admin → API Keys → New API Key**
+2. Nhập một tên mô tả (ví dụ: "Production Backend", "Analytics Dashboard")
+3. Chọn các **scopes** (phạm vi quyền) cần thiết
+4. (Tùy chọn) Thiết lập **ngày hết hạn (expiry date)**
+5. (Tùy chọn) Thiết lập **danh sách IP trắng (IP whitelist)** (hạn chế cho các IP cụ thể)
+6. Nhấn **Create**
+7. **Sao chép key này ngay lập tức** — nó sẽ không được hiển thị lại lần nào nữa
 
-## API Key Format
+## Định Dạng API Key
 
-All keys start with `sk_live_`:
+Tất cả các key đều bắt đầu bằng `sk_live_`:
 
 ```
 sk_live_abc123def456...
 ```
 
-## Scopes
+## Scopes (Phạm vi quyền)
 
-| Scope | Description |
+| Scope | Mô Tả |
 |-------|-------------|
-| `execute:query` | Run NL and raw SQL queries |
-| `read:dashboards` | List and read dashboards |
-| `manage:embeds` | Generate embed tokens |
-| `*` | All scopes |
+| `execute:query` | Chạy truy vấn bằng ngôn ngữ tự nhiên (NL) và SQL thô |
+| `read:dashboards` | Liệt kê và đọc các dashboard |
+| `manage:embeds` | Tạo embed tokens |
+| `*` | Tất cả scopes |
 
-## IP Whitelist
+## Danh Sách IP Trắng (IP Whitelist)
 
-Restrict an API key to specific IP addresses for additional security:
+Hạn chế một API key chỉ được truy cập từ các địa chỉ IP cụ thể để tăng cường bảo mật:
 
-- Enter one IP per line or comma-separated
-- Supports CIDR notation (e.g. `192.168.1.0/24`)
-- Requests from non-whitelisted IPs return `403 Forbidden`
+- Nhập một IP trên mỗi dòng hoặc cách nhau bằng dấu phẩy
+- Hỗ trợ ký hiệu CIDR (ví dụ: `192.168.1.0/24`)
+- Các request từ những IP không nằm trong danh sách trắng sẽ trả về lỗi `403 Forbidden`
 
-## Rotating a Key
+## Thu Hồi và Cấp Lại Key (Rotating a Key)
 
-If a key is compromised:
+Nếu một key bị lộ (compromised):
 
-1. Go to **Admin → API Keys**
-2. Find the key → click **Revoke**
-3. Create a new key with the same scopes
-4. Update your applications with the new key
+1. Đi tới **Admin → API Keys**
+2. Tìm key đó → nhấn **Revoke**
+3. Tạo một key mới với các scope tương tự
+4. Cập nhật các ứng dụng của bạn với key mới
 
-> ⚠️ Revoking a key is immediate and irreversible. Applications using the old key will get `401 Unauthorized` instantly.
+> ⚠️ Việc thu hồi (revoke) key sẽ có hiệu lực ngay lập tức và không thể đảo ngược. Các ứng dụng đang sử dụng key cũ sẽ nhận lỗi `401 Unauthorized` ngay lập tức.

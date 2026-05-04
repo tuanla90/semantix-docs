@@ -1,17 +1,17 @@
-# Embedding Dashboards
+# Nhúng Dashboards (Embedding)
 
-Embed Semantix dashboards into your own application or website using an **iframe** and a signed **embed token**.
+Nhúng các dashboards của Semantix vào ứng dụng hoặc trang web của riêng bạn bằng cách sử dụng **iframe** và một **embed token** đã được ký.
 
-## How It Works
+## Cách Hoạt Động
 
-1. Your backend requests an embed token from the Semantix API
-2. The token is passed to your frontend
-3. Your frontend renders an iframe with the token in the URL
-4. Semantix validates the token and displays the dashboard
+1. Backend của bạn yêu cầu một embed token từ API của Semantix
+2. Token này được truyền tới frontend của bạn
+3. Frontend của bạn render một iframe chứa token trong URL
+4. Semantix xác thực token và hiển thị dashboard
 
-## Step 1 — Generate an Embed Token
+## Bước 1 — Tạo Một Embed Token
 
-Call the Semantix API from your **backend** (never from the frontend — the API key must stay secret):
+Gọi API của Semantix từ **backend** của bạn (không bao giờ gọi từ frontend — API key phải được giữ bí mật):
 
 ```bash
 POST /api/v1/embed/token
@@ -27,7 +27,7 @@ Content-Type: application/json
 }
 ```
 
-**Response:**
+**Phản Hồi (Response):**
 ```json
 {
   "data": {
@@ -38,7 +38,7 @@ Content-Type: application/json
 }
 ```
 
-## Step 2 — Render the iframe
+## Bước 2 — Render iframe
 
 ```html
 <iframe
@@ -50,9 +50,9 @@ Content-Type: application/json
 ></iframe>
 ```
 
-## Locked Filters
+## Các Bộ Lọc Bị Khóa (Locked Filters)
 
-Use `lockedFilters` to bake access restrictions directly into the token. Users viewing the embedded dashboard cannot bypass these filters:
+Sử dụng `lockedFilters` để nhúng sẵn các giới hạn truy cập trực tiếp vào trong token. Người dùng xem dashboard được nhúng không thể bỏ qua các bộ lọc này:
 
 ```json
 {
@@ -63,12 +63,12 @@ Use `lockedFilters` to bake access restrictions directly into the token. Users v
 }
 ```
 
-## Token Options
+## Các Tùy Chọn Của Token (Token Options)
 
-| Option | Type | Description | Default |
+| Tùy Chọn | Kiểu Dữ Liệu | Mô Tả | Mặc Định |
 |--------|------|-------------|---------|
-| `dashboardId` | string | ID of the dashboard to embed | Required |
-| `expiryDays` | number | Token validity in days (max 365) | `30` |
-| `lockedFilters` | object | Filters baked into the token | None |
+| `dashboardId` | string | ID của dashboard cần nhúng | Bắt buộc |
+| `expiryDays` | number | Thời hạn hợp lệ của token tính bằng ngày (tối đa 365) | `30` |
+| `lockedFilters` | object | Các bộ lọc được nhúng cứng vào token | Không có |
 
-> ⚠️ Embed tokens are scoped to a specific dashboard. Generate a new token for each dashboard you want to embed.
+> ⚠️ Embed tokens bị giới hạn trong một dashboard cụ thể. Hãy tạo một token mới cho mỗi dashboard mà bạn muốn nhúng.

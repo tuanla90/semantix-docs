@@ -1,34 +1,34 @@
 # BigQuery
 
-Semantix connects to BigQuery via a **Google Apps Script proxy** or a **direct service account**.
+Semantix kết nối với BigQuery thông qua một **Google Apps Script proxy** hoặc một **direct service account (tài khoản dịch vụ trực tiếp)**.
 
-## Connection via Apps Script (Recommended)
+## Kết Nối qua Apps Script (Khuyên dùng)
 
-This method uses a Google Apps Script as a middleware between Semantix and BigQuery, which avoids exposing service account keys directly.
+Phương pháp này sử dụng một Google Apps Script làm trung gian (middleware) giữa Semantix và BigQuery, giúp tránh việc lộ khóa (keys) của service account một cách trực tiếp.
 
-### Steps
+### Các Bước Thực Hiện
 
-1. Deploy the Semantix BigQuery Apps Script to your Google account
-2. Copy the **Web App URL** from the Apps Script deployment
-3. In Semantix: **Admin → Connections → New Connection → BigQuery**
-4. Paste the Web App URL into the **Webhook URL** field
-5. Click **Test Connection → Save**
+1. Triển khai (Deploy) script Semantix BigQuery Apps Script vào tài khoản Google của bạn
+2. Sao chép **Web App URL** từ bản triển khai Apps Script
+3. Trong Semantix: **Admin → Connections → New Connection → BigQuery**
+4. Dán Web App URL vào trường **Webhook URL**
+5. Nhấn **Test Connection → Save**
 
-## Required Fields
+## Các Trường Bắt Buộc
 
-| Field | Description |
+| Trường | Mô Tả |
 |-------|-------------|
-| Webhook URL | The Apps Script Web App deployment URL |
-| Project ID | Your GCP project ID (auto-detected after connection) |
+| Webhook URL | URL từ bản triển khai Apps Script Web App |
+| Project ID | Project ID trên GCP của bạn (tự động nhận diện sau khi kết nối) |
 
-## Permissions
+## Phân Quyền (Permissions)
 
-The Google account running the Apps Script needs:
-- **BigQuery Data Viewer** role on the datasets you want to query
-- **BigQuery Job User** role to run queries
+Tài khoản Google đang chạy Apps Script cần:
+- Role **BigQuery Data Viewer** trên các datasets mà bạn muốn truy vấn
+- Role **BigQuery Job User** để chạy các truy vấn
 
-## Browsing Projects & Datasets
+## Duyệt Projects & Datasets
 
-Once connected, Semantix can browse your BigQuery projects, datasets, and tables directly from the **Connection detail page** — no manual configuration needed.
+Sau khi kết nối, Semantix có thể duyệt các projects, datasets, và tables trên BigQuery trực tiếp từ **Trang chi tiết kết nối (Connection detail page)** — không cần phải cấu hình thủ công.
 
-> 💡 Semantix caches the table schema to speed up AI query generation. Refresh the schema from the connection detail page when your BigQuery schema changes.
+> 💡 Semantix lưu trữ đệm (caches) schema của bảng để tăng tốc độ tạo truy vấn của AI. Hãy refresh lại schema từ trang chi tiết kết nối khi schema BigQuery của bạn có sự thay đổi.

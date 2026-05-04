@@ -1,40 +1,40 @@
 # Snowflake
 
-## Required Fields
+## Các Trường Bắt Buộc
 
-| Field | Description | Default |
+| Trường | Mô Tả | Mặc Định |
 |-------|-------------|---------|
-| Account | Snowflake account identifier (e.g. `xy12345.us-east-1`) | |
-| Username | Snowflake user | |
-| Password | User password | |
-| Database | Database name | |
-| Schema | Schema name | `PUBLIC` |
-| Warehouse | Compute warehouse name | |
-| Role | Snowflake role (optional) | |
+| Account | Định danh tài khoản Snowflake (ví dụ: `xy12345.us-east-1`) | |
+| Username | Tài khoản Snowflake | |
+| Password | Mật khẩu | |
+| Database | Tên database | |
+| Schema | Tên schema | `PUBLIC` |
+| Warehouse | Tên compute warehouse | |
+| Role | Quyền (role) trên Snowflake (tùy chọn) | |
 
-## Steps
+## Các Bước Thực Hiện
 
-1. Go to **Admin → Connections → New Connection → Snowflake**
-2. Fill in your account details
-3. Click **Test Connection → Save**
+1. Đi tới **Admin → Connections → New Connection → Snowflake**
+2. Điền thông tin chi tiết tài khoản của bạn
+3. Nhấn **Test Connection → Save**
 
-## Finding Your Account Identifier
+## Cách Tìm Định Danh Tài Khoản (Account Identifier)
 
-In Snowflake, go to **Admin → Accounts** and copy the account identifier. It looks like:
+Trong Snowflake, đi tới **Admin → Accounts** và sao chép định danh tài khoản. Nó trông giống như sau:
 
 ```
 xy12345.us-east-1
 ```
 
-or for newer accounts:
+hoặc đối với các tài khoản mới hơn:
 
 ```
 myorg-myaccount
 ```
 
-## Permissions
+## Phân Quyền (Permissions)
 
-Create a dedicated Semantix role with read-only access:
+Tạo một role riêng biệt dành cho Semantix với quyền chỉ đọc (read-only):
 
 ```sql
 CREATE ROLE semantix_reader;

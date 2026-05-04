@@ -1,48 +1,48 @@
-# Other Databases
+# Các Database Khác
 
 ## SQL Server (MSSQL)
 
-| Field | Default |
+| Trường | Mặc Định |
 |-------|---------|
 | Host / Server | |
 | Port | `1433` |
 | Database | |
 | Username | |
 | Password | |
-| Encrypt | On |
+| Encrypt | Bật (On) |
 
 ## DuckDB
 
-| Field | Description | Default |
+| Trường | Mô Tả | Mặc Định |
 |-------|-------------|---------|
-| File Path | Path to `.duckdb` file | `:memory:` |
+| File Path | Đường dẫn tới file `.duckdb` | `:memory:` |
 
-> 💡 DuckDB in-memory mode (`:memory:`) is useful for testing with local CSV or Parquet files.
+> 💡 Chế độ in-memory của DuckDB (`:memory:`) rất hữu ích cho việc thử nghiệm với các file CSV hoặc Parquet trên máy cục bộ (local).
 
 ## Trino / Presto
 
-| Field | Default |
+| Trường | Mặc Định |
 |-------|---------|
 | Host | |
 | Port | `443` (HTTPS) / `8080` (HTTP) |
 | Catalog | |
 | Schema | |
 | Username | |
-| Password | (optional) |
+| Password | (tùy chọn) |
 | Protocol | `https` |
 
 ## Databricks
 
-| Field | Description |
+| Trường | Mô Tả |
 |-------|-------------|
-| Host | Databricks workspace URL (e.g. `adb-xxx.azuredatabricks.net`) |
-| HTTP Path | SQL Warehouse HTTP path |
-| Token | Personal Access Token or service principal token |
+| Host | URL của Databricks workspace (ví dụ: `adb-xxx.azuredatabricks.net`) |
+| HTTP Path | Đường dẫn HTTP của SQL Warehouse |
+| Token | Personal Access Token hoặc service principal token |
 
 ## SQLite
 
-| Field | Description |
+| Trường | Mô Tả |
 |-------|-------------|
-| File Path | Absolute path to the `.sqlite` / `.db` file on the server |
+| File Path | Đường dẫn tuyệt đối tới file `.sqlite` / `.db` trên server |
 
-> ⚠️ SQLite files must be accessible from the Semantix server filesystem.
+> ⚠️ Các file SQLite phải có thể truy cập được từ hệ thống file của server Semantix.

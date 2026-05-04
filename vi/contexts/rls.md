@@ -1,40 +1,40 @@
 # Row-Level Security (RLS)
 
-Row-Level Security (RLS) lets you restrict which rows a user can see based on their role — without changing your database permissions.
+Row-Level Security (RLS) cho phép bạn giới hạn những dòng dữ liệu mà một người dùng có thể xem dựa trên role của họ — mà không cần phải thay đổi phân quyền trực tiếp trên database.
 
-## How It Works
+## Cách Hoạt Động
 
-1. You define **Access Policies** per role on a context
-2. Each policy contains **row filters** (e.g. `region = 'Asia'`)
-3. When a user queries data, Semantix automatically appends the filters to the generated SQL
+1. Bạn định nghĩa các **Access Policies** (Chính sách truy cập) cho từng role trên một context
+2. Mỗi policy chứa các **row filters** (bộ lọc dòng, ví dụ: `region = 'Asia'`)
+3. Khi người dùng truy vấn dữ liệu, Semantix sẽ tự động ghép các bộ lọc này vào câu lệnh SQL được sinh ra
 
-The user never sees the filters — they just see the data they're allowed to see.
+Người dùng sẽ không bao giờ nhìn thấy các bộ lọc này — họ chỉ nhìn thấy những dữ liệu mà họ được phép xem.
 
-## Setting Up RLS
+## Thiết Lập RLS
 
-### Step 1 — Create a Role
+### Bước 1 — Tạo Role
 
-1. Go to **Admin → Users & Roles → Roles → New Role**
-2. Name it (e.g. "Asia Sales Team")
-3. Assign users to this role
+1. Đi tới **Admin → Users & Roles → Roles → New Role**
+2. Đặt tên cho role (ví dụ: "Asia Sales Team")
+3. Gán người dùng vào role này
 
-### Step 2 — Create an Access Policy
+### Bước 2 — Tạo Một Access Policy
 
-1. Open the context → **Access tab**
-2. Click **Add Policy**
-3. Select the **Role**
-4. Add row filters:
+1. Mở context → tab **Access**
+2. Nhấn **Add Policy**
+3. Chọn **Role**
+4. Thêm các bộ lọc dòng (row filters):
 
 | Column | Operator | Value |
 |--------|----------|-------|
 | `region` | `=` | `Asia` |
 | `status` | `IN` | `active, pending` |
 
-5. Click **Save**
+5. Nhấn **Save**
 
-## Supported Operators
+## Các Toán Tử (Operators) Hỗ Trợ
 
-| Operator | Example |
+| Toán Tử | Ví Dụ |
 |----------|---------|
 | `=` | `region = 'Asia'` |
 | `!=` | `status != 'deleted'` |
@@ -45,21 +45,21 @@ The user never sees the filters — they just see the data they're allowed to se
 | `IS NULL` | `deleted_at IS NULL` |
 | `BETWEEN` | `created_at BETWEEN date1 AND date2` |
 
-## Example
+## Ví Dụ
 
-A user in the **"Asia Sales Team"** role queries:
+Một người dùng thuộc role **"Asia Sales Team"** đặt câu hỏi:
 
-> *"Show me total revenue by product"*
+> *"Hiển thị tổng doanh thu theo sản phẩm"*
 
-Semantix generates:
+Semantix sinh ra truy vấn:
 
 ```sql
 SELECT product, SUM(revenue) as total_revenue
 FROM orders
-WHERE region = 'Asia'   -- ← automatically injected from RLS policy
+WHERE region = 'Asia'   -- ← được tự động tiêm vào từ RLS policy
 GROUP BY product
 ```
 
-The user sees only their region's data without knowing the filter exists.
+Người dùng sẽ chỉ thấy dữ liệu của khu vực của họ mà không hề biết rằng bộ lọc này tồn tại.
 
-> ⚠️ RLS filters are applied server-side and cannot be bypassed by users.
+> ⚠️ Các bộ lọc RLS được áp dụng ở phía server-side và người dùng không thể can thiệp bỏ qua (bypass) được.

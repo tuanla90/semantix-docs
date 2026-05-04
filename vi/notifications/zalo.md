@@ -1,26 +1,26 @@
 # Zalo
 
-Connect Semantix to Zalo Official Account to receive alerts for Vietnamese users.
+Kết nối Semantix với Zalo Official Account (Zalo OA) để nhận cảnh báo dành cho người dùng Việt Nam.
 
-## Setup
+## Thiết Lập
 
-### Step 1 — Configure a Zalo Official Account
+### Bước 1 — Cấu Hình Zalo Official Account
 
-1. Register a **Zalo Official Account (OA)** at [oa.zalo.me](https://oa.zalo.me)
-2. Go to **Developer Tools** → enable **Webhook**
-3. Set the webhook URL to:
+1. Đăng ký một **Zalo Official Account (OA)** tại [oa.zalo.me](https://oa.zalo.me)
+2. Đi tới phần **Công cụ dành cho nhà phát triển (Developer Tools)** → bật **Webhook**
+3. Thiết lập URL webhook thành:
    ```
    https://your-semantix-domain.com/api/webhooks/zalo
    ```
-4. Copy the **App Secret** for signature verification
+4. Sao chép **App Secret** dành cho việc xác minh chữ ký (signature verification)
 
-### Step 2 — Connect in Semantix
+### Bước 2 — Kết Nối Trong Semantix
 
-1. Go to **Admin → Channels → New Channel → Zalo**
-2. Enter your Zalo OA credentials
-3. Set `ZALO_WEBHOOK_SECRET` in your environment variables
-4. Click **Save**
+1. Đi tới **Admin → Channels → New Channel → Zalo**
+2. Nhập thông tin Zalo OA của bạn
+3. Thiết lập biến môi trường `ZALO_WEBHOOK_SECRET`
+4. Nhấn **Save**
 
-## Security
+## Bảo Mật
 
-Set `ZALO_WEBHOOK_SECRET` in your `.env` to enable HMAC signature verification on incoming webhook requests.
+Hãy đặt biến `ZALO_WEBHOOK_SECRET` trong file `.env` của bạn để kích hoạt việc xác minh chữ ký HMAC (HMAC signature verification) đối với các request webhook gửi tới.

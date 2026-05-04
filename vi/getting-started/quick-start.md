@@ -1,50 +1,50 @@
-# Quick Start
+# Bắt Đầu Nhanh
 
-Get up and running with Semantix in under 10 minutes.
+Khởi chạy và sử dụng Semantix trong vòng chưa đầy 10 phút.
 
-## Step 1 — Connect a Database
+## Bước 1 — Kết Nối Database
 
-1. Go to **Admin → Connections → New Connection**
-2. Choose your database type (PostgreSQL, MySQL, BigQuery, etc.)
-3. Enter your connection credentials
-4. Click **Test Connection** to verify, then **Save**
+1. Đi tới **Admin → Connections → New Connection**
+2. Chọn loại database của bạn (PostgreSQL, MySQL, BigQuery, v.v.)
+3. Nhập thông tin đăng nhập connection của bạn
+4. Nhấn **Test Connection** để xác minh, sau đó nhấn **Save**
 
-> 💡 Semantix encrypts all credentials at rest. Your passwords are never stored in plain text.
+> 💡 Semantix mã hóa tất cả thông tin đăng nhập ở trạng thái nghỉ (at rest). Mật khẩu của bạn không bao giờ được lưu dưới dạng plain text.
 
-## Step 2 — Create a Data Model
+## Bước 2 — Tạo Data Model
 
-1. Go to **Admin → Contexts → New Context**
-2. Select the connection you just created
-3. Pick the tables you want to expose for querying
-4. Define relationships between tables if needed
-5. Click **Save**
+1. Đi tới **Admin → Contexts → New Context**
+2. Chọn connection bạn vừa tạo
+3. Chọn các bảng (tables) mà bạn muốn mở để truy vấn
+4. Định nghĩa các quan hệ (relations) giữa các bảng nếu cần
+5. Nhấn **Save**
 
-## Step 3 — Configure an AI Assistant
+## Bước 3 — Cấu Hình AI Assistant
 
-1. Go to **Admin → AI Providers → New Provider**
-2. Enter your API key (OpenAI, Anthropic, Gemini, or others)
-3. Go to **Admin → Assistants → New Assistant**
-4. Assign the AI provider and link it to your context
+1. Đi tới **Admin → AI Providers → New Provider**
+2. Nhập API key của bạn (OpenAI, Anthropic, Gemini, hoặc hãng khác)
+3. Đi tới **Admin → Assistants → New Assistant**
+4. Chỉ định AI provider và liên kết nó với context của bạn
 
-## Step 4 — Start Chatting
+## Bước 4 — Bắt Đầu Trò Chuyện (Chatting)
 
-1. Open **Analysis** from the main navigation
-2. Select your context
-3. Type a question in plain English, e.g.:
-   - *"Show me total revenue by month for 2024"*
-   - *"Which products had the highest return rate last quarter?"*
-4. Semantix generates SQL, runs it, and returns results with a chart
+1. Mở **Analysis** từ thanh điều hướng chính
+2. Chọn context của bạn
+3. Nhập câu hỏi bằng ngôn ngữ tự nhiên, ví dụ:
+   - *"Hiển thị tổng doanh thu theo tháng của năm 2024"*
+   - *"Sản phẩm nào có tỷ lệ hoàn trả cao nhất trong quý trước?"*
+4. Semantix tạo ra SQL, chạy nó và trả về kết quả kèm theo biểu đồ
 
-## Step 5 — Build a Dashboard
+## Bước 5 — Xây Dựng Dashboard
 
-1. Go to **Dashboards → New Dashboard**
-2. Add widgets from your saved queries
-3. Arrange and resize charts as needed
-4. Share the dashboard URL with your team
+1. Đi tới **Dashboards → New Dashboard**
+2. Thêm các widget từ các truy vấn đã lưu của bạn
+3. Sắp xếp và điều chỉnh kích thước biểu đồ (charts) theo nhu cầu
+4. Chia sẻ URL của dashboard với team của bạn
 
-## What's Next?
+## Bước Tiếp Theo?
 
-- [Connect more databases](../connections/README.md)
-- [Set up Row-Level Security](../contexts/rls.md)
-- [Explore the Public API](../api-reference/README.md)
-- [Configure alerts on Telegram](../notifications/telegram.md)
+- [Kết nối thêm các databases](../connections/README.md)
+- [Thiết lập Row-Level Security](../contexts/rls.md)
+- [Khám phá Public API](../api-reference/README.md)
+- [Cấu hình cảnh báo trên Telegram](../notifications/telegram.md)

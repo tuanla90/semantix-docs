@@ -1,15 +1,15 @@
-# Dashboards Endpoints
+# Các Endpoints Dashboards
 
 ## GET /v1/dashboards
 
-List all dashboards accessible with your API key.
+Liệt kê tất cả các dashboards có thể truy cập bằng API key của bạn.
 
 ```
 GET /api/v1/dashboards
 Authorization: Bearer sk_live_your_api_key
 ```
 
-### Response
+### Phản Hồi (Response)
 
 ```json
 {
@@ -32,14 +32,14 @@ Authorization: Bearer sk_live_your_api_key
 
 ## GET /v1/dashboards/:id
 
-Get details of a specific dashboard.
+Lấy thông tin chi tiết của một dashboard cụ thể.
 
 ```
 GET /api/v1/dashboards/dash_abc123
 Authorization: Bearer sk_live_your_api_key
 ```
 
-### Response
+### Phản Hồi (Response)
 
 ```json
 {
@@ -59,11 +59,11 @@ Authorization: Bearer sk_live_your_api_key
 }
 ```
 
-### Error Responses
+### Phản Hồi Lỗi (Error Responses)
 
-| Status | Meaning |
+| Trạng Thái (Status) | Ý Nghĩa |
 |--------|---------|
-| `401` | Missing or invalid API key |
-| `403` | API key lacks `read:dashboards` scope |
-| `404` | Dashboard not found |
-| `429` | Rate limit exceeded |
+| `401` | Thiếu API key hoặc API key không hợp lệ |
+| `403` | API key thiếu scope `read:dashboards` |
+| `404` | Không tìm thấy dashboard |
+| `429` | Vượt quá giới hạn rate limit |

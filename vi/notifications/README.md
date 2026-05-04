@@ -1,37 +1,37 @@
-# Notifications & Alerts
+# Thông Báo & Cảnh Báo (Notifications & Alerts)
 
-Semantix can send automated alerts and reports through multiple channels.
+Semantix có thể gửi các cảnh báo và báo cáo tự động thông qua nhiều kênh khác nhau.
 
-## Supported Channels
+## Các Kênh Hỗ Trợ
 
-| Channel | Use Case |
+| Kênh | Use Case |
 |---------|----------|
-| [Telegram Bot](telegram.md) | NL queries + metric alerts |
-| [Zalo](zalo.md) | Alerts for Vietnamese users |
-| [Microsoft Teams](teams.md) | Enterprise NL queries + alerts |
-| [Email](scheduled-reports.md) | Scheduled PDF/CSV/Excel reports |
+| [Telegram Bot](telegram.md) | Truy vấn ngôn ngữ tự nhiên (NL) + cảnh báo metric |
+| [Zalo](zalo.md) | Các cảnh báo dành cho người dùng Việt Nam |
+| [Microsoft Teams](teams.md) | Truy vấn NL doanh nghiệp + cảnh báo |
+| [Email](scheduled-reports.md) | Lên lịch gửi báo cáo dạng PDF/CSV/Excel |
 
-## Alert Types
+## Các Loại Cảnh Báo (Alert Types)
 
-### Threshold Alerts
-Trigger a notification when a metric crosses a defined threshold.
+### Cảnh Báo Vượt Ngưỡng (Threshold Alerts)
+Gửi thông báo khi một metric vượt qua một ngưỡng (threshold) đã được thiết lập trước.
 
-Example: *"Alert me when daily revenue drops below $10,000"*
+Ví dụ: *"Cảnh báo cho tôi khi doanh thu hàng ngày giảm xuống dưới 10.000$"*
 
-### Anomaly Alerts
-Semantix's anomaly detection engine automatically scans your KPIs and notifies you when it detects unusual patterns — without needing to define thresholds manually.
+### Cảnh Báo Bất Thường (Anomaly Alerts)
+Engine phát hiện bất thường của Semantix tự động quét các KPI của bạn và thông báo khi phát hiện các mẫu (patterns) bất thường — mà không cần phải thiết lập ngưỡng một cách thủ công.
 
-## Managing Notification Channels
+## Quản Lý Các Kênh Thông Báo
 
-1. Go to **Admin → Channels → New Channel**
-2. Select the channel type
-3. Follow the setup guide for that channel
-4. Test the connection
+1. Đi tới **Admin → Channels → New Channel**
+2. Chọn loại kênh
+3. Làm theo hướng dẫn thiết lập cho kênh đó
+4. Nhấn kiểm tra kết nối (Test connection)
 
-## Managing Alerts
+## Quản Lý Các Cảnh Báo
 
-1. Go to **Admin → Alerts → New Alert**
-2. Select the context and metric
-3. Define the condition (threshold or anomaly)
-4. Select the notification channel
-5. Click **Save**
+1. Đi tới **Admin → Alerts → New Alert**
+2. Chọn context và metric
+3. Định nghĩa điều kiện (ngưỡng hoặc sự bất thường)
+4. Chọn kênh thông báo
+5. Nhấn **Save**

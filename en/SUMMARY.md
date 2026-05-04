@@ -5,6 +5,16 @@
 * [Quick Start](getting-started/quick-start.md)
 * [System Requirements](getting-started/requirements.md)
 
+## User Guide
+* [1. Connections](user-guide/01-connections.md)
+* [2. Data Models](user-guide/02-data-models.md)
+* [3. Calculated Fields](user-guide/03-calculated-fields.md)
+* [4. Metrics](user-guide/04-metrics.md)
+* [5. Relations](user-guide/05-relations.md)
+* [6. Contexts](user-guide/06-contexts.md)
+* [7. AI Assistant](user-guide/07-ai-assistant.md)
+* [8. Dashboards](user-guide/08-dashboards.md)
+
 ## Connections
 * [Overview](connections/README.md)
 * [PostgreSQL / Redshift](connections/postgresql.md)

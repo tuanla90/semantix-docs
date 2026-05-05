@@ -6,14 +6,14 @@
 * [Yêu Cầu Hệ Thống](getting-started/requirements.md)
 
 ## Hướng Dẫn Sử Dụng
-* [1. Connections](user-guide/01-connections.md)
-* [2. Data Models](user-guide/02-data-models.md)
-* [3. Calculated Fields](user-guide/03-calculated-fields.md)
-* [4. Metrics](user-guide/04-metrics.md)
-* [5. Relations](user-guide/05-relations.md)
-* [6. Contexts](user-guide/06-contexts.md)
-* [7. AI Assistant](user-guide/07-ai-assistant.md)
-* [8. Dashboards](user-guide/08-dashboards.md)
+* [1. Kết Nối Dữ Liệu (Connections)](user-guide/01-connections.md)
+* [2. Mô Hình Dữ Liệu (Data Models)](user-guide/02-data-models.md)
+* [3. Trường Tính Toán (Calculated Fields)](user-guide/03-calculated-fields.md)
+* [4. Chỉ Số Kinh Doanh (Metrics)](user-guide/04-metrics.md)
+* [5. Quan Hệ (Relations)](user-guide/05-relations.md)
+* [6. Ngữ Cảnh (Contexts)](user-guide/06-contexts.md)
+* [7. Trợ Lý AI (AI Assistant)](user-guide/07-ai-assistant.md)
+* [8. Bảng Điều Khiển (Dashboards)](user-guide/08-dashboards.md)
 
 ## Kết Nối Dữ Liệu
 * [Tổng Quan](connections/README.md)

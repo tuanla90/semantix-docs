@@ -1,5 +1,6 @@
 # Users & Roles
 
+![Admin Interface](../../assets/admin_walkthrough.webp)
 ## Users
 
 Manage team members under **Admin → Users**.

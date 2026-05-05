@@ -1,5 +1,6 @@
 # Người Dùng & Phân Quyền (Users & Roles)
 
+![Giao diện Quản trị (Admin Interface)](../../assets/admin_walkthrough.webp)
 ## Users (Người dùng)
 
 Quản lý các thành viên trong team dưới menu **Admin → Users**.

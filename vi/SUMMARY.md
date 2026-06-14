@@ -5,6 +5,13 @@
 * [Bắt Đầu Nhanh](getting-started/quick-start.md)
 * [Yêu Cầu Hệ Thống](getting-started/requirements.md)
 
+## Dùng Thử Miễn Phí (Free Trial)
+* [Tổng Quan & Giới Hạn Gói Free](free-trial/README.md)
+* [Bước 1 — Kết Nối Google Sheets](free-trial/01-setup.md)
+* [Bước 2 — Chat với Số Liệu](free-trial/02-ask-ai.md)
+* [Bước 3 — Tạo Dashboard](free-trial/03-dashboard.md)
+* [Nâng Cấp Gói](free-trial/04-upgrade.md)
+
 ## AI Chat & Phân Tích
 * [Tổng Quan AI Chat](ai-chat/README.md)
 * [Phân Tích Nâng Cao](ai-chat/advanced-analysis.md)

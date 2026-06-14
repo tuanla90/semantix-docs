@@ -2,7 +2,7 @@
 
 Context là một tập hợp các Model, Metric và các quy tắc nghiệp vụ (rules) được nhóm lại theo một chủ đề hoặc bộ phận cụ thể. AI Assistant sẽ luôn hoạt động trong phạm vi của một Context được chỉ định, giúp đảm bảo câu trả lời mang tính chuyên môn và độ chính xác cao nhất.
 
-**Điều hướng:** Admin → Contexts → **New Context**
+**Điều hướng:** Studio → DABI → Semantic Contexts → **New Context**
 
 ## Bước 1 — Thông Tin Cơ Bản
 

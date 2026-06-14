@@ -2,7 +2,7 @@
 
 Metric là các chỉ số hiệu suất chính (KPIs) cốt lõi của doanh nghiệp. Chúng được định nghĩa một lần và sử dụng nhất quán trên toàn hệ thống. **Đây là bước quan trọng nhất để AI có thể trả lời câu hỏi của người dùng một cách chính xác.**
 
-**Điều hướng:** Admin → Models → chọn Model → tab **Metrics** → **New Metric**
+**Điều hướng:** Studio → DABI → Data Models → chọn Model → tab Metrics → New Metric
 
 ## Các Ví Dụ Metric Thường Gặp
 

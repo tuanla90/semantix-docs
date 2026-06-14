@@ -2,7 +2,7 @@
 
 A Connection is the first step in setting up Semantix. It tells the system where to connect to query your data.
 
-**Navigation:** Admin → Connections → **New Connection**
+**Navigation:** Studio → DE → Connections → **New Connection**
 
 ## Supported Data Sources
 
@@ -43,7 +43,7 @@ For example, if the URL is `https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5n
 
 ### Step 3 — Create the Connection in Semantix
 
-1. Go to **Admin → Connections → New Connection**
+1. Go to **Studio → DE → Connections → New Connection**
 2. Select **Google Sheets** as the type
 3. Paste the **Spreadsheet ID** you copied above
 4. Enter the **Sheet Name** (the specific tab you want to query, e.g., `Sheet1` or `Revenue`)

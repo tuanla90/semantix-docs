@@ -2,7 +2,7 @@
 
 Model là lớp ánh xạ chuyển đổi từ cấu trúc vật lý của cơ sở dữ liệu (các bảng/sheet) sang các khái niệm kinh doanh giúp AI có thể hiểu được.
 
-**Điều hướng:** Admin → Models → **New Model**
+**Điều hướng:** Studio → DABI → Data Models → **New Model**
 
 ## Bước 1 — Chọn Connection & Table
 

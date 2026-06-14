@@ -1,11 +1,11 @@
 # Users & Roles
 ## Users
 
-Manage team members under **Admin → Users**.
+Manage team members under **Admin → Access → Users**.
 
 ### Inviting a User
 
-1. Go to **Admin → Users → Invite User**
+1. Go to **Admin → Access → Users → Invite User**
 2. Enter their email address
 3. Assign one or more roles
 4. Click **Send Invite**
@@ -34,7 +34,7 @@ Roles control what users can see and do in Semantix.
 
 ### Creating Custom Roles
 
-1. Go to **Admin → Roles → New Role**
+1. Go to **Admin → Access → Roles → New Role**
 2. Give it a name (e.g. "Data Analyst", "Asia Sales Team")
 3. Select permissions
 4. Click **Save**

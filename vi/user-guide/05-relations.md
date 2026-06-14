@@ -2,7 +2,7 @@
 
 Relations (Các mối quan hệ) cho phép AI tự động thực hiện lệnh `JOIN` giữa các bảng khi cần thiết. Điều này giúp người dùng cuối hoàn toàn không cần phải biết hoặc viết các câu lệnh SQL JOIN phức tạp.
 
-**Điều hướng:** Admin → Models → chọn Model → tab **Relations** → **Add Relation**
+**Điều hướng:** Studio → DABI → Data Models → chọn Model → tab Relations → Add Relation
 
 ## Các Loại Quan Hệ Hỗ Trợ
 

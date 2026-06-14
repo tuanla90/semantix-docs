@@ -2,7 +2,7 @@
 
 Connection là bước đầu tiên trong quá trình thiết lập Semantix. Nó khai báo cho hệ thống biết nguồn dữ liệu cần truy vấn nằm ở đâu.
 
-**Điều hướng:** Admin → Connections → **New Connection**
+**Điều hướng:** Studio → DE → Connections → **New Connection**
 
 ## Các Loại Nguồn Dữ Liệu Hỗ Trợ
 
@@ -43,7 +43,7 @@ Ví dụ URL là `https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZj
 
 ### Bước 3 — Tạo Connection trong Semantix
 
-1. Vào **Admin → Connections → New Connection**
+1. Vào **Studio → DE → Connections → New Connection**
 2. Chọn loại kết nối là **Google Sheets**
 3. Dán **Spreadsheet ID** vừa lấy ở trên vào ô tương ứng
 4. Nhập **Sheet Name** (tên tab/sheet cụ thể cần truy vấn, ví dụ: `Sheet1` hoặc `Doanh thu`)

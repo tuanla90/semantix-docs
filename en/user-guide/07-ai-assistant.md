@@ -49,7 +49,7 @@ Behind the scenes, the system follows a secure, deterministic pipeline:
 
 Administrators can customize how the AI behaves.
 
-**Navigation:** Admin → Assistants → **New Assistant**
+**Navigation:** Studio → DSAI → AI Assistants → **New Assistant**
 
 | Property | Description |
 |----------|-------------|

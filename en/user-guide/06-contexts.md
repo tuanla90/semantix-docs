@@ -2,7 +2,7 @@
 
 A Context is a collection of Models, Metrics, and business rules grouped around a specific business topic or domain. The AI Assistant always operates within the boundaries of a chosen Context, ensuring accurate and domain-specific answers.
 
-**Navigation:** Admin → Contexts → **New Context**
+**Navigation:** Studio → DABI → Semantic Contexts → **New Context**
 
 ## Step 1 — Basic Information
 

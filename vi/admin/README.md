@@ -1,11 +1,11 @@
 # Người Dùng & Phân Quyền (Users & Roles)
 ## Users (Người dùng)
 
-Quản lý các thành viên trong team dưới menu **Admin → Users**.
+Quản lý các thành viên trong team dưới menu **Admin → Access → Users**.
 
 ### Mời người dùng (Inviting a User)
 
-1. Đi tới **Admin → Users → Invite User**
+1. Đi tới **Admin → Access → Users → Invite User**
 2. Nhập địa chỉ email của họ
 3. Gán một hoặc nhiều quyền (roles)
 4. Nhấn **Send Invite**
@@ -34,7 +34,7 @@ Phân quyền kiểm soát những gì người dùng có thể xem và thực h
 
 ### Tạo Quyền Tùy Chỉnh (Custom Roles)
 
-1. Đi tới **Admin → Roles → New Role**
+1. Đi tới **Admin → Access → Roles → New Role**
 2. Đặt tên cho quyền (ví dụ: "Data Analyst", "Asia Sales Team")
 3. Chọn các quyền chi tiết (permissions)
 4. Nhấn **Save**

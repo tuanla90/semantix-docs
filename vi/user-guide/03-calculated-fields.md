@@ -2,7 +2,7 @@
 
 Calculated Field (Trường tính toán) là một cột mới được tạo ra bằng cách sử dụng các công thức toán học hoặc logic từ các cột dữ liệu hiện có. Nó không tồn tại trong cơ sở dữ liệu gốc của bạn.
 
-**Điều hướng:** Admin → Models → chọn Model → tab **Columns** → **Add Calculated Column**
+**Điều hướng:** Studio → DABI → Data Models → chọn Model → tab Calculated Fields
 
 ## Các Ví Dụ Thực Tế Phổ Biến
 

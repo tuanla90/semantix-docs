@@ -2,7 +2,7 @@
 
 A Model acts as a mapping layer that translates physical database tables or sheets into business concepts that the AI can understand.
 
-**Navigation:** Admin → Models → **New Model**
+**Navigation:** Studio → DABI → Data Models → **New Model**
 
 ## Step 1 — Select Connection & Table
 

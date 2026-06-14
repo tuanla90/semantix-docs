@@ -49,7 +49,7 @@ Hệ thống hoạt động theo một luồng xử lý an toàn và bảo mật
 
 Quản trị viên có thể tùy chỉnh hành vi và tính cách của trợ lý AI.
 
-**Điều hướng:** Admin → Assistants → **New Assistant**
+**Điều hướng:** Studio → DSAI → AI Assistants → New Assistant
 
 | Thuộc tính | Mô tả |
 |------------|-------|

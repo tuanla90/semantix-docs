@@ -3,6 +3,7 @@ import { defineCollection, z } from 'astro:content';
 const blog = defineCollection({
   type: 'content',
   schema: z.object({
+    code: z.string().optional(),
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),
@@ -10,6 +11,8 @@ const blog = defineCollection({
     readTime: z.number(),
     author: z.string().default('Đội Ngũ Semantix'),
     featured: z.boolean().default(false),
+    cover: z.string().optional(),
+    coverAlt: z.string().optional(),
   }),
 });
 

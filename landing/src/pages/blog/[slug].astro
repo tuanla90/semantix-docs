@@ -68,6 +68,29 @@ function formatDate(date: Date) {
   .post-content hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
   .post-content em { color: var(--muted); }
 
+  /* Images & figures */
+  .post-content img { max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 12px 0; }
+  .post-content figure { margin: 32px 0; }
+  .post-content figure img { margin: 0 auto; border: 1px solid var(--border); }
+  .post-content figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .post-content figcaption { font-size: 13.5px; color: var(--muted); text-align: center; margin-top: 12px; font-style: italic; }
+  /* Inline data-viz wrapper (SVG diagrams) */
+  .post-content .viz { margin: 32px 0; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; }
+  .post-content .viz svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .post-content .viz-caption { font-size: 13.5px; color: var(--muted); text-align: center; margin-top: 14px; font-style: italic; }
+
+  /* Series navigation box */
+  .post-content .series-nav { margin: 0 0 36px; padding: 20px 24px; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 0 12px 12px 0; }
+  .post-content .series-nav-title { font-size: 13px; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+  .post-content .series-nav ol { margin: 0; padding-left: 22px; }
+  .post-content .series-nav li { margin-bottom: 6px; font-size: 14.5px; }
+  .post-content .series-nav li.current { font-weight: 700; color: var(--dark); list-style: disc; }
+  .post-content .series-nav a { color: var(--primary); }
+
+  /* Cover image */
+  .post-cover { max-width: 760px; margin: -32px auto 0; padding: 0 24px; }
+  .post-cover img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--border); display: block; }
+
   /* Divider before author */
   .post-footer { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
   .author-card { display: flex; gap: 16px; align-items: center; }
@@ -103,6 +126,12 @@ function formatDate(date: Date) {
     </div>
   </div>
 </div>
+
+{post.data.cover && (
+  <div class="post-cover">
+    <img src={post.data.cover} alt={post.data.coverAlt ?? post.data.title} />
+  </div>
+)}
 
 <!-- Article -->
 <div class="post-layout">

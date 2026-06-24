@@ -1,0 +1,31 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/><stop offset="0.6" stop-color="#1E1B4B"/><stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <marker id="af" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#818CF8"/></marker>
+    <marker id="afr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#F87171"/></marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgf)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <rect x="80" y="96" width="120" height="40" rx="20" fill="#312E81"/>
+  <text x="140" y="123" fill="#C7D2FE" font-size="18" font-weight="700" text-anchor="middle">NÂNG CAO</text>
+  <text x="220" y="124" fill="#818CF8" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="232" fill="#ffffff" font-size="56" font-weight="800">Funnel nâng cao</text>
+  <text x="80" y="296" fill="#CBD5E1" font-size="29" font-weight="600">Khi cái phễu nói dối bạn</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: tangled journey vs funnel -->
+  <g transform="translate(800,170)">
+    <circle cx="40"  cy="20"  r="26" fill="#1E293B" stroke="#6366F1" stroke-width="2"/><text x="40" y="26" fill="#C7D2FE" font-size="14" text-anchor="middle">Xem</text>
+    <circle cx="230" cy="20"  r="26" fill="#1E293B" stroke="#6366F1" stroke-width="2"/><text x="230" y="26" fill="#C7D2FE" font-size="14" text-anchor="middle">Giỏ</text>
+    <circle cx="230" cy="180" r="26" fill="#1E293B" stroke="#6366F1" stroke-width="2"/><text x="230" y="186" fill="#C7D2FE" font-size="13" text-anchor="middle">T.toán</text>
+    <circle cx="40"  cy="180" r="26" fill="#1E293B" stroke="#22C55E" stroke-width="2"/><text x="40" y="186" fill="#86EFAC" font-size="14" text-anchor="middle">Mua</text>
+    <path d="M68 20 L202 20"   stroke="#818CF8" stroke-width="3" marker-end="url(#af)"/>
+    <path d="M230 48 L230 152" stroke="#818CF8" stroke-width="3" marker-end="url(#af)"/>
+    <path d="M202 180 L70 180" stroke="#818CF8" stroke-width="3" marker-end="url(#af)"/>
+    <path d="M210 44 Q120 90 64 36" stroke="#F87171" stroke-width="2.5" fill="none" stroke-dasharray="5 4" marker-end="url(#afr)"/>
+    <path d="M58 46 Q150 150 212 162" stroke="#F87171" stroke-width="2.5" fill="none" stroke-dasharray="5 4" marker-end="url(#afr)"/>
+  </g>
+</svg>

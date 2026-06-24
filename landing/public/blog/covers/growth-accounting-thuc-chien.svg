@@ -1,0 +1,61 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgtc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#042F2E"/><stop offset="0.55" stop-color="#064E3B"/><stop offset="1" stop-color="#022C22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgtc)"/>
+  <g stroke="#0F766E" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="100" fill="#34D399" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <rect x="80" y="120" width="58" height="38" rx="19" fill="#0F766E"/>
+  <text x="109" y="146" fill="#CCFBF1" font-size="19" font-weight="700" text-anchor="middle">4/4</text>
+  <text x="156" y="146" fill="#5EEAD4" font-size="19" font-weight="700" letter-spacing="2">SERIES GROWTH ACCOUNTING</text>
+  <text x="80" y="258" fill="#ffffff" font-size="54" font-weight="800">Thực chiến</text>
+  <text x="80" y="316" fill="#A7F3D0" font-size="30" font-weight="600">Dựng bảng growth accounting</text>
+  <text x="80" y="362" fill="#5EEAD4" font-size="22" font-weight="500" font-style="italic">giao dịch → trạng thái → 4 dòng</text>
+  <text x="80" y="524" fill="#5EEAD4" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+
+  <!-- motif: an assembled growth accounting table (months x rows) + Quick Ratio cell -->
+  <g transform="translate(690,150)">
+    <!-- column headers -->
+    <text x="150" y="14" fill="#94A3B8" font-size="15" font-weight="600" text-anchor="middle">T1</text>
+    <text x="240" y="14" fill="#94A3B8" font-size="15" font-weight="600" text-anchor="middle">T2</text>
+    <text x="330" y="14" fill="#94A3B8" font-size="15" font-weight="600" text-anchor="middle">T3</text>
+    <text x="420" y="14" fill="#94A3B8" font-size="15" font-weight="600" text-anchor="middle">T4</text>
+
+    <!-- row: new -->
+    <text x="0" y="52" fill="#6EE7B7" font-size="15" font-weight="700">new</text>
+    <rect x="110" y="34" width="80" height="26" rx="4" fill="#10B981" opacity="0.85"/>
+    <rect x="200" y="34" width="80" height="26" rx="4" fill="#10B981" opacity="0.85"/>
+    <rect x="290" y="34" width="80" height="26" rx="4" fill="#10B981" opacity="0.85"/>
+    <rect x="380" y="34" width="80" height="26" rx="4" fill="#10B981" opacity="0.85"/>
+
+    <!-- row: retained -->
+    <text x="0" y="92" fill="#5EEAD4" font-size="15" font-weight="700">retained</text>
+    <rect x="110" y="74" width="80" height="26" rx="4" fill="#0EA5A4" opacity="0.7"/>
+    <rect x="200" y="74" width="80" height="26" rx="4" fill="#0EA5A4" opacity="0.7"/>
+    <rect x="290" y="74" width="80" height="26" rx="4" fill="#0EA5A4" opacity="0.7"/>
+    <rect x="380" y="74" width="80" height="26" rx="4" fill="#0EA5A4" opacity="0.7"/>
+
+    <!-- row: resurrected -->
+    <text x="0" y="132" fill="#A7F3D0" font-size="15" font-weight="700">resurrected</text>
+    <rect x="110" y="114" width="80" height="26" rx="4" fill="#34D399" opacity="0.55"/>
+    <rect x="200" y="114" width="80" height="26" rx="4" fill="#34D399" opacity="0.55"/>
+    <rect x="290" y="114" width="80" height="26" rx="4" fill="#34D399" opacity="0.55"/>
+    <rect x="380" y="114" width="80" height="26" rx="4" fill="#34D399" opacity="0.55"/>
+
+    <!-- row: churned (negative) -->
+    <text x="0" y="172" fill="#FCA5A5" font-size="15" font-weight="700">churned</text>
+    <rect x="110" y="154" width="80" height="26" rx="4" fill="#EF4444" opacity="0.7"/>
+    <rect x="200" y="154" width="80" height="26" rx="4" fill="#EF4444" opacity="0.7"/>
+    <rect x="290" y="154" width="80" height="26" rx="4" fill="#EF4444" opacity="0.7"/>
+    <rect x="380" y="154" width="80" height="26" rx="4" fill="#EF4444" opacity="0.7"/>
+
+    <!-- Quick Ratio cell -->
+    <rect x="110" y="200" width="350" height="44" rx="8" fill="#022C22" stroke="#FCD34D" stroke-width="2"/>
+    <text x="128" y="228" fill="#FCD34D" font-size="16" font-weight="700">Quick Ratio</text>
+    <text x="448" y="228" fill="#FDE68A" font-size="20" font-weight="800" text-anchor="end">1,8</text>
+  </g>
+</svg>

@@ -1,0 +1,105 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="answer" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4ADE80"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">SO SÁNH &amp; LỰA CHỌN</text>
+
+  <!-- title -->
+  <text x="80" y="160" fill="#F1F5F9" font-size="50" font-weight="800">Google Sheets vs Semantix</text>
+  <text x="80" y="212" fill="#94A3B8" font-size="26" font-weight="500">Khi nào bảng tính hết &#8220;gánh&#8221; nổi —</text>
+  <text x="80" y="246" fill="#94A3B8" font-size="26" font-weight="500">và câu hỏi tiếp theo bạn chưa kịp hỏi</text>
+
+  <!-- LEFT: static spreadsheet dashboard -->
+  <g transform="translate(80,300)">
+    <rect x="0" y="0" width="460" height="230" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="24" y="36" fill="#64748B" font-size="16" font-weight="700" letter-spacing="1">DASHBOARD BẢNG TÍNH (TĨNH)</text>
+
+    <!-- grid of cells -->
+    <g stroke="#1E293B" stroke-width="1">
+      <line x1="24" y1="54" x2="230" y2="54"/>
+      <line x1="24" y1="80" x2="230" y2="80"/>
+      <line x1="24" y1="106" x2="230" y2="106"/>
+      <line x1="24" y1="132" x2="230" y2="132"/>
+      <line x1="75" y1="54" x2="75" y2="132"/>
+      <line x1="126" y1="54" x2="126" y2="132"/>
+      <line x1="177" y1="54" x2="177" y2="132"/>
+    </g>
+    <rect x="24" y="54" width="206" height="78" fill="none" stroke="#334155" stroke-width="1.5"/>
+    <rect x="24" y="54" width="51" height="26" fill="#1E293B"/>
+    <rect x="75" y="80" width="51" height="26" fill="#162033"/>
+
+    <!-- frozen bar chart -->
+    <g transform="translate(252,56)">
+      <rect x="0" y="50" width="22" height="30" fill="#475569"/>
+      <rect x="30" y="34" width="22" height="46" fill="#475569"/>
+      <rect x="60" y="20" width="22" height="60" fill="#475569"/>
+      <rect x="90" y="42" width="22" height="38" fill="#475569"/>
+      <rect x="120" y="28" width="22" height="52" fill="#475569"/>
+      <line x1="0" y1="80" x2="146" y2="80" stroke="#334155" stroke-width="1.5"/>
+    </g>
+    <!-- frozen pie -->
+    <g transform="translate(310,170)">
+      <circle r="28" fill="#475569"/>
+      <path d="M0 0 L0 -28 A28 28 0 0 1 24 14 Z" fill="#64748B"/>
+    </g>
+
+    <!-- the question outside the template -->
+    <g transform="translate(150,170)">
+      <circle r="30" fill="#7F1D1D" stroke="#F87171" stroke-width="2"/>
+      <text x="0" y="11" fill="#FCA5A5" font-size="34" font-weight="800" text-anchor="middle">?</text>
+      <text x="0" y="58" fill="#F87171" font-size="13" font-weight="600" text-anchor="middle">câu nằm ngoài</text>
+    </g>
+  </g>
+
+  <!-- VS badge -->
+  <g transform="translate(600,415)">
+    <circle r="34" fill="#0B1120" stroke="#22D3EE" stroke-width="2"/>
+    <text x="0" y="11" fill="#22D3EE" font-size="26" font-weight="800" text-anchor="middle">vs</text>
+  </g>
+
+  <!-- RIGHT: dynamic question -> answer -->
+  <g transform="translate(660,300)">
+    <rect x="0" y="0" width="460" height="230" rx="14" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="24" y="36" fill="#34D399" font-size="16" font-weight="700" letter-spacing="1">HỎI &#8594; TRẢ LỜI ĐỘNG</text>
+
+    <!-- question bubble -->
+    <rect x="24" y="52" width="412" height="46" rx="12" fill="#1E293B"/>
+    <text x="42" y="81" fill="#E2E8F0" font-size="17" font-weight="500">Doanh thu TikTok giảm — do số đơn hay AOV?</text>
+
+    <!-- arrow -->
+    <path d="M230 104 L230 126" stroke="url(#answer)" stroke-width="3"/>
+    <path d="M222 120 L230 132 L238 120 Z" fill="#34D399"/>
+
+    <!-- live answer chart -->
+    <g transform="translate(40,140)">
+      <line x1="0" y1="70" x2="380" y2="70" stroke="#334155" stroke-width="1.5"/>
+      <rect x="10" y="40" width="34" height="30" rx="3" fill="url(#bar)"/>
+      <rect x="64" y="22" width="34" height="48" rx="3" fill="url(#bar)"/>
+      <rect x="118" y="48" width="34" height="22" rx="3" fill="url(#bar)"/>
+      <rect x="172" y="14" width="34" height="56" rx="3" fill="url(#bar)"/>
+      <rect x="226" y="34" width="34" height="36" rx="3" fill="url(#bar)"/>
+      <polyline points="27,32 81,18 135,42 189,10 243,28 320,16" fill="none" stroke="#22D3EE" stroke-width="3"/>
+      <circle cx="320" cy="16" r="5" fill="#22D3EE"/>
+      <text x="296" y="58" fill="#34D399" font-size="13" font-weight="700">AOV ↓ 12%</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

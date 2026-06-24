@@ -1,0 +1,29 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/><stop offset="0.6" stop-color="#1E1B4B"/><stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgp)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="232" fill="#ffffff" font-size="58" font-weight="800">Pareto 80/20</text>
+  <text x="80" y="296" fill="#CBD5E1" font-size="29" font-weight="600">20% nuôi 80% — nhưng đừng cắt phần đuôi</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: pareto chart -->
+  <g transform="translate(790,170)">
+    <line x1="0" y1="0" x2="0" y2="220" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="220" x2="340" y2="220" stroke="#475569" stroke-width="2"/>
+    <rect x="14"  y="40"  width="40" height="180" fill="#6366F1"/>
+    <rect x="64"  y="110" width="40" height="110" fill="#818CF8"/>
+    <rect x="114" y="168" width="40" height="52"  fill="#A5B4FC"/>
+    <rect x="164" y="188" width="40" height="32"  fill="#C7D2FE"/>
+    <rect x="214" y="200" width="40" height="20"  fill="#C7D2FE"/>
+    <rect x="264" y="206" width="40" height="14"  fill="#C7D2FE"/>
+    <line x1="0" y1="60" x2="340" y2="60" stroke="#4ADE80" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="346" y="64" fill="#86EFAC" font-size="15" font-weight="700">80%</text>
+    <path d="M34 130 L84 78 L134 60 L184 52 L234 48 L284 44 L324 42" fill="none" stroke="#4ADE80" stroke-width="3"/>
+  </g>
+</svg>

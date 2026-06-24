@@ -1,0 +1,82 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#031c14"/>
+      <stop offset="0.55" stop-color="#06281d"/>
+      <stop offset="1" stop-color="#0a3a2a"/>
+    </linearGradient>
+    <linearGradient id="ret" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16a34a"/>
+      <stop offset="1" stop-color="#15803d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#0f4533" stroke-width="1" opacity="0.5">
+    <line x1="60" y1="150" x2="1140" y2="150"/>
+    <line x1="60" y1="240" x2="1140" y2="240"/>
+    <line x1="60" y1="420" x2="1140" y2="420"/>
+  </g>
+
+  <!-- category label -->
+  <rect x="60" y="64" width="14" height="14" rx="3" fill="#22c55e"/>
+  <text x="86" y="76" fill="#4ade80" font-size="18" font-weight="800" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="60" y="106" fill="#6ee7b7" font-size="14" font-weight="600" letter-spacing="2" opacity="0.85">SERIES GROWTH ACCOUNTING · PHẦN 1</text>
+
+  <!-- title -->
+  <text x="60" y="184" fill="#f0fdf4" font-size="58" font-weight="800">Growth Accounting</text>
+  <text x="60" y="246" fill="#bbf7d0" font-size="30" font-weight="600">Phương trình tăng trưởng —</text>
+  <text x="60" y="288" fill="#bbf7d0" font-size="30" font-weight="600">vì sao con số tăng ròng giấu mất sự thật</text>
+
+  <!-- stacked bar motif -->
+  <!-- baseline (trục 0) -->
+  <line x1="640" y1="430" x2="1140" y2="430" stroke="#5eead4" stroke-width="2" opacity="0.7"/>
+  <text x="628" y="436" fill="#5eead4" font-size="13" text-anchor="end" opacity="0.8">0</text>
+
+  <!-- T1 -->
+  <rect x="680" y="372" width="62" height="58" fill="url(#ret)"/>
+  <rect x="680" y="338" width="62" height="34" fill="#22c55e"/>
+  <rect x="680" y="324" width="62" height="14" fill="#4ade80"/>
+  <rect x="680" y="430" width="62" height="40" fill="#f87171"/>
+
+  <!-- T2 -->
+  <rect x="772" y="360" width="62" height="70" fill="url(#ret)"/>
+  <rect x="772" y="326" width="62" height="34" fill="#22c55e"/>
+  <rect x="772" y="312" width="62" height="14" fill="#4ade80"/>
+  <rect x="772" y="430" width="62" height="33" fill="#f87171"/>
+
+  <!-- T3 -->
+  <rect x="864" y="344" width="62" height="86" fill="url(#ret)"/>
+  <rect x="864" y="312" width="62" height="32" fill="#22c55e"/>
+  <rect x="864" y="298" width="62" height="14" fill="#4ade80"/>
+  <rect x="864" y="430" width="62" height="26" fill="#f87171"/>
+
+  <!-- T4 -->
+  <rect x="956" y="326" width="62" height="104" fill="url(#ret)"/>
+  <rect x="956" y="294" width="62" height="32" fill="#22c55e"/>
+  <rect x="956" y="280" width="62" height="14" fill="#4ade80"/>
+  <rect x="956" y="430" width="62" height="20" fill="#f87171"/>
+
+  <!-- T5 -->
+  <rect x="1048" y="306" width="62" height="124" fill="url(#ret)"/>
+  <rect x="1048" y="274" width="62" height="32" fill="#22c55e"/>
+  <rect x="1048" y="260" width="62" height="14" fill="#4ade80"/>
+  <rect x="1048" y="430" width="62" height="15" fill="#f87171"/>
+
+  <!-- motif legend -->
+  <g font-size="14" font-weight="600">
+    <rect x="680" y="500" width="13" height="13" rx="2" fill="#15803d"/><text x="700" y="511" fill="#a7f3d0">retained</text>
+    <rect x="772" y="500" width="13" height="13" rx="2" fill="#22c55e"/><text x="792" y="511" fill="#a7f3d0">new</text>
+    <rect x="852" y="500" width="13" height="13" rx="2" fill="#4ade80"/><text x="872" y="511" fill="#a7f3d0">resurrected</text>
+    <rect x="980" y="500" width="13" height="13" rx="2" fill="#f87171"/><text x="1000" y="511" fill="#fca5a5">churned</text>
+  </g>
+
+  <!-- equation strip -->
+  <text x="60" y="430" fill="#5eead4" font-size="20" font-weight="700" opacity="0.9" font-family="'Courier New', monospace">MAU(t) = MAU(t−1)</text>
+  <text x="60" y="462" fill="#86efac" font-size="20" font-weight="700" opacity="0.85" font-family="'Courier New', monospace">+ new + resurrected − churned</text>
+
+  <!-- footer -->
+  <text x="60" y="556" fill="#4ade80" font-size="16" font-weight="800" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

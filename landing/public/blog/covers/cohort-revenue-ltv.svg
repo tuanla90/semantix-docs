@@ -1,0 +1,29 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgc4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/><stop offset="0.6" stop-color="#1E1B4B"/><stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgc4)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <rect x="80" y="96" width="170" height="40" rx="20" fill="#312E81"/>
+  <text x="165" y="123" fill="#C7D2FE" font-size="20" font-weight="700" text-anchor="middle">PHẦN 4 / 4</text>
+  <text x="270" y="124" fill="#818CF8" font-size="20" font-weight="700" letter-spacing="3">SERIES COHORT ANALYSIS</text>
+  <text x="80" y="232" fill="#ffffff" font-size="48" font-weight="800">Revenue &amp; LTV</text>
+  <text x="80" y="296" fill="#CBD5E1" font-size="30" font-weight="600">Cohort ra tiền &amp; ứng dụng theo ngành</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: cumulative revenue bars + LTV line -->
+  <g transform="translate(750,150)">
+    <line x1="0" y1="240" x2="360" y2="240" stroke="#475569" stroke-width="2"/>
+    <rect x="10"  y="190" width="44" height="50"  rx="4" fill="#312E81"/>
+    <rect x="74"  y="150" width="44" height="90"  rx="4" fill="#4338CA"/>
+    <rect x="138" y="110" width="44" height="130" rx="4" fill="#6366F1"/>
+    <rect x="202" y="74"  width="44" height="166" rx="4" fill="#818CF8"/>
+    <rect x="266" y="40"  width="44" height="200" rx="4" fill="#A5B4FC"/>
+    <path d="M32 200 L96 168 L160 128 L224 92 L288 56" fill="none" stroke="#4ADE80" stroke-width="4"/>
+    <circle cx="288" cy="56" r="6" fill="#4ADE80"/>
+    <text x="300" y="52" fill="#86EFAC" font-size="18" font-weight="700">LTV</text>
+  </g>
+</svg>

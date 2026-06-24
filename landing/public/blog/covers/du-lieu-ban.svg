@@ -1,0 +1,47 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgD" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <marker id="aD" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#818CF8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgD)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <text x="80" y="232" fill="#ffffff" font-size="54" font-weight="800">Dữ liệu bẩn</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="30" font-weight="600">Dọn rác trước → phân tích sau</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: messy rows -> clean table -->
+  <g transform="translate(700,150)">
+    <!-- messy stack -->
+    <rect x="-20" y="0" width="200" height="34" rx="8" fill="#1E293B" stroke="#475569"/>
+    <text x="-6" y="23" fill="#FCA5A5" font-size="18" font-family="monospace">Shopee</text>
+    <rect x="-20" y="42" width="200" height="34" rx="8" fill="#1E293B" stroke="#475569"/>
+    <text x="-6" y="65" fill="#FCA5A5" font-size="18" font-family="monospace">shopee  ⎘</text>
+    <rect x="-20" y="84" width="200" height="34" rx="8" fill="#1E293B" stroke="#475569"/>
+    <text x="-6" y="107" fill="#FCA5A5" font-size="18" font-family="monospace">SP   30/06</text>
+    <rect x="-20" y="126" width="200" height="34" rx="8" fill="#1E293B" stroke="#475569"/>
+    <text x="-6" y="149" fill="#FCA5A5" font-size="18" font-family="monospace">NULL  4,2tỷ</text>
+    <text x="-20" y="200" fill="#94A3B8" font-size="17" font-family="monospace">trùng · lệch · thiếu</text>
+    <!-- arrow -->
+    <path d="M200 95 L260 95" stroke="#818CF8" stroke-width="3" marker-end="url(#aD)"/>
+    <!-- clean table -->
+    <rect x="280" y="0" width="220" height="160" rx="12" fill="#0B1220" stroke="#334155"/>
+    <line x1="280" y1="42" x2="500" y2="42" stroke="#334155"/>
+    <text x="298" y="28" fill="#7DD3FC" font-size="18" font-family="monospace">kênh</text>
+    <text x="410" y="28" fill="#7DD3FC" font-size="18" font-family="monospace">doanh thu</text>
+    <text x="298" y="70" fill="#E2E8F0" font-size="18" font-family="monospace">Shopee</text>
+    <text x="410" y="70" fill="#E2E8F0" font-size="18" font-family="monospace">4,2 tỷ</text>
+    <text x="298" y="102" fill="#E2E8F0" font-size="18" font-family="monospace">TikTok</text>
+    <text x="410" y="102" fill="#E2E8F0" font-size="18" font-family="monospace">2,1 tỷ</text>
+    <text x="298" y="134" fill="#4ADE80" font-size="17" font-family="monospace">-- ✓ đã chuẩn hoá</text>
+  </g>
+</svg>

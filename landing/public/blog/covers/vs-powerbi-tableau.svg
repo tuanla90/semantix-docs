@@ -1,0 +1,28 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/><stop offset="0.6" stop-color="#1E1B4B"/><stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg8)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">SO SÁNH &amp; LỰA CHỌN</text>
+  <text x="80" y="232" fill="#ffffff" font-size="48" font-weight="800">Semantix vs Power BI</text>
+  <text x="80" y="292" fill="#ffffff" font-size="48" font-weight="800">&amp; Tableau</text>
+  <text x="80" y="350" fill="#CBD5E1" font-size="28" font-weight="600">Dashboard dựng sẵn vs hỏi bất kỳ câu nào</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: cost lines diverging -->
+  <g transform="translate(770,170)">
+    <line x1="0" y1="220" x2="340" y2="220" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="220" stroke="#475569" stroke-width="2"/>
+    <path d="M0 210 L340 40" stroke="#F87171" stroke-width="4" fill="none"/>
+    <path d="M0 210 L340 130" stroke="#FBBF24" stroke-width="4" fill="none"/>
+    <path d="M0 200 L340 196" stroke="#4ADE80" stroke-width="4" fill="none"/>
+    <text x="348" y="44" fill="#FCA5A5" font-size="16">Tableau</text>
+    <text x="348" y="134" fill="#FCD34D" font-size="16">Power BI</text>
+    <text x="348" y="200" fill="#86EFAC" font-size="16">Semantix</text>
+    <text x="120" y="250" fill="#64748B" font-size="15">số người dùng →</text>
+  </g>
+</svg>

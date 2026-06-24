@@ -1,0 +1,28 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgc3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/><stop offset="0.6" stop-color="#1E1B4B"/><stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgc3)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <rect x="80" y="96" width="170" height="40" rx="20" fill="#312E81"/>
+  <text x="165" y="123" fill="#C7D2FE" font-size="20" font-weight="700" text-anchor="middle">PHẦN 3 / 4</text>
+  <text x="270" y="124" fill="#818CF8" font-size="20" font-weight="700" letter-spacing="3">SERIES COHORT ANALYSIS</text>
+  <text x="80" y="232" fill="#ffffff" font-size="46" font-weight="800">Behavioral Cohort</text>
+  <text x="80" y="296" fill="#CBD5E1" font-size="30" font-weight="600">Theo kênh, theo hành vi, activation</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: funnel + channels -->
+  <g transform="translate(770,165)">
+    <path d="M0 0 L320 0 L270 56 L50 56 Z" fill="#6366F1"/>
+    <path d="M50 64 L270 64 L228 120 L92 120 Z" fill="#818CF8"/>
+    <path d="M92 128 L228 128 L196 184 L124 184 Z" fill="#A5B4FC"/>
+    <path d="M124 192 L196 192 L172 240 L148 240 Z" fill="#C7D2FE"/>
+    <text x="330" y="34" fill="#94A3B8" font-size="18">truy cập</text>
+    <text x="330" y="98" fill="#94A3B8" font-size="18">dùng thử</text>
+    <text x="330" y="162" fill="#94A3B8" font-size="18">activation</text>
+    <text x="330" y="222" fill="#86EFAC" font-size="18">giữ chân</text>
+  </g>
+</svg>

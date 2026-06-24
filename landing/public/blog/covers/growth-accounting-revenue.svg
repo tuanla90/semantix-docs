@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#042f2e"/>
+      <stop offset="0.55" stop-color="#0b3d2e"/>
+      <stop offset="1" stop-color="#052e16"/>
+    </linearGradient>
+    <linearGradient id="tealbar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#fade)" opacity="0.25"/>
+
+  <!-- top labels -->
+  <text x="80" y="92" fill="#5eead4" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="124" fill="#99f6e4" font-size="16" font-weight="600" letter-spacing="2" opacity="0.85">SERIES GROWTH ACCOUNTING · PHẦN 3</text>
+
+  <!-- title -->
+  <text x="80" y="214" fill="#f0fdfa" font-size="62" font-weight="800">Từ user sang tiền</text>
+  <text x="80" y="288" fill="#f0fdfa" font-size="62" font-weight="800">Net Dollar Retention</text>
+
+  <!-- subtitle -->
+  <text x="80" y="344" fill="#a7f3d0" font-size="25" font-weight="500">Mất bớt khách — mà doanh thu vẫn đi lên</text>
+
+  <!-- waterfall motif -->
+  <g transform="translate(80,400)">
+    <line x1="0" y1="150" x2="1040" y2="150" stroke="#14532d" stroke-width="2"/>
+
+    <!-- Rev(t-1) -->
+    <rect x="10" y="40" width="90" height="110" rx="5" fill="#475569"/>
+    <text x="55" y="172" fill="#94a3b8" font-size="14" text-anchor="middle">Rev(t−1)</text>
+
+    <!-- +new -->
+    <rect x="135" y="8" width="90" height="32" rx="5" fill="#22c55e"/>
+    <text x="180" y="172" fill="#86efac" font-size="14" text-anchor="middle">+ new</text>
+
+    <!-- +expansion -->
+    <rect x="260" y="-30" width="90" height="38" rx="5" fill="#15803d"/>
+    <text x="305" y="172" fill="#86efac" font-size="14" text-anchor="middle">+ expansion</text>
+
+    <!-- +resurrected -->
+    <rect x="385" y="-48" width="90" height="18" rx="5" fill="#4ade80"/>
+    <text x="430" y="172" fill="#86efac" font-size="14" text-anchor="middle">+ resurrected</text>
+
+    <!-- -contraction -->
+    <rect x="510" y="-48" width="90" height="24" rx="5" fill="#f59e0b"/>
+    <text x="555" y="172" fill="#fbbf24" font-size="14" text-anchor="middle">− contraction</text>
+
+    <!-- -churned -->
+    <rect x="635" y="-24" width="90" height="30" rx="5" fill="#ef4444"/>
+    <text x="680" y="172" fill="#fca5a5" font-size="14" text-anchor="middle">− churned</text>
+
+    <!-- Rev(t) -->
+    <rect x="775" y="-24" width="90" height="174" rx="5" fill="url(#tealbar)"/>
+    <text x="820" y="172" fill="#5eead4" font-size="14" text-anchor="middle">Rev(t)</text>
+
+    <!-- connectors -->
+    <line x1="100" y1="40"  x2="135" y2="40"  stroke="#475569" stroke-dasharray="4 4"/>
+    <line x1="225" y1="8"   x2="260" y2="8"   stroke="#475569" stroke-dasharray="4 4"/>
+    <line x1="350" y1="-30" x2="385" y2="-30" stroke="#475569" stroke-dasharray="4 4"/>
+    <line x1="475" y1="-48" x2="510" y2="-48" stroke="#475569" stroke-dasharray="4 4"/>
+    <line x1="600" y1="-24" x2="635" y2="-24" stroke="#475569" stroke-dasharray="4 4"/>
+    <line x1="725" y1="-24" x2="775" y2="-24" stroke="#475569" stroke-dasharray="4 4"/>
+
+    <!-- NRR badge -->
+    <rect x="905" y="-40" width="155" height="64" rx="32" fill="#042f2e" stroke="#2dd4bf" stroke-width="2"/>
+    <text x="982" y="-12" fill="#5eead4" font-size="15" font-weight="600" text-anchor="middle">NRR</text>
+    <text x="982" y="12" fill="#f0fdfa" font-size="22" font-weight="800" text-anchor="middle">&gt; 100%</text>
+  </g>
+
+  <!-- footer -->
+  <text x="80" y="566" fill="#5eead4" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

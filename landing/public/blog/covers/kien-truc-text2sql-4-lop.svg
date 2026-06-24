@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg4l" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <marker id="a4l" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#818CF8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg4l)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">AI &amp; CÔNG NGHỆ</text>
+  <text x="80" y="232" fill="#ffffff" font-size="52" font-weight="800">Kiến trúc Text2SQL 4 lớp</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="28" font-weight="600">Câu hỏi tiếng Việt → 4 tầng lọc → SQL đúng</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+
+  <!-- motif: 4-layer filter pipeline -->
+  <g transform="translate(700,180)">
+    <!-- input -->
+    <rect x="40" y="0" width="320" height="50" rx="25" fill="#1E293B" stroke="#334155"/>
+    <text x="200" y="32" fill="#E2E8F0" font-size="20" text-anchor="middle">"doanh thu tháng này"</text>
+    <path d="M200 54 L200 80" stroke="#818CF8" stroke-width="3" marker-end="url(#a4l)"/>
+
+    <!-- layer 1 -->
+    <rect x="40" y="86" width="320" height="44" rx="10" fill="#0B1220" stroke="#4F46E5"/>
+    <circle cx="66" cy="108" r="11" fill="#4F46E5"/>
+    <text x="66" y="114" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">1</text>
+    <text x="90" y="114" fill="#C7D2FE" font-size="18">Hiểu ý định</text>
+    <path d="M200 132 L200 152" stroke="#818CF8" stroke-width="3" marker-end="url(#a4l)"/>
+
+    <!-- layer 2 (highlighted) -->
+    <rect x="40" y="158" width="320" height="44" rx="10" fill="#1E1B4B" stroke="#818CF8" stroke-width="2"/>
+    <circle cx="66" cy="180" r="11" fill="#818CF8"/>
+    <text x="66" y="186" fill="#1E1B4B" font-size="15" font-weight="700" text-anchor="middle">2</text>
+    <text x="90" y="186" fill="#E0E7FF" font-size="18" font-weight="700">Semantic Layer</text>
+    <path d="M200 204 L200 224" stroke="#818CF8" stroke-width="3" marker-end="url(#a4l)"/>
+
+    <!-- layer 3 -->
+    <rect x="40" y="230" width="320" height="44" rx="10" fill="#0B1220" stroke="#4F46E5"/>
+    <circle cx="66" cy="252" r="11" fill="#4F46E5"/>
+    <text x="66" y="258" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">3</text>
+    <text x="90" y="258" fill="#C7D2FE" font-size="18">Sinh SQL có ràng buộc</text>
+    <path d="M200 276 L200 296" stroke="#818CF8" stroke-width="3" marker-end="url(#a4l)"/>
+
+    <!-- layer 4 -->
+    <rect x="40" y="302" width="320" height="44" rx="10" fill="#0B1220" stroke="#4F46E5"/>
+    <circle cx="66" cy="324" r="11" fill="#4F46E5"/>
+    <text x="66" y="330" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">4</text>
+    <text x="90" y="330" fill="#C7D2FE" font-size="18">Kiểm chứng &amp; tự sửa</text>
+    <path d="M200 348 L200 368" stroke="#4ADE80" stroke-width="3" marker-end="url(#a4l)"/>
+
+    <!-- output -->
+    <rect x="40" y="374" width="320" height="44" rx="10" fill="#0B1220" stroke="#16A34A"/>
+    <text x="60" y="402" fill="#4ADE80" font-size="17" font-family="monospace">SELECT SUM(...) ✓ đúng</text>
+  </g>
+</svg>

@@ -1,0 +1,79 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg09" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="acc09" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+    <marker id="arrow09" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#818CF8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg09)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+
+  <text x="80" y="120" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">HƯỚNG DẪN THỰC CHIẾN</text>
+  <text x="80" y="210" fill="#ffffff" font-size="50" font-weight="800">Chia sẻ, không lộ data</text>
+  <text x="80" y="270" fill="#CBD5E1" font-size="28" font-weight="600">Một báo cáo · mỗi người thấy đúng phần của mình</text>
+  <text x="80" y="540" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+
+  <!-- motif: một báo cáo nguồn chia tới 3 người, mỗi người chỉ thấy lát cắt -->
+  <g transform="translate(740,300)">
+    <!-- nguồn: báo cáo đầy đủ -->
+    <g transform="translate(0,-72)">
+      <rect x="0" y="0" width="150" height="144" rx="16" fill="url(#acc09)"/>
+      <text x="75" y="34" fill="#ffffff" font-size="17" font-weight="800" text-anchor="middle">BÁO CÁO</text>
+      <g stroke="#E0E7FF" stroke-width="2" opacity="0.85">
+        <line x1="22" y1="56" x2="128" y2="56"/>
+        <line x1="22" y1="78" x2="128" y2="78"/>
+        <line x1="22" y1="100" x2="128" y2="100"/>
+        <line x1="22" y1="122" x2="100" y2="122"/>
+      </g>
+    </g>
+
+    <!-- arrows từ nguồn tới 3 người -->
+    <g stroke="#818CF8" stroke-width="2.5" fill="none" opacity="0.8">
+      <path d="M158 -52 C 230 -70, 262 -100, 300 -110" marker-end="url(#arrow09)"/>
+      <path d="M158 0 L 298 0" marker-end="url(#arrow09)"/>
+      <path d="M158 52 C 230 70, 262 100, 300 110" marker-end="url(#arrow09)"/>
+    </g>
+
+    <!-- người 1: chỉ thấy lát cắt sáng, phần khác mờ -->
+    <g transform="translate(310,-148)">
+      <rect x="0" y="0" width="138" height="74" rx="12" fill="#1E293B" stroke="#34D399" stroke-width="2"/>
+      <text x="14" y="26" fill="#6EE7B7" font-size="14" font-weight="700">Sale</text>
+      <rect x="14" y="38" width="60" height="9" rx="3" fill="#34D399"/>
+      <rect x="80" y="38" width="44" height="9" rx="3" fill="#334155"/>
+      <rect x="14" y="54" width="38" height="9" rx="3" fill="#34D399"/>
+      <rect x="58" y="54" width="66" height="9" rx="3" fill="#334155"/>
+    </g>
+
+    <!-- người 2: lát cắt khác -->
+    <g transform="translate(310,-37)">
+      <rect x="0" y="0" width="138" height="74" rx="12" fill="#1E293B" stroke="#22D3EE" stroke-width="2"/>
+      <text x="14" y="26" fill="#67E8F9" font-size="14" font-weight="700">Quản lý CN</text>
+      <rect x="14" y="38" width="40" height="9" rx="3" fill="#334155"/>
+      <rect x="60" y="38" width="64" height="9" rx="3" fill="#22D3EE"/>
+      <rect x="14" y="54" width="70" height="9" rx="3" fill="#22D3EE"/>
+      <rect x="90" y="54" width="34" height="9" rx="3" fill="#334155"/>
+    </g>
+
+    <!-- người 3: lát cắt khác, cột lương bị che -->
+    <g transform="translate(310,74)">
+      <rect x="0" y="0" width="138" height="74" rx="12" fill="#1E293B" stroke="#FB923C" stroke-width="2"/>
+      <text x="14" y="26" fill="#FDBA74" font-size="14" font-weight="700">Kế toán</text>
+      <rect x="14" y="38" width="56" height="9" rx="3" fill="#FB923C"/>
+      <rect x="76" y="38" width="48" height="9" rx="3" fill="#FB923C"/>
+      <rect x="14" y="54" width="44" height="9" rx="3" fill="#334155"/>
+      <rect x="64" y="54" width="60" height="9" rx="3" fill="#FB923C"/>
+    </g>
+  </g>
+</svg>

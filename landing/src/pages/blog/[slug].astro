@@ -178,6 +178,9 @@ function formatDate(date: Date) {
   /* Inline data-viz wrapper (SVG diagrams) */
   .post-content .viz { margin: 32px 0; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; }
   .post-content .viz svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  /* ECharts container (growth/cohort) — cần chiều cao tường minh */
+  .post-content .viz-chart { width: 100%; height: 360px; }
+  @media (max-width: 640px) { .post-content .viz-chart { height: 300px; } }
   .post-content .viz-caption { font-size: 13.5px; color: var(--muted); text-align: center; margin-top: 14px; font-style: italic; }
 
   /* Series navigation box */
@@ -231,7 +234,7 @@ function formatDate(date: Date) {
         <div class="author-avatar">{post.data.author.charAt(post.data.author.indexOf(' ') + 1)}</div>
         <div>
           <div class="author-name">{post.data.author}</div>
-          <div class="author-label">Đội Ngũ Semantix</div>
+          <div class="author-label">{post.data.authorTitle}</div>
         </div>
       </div>
     </div>

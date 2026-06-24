@@ -155,6 +155,10 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | uc-005 | Nhà bán TikTok Shop mùa sale: ra quyết định giá theo từng giờ | ✅ | `tiktok-shop-mua-sale-gia-theo-gio` |
 | uc-006 | Phòng Marketing: đo ROI từng kênh ads mà không chờ data team | ✅ | `marketing-do-roi-ads` |
 | uc-007 | Chuyện nghề Data Analyst: 80% công việc không ai khoe trên LinkedIn | ✅ | `chuyen-nghe-data-analyst` |
+| uc-008 | Từ Excel đến Semantix (Series · P1): những năm bảng tính | ✅ | `hanh-trinh-thoi-excel` |
+| uc-009 | Từ Excel đến Semantix (P2): lên Power BI & Data Studio | ✅ | `hanh-trinh-power-bi-data-studio` |
+| uc-010 | Từ Excel đến Semantix (P3): sang Superset & Metabase | ✅ | `hanh-trinh-superset-metabase` |
+| uc-011 | Từ Excel đến Semantix (P4): tự xây & hấp thụ điểm mạnh | ✅ | `hanh-trinh-tu-xay-semantix` |
 
 ### 6 — So Sánh & Lựa Chọn (`ss`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |

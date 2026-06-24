@@ -10,6 +10,7 @@ const blog = defineCollection({
     category: z.string(),
     readTime: z.number(),
     author: z.string().default('Đội Ngũ Semantix'),
+    authorTitle: z.string().default('Đội Ngũ Semantix'),
     featured: z.boolean().default(false),
     cover: z.string().optional(),
     coverAlt: z.string().optional(),

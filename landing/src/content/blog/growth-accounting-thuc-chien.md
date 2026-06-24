@@ -1,6 +1,8 @@
 ---
 title: "Growth accounting thực chiến: dựng bảng cho shop của bạn — và để AI làm phần nặng"
 code: "pt-021"
+series: "growth-accounting"
+seriesOrder: 4
 description: "Ba phần lý thuyết đã xong. Giờ là lúc dựng bảng growth accounting cho doanh nghiệp thật — từ một bảng giao dịch, không cần data warehouse, không cần SQL."
 pubDate: 2026-06-22
 category: "Phân Tích Dữ Liệu"

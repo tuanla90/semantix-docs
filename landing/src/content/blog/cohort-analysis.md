@@ -1,6 +1,8 @@
 ---
 title: "Cohort Analysis (Phần 1): vì sao tăng trưởng 40% vẫn có thể là dấu hiệu công ty đang chết"
 code: "pt-001"
+series: "cohort"
+seriesOrder: 1
 description: "Một con số tổng tăng đẹp có thể che giấu một doanh nghiệp đang rò rỉ khách hàng từng ngày. Phần 1 của series: ảo ảnh của con số tổng, cohort là gì, và cách đọc một bảng heatmap giữ chân."
 pubDate: 2024-12-03
 category: "Phân Tích Dữ Liệu"

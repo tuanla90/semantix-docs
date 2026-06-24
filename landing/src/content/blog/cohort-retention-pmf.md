@@ -1,6 +1,8 @@
 ---
 title: "Cohort Analysis (Phần 2): đường cong giữ chân — chỉ số product-market fit thật nhất"
 code: "pt-002"
+series: "cohort"
+seriesOrder: 2
 description: "Hình dạng đường cong giữ chân nói lên product-market fit nhiều hơn mọi con số tăng trưởng. Phần 2 của series: ba hình dạng đường cong, ngưỡng PMF, và 'negative churn' là gì."
 pubDate: 2024-12-10
 category: "Phân Tích Dữ Liệu"

@@ -82,6 +82,7 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | pt-017 | Growth Accounting (Phần 2): Quick Ratio — nhịp tim tăng trưởng | ✅ | `growth-accounting-quick-ratio` |
 | pt-018 | Growth Accounting (Phần 1): phương trình tăng trưởng & con số tăng ròng giấu sự thật | ✅ | `growth-accounting` |
 | pt-021 | Growth Accounting (Phần 4): thực chiến — dựng bảng growth accounting | ✅ | `growth-accounting-thuc-chien` |
+| pt-020 | Funnel nâng cao: cái phễu là lời nói dối tiện lợi — khi nào nó khiến bạn sửa nhầm chỗ | ✅ | `funnel-nang-cao` |
 
 ### 3 — Hướng Dẫn Thực Chiến (`hd`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -140,7 +141,7 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 
 ## D. Việc cần làm tiếp (🔴 chưa viết)
 
-> **19 bài đã xuất bản** — xem các dòng `✅` kèm slug ở mục C. (đã chuẩn hoá: slug sạch, mã `<dm>-<NNN>` trong frontmatter, không còn trùng số/cover.)
+> **35 bài đã xuất bản** — xem các dòng `✅` kèm slug ở mục C. (đã chuẩn hoá: slug sạch, mã `<dm>-<NNN>` trong frontmatter, không còn trùng số/cover.)
 
 Bốn bài 🔴 — đã viết xong đợt này (4 agent song song):
 
@@ -156,6 +157,7 @@ Bốn bài 🔴 — đã viết xong đợt này (4 agent song song):
 - **Độ dài:** 800–1.200 từ (`readTime` 6–9); pillar (T1/T2/F1) có thể 1.300–1.600.
 - **Cấu trúc:** Hook tình huống → "X là gì/vấn đề" → 3–5 mục H2 có ví dụ số liệu VN → cách Semantix giải quyết (ngắn, không bán quá) → CTA.
 - **Frontmatter** (theo `src/content/config.ts`): `title`, `description` (≤160 ký tự, chứa keyword), `pubDate`, `category`, `readTime`, `author`, `featured`.
+- **Bài series (nhiều phần):** BẮT BUỘC thêm `series: "<tên-series>"` (giống nhau cho mọi phần) + `seriesOrder: <N>` (1, 2, 3…) vào frontmatter. Trang blog dùng 2 trường này để gom các phần nằm cạnh nhau và xếp đúng Phần 1→N — thiếu thì series sẽ bị tách rời & đảo ngược theo ngày đăng.
 - **Internal linking:** mỗi bài link 1–2 trang docs liên quan + 1–2 bài blog cùng chủ đề.
 - **CTA:** TOFU → đọc thêm; MOFU → dùng thử free Google Sheets; BOFU → đặt lịch demo.
 - **Tác giả:** giữ dàn bút danh hiện có (Lê Anh Tuấn, Trần Minh Khoa, Lê Thị Hương).

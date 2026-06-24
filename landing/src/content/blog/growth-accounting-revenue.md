@@ -1,6 +1,8 @@
 ---
 title: "Net Dollar Retention: vì sao bạn có thể mất bớt khách — mà doanh thu vẫn đi lên"
 code: "pt-019"
+series: "growth-accounting"
+seriesOrder: 3
 description: "SaaS này mất 8% khách trong tháng. Doanh thu vẫn tăng 5%. Không nghịch lý: đó là negative churn. Net dollar retention và hai dòng tiền bản đếm-đầu-người không thấy."
 pubDate: 2026-06-18
 category: "Phân Tích Dữ Liệu"

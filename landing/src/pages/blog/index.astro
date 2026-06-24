@@ -2,12 +2,31 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const all = await getCollection('blog');
+
+// Anchor each series at its FIRST part (Phần 1 = earliest date) so the series
+// keeps its original position in the timeline, while parts read in order 1 → N.
+const seriesAnchor = new Map<string, number>();
+for (const p of all) {
+  if (p.data.series) {
+    const t = p.data.pubDate.valueOf();
+    const cur = seriesAnchor.get(p.data.series);
+    seriesAnchor.set(p.data.series, cur === undefined ? t : Math.min(cur, t));
+  }
+}
+const sortKey = (p: typeof all[number]) =>
+  p.data.series ? seriesAnchor.get(p.data.series)! : p.data.pubDate.valueOf();
+
+const posts = all.sort((a, b) => {
+  const ka = sortKey(a), kb = sortKey(b);
+  if (kb !== ka) return kb - ka;                                   // newest first
+  // Same series (shared anchor): order by part ascending
+  return (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0);
+});
 
 const featured = posts.filter(p => p.data.featured);
-const rest = posts.filter(p => !p.data.featured);
+// "Tất cả bài viết" = every post (featured included), in the grouped order above.
+const rest = posts;
 
 const categories = [...new Set(posts.map(p => p.data.category))];
 
@@ -56,12 +75,8 @@ function formatDate(date: Date) {
   .fslide:hover { box-shadow: 0 16px 48px rgba(79,70,229,.14); transform: translateY(-4px); }
   .fslide-cover { position: relative; height: 200px; background: var(--surface); }
   .fslide-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .fslide-badge {
-    position: absolute; top: 14px; left: 14px; padding: 5px 12px; border-radius: 100px;
-    background: rgba(15,23,42,.78); backdrop-filter: blur(4px);
-    font-size: 11px; font-weight: 700; color: #fff; letter-spacing: .5px;
-  }
-  .fslide-body { padding: 24px 26px 26px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+  .fslide-body { padding: 22px 26px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .fslide-cat { font-size: 11px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
   .fslide-title { font-size: 21px; font-weight: 800; color: var(--dark); letter-spacing: -0.4px; line-height: 1.3; }
   .fslide-desc  { font-size: 14px; color: var(--muted); line-height: 1.65; flex: 1; }
   .fslide-meta  { display: flex; gap: 12px; align-items: center; padding-top: 14px; border-top: 1px solid var(--border); font-size: 12.5px; }
@@ -83,12 +98,8 @@ function formatDate(date: Date) {
   .post-card:hover { box-shadow: 0 12px 36px rgba(15,23,42,.10); transform: translateY(-3px); border-color: #C7D2FE; }
   .pc-cover { position: relative; height: 150px; background: var(--surface); }
   .pc-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .pc-badge {
-    position: absolute; top: 12px; left: 12px; padding: 4px 10px; border-radius: 100px;
-    background: rgba(15,23,42,.78); backdrop-filter: blur(4px);
-    font-size: 10.5px; font-weight: 700; color: #fff; letter-spacing: .4px;
-  }
-  .pc-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .pc-body { padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .pc-cat { font-size: 10.5px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: .8px; }
   .pc-title { font-size: 16.5px; font-weight: 700; color: var(--dark); line-height: 1.4; letter-spacing: -0.2px; }
   .pc-desc  { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1;
               display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
@@ -163,9 +174,9 @@ function formatDate(date: Date) {
           <a href={`/blog/${post.slug}/`} class="fslide" data-category={post.data.category}>
             <div class="fslide-cover">
               {post.data.cover && <img src={post.data.cover} alt={post.data.coverAlt ?? post.data.title} loading="lazy" />}
-              <span class="fslide-badge">{post.data.category}</span>
             </div>
             <div class="fslide-body">
+              <div class="fslide-cat">{post.data.category}</div>
               <div class="fslide-title">{post.data.title}</div>
               <div class="fslide-desc">{post.data.description}</div>
               <div class="fslide-meta">
@@ -190,9 +201,9 @@ function formatDate(date: Date) {
           <a href={`/blog/${post.slug}/`} class="post-card" data-category={post.data.category}>
             <div class="pc-cover">
               {post.data.cover && <img src={post.data.cover} alt={post.data.coverAlt ?? post.data.title} loading="lazy" />}
-              <span class="pc-badge">{post.data.category}</span>
             </div>
             <div class="pc-body">
+              <div class="pc-cat">{post.data.category}</div>
               <div class="pc-title">{post.data.title}</div>
               <div class="pc-desc">{post.data.description}</div>
               <div class="pc-meta">

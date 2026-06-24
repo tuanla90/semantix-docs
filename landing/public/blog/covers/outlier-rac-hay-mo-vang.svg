@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FBBF24" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FBBF24" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="162" fill="#F1F5F9" font-size="48" font-weight="800">Outlier: rác cần bỏ,</text>
+  <text x="80" y="216" fill="#F1F5F9" font-size="48" font-weight="800">hay mỏ vàng cần giữ?</text>
+  <text x="80" y="262" fill="#94A3B8" font-size="24" font-weight="500">Xoá điểm lệch &quot;cho đẹp số&quot; — và xoá luôn insight đắt nhất</text>
+  <g transform="translate(70,310)">
+    <rect x="0" y="0" width="1060" height="220" rx="16" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <line x1="40" y1="180" x2="1020" y2="180" stroke="#334155" stroke-width="1.5"/>
+    <line x1="40" y1="40" x2="40" y2="180" stroke="#334155" stroke-width="1.5"/>
+    <rect x="120" y="120" width="360" height="50" rx="10" fill="#162033" stroke="#22D3EE" stroke-width="1.2" stroke-dasharray="5 5"/>
+    <text x="130" y="112" fill="#22D3EE" font-size="13" font-weight="700">đám điểm bình thường</text>
+    <circle cx="150" cy="158" r="6" fill="#34D399"/>
+    <circle cx="185" cy="148" r="6" fill="#34D399"/>
+    <circle cx="220" cy="160" r="6" fill="#34D399"/>
+    <circle cx="255" cy="142" r="6" fill="#34D399"/>
+    <circle cx="290" cy="155" r="6" fill="#34D399"/>
+    <circle cx="325" cy="147" r="6" fill="#34D399"/>
+    <circle cx="360" cy="162" r="6" fill="#34D399"/>
+    <circle cx="395" cy="150" r="6" fill="#34D399"/>
+    <circle cx="430" cy="158" r="6" fill="#34D399"/>
+    <circle cx="465" cy="145" r="6" fill="#34D399"/>
+    <circle cx="760" cy="80" r="38" fill="url(#goldGlow)"/>
+    <circle cx="760" cy="80" r="13" fill="#FBBF24" stroke="#F1F5F9" stroke-width="2.5"/>
+    <text x="760" y="42" fill="#FBBF24" font-size="17" font-weight="800" text-anchor="middle">mỏ vàng?</text>
+    <text x="760" y="124" fill="#94A3B8" font-size="13" text-anchor="middle">khách sỉ 200tr &amp; thật</text>
+    <circle cx="940" cy="100" r="13" fill="#F87171" stroke="#F1F5F9" stroke-width="2.5"/>
+    <text x="940" y="62" fill="#F87171" font-size="17" font-weight="800" text-anchor="middle">rác?</text>
+    <text x="940" y="138" fill="#94A3B8" font-size="13" text-anchor="middle">nhập thừa số 0</text>
+  </g>
+  <text x="80" y="572" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

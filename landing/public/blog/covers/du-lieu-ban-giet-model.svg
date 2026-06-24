@@ -1,0 +1,66 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="clean" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <!-- title -->
+  <text x="80" y="158" fill="#F1F5F9" font-size="48" font-weight="800">Dữ liệu bẩn giết mô hình</text>
+  <text x="80" y="208" fill="#94A3B8" font-size="25" font-weight="500">Đừng vội đổi model &#8212; hãy dọn data trước.</text>
+  <text x="80" y="242" fill="#94A3B8" font-size="25" font-weight="500">Garbage in, garbage out.</text>
+  <!-- TOP ROW: dirty data -> model -> wrong number -->
+  <g transform="translate(80,300)">
+    <rect x="0" y="0" width="150" height="80" rx="12" fill="#0F172A" stroke="#7F1D1D" stroke-width="2"/>
+    <text x="75" y="30" fill="#F87171" font-size="14" font-weight="700" text-anchor="middle">DATA BẨN</text>
+    <text x="75" y="52" fill="#94A3B8" font-size="12" text-anchor="middle">trùng &amp; sai &amp; lệch</text>
+    <text x="75" y="68" fill="#94A3B8" font-size="12" text-anchor="middle">đơn vị lẫn lộn</text>
+    <path d="M158 40 L208 40" stroke="#475569" stroke-width="3"/>
+    <path d="M200 33 L212 40 L200 47 Z" fill="#475569"/>
+    <rect x="218" y="0" width="120" height="80" rx="12" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <text x="278" y="46" fill="#CBD5E1" font-size="15" font-weight="700" text-anchor="middle">MODEL</text>
+    <path d="M346 40 L396 40" stroke="#475569" stroke-width="3"/>
+    <path d="M388 33 L400 40 L388 47 Z" fill="#475569"/>
+    <rect x="406" y="0" width="150" height="80" rx="12" fill="#7F1D1D" stroke="#F87171" stroke-width="2"/>
+    <text x="481" y="36" fill="#FCA5A5" font-size="26" font-weight="800" text-anchor="middle">71%</text>
+    <text x="481" y="60" fill="#FCA5A5" font-size="13" text-anchor="middle">số sai &#10007;</text>
+  </g>
+  <!-- BOTTOM ROW: clean data -> model -> accuracy up -->
+  <g transform="translate(80,410)">
+    <rect x="0" y="0" width="150" height="80" rx="12" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="75" y="30" fill="#34D399" font-size="14" font-weight="700" text-anchor="middle">DATA SẠCH</text>
+    <text x="75" y="52" fill="#94A3B8" font-size="12" text-anchor="middle">chuẩn hoá &amp;</text>
+    <text x="75" y="68" fill="#94A3B8" font-size="12" text-anchor="middle">định nghĩa một lần</text>
+    <path d="M158 40 L208 40" stroke="#34D399" stroke-width="3"/>
+    <path d="M200 33 L212 40 L200 47 Z" fill="#34D399"/>
+    <rect x="218" y="0" width="120" height="80" rx="12" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <text x="278" y="46" fill="#CBD5E1" font-size="15" font-weight="700" text-anchor="middle">MODEL</text>
+    <path d="M346 40 L396 40" stroke="#34D399" stroke-width="3"/>
+    <path d="M388 33 L400 40 L388 47 Z" fill="#34D399"/>
+    <rect x="406" y="0" width="150" height="80" rx="12" fill="#0F2A20" stroke="#34D399" stroke-width="2"/>
+    <text x="481" y="36" fill="#34D399" font-size="26" font-weight="800" text-anchor="middle">89%</text>
+    <text x="481" y="60" fill="#34D399" font-size="13" text-anchor="middle">accuracy &#8593;</text>
+  </g>
+  <!-- RIGHT: big contrast bars -->
+  <g transform="translate(770,300)">
+    <text x="0" y="-8" fill="#64748B" font-size="14" font-weight="700" letter-spacing="1">CÙNG MỘT MODEL</text>
+    <rect x="0" y="120" width="80" height="70" rx="6" fill="#475569"/>
+    <text x="40" y="112" fill="#94A3B8" font-size="15" font-weight="700" text-anchor="middle">+3</text>
+    <text x="40" y="208" fill="#94A3B8" font-size="12" text-anchor="middle">đổi model</text>
+    <rect x="130" y="20" width="80" height="170" rx="6" fill="url(#clean)"/>
+    <text x="170" y="12" fill="#34D399" font-size="15" font-weight="800" text-anchor="middle">+18</text>
+    <text x="170" y="208" fill="#34D399" font-size="12" font-weight="700" text-anchor="middle">dọn data</text>
+    <text x="0" y="250" fill="#22D3EE" font-size="15" font-weight="700">Dọn data &#8811; đổi model</text>
+    <text x="0" y="272" fill="#64748B" font-size="11">(số minh hoạ về độ lớn)</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
+</svg>

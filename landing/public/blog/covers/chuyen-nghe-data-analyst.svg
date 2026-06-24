@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">CÂU CHUYỆN &amp; USE CASE</text>
+  <!-- title -->
+  <text x="80" y="162" fill="#F1F5F9" font-size="46" font-weight="800">Chuyện nghề Data Analyst</text>
+  <text x="80" y="216" fill="#94A3B8" font-size="25" font-weight="500">80% công việc không ai khoe trên LinkedIn —</text>
+  <text x="80" y="250" fill="#94A3B8" font-size="25" font-weight="500">phần tảng băng chìm của nghề phân tích dữ liệu</text>
+  <!-- LEFT: expectation = pretty chart -->
+  <g transform="translate(80,300)">
+    <rect x="0" y="0" width="460" height="230" rx="14" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="24" y="36" fill="#34D399" font-size="16" font-weight="700" letter-spacing="1">KỲ VỌNG</text>
+    <g transform="translate(40,150)">
+      <line x1="0" y1="0" x2="380" y2="0" stroke="#334155" stroke-width="1.5"/>
+      <rect x="10" y="-40" width="40" height="40" rx="3" fill="url(#bar)"/>
+      <rect x="70" y="-66" width="40" height="66" rx="3" fill="url(#bar)"/>
+      <rect x="130" y="-30" width="40" height="30" rx="3" fill="url(#bar)"/>
+      <rect x="190" y="-80" width="40" height="80" rx="3" fill="url(#bar)"/>
+      <rect x="250" y="-52" width="40" height="52" rx="3" fill="url(#bar)"/>
+      <polyline points="30,-46 90,-70 150,-36 210,-86 270,-58 340,-92" fill="none" stroke="#22D3EE" stroke-width="3"/>
+      <circle cx="340" cy="-92" r="6" fill="#22D3EE"/>
+    </g>
+    <text x="24" y="206" fill="#64748B" font-size="14">Insight đẹp · model ngầu · được lắng nghe</text>
+  </g>
+  <!-- VS badge -->
+  <g transform="translate(600,415)">
+    <circle r="34" fill="#0B1120" stroke="#22D3EE" stroke-width="2"/>
+    <text x="0" y="11" fill="#22D3EE" font-size="26" font-weight="800" text-anchor="middle">vs</text>
+  </g>
+  <!-- RIGHT: reality = dirty repetitive data -->
+  <g transform="translate(660,300)">
+    <rect x="0" y="0" width="460" height="230" rx="14" fill="#0F172A" stroke="#7F1D1D" stroke-width="2"/>
+    <text x="24" y="36" fill="#F87171" font-size="16" font-weight="700" letter-spacing="1">THỰC TẾ</text>
+    <!-- messy data rows -->
+    <g font-size="14" fill="#94A3B8">
+      <rect x="24" y="52" width="412" height="26" rx="4" fill="#162033"/>
+      <text x="36" y="70">Shopee | shopee | SP &#8212; 3 cái tên?</text>
+      <rect x="24" y="84" width="412" height="26" rx="4" fill="#162033"/>
+      <text x="36" y="102">30/06 | 2026-06-30 &#8212; ngày kiểu gì?</text>
+      <rect x="24" y="116" width="412" height="26" rx="4" fill="#162033"/>
+      <text x="36" y="134">47 đơn TRÙNG &#8212; export 2 lần</text>
+      <rect x="24" y="148" width="412" height="26" rx="4" fill="#162033"/>
+      <text x="36" y="166">&#8220;Doanh thu&#8221; = 3 con số khác nhau</text>
+    </g>
+    <text x="24" y="206" fill="#F87171" font-size="14" font-weight="600">Dọn rác · xin quyền · làm lại · bưng số</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

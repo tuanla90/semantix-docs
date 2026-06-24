@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="good" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <!-- title -->
+  <text x="80" y="158" fill="#F1F5F9" font-size="46" font-weight="800">Chia model theo độ đầy của dữ liệu</text>
+  <text x="80" y="208" fill="#94A3B8" font-size="25" font-weight="500">Vì sao một model bị &#8220;kéo xuống&#8221; bởi nhóm thiếu data —</text>
+  <text x="80" y="242" fill="#94A3B8" font-size="25" font-weight="500">và nhiều model nhỏ lại chính xác hơn một model gộp</text>
+  <!-- LEFT: merged blob -->
+  <g transform="translate(80,300)">
+    <text x="0" y="0" fill="#64748B" font-size="16" font-weight="700" letter-spacing="1">1 KHỐI GỘP</text>
+    <rect x="0" y="20" width="230" height="150" rx="14" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <text x="115" y="78" fill="#94A3B8" font-size="17" text-anchor="middle">Hồ sơ đầy + thiếu</text>
+    <text x="115" y="106" fill="#64748B" font-size="15" text-anchor="middle">trộn chung, impute bừa</text>
+    <rect x="40" y="124" width="150" height="20" rx="6" fill="#1E293B"/>
+    <rect x="40" y="124" width="73" height="20" rx="6" fill="#7F1D1D"/>
+    <text x="115" y="166" fill="#F87171" font-size="18" font-weight="700" text-anchor="middle">accuracy 74%</text>
+  </g>
+  <!-- arrow split -->
+  <g transform="translate(340,375)">
+    <path d="M0 0 L70 0" stroke="#22D3EE" stroke-width="3"/>
+    <path d="M62 -7 L74 0 L62 7 Z" fill="#22D3EE"/>
+    <text x="36" y="-16" fill="#22D3EE" font-size="14" font-weight="700" text-anchor="middle">tách theo</text>
+    <text x="36" y="28" fill="#22D3EE" font-size="14" font-weight="700" text-anchor="middle">độ đầy</text>
+  </g>
+  <!-- RIGHT: 3 split models -->
+  <g transform="translate(640,290)">
+    <text x="0" y="0" fill="#34D399" font-size="16" font-weight="700" letter-spacing="1">3 NHÓM THEO ĐỘ ĐẦY</text>
+    <rect x="0" y="16" width="470" height="56" rx="10" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="18" y="50" fill="#CBD5E1" font-size="16">Hồ sơ đầy đủ &#183; ≥7 cột</text>
+    <rect x="250" y="36" width="150" height="16" rx="5" fill="#1E293B"/>
+    <rect x="250" y="36" width="136" height="16" rx="5" fill="url(#good)"/>
+    <text x="442" y="50" fill="#4ADE80" font-size="18" font-weight="700" text-anchor="end">91%</text>
+    <rect x="0" y="84" width="470" height="56" rx="10" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="18" y="118" fill="#CBD5E1" font-size="16">Hồ sơ trung bình &#183; 3–6 cột</text>
+    <rect x="250" y="104" width="150" height="16" rx="5" fill="#1E293B"/>
+    <rect x="250" y="104" width="132" height="16" rx="5" fill="url(#good)"/>
+    <text x="442" y="118" fill="#4ADE80" font-size="18" font-weight="700" text-anchor="end">88%</text>
+    <rect x="0" y="152" width="470" height="56" rx="10" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="18" y="186" fill="#CBD5E1" font-size="16">Hồ sơ tối thiểu &#183; dùng luật</text>
+    <rect x="250" y="172" width="150" height="16" rx="5" fill="#1E293B"/>
+    <rect x="250" y="172" width="118" height="16" rx="5" fill="#34D399"/>
+    <text x="442" y="186" fill="#4ADE80" font-size="18" font-weight="700" text-anchor="end">79%</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
+</svg>

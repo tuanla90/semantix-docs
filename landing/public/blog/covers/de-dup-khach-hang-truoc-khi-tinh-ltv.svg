@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="one" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+
+  <!-- title -->
+  <text x="80" y="158" fill="#F1F5F9" font-size="48" font-weight="800">Một khách, năm hồ sơ</text>
+  <text x="80" y="208" fill="#94A3B8" font-size="25" font-weight="500">Chưa gộp trùng thì LTV &amp; cohort</text>
+  <text x="80" y="242" fill="#94A3B8" font-size="25" font-weight="500">đều sai — một cách âm thầm</text>
+
+  <!-- LEFT: five duplicate profile cards -->
+  <g transform="translate(80,300)">
+    <rect x="0" y="0" width="300" height="44" rx="8" fill="#0F172A" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="28" cy="22" r="11" fill="#7F1D1D"/>
+    <text x="50" y="28" fill="#FCA5A5" font-size="15">Shopee · 0901xxx · "Lan"</text>
+    <rect x="14" y="48" width="300" height="44" rx="8" fill="#0F172A" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="42" cy="70" r="11" fill="#7F1D1D"/>
+    <text x="64" y="76" fill="#FCA5A5" font-size="15">TikTok · 0987xxx · "Lan Nguyen"</text>
+    <rect x="28" y="96" width="300" height="44" rx="8" fill="#0F172A" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="56" cy="118" r="11" fill="#7F1D1D"/>
+    <text x="78" y="124" fill="#FCA5A5" font-size="15">Quầy · 0912xxx · "lna"</text>
+    <rect x="42" y="144" width="300" height="44" rx="8" fill="#0F172A" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="70" cy="166" r="11" fill="#7F1D1D"/>
+    <text x="92" y="172" fill="#FCA5A5" font-size="15">Zalo · email phụ · "Lan N."</text>
+    <rect x="56" y="192" width="300" height="44" rx="8" fill="#0F172A" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="84" cy="214" r="11" fill="#7F1D1D"/>
+    <text x="106" y="220" fill="#FCA5A5" font-size="15">Web · 0901xxx · "Lan"</text>
+  </g>
+
+  <!-- arrow -->
+  <g transform="translate(560,420)">
+    <path d="M0 0 L120 0" stroke="url(#one)" stroke-width="4"/>
+    <path d="M110 -10 L126 0 L110 10 Z" fill="#22D3EE"/>
+    <text x="60" y="-18" fill="#34D399" font-size="16" font-weight="700" text-anchor="middle">gộp trùng</text>
+  </g>
+
+  <!-- RIGHT: one merged customer -->
+  <g transform="translate(720,330)">
+    <rect x="0" y="0" width="400" height="180" rx="16" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <circle cx="64" cy="64" r="32" fill="url(#one)"/>
+    <text x="64" y="73" fill="#06351f" font-size="30" font-weight="800" text-anchor="middle">L</text>
+    <text x="120" y="58" fill="#F1F5F9" font-size="30" font-weight="800">Chị Lan</text>
+    <text x="120" y="92" fill="#34D399" font-size="20" font-weight="700">1 khách · 24 triệu · VIP</text>
+    <text x="32" y="140" fill="#94A3B8" font-size="16">LTV thật · cohort đúng · retention đúng</text>
+  </g>
+
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

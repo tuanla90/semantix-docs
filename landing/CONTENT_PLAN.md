@@ -32,6 +32,12 @@
 
 Nguyên tắc tone: *"viết cho người làm, không phải người nghiên cứu"* — hook tình huống thực, ví dụ Việt Nam (Shopee/TikTok Shop/KiotViet), kết bằng hành động.
 
+> **🧭 Định vị sản phẩm cập nhật (2026-12 — BẮT BUỘC theo khi viết bài liên quan dữ liệu):**
+> - **Đưa dữ liệu đa kênh về cùng chỗ → dùng góc BẢNG ẢO (virtual table)**: gộp (union) + làm sạch (clean) ngay *lúc truy vấn*, **không copy dữ liệu** (no-copy, real-time). KHÔNG còn quảng bá tính năng Sync/đồng bộ-copy-về-kho như giải pháp chính (tính năng sync vẫn tồn tại nhưng không phải thông điệp marketing).
+> - **Database khuyến nghị = NocoBase** (database no-code Semantix cung cấp). Kết nối `nocobase` của Semantix **tự đọc định nghĩa** (tên cột, kiểu + loại ngữ nghĩa, enum kèm nhãn, quan hệ + khóa ngoại) từ metadata NocoBase → người dùng khỏi define lại trong Ngữ cảnh ngữ nghĩa. (Nhấn phần "tự đọc schema"; tránh hứa quá các năng lực khác.)
+> - Thuật ngữ sản phẩm tiếng Việt: **Kết nối · Mô hình dữ liệu · Ngữ cảnh ngữ nghĩa · Bảng ảo**.
+
+
 ## B. Category (6)
 
 1. **Kiến Thức Nền Tảng** *(có sẵn)* — SEO/TOFU
@@ -93,6 +99,12 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | pt-024 | Trung bình nói dối (mean vs median): vì sao 'doanh thu trung bình' đánh lừa bạn | 🟡 | data literacy |
 | pt-025 | Vanity metrics: những con số đẹp nhất thường dẫn tới quyết định tệ nhất | ⚪ | data literacy |
 | pt-026 | Leading vs lagging indicators: đo cái lái được, không phải cái đã rồi | ⚪ | data literacy |
+| pt-027 | Dữ liệu bẩn giết mô hình: đừng vội đổi model, hãy dọn data | ✅ | `du-lieu-ban-giet-model` |
+| pt-028 | 5 sai lầm kinh điển khi phân tích dữ liệu (và cách tránh) | ✅ | `sai-lam-khi-phan-tich-du-lieu` |
+| pt-029 | Chia mô hình theo độ đầy của dữ liệu (data completeness) | ✅ | `phan-khuc-model-theo-do-day-du-lieu` |
+| pt-030 | Outlier: rác cần bỏ hay mỏ vàng cần giữ | ✅ | `outlier-rac-hay-mo-vang` |
+| pt-031 | Một khách, năm hồ sơ: de-dup trước khi tính LTV/cohort | ✅ | `de-dup-khach-hang-truoc-khi-tinh-ltv` |
+| pt-032 | Ô trống cũng biết nói: "thiếu dữ liệu" là một tín hiệu | ✅ | `thieu-du-lieu-cung-la-tin-hieu` |
 
 ### 3 — Hướng Dẫn Thực Chiến (`hd`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -110,6 +122,9 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | hd-011 | Theo dõi tồn kho realtime & tự cảnh báo sắp hết hàng | ⚪ | notifications, connections |
 | hd-012 | 7 câu hỏi sai khiến AI trả lời lệch — và cách hỏi lại cho đúng | ⚪ | deep-dives/ai-best-practices |
 | hd-013 | Tạo metric tính toán (lợi nhuận gộp, AOV) không cần công thức Excel | ⚪ | studio/metrics |
+| hd-014 | Khi nào nên chuyển từ Google Sheets lên database | ✅ | `khi-nao-len-database` |
+| hd-015 | NocoBase + Semantix: định nghĩa một lần, Semantix đọc hết | ✅ | `nocobase-semantix` |
+| hd-016 | Bảng ảo: gộp + làm sạch dữ liệu đa kênh ngay lúc hỏi — không cần đồng bộ về kho | ✅ | `bang-ao-gop-du-lieu` |
 
 ### 4 — AI & Công Nghệ (`ai`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -133,6 +148,7 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | uc-004 | Chuỗi F&B 8 chi nhánh: từ 8 file Excel rời rạc đến một màn hình | ✅ | `chuoi-fnb-8-chi-nhanh` |
 | uc-005 | Nhà bán TikTok Shop mùa sale: ra quyết định giá theo từng giờ | ✅ | `tiktok-shop-mua-sale-gia-theo-gio` |
 | uc-006 | Phòng Marketing: đo ROI từng kênh ads mà không chờ data team | ✅ | `marketing-do-roi-ads` |
+| uc-007 | Chuyện nghề Data Analyst: 80% công việc không ai khoe trên LinkedIn | ✅ | `chuyen-nghe-data-analyst` |
 
 ### 6 — So Sánh & Lựa Chọn (`ss`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -151,7 +167,7 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 
 ## D. Việc cần làm tiếp (🔴 chưa viết)
 
-> **48 bài đã xuất bản** — xem các dòng `✅` kèm slug ở mục C. (đã chuẩn hoá: slug sạch, mã `<dm>-<NNN>` trong frontmatter, không còn trùng số/cover.)
+> **56 bài đã xuất bản** — xem các dòng `✅` kèm slug ở mục C. (đã chuẩn hoá: slug sạch, mã `<dm>-<NNN>` trong frontmatter, không còn trùng số/cover.)
 
 Bốn bài 🔴 — đã viết xong đợt này (4 agent song song):
 

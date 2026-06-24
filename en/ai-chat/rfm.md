@@ -1,46 +1,116 @@
 # RFM Analysis
 
-RFM stands for **Recency, Frequency, Monetary** — a customer segmentation model that scores customers based on their purchasing behavior.
+RFM is a customer segmentation method based on three dimensions of purchasing behavior: **Recency**, **Frequency**, and **Monetary**.
 
-## RFM Dimensions
+---
 
-| Dimension | Question | Example |
-|-----------|----------|---------|
-| **Recency** | How recently did the customer buy? | Last purchase 5 days ago |
-| **Frequency** | How often do they buy? | 12 orders in the last year |
-| **Monetary** | How much do they spend? | $3,400 total spend |
+## The Three RFM Dimensions
 
-## Use Cases
+| Dimension | Question | Measured By |
+|-----------|----------|-------------|
+| **Recency (R)** | Has the customer bought recently? | Number of days since last purchase |
+| **Frequency (F)** | Does the customer buy often? | Number of orders in the analysis period |
+| **Monetary (M)** | Does the customer spend a lot? | Total purchase value |
 
-- Identify your best customers (high R, F, and M scores)
-- Find customers at risk of churning (low Recency)
-- Target win-back campaigns for lapsed customers
-- Personalize promotions by segment
+**Meaning of high/low scores:**
 
-## Setting Up RFM Analysis
+| | High Score (5/5) | Low Score (1/5) |
+|-|-----------------|----------------|
+| R | Bought very recently | Hasn't bought in a long time |
+| F | Buys very frequently | Only bought 1-2 times |
+| M | Spends a great deal | Spends very little |
 
-1. Open a context → **Advanced Analysis tab**
-2. Click **Add → RFM**
+---
+
+## Configuring RFM Analysis
+
+### Data Requirements
+
+A transactions table with:
+- Customer ID column (`customer_id`)
+- Order date column (`order_date`)
+- Order value column (`total_amount`, `revenue`)
+
+### Setting Up in a Context
+
+1. Studio → DABI → Data Models → Select model → Context tab
+2. Select Context → Tab **Advanced Analysis** → **Add → RFM**
 3. Configure:
 
-| Field | Description |
-|-------|-------------|
-| **Entity Column** | Customer identifier (e.g. `customer_id`) |
-| **Time Dimension** | Order/event date (e.g. `order_date`) |
-| **Value Metric** | Revenue or order value (e.g. `SUM(total)`) |
+| Field | Description | Example |
+|-------|-------------|---------|
+| **Entity Column** | Customer ID column | `customer_id` |
+| **Time Dimension** | Order date column | `order_date` |
+| **Value Column** | Order value column | `total_amount` |
+| **Analysis Window** | Analysis period (days) | `365` (last 1 year) |
+| **Score Bins** | Number of quantiles per dimension | `5` (scores 1-5) |
 
 4. Click **Save**
 
-## RFM Segments
+---
 
-Semantix automatically assigns each customer to a segment based on their combined RFM score:
+## Customer Segments
 
-| Segment | Description |
-|---------|-------------|
-| 🥇 Champions | Bought recently, buy often, spend the most |
-| 💛 Loyal Customers | Buy regularly with good spend |
-| 🌱 Potential Loyalists | Recent buyers with average frequency |
-| 🆕 New Customers | Bought very recently for the first time |
-| ⚠️ At Risk | Good historical customers who haven't bought recently |
-| 💤 Hibernating | Low R, F, and M — nearly lost |
-| ❌ Lost | Haven't purchased in a very long time |
+Semantix automatically classifies customers based on their combined RFM score:
+
+| Segment | Description | R | F | M | Strategy |
+|---------|-------------|---|---|---|---------|
+| 🥇 **Champions** | Bought recently, frequently, spend the most | 5 | 5 | 5 | Reward, upsell, brand ambassador |
+| 💛 **Loyal Customers** | Buy frequently with good spend | 4-5 | 4-5 | 3-5 | Loyalty program, new products |
+| 🌱 **Potential Loyalists** | Bought recently, a few times, decent spend | 4-5 | 2-3 | 2-3 | Onboarding, cross-sell, promotions |
+| 🆕 **New Customers** | Bought very recently, first time | 5 | 1 | 1-2 | Welcome series, education |
+| 🤑 **Big Spenders** | High spend but infrequent purchases | 2-4 | 1-2 | 4-5 | Special offers, VIP treatment |
+| ⚠️ **At Risk** | Formerly good customers, haven't bought recently | 2-3 | 3-4 | 3-4 | Win-back campaign, survey |
+| 😴 **Hibernating** | Occasional buyers, been a while | 1-2 | 2-3 | 2-3 | Reactivation offer |
+| ❌ **Lost** | Haven't purchased in a very long time | 1 | 1-2 | 1-2 | Last-chance offer or stop marketing |
+
+---
+
+## Reading RFM Results
+
+### Segment Summary Table
+
+| Segment | Customers | % of Total | Total Revenue | % Revenue |
+|---------|-----------|------------|---------------|-----------|
+| Champions | 1,245 | 8.3% | $2,890,000 | 34% |
+| Loyal Customers | 2,100 | 14% | $1,980,000 | 23% |
+| At Risk | 3,450 | 23% | $890,000 | 10% |
+| Lost | 4,200 | 28% | $120,000 | 1.4% |
+| Total | 15,000 | 100% | $8,500,000 | 100% |
+
+**Insights from this table:**
+- 22.3% of customers (Champions + Loyal) generate 57% of revenue → focus on retaining this group
+- 28% are already lost → not worth heavy marketing investment
+
+### RFM Heatmap Matrix
+
+Semantix displays an R vs F heatmap with color representing M — making it easy to see customer distribution patterns.
+
+---
+
+## Practical Applications
+
+### Export Lists for Campaigns
+
+1. In RFM results → select a segment (e.g. "At Risk")
+2. Click **Export CSV** → download the list of `customer_id`, email, RFM scores
+3. Import into your email marketing tool (Mailchimp, HubSpot, Klaviyo)
+
+### Marketing Content by Segment
+
+| Segment | Suggested Message |
+|---------|------------------|
+| Champions | "Thank you for being a VIP customer! Receive your exclusive offer" |
+| At Risk | "We miss you! 20% voucher for your next order" |
+| Lost | "We've improved! Come back and receive a gift" |
+| New Customers | "Discover more products you'll love" |
+
+---
+
+## How Often to Run RFM
+
+- **Monthly**: Update segments, track migration between groups
+- **After campaigns**: Assess how many "At Risk" moved back to "Loyal" after a win-back campaign
+- **Year-end**: Analyze segment trends for the full year
+
+> Customers move between segments over time — run RFM regularly to keep your data current.

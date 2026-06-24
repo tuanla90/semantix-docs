@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const related = allPosts.filter(p => p.slug !== post.slug).slice(0, 2);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+}
+---
+<BaseLayout title={`${post.data.title} — Semantix Blog`} description={post.data.description}>
+
+<style>
+  .post-hero { padding: 100px 24px 64px; background: linear-gradient(160deg,#0F172A 0%,#1E1B4B 60%,#0F172A 100%); }
+  .post-hero-inner { max-width: 760px; margin: 0 auto; }
+  .post-cat { font-size: 12px; font-weight: 700; color: #818CF8; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+  .post-h1  { font-size: clamp(26px,4vw,44px); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.2; margin-bottom: 20px; }
+  .post-meta { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  .post-author { font-size: 14px; font-weight: 600; color: #CBD5E1; }
+  .post-date   { font-size: 14px; color: #64748B; }
+  .post-read   { font-size: 13px; color: #64748B; padding: 4px 12px; border: 1px solid #334155; border-radius: 100px; }
+
+  /* Article */
+  .post-layout { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
+
+  .post-content { font-size: 16.5px; color: var(--dark-2); line-height: 1.85; }
+  .post-content h2 { font-size: clamp(20px,2.4vw,26px); font-weight: 800; color: var(--dark); letter-spacing: -0.5px; margin: 48px 0 16px; line-height: 1.3; }
+  .post-content h3 { font-size: 19px; font-weight: 700; color: var(--dark); margin: 36px 0 12px; }
+  .post-content p  { margin-bottom: 20px; }
+  .post-content strong { color: var(--dark); font-weight: 700; }
+  .post-content ul, .post-content ol { padding-left: 24px; margin-bottom: 20px; }
+  .post-content li { margin-bottom: 8px; }
+  .post-content a  { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+  .post-content a:hover { color: var(--primary-dark); }
+  .post-content blockquote {
+    border-left: 4px solid var(--primary); margin: 32px 0; padding: 16px 24px;
+    background: var(--surface); border-radius: 0 12px 12px 0;
+    font-style: italic; color: var(--dark-2);
+  }
+  .post-content code {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 2px 8px; font-size: 14px; font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+  .post-content pre {
+    background: #0F172A; border-radius: 12px; padding: 24px; overflow-x: auto; margin-bottom: 24px;
+  }
+  .post-content pre code {
+    background: transparent; border: none; padding: 0; color: #E2E8F0; font-size: 14px;
+  }
+  .post-content table { width: 100%; border-collapse: collapse; margin-bottom: 28px; font-size: 14.5px; }
+  .post-content th { background: var(--surface); font-weight: 700; color: var(--dark); text-align: left; padding: 12px 16px; border: 1px solid var(--border); }
+  .post-content td { padding: 12px 16px; border: 1px solid var(--border); color: var(--dark-2); vertical-align: top; }
+  .post-content tr:nth-child(even) td { background: #FAFAFA; }
+  .post-content hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+  .post-content em { color: var(--muted); }
+
+  /* Divider before author */
+  .post-footer { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
+  .author-card { display: flex; gap: 16px; align-items: center; }
+  .author-avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--primary); color: #fff; font-size: 20px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .author-name { font-size: 15px; font-weight: 700; color: var(--dark); }
+  .author-label { font-size: 13px; color: var(--muted); }
+
+  /* Related */
+  .related { margin-top: 64px; }
+  .related-label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media(max-width:640px){ .related-grid { grid-template-columns: 1fr; } }
+  .related-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; text-decoration: none; transition: box-shadow .2s; }
+  .related-card:hover { box-shadow: 0 6px 24px rgba(79,70,229,.1); }
+  .rc-cat   { font-size: 11px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .rc-title { font-size: 15px; font-weight: 700; color: var(--dark); line-height: 1.4; margin-bottom: 6px; }
+  .rc-read  { font-size: 12px; color: var(--muted-light); }
+
+  /* Back link */
+  .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--primary); text-decoration: none; margin-bottom: 32px; }
+  .back-link:hover { color: var(--primary-dark); }
+</style>
+
+<!-- Hero -->
+<div class="post-hero">
+  <div class="post-hero-inner">
+    <div class="post-cat">{post.data.category}</div>
+    <h1 class="post-h1">{post.data.title}</h1>
+    <div class="post-meta">
+      <span class="post-author">{post.data.author}</span>
+      <span class="post-date">{formatDate(post.data.pubDate)}</span>
+      <span class="post-read">{post.data.readTime} phút đọc</span>
+    </div>
+  </div>
+</div>
+
+<!-- Article -->
+<div class="post-layout">
+  <a href="/blog/" class="back-link">← Tất cả bài viết</a>
+
+  <article class="post-content">
+    <Content />
+  </article>
+
+  <!-- Author -->
+  <div class="post-footer">
+    <div class="author-card">
+      <div class="author-avatar">{post.data.author.charAt(post.data.author.indexOf(' ') + 1)}</div>
+      <div>
+        <div class="author-name">{post.data.author}</div>
+        <div class="author-label">Đội Ngũ Semantix</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related -->
+  {related.length > 0 && (
+    <div class="related">
+      <div class="related-label">Bài Viết Liên Quan</div>
+      <div class="related-grid">
+        {related.map(p => (
+          <a href={`/blog/${p.slug}/`} class="related-card">
+            <div class="rc-cat">{p.data.category}</div>
+            <div class="rc-title">{p.data.title}</div>
+            <div class="rc-read">{p.data.readTime} phút đọc</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+</div>
+
+</BaseLayout>

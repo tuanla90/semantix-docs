@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semantix — Hỏi Dữ Liệu Bằng Tiếng Việt, Nhận Kết Quả Ngay Lập Tức</title>
+  <meta name="description" content="Semantix là nền tảng AI phân tích dữ liệu cho doanh nghiệp Việt Nam. Kết nối database, hỏi bằng ngôn ngữ tự nhiên, nhận biểu đồ và insight tức thì — không cần SQL." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #4F46E5;
+      --primary-light: #6366F1;
+      --primary-dark: #3730A3;
+      --accent: #06B6D4;
+      --accent-light: #22D3EE;
+      --dark: #0F172A;
+      --dark-2: #1E293B;
+      --dark-3: #334155;
+      --muted: #64748B;
+      --muted-light: #94A3B8;
+      --border: #E2E8F0;
+      --surface: #F8FAFC;
+      --white: #FFFFFF;
+      --green: #10B981;
+      --red: #EF4444;
+      --yellow: #F59E0B;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 24px rgba(15,23,42,0.08);
+      --shadow-lg: 0 12px 48px rgba(15,23,42,0.14);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-icon svg { width: 18px; height: 18px; }
+    .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.3px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: color .2s, background .2s;
+    }
+    .nav-links a:hover { color: var(--dark); background: var(--surface); }
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn { display: inline-flex; align-items: center; gap: 8px; border-radius: 10px; font-weight: 600; font-size: 15px; cursor: pointer; text-decoration: none; transition: all .2s; border: none; }
+    .btn-ghost { background: transparent; color: var(--dark); padding: 8px 16px; }
+    .btn-ghost:hover { background: var(--surface); }
+    .btn-primary { background: var(--primary); color: var(--white); padding: 10px 22px; box-shadow: 0 2px 12px rgba(79,70,229,.35); }
+    .btn-primary:hover { background: var(--primary-dark); box-shadow: 0 4px 20px rgba(79,70,229,.45); transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--primary); border: 1.5px solid var(--primary); padding: 10px 22px; }
+    .btn-outline:hover { background: var(--primary); color: var(--white); }
+    .btn-large { padding: 14px 32px; font-size: 16px; border-radius: 12px; }
+    .btn-xl { padding: 16px 40px; font-size: 17px; border-radius: 12px; }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 140px 24px 100px;
+      background: linear-gradient(160deg, #0F172A 0%, #1E1B4B 50%, #0F172A 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 900px;
+      background: radial-gradient(circle, rgba(99,102,241,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; right: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(6,182,212,.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(99,102,241,.15);
+      border: 1px solid rgba(99,102,241,.3);
+      color: #A5B4FC;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      letter-spacing: .3px;
+    }
+    .badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.4)} }
+    .hero h1 {
+      font-size: clamp(36px, 5.5vw, 64px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(90deg, #818CF8, #22D3EE);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      color: #94A3B8;
+      max-width: 640px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 28px; font-weight: 800; color: var(--white); letter-spacing: -1px; }
+    .stat-label { font-size: 13px; color: #64748B; margin-top: 2px; font-weight: 500; }
+    .stat-divider { width: 1px; background: #1E293B; }
+
+    /* ── CHAT DEMO ── */
+    .demo-section {
+      padding: 80px 24px;
+      background: var(--surface);
+    }
+    .demo-inner { max-width: 900px; margin: 0 auto; }
+    .section-label {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.8px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      text-align: center;
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 580px;
+      margin: 0 auto 56px;
+      line-height: 1.7;
+    }
+    .chat-window {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .chat-topbar {
+      background: var(--dark);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .chat-dots { display: flex; gap: 6px; }
+    .chat-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .chat-dot:nth-child(1){ background: #EF4444; }
+    .chat-dot:nth-child(2){ background: #F59E0B; }
+    .chat-dot:nth-child(3){ background: #10B981; }
+    .chat-title { color: #94A3B8; font-size: 13px; font-weight: 500; margin-left: 4px; }
+    .chat-body {
+      padding: 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-height: 480px;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+    .chat-body::-webkit-scrollbar { width: 4px; }
+    .chat-body::-webkit-scrollbar-track { background: transparent; }
+    .chat-body::-webkit-scrollbar-thumb { background: #E2E8F0; border-radius: 4px; }
+    .chat-msg {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .4s ease, transform .4s ease;
+    }
+    .chat-msg.msg-visible { opacity: 1; transform: none; }
+
+    /* Typing indicator */
+    .typing-indicator { display: flex; gap: 12px; align-items: flex-start; }
+    .typing-dots {
+      display: flex; gap: 5px; padding: 14px 18px;
+      background: #EEF2FF; border: 1px solid #C7D2FE;
+      border-radius: 12px; align-items: center;
+    }
+    .typing-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #818CF8; animation: tdot 1.2s infinite;
+    }
+    .typing-dot:nth-child(2) { animation-delay: .2s; }
+    .typing-dot:nth-child(3) { animation-delay: .4s; }
+    @keyframes tdot { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-7px)} }
+    .chat-avatar {
+      width: 36px; height: 36px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; flex-shrink: 0;
+    }
+    .avatar-user { background: #EEF2FF; color: var(--primary); }
+    .avatar-ai { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; }
+    .chat-bubble {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 14.5px;
+      line-height: 1.6;
+      max-width: 80%;
+      border: 1px solid var(--border);
+    }
+    .chat-bubble.ai-bubble { background: #EEF2FF; border-color: #C7D2FE; color: var(--dark-2); }
+    .chat-bubble strong { color: var(--dark); }
+    .chat-result {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+    .result-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .result-table th { background: #F1F5F9; padding: 8px 12px; text-align: left; font-weight: 600; color: var(--dark-3); border-bottom: 1px solid var(--border); }
+    .result-table td { padding: 8px 12px; color: var(--dark-2); border-bottom: 1px solid #F1F5F9; }
+    .result-table tr:last-child td { border-bottom: none; }
+    .chip {
+      display: inline-block;
+      background: #DCFCE7;
+      color: #15803D;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+    .chip.negative { background: #FEE2E2; color: #B91C1C; }
+    .sql-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; color: var(--muted); margin-top: 8px;
+      cursor: pointer; font-weight: 500;
+    }
+    .sql-tag:hover { color: var(--primary); }
+
+    /* ── FEATURES ── */
+    .features-section { padding: 100px 24px; background: var(--white); }
+    .features-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      padding: 28px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--white);
+      transition: box-shadow .2s, transform .2s, border-color .2s;
+    }
+    .feature-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); border-color: #C7D2FE; }
+    .feature-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .icon-indigo { background: #EEF2FF; }
+    .icon-cyan { background: #ECFEFF; }
+    .icon-green { background: #ECFDF5; }
+    .icon-orange { background: #FFF7ED; }
+    .icon-purple { background: #F5F3FF; }
+    .icon-pink { background: #FDF2F8; }
+    .feature-title { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 8px; letter-spacing: -0.2px; }
+    .feature-desc { font-size: 14.5px; color: var(--muted); line-height: 1.65; }
+
+    /* ── HOW IT WORKS ── */
+    .how-section { padding: 100px 24px; background: var(--surface); }
+    .steps-wrap { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+    .step {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 24px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .step:last-child { border-bottom: none; }
+    .step-left { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .step-num {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-line { flex: 1; width: 2px; background: #E2E8F0; margin: 8px 0; }
+    .step:last-child .step-line { display: none; }
+    .step-content { padding-top: 10px; }
+    .step-tag { font-size: 11px; font-weight: 700; color: var(--primary); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
+    .step-title { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 10px; letter-spacing: -0.3px; }
+    .step-desc { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .step-code {
+      margin-top: 14px;
+      background: var(--dark);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      color: #94A3B8;
+      line-height: 1.8;
+    }
+    .step-code .kw { color: #818CF8; }
+    .step-code .str { color: #34D399; }
+    .step-code .cmt { color: #475569; }
+
+    /* ── COMPARISON ── */
+    .comparison-section { padding: 100px 24px; background: var(--white); }
+    .comparison-inner { max-width: 1100px; margin: 0 auto; }
+    .comparison-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 56px;
+    }
+    .comp-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .comp-header {
+      padding: 24px 28px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .comp-vs {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .comp-title { font-size: 22px; font-weight: 800; letter-spacing: -0.4px; }
+    .comp-subtitle { font-size: 14px; margin-top: 4px; line-height: 1.5; }
+    .comp-body { padding: 24px 28px; display: flex; flex-direction: column; gap: 16px; }
+    .comp-row { display: flex; flex-direction: column; gap: 10px; }
+    .comp-row-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+    .comp-item {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .comp-item svg { margin-top: 2px; flex-shrink: 0; }
+    .comp-them .comp-header { background: #F8FAFC; }
+    .comp-them .comp-vs { color: var(--muted); }
+    .comp-them .comp-title { color: var(--dark-3); }
+    .comp-them .comp-subtitle { color: var(--muted); }
+    .comp-them .comp-body { background: #F8FAFC; }
+    .comp-us .comp-header { background: linear-gradient(135deg, #EEF2FF, #ECFEFF); }
+    .comp-us .comp-vs { color: var(--primary); }
+    .comp-us .comp-title { color: var(--primary-dark); }
+    .comp-us .comp-subtitle { color: var(--primary); }
+    .comp-us .comp-body { background: white; }
+    .comp-us { border-color: #C7D2FE; box-shadow: 0 8px 32px rgba(79,70,229,.12); }
+    .icon-check { color: var(--green); }
+    .icon-x { color: var(--red); }
+    .icon-warn { color: var(--yellow); }
+    .comp-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 8px 0;
+    }
+    .comp-divider-line { flex: 1; height: 1px; background: var(--border); }
+    .comp-divider-text {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* ── SOCIAL PROOF ── */
+    .proof-section {
+      padding: 80px 24px;
+      background: var(--dark);
+    }
+    .proof-inner { max-width: 1100px; margin: 0 auto; }
+    .proof-label {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .testimonial {
+      background: var(--dark-2);
+      border: 1px solid var(--dark-3);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .testimonial-text {
+      font-size: 15px;
+      color: #CBD5E1;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .author-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .author-name { font-size: 14px; font-weight: 600; color: var(--white); }
+    .author-role { font-size: 13px; color: #64748B; }
+    .stars { color: #F59E0B; font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; }
+
+    /* ── CTA BANNER ── */
+    .cta-section {
+      padding: 100px 24px;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, #1E1B4B 50%, #0C4A6E 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(99,102,241,.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-inner { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+    .cta-section h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 900; color: var(--white); letter-spacing: -1px; margin-bottom: 18px; line-height: 1.15; }
+    .cta-section p { font-size: 18px; color: #94A3B8; margin-bottom: 40px; line-height: 1.6; }
+    .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-white { background: var(--white); color: var(--primary-dark); padding: 16px 36px; font-size: 16px; border-radius: 12px; font-weight: 700; box-shadow: 0 4px 20px rgba(0,0,0,.3); }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,.4); }
+    .btn-ghost-white { background: rgba(255,255,255,.1); color: var(--white); border: 1.5px solid rgba(255,255,255,.25); padding: 16px 32px; font-size: 16px; border-radius: 12px; font-weight: 600; }
+    .btn-ghost-white:hover { background: rgba(255,255,255,.18); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      padding: 64px 24px 32px;
+      border-top: 1px solid var(--dark-2);
+    }
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px repeat(3, 1fr);
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--dark-2);
+    }
+    .footer-brand .logo-text { color: var(--white); font-size: 20px; }
+    .footer-tagline { font-size: 14px; color: #475569; margin-top: 12px; line-height: 1.6; max-width: 240px; }
+    .footer-col h4 { font-size: 13px; font-weight: 700; color: var(--white); letter-spacing: .5px; margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { text-decoration: none; font-size: 14px; color: #475569; transition: color .2s; }
+    .footer-col a:hover { color: #94A3B8; }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 28px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #334155;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ── UTILITIES ── */
+    .text-center { text-align: center; }
+    .mt-8 { margin-top: 8px; }
+    .mt-16 { margin-top: 16px; }
+    .mt-24 { margin-top: 24px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero { padding: 120px 20px 80px; }
+      .stat-divider { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .step { grid-template-columns: 40px 1fr; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-cta { flex-direction: column; align-items: center; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+
+    /* ── TABS ── */
+    .tab-wrap { max-width: 960px; margin: 0 auto; }
+    .tab-nav {
+      display: flex;
+      gap: 4px;
+      background: #E2E8F0;
+      padding: 4px;
+      border-radius: 14px;
+      margin-bottom: 36px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tab-nav::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      flex: 1;
+      min-width: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 10px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--muted);
+      transition: all .2s;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+    .tab-btn:hover { color: var(--dark); background: rgba(255,255,255,.6); }
+    .tab-btn.active {
+      background: var(--white);
+      color: var(--dark);
+      box-shadow: 0 2px 10px rgba(15,23,42,.1);
+    }
+    .tab-btn .tab-icon { font-size: 16px; }
+    .tab-panel { display: none; animation: fadeIn .25s ease; }
+    .tab-panel.active { display: block; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
+
+    /* ── CHART TAB ── */
+    .chart-output {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px 20px;
+      margin-top: 10px;
+    }
+    .chart-title-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+    .chart-title { font-size: 14px; font-weight: 700; color: var(--dark); }
+    .chart-legend { display: flex; gap: 16px; }
+    .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); font-weight: 500; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .bar-chart-svg { width: 100%; overflow: visible; }
+    .bar-group rect { transition: opacity .2s; }
+    .bar-group:hover rect { opacity: .8; }
+    .chart-axis-label { font-size: 11px; fill: #94A3B8; font-family: Inter, sans-serif; }
+    .chart-val-label { font-size: 10px; fill: #64748B; font-family: Inter, sans-serif; font-weight: 600; }
+    .line-path { fill: none; stroke: #F59E0B; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .line-dot { fill: #F59E0B; stroke: white; stroke-width: 2; }
+    .donut-section { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+    .donut-legend { display: flex; flex-direction: column; gap: 10px; }
+    .donut-legend-item { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+    .donut-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+    .donut-label { color: var(--dark-2); font-weight: 600; }
+    .donut-pct { color: var(--muted); font-size: 12px; margin-left: auto; min-width: 36px; text-align: right; }
+    .chart-grid-line { stroke: #F1F5F9; stroke-width: 1; }
+
+    /* ── DASHBOARD TAB ── */
+    .dash-output {
+      background: #F1F5F9;
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .dash-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+    .dash-title { font-size: 14px; font-weight: 700; color: var(--dark-2); }
+    .dash-date { font-size: 12px; color: var(--muted); }
+    .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+    .kpi-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid var(--border);
+    }
+    .kpi-label { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+    .kpi-val { font-size: 22px; font-weight: 800; color: var(--dark); letter-spacing: -0.5px; line-height: 1; margin-bottom: 6px; }
+    .kpi-change { font-size: 12px; font-weight: 600; }
+    .kpi-change.up { color: var(--green); }
+    .kpi-change.down { color: var(--red); }
+    .dash-row { display: grid; grid-template-columns: 1.6fr 1fr; gap: 12px; }
+    .dash-card { background: var(--white); border-radius: 12px; padding: 16px; border: 1px solid var(--border); }
+    .dash-card-title { font-size: 12px; font-weight: 700; color: var(--dark-3); margin-bottom: 14px; text-transform: uppercase; letter-spacing: .5px; }
+    @media (max-width: 640px) {
+      .kpi-row { grid-template-columns: repeat(2, 1fr); }
+      .dash-row { grid-template-columns: 1fr; }
+    }
+
+    /* ── COHORT / AGENT TAB ── */
+    .agent-steps { display: flex; flex-direction: column; gap: 0; margin-bottom: 20px; }
+    .agent-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px dashed #E2E8F0;
+    }
+    .agent-step:last-child { border-bottom: none; }
+    .step-indicator {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .step-done { background: #DCFCE7; color: #15803D; }
+    .step-thinking { background: #EEF2FF; color: var(--primary); animation: thinking 1.4s infinite; }
+    @keyframes thinking { 0%,100%{opacity:1} 50%{opacity:.5} }
+    .agent-step-text { font-size: 13.5px; color: var(--dark-2); line-height: 1.55; }
+    .agent-step-sub { font-size: 12px; color: var(--muted); margin-top: 3px; }
+    .cohort-table-wrap { overflow-x: auto; }
+    .cohort-table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 480px; }
+    .cohort-table th { padding: 8px 10px; text-align: center; font-size: 11px; font-weight: 700; color: var(--muted); background: #F8FAFC; border-bottom: 1px solid var(--border); }
+    .cohort-table th:first-child { text-align: left; }
+    .cohort-table td { padding: 8px 10px; text-align: center; font-size: 12px; font-weight: 600; color: var(--white); border: 1px solid rgba(255,255,255,.2); }
+    .cohort-table td:first-child { background: #F8FAFC; color: var(--dark-2); font-weight: 600; text-align: left; border: 1px solid var(--border); }
+    .c100 { background: #4F46E5; }
+    .c80  { background: #6366F1; }
+    .c65  { background: #818CF8; }
+    .c50  { background: #A5B4FC; color: #3730A3; }
+    .c40  { background: #C7D2FE; color: #3730A3; }
+    .c30  { background: #E0E7FF; color: #4338CA; }
+    .c20  { background: #EEF2FF; color: #4338CA; }
+    .agent-insight {
+      margin-top: 16px;
+      background: linear-gradient(135deg, #EEF2FF, #ECFEFF);
+      border: 1px solid #C7D2FE;
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: var(--dark-2);
+      line-height: 1.65;
+    }
+    .insight-label { font-size: 11px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════ NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 2L15 5.5V12.5L9 16L3 12.5V5.5L9 2Z" fill="white" fill-opacity="0.9"/>
+          <path d="M9 6L12 7.5V10.5L9 12L6 10.5V7.5L9 6Z" fill="white" fill-opacity="0.5"/>
+        </svg>
+      </div>
+      <span class="logo-text">Semantix</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#features">Tính năng</a></li>
+      <li><a href="#how-it-works">Cách dùng</a></li>
+      <li><a href="#comparison">So sánh</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="/docs" class="btn btn-ghost">Tài liệu</a>
+      <a href="#contact" class="btn btn-primary">Dùng Thử Miễn Phí</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════ BACK TO TOP -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Lên đầu trang"
+  style="position:fixed;bottom:28px;right:28px;z-index:200;width:44px;height:44px;border-radius:50%;
+         background:var(--primary);color:white;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(79,70,229,.4);
+         display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;
+         transition:opacity .25s,transform .25s;transform:translateY(8px)">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ═══════════════════════════════════════════════════════ HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Nền tảng AI phân tích dữ liệu cho doanh nghiệp Việt Nam
+    </div>
+    <h1>
+      Hỏi Dữ Liệu<br/>
+      Bằng <span class="highlight">Tiếng Việt</span><br/>
+      Nhận Kết Quả Ngay
+    </h1>
+    <p class="hero-sub">
+      Kết nối database của bạn. Đặt câu hỏi bằng ngôn ngữ tự nhiên.<br/>
+      Semantix tự động sinh SQL, chạy truy vấn và trả về biểu đồ — trong vài giây.
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary btn-xl">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Bắt Đầu Miễn Phí
+      </a>
+      <a href="#demo" class="btn btn-ghost-white btn-xl" style="color:#94A3B8;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+        Xem Demo
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">15 phút</div><div class="stat-label">từ zero đến AI Chat</div></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><div class="stat-num">10+</div><div class="stat-label">nguồn dữ liệu hỗ trợ</div></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><div class="stat-num">5 giây</div><div class="stat-label">từ câu hỏi đến biểu đồ</div></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><div class="stat-num">0 SQL</div><div class="stat-label">người dùng cần biết</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ DEMO -->
+<section class="demo-section" id="demo">
+  <div class="demo-inner">
+    <div class="section-label">Trải Nghiệm Thực Tế</div>
+    <h2 class="section-title">Bốn cách Semantix trả lời câu hỏi của bạn</h2>
+    <p class="section-sub">Cùng một giao diện chat — AI tự chọn dạng trả lời phù hợp nhất: văn bản, biểu đồ, dashboard hay phân tích chuyên sâu.</p>
+
+    <div class="tab-wrap">
+      <!-- Tab Nav -->
+      <div class="tab-nav" role="tablist">
+        <button class="tab-btn active" onclick="switchTab(event,'qa')" role="tab">
+          <span class="tab-icon">💬</span> Hỏi Đáp Nhanh
+        </button>
+        <button class="tab-btn" onclick="switchTab(event,'chart')" role="tab">
+          <span class="tab-icon">📊</span> Sinh Biểu Đồ
+        </button>
+        <button class="tab-btn" onclick="switchTab(event,'dashboard')" role="tab">
+          <span class="tab-icon">🗂️</span> Tạo Dashboard
+        </button>
+        <button class="tab-btn" onclick="switchTab(event,'agent')" role="tab">
+          <span class="tab-icon">🤖</span> AI Agent Nâng Cao
+        </button>
+      </div>
+
+      <!-- ─── TAB 1: HỎI ĐÁP NHANH ─── -->
+      <div class="tab-panel active" id="tab-qa">
+        <div class="chat-window">
+          <div class="chat-topbar">
+            <div class="chat-dots"><div class="chat-dot"></div><div class="chat-dot"></div><div class="chat-dot"></div></div>
+            <span class="chat-title">Semantix AI — Trợ lý Kinh doanh · Hỏi Đáp Thông Thường</span>
+          </div>
+          <div class="chat-body">
+
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Tỷ lệ đơn hủy tháng này là bao nhiêu? Cao hơn hay thấp hơn 3 tháng trước?</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div class="chat-bubble ai-bubble">
+                Tỷ lệ đơn hủy tháng 6 là <strong>3.2%</strong> — thấp hơn trung bình 3 tháng qua (<strong>4.1%</strong>) khoảng <strong>0.9 điểm %</strong>. Tín hiệu tích cực. Nguyên nhân chính là cải thiện quy trình xử lý đơn ở TP.HCM (từ 5.8% xuống còn 3.7%).
+                <div class="sql-tag" style="margin-top:8px">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  Xem SQL được sinh ra
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Top 5 khách hàng doanh thu cao nhất Q2 năm nay?</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+                  Top 5 khách hàng theo doanh thu Q2/2025:
+                  <div class="chat-result">
+                    <table class="result-table">
+                      <thead><tr><th>#</th><th>Khách hàng</th><th>Doanh thu Q2</th><th>Số đơn</th><th>So Q1</th></tr></thead>
+                      <tbody>
+                        <tr><td>1</td><td>Công ty ABC</td><td>1.8 tỷ</td><td>142</td><td><span class="chip">+22%</span></td></tr>
+                        <tr><td>2</td><td>Tập đoàn XYZ</td><td>1.4 tỷ</td><td>98</td><td><span class="chip">+8%</span></td></tr>
+                        <tr><td>3</td><td>CT TNHH DEF</td><td>0.9 tỷ</td><td>76</td><td><span class="chip negative">-3%</span></td></tr>
+                        <tr><td>4</td><td>Chuỗi GHI</td><td>0.7 tỷ</td><td>201</td><td><span class="chip">+41%</span></td></tr>
+                        <tr><td>5</td><td>Đại lý JKL</td><td>0.6 tỷ</td><td>55</td><td><span class="chip">+5%</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Khách hàng nào chưa mua trong 60 ngày qua mà trước đó mua đều?</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+                  Có <strong>23 khách hàng</strong> từng mua ít nhất 3 đơn/tháng trong 3 tháng liên tiếp nhưng không phát sinh đơn nào trong 60 ngày gần nhất. Đây là danh sách ưu tiên liên hệ chăm sóc:
+                  <div class="chat-result">
+                    <table class="result-table">
+                      <thead><tr><th>Khách hàng</th><th>Đơn cuối</th><th>Trung bình/tháng cũ</th><th>Giá trị ước tính mất</th></tr></thead>
+                      <tbody>
+                        <tr><td>Cty Minh Phát</td><td>18/04/2025</td><td>8 đơn/tháng</td><td>~240tr</td></tr>
+                        <tr><td>Hộ KD Thanh Hà</td><td>22/04/2025</td><td>5 đơn/tháng</td><td>~90tr</td></tr>
+                        <tr><td>Siêu thị Hòa Bình</td><td>01/05/2025</td><td>12 đơn/tháng</td><td>~380tr</td></tr>
+                        <tr><td style="color:var(--muted)">+20 khách hàng khác...</td><td></td><td></td><td></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── TAB 2: SINH BIỂU ĐỒ ─── -->
+      <div class="tab-panel" id="tab-chart">
+        <div class="chat-window">
+          <div class="chat-topbar">
+            <div class="chat-dots"><div class="chat-dot"></div><div class="chat-dot"></div><div class="chat-dot"></div></div>
+            <span class="chat-title">Semantix AI — Trợ lý Kinh doanh · Biểu Đồ</span>
+          </div>
+          <div class="chat-body">
+
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Vẽ biểu đồ doanh thu 6 tháng gần nhất, chia theo kênh Online và Offline</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+                  Biểu đồ doanh thu 6 tháng (tỷ VNĐ) chia theo kênh bán, kèm đường tỷ lệ chuyển đổi:
+                  <div class="chart-output">
+                    <div class="chart-title-row">
+                      <span class="chart-title">Doanh Thu Theo Kênh — T1 đến T6/2025</span>
+                      <div class="chart-legend">
+                        <div class="legend-item"><div class="legend-dot" style="background:#4F46E5"></div>Online</div>
+                        <div class="legend-item"><div class="legend-dot" style="background:#06B6D4"></div>Offline</div>
+                        <div class="legend-item"><div class="legend-dot" style="background:#F59E0B"></div>Tỷ lệ tăng trưởng</div>
+                      </div>
+                    </div>
+                    <!-- Bar + Line SVG chart -->
+                    <svg class="bar-chart-svg" viewBox="0 0 580 200" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Grid lines -->
+                      <line x1="50" y1="20" x2="560" y2="20" class="chart-grid-line"/>
+                      <line x1="50" y1="57" x2="560" y2="57" class="chart-grid-line"/>
+                      <line x1="50" y1="94" x2="560" y2="94" class="chart-grid-line"/>
+                      <line x1="50" y1="131" x2="560" y2="131" class="chart-grid-line"/>
+                      <line x1="50" y1="168" x2="560" y2="168" class="chart-grid-line"/>
+                      <!-- Y labels -->
+                      <text x="42" y="24" class="chart-axis-label" text-anchor="end">8 tỷ</text>
+                      <text x="42" y="61" class="chart-axis-label" text-anchor="end">6 tỷ</text>
+                      <text x="42" y="98" class="chart-axis-label" text-anchor="end">4 tỷ</text>
+                      <text x="42" y="135" class="chart-axis-label" text-anchor="end">2 tỷ</text>
+                      <text x="42" y="172" class="chart-axis-label" text-anchor="end">0</text>
+                      <!-- T1: Online 2.1, Offline 2.1 → total 4.2 -->
+                      <g class="bar-group">
+                        <rect x="58"  y="105" width="30" height="63" fill="#4F46E5" rx="4"/>
+                        <rect x="90"  y="105" width="30" height="63" fill="#06B6D4" rx="4"/>
+                        <text x="84"  y="188" class="chart-axis-label" text-anchor="middle">T1</text>
+                        <text x="74"  y="101" class="chart-val-label" text-anchor="middle">4.2</text>
+                      </g>
+                      <!-- T2: Online 2.0, Offline 1.8 → total 3.8 -->
+                      <g class="bar-group">
+                        <rect x="143" y="116" width="30" height="52" fill="#4F46E5" rx="4"/>
+                        <rect x="175" y="120" width="30" height="48" fill="#06B6D4" rx="4"/>
+                        <text x="169" y="188" class="chart-axis-label" text-anchor="middle">T2</text>
+                        <text x="159" y="112" class="chart-val-label" text-anchor="middle">3.8</text>
+                      </g>
+                      <!-- T3: Online 2.8, Offline 2.3 → total 5.1 -->
+                      <g class="bar-group">
+                        <rect x="228" y="85" width="30" height="83" fill="#4F46E5" rx="4"/>
+                        <rect x="260" y="97" width="30" height="71" fill="#06B6D4" rx="4"/>
+                        <text x="254" y="188" class="chart-axis-label" text-anchor="middle">T3</text>
+                        <text x="244" y="81" class="chart-val-label" text-anchor="middle">5.1</text>
+                      </g>
+                      <!-- T4: Online 2.6, Offline 2.1 → total 4.7 -->
+                      <g class="bar-group">
+                        <rect x="313" y="96" width="30" height="72" fill="#4F46E5" rx="4"/>
+                        <rect x="345" y="108" width="30" height="60" fill="#06B6D4" rx="4"/>
+                        <text x="339" y="188" class="chart-axis-label" text-anchor="middle">T4</text>
+                        <text x="329" y="92" class="chart-val-label" text-anchor="middle">4.7</text>
+                      </g>
+                      <!-- T5: Online 3.4, Offline 2.4 → total 5.8 -->
+                      <g class="bar-group">
+                        <rect x="398" y="68" width="30" height="100" fill="#4F46E5" rx="4"/>
+                        <rect x="430" y="80" width="30" height="88" fill="#06B6D4" rx="4"/>
+                        <text x="424" y="188" class="chart-axis-label" text-anchor="middle">T5</text>
+                        <text x="414" y="64" class="chart-val-label" text-anchor="middle">5.8</text>
+                      </g>
+                      <!-- T6: Online 3.8, Offline 2.4 → total 6.2 -->
+                      <g class="bar-group">
+                        <rect x="483" y="56" width="30" height="112" fill="#4F46E5" rx="4"/>
+                        <rect x="515" y="80" width="30" height="88" fill="#06B6D4" rx="4"/>
+                        <text x="509" y="188" class="chart-axis-label" text-anchor="middle">T6</text>
+                        <text x="499" y="52" class="chart-val-label" text-anchor="middle">6.2</text>
+                      </g>
+                      <!-- Growth rate line (% MoM, scaled): values 0%, -9.5%, 34%, -7.8%, 23.4%, 6.9% -->
+                      <!-- Normalized to chart: 0%→168, 34%→94 (top range), map to y: 168 - pct/40*148 -->
+                      <polyline class="line-path" points="84,168 169,175 254,130 339,141 424,105 509,115"/>
+                      <circle class="line-dot" cx="84"  cy="168" r="4"/>
+                      <circle class="line-dot" cx="169" cy="175" r="4"/>
+                      <circle class="line-dot" cx="254" cy="130" r="4"/>
+                      <circle class="line-dot" cx="339" cy="141" r="4"/>
+                      <circle class="line-dot" cx="424" cy="105" r="4"/>
+                      <circle class="line-dot" cx="509" cy="115" r="4"/>
+                    </svg>
+                    <div class="sql-tag" style="margin-top:4px">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                      Xem SQL · Xuất PNG · Ghim vào Dashboard
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Thêm biểu đồ tròn thể hiện tỷ trọng doanh thu theo kênh trong T6</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+                  Cơ cấu doanh thu T6/2025 theo kênh bán:
+                  <div class="chart-output">
+                    <div class="donut-section">
+                      <svg width="130" height="130" viewBox="0 0 130 130">
+                        <!-- Online 61% -->
+                        <circle cx="65" cy="65" r="50" fill="none" stroke="#4F46E5" stroke-width="22"
+                          stroke-dasharray="191.6 122.5" stroke-dashoffset="0" transform="rotate(-90 65 65)"/>
+                        <!-- Offline 39% -->
+                        <circle cx="65" cy="65" r="50" fill="none" stroke="#06B6D4" stroke-width="22"
+                          stroke-dasharray="122.5 191.6" stroke-dashoffset="-191.6" transform="rotate(-90 65 65)"/>
+                        <text x="65" y="60" text-anchor="middle" font-size="18" font-weight="800" fill="#0F172A" font-family="Inter,sans-serif">6.2</text>
+                        <text x="65" y="76" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="Inter,sans-serif">tỷ VNĐ</text>
+                      </svg>
+                      <div class="donut-legend">
+                        <div class="donut-legend-item">
+                          <div class="donut-dot" style="background:#4F46E5"></div>
+                          <span class="donut-label">Online</span>
+                          <span class="donut-pct">3.8 tỷ · <strong>61%</strong></span>
+                        </div>
+                        <div class="donut-legend-item">
+                          <div class="donut-dot" style="background:#06B6D4"></div>
+                          <span class="donut-label">Offline</span>
+                          <span class="donut-pct">2.4 tỷ · <strong>39%</strong></span>
+                        </div>
+                        <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5">
+                          Online tăng từ 50% (T1) lên 61% (T6)<br/>
+                          — xu hướng chuyển dịch rõ ràng.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── TAB 3: TẠO DASHBOARD ─── -->
+      <div class="tab-panel" id="tab-dashboard">
+        <div class="chat-window">
+          <div class="chat-topbar">
+            <div class="chat-dots"><div class="chat-dot"></div><div class="chat-dot"></div><div class="chat-dot"></div></div>
+            <span class="chat-title">Semantix AI — Trợ lý Kinh doanh · Dashboard</span>
+          </div>
+          <div class="chat-body">
+
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Tạo cho tôi dashboard theo dõi KPI kinh doanh tuần này và so sánh tuần trước</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+                  Đã tạo dashboard <strong>"KPI Kinh Doanh — Tuần 25/2025"</strong>. Bạn có thể ghim thêm biểu đồ bất kỳ hoặc chia sẻ link cho team:
+                  <!-- Dashboard preview -->
+                  <div class="dash-output" style="margin-top:14px">
+                    <div class="dash-header">
+                      <span class="dash-title">📊 KPI Kinh Doanh — Tuần 23–29/06/2025</span>
+                      <span class="dash-date">Cập nhật: hôm nay 09:14</span>
+                    </div>
+                    <!-- KPI Cards -->
+                    <div class="kpi-row">
+                      <div class="kpi-card">
+                        <div class="kpi-label">Doanh Thu</div>
+                        <div class="kpi-val">1.84<span style="font-size:14px;font-weight:600"> tỷ</span></div>
+                        <div class="kpi-change up">↑ 12.3% vs tuần trước</div>
+                      </div>
+                      <div class="kpi-card">
+                        <div class="kpi-label">Số Đơn Hàng</div>
+                        <div class="kpi-val">2,341</div>
+                        <div class="kpi-change up">↑ 8.7% vs tuần trước</div>
+                      </div>
+                      <div class="kpi-card">
+                        <div class="kpi-label">Khách Hàng Mới</div>
+                        <div class="kpi-val">187</div>
+                        <div class="kpi-change down">↓ 4.1% vs tuần trước</div>
+                      </div>
+                      <div class="kpi-card">
+                        <div class="kpi-label">Tỷ Lệ Hủy</div>
+                        <div class="kpi-val">3.1<span style="font-size:14px;font-weight:600">%</span></div>
+                        <div class="kpi-change up">↓ 0.8 điểm (tốt hơn)</div>
+                      </div>
+                    </div>
+                    <!-- Chart row -->
+                    <div class="dash-row">
+                      <div class="dash-card">
+                        <div class="dash-card-title">Doanh Thu Theo Ngày (Tuần Này vs Tuần Trước)</div>
+                        <svg viewBox="0 0 320 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+                          <line x1="0" y1="80" x2="320" y2="80" stroke="#E2E8F0" stroke-width="1"/>
+                          <!-- Tuần trước (mờ) -->
+                          <polyline fill="none" stroke="#C7D2FE" stroke-width="1.5" stroke-dasharray="4,3"
+                            points="10,60 55,55 100,50 145,65 190,45 235,52 280,48"/>
+                          <!-- Tuần này -->
+                          <polyline fill="none" stroke="#4F46E5" stroke-width="2.5"
+                            points="10,52 55,44 100,38 145,56 190,32 235,40 280,28"/>
+                          <circle cx="10"  cy="52" r="3" fill="#4F46E5"/>
+                          <circle cx="55"  cy="44" r="3" fill="#4F46E5"/>
+                          <circle cx="100" cy="38" r="3" fill="#4F46E5"/>
+                          <circle cx="145" cy="56" r="3" fill="#4F46E5"/>
+                          <circle cx="190" cy="32" r="3" fill="#4F46E5"/>
+                          <circle cx="235" cy="40" r="3" fill="#4F46E5"/>
+                          <circle cx="280" cy="28" r="3" fill="#4F46E5"/>
+                          <text x="10"  y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T2</text>
+                          <text x="52"  y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T3</text>
+                          <text x="97"  y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T4</text>
+                          <text x="142" y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T5</text>
+                          <text x="187" y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T6</text>
+                          <text x="232" y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T7</text>
+                          <text x="277" y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">CN</text>
+                        </svg>
+                      </div>
+                      <div class="dash-card">
+                        <div class="dash-card-title">Theo Khu Vực</div>
+                        <table class="result-table" style="font-size:12px">
+                          <thead><tr><th>Khu vực</th><th>Doanh thu</th><th>+/-</th></tr></thead>
+                          <tbody>
+                            <tr><td>TP.HCM</td><td>680tr</td><td><span class="chip" style="font-size:10px">+15%</span></td></tr>
+                            <tr><td>Hà Nội</td><td>520tr</td><td><span class="chip" style="font-size:10px">+9%</span></td></tr>
+                            <tr><td>Đà Nẵng</td><td>340tr</td><td><span class="chip" style="font-size:10px">+21%</span></td></tr>
+                            <tr><td>Các tỉnh</td><td>300tr</td><td><span class="chip negative" style="font-size:10px">-2%</span></td></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sql-tag" style="margin-top:10px">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    Chia sẻ link Dashboard · Nhúng vào ứng dụng · Lên lịch gửi báo cáo
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Thêm cảnh báo khi doanh thu ngày giảm dưới 200 triệu, gửi qua Telegram</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div class="chat-bubble ai-bubble">
+                Đã thiết lập cảnh báo: khi doanh thu trong ngày &lt; 200 triệu VNĐ, hệ thống sẽ tự động gửi thông báo vào Telegram Bot của bạn (kiểm tra lúc <strong>23:00</strong> mỗi ngày). Bạn có thể thay đổi ngưỡng hoặc kênh nhận thông báo bất kỳ lúc nào trong cài đặt.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── TAB 4: AI AGENT NÂNG CAO ─── -->
+      <div class="tab-panel" id="tab-agent">
+        <div class="chat-window">
+          <div class="chat-topbar">
+            <div class="chat-dots"><div class="chat-dot"></div><div class="chat-dot"></div><div class="chat-dot"></div></div>
+            <span class="chat-title">Semantix AI — Trợ lý Kinh doanh · AI Agent Phân Tích Nâng Cao</span>
+          </div>
+          <div class="chat-body">
+
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Phân tích cohort khách hàng mua lần đầu trong Q1. Tỷ lệ quay lại mua hàng qua từng tháng là bao nhiêu?</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+
+                  <!-- Agent thinking steps -->
+                  <div style="margin-bottom:16px">
+                    <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">Quá trình phân tích</div>
+                    <div class="agent-steps">
+                      <div class="agent-step">
+                        <div class="step-indicator step-done">✓</div>
+                        <div>
+                          <div class="agent-step-text"><strong>Xác định cohort</strong> — Lọc khách hàng có đơn đầu tiên trong khoảng 01/01 – 31/03/2025</div>
+                          <div class="agent-step-sub">Tìm thấy <strong>1,284 khách hàng</strong> thuộc cohort Q1/2025</div>
+                        </div>
+                      </div>
+                      <div class="agent-step">
+                        <div class="step-indicator step-done">✓</div>
+                        <div>
+                          <div class="agent-step-text"><strong>Tính retention rate</strong> — Đếm số khách quay lại mua trong mỗi tháng tiếp theo (M1 → M6)</div>
+                          <div class="agent-step-sub">JOIN bảng orders theo customer_id, GROUP BY cohort_month và period</div>
+                        </div>
+                      </div>
+                      <div class="agent-step">
+                        <div class="step-indicator step-done">✓</div>
+                        <div>
+                          <div class="agent-step-text"><strong>So sánh với cohort Q1/2024</strong> — Kiểm tra xu hướng cải thiện hay suy giảm qua năm</div>
+                          <div class="agent-step-sub">Retention M1 tăng từ 31% (2024) → 38% (2025)</div>
+                        </div>
+                      </div>
+                      <div class="agent-step">
+                        <div class="step-indicator step-done">✓</div>
+                        <div>
+                          <div class="agent-step-text"><strong>Phát hiện điểm bất thường</strong> — Cohort tháng 2 có retention M2 thấp hơn đáng kể so với tháng 1 và tháng 3</div>
+                          <div class="agent-step-sub">Nguyên nhân có thể liên quan đến sự cố giao hàng tháng 3</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cohort heatmap -->
+                  <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:10px">Cohort Retention — Khách Hàng Mới Q1/2025 (%)</div>
+                  <div class="cohort-table-wrap">
+                    <table class="cohort-table">
+                      <thead>
+                        <tr>
+                          <th>Cohort</th>
+                          <th>Khách mới</th>
+                          <th>M0</th>
+                          <th>M1</th>
+                          <th>M2</th>
+                          <th>M3</th>
+                          <th>M4</th>
+                          <th>M5</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Tháng 1/2025</td>
+                          <td style="background:#F8FAFC;color:var(--muted)">428</td>
+                          <td class="c100">100%</td>
+                          <td class="c40">40%</td>
+                          <td class="c30">29%</td>
+                          <td class="c20">21%</td>
+                          <td class="c20">18%</td>
+                          <td class="c20">16%</td>
+                        </tr>
+                        <tr>
+                          <td>Tháng 2/2025</td>
+                          <td style="background:#F8FAFC;color:var(--muted)">391</td>
+                          <td class="c100">100%</td>
+                          <td class="c40">36%</td>
+                          <td class="c20">18%</td>
+                          <td class="c20">15%</td>
+                          <td class="c20">14%</td>
+                          <td class="c20" style="color:#94A3B8">—</td>
+                        </tr>
+                        <tr>
+                          <td>Tháng 3/2025</td>
+                          <td style="background:#F8FAFC;color:var(--muted)">465</td>
+                          <td class="c100">100%</td>
+                          <td class="c40">38%</td>
+                          <td class="c30">27%</td>
+                          <td class="c20" style="color:#94A3B8">—</td>
+                          <td class="c20" style="color:#94A3B8">—</td>
+                          <td class="c20" style="color:#94A3B8">—</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Insight -->
+                  <div class="agent-insight">
+                    <div class="insight-label">💡 Nhận Xét Từ AI</div>
+                    Cohort tháng 2 có retention M2 chỉ đạt <strong>18%</strong> — thấp hơn ~10 điểm % so với tháng 1 và tháng 3. Điều này trùng với khoảng thời gian có sự cố giao hàng tháng 3/2025. Đề xuất: ưu tiên chương trình win-back với 70 khách hàng trong cohort tháng 2 chưa quay lại mua từ M2 trở đi — giá trị ước tính nếu giữ lại được ~<strong>420 triệu VNĐ/tháng</strong>.
+                  </div>
+                  <div class="sql-tag" style="margin-top:10px">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    Xem SQL · Xuất CSV · Chạy lại với cohort khác
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Tạo danh sách 70 khách hàng đó để team CRM liên hệ win-back</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div class="chat-bubble ai-bubble">
+                Đã tạo danh sách <strong>70 khách hàng win-back</strong> từ cohort T2/2025, sắp xếp theo giá trị tiềm năng giảm dần. Danh sách đã được lưu vào Data Portal dưới tên <strong>"CRM — Win-back Cohort T2"</strong> — team CRM có thể truy cập và xuất file bất kỳ lúc nào mà không cần hỏi lại.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end tab-wrap -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ FEATURES -->
+<section class="features-section" id="features">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="section-label">Tính Năng</div>
+    <h2 class="section-title">Mọi thứ team dữ liệu của bạn cần</h2>
+    <p class="section-sub">Từ kết nối database đến phân tích nâng cao — một nền tảng, không cần ghép nhiều công cụ.</p>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon icon-indigo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="feature-title">AI Chat bằng tiếng Việt</div>
+        <div class="feature-desc">Hỏi bất kỳ điều gì bằng ngôn ngữ tự nhiên. AI hiểu ngữ cảnh nghiệp vụ, tự sinh SQL và trả về biểu đồ trong vài giây. Không cần biết tên bảng hay cột.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon icon-cyan">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <div class="feature-title">Kết Nối 10+ Nguồn Dữ Liệu</div>
+        <div class="feature-desc">PostgreSQL, MySQL, BigQuery, Snowflake, ClickHouse, Google Sheets và nhiều hơn. Thông tin đăng nhập được mã hóa AES-256, dữ liệu không bao giờ rời server của bạn.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon icon-green">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="feature-title">Dashboard Kéo-Thả</div>
+        <div class="feature-desc">Ghim kết quả từ AI Chat vào Dashboard chỉ bằng một click. Kéo thả để sắp xếp lại. Nhúng Dashboard vào ứng dụng nội bộ qua Embed Token.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon icon-orange">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="feature-title">Semantic Layer Có Quản Trị</div>
+        <div class="feature-desc">Định nghĩa "doanh thu", "khách hàng active" một lần trong Data Model — mọi người trong tổ chức nhận được cùng một câu trả lời nhất quán, không có số liệu mâu thuẫn.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon icon-purple">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="feature-title">Phân Quyền Theo Dòng Dữ Liệu</div>
+        <div class="feature-desc">Row-Level Security tích hợp sẵn. Nhân viên miền Bắc chỉ thấy dữ liệu miền Bắc. Mỗi người nhìn thấy đúng phần dữ liệu của mình — tự động, không cần tạo view riêng.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon icon-pink">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BE185D" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="feature-title">Phân Tích Nâng Cao Tích Hợp</div>
+        <div class="feature-desc">Cohort Analysis, RFM Segmentation, Funnel Analysis, Growth Accounting — được tích hợp sẵn, không cần viết thêm code. Chỉ cần chỉ định dataset và thời gian.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ HOW IT WORKS -->
+<section class="how-section" id="how-it-works">
+  <div class="section-label">Cách Hoạt Động</div>
+  <h2 class="section-title">Thiết lập trong 4 bước,<br/>sử dụng mãi mãi</h2>
+  <p class="section-sub">Data Analyst cấu hình một lần. Toàn bộ tổ chức dùng AI không giới hạn.</p>
+
+  <div class="steps-wrap">
+    <div class="step">
+      <div class="step-left">
+        <div class="step-num">1</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-tag">Bước 1 — Kết Nối</div>
+        <div class="step-title">Kết nối vào database của bạn</div>
+        <div class="step-desc">Nhập thông tin database (host, port, credentials). Semantix test kết nối ngay lập tức và mã hóa toàn bộ thông tin đăng nhập. Hỗ trợ PostgreSQL, MySQL, BigQuery, Snowflake, ClickHouse, Google Sheets và nhiều hơn.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-left">
+        <div class="step-num">2</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-tag">Bước 2 — Data Model</div>
+        <div class="step-title">Dạy AI hiểu nghiệp vụ của bạn</div>
+        <div class="step-desc">Chọn bảng từ database, Semantix tự động import danh sách cột. Bạn viết Label và Description cho từng bảng, cột. Định nghĩa Metrics (KPI) và quan hệ giữa các bảng. Đây là bước quan trọng nhất — AI trả lời chính xác khi bạn mô tả rõ.</div>
+        <div class="step-code">
+<span class="cmt"># Ví dụ mô tả cột "revenue" trong bảng Đơn Hàng</span>
+<span class="kw">Label:</span>    <span class="str">"Doanh thu (VNĐ)"</span>
+<span class="kw">Type:</span>     DOUBLE
+<span class="kw">Description:</span> <span class="str">"Tổng giá trị đơn hàng bao gồm phí ship,
+             đã trừ giảm giá. Chỉ tính đơn status='paid'."</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-left">
+        <div class="step-num">3</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-tag">Bước 3 — Context & AI Assistant</div>
+        <div class="step-title">Tạo AI Assistant cho từng phòng ban</div>
+        <div class="step-desc">Nhóm các Data Models liên quan vào một Semantic Context (ví dụ: "Phân tích Bán hàng"). Gắn mô hình AI (GPT-4o, Claude Sonnet, Gemini...) và định nghĩa personality cho AI. Mỗi phòng ban có một AI Assistant riêng, chỉ thấy dữ liệu phù hợp với họ.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-left">
+        <div class="step-num">4</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-tag">Bước 4 — Sử Dụng</div>
+        <div class="step-title">Hỏi và nhận kết quả tức thì</div>
+        <div class="step-desc">Người dùng vào AI Chat, chọn Assistant phù hợp, đặt câu hỏi bằng tiếng Việt. Semantix hiểu ý định, sinh SQL tối ưu, chạy trên database và trả về biểu đồ trong vài giây. Kết quả có thể ghim vào Dashboard hoặc export ngay.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ COMPARISON -->
+<section class="comparison-section" id="comparison">
+  <div class="comparison-inner">
+    <div class="section-label">So Sánh</div>
+    <h2 class="section-title">Semantix khác gì công cụ bạn đang dùng?</h2>
+    <p class="section-sub">Không phải công cụ nào cũng dùng cùng một mục đích. Đây là sự khác biệt rõ ràng.</p>
+
+    <div class="comparison-cards">
+
+      <!-- VS EXCEL -->
+      <div class="comp-card">
+        <div class="comp-them comp-header">
+          <div class="comp-vs">Bạn đang dùng</div>
+          <div class="comp-title">Excel / Google Sheets</div>
+          <div class="comp-subtitle">Tốt cho nhập liệu & tính toán đơn giản</div>
+        </div>
+        <div class="comp-them comp-body">
+          <div class="comp-row">
+            <div class="comp-row-label">Những giới hạn thường gặp</div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Dữ liệu cũ, phải export thủ công từ database</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Công thức VLOOKUP/SUMIF dễ sai, khó bảo trì</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Chậm và crash khi dữ liệu vượt hàng trăm nghìn dòng</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Mỗi người giữ một file khác nhau, số liệu mâu thuẫn</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Không có AI, mọi câu hỏi mới phải làm tay</span>
+            </div>
+          </div>
+        </div>
+        <div class="comp-divider" style="padding: 0 28px">
+          <div class="comp-divider-line"></div>
+          <div class="comp-divider-text">Semantix thay thế bằng</div>
+          <div class="comp-divider-line"></div>
+        </div>
+        <div class="comp-us comp-body">
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Dữ liệu live từ database, không cần export thủ công</span>
+          </div>
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>AI trả lời mọi câu hỏi mới trong vài giây</span>
+          </div>
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Xử lý hàng chục triệu dòng dữ liệu không chậm</span>
+          </div>
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Một nguồn sự thật duy nhất, mọi người cùng nhìn chung</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VS POWER BI -->
+      <div class="comp-card">
+        <div class="comp-them comp-header">
+          <div class="comp-vs">Bạn đang dùng</div>
+          <div class="comp-title">Power BI / Looker Studio</div>
+          <div class="comp-subtitle">Tốt cho dashboard đã được định nghĩa sẵn</div>
+        </div>
+        <div class="comp-them comp-body">
+          <div class="comp-row">
+            <div class="comp-row-label">Những giới hạn thường gặp</div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Chỉ trả lời câu hỏi đã được xây dựng trong dashboard</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Câu hỏi mới → phải nhờ analyst xây report → chờ 1–3 ngày</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Cần kỹ năng DAX/LookML để tự tạo metric mới</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" class="icon-warn"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>Không có AI tự nhiên — chỉ lọc theo filter có sẵn</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Chi phí license cao, đặc biệt với Power BI Premium</span>
+            </div>
+          </div>
+        </div>
+        <div class="comp-divider" style="padding: 0 28px">
+          <div class="comp-divider-line"></div>
+          <div class="comp-divider-text">Semantix nổi bật hơn bằng AI</div>
+          <div class="comp-divider-line"></div>
+        </div>
+        <div class="comp-us comp-body">
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Bất kỳ câu hỏi nào</strong> — không giới hạn bởi dashboard đã xây</span>
+          </div>
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Quản lý tự hỏi và nhận câu trả lời — không cần chờ analyst</span>
+          </div>
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>AI phân tích bất thường, đề xuất insight chủ động</span>
+          </div>
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Hỗ trợ đa AI Provider: GPT-4o, Claude, Gemini, DeepSeek</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VS CHATGPT -->
+      <div class="comp-card">
+        <div class="comp-them comp-header">
+          <div class="comp-vs">Bạn đang dùng</div>
+          <div class="comp-title">ChatGPT / Claude</div>
+          <div class="comp-subtitle">Tốt cho viết lách và câu hỏi kiến thức chung</div>
+        </div>
+        <div class="comp-them comp-body">
+          <div class="comp-row">
+            <div class="comp-row-label">Những giới hạn thường gặp</div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Không kết nối được database — không biết doanh thu thực của bạn</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Hallucination — tự bịa số liệu không có trong thực tế</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Không có quản trị — không kiểm soát ai được hỏi câu gì</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <span>Dữ liệu bạn paste vào có thể được dùng để train mô hình</span>
+            </div>
+            <div class="comp-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" class="icon-warn"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>Mỗi người hỏi theo cách riêng → kết quả không nhất quán</span>
+            </div>
+          </div>
+        </div>
+        <div class="comp-divider" style="padding: 0 28px">
+          <div class="comp-divider-line"></div>
+          <div class="comp-divider-text">Semantix tích hợp dữ liệu thật</div>
+          <div class="comp-divider-line"></div>
+        </div>
+        <div class="comp-us comp-body">
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Kết nối trực tiếp</strong> database — số liệu 100% từ dữ liệu thực</span>
+          </div>
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Không hallucination — SQL chạy trên database, kết quả có thể audit</span>
+          </div>
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Phân quyền người dùng — ai được xem gì, hỏi gì</span>
+          </div>
+          <div class="comp-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Dữ liệu không rời server — có thể dùng AI self-hosted (Ollama)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ TESTIMONIALS -->
+<section class="proof-section">
+  <div class="proof-inner">
+    <div class="proof-label">Từ Khách Hàng Đang Dùng Semantix</div>
+    <div class="testimonials">
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-text">
+          "Trước đây mỗi báo cáo doanh thu mất 2–3 ngày chờ team data. Bây giờ tôi tự hỏi và có số liệu trong 10 giây. Semantix thực sự thay đổi cách chúng tôi ra quyết định."
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#EEF2FF;color:#4F46E5">N</div>
+          <div>
+            <div class="author-name">Nguyễn Minh Tuấn</div>
+            <div class="author-role">Giám Đốc Kinh Doanh, Công ty TNHH ABC</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-text">
+          "Chúng tôi có 3 database khác nhau ở 3 chi nhánh. Semantix kết nối cả ba, AI Assistant hiểu đúng nghiệp vụ từng nơi. Lần đầu tiên tôi thấy số liệu toàn công ty trong một giao diện."
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#ECFDF5;color:#059669">T</div>
+          <div>
+            <div class="author-name">Trần Thị Lan Anh</div>
+            <div class="author-role">Head of Data, Tập đoàn XYZ</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-text">
+          "Team sale không ai biết SQL, nhưng họ dùng Semantix mỗi ngày. Phân tích Cohort và RFM tích hợp sẵn giúp chúng tôi identify khách hàng có nguy cơ churn trước khi quá muộn."
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#FDF2F8;color:#BE185D">P</div>
+          <div>
+            <div class="author-name">Phạm Quốc Huy</div>
+            <div class="author-role">CTO, Startup Fintech DEF</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-inner">
+    <h2>Sẵn sàng để team của bạn<br/>tự khai thác dữ liệu?</h2>
+    <p>Kết nối database, cấu hình Data Model, và đặt câu hỏi đầu tiên trong vòng 15 phút. Miễn phí trong giai đoạn dùng thử.</p>
+    <div class="cta-buttons">
+      <a href="/docs/vi/free-trial/" class="btn btn-white">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Bắt Đầu Miễn Phí
+      </a>
+      <a href="/docs" class="btn btn-ghost-white">
+        Xem Tài Liệu →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 18 18" fill="none"><path d="M9 2L15 5.5V12.5L9 16L3 12.5V5.5L9 2Z" fill="white" fill-opacity="0.9"/><path d="M9 6L12 7.5V10.5L9 12L6 10.5V7.5L9 6Z" fill="white" fill-opacity="0.5"/></svg>
+        </div>
+        <span class="logo-text">Semantix</span>
+      </a>
+      <div class="footer-tagline">Nền tảng AI phân tích dữ liệu cho doanh nghiệp Việt Nam. Hỏi bằng tiếng Việt — nhận kết quả ngay.</div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Sản Phẩm</h4>
+      <ul>
+        <li><a href="#features">Tính năng</a></li>
+        <li><a href="#how-it-works">Cách hoạt động</a></li>
+        <li><a href="#comparison">So sánh</a></li>
+        <li><a href="/docs/vi/free-trial/">Dùng thử miễn phí</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Tài Liệu</h4>
+      <ul>
+        <li><a href="/docs/vi/getting-started/">Bắt đầu nhanh</a></li>
+        <li><a href="/docs/vi/about.html">Về Semantix</a></li>
+        <li><a href="/docs/vi/api-reference/">API Reference</a></li>
+        <li><a href="/docs/vi/support/faqs.html">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Kết Nối</h4>
+      <ul>
+        <li><a href="mailto:hello@semantix.vn">hello@semantix.vn</a></li>
+        <li><a href="#">Zalo OA</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Chính sách bảo mật</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Semantix. All rights reserved.</span>
+    <span>Made in Vietnam 🇻🇳</span>
+  </div>
+</footer>
+
+<script>
+  // ── CHAT ANIMATION ──────────────────────────────────────────
+  const TYPING_MS = 900;   // how long "..." shows before AI reply
+  const MSG_GAP   = 500;   // gap between user msg and typing indicator
+
+  function scrollIfNeeded(chatBody, el) {
+    // Only scroll if the element's bottom edge is below the visible area
+    const bodyBottom = chatBody.scrollTop + chatBody.clientHeight;
+    const elBottom   = el.offsetTop + el.offsetHeight;
+    if (elBottom > bodyBottom - 16) {
+      chatBody.scrollTop = elBottom - chatBody.clientHeight + 16;
+    }
+  }
+
+  function animateChat(panel) {
+    const chatBody = panel.querySelector('.chat-body');
+    if (!chatBody) return;
+
+    // Clear any leftover typing indicators, reset scroll & hide all messages
+    chatBody.querySelectorAll('.typing-indicator').forEach(el => el.remove());
+    chatBody.scrollTop = 0;
+
+    const msgs = Array.from(chatBody.querySelectorAll('.chat-msg'));
+    msgs.forEach(m => m.classList.remove('msg-visible'));
+
+    let t = 300;
+
+    msgs.forEach((msg, i) => {
+      const isAI      = !!msg.querySelector('.avatar-ai');
+      const prevIsUser = i > 0 && !!msgs[i - 1].querySelector('.avatar-user');
+
+      if (isAI && prevIsUser) {
+        const showAt   = t;
+        const revealAt = t + TYPING_MS;
+
+        setTimeout(() => {
+          const ind = document.createElement('div');
+          ind.className = 'typing-indicator';
+          ind.innerHTML = `<div class="chat-avatar avatar-ai">AI</div>
+            <div class="typing-dots">
+              <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>
+            </div>`;
+          chatBody.insertBefore(ind, msg);
+          scrollIfNeeded(chatBody, ind);
+        }, showAt);
+
+        setTimeout(() => {
+          chatBody.querySelectorAll('.typing-indicator').forEach(el => el.remove());
+          msg.classList.add('msg-visible');
+          scrollIfNeeded(chatBody, msg);
+        }, revealAt);
+
+        t = revealAt + MSG_GAP + 150;
+      } else {
+        setTimeout(() => {
+          msg.classList.add('msg-visible');
+          scrollIfNeeded(chatBody, msg);
+        }, t);
+        t += MSG_GAP;
+      }
+    });
+  }
+
+  // ── TAB SWITCHING ────────────────────────────────────────────
+  function switchTab(e, id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    e.currentTarget.classList.add('active');
+    const panel = document.getElementById('tab-' + id);
+    panel.classList.add('active');
+    animateChat(panel);
+  }
+
+  // Animate the default active tab on load
+  document.addEventListener('DOMContentLoaded', () => {
+    const first = document.querySelector('.tab-panel.active');
+    if (first) animateChat(first);
+  });
+
+  // ── NAV ACTIVE HIGHLIGHT ─────────────────────────────────────
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+  const secObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          const active = link.getAttribute('href') === '#' + entry.target.id;
+          link.style.color      = active ? 'var(--dark)' : '';
+          link.style.background = active ? 'var(--surface)' : '';
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -65% 0px' });
+  sections.forEach(s => secObserver.observe(s));
+
+  // ── BACK TO TOP ───────────────────────────────────────────────
+  const topBtn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    const show = window.scrollY > 400;
+    topBtn.style.opacity      = show ? '1' : '0';
+    topBtn.style.pointerEvents = show ? 'auto' : 'none';
+    topBtn.style.transform    = show ? 'translateY(0)' : 'translateY(8px)';
+  });
+
+  // ── SCROLL FADE-IN (cards, steps) ────────────────────────────
+  const fadeEls = document.querySelectorAll('.feature-card, .comp-card, .testimonial, .step');
+  const fadeObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity   = '1';
+        entry.target.style.transform = 'translateY(0)';
+        fadeObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => {
+    el.style.opacity    = '0';
+    el.style.transform  = 'translateY(20px)';
+    el.style.transition = 'opacity .5s ease, transform .5s ease';
+    fadeObs.observe(el);
+  });
+</script>
+</body>
+</html>

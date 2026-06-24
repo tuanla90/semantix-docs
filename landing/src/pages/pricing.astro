@@ -1,0 +1,340 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const plans = [
+  {
+    name: 'Free Trial',
+    price: '0đ',
+    period: 'miễn phí',
+    desc: 'Trải nghiệm AI hỏi đáp dữ liệu với Google Sheets — không cần thẻ tín dụng.',
+    cta: 'Bắt Đầu Ngay',
+    ctaHref: '/docs/vi/free-trial/',
+    highlight: false,
+    features: [
+      { label: 'Google Sheets (1 kết nối)', ok: true },
+      { label: '1 AI Assistant', ok: true },
+      { label: '50 câu hỏi AI / tháng', ok: true },
+      { label: 'Xem dashboard mẫu', ok: true },
+      { label: 'Database thực (PostgreSQL, MySQL…)', ok: false },
+      { label: 'Đồng bộ đa kênh bán hàng', ok: false },
+      { label: 'Cảnh báo Zalo / Telegram', ok: false },
+      { label: 'Xuất báo cáo PowerPoint', ok: false },
+    ],
+  },
+  {
+    name: 'SME Standard',
+    price: '1.290.000đ',
+    period: '/ workspace / tháng',
+    desc: 'Chưa tới 90.000đ/người/tháng cho team 15 người. Báo cáo tự động 24/7.',
+    cta: 'Dùng Thử 14 Ngày',
+    ctaHref: '#contact',
+    highlight: true,
+    badge: 'Bán Chạy Nhất',
+    features: [
+      { label: 'Google Sheets + 3 database', ok: true },
+      { label: 'Đồng bộ Shopee, TikTok Shop, KiotViet', ok: true },
+      { label: '3 AI Assistants', ok: true },
+      { label: '300 câu hỏi AI / tháng', ok: true },
+      { label: 'Dashboard kéo thả + chia sẻ link', ok: true },
+      { label: 'Cảnh báo Zalo / Telegram', ok: true },
+      { label: 'Xuất báo cáo PowerPoint 1-click', ok: true },
+      { label: 'Phân quyền theo vai trò (Admin / Viewer)', ok: true },
+      { label: 'Phân quyền theo dòng dữ liệu (RLS)', ok: false },
+      { label: 'Hỗ trợ qua email', ok: true },
+    ],
+  },
+  {
+    name: 'Pro',
+    price: '2.990.000đ',
+    period: '/ workspace / tháng',
+    desc: 'Dành cho team lớn hơn cần phân tích chuyên sâu, bảo mật dữ liệu theo phòng ban.',
+    cta: 'Dùng Thử 14 Ngày',
+    ctaHref: '#contact',
+    highlight: false,
+    features: [
+      { label: 'Tất cả nguồn dữ liệu (10+)', ok: true },
+      { label: 'Đồng bộ đa kênh không giới hạn', ok: true },
+      { label: '5 AI Assistants', ok: true },
+      { label: 'Câu hỏi AI không giới hạn', ok: true },
+      { label: 'Từ điển Doanh nghiệp (Semantic Layer)', ok: true },
+      { label: 'Phân quyền theo dòng dữ liệu (RLS)', ok: true },
+      { label: 'Nhúng dashboard vào app / web (Embed)', ok: true },
+      { label: 'Data Portal & Pipelines tự động', ok: true },
+      { label: 'Thông báo Zalo / Telegram / Slack / Teams', ok: true },
+      { label: 'Báo cáo định kỳ tự động qua email', ok: true },
+      { label: 'Hỗ trợ ưu tiên qua email (24h)', ok: true },
+    ],
+  },
+  {
+    name: 'Enterprise',
+    price: 'Liên hệ',
+    period: 'tuỳ chỉnh theo nhu cầu',
+    desc: 'Triển khai riêng trên hạ tầng của bạn. Dữ liệu không rời khỏi máy chủ nội bộ.',
+    cta: 'Đặt Lịch Tư Vấn',
+    ctaHref: 'mailto:hello@semantix.vn',
+    highlight: false,
+    features: [
+      { label: 'Tất cả tính năng Pro', ok: true },
+      { label: 'Số lượng workspace & assistant không giới hạn', ok: true },
+      { label: 'White-Label (logo, màu, tên thương hiệu riêng)', ok: true },
+      { label: 'Đăng nhập một lần (SSO / SAML 2.0 / OIDC)', ok: true },
+      { label: 'Triển khai tự lưu trữ (On-premise / Docker)', ok: true },
+      { label: 'AI Provider riêng (Ollama / Azure OpenAI)', ok: true },
+      { label: 'Tuỳ chỉnh AI Model & Guardrails', ok: true },
+      { label: 'SLA 99.9% uptime có cam kết', ok: true },
+      { label: 'Onboarding & dedicated support', ok: true },
+    ],
+  },
+];
+
+const compRows = [
+  { label: 'Nguồn dữ liệu kết nối', free: 'Google Sheets', std: 'Sheets + 3 DB', pro: '10+ loại', ent: '10+ + tuỳ chỉnh' },
+  { label: 'Đồng bộ đa kênh (Shopee, KiotViet…)', free: '—', std: '3 kênh', pro: 'Không giới hạn', ent: 'Không giới hạn' },
+  { label: 'AI Assistants', free: '1', std: '3', pro: '5', ent: 'Không giới hạn' },
+  { label: 'Câu hỏi AI / tháng', free: '50', std: '300', pro: 'Không giới hạn', ent: 'Không giới hạn' },
+  { label: 'Dashboard kéo thả', free: '—', std: '✓', pro: '✓', ent: '✓' },
+  { label: 'Cảnh báo Zalo / Telegram / Slack', free: '—', std: '✓', pro: '✓', ent: '✓' },
+  { label: 'Xuất PowerPoint 1-click', free: '—', std: '✓', pro: '✓', ent: '✓' },
+  { label: 'Báo cáo định kỳ tự động (email)', free: '—', std: '—', pro: '✓', ent: '✓' },
+  { label: 'Phân quyền vai trò (Admin / Viewer)', free: '—', std: '✓', pro: '✓', ent: '✓' },
+  { label: 'Từ điển Doanh nghiệp (Semantic Layer)', free: '—', std: '—', pro: '✓', ent: '✓' },
+  { label: 'Phân quyền dòng dữ liệu (RLS)', free: '—', std: '—', pro: '✓', ent: '✓' },
+  { label: 'Nhúng Dashboard vào app / web', free: '—', std: '—', pro: '✓', ent: '✓' },
+  { label: 'Data Portal & Pipelines tự động', free: '—', std: '—', pro: '✓', ent: '✓' },
+  { label: 'White-Label (logo & thương hiệu riêng)', free: '—', std: '—', pro: '—', ent: '✓' },
+  { label: 'Đăng nhập một lần (SSO / SAML)', free: '—', std: '—', pro: '—', ent: '✓' },
+  { label: 'Tự lưu trữ (On-premise / Docker)', free: '—', std: '—', pro: '—', ent: '✓' },
+  { label: 'AI Provider riêng (Ollama / Azure OAI)', free: '—', std: '—', pro: '—', ent: '✓' },
+  { label: 'SLA uptime', free: '—', std: '99%', pro: '99%', ent: '99.9% cam kết' },
+  { label: 'Hỗ trợ', free: 'Community', std: 'Email', pro: 'Email ưu tiên 24h', ent: 'Dedicated + onboarding' },
+];
+
+const faqs = [
+  {
+    q: 'Tôi có thể dùng thử trước khi mua không?',
+    a: 'Có. Gói Free Trial cho phép kết nối Google Sheets và sử dụng AI Chat hoàn toàn miễn phí, không giới hạn thời gian, không cần thẻ tín dụng. Nâng cấp lên Pro bất kỳ lúc nào.',
+  },
+  {
+    q: 'Một "workspace" là gì?',
+    a: 'Workspace là một không gian làm việc độc lập — có thể là một công ty, một phòng ban, hoặc một dự án. Mỗi workspace có connections, data models, và AI assistants riêng.',
+  },
+  {
+    q: 'Dữ liệu của tôi có được lưu trên server của Semantix không?',
+    a: 'Không. Semantix chỉ sinh SQL và gửi truy vấn đến database của bạn. Kết quả trả về trực tiếp cho người dùng và không được lưu trữ trên hạ tầng của Semantix.',
+  },
+  {
+    q: 'Tôi cần API key của AI provider riêng không?',
+    a: 'Có. Bạn sẽ kết nối API key của mình (OpenAI, Anthropic, Google...) vào Semantix. Điều này giúp bạn kiểm soát chi phí AI và đảm bảo dữ liệu không đi qua bên thứ ba.',
+  },
+  {
+    q: 'Có hỗ trợ thanh toán theo năm không?',
+    a: 'Có. Thanh toán theo năm được giảm 20% so với thanh toán theo tháng. Liên hệ hello@semantix.vn để nhận báo giá.',
+  },
+  {
+    q: 'Enterprise có thể triển khai hoàn toàn trên hạ tầng nội bộ không?',
+    a: 'Có. Semantix hỗ trợ self-hosted deployment trên Kubernetes, Docker, hoặc VM. Toàn bộ dữ liệu và AI (có thể dùng Ollama) ở trong hạ tầng của bạn.',
+  },
+];
+---
+<BaseLayout title="Bảng Giá — Semantix" description="Chọn gói phù hợp: Free Trial với Google Sheets, Pro cho team tăng trưởng, Enterprise cho doanh nghiệp lớn.">
+
+<style>
+  .page-hero {
+    padding: 120px 24px 64px;
+    background: linear-gradient(160deg, #0F172A 0%, #1E1B4B 60%, #0F172A 100%);
+    text-align: center;
+  }
+  .page-hero h1 { font-size: clamp(32px,4.5vw,52px); font-weight: 900; color: #fff; letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 16px; }
+  .page-hero p  { font-size: 18px; color: #94A3B8; max-width: 520px; margin: 0 auto; line-height: 1.65; }
+
+  /* Pricing cards */
+  .pricing-section { padding: 80px 24px; background: var(--surface); }
+  .pricing-grid {
+    max-width: 1320px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4,1fr); gap: 20px;
+  }
+  @media(max-width:1100px){ .pricing-grid { grid-template-columns: repeat(2,1fr); max-width: 760px; } }
+  @media(max-width:640px){ .pricing-grid { grid-template-columns: 1fr; max-width: 480px; } }
+  .plan-card {
+    background: var(--white); border-radius: 20px; border: 1px solid var(--border);
+    padding: 32px; display: flex; flex-direction: column; gap: 24px;
+    box-shadow: var(--shadow); position: relative;
+  }
+  .plan-card.highlight {
+    border-color: var(--primary); box-shadow: 0 8px 40px rgba(79,70,229,.18);
+    background: linear-gradient(180deg, #FAFAFF 0%, #fff 100%);
+  }
+  .plan-badge {
+    position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+    background: var(--primary); color: #fff; font-size: 12px; font-weight: 700;
+    padding: 4px 16px; border-radius: 100px; white-space: nowrap; letter-spacing: .5px;
+  }
+  .plan-name { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; }
+  .plan-price { font-size: 36px; font-weight: 900; color: var(--dark); letter-spacing: -1px; line-height: 1; }
+  .plan-period { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .plan-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .plan-divider { height: 1px; background: var(--border); }
+  .plan-features { display: flex; flex-direction: column; gap: 10px; }
+  .plan-feature { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--dark-2); }
+  .plan-feature .fi { width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; }
+  .plan-feature.dim { color: var(--muted-light); }
+  .plan-cta { margin-top: auto; }
+  .btn-plan-primary { display: block; text-align: center; background: var(--primary); color: #fff; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 15px; text-decoration: none; transition: all .2s; box-shadow: 0 2px 12px rgba(79,70,229,.35); }
+  .btn-plan-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+  .btn-plan-outline { display: block; text-align: center; background: transparent; color: var(--dark); border: 1.5px solid var(--border); padding: 14px; border-radius: 12px; font-weight: 600; font-size: 15px; text-decoration: none; transition: all .2s; }
+  .btn-plan-outline:hover { border-color: var(--primary); color: var(--primary); }
+
+  /* Comparison table */
+  .compare-section { padding: 80px 24px; background: var(--white); }
+  .compare-inner { max-width: 1200px; margin: 0 auto; }
+  .compare-table { width: 100%; border-collapse: collapse; margin-top: 48px; }
+  .compare-table th { padding: 12px 16px; font-size: 13px; font-weight: 700; color: var(--dark); background: var(--surface); border-bottom: 2px solid var(--border); text-align: center; }
+  .compare-table th:first-child { text-align: left; }
+  .compare-table th.col-std { background: #EEF2FF; color: var(--primary); }
+  .compare-table td { padding: 12px 16px; font-size: 13.5px; color: var(--dark-2); border-bottom: 1px solid var(--border); text-align: center; }
+  .compare-table td:first-child { text-align: left; font-weight: 500; color: var(--dark); }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table tr:hover td { background: var(--surface); }
+  .col-std-cell { background: #FAFAFF; font-weight: 600; color: var(--primary-dark); }
+
+  /* FAQ */
+  .faq-section { padding: 80px 24px; background: var(--surface); }
+  .faq-inner { max-width: 760px; margin: 0 auto; }
+  .faq-list { display: flex; flex-direction: column; gap: 0; margin-top: 48px; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-item:first-child { border-top: 1px solid var(--border); }
+  .faq-q {
+    width: 100%; background: none; border: none; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 0; font-size: 15px; font-weight: 600; color: var(--dark);
+    text-align: left; font-family: inherit; gap: 16px;
+  }
+  .faq-q:hover { color: var(--primary); }
+  .faq-a { font-size: 14.5px; color: var(--muted); line-height: 1.7; padding-bottom: 20px; display: none; }
+  .faq-item.open .faq-a { display: block; }
+  .faq-icon { width: 20px; height: 20px; flex-shrink: 0; color: var(--muted); transition: transform .2s; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--primary); }
+
+  /* Final CTA */
+  .pricing-cta { padding: 80px 24px; background: var(--dark); text-align: center; }
+  .pricing-cta h2 { font-size: clamp(26px,3.5vw,40px); font-weight: 800; color: var(--white); letter-spacing: -0.8px; margin-bottom: 14px; }
+  .pricing-cta p { font-size: 17px; color: #64748B; margin-bottom: 36px; }
+</style>
+
+<!-- Hero -->
+<div class="page-hero">
+  <div class="badge" style="margin-bottom:20px"><span class="badge-dot"></span>Miễn phí bắt đầu, nâng cấp khi cần</div>
+  <h1>Giá đơn giản,<br/>không phí ẩn</h1>
+  <p>Từ miễn phí đến Enterprise — chọn đúng gói cho quy mô team của bạn. Không phí ẩn, không tính tiền theo đầu người.</p>
+</div>
+
+<!-- Pricing cards -->
+<section class="pricing-section">
+  <div class="pricing-grid">
+    {plans.map(plan => (
+      <div class={`plan-card${plan.highlight ? ' highlight' : ''}`}>
+        {plan.badge && <div class="plan-badge">{plan.badge}</div>}
+        <div>
+          <div class="plan-name">{plan.name}</div>
+          <div class="plan-price" style="margin-top:12px">{plan.price}</div>
+          <div class="plan-period">{plan.period}</div>
+        </div>
+        <div class="plan-desc">{plan.desc}</div>
+        <div class="plan-divider"></div>
+        <div class="plan-features">
+          {plan.features.map(f => (
+            <div class={`plan-feature${f.ok ? '' : ' dim'}`}>
+              {f.ok
+                ? <svg class="fi" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#15803D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                : <svg class="fi" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#F1F5F9"/><path d="M7 7l6 6M13 7l-6 6" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/></svg>
+              }
+              <span>{f.label}</span>
+            </div>
+          ))}
+        </div>
+        <div class="plan-cta">
+          <a href={plan.ctaHref} class={plan.highlight ? 'btn-plan-primary' : 'btn-plan-outline'}>{plan.cta}</a>
+        </div>
+      </div>
+    ))}
+  </div>
+  <p style="text-align:center;margin-top:32px;font-size:13px;color:var(--muted)">
+    Thanh toán theo năm — giảm thêm <strong>20%</strong>. Liên hệ <a href="mailto:hello@semantix.vn" style="color:var(--primary)">hello@semantix.vn</a>
+  </p>
+</section>
+
+<!-- Comparison table -->
+<section class="compare-section">
+  <div class="compare-inner">
+    <div class="section-label">So Sánh Chi Tiết</div>
+    <h2 class="section-title">Tính năng theo từng gói</h2>
+    <div style="overflow-x:auto">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th style="width:32%">Tính năng</th>
+            <th>Free Trial</th>
+            <th class="col-std">SME Standard</th>
+            <th>Pro</th>
+            <th>Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          {compRows.map(row => (
+            <tr>
+              <td>{row.label}</td>
+              <td>{row.free}</td>
+              <td class="col-std-cell">{row.std}</td>
+              <td>{row.pro}</td>
+              <td>{row.ent}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="section-label">Câu Hỏi Thường Gặp</div>
+    <h2 class="section-title">Bạn còn thắc mắc?</h2>
+    <div class="faq-list" id="faqList">
+      {faqs.map((faq, i) => (
+        <div class="faq-item" data-index={i}>
+          <button class="faq-q">
+            <span>{faq.q}</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+          </button>
+          <div class="faq-a">{faq.a}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="pricing-cta">
+  <h2>Sẵn sàng bắt đầu?</h2>
+  <p>Kết nối dữ liệu đầu tiên trong 15 phút — hoàn toàn miễn phí.</p>
+  <div class="cta-buttons">
+    <a href="/docs/vi/free-trial/" class="btn btn-white">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      Bắt Đầu Miễn Phí
+    </a>
+    <a href="mailto:hello@semantix.vn" class="btn btn-ghost-white">Liên hệ Enterprise →</a>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.faq-item').forEach(item => {
+    item.querySelector('.faq-q')!.addEventListener('click', () => {
+      item.classList.toggle('open');
+    });
+  });
+</script>
+
+</BaseLayout>

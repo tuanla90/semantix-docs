@@ -1,8 +1,12 @@
 # Table of Contents
 
+## Introduction
+* [Home](README.md)
+* [About Semantix](about.md)
+
 ## Getting Started
-* [Introduction](README.md)
-* [Quick Start](getting-started/quick-start.md)
+* [Overview & Learning Paths](getting-started/index.md)
+* [Quick Start — 7 Steps](getting-started/quick-start.md)
 * [System Requirements](getting-started/requirements.md)
 
 ## AI Chat & Analysis

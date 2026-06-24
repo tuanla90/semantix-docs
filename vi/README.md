@@ -1,48 +1,106 @@
-# Chào mừng đến với Semantix
+# Chào Mừng Đến Với Semantix
 
-**Semantix** là một nền tảng trí tuệ dữ liệu (data intelligence) được hỗ trợ bởi AI, cho phép đội ngũ của bạn truy vấn cơ sở dữ liệu, khám phá dữ liệu, xây dựng dashboard và tự động hoá luồng dữ liệu — không yêu cầu kiến thức chuyên môn về SQL.
+**Semantix** là nền tảng trí tuệ dữ liệu (Data Intelligence) được hỗ trợ bởi AI, cho phép đội ngũ của bạn **truy vấn dữ liệu bằng tiếng Việt**, xây dựng Dashboard, xuất báo cáo và tự động hóa luồng dữ liệu — không yêu cầu kiến thức SQL hay lập trình.
 
-## Bạn có thể làm gì với Semantix?
+---
 
-- **Hỏi bằng ngôn ngữ thông thường** — Semantix dịch tự động sang SQL và trả về kết quả ngay lập tức
-- **Data Portal** — tra cứu và xuất dữ liệu theo mẫu (Data Templates) với tham số lọc, không cần viết code
-- **Xây dựng dashboards** — kéo và thả biểu đồ, scorecard, bảng biểu
-- **Kết nối mọi nguồn dữ liệu** — PostgreSQL, MySQL, BigQuery, Snowflake, ClickHouse, Google Sheets và nhiều hơn
-- **Data Pipelines** — đồng bộ dữ liệu tự động theo lịch giữa các nguồn và đích khác nhau
-- **AI Assistants** — tạo nhiều trợ lý AI với tính cách, ngữ cảnh và AI provider khác nhau
-- **Phân tích nâng cao** — Cohort, RFM, Funnel, Growth, và Vintage tích hợp sẵn
-- **Cảnh báo & báo cáo tự động** — nhận thông báo qua Telegram, Zalo hoặc Microsoft Teams
-- **Public API** — nhúng dashboard hoặc truy vấn dữ liệu từ ứng dụng của bạn
+## Bạn Có Thể Làm Gì Với Semantix?
 
-## Truy Cập Nhanh
+| Tính Năng | Mô Tả |
+|-----------|--------|
+| **AI Chat** | Đặt câu hỏi bằng tiếng Việt tự nhiên — AI tự tạo SQL và trả về biểu đồ trong vài giây |
+| **Data Portal** | Tra cứu và xuất dữ liệu theo mẫu (template) có sẵn, không cần biết SQL |
+| **Dashboards** | Kéo thả biểu đồ, Scorecard, bảng biểu thành báo cáo trực quan |
+| **Data Pipelines** | Đồng bộ dữ liệu tự động theo lịch giữa các hệ thống |
+| **AI Assistants** | Tạo nhiều trợ lý AI với tính cách và phạm vi dữ liệu khác nhau |
+| **Knowledge Bases** | Cho AI đọc tài liệu nội bộ (PDF, Word) để trả lời câu hỏi |
+| **Phân tích nâng cao** | Cohort, RFM, Funnel, Growth Analysis tích hợp sẵn |
+| **Thông báo tự động** | Cảnh báo qua Telegram, Zalo, Microsoft Teams khi số liệu vượt ngưỡng |
+| **Public API** | Nhúng Dashboard hoặc truy vấn dữ liệu từ ứng dụng bên ngoài |
 
-<table>
-  <tr>
-    <td><a href="getting-started/quick-start.md">Bắt Đầu Nhanh</a></td>
-    <td><a href="studio/connections.md">Kết Nối Dữ Liệu</a></td>
-  </tr>
-  <tr>
-    <td><a href="ai-chat/README.md">AI Chat</a></td>
-    <td><a href="data-portal/README.md">Data Portal</a></td>
-  </tr>
-  <tr>
-    <td><a href="studio/pipelines.md">Data Pipelines</a></td>
-    <td><a href="api-reference/README.md">Tài Liệu API</a></td>
-  </tr>
-</table>
+---
 
 ## Cấu Trúc Menu Ứng Dụng
 
 ```
-Top Navigation:
-├── AI Chat         →  /analysis
-├── Data Portal     →  /data-portal
-├── Studio (dropdown)
-│   ├── [DE] Engine Templates, Connections, Data Pipelines, Data Templates
-│   ├── [DABI] Data Models, Semantic Contexts, Suggestions
-│   └── [DSAI] AI Providers, AI Assistants, Knowledge Bases
-└── Admin (dropdown)
-    ├── [Access] Users, Roles, Attributes, Tags
-    ├── [Monitoring] Logs, Feedback, Scheduled Reports, Audit Logs, Sessions
-    └── [Config] Brand Settings, Platform Integrations
+Top Navigation (thanh trên cùng):
+├── AI Chat          →  Hỏi dữ liệu bằng ngôn ngữ tự nhiên
+├── Data Portal      →  Xuất báo cáo theo mẫu
+├── Dashboards       →  Xem và tạo Dashboard
+├── Studio           →  (Admin/Developer) Cấu hình hệ thống
+│   ├── [DE] Data Engineering
+│   │   ├── Engine Templates
+│   │   ├── Connections
+│   │   ├── Data Pipelines
+│   │   └── Data Templates
+│   ├── [DABI] Data Analytics & BI
+│   │   ├── Data Models
+│   │   ├── Calculated Fields     (trong Data Model)
+│   │   ├── Metrics               (trong Data Model)
+│   │   ├── Relations             (trong Data Model)
+│   │   ├── Semantic Contexts
+│   │   └── Suggestions
+│   └── [DSAI] Data Science & AI
+│       ├── AI Providers
+│       ├── AI Assistants
+│       └── Knowledge Bases
+└── Admin            →  (Admin) Quản trị hệ thống
+    ├── [Access]
+    │   ├── Users & Roles
+    │   ├── SSO
+    │   ├── Attributes
+    │   └── Tags
+    ├── [Monitoring]
+    │   ├── Audit Logs
+    │   └── Sessions
+    └── [Config]
+        ├── Security
+        ├── Caching
+        └── Platform Integrations
 ```
+
+---
+
+## Luồng Thiết Lập Lần Đầu
+
+Để hệ thống hoạt động, Admin cần thực hiện theo thứ tự:
+
+```
+[1] Tạo Connection    →  Studio → DE → Connections
+[2] Tạo Data Model   →  Studio → DABI → Data Models
+      ├── Cấu hình Columns (label, type, description)
+      ├── Tạo Metrics (KPI)
+      └── Khai báo Relations (nếu nhiều bảng)
+[3] Tạo Context      →  Studio → DABI → Semantic Contexts
+[4] Thêm AI Provider →  Studio → DSAI → AI Providers
+[5] Tạo AI Assistant →  Studio → DSAI → AI Assistants
+[6] Mời người dùng   →  Admin → Access → Users
+```
+
+Xem hướng dẫn đầy đủ: [Bắt Đầu Nhanh](getting-started/quick-start.md)
+
+---
+
+## Truy Cập Nhanh
+
+| Người Dùng Cuối | Admin & Developer |
+|----------------|------------------|
+| [AI Chat](ai-chat/README.md) | [Bắt Đầu Nhanh](getting-started/quick-start.md) |
+| [Data Portal](data-portal/README.md) | [Kết Nối Dữ Liệu](studio/connections.md) |
+| [Dashboards](dashboards/README.md) | [Data Models](studio/data-models.md) |
+| [Phân tích Nâng cao](ai-chat/advanced-analysis.md) | [AI Assistants](studio/ai-assistants.md) |
+| [FAQ](support/faqs.md) | [API Reference](api-reference/README.md) |
+
+---
+
+## Gói Dùng Thử Miễn Phí
+
+Mới bắt đầu? Xem [hướng dẫn dùng thử](free-trial/README.md) — kết nối Google Sheets và hỏi dữ liệu trong 10 phút, không cần cài đặt gì.
+
+---
+
+## Hỗ Trợ
+
+- **Câu hỏi thường gặp:** [FAQs](support/faqs.md)
+- **Email:** support@semantix.vn
+- **Tài liệu kỹ thuật:** [API Reference](api-reference/README.md)

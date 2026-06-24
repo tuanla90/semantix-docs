@@ -1,0 +1,541 @@
+---
+---
+<section class="demo-section" id="demo">
+  <div class="demo-inner">
+    <div class="section-label">Trải Nghiệm Thực Tế</div>
+    <h2 class="section-title">Bốn cách Semantix trả lời câu hỏi của bạn</h2>
+    <p class="section-sub">Cùng một giao diện chat — AI tự chọn dạng trả lời phù hợp nhất: văn bản, biểu đồ, dashboard hay phân tích chuyên sâu.</p>
+
+    <div class="tab-wrap">
+      <!-- Tab Nav -->
+      <div class="tab-nav" role="tablist">
+        <button class="tab-btn active" data-tab="qa" role="tab">
+          <span class="tab-icon">💬</span> Hỏi Đáp Nhanh
+        </button>
+        <button class="tab-btn" data-tab="chart" role="tab">
+          <span class="tab-icon">📊</span> Sinh Biểu Đồ
+        </button>
+        <button class="tab-btn" data-tab="dashboard" role="tab">
+          <span class="tab-icon">🗂️</span> Tạo Dashboard
+        </button>
+        <button class="tab-btn" data-tab="agent" role="tab">
+          <span class="tab-icon">🤖</span> AI Agent Nâng Cao
+        </button>
+      </div>
+
+      <!-- TAB 1: HỎI ĐÁP NHANH -->
+      <div class="tab-panel active" id="tab-qa">
+        <div class="chat-window">
+          <div class="chat-topbar">
+            <div class="chat-dots"><div class="chat-dot"></div><div class="chat-dot"></div><div class="chat-dot"></div></div>
+            <span class="chat-title">Semantix AI — Trợ lý Kinh doanh · Hỏi Đáp Thông Thường</span>
+          </div>
+          <div class="chat-body">
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Tỷ lệ đơn hủy tháng này là bao nhiêu? Cao hơn hay thấp hơn 3 tháng trước?</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div class="chat-bubble ai-bubble">
+                Tỷ lệ đơn hủy tháng 6 là <strong>3.2%</strong> — thấp hơn trung bình 3 tháng qua (<strong>4.1%</strong>) khoảng <strong>0.9 điểm %</strong>. Tín hiệu tích cực. Nguyên nhân chính là cải thiện quy trình xử lý đơn ở TP.HCM (từ 5.8% xuống còn 3.7%).
+                <div class="sql-tag" style="margin-top:8px">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  Xem SQL được sinh ra
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Top 5 khách hàng doanh thu cao nhất Q2 năm nay?</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+                  Top 5 khách hàng theo doanh thu Q2/2025:
+                  <div class="chat-result">
+                    <table class="result-table">
+                      <thead><tr><th>#</th><th>Khách hàng</th><th>Doanh thu Q2</th><th>Số đơn</th><th>So Q1</th></tr></thead>
+                      <tbody>
+                        <tr><td>1</td><td>Công ty ABC</td><td>1.8 tỷ</td><td>142</td><td><span class="chip">+22%</span></td></tr>
+                        <tr><td>2</td><td>Tập đoàn XYZ</td><td>1.4 tỷ</td><td>98</td><td><span class="chip">+8%</span></td></tr>
+                        <tr><td>3</td><td>CT TNHH DEF</td><td>0.9 tỷ</td><td>76</td><td><span class="chip negative">-3%</span></td></tr>
+                        <tr><td>4</td><td>Chuỗi GHI</td><td>0.7 tỷ</td><td>201</td><td><span class="chip">+41%</span></td></tr>
+                        <tr><td>5</td><td>Đại lý JKL</td><td>0.6 tỷ</td><td>55</td><td><span class="chip">+5%</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Khách hàng nào chưa mua trong 60 ngày qua mà trước đó mua đều?</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+                  Có <strong>23 khách hàng</strong> từng mua ít nhất 3 đơn/tháng trong 3 tháng liên tiếp nhưng không phát sinh đơn nào trong 60 ngày gần nhất. Đây là danh sách ưu tiên liên hệ chăm sóc:
+                  <div class="chat-result">
+                    <table class="result-table">
+                      <thead><tr><th>Khách hàng</th><th>Đơn cuối</th><th>Trung bình/tháng cũ</th><th>Giá trị ước tính mất</th></tr></thead>
+                      <tbody>
+                        <tr><td>Cty Minh Phát</td><td>18/04/2025</td><td>8 đơn/tháng</td><td>~240tr</td></tr>
+                        <tr><td>Hộ KD Thanh Hà</td><td>22/04/2025</td><td>5 đơn/tháng</td><td>~90tr</td></tr>
+                        <tr><td>Siêu thị Hòa Bình</td><td>01/05/2025</td><td>12 đơn/tháng</td><td>~380tr</td></tr>
+                        <tr><td style="color:var(--muted)">+20 khách hàng khác...</td><td></td><td></td><td></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: SINH BIỂU ĐỒ -->
+      <div class="tab-panel" id="tab-chart">
+        <div class="chat-window">
+          <div class="chat-topbar">
+            <div class="chat-dots"><div class="chat-dot"></div><div class="chat-dot"></div><div class="chat-dot"></div></div>
+            <span class="chat-title">Semantix AI — Trợ lý Kinh doanh · Biểu Đồ</span>
+          </div>
+          <div class="chat-body">
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Vẽ biểu đồ doanh thu 6 tháng gần nhất, chia theo kênh Online và Offline</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+                  Biểu đồ doanh thu 6 tháng (tỷ VNĐ) chia theo kênh bán, kèm đường tỷ lệ chuyển đổi:
+                  <div class="chart-output">
+                    <div class="chart-title-row">
+                      <span class="chart-title">Doanh Thu Theo Kênh — T1 đến T6/2025</span>
+                      <div class="chart-legend">
+                        <div class="legend-item"><div class="legend-dot" style="background:#4F46E5"></div>Online</div>
+                        <div class="legend-item"><div class="legend-dot" style="background:#06B6D4"></div>Offline</div>
+                        <div class="legend-item"><div class="legend-dot" style="background:#F59E0B"></div>Tỷ lệ tăng trưởng</div>
+                      </div>
+                    </div>
+                    <svg class="bar-chart-svg" viewBox="0 0 580 200" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="50" y1="20" x2="560" y2="20" class="chart-grid-line"/>
+                      <line x1="50" y1="57" x2="560" y2="57" class="chart-grid-line"/>
+                      <line x1="50" y1="94" x2="560" y2="94" class="chart-grid-line"/>
+                      <line x1="50" y1="131" x2="560" y2="131" class="chart-grid-line"/>
+                      <line x1="50" y1="168" x2="560" y2="168" class="chart-grid-line"/>
+                      <text x="42" y="24" class="chart-axis-label" text-anchor="end">8 tỷ</text>
+                      <text x="42" y="61" class="chart-axis-label" text-anchor="end">6 tỷ</text>
+                      <text x="42" y="98" class="chart-axis-label" text-anchor="end">4 tỷ</text>
+                      <text x="42" y="135" class="chart-axis-label" text-anchor="end">2 tỷ</text>
+                      <text x="42" y="172" class="chart-axis-label" text-anchor="end">0</text>
+                      <g class="bar-group">
+                        <rect x="58"  y="105" width="30" height="63" fill="#4F46E5" rx="4"/>
+                        <rect x="90"  y="105" width="30" height="63" fill="#06B6D4" rx="4"/>
+                        <text x="84"  y="188" class="chart-axis-label" text-anchor="middle">T1</text>
+                        <text x="74"  y="101" class="chart-val-label" text-anchor="middle">4.2</text>
+                      </g>
+                      <g class="bar-group">
+                        <rect x="143" y="116" width="30" height="52" fill="#4F46E5" rx="4"/>
+                        <rect x="175" y="120" width="30" height="48" fill="#06B6D4" rx="4"/>
+                        <text x="169" y="188" class="chart-axis-label" text-anchor="middle">T2</text>
+                        <text x="159" y="112" class="chart-val-label" text-anchor="middle">3.8</text>
+                      </g>
+                      <g class="bar-group">
+                        <rect x="228" y="85" width="30" height="83" fill="#4F46E5" rx="4"/>
+                        <rect x="260" y="97" width="30" height="71" fill="#06B6D4" rx="4"/>
+                        <text x="254" y="188" class="chart-axis-label" text-anchor="middle">T3</text>
+                        <text x="244" y="81" class="chart-val-label" text-anchor="middle">5.1</text>
+                      </g>
+                      <g class="bar-group">
+                        <rect x="313" y="96" width="30" height="72" fill="#4F46E5" rx="4"/>
+                        <rect x="345" y="108" width="30" height="60" fill="#06B6D4" rx="4"/>
+                        <text x="339" y="188" class="chart-axis-label" text-anchor="middle">T4</text>
+                        <text x="329" y="92" class="chart-val-label" text-anchor="middle">4.7</text>
+                      </g>
+                      <g class="bar-group">
+                        <rect x="398" y="68" width="30" height="100" fill="#4F46E5" rx="4"/>
+                        <rect x="430" y="80" width="30" height="88" fill="#06B6D4" rx="4"/>
+                        <text x="424" y="188" class="chart-axis-label" text-anchor="middle">T5</text>
+                        <text x="414" y="64" class="chart-val-label" text-anchor="middle">5.8</text>
+                      </g>
+                      <g class="bar-group">
+                        <rect x="483" y="56" width="30" height="112" fill="#4F46E5" rx="4"/>
+                        <rect x="515" y="80" width="30" height="88" fill="#06B6D4" rx="4"/>
+                        <text x="509" y="188" class="chart-axis-label" text-anchor="middle">T6</text>
+                        <text x="499" y="52" class="chart-val-label" text-anchor="middle">6.2</text>
+                      </g>
+                      <polyline class="line-path" points="84,168 169,175 254,130 339,141 424,105 509,115"/>
+                      <circle class="line-dot" cx="84"  cy="168" r="4"/>
+                      <circle class="line-dot" cx="169" cy="175" r="4"/>
+                      <circle class="line-dot" cx="254" cy="130" r="4"/>
+                      <circle class="line-dot" cx="339" cy="141" r="4"/>
+                      <circle class="line-dot" cx="424" cy="105" r="4"/>
+                      <circle class="line-dot" cx="509" cy="115" r="4"/>
+                    </svg>
+                    <div class="sql-tag" style="margin-top:4px">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                      Xem SQL · Xuất PNG · Ghim vào Dashboard
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Thêm biểu đồ tròn thể hiện tỷ trọng doanh thu theo kênh trong T6</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+                  Cơ cấu doanh thu T6/2025 theo kênh bán:
+                  <div class="chart-output">
+                    <div class="donut-section">
+                      <svg width="130" height="130" viewBox="0 0 130 130">
+                        <circle cx="65" cy="65" r="50" fill="none" stroke="#4F46E5" stroke-width="22"
+                          stroke-dasharray="191.6 122.5" stroke-dashoffset="0" transform="rotate(-90 65 65)"/>
+                        <circle cx="65" cy="65" r="50" fill="none" stroke="#06B6D4" stroke-width="22"
+                          stroke-dasharray="122.5 191.6" stroke-dashoffset="-191.6" transform="rotate(-90 65 65)"/>
+                        <text x="65" y="60" text-anchor="middle" font-size="18" font-weight="800" fill="#0F172A" font-family="Inter,sans-serif">6.2</text>
+                        <text x="65" y="76" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="Inter,sans-serif">tỷ VNĐ</text>
+                      </svg>
+                      <div class="donut-legend">
+                        <div class="donut-legend-item">
+                          <div class="donut-dot" style="background:#4F46E5"></div>
+                          <span class="donut-label">Online</span>
+                          <span class="donut-pct">3.8 tỷ · <strong>61%</strong></span>
+                        </div>
+                        <div class="donut-legend-item">
+                          <div class="donut-dot" style="background:#06B6D4"></div>
+                          <span class="donut-label">Offline</span>
+                          <span class="donut-pct">2.4 tỷ · <strong>39%</strong></span>
+                        </div>
+                        <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5">
+                          Online tăng từ 50% (T1) lên 61% (T6)<br/>
+                          — xu hướng chuyển dịch rõ ràng.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: TẠO DASHBOARD -->
+      <div class="tab-panel" id="tab-dashboard">
+        <div class="chat-window">
+          <div class="chat-topbar">
+            <div class="chat-dots"><div class="chat-dot"></div><div class="chat-dot"></div><div class="chat-dot"></div></div>
+            <span class="chat-title">Semantix AI — Trợ lý Kinh doanh · Dashboard</span>
+          </div>
+          <div class="chat-body">
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Tạo cho tôi dashboard theo dõi KPI kinh doanh tuần này và so sánh tuần trước</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+                  Đã tạo dashboard <strong>"KPI Kinh Doanh — Tuần 25/2025"</strong>. Bạn có thể ghim thêm biểu đồ bất kỳ hoặc chia sẻ link cho team:
+                  <div class="dash-output" style="margin-top:14px">
+                    <div class="dash-header">
+                      <span class="dash-title">📊 KPI Kinh Doanh — Tuần 23–29/06/2025</span>
+                      <span class="dash-date">Cập nhật: hôm nay 09:14</span>
+                    </div>
+                    <div class="kpi-row">
+                      <div class="kpi-card">
+                        <div class="kpi-label">Doanh Thu</div>
+                        <div class="kpi-val">1.84<span style="font-size:14px;font-weight:600"> tỷ</span></div>
+                        <div class="kpi-change up">↑ 12.3% vs tuần trước</div>
+                      </div>
+                      <div class="kpi-card">
+                        <div class="kpi-label">Số Đơn Hàng</div>
+                        <div class="kpi-val">2,341</div>
+                        <div class="kpi-change up">↑ 8.7% vs tuần trước</div>
+                      </div>
+                      <div class="kpi-card">
+                        <div class="kpi-label">Khách Hàng Mới</div>
+                        <div class="kpi-val">187</div>
+                        <div class="kpi-change down">↓ 4.1% vs tuần trước</div>
+                      </div>
+                      <div class="kpi-card">
+                        <div class="kpi-label">Tỷ Lệ Hủy</div>
+                        <div class="kpi-val">3.1<span style="font-size:14px;font-weight:600">%</span></div>
+                        <div class="kpi-change up">↓ 0.8 điểm (tốt hơn)</div>
+                      </div>
+                    </div>
+                    <div class="dash-row">
+                      <div class="dash-card">
+                        <div class="dash-card-title">Doanh Thu Theo Ngày (Tuần Này vs Tuần Trước)</div>
+                        <svg viewBox="0 0 320 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+                          <line x1="0" y1="80" x2="320" y2="80" stroke="#E2E8F0" stroke-width="1"/>
+                          <polyline fill="none" stroke="#C7D2FE" stroke-width="1.5" stroke-dasharray="4,3"
+                            points="10,60 55,55 100,50 145,65 190,45 235,52 280,48"/>
+                          <polyline fill="none" stroke="#4F46E5" stroke-width="2.5"
+                            points="10,52 55,44 100,38 145,56 190,32 235,40 280,28"/>
+                          <circle cx="10"  cy="52" r="3" fill="#4F46E5"/>
+                          <circle cx="55"  cy="44" r="3" fill="#4F46E5"/>
+                          <circle cx="100" cy="38" r="3" fill="#4F46E5"/>
+                          <circle cx="145" cy="56" r="3" fill="#4F46E5"/>
+                          <circle cx="190" cy="32" r="3" fill="#4F46E5"/>
+                          <circle cx="235" cy="40" r="3" fill="#4F46E5"/>
+                          <circle cx="280" cy="28" r="3" fill="#4F46E5"/>
+                          <text x="10"  y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T2</text>
+                          <text x="52"  y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T3</text>
+                          <text x="97"  y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T4</text>
+                          <text x="142" y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T5</text>
+                          <text x="187" y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T6</text>
+                          <text x="232" y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">T7</text>
+                          <text x="277" y="95" font-size="9" fill="#94A3B8" font-family="Inter,sans-serif">CN</text>
+                        </svg>
+                      </div>
+                      <div class="dash-card">
+                        <div class="dash-card-title">Theo Khu Vực</div>
+                        <table class="result-table" style="font-size:12px">
+                          <thead><tr><th>Khu vực</th><th>Doanh thu</th><th>+/-</th></tr></thead>
+                          <tbody>
+                            <tr><td>TP.HCM</td><td>680tr</td><td><span class="chip" style="font-size:10px">+15%</span></td></tr>
+                            <tr><td>Hà Nội</td><td>520tr</td><td><span class="chip" style="font-size:10px">+9%</span></td></tr>
+                            <tr><td>Đà Nẵng</td><td>340tr</td><td><span class="chip" style="font-size:10px">+21%</span></td></tr>
+                            <tr><td>Các tỉnh</td><td>300tr</td><td><span class="chip negative" style="font-size:10px">-2%</span></td></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sql-tag" style="margin-top:10px">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    Chia sẻ link Dashboard · Nhúng vào ứng dụng · Lên lịch gửi báo cáo
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Thêm cảnh báo khi doanh thu ngày giảm dưới 200 triệu, gửi qua Telegram</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div class="chat-bubble ai-bubble">
+                Đã thiết lập cảnh báo: khi doanh thu trong ngày &lt; 200 triệu VNĐ, hệ thống sẽ tự động gửi thông báo vào Telegram Bot của bạn (kiểm tra lúc <strong>23:00</strong> mỗi ngày). Bạn có thể thay đổi ngưỡng hoặc kênh nhận thông báo bất kỳ lúc nào trong cài đặt.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: AI AGENT NÂNG CAO -->
+      <div class="tab-panel" id="tab-agent">
+        <div class="chat-window">
+          <div class="chat-topbar">
+            <div class="chat-dots"><div class="chat-dot"></div><div class="chat-dot"></div><div class="chat-dot"></div></div>
+            <span class="chat-title">Semantix AI — Trợ lý Kinh doanh · AI Agent Phân Tích Nâng Cao</span>
+          </div>
+          <div class="chat-body">
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Phân tích cohort khách hàng mua lần đầu trong Q1. Tỷ lệ quay lại mua hàng qua từng tháng là bao nhiêu?</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div style="flex:1">
+                <div class="chat-bubble ai-bubble">
+                  <div style="margin-bottom:16px">
+                    <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">Quá trình phân tích</div>
+                    <div class="agent-steps">
+                      <div class="agent-step">
+                        <div class="step-indicator step-done">✓</div>
+                        <div>
+                          <div class="agent-step-text"><strong>Xác định cohort</strong> — Lọc khách hàng có đơn đầu tiên trong khoảng 01/01 – 31/03/2025</div>
+                          <div class="agent-step-sub">Tìm thấy <strong>1,284 khách hàng</strong> thuộc cohort Q1/2025</div>
+                        </div>
+                      </div>
+                      <div class="agent-step">
+                        <div class="step-indicator step-done">✓</div>
+                        <div>
+                          <div class="agent-step-text"><strong>Tính retention rate</strong> — Đếm số khách quay lại mua trong mỗi tháng tiếp theo (M1 → M6)</div>
+                          <div class="agent-step-sub">JOIN bảng orders theo customer_id, GROUP BY cohort_month và period</div>
+                        </div>
+                      </div>
+                      <div class="agent-step">
+                        <div class="step-indicator step-done">✓</div>
+                        <div>
+                          <div class="agent-step-text"><strong>So sánh với cohort Q1/2024</strong> — Kiểm tra xu hướng cải thiện hay suy giảm qua năm</div>
+                          <div class="agent-step-sub">Retention M1 tăng từ 31% (2024) → 38% (2025)</div>
+                        </div>
+                      </div>
+                      <div class="agent-step">
+                        <div class="step-indicator step-done">✓</div>
+                        <div>
+                          <div class="agent-step-text"><strong>Phát hiện điểm bất thường</strong> — Cohort tháng 2 có retention M2 thấp hơn đáng kể so với tháng 1 và tháng 3</div>
+                          <div class="agent-step-sub">Nguyên nhân có thể liên quan đến sự cố giao hàng tháng 3</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:10px">Cohort Retention — Khách Hàng Mới Q1/2025 (%)</div>
+                  <div class="cohort-table-wrap">
+                    <table class="cohort-table">
+                      <thead>
+                        <tr>
+                          <th>Cohort</th><th>Khách mới</th><th>M0</th><th>M1</th><th>M2</th><th>M3</th><th>M4</th><th>M5</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Tháng 1/2025</td>
+                          <td style="background:#F8FAFC;color:var(--muted)">428</td>
+                          <td class="c100">100%</td><td class="c40">40%</td><td class="c30">29%</td>
+                          <td class="c20">21%</td><td class="c20">18%</td><td class="c20">16%</td>
+                        </tr>
+                        <tr>
+                          <td>Tháng 2/2025</td>
+                          <td style="background:#F8FAFC;color:var(--muted)">391</td>
+                          <td class="c100">100%</td><td class="c40">36%</td><td class="c20">18%</td>
+                          <td class="c20">15%</td><td class="c20">14%</td><td class="c20" style="color:#94A3B8">—</td>
+                        </tr>
+                        <tr>
+                          <td>Tháng 3/2025</td>
+                          <td style="background:#F8FAFC;color:var(--muted)">465</td>
+                          <td class="c100">100%</td><td class="c40">38%</td><td class="c30">27%</td>
+                          <td class="c20" style="color:#94A3B8">—</td><td class="c20" style="color:#94A3B8">—</td><td class="c20" style="color:#94A3B8">—</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="agent-insight">
+                    <div class="insight-label">💡 Nhận Xét Từ AI</div>
+                    Cohort tháng 2 có retention M2 chỉ đạt <strong>18%</strong> — thấp hơn ~10 điểm % so với tháng 1 và tháng 3. Điều này trùng với khoảng thời gian có sự cố giao hàng tháng 3/2025. Đề xuất: ưu tiên chương trình win-back với 70 khách hàng trong cohort tháng 2 chưa quay lại mua từ M2 trở đi — giá trị ước tính nếu giữ lại được ~<strong>420 triệu VNĐ/tháng</strong>.
+                  </div>
+                  <div class="sql-tag" style="margin-top:10px">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    Xem SQL · Xuất CSV · Chạy lại với cohort khác
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-user">A</div>
+              <div class="chat-bubble">Tạo danh sách 70 khách hàng đó để team CRM liên hệ win-back</div>
+            </div>
+            <div class="chat-msg">
+              <div class="chat-avatar avatar-ai">AI</div>
+              <div class="chat-bubble ai-bubble">
+                Đã tạo danh sách <strong>70 khách hàng win-back</strong> từ cohort T2/2025, sắp xếp theo giá trị tiềm năng giảm dần. Danh sách đã được lưu vào Data Portal dưới tên <strong>"CRM — Win-back Cohort T2"</strong> — team CRM có thể truy cập và xuất file bất kỳ lúc nào mà không cần hỏi lại.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end tab-wrap -->
+  </div>
+</section>
+
+<script>
+  const TYPING_MS = 1200;
+  const MSG_GAP   = 700;
+
+  // Track pending timeouts so we can cancel them when switching tabs
+  let pendingTimeouts: ReturnType<typeof setTimeout>[] = [];
+
+  function scrollIfNeeded(chatBody: HTMLElement, el: HTMLElement) {
+    const bodyBottom = chatBody.scrollTop + chatBody.clientHeight;
+    const elBottom   = el.offsetTop + el.offsetHeight;
+    if (elBottom > bodyBottom - 16) {
+      // Long message (taller than 55% of chat area) → scroll to TOP of message
+      if (el.offsetHeight > chatBody.clientHeight * 0.55) {
+        chatBody.scrollTop = Math.max(0, el.offsetTop - 20);
+      } else {
+        chatBody.scrollTop = elBottom - chatBody.clientHeight + 16;
+      }
+    }
+  }
+
+  function animateChat(panel: HTMLElement) {
+    // Cancel every pending timeout from any previous animation run
+    pendingTimeouts.forEach(clearTimeout);
+    pendingTimeouts = [];
+
+    const chatBody = panel.querySelector<HTMLElement>('.chat-body');
+    if (!chatBody) return;
+
+    // Remove leftover typing indicators and hide all messages (display:none → no space taken)
+    chatBody.querySelectorAll('.typing-indicator').forEach(el => el.remove());
+    const msgs = Array.from(chatBody.querySelectorAll<HTMLElement>('.chat-msg'));
+    msgs.forEach(m => m.classList.remove('msg-visible'));
+    // Safe to reset scroll now: hidden messages take no space, content height ≈ 0
+    chatBody.scrollTop = 0;
+
+    let t = 300;
+
+    msgs.forEach((msg, i) => {
+      const isAI       = !!msg.querySelector('.avatar-ai');
+      const prevIsUser = i > 0 && !!msgs[i - 1].querySelector('.avatar-user');
+
+      if (isAI && prevIsUser) {
+        const showAt   = t;
+        const revealAt = t + TYPING_MS;
+
+        pendingTimeouts.push(setTimeout(() => {
+          const ind = document.createElement('div');
+          ind.className = 'typing-indicator';
+          ind.innerHTML = `<div class="chat-avatar avatar-ai">AI</div>
+            <div class="typing-dots">
+              <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>
+            </div>`;
+          chatBody.insertBefore(ind, msg);
+          scrollIfNeeded(chatBody, ind);
+        }, showAt));
+
+        pendingTimeouts.push(setTimeout(() => {
+          chatBody.querySelectorAll('.typing-indicator').forEach(el => el.remove());
+          msg.classList.add('msg-visible');
+          scrollIfNeeded(chatBody, msg);
+        }, revealAt));
+
+        t = revealAt + MSG_GAP + 150;
+      } else {
+        pendingTimeouts.push(setTimeout(() => {
+          msg.classList.add('msg-visible');
+          scrollIfNeeded(chatBody, msg);
+        }, t));
+        t += MSG_GAP;
+      }
+    });
+  }
+
+  // Tab switching
+  document.querySelectorAll<HTMLButtonElement>('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.tab!;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const panel = document.getElementById('tab-' + id)!;
+      panel.classList.add('active');
+      animateChat(panel);
+    });
+  });
+
+  // Animate the first active tab on page load
+  // Handle both cases: script runs before or after DOMContentLoaded
+  function initFirstTab() {
+    const first = document.querySelector<HTMLElement>('.tab-panel.active');
+    if (first) animateChat(first);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFirstTab);
+  } else {
+    initFirstTab();
+  }
+</script>

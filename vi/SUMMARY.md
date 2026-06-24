@@ -1,8 +1,12 @@
 # Mục Lục
 
+## Giới Thiệu
+* [Trang Chủ](README.md)
+* [Về Semantix](about.md)
+
 ## Bắt Đầu
-* [Giới Thiệu](README.md)
-* [Bắt Đầu Nhanh](getting-started/quick-start.md)
+* [Tổng Quan & Lộ Trình](getting-started/index.md)
+* [Bắt Đầu Nhanh — 7 Bước](getting-started/quick-start.md)
 * [Yêu Cầu Hệ Thống](getting-started/requirements.md)
 
 ## Dùng Thử Miễn Phí (Free Trial)

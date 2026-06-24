@@ -1,50 +1,127 @@
 # Telegram Bot
 
-Kết nối Telegram bot với Semantix để truy vấn dữ liệu và nhận cảnh báo trực tiếp trong Telegram.
+Kết nối Semantix với Telegram để nhận cảnh báo dữ liệu, báo cáo định kỳ, và thậm chí truy vấn dữ liệu trực tiếp trong Telegram.
 
-## Các Tính Năng
+---
 
-- Đặt các câu hỏi bằng ngôn ngữ tự nhiên qua Telegram chat
-- Nhận cảnh báo metric khi vượt ngưỡng
-- Kết quả được định dạng thành các bảng văn bản rõ ràng, dễ nhìn
+## Tính Năng
 
-## Thiết Lập
+- Nhận cảnh báo Alert khi metric vượt ngưỡng (ví dụ: "Doanh thu ngày giảm > 20%")
+- Nhận Scheduled Report theo lịch (PDF, CSV)
+- Hỏi dữ liệu bằng ngôn ngữ tự nhiên trong Telegram chat
+- Kết quả hiển thị dạng bảng văn bản gọn gàng
 
-### Bước 1 — Tạo Một Telegram Bot
+---
+
+## Thiết Lập Bot Telegram
+
+### Bước 1: Tạo Bot Mới Với BotFather
 
 1. Mở Telegram → tìm kiếm **@BotFather**
-2. Gửi lệnh `/newbot` và làm theo hướng dẫn
-3. Sao chép **Bot Token** (định dạng: `123456789:AAF...`)
+2. Nhấn **Start**
+3. Gửi lệnh: `/newbot`
+4. BotFather hỏi tên bot → nhập tên hiển thị (ví dụ: `Semantix Analytics Bot`)
+5. BotFather hỏi username → nhập username (phải kết thúc bằng `bot`): `MyCompanySemantixBot`
+6. BotFather trả về **Bot Token**: `7123456789:AAFxxxxxxxxxxxxxxxxxxxxxxxx`
+7. **Copy Bot Token** — cần dùng ở bước sau
 
-### Bước 2 — Kết Nối Trong Semantix
+### Bước 2: Lấy Chat ID
 
-1. Đi tới **Admin → Channels → New Channel → Telegram**
-2. Nhập **Bot Token** của bạn
-3. (Tùy chọn) Đặt một **Default Context** (nguồn dữ liệu mặc định mà người dùng sẽ truy vấn)
-4. (Tùy chọn) Đặt một **Semantix API Key** (bắt buộc đối với các truy vấn bằng ngôn ngữ tự nhiên)
+Bạn cần Chat ID để Semantix biết gửi thông báo đến đâu.
+
+**Cho nhóm (Group):**
+1. Thêm bot vào nhóm Telegram của công ty
+2. Gửi bất kỳ tin nhắn nào trong nhóm (ví dụ: `/start`)
+3. Truy cập URL này trên trình duyệt (thay `TOKEN` bằng bot token của bạn):
+   ```
+   https://api.telegram.org/botTOKEN/getUpdates
+   ```
+4. Trong kết quả JSON, tìm `"chat"` → `"id"` — Chat ID của nhóm thường có dấu `-` phía trước:
+   ```json
+   "chat": {
+     "id": -1001234567890,
+     "title": "Analytics Team",
+     "type": "supergroup"
+   }
+   ```
+
+**Cho cá nhân (Direct Message):**
+1. Tìm bot trên Telegram và nhấn `/start`
+2. Truy cập URL getUpdates như trên
+3. Chat ID cá nhân là số dương (không có dấu `-`)
+
+### Bước 3: Kết Nối Trong Semantix
+
+1. Vào **Admin → Config → Platform Integrations → Tab: Channels**
+2. Nhấn **New Channel → Telegram**
+3. Điền các trường:
+
+| Trường | Mô Tả | Ví Dụ |
+|--------|--------|-------|
+| **Name** | Tên kênh trong Semantix | "Nhóm Analytics Team" |
+| **Bot Token** | Token từ BotFather | `7123456789:AAFxxx...` |
+| **Chat ID** | ID nhóm hoặc cá nhân | `-1001234567890` |
+| **Default Context** | Context dùng khi hỏi qua Telegram | (chọn từ danh sách) |
+
+4. Nhấn **Test Connection** — bot sẽ gửi tin nhắn "Connection test from Semantix" vào nhóm
 5. Nhấn **Save**
 
-### Bước 3 — Xác Minh Bot
+---
 
-1. Semantix sẽ sinh ra một **mã xác minh (verification code)**
-2. Mở Telegram bot của bạn → gửi lệnh `/start <mã_xác_minh>`
-3. Bot sẽ xác nhận việc kết nối thành công
+## Sử Dụng Cảnh Báo (Alerts)
+
+Sau khi kết nối, tạo Alert và chọn Telegram channel để nhận thông báo:
+
+1. Trong Dashboard → nhấn vào widget → **⋮ → Create Alert**
+2. Hoặc: **Admin → Notifications → New Alert**
+3. Chọn:
+   - **Channel**: Kênh Telegram vừa tạo
+   - **Condition**: Khi nào trigger (ví dụ: doanh thu < 10,000,000)
+   - **Message Template**: Nội dung tin nhắn Telegram
+
+**Ví dụ tin nhắn alert:**
+```
+🚨 CẢNH BÁO DOANH THU
+
+Doanh thu ngày: {{value}} VNĐ
+Giảm {{change_pct}}% so với hôm qua
+
+📊 Xem Dashboard: {{dashboard_link}}
+```
+
+---
 
 ## Truy Vấn Dữ Liệu Qua Telegram
 
-Sau khi đã kết nối, bạn có thể gửi bất kỳ câu hỏi nào tới bot:
+Nếu đã cấu hình **Default Context** cho kênh Telegram, thành viên có thể hỏi dữ liệu trực tiếp:
 
 ```
-Hiển thị doanh thu theo khu vực trong tuần này
-Top 5 khách hàng theo doanh thu
-Tổng số đơn hàng ngày hôm qua
+Người dùng: Doanh thu hôm nay bao nhiêu?
+
+Bot: 📊 Kết quả (2026-06-22)
+┌──────────────────────┐
+│ Doanh thu: 45,230,000│
+│ Đơn hàng: 127        │
+└──────────────────────┘
 ```
 
-Bot sẽ phản hồi lại bằng một bảng kết quả đã được định dạng.
+> Kết quả bị giới hạn 10 hàng trên Telegram để dễ đọc. Xem đầy đủ trên Semantix.
+
+---
+
+## Xử Lý Lỗi Thường Gặp
+
+| Lỗi | Nguyên Nhân | Giải Pháp |
+|-----|-------------|-----------|
+| Test Connection thất bại | Bot Token sai | Kiểm tra lại token từ BotFather |
+| Không nhận được tin nhắn | Chat ID sai hoặc bot chưa được add vào nhóm | Thêm bot vào nhóm trước, lấy lại Chat ID |
+| `Forbidden: bot was blocked` | User đã block bot | Unblock bot trong Telegram |
+| Chat ID nhóm không hoạt động | Lấy Chat ID trước khi add bot | Add bot vào nhóm, gửi 1 tin, rồi lấy Chat ID |
+
+---
 
 ## Bảo Mật
 
-- Đặt biến môi trường `TELEGRAM_WEBHOOK_SECRET` để bảo vệ webhook endpoint của bạn
-- Chỉ các kênh (channels) đã được xác minh mới có thể nhận và gửi tin nhắn
-
-> 💡 Kết quả bị giới hạn tối đa 10 dòng trên Telegram để dễ đọc. Hãy xem kết quả đầy đủ trên Semantix.
+- Chỉ Admin Semantix có thể xem và thay đổi Bot Token
+- Thiết lập biến môi trường `TELEGRAM_WEBHOOK_SECRET` nếu dùng webhook mode
+- Giới hạn nhóm Telegram nhận cảnh báo chỉ gồm người có quyền xem dữ liệu tương ứng

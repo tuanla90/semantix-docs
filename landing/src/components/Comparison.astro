@@ -1,0 +1,106 @@
+---
+const iconX = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" class="icon-x"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
+const iconCheck = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" class="icon-check"><polyline points="20 6 9 17 4 12"/></svg>`;
+const iconWarn = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" class="icon-warn"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`;
+---
+<section class="comparison-section" id="comparison">
+  <div class="comparison-inner">
+    <div class="section-label">So Sánh</div>
+    <h2 class="section-title">Semantix khác gì công cụ bạn đang dùng?</h2>
+    <p class="section-sub">Không phải công cụ nào cũng dùng cùng một mục đích. Đây là sự khác biệt rõ ràng.</p>
+
+    <div class="comparison-cards">
+
+      <!-- VS EXCEL -->
+      <div class="comp-card">
+        <div class="comp-them comp-header">
+          <div class="comp-vs">Bạn đang dùng</div>
+          <div class="comp-title">Excel / Google Sheets</div>
+          <div class="comp-subtitle">Tốt cho nhập liệu & tính toán đơn giản</div>
+        </div>
+        <div class="comp-them comp-body">
+          <div class="comp-row">
+            <div class="comp-row-label">Những giới hạn thường gặp</div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Dữ liệu cũ, phải export thủ công từ database</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Công thức VLOOKUP/SUMIF dễ sai, khó bảo trì</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Chậm và crash khi dữ liệu vượt hàng trăm nghìn dòng</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Mỗi người giữ một file khác nhau, số liệu mâu thuẫn</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Không có AI, mọi câu hỏi mới phải làm tay</span></div>
+          </div>
+        </div>
+        <div class="comp-divider" style="padding: 0 28px">
+          <div class="comp-divider-line"></div>
+          <div class="comp-divider-text">Semantix thay thế bằng</div>
+          <div class="comp-divider-line"></div>
+        </div>
+        <div class="comp-us comp-body">
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Dữ liệu live từ database, không cần export thủ công</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>AI trả lời mọi câu hỏi mới trong vài giây</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Xử lý hàng chục triệu dòng dữ liệu không chậm</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Một nguồn sự thật duy nhất, mọi người cùng nhìn chung</span></div>
+        </div>
+      </div>
+
+      <!-- VS POWER BI -->
+      <div class="comp-card">
+        <div class="comp-them comp-header">
+          <div class="comp-vs">Bạn đang dùng</div>
+          <div class="comp-title">Power BI / Looker Studio</div>
+          <div class="comp-subtitle">Tốt cho dashboard đã được định nghĩa sẵn</div>
+        </div>
+        <div class="comp-them comp-body">
+          <div class="comp-row">
+            <div class="comp-row-label">Những giới hạn thường gặp</div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Chỉ trả lời câu hỏi đã được xây dựng trong dashboard</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Câu hỏi mới → phải nhờ analyst xây report → chờ 1–3 ngày</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Cần kỹ năng DAX/LookML để tự tạo metric mới</span></div>
+            <div class="comp-item"><Fragment set:html={iconWarn}/><span>Không có AI tự nhiên — chỉ lọc theo filter có sẵn</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Chi phí license cao, đặc biệt với Power BI Premium</span></div>
+          </div>
+        </div>
+        <div class="comp-divider" style="padding: 0 28px">
+          <div class="comp-divider-line"></div>
+          <div class="comp-divider-text">Semantix nổi bật hơn bằng AI</div>
+          <div class="comp-divider-line"></div>
+        </div>
+        <div class="comp-us comp-body">
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span><strong>Bất kỳ câu hỏi nào</strong> — không giới hạn bởi dashboard đã xây</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Quản lý tự hỏi và nhận câu trả lời — không cần chờ analyst</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>AI phân tích bất thường, đề xuất insight chủ động</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Hỗ trợ đa AI Provider: GPT-4o, Claude, Gemini, DeepSeek</span></div>
+        </div>
+      </div>
+
+      <!-- VS CHATGPT -->
+      <div class="comp-card">
+        <div class="comp-them comp-header">
+          <div class="comp-vs">Bạn đang dùng</div>
+          <div class="comp-title">ChatGPT / Claude</div>
+          <div class="comp-subtitle">Tốt cho viết lách và câu hỏi kiến thức chung</div>
+        </div>
+        <div class="comp-them comp-body">
+          <div class="comp-row">
+            <div class="comp-row-label">Những giới hạn thường gặp</div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Không kết nối được database — không biết doanh thu thực của bạn</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Hallucination — tự bịa số liệu không có trong thực tế</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Không có quản trị — không kiểm soát ai được hỏi câu gì</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Dữ liệu bạn paste vào có thể được dùng để train mô hình</span></div>
+            <div class="comp-item"><Fragment set:html={iconWarn}/><span>Mỗi người hỏi theo cách riêng → kết quả không nhất quán</span></div>
+          </div>
+        </div>
+        <div class="comp-divider" style="padding: 0 28px">
+          <div class="comp-divider-line"></div>
+          <div class="comp-divider-text">Semantix tích hợp dữ liệu thật</div>
+          <div class="comp-divider-line"></div>
+        </div>
+        <div class="comp-us comp-body">
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span><strong>Kết nối trực tiếp</strong> database — số liệu 100% từ dữ liệu thực</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Không hallucination — SQL chạy trên database, kết quả có thể audit</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Phân quyền người dùng — ai được xem gì, hỏi gì</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Dữ liệu không rời server — có thể dùng AI self-hosted (Ollama)</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

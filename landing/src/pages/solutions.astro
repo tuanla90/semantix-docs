@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const industries = [
+  {
+    id: 'retail',
+    emoji: '🛒',
+    tag: 'Thương Mại & Bán Lẻ',
+    headline: 'Từ doanh thu hàng ngày đến insight khách hàng — tất cả trong một câu hỏi',
+    desc: 'Chuỗi bán lẻ và e-commerce phải xử lý hàng triệu giao dịch, hàng nghìn SKU, và khách hàng phân tán khắp nơi. Team kinh doanh không thể chờ 2–3 ngày để có một báo cáo.',
+    pain: [
+      'Mỗi chi nhánh báo cáo theo cách riêng — số liệu không khớp',
+      'Phân tích tồn kho và doanh thu phải nhờ data team mỗi lần',
+      'Không biết sản phẩm nào đang thực sự có lãi sau khi trừ chi phí',
+    ],
+    solution: [
+      'Hỏi doanh thu theo chuỗi, chi nhánh, SKU trong vài giây',
+      'Phân tích ABC inventory, sell-through rate tự động',
+      'Cohort khách hàng, RFM — phát hiện churn sớm',
+    ],
+    metric: { num: '2→0', label: 'ngày chờ báo cáo', note: 'từ 2 ngày xuống tức thì' },
+    color: '#4F46E5',
+    bg: '#EEF2FF',
+  },
+  {
+    id: 'finance',
+    emoji: '🏦',
+    tag: 'Tài Chính & Ngân Hàng',
+    headline: 'Báo cáo tuân thủ, phân tích rủi ro — không cần viết lại SQL mỗi quý',
+    desc: 'Nhóm Finance và Risk phải tổng hợp dữ liệu từ nhiều hệ thống, đảm bảo số liệu nhất quán cho kiểm toán, và trả lời câu hỏi của Ban Lãnh đạo trong thời gian thực.',
+    pain: [
+      'KPI tài chính mỗi người tính một kiểu — xảy ra tranh luận trong họp',
+      'Báo cáo định kỳ mất 1–2 ngày tổng hợp thủ công từ nhiều nguồn',
+      'Câu hỏi ad-hoc từ CFO phải chờ team data xử lý',
+    ],
+    solution: [
+      'Định nghĩa P&L, EBITDA, NPL một lần — toàn bộ tổ chức dùng cùng công thức',
+      'Dashboard tài chính cập nhật real-time, tự động gửi báo cáo định kỳ',
+      'CFO tự hỏi và nhận số liệu chính xác — không cần chờ',
+    ],
+    metric: { num: '95%', label: 'báo cáo định kỳ tự động', note: 'thay vì làm thủ công' },
+    color: '#059669',
+    bg: '#ECFDF5',
+  },
+  {
+    id: 'fnb',
+    emoji: '🍜',
+    tag: 'F&B & Chuỗi Nhà Hàng',
+    headline: 'Biết cửa hàng nào đang lỗ, món nào bán chạy — trước khi quá muộn',
+    desc: 'Chuỗi F&B cần theo dõi hiệu suất từng outlet, từng ca, từng món — trong thời gian thực. Mỗi quyết định menu hay nhân sự cần dữ liệu chứ không phải cảm tính.',
+    pain: [
+      'Manager cửa hàng không có công cụ tự theo dõi doanh thu ca của mình',
+      'Menu engineering — không biết món nào Star, Dog, Plow Horse, Puzzle',
+      'Food cost, waste không được theo dõi theo thời gian thực',
+    ],
+    solution: [
+      'Dashboard outlet theo ca, theo ngày — manager tự xem không cần hỏi',
+      'Hỏi "top 10 món có margin cao nhất tháng này" — nhận kết quả ngay',
+      'Cảnh báo Telegram khi doanh thu outlet giảm dưới ngưỡng',
+    ],
+    metric: { num: '18%', label: 'tăng gross margin', note: 'nhờ tối ưu menu đúng dữ liệu' },
+    color: '#D97706',
+    bg: '#FFF7ED',
+  },
+  {
+    id: 'logistics',
+    emoji: '🚚',
+    tag: 'Logistics & Vận Tải',
+    headline: 'Tối ưu chi phí vận chuyển khi mọi con số đều ẩn trong hàng triệu dòng log',
+    desc: 'Công ty logistics xử lý hàng triệu shipment, hàng trăm tài xế, hàng nghìn tuyến đường. Phát hiện bottleneck và tối ưu chi phí đòi hỏi phân tích dữ liệu phức tạp mà không phải lúc nào cũng có data engineer rảnh.',
+    pain: [
+      'On-time delivery rate không được theo dõi tập trung — mỗi đội báo cáo riêng',
+      'Không biết tài xế nào / tuyến nào đang lỗ sau khi tính đủ chi phí',
+      'Claim khiếu nại khách hàng không có dữ liệu để đối chiếu nhanh',
+    ],
+    solution: [
+      'Hỏi "tuyến Hà Nội – Hải Phòng có margin bao nhiêu tháng này?" — ngay lập tức',
+      'Funnel giao hàng: từ đơn → pickup → transit → delivered → trả hàng',
+      'Cảnh báo tự động khi tỷ lệ giao trễ vượt ngưỡng SLA',
+    ],
+    metric: { num: '12%', label: 'giảm chi phí vận hành', note: 'nhờ phát hiện tuyến không hiệu quả' },
+    color: '#7C3AED',
+    bg: '#F5F3FF',
+  },
+];
+
+const roles = [
+  { icon: '📊', title: 'Data Analyst / BI Engineer', desc: 'Xây Semantic Layer một lần, toàn tổ chức dùng mãi. Không còn viết lại SQL cho cùng một câu hỏi.', href: '/docs/vi/getting-started/' },
+  { icon: '💼', title: 'Sales & Business Manager', desc: 'Tự hỏi số liệu bằng tiếng Việt, nhận kết quả tức thì. Không cần chờ team data, không cần học SQL.', href: '/docs/vi/getting-started/' },
+  { icon: '⚙️', title: 'Data Engineer / DevOps', desc: 'Quản lý connections, pipelines, SSO, caching. Tích hợp với hạ tầng hiện tại trong vài giờ.', href: '/docs/vi/getting-started/' },
+  { icon: '🔌', title: 'Developer / Product Team', desc: 'Nhúng Dashboard vào ứng dụng qua Embed Token. Query dữ liệu qua REST API. Không cần xây BI từ đầu.', href: '/docs/vi/api-reference/' },
+];
+---
+<BaseLayout title="Giải Pháp — Semantix" description="Semantix cho Retail, Fintech, F&B, Logistics — AI phân tích dữ liệu theo từng ngành, từng vai trò.">
+
+<style>
+  .page-hero { padding: 120px 24px 72px; background: linear-gradient(160deg,#0F172A 0%,#1E1B4B 60%,#0F172A 100%); text-align: center; }
+  .page-hero h1 { font-size: clamp(32px,4.5vw,52px); font-weight: 900; color: #fff; letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 16px; }
+  .page-hero p  { font-size: 18px; color: #94A3B8; max-width: 580px; margin: 0 auto; line-height: 1.65; }
+
+  /* Industry sections */
+  .industry-section { padding: 96px 24px; border-bottom: 1px solid var(--border); }
+  .industry-section:nth-child(even) { background: var(--surface); }
+  .industry-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .industry-inner.flip { direction: rtl; }
+  .industry-inner.flip > * { direction: ltr; }
+  @media(max-width:768px){ .industry-inner { grid-template-columns: 1fr; gap: 40px; } .industry-inner.flip { direction: ltr; } }
+
+  .industry-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+  .industry-tag-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .industry-headline { font-size: clamp(22px,2.8vw,32px); font-weight: 800; color: var(--dark); letter-spacing: -0.6px; line-height: 1.25; margin-bottom: 16px; }
+  .industry-desc { font-size: 15.5px; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+
+  .pain-list, .solution-list { display: flex; flex-direction: column; gap: 10px; }
+  .pain-list-label, .solution-list-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 4px; }
+  .pain-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--dark-2); line-height: 1.55; }
+  .solution-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--dark-2); line-height: 1.55; }
+
+  .industry-card {
+    background: var(--white); border-radius: 20px; border: 1px solid var(--border);
+    padding: 36px; box-shadow: var(--shadow-lg);
+  }
+  .metric-block {
+    display: flex; align-items: baseline; gap: 10px; margin-bottom: 24px;
+    padding-bottom: 24px; border-bottom: 1px solid var(--border);
+  }
+  .metric-num { font-size: 48px; font-weight: 900; letter-spacing: -2px; line-height: 1; }
+  .metric-text { display: flex; flex-direction: column; }
+  .metric-label { font-size: 14px; font-weight: 700; color: var(--dark); }
+  .metric-note  { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media(max-width:480px){ .two-col { grid-template-columns: 1fr; } }
+
+  /* Roles section */
+  .roles-section { padding: 96px 24px; background: var(--dark); }
+  .roles-grid { max-width: 1100px; margin: 48px auto 0; display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 24px; }
+  .role-card { background: var(--dark-2); border: 1px solid var(--dark-3); border-radius: 16px; padding: 28px; transition: border-color .2s, transform .2s; }
+  .role-card:hover { border-color: #4F46E5; transform: translateY(-3px); }
+  .role-icon { font-size: 28px; margin-bottom: 14px; }
+  .role-title { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+  .role-desc  { font-size: 13.5px; color: #64748B; line-height: 1.6; margin-bottom: 16px; }
+  .role-link  { font-size: 13px; font-weight: 600; color: #818CF8; text-decoration: none; }
+  .role-link:hover { color: #A5B4FC; }
+
+  /* CTA */
+  .solutions-cta { padding: 96px 24px; background: var(--surface); text-align: center; }
+  .solutions-cta h2 { font-size: clamp(26px,3.5vw,42px); font-weight: 800; color: var(--dark); letter-spacing: -0.8px; margin-bottom: 14px; }
+  .solutions-cta p  { font-size: 17px; color: var(--muted); margin-bottom: 36px; }
+</style>
+
+<div class="page-hero">
+  <div class="badge" style="margin-bottom:20px"><span class="badge-dot"></span>Từng ngành, từng vai trò</div>
+  <h1>Semantix giải quyết<br/>bài toán dữ liệu của bạn</h1>
+  <p>Không phải tool chung chung. Semantix được cấu hình cho từng nghiệp vụ — từ Retail đến Finance, từ F&B đến Logistics.</p>
+</div>
+
+{industries.map((ind, idx) => (
+  <section class="industry-section" id={ind.id}>
+    <div class={`industry-inner${idx % 2 === 1 ? ' flip' : ''}`}>
+      <div>
+        <div class="industry-tag" style={`color:${ind.color}`}>
+          <div class="industry-tag-dot" style={`background:${ind.color}`}></div>
+          {ind.tag}
+        </div>
+        <h2 class="industry-headline">{ind.emoji} {ind.headline}</h2>
+        <p class="industry-desc">{ind.desc}</p>
+        <div class="two-col">
+          <div class="pain-list">
+            <div class="pain-list-label">Vấn đề hiện tại</div>
+            {ind.pain.map(p => (
+              <div class="pain-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" style="flex-shrink:0;margin-top:2px"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span>{p}</span>
+              </div>
+            ))}
+          </div>
+          <div class="solution-list">
+            <div class="solution-list-label">Với Semantix</div>
+            {ind.solution.map(s => (
+              <div class="solution-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="flex-shrink:0;margin-top:2px"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>{s}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div style="margin-top:28px">
+          <a href="/pricing" class="btn btn-primary">Xem bảng giá →</a>
+        </div>
+      </div>
+      <div class="industry-card">
+        <div class="metric-block">
+          <div class="metric-num" style={`color:${ind.color}`}>{ind.metric.num}</div>
+          <div class="metric-text">
+            <span class="metric-label">{ind.metric.label}</span>
+            <span class="metric-note">{ind.metric.note}</span>
+          </div>
+        </div>
+        <div style="font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">Câu hỏi mẫu cho ngành {ind.tag.split('&')[0].trim()}</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          {ind.solution.map(s => (
+            <div style={`background:${ind.bg};border-radius:10px;padding:10px 14px;font-size:13px;color:var(--dark-2);line-height:1.5`}>
+              💬 {s}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+))}
+
+<!-- Roles section -->
+<section class="roles-section">
+  <div class="section-label" style="color:#475569">Theo Vai Trò</div>
+  <h2 class="section-title" style="color:var(--white)">Semantix phục vụ mọi người trong tổ chức</h2>
+  <div class="roles-grid">
+    {roles.map(role => (
+      <div class="role-card">
+        <div class="role-icon">{role.icon}</div>
+        <div class="role-title">{role.title}</div>
+        <div class="role-desc">{role.desc}</div>
+        <a href={role.href} class="role-link">Xem hướng dẫn →</a>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="solutions-cta">
+  <h2>Ngành của bạn chưa thấy ở đây?</h2>
+  <p>Semantix được cấu hình hoàn toàn theo nghiệp vụ của bạn — liên hệ để chúng tôi demo trực tiếp.</p>
+  <div class="cta-buttons">
+    <a href="mailto:hello@semantix.vn" class="btn btn-primary btn-large">Đặt Lịch Demo</a>
+    <a href="/docs/vi/free-trial/" class="btn btn-outline btn-large">Tự Dùng Thử Ngay</a>
+  </div>
+</section>
+
+</BaseLayout>

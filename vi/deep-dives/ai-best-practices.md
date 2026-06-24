@@ -1,56 +1,204 @@
 # Tối Ưu Hóa AI & Best Practices
 
-Semantix dựa vào các mô hình ngôn ngữ lớn (LLMs) để dịch ngôn ngữ tự nhiên thành SQL. Mặc dù AI rất tiên tiến, nhưng nó không thể đọc được suy nghĩ của bạn. Độ chính xác của AI phụ thuộc hoàn toàn vào cách bạn định nghĩa các mô hình dữ liệu (data models) và các chỉ số (metrics).
+Độ chính xác của AI phụ thuộc trực tiếp vào chất lượng cấu hình Data Model và Context. Đây là hướng dẫn đầy đủ để AI trả lời đúng mọi câu hỏi.
 
-Hãy tuân theo các "best practices" dưới đây để đảm bảo Semantix luôn sinh ra SQL chính xác 100% cho các câu hỏi nghiệp vụ của bạn.
+---
 
-## 1. Viết Mô Tả (Description) Chi Tiết
+## Tại Sao AI Trả Lời Sai?
 
-Trường **Description** là tín hiệu quan trọng nhất đối với AI. Đừng chỉ viết lại tên cột. Hãy giải thích dữ liệu đó đại diện cho cái gì và nó nên được sử dụng như thế nào.
+AI của Semantix không "biết" database của bạn — nó chỉ đọc những gì bạn mô tả trong Data Model. Khi AI sai, nguyên nhân thường là một trong:
 
-**Mô tả Kém:**
-> "Doanh thu"
+1. **Thiếu Description** → AI đoán sai cột dùng để tính gì
+2. **Thiếu Synonyms** → User gõ "doanh thu" nhưng Metric tên "revenue" → AI không match
+3. **Label cột kỹ thuật** → Cột `trx_amt_vnd` không có Label → AI không biết đây là "Số tiền giao dịch"
+4. **Metric thiếu Filter** → Tính doanh thu nhưng không lọc đơn đã hủy → kết quả cao hơn thực tế
+5. **Relations sai** → AI JOIN sai bảng → dữ liệu bị nhân lên hoặc thiếu
+6. **Default Time Column chưa đặt** → Hỏi "tháng này" → AI không biết dùng cột ngày nào
 
-**Mô tả Tốt:**
-> "Tổng doanh thu gộp từ các đơn hàng thành công, tính bằng VNĐ. Không bao gồm các đơn hàng đã hoàn tiền hoặc bị hủy. Đây là chỉ số chính để theo dõi doanh số tổng."
+---
 
-## 2. Sử Dụng Rộng Rãi Từ Đồng Nghĩa (Synonyms)
+## Nguyên Tắc 1: Viết Description Chi Tiết
 
-Người dùng sẽ đặt cùng một câu hỏi theo nhiều cách khác nhau. Hãy định nghĩa các **Từ đồng nghĩa (Synonyms)** cho các metric của bạn để bắt các biến thể này.
+**Description là tín hiệu quan trọng nhất** cho AI hiểu cột/metric dùng để làm gì.
 
-**Metric:** `Tổng Doanh Thu`
-**Synonyms Tốt:**
-- `"doanh số bán"`
-- `"tiền thu được"`
-- `"thu nhập gộp"`
-- `"tiền bán hàng"`
+### Mẫu Description Tốt Cho Cột
 
-## 3. Đặt Tên Cột (Label) Rõ Ràng
+```
+[Tên dữ liệu] — [Đơn vị/Format] — [Bao gồm/Loại trừ gì] — [Cách tính nếu cần]
+```
 
-Các cột trong database thường có tên mang tính kỹ thuật hoặc viết tắt (ví dụ: `cust_id_fk`, `trx_amt`). Hãy sử dụng trường **Label** để đặt cho chúng những cái tên thân thiện với con người.
+**Ví dụ thực tế:**
 
-| Cột Database | Label Kém | Label Tốt |
-|-----------------|-----------|------------|
-| `trx_amt` | Trx Amt | Số tiền giao dịch |
-| `is_actv` | Is Actv | Là user hoạt động |
-| `usr_loc` | Usr Loc | Vị trí người dùng |
+| Cột | Description Kém | Description Tốt |
+|-----|----------------|----------------|
+| `revenue` | "Doanh thu" | "Doanh thu gộp từ đơn hàng đã thanh toán, tính bằng VNĐ. Không bao gồm đơn hủy (status='cancelled') và đơn đang chờ (status='pending'). Đây là chỉ số doanh thu chính cho báo cáo tháng." |
+| `status` | "Trạng thái" | "Trạng thái đơn hàng. Giá trị: 'pending'=chờ xác nhận, 'confirmed'=đã xác nhận, 'shipping'=đang giao, 'delivered'=đã giao, 'cancelled'=đã hủy, 'refunded'=đã hoàn tiền. Chỉ tính doanh thu với status IN ('confirmed','delivered')." |
+| `created_at` | "Ngày tạo" | "Ngày và giờ khách hàng đặt đơn hàng (UTC+7). Đây là cột thời gian chính dùng để lọc và nhóm theo ngày/tháng/quý/năm." |
+| `customer_type` | "Loại KH" | "Phân loại khách hàng: 'retail'=bán lẻ, 'wholesale'=bán sỉ, 'vip'=khách VIP. VIP được giảm thêm 5% và ưu tiên xử lý." |
 
-## 4. Tận Dụng Các Quy Tắc Ngữ Cảnh (Context Rules)
+### Mẫu Description Tốt Cho Metric
 
-Nếu một số metric nhất định không bao giờ được phép nhóm (GROUP BY) theo một số dimension nhất định (ví dụ: vì nó gây ra trùng lặp dữ liệu hoặc sai logic nghiệp vụ), hãy chỉ định rõ ràng cho AI trong phần cài đặt Context.
+```
+[Công thức tính] — [Điều kiện lọc] — [Đơn vị] — [Dùng khi nào]
+```
 
-**Ví dụ Quy tắc Ngữ cảnh:**
-> "Không bao giờ GROUP BY theo `Mã Cửa Hàng` khi đang tính `Doanh thu bán hàng Online`."
+**Ví dụ:**
+> "Tổng doanh thu thuần = SUM(so_luong × don_gia × (1 - giam_gia / 100)) từ các đơn đã giao thành công. Tính bằng VNĐ. Dùng cho báo cáo doanh thu chính thức."
 
-## 5. Xử Lý Ngày Tháng (Dates) Rõ Ràng
+---
 
-Nhiều bảng có thể có nhiều cột ngày tháng (ví dụ: `created_at`, `shipped_at`, `paid_at`). Khi người dùng hỏi "Doanh số tuần trước", AI cần biết phải sử dụng cột ngày nào.
+## Nguyên Tắc 2: Thêm Synonyms Rộng Rãi
 
-Luôn luôn thiết lập một **Cột Thời Gian Mặc Định (Default Time Column)** trong phần cài đặt Context của bạn.
+Người dùng đặt câu hỏi theo nhiều cách khác nhau. Thêm Synonyms để AI match đúng dù người dùng dùng từ nào.
 
-## Checklist Tổng Kết Để Đạt Độ Chính Xác 100%
-- [ ] Mọi Metric đều có mô tả chi tiết, không mơ hồ
-- [ ] Mọi Metric đều có ít nhất 3-5 từ đồng nghĩa
-- [ ] Các cột database khó hiểu đã được cấp Label thân thiện
-- [ ] Cột thời gian mặc định đã được thiết lập cho Context
-- [ ] Các logic nghiệp vụ phức tạp đã được trừu tượng hóa (abstracted) thành các Trường tính toán (Calculated Fields)
+**Metric: Tổng Doanh Thu**
+
+Synonyms nên bao gồm:
+- Tiếng Việt thông dụng: `doanh thu`, `doanh số`, `tiền bán hàng`, `tiền thu được`, `thu nhập`
+- Viết tắt: `DT`, `DS`
+- Tiếng Anh: `revenue`, `sales`, `income`
+- Cách gọi nội bộ công ty: `GMV`, `net revenue`, `gross sales`
+
+**Metric: Số Đơn Hàng**
+
+Synonyms: `đơn hàng`, `đơn`, `orders`, `số đơn`, `đơn đặt hàng`, `transactions`, `giao dịch`
+
+> Thêm càng nhiều synonym càng tốt — không có hại gì, chỉ có lợi.
+
+---
+
+## Nguyên Tắc 3: Label Cột Thân Thiện
+
+Database thường có tên kỹ thuật. Đặt **Label** để hiển thị tên thân thiện:
+
+| Tên Cột Database | Label Kém | Label Tốt |
+|----------------|-----------|-----------|
+| `cust_id_fk` | Cust Id Fk | Mã Khách Hàng |
+| `trx_amt_vnd` | Trx Amt Vnd | Số Tiền Giao Dịch (VNĐ) |
+| `is_actv` | Is Actv | Đang Hoạt Động |
+| `usr_loc_cd` | Usr Loc Cd | Mã Khu Vực |
+| `dt_created_utc` | Dt Created Utc | Ngày Tạo (UTC+7) |
+| `qty_sold_pcs` | Qty Sold Pcs | Số Lượng Bán (cái) |
+
+---
+
+## Nguyên Tắc 4: Filter Trong Metric
+
+Sai lầm phổ biến nhất: tạo Metric `Tổng Doanh Thu` mà không có filter, khiến tính cả đơn hủy, đơn lỗi.
+
+**Metric không có filter:**
+```sql
+SUM(revenue)  -- Tính tất cả đơn, kể cả đơn hủy
+```
+
+**Metric có filter đúng:**
+```sql
+SUM(revenue) WHERE status IN ('delivered', 'confirmed')
+-- Chỉ tính đơn đã giao hoặc đã xác nhận
+```
+
+**Trong cấu hình Metric của Semantix:**
+- Field: **Filter**
+- Giá trị: `status IN ('delivered', 'confirmed')`
+
+### Các Filter Phổ Biến
+
+| Metric | Filter Cần Có |
+|--------|-------------|
+| Doanh thu | `status IN ('paid','delivered')` |
+| Đơn hàng hợp lệ | `status != 'cancelled'` |
+| Khách hàng active | `is_active = true` |
+| Sản phẩm trong kho | `stock > 0 AND is_discontinued = false` |
+| User có hoạt động | `last_login IS NOT NULL` |
+
+---
+
+## Nguyên Tắc 5: Đặt Default Time Column
+
+Khi người dùng hỏi "tháng này", "tuần qua", "năm ngoái" — AI cần biết dùng cột ngày nào.
+
+**Cấu hình trong Context:**
+- Studio → DABI → Data Models → Chọn model → Contexts → Chọn Context
+- Field: **Default Time Column**
+- Giá trị: `order_date` (hoặc cột ngày chính nhất của bảng)
+
+**Nếu bảng có nhiều cột ngày:**
+
+| Cột Ngày | Ý Nghĩa | Default? |
+|----------|---------|---------|
+| `order_date` | Ngày đặt hàng | ✅ (thường dùng nhất) |
+| `payment_date` | Ngày thanh toán | ❌ |
+| `shipped_date` | Ngày giao hàng | ❌ |
+| `created_at` | Ngày tạo record | ❌ |
+
+Đặt `order_date` làm default. Khi user hỏi "doanh thu tháng này" → query `WHERE order_date BETWEEN...`
+
+---
+
+## Nguyên Tắc 6: Dùng Calculated Fields Cho Logic Phức Tạp
+
+Đừng để AI tự tính toán business logic phức tạp — định nghĩa sẵn trong Calculated Fields:
+
+| Thay Vì | Làm Thế Này |
+|---------|-------------|
+| AI tự tính: `(revenue - cost) / revenue × 100` | Tạo Calculated Field `gross_margin_pct` |
+| AI tự phân loại: `IF revenue > 10M THEN 'VIP'` | Tạo Calculated Field `customer_tier` |
+| AI tự tính ngày: `DATEDIFF(current, last_order)` | Tạo Calculated Field `days_since_last_order` |
+
+---
+
+## Nguyên Tắc 7: Context Rules Cho Logic Nghiệp Vụ Đặc Thù
+
+Trong phần **Context → Instructions** (hướng dẫn cho AI), viết các quy tắc mà AI không thể tự suy luận:
+
+**Ví dụ instructions tốt:**
+```
+- Khi người dùng hỏi "doanh thu", luôn dùng metric "Doanh thu thuần" (net_revenue), không phải "gross_revenue"
+- "Tháng này" nghĩa là từ ngày 1 đến hôm nay của tháng hiện tại
+- Khi hỏi về "chi nhánh", đây là cột "branch_code", không phải "warehouse_code"
+- Không GROUP BY theo "customer_id" khi đang tính "Doanh thu online" vì gây trùng lặp
+- "Số lượng" khi nói về sản phẩm nghĩa là "qty_sold", khi nói về đơn hàng nghĩa là "order_count"
+```
+
+---
+
+## Checklist Trước Khi Go-Live
+
+### Data Model
+
+- [ ] Mọi cột có Description rõ ràng (đặc biệt cột có giá trị enum)
+- [ ] Mọi cột có Label thân thiện (không phải tên kỹ thuật)
+- [ ] Calculated Fields đã định nghĩa cho các công thức phức tạp
+
+### Metrics
+
+- [ ] Mọi Metric có Description giải thích công thức và điều kiện
+- [ ] Mọi Metric có ít nhất 3-5 Synonyms
+- [ ] Mọi Metric có Filter đúng (không tính đơn hủy, record lỗi)
+- [ ] Aggregation function phù hợp (SUM/COUNT/COUNT_DISTINCT/AVG)
+
+### Context
+
+- [ ] Default Time Column đã đặt
+- [ ] Instructions/Rules viết các quy tắc nghiệp vụ đặc thù
+- [ ] Suggestions đã tạo (5-10 câu hỏi gợi ý điển hình)
+
+### Test Trước Khi Dùng
+
+- [ ] Test ít nhất 10 câu hỏi phổ biến nhất
+- [ ] Kiểm tra View SQL với mỗi câu hỏi — SQL có đúng logic không?
+- [ ] Test các câu hỏi có nhiều cách diễn đạt khác nhau
+- [ ] Test với người dùng thực (không phải chỉ admin)
+
+---
+
+## Chẩn Đoán Khi AI Sai
+
+| Triệu Chứng | Kiểm Tra | Sửa Ở Đâu |
+|-------------|---------|-----------|
+| AI tính số sai | View SQL → xem filter | Thêm Filter vào Metric |
+| AI không hiểu từ người dùng dùng | AI không match Metric | Thêm Synonym cho Metric |
+| AI dùng sai cột | View SQL → xem cột nào được dùng | Cải thiện Description của cột |
+| AI JOIN sai bảng | View SQL → xem JOIN clause | Sửa Relations trong Data Model |
+| AI không biết "tháng này" là gì | Kết quả trống hoặc sai ngày | Đặt Default Time Column trong Context |
+| Kết quả bị nhân đôi | View SQL → có JOIN tạo nhiều dòng | Đổi COUNT sang COUNT_DISTINCT, kiểm tra Relations |

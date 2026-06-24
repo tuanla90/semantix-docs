@@ -1,38 +1,130 @@
-# Contexts & Data Models
+# Contexts & Row-Level Security
+
+Hướng dẫn chuyên sâu về Semantic Context — lớp ngữ nghĩa kết nối database với AI — và Row-Level Security để kiểm soát phạm vi dữ liệu theo người dùng.
+
+---
 
 ## Context Là Gì?
 
-Một **Context** (Ngữ cảnh) là một lớp ngữ nghĩa (semantic layer) nằm giữa database thô của bạn và AI. Nó báo cho Semantix biết:
+**Context** (Ngữ cảnh) là lớp trung gian giữa database thô và AI. Nó giải thích cho AI biết:
 
-- Những bảng (tables) và cột (columns) nào có sẵn
-- Cách các bảng liên kết với nhau (joins/relations)
-- Những metric và cột tính toán (calculated columns) nào tồn tại
-- Ai có quyền truy cập vào dữ liệu nào (Row-Level Security)
+- Những bảng và cột nào tồn tại và có ý nghĩa gì
+- Cách các bảng liên kết với nhau (JOIN relationships)
+- Những chỉ số kinh doanh (Metrics) nào cần tính
+- Ai được phép thấy dữ liệu nào (Row-Level Security)
+- Ngôn ngữ và phong cách trả lời
 
-Hãy nghĩ về một Context như một **mô hình dữ liệu ảo (virtual data model)** — người dùng của bạn sẽ tương tác bằng các tên gọi và khái niệm thân thiện với nghiệp vụ kinh doanh, thay vì cấu trúc bảng thô.
+```
+Người dùng: "Doanh thu tháng này?"
+                    ↓
+         Context (semantic layer)
+         ├── Biết "doanh thu" = Metric "net_revenue"
+         ├── Biết "tháng này" = WHERE created_at BETWEEN...
+         ├── Biết user thuộc chi nhánh HN → lọc theo chi nhánh
+         └── Biết dùng bảng orders JOIN customers
+                    ↓
+         AI sinh SQL chính xác
+                    ↓
+         Database thực thi
+```
 
-## Tại Sao Contexts Lại Quan Trọng
+---
 
-Nếu không có context, AI sẽ phải phân tích toàn bộ cấu trúc database của bạn mỗi lần người dùng đặt câu hỏi. Khi có context:
+## Tại Sao Cần Context?
 
-- Các truy vấn (queries) sẽ nhanh hơn và chính xác hơn
-- Bạn kiểm soát chính xác những dữ liệu nào được phép truy xuất
-- Logic nghiệp vụ (ví dụ: "Doanh thu = giá × số lượng") chỉ cần định nghĩa một lần
-- Các cột chứa dữ liệu nhạy cảm có thể được ẩn đi đối với một số người dùng cụ thể
+**Không có Context:**
+- AI phải đoán toàn bộ cấu trúc database
+- Dễ dùng sai bảng, sai cột, sai JOIN
+- Mỗi câu hỏi có thể cho kết quả khác nhau dù hỏi giống nhau
 
-## Các Thành Phần Của Context
+**Có Context:**
+- AI biết chính xác từng khái niệm nghiệp vụ map với cột/bảng nào
+- Kết quả nhất quán và dự đoán được
+- Business logic (filter, calculation) được đóng gói, không phụ thuộc vào câu hỏi của user
 
-| Thành Phần | Mô Tả |
-|-----------|-------------|
-| **Tables** | Các bảng database được đưa vào context này |
-| **Columns** | Các cột được chọn cùng tên hiển thị thân thiện |
-| **Relationships** | Các phép nối (joins) qua khóa ngoại giữa các bảng |
-| **Calculated Columns** | Các biểu thức SQL (ví dụ: `price * quantity`) |
-| **Metrics** | Các thước đo được tổng hợp (ví dụ: `SUM(revenue)`) |
-| **KPIs** | Các metric kinh doanh chính hiển thị trên trang tổng quan của context |
-| **Access Policies** | Các bộ lọc dòng (row-level filters) theo từng role |
+---
 
-## Bước Tiếp Theo
+## Cấu Trúc Của Context
 
-- [Xây Dựng Data Model](data-model.md)
-- [Row-Level Security](rls.md)
+| Thành Phần | Vai Trò |
+|-----------|---------|
+| **Connection** | Nguồn dữ liệu (PostgreSQL, BigQuery...) |
+| **Data Models** | Các bảng/view được đưa vào context với mô tả chi tiết |
+| **Calculated Fields** | Công thức tính từ các cột cơ bản |
+| **Metrics** | Chỉ số kinh doanh tổng hợp (SUM, COUNT...) |
+| **Relations** | Định nghĩa cách các bảng JOIN với nhau |
+| **Default Time Column** | Cột ngày mặc định khi hỏi "tháng này" |
+| **Instructions** | Hướng dẫn riêng cho AI với context này |
+| **Access Control (RLS)** | Ai xem được dữ liệu nào |
+| **Advanced Analysis** | Cohort, RFM, Funnel nếu cần |
+
+---
+
+## Thiết Kế Context Theo Bộ Phận
+
+**Thực tiễn tốt nhất**: Tạo một Context riêng cho từng bộ phận hoặc use case lớn, thay vì một Context khổng lồ cho toàn công ty.
+
+**Ví dụ cấu trúc:**
+
+```
+Context "Sales Analytics"
+├── Models: orders, customers, products, branches
+├── Metrics: doanh_thu, so_don, gia_tri_trung_binh
+└── RLS: chi_nhanh = {{user.chi_nhanh}}
+
+Context "HR Analytics"
+├── Models: employees, departments, salaries, attendance
+├── Metrics: headcount, avg_salary, turnover_rate
+└── RLS: department = {{user.phong_ban}}
+
+Context "Finance"
+├── Models: transactions, accounts, budgets
+├── Metrics: revenue, expenses, profit, cash_flow
+└── RLS: chỉ Finance team và C-level
+```
+
+**Lợi ích tách Context:**
+- Người Sales không thấy dữ liệu HR và ngược lại
+- Mỗi AI Assistant có thể gắn với một Context riêng
+- Dễ quản lý permissions theo bộ phận
+
+---
+
+## Tạo Context Từ Đầu
+
+### Bước 1: Xác Định Phạm Vi
+
+Trước khi tạo, xác định:
+- Bộ phận/nhóm người dùng nào sẽ dùng Context này?
+- Họ cần trả lời các câu hỏi thuộc loại nào?
+- Dữ liệu nào KHÔNG nên họ thấy?
+
+### Bước 2: Chọn Và Cấu Hình Data Models
+
+1. Studio → DABI → Data Models → New Model
+2. Chọn Connection và bảng nguồn
+3. Cấu hình Columns (Label, Description, Type)
+4. Tạo Calculated Fields nếu cần
+5. Tạo Metrics với Filter phù hợp
+6. Khai báo Relations giữa các bảng
+
+### Bước 3: Tạo Context
+
+1. Studio → DABI → Data Models → Chọn model → Tab Contexts → New Context
+2. Đặt tên, mô tả
+3. Chọn Default Time Column
+4. Viết Instructions (quy tắc nghiệp vụ đặc thù)
+5. Cấu hình RLS nếu cần
+
+### Bước 4: Kết Nối Với AI Assistant
+
+1. Studio → DSAI → AI Assistants → Chọn Assistant
+2. Gắn Context vừa tạo
+3. Test với một số câu hỏi thực tế
+
+---
+
+## Xem Chi Tiết
+
+- [Xây Dựng Data Model](data-model.md) — Quy trình tạo Model từng bước
+- [Row-Level Security](rls.md) — Cấu hình kiểm soát dữ liệu theo người dùng

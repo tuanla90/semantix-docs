@@ -50,25 +50,7 @@ Khoảnh khắc đó gọi là **activation moment** (hay "aha moment" — thờ
 Khi tách cohort thành "đã activation" và "chưa activation", hai đường cong giữ chân thường tách hẳn ra như hai thế giới:
 
 <div class="viz">
-<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <!-- activation window band -->
-  <rect x="60" y="40" width="80" height="220" fill="#6366F1" opacity="0.10"/>
-  <text x="100" y="34" fill="#6366F1" font-size="12" font-weight="700" text-anchor="middle">cửa sổ kích hoạt</text>
-  <!-- axes -->
-  <line x1="60" y1="40" x2="60" y2="260" stroke="#94A3B8" stroke-width="2"/>
-  <line x1="60" y1="260" x2="630" y2="260" stroke="#94A3B8" stroke-width="2"/>
-  <text x="30" y="50" fill="#64748B" font-size="13">100%</text>
-  <text x="40" y="265" fill="#64748B" font-size="13">0</text>
-  <text x="500" y="288" fill="#64748B" font-size="13">tuổi đời (tháng)</text>
-  <!-- activated: high flatten -->
-  <path d="M60 50 C 150 110, 240 138, 630 140" fill="none" stroke="#22C55E" stroke-width="4"/>
-  <circle cx="630" cy="140" r="5" fill="#22C55E"/>
-  <text x="430" y="128" fill="#16A34A" font-size="14" font-weight="700">đã activation</text>
-  <!-- not activated: to 0 -->
-  <path d="M60 50 C 140 170, 260 240, 630 255" fill="none" stroke="#F87171" stroke-width="4"/>
-  <circle cx="630" cy="255" r="5" fill="#F87171"/>
-  <text x="450" y="245" fill="#EF4444" font-size="14" font-weight="700">chưa activation</text>
-</svg>
+<div class="viz-chart" data-chart="line" data-chart-data='{"xLabels":["M0","M1","M2","M3","M4","M5","M6"],"yUnit":"%","series":[{"name":"Đã activation","values":[100,82,74,70,67,65,64],"color":"#10b981","endLabel":true},{"name":"Chưa activation","values":[100,55,32,18,10,6,4],"color":"#ef4444","endLabel":true}]}'></div>
 <div class="viz-caption">Khách "đã activation" trong cửa sổ vài ngày đầu giữ chân ở mức cao; nhóm "chưa activation" rơi nhanh về 0. Khoảng cách giữa hai đường chính là cơ hội tăng trưởng lớn nhất của bạn.</div>
 </div>
 

@@ -32,27 +32,7 @@ coverAlt: "Ba đường cong giữ chân: churn về 0, phẳng ở mức PMF, v
 Lấy mỗi cohort, vẽ tỷ lệ giữ chân theo tuổi đời, rồi nhìn đường đi của nó. Chỉ có ba khả năng:
 
 <div class="viz">
-<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <!-- axes -->
-  <line x1="60" y1="40" x2="60" y2="260" stroke="#94A3B8" stroke-width="2"/>
-  <line x1="60" y1="260" x2="630" y2="260" stroke="#94A3B8" stroke-width="2"/>
-  <text x="30" y="50" fill="#64748B" font-size="13">100%</text>
-  <text x="40" y="265" fill="#64748B" font-size="13">0</text>
-  <text x="-150" y="20" fill="#64748B" font-size="13" transform="rotate(-90 20 150)">% giữ chân</text>
-  <text x="540" y="288" fill="#64748B" font-size="13">tuổi đời (tháng)</text>
-  <!-- curve: churn to 0 -->
-  <path d="M60 50 C 160 150, 280 235, 630 255" fill="none" stroke="#EF4444" stroke-width="4"/>
-  <circle cx="630" cy="255" r="5" fill="#EF4444"/>
-  <text x="470" y="240" fill="#EF4444" font-size="14" font-weight="700">① về 0% — không PMF</text>
-  <!-- curve: flatten at PMF -->
-  <path d="M60 50 C 150 120, 230 150, 630 152" fill="none" stroke="#22C55E" stroke-width="4"/>
-  <circle cx="630" cy="152" r="5" fill="#22C55E"/>
-  <text x="430" y="138" fill="#16A34A" font-size="14" font-weight="700">② phẳng — có PMF</text>
-  <!-- curve: smile / negative churn -->
-  <path d="M60 50 C 150 130, 240 165, 400 150 C 520 138, 580 110, 630 80" fill="none" stroke="#6366F1" stroke-width="4"/>
-  <circle cx="630" cy="80" r="5" fill="#6366F1"/>
-  <text x="420" y="70" fill="#6366F1" font-size="14" font-weight="700">③ đi lên — negative churn</text>
-</svg>
+<div class="viz-chart" data-chart="line" data-chart-data='{"xLabels":["M0","M1","M2","M3","M4","M5","M6"],"yUnit":"%","series":[{"name":"Lao về 0 (không PMF)","values":[100,52,30,17,9,4,2],"color":"#ef4444","endLabel":true},{"name":"Phẳng ra (có PMF)","values":[100,62,52,47,45,45,45],"color":"#10b981","endLabel":true},{"name":"Đi lên (negative churn)","values":[100,64,55,52,58,72,92],"color":"#8b5cf6","endLabel":true}]}'></div>
 <div class="viz-caption">Ba hình dạng đường cong giữ chân. Đường nằm ngang ở đâu mới là điều quan trọng — không phải nó bắt đầu cao bao nhiêu.</div>
 </div>
 

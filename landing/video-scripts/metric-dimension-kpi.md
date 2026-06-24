@@ -3,7 +3,7 @@ slug: metric-dimension-kpi
 videoCode: vkt-006
 sourcePost: /blog/metric-dimension-kpi/
 title: "Metric, Dimension, KPI: 3 từ ai cũng nói sai — và vì sao báo cáo cứ cãi nhau"
-vbee_voice: "<chốt giọng trầm/uy tín rồi điền — vd 'Hoài My (Bắc)' / 'Mạnh Dũng'>"
+vbee_voice: "hn_male_manhdung_news_48k-fhg"   # ứng viên: thanhlong_talk / minhhoang_sg — nghe mẫu ở video-assets/, chốt 1
 estDuration: "6:20"
 author: "Lê Thị Hương"   # persona hướng dẫn gần gũi (khớp bài gốc)
 ---
@@ -31,7 +31,7 @@ author: "Lê Thị Hương"   # persona hướng dẫn gần gũi (khớp bài g
 - Cú lật: chữ đỏ mờ đi, hiện trắng to: **KHÔNG AI SAI CẢ**
 
 **🎬 Visual / b-roll:**
-- Nền dark neutral (#020202) + lưới #383838 mờ. Hai "thẻ báo cáo" trượt vào từ trái/phải mang 2 con số, count-up từ 0.
+- Nền dark neutral (#0A0A0A) + lưới #383838 mờ. Hai "thẻ báo cáo" trượt vào từ trái/phải mang 2 con số, count-up từ 0.
 - Khi "ai sai?": rung nhẹ (shake) + flash đỏ. Khi chốt: tất cả lặng, chỉ còn 1 dòng trắng giữa màn.
 
 **✂️ Short note:** Đây là Short #1. Hook 3s = "Hai con số doanh thu — ai sai?". Caption chữ chạy theo giọng. Cuối short: "Vì sao? Xem trong video." Hashtag: #BI #dữliệu #doanhthu #SME #báocáo

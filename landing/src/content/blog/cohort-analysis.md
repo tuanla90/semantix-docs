@@ -40,43 +40,7 @@ Cohort là nhóm người dùng được gộp theo một đặc điểm chung �
 Kết quả thường được trình bày dưới dạng **heatmap** — mỗi hàng là một nhóm, mỗi cột là một mốc "tuổi đời", màu càng đậm thì giữ chân càng cao:
 
 <div class="viz">
-<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <!-- Header -->
-  <text x="8" y="24" fill="#64748B" font-size="13" font-weight="700">Cohort</text>
-  <text x="146" y="24" fill="#64748B" font-size="13" text-anchor="middle">Tháng 0</text>
-  <text x="256" y="24" fill="#64748B" font-size="13" text-anchor="middle">Tháng 1</text>
-  <text x="366" y="24" fill="#64748B" font-size="13" text-anchor="middle">Tháng 2</text>
-  <text x="476" y="24" fill="#64748B" font-size="13" text-anchor="middle">Tháng 3</text>
-  <text x="586" y="24" fill="#64748B" font-size="13" text-anchor="middle">Tháng 6</text>
-  <!-- Row Jan -->
-  <text x="8" y="68" fill="#475569" font-size="14" font-weight="600">T1/24</text>
-  <rect x="96"  y="36" width="100" height="48" rx="6" fill="#15803d"/><text x="146" y="66" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">100%</text>
-  <rect x="206" y="36" width="100" height="48" rx="6" fill="#22c55e"/><text x="256" y="66" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">62%</text>
-  <rect x="316" y="36" width="100" height="48" rx="6" fill="#4ade80"/><text x="366" y="66" fill="#06351f" font-size="15" font-weight="700" text-anchor="middle">48%</text>
-  <rect x="426" y="36" width="100" height="48" rx="6" fill="#86efac"/><text x="476" y="66" fill="#06351f" font-size="15" font-weight="700" text-anchor="middle">41%</text>
-  <rect x="536" y="36" width="100" height="48" rx="6" fill="#bbf7d0"/><text x="586" y="66" fill="#06351f" font-size="15" font-weight="700" text-anchor="middle">29%</text>
-  <!-- Row Feb -->
-  <text x="8" y="126" fill="#475569" font-size="14" font-weight="600">T2/24</text>
-  <rect x="96"  y="94" width="100" height="48" rx="6" fill="#15803d"/><text x="146" y="124" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">100%</text>
-  <rect x="206" y="94" width="100" height="48" rx="6" fill="#16a34a"/><text x="256" y="124" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">71%</text>
-  <rect x="316" y="94" width="100" height="48" rx="6" fill="#22c55e"/><text x="366" y="124" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">55%</text>
-  <rect x="426" y="94" width="100" height="48" rx="6" fill="#4ade80"/><text x="476" y="124" fill="#06351f" font-size="15" font-weight="700" text-anchor="middle">48%</text>
-  <rect x="536" y="94" width="100" height="48" rx="6" fill="#1e293b" stroke="#334155"/><text x="586" y="124" fill="#475569" font-size="15" text-anchor="middle">—</text>
-  <!-- Row Mar -->
-  <text x="8" y="184" fill="#475569" font-size="14" font-weight="600">T3/24</text>
-  <rect x="96"  y="152" width="100" height="48" rx="6" fill="#15803d"/><text x="146" y="182" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">100%</text>
-  <rect x="206" y="152" width="100" height="48" rx="6" fill="#16a34a"/><text x="256" y="182" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">68%</text>
-  <rect x="316" y="152" width="100" height="48" rx="6" fill="#22c55e"/><text x="366" y="182" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">52%</text>
-  <rect x="426" y="152" width="100" height="48" rx="6" fill="#1e293b" stroke="#334155"/><text x="476" y="182" fill="#475569" font-size="15" text-anchor="middle">—</text>
-  <rect x="536" y="152" width="100" height="48" rx="6" fill="#1e293b" stroke="#334155"/><text x="586" y="182" fill="#475569" font-size="15" text-anchor="middle">—</text>
-  <!-- Row Apr -->
-  <text x="8" y="242" fill="#475569" font-size="14" font-weight="600">T4/24</text>
-  <rect x="96"  y="210" width="100" height="48" rx="6" fill="#15803d"/><text x="146" y="240" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">100%</text>
-  <rect x="206" y="210" width="100" height="48" rx="6" fill="#15803d"/><text x="256" y="240" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">74%</text>
-  <rect x="316" y="210" width="100" height="48" rx="6" fill="#1e293b" stroke="#334155"/><text x="366" y="240" fill="#475569" font-size="15" text-anchor="middle">—</text>
-  <rect x="426" y="210" width="100" height="48" rx="6" fill="#1e293b" stroke="#334155"/><text x="476" y="240" fill="#475569" font-size="15" text-anchor="middle">—</text>
-  <rect x="536" y="210" width="100" height="48" rx="6" fill="#1e293b" stroke="#334155"/><text x="586" y="240" fill="#475569" font-size="15" text-anchor="middle">—</text>
-</svg>
+<div class="viz-chart" data-chart="cohort" data-chart-data='{"cohorts":["T1/24","T2/24","T3/24","T4/24"],"periodLabels":["Tháng 0","Tháng 1","Tháng 2","Tháng 3","Tháng 6"],"matrix":[[100,62,48,41,29],[100,71,55,48,null],[100,68,52,null,null],[100,74,null,null,null]],"unit":"%"}'></div>
 <div class="viz-caption">Heatmap giữ chân: mỗi hàng là một nhóm khách theo tháng đăng ký, mỗi cột là một mốc tuổi đời. Vùng trống là tương lai chưa tới.</div>
 </div>
 

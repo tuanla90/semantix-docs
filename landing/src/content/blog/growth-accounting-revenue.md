@@ -60,46 +60,7 @@ Năm dòng *thay đổi* giữa hai kỳ:
 Hình dung nó như một dòng nước: doanh thu kỳ trước đổ vào, ba vòi cộng thêm, hai lỗ rút bớt, còn lại là doanh thu kỳ này.
 
 <div class="viz">
-<svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <text x="16" y="26" fill="#94a3b8" font-size="13" font-weight="700">Waterfall doanh thu: từ Revenue(t−1) → Revenue(t)</text>
-  <!-- baseline -->
-  <line x1="16" y1="300" x2="704" y2="300" stroke="#334155" stroke-width="1"/>
-  <!-- Rev(t-1) base bar -->
-  <rect x="40" y="150" width="90" height="150" rx="4" fill="#475569"/>
-  <text x="85" y="320" fill="#94a3b8" font-size="12" text-anchor="middle">Rev(t−1)</text>
-  <text x="85" y="142" fill="#cbd5e1" font-size="13" font-weight="700" text-anchor="middle">100</text>
-  <!-- +new -->
-  <rect x="150" y="120" width="80" height="30" rx="4" fill="#22c55e"/>
-  <text x="190" y="320" fill="#86efac" font-size="12" text-anchor="middle">+ new</text>
-  <text x="190" y="112" fill="#86efac" font-size="13" font-weight="700" text-anchor="middle">+10</text>
-  <!-- +expansion -->
-  <rect x="250" y="84" width="80" height="36" rx="4" fill="#15803d"/>
-  <text x="290" y="320" fill="#86efac" font-size="12" text-anchor="middle">+ expansion</text>
-  <text x="290" y="76" fill="#86efac" font-size="13" font-weight="700" text-anchor="middle">+12</text>
-  <!-- +resurrected -->
-  <rect x="350" y="68" width="80" height="16" rx="4" fill="#4ade80"/>
-  <text x="390" y="320" fill="#86efac" font-size="12" text-anchor="middle">+ resurrected</text>
-  <text x="390" y="60" fill="#86efac" font-size="13" font-weight="700" text-anchor="middle">+3</text>
-  <!-- -contraction -->
-  <rect x="450" y="68" width="80" height="22" rx="4" fill="#f59e0b"/>
-  <text x="490" y="320" fill="#fbbf24" font-size="12" text-anchor="middle">− contraction</text>
-  <text x="490" y="60" fill="#fbbf24" font-size="13" font-weight="700" text-anchor="middle">−7</text>
-  <!-- -churned -->
-  <rect x="550" y="90" width="80" height="28" rx="4" fill="#ef4444"/>
-  <text x="590" y="320" fill="#fca5a5" font-size="12" text-anchor="middle">− churned</text>
-  <text x="590" y="134" fill="#fca5a5" font-size="13" font-weight="700" text-anchor="middle">−9</text>
-  <!-- Rev(t) final bar -->
-  <rect x="640" y="118" width="64" height="182" rx="4" fill="#14b8a6"/>
-  <text x="672" y="320" fill="#5eead4" font-size="12" text-anchor="middle">Rev(t)</text>
-  <text x="672" y="110" fill="#5eead4" font-size="13" font-weight="700" text-anchor="middle">109</text>
-  <!-- connector dashes -->
-  <line x1="130" y1="150" x2="150" y2="150" stroke="#64748b" stroke-dasharray="3 3"/>
-  <line x1="230" y1="120" x2="250" y2="120" stroke="#64748b" stroke-dasharray="3 3"/>
-  <line x1="330" y1="84"  x2="350" y2="84"  stroke="#64748b" stroke-dasharray="3 3"/>
-  <line x1="430" y1="68"  x2="450" y2="68"  stroke="#64748b" stroke-dasharray="3 3"/>
-  <line x1="530" y1="90"  x2="550" y2="90"  stroke="#64748b" stroke-dasharray="3 3"/>
-  <line x1="630" y1="118" x2="640" y2="118" stroke="#64748b" stroke-dasharray="3 3"/>
-</svg>
+<div class="viz-chart" data-chart="waterfall" data-chart-data='{"items":[{"label":"Rev(t−1)","value":100,"type":"total"},{"label":"+ new","value":10},{"label":"+ expansion","value":12},{"label":"+ resurrected","value":3},{"label":"− contraction","value":-7},{"label":"− churned","value":-9},{"label":"Rev(t)","value":109,"type":"total"}],"unit":""}'></div>
 <div class="viz-caption">Doanh thu kỳ này = kỳ trước + new + expansion + resurrected − contraction − churned. Ba vòi cộng, hai lỗ trừ. Mất 9 vì churn, nhưng expansion (+12) gánh ngược lại. Số minh họa.</div>
 </div>
 

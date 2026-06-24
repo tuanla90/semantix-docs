@@ -1,0 +1,85 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="answer" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4ADE80"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">SO SÁNH &amp; LỰA CHỌN</text>
+  <!-- title -->
+  <text x="80" y="160" fill="#F1F5F9" font-size="48" font-weight="800">Looker Studio vs Semantix</text>
+  <text x="80" y="210" fill="#94A3B8" font-size="26" font-weight="500">Miễn phí, nhưng bạn trả bằng gì? —</text>
+  <text x="80" y="244" fill="#94A3B8" font-size="26" font-weight="500">cái giá ẩn của một công cụ 0đ</text>
+  <!-- LEFT: dashboard locked inside Google ring -->
+  <g transform="translate(80,300)">
+    <circle cx="230" cy="115" r="140" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-dasharray="7 6"/>
+    <text x="230" y="-5" fill="#475569" font-size="15" font-weight="700" letter-spacing="1" text-anchor="middle">VÒNG TRÒN GOOGLE</text>
+    <rect x="120" y="40" width="220" height="150" rx="12" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="140" y="70" fill="#64748B" font-size="13" font-weight="700" letter-spacing="1">DASHBOARD DỰNG SẴN</text>
+    <rect x="140" y="84" width="92" height="44" rx="5" fill="#1E293B"/>
+    <rect x="244" y="84" width="78" height="44" rx="5" fill="#1E293B"/>
+    <g transform="translate(140,140)">
+      <rect x="0" y="22" width="16" height="20" fill="#475569"/>
+      <rect x="24" y="10" width="16" height="32" fill="#475569"/>
+      <rect x="48" y="2" width="16" height="40" fill="#475569"/>
+      <rect x="72" y="16" width="16" height="26" fill="#475569"/>
+    </g>
+    <g transform="translate(258,150)">
+      <circle r="20" fill="#475569"/>
+      <path d="M0 0 L0 -20 A20 20 0 0 1 17 10 Z" fill="#64748B"/>
+    </g>
+    <!-- lock badge -->
+    <g transform="translate(316,42)">
+      <circle r="20" fill="#7F1D1D" stroke="#F87171" stroke-width="2"/>
+      <rect x="-8" y="-3" width="16" height="13" rx="2" fill="#FCA5A5"/>
+      <path d="M-5 -3 v-5 a5 5 0 0 1 10 0 v5" fill="none" stroke="#FCA5A5" stroke-width="2.5"/>
+    </g>
+    <text x="230" y="232" fill="#F87171" font-size="14" font-weight="600" text-anchor="middle">khoá trong hệ sinh thái Google</text>
+  </g>
+  <!-- VS badge -->
+  <g transform="translate(600,415)">
+    <circle r="34" fill="#0B1120" stroke="#22D3EE" stroke-width="2"/>
+    <text x="0" y="11" fill="#22D3EE" font-size="26" font-weight="800" text-anchor="middle">vs</text>
+  </g>
+  <!-- RIGHT: ask -> answer, multi-source -->
+  <g transform="translate(680,300)">
+    <rect x="0" y="40" width="440" height="200" rx="14" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="24" y="74" fill="#34D399" font-size="15" font-weight="700" letter-spacing="1">HỎI &#8594; ĐÁP, ĐA NGUỒN</text>
+    <!-- source chips -->
+    <rect x="24" y="86" width="78" height="26" rx="13" fill="#1E293B"/>
+    <text x="63" y="104" fill="#94A3B8" font-size="13" text-anchor="middle">Shopee</text>
+    <rect x="110" y="86" width="96" height="26" rx="13" fill="#1E293B"/>
+    <text x="158" y="104" fill="#94A3B8" font-size="13" text-anchor="middle">TikTok Shop</text>
+    <rect x="214" y="86" width="86" height="26" rx="13" fill="#1E293B"/>
+    <text x="257" y="104" fill="#94A3B8" font-size="13" text-anchor="middle">KiotViet</text>
+    <rect x="308" y="86" width="56" height="26" rx="13" fill="#1E293B"/>
+    <text x="336" y="104" fill="#94A3B8" font-size="13" text-anchor="middle">SQL</text>
+    <!-- question bubble -->
+    <rect x="24" y="124" width="392" height="40" rx="12" fill="#1E293B"/>
+    <text x="42" y="149" fill="#E2E8F0" font-size="16" font-weight="500">Doanh thu TikTok tụt — số đơn hay giỏ nhỏ?</text>
+    <!-- arrow + live answer -->
+    <path d="M40 172 L40 192" stroke="url(#answer)" stroke-width="3"/>
+    <path d="M32 186 L40 198 L48 186 Z" fill="#34D399"/>
+    <g transform="translate(64,196)">
+      <rect x="0" y="22" width="26" height="20" rx="3" fill="url(#bar)"/>
+      <rect x="40" y="8" width="26" height="34" rx="3" fill="url(#bar)"/>
+      <rect x="80" y="28" width="26" height="14" rx="3" fill="url(#bar)"/>
+      <rect x="120" y="2" width="26" height="40" rx="3" fill="url(#bar)"/>
+      <polyline points="13,18 53,4 93,24 133,0" fill="none" stroke="#22D3EE" stroke-width="3"/>
+      <text x="190" y="32" fill="#34D399" font-size="14" font-weight="700">giỏ ↓ 12%</text>
+    </g>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

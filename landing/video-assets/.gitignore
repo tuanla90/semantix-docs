@@ -1,0 +1,5 @@
+# Audio renders & voice dumps — không commit (nặng, có thể chứa dữ liệu)
+*.mp3
+*.wav
+*.mp4
+voices-all.json

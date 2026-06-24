@@ -41,26 +41,8 @@ Hình dạng đường tích luỹ này quyết định số phận tài chính 
 Mỗi khách tốn tiền để có được (CAC — chi phí thu hút). Câu hỏi sống còn: **doanh thu tích luỹ của một cohort vượt qua chi phí thu hút nó vào tháng thứ mấy?** Đó là *điểm hoà vốn CAC* (CAC payback).
 
 <div class="viz">
-<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <!-- axes -->
-  <line x1="60" y1="40" x2="60" y2="260" stroke="#94A3B8" stroke-width="2"/>
-  <line x1="60" y1="260" x2="630" y2="260" stroke="#94A3B8" stroke-width="2"/>
-  <text x="8" y="50" fill="#64748B" font-size="13">đ</text>
-  <text x="40" y="265" fill="#64748B" font-size="13">0</text>
-  <text x="470" y="288" fill="#64748B" font-size="13">tuổi đời (tháng)</text>
-  <!-- CAC line -->
-  <line x1="60" y1="150" x2="630" y2="150" stroke="#EF4444" stroke-width="2" stroke-dasharray="7 5"/>
-  <text x="566" y="144" fill="#EF4444" font-size="13" font-weight="700">CAC</text>
-  <!-- good cohort: cumulative revenue rising past CAC -->
-  <path d="M60 258 C 160 232, 240 190, 300 150 C 380 100, 500 70, 630 56" fill="none" stroke="#22C55E" stroke-width="4"/>
-  <circle cx="300" cy="150" r="6" fill="#16A34A"/>
-  <text x="244" y="128" fill="#16A34A" font-size="13" font-weight="700">hoà vốn ✓</text>
-  <text x="470" y="60" fill="#16A34A" font-size="13" font-weight="700">LTV &gt; CAC</text>
-  <!-- bad cohort: never crosses CAC -->
-  <path d="M60 258 C 180 244, 320 232, 630 224" fill="none" stroke="#94A3B8" stroke-width="3" stroke-dasharray="4 4"/>
-  <text x="470" y="220" fill="#64748B" font-size="13">không bao giờ hoà vốn ✗</text>
-</svg>
-<div class="viz-caption">Doanh thu tích luỹ của một cohort theo thời gian. Cohort lành mạnh (xanh) vượt đường CAC rồi tiếp tục sinh lời; cohort xấu (xám) mãi nằm dưới — bạn lỗ trên mỗi khách.</div>
+<div class="viz-chart" data-chart="line" data-chart-data='{"xLabels":["M0","M1","M2","M3","M4","M5","M6"],"yUnit":"đ","series":[{"name":"Cohort lành mạnh","values":[80,160,240,310,400,490,580],"color":"#10b981","endLabel":true},{"name":"Cohort xấu","values":[60,110,150,180,205,225,240],"color":"#94a3b8","dashed":true,"endLabel":true}],"markLine":[{"y":300,"label":"Ngưỡng CAC","color":"#ef4444"}]}'></div>
+<div class="viz-caption">Doanh thu tích luỹ của một cohort theo thời gian. Cohort lành mạnh (xanh) vượt đường CAC ở tháng thứ 3 rồi tiếp tục sinh lời; cohort xấu (xám) mãi nằm dưới — bạn lỗ trên mỗi khách.</div>
 </div>
 
 Con số này thay đổi cách bạn điều hành:

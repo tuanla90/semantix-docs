@@ -51,7 +51,7 @@ Mỗi video = **4–7 "beat" độc lập**, mỗi beat 45–90s, **mỗi beat c
 
 | Vai trò | Hex | Token app | Dùng cho |
 |---|---|---|---|
-| Nền chính | `#020202` (hoặc `#0A0A0A` cho dịu) | `--background` | Nền tối chủ đạo |
+| Nền chính | `#0A0A0A` (dịu hơn nền app gốc `#020202`, tránh banding khi nén video) | `--background` | Nền tối chủ đạo |
 | Bề mặt / card | `#121212` → `#18181B` | `--card` | Thẻ, panel, khối nổi |
 | Lưới / đường kẻ | `#383838` @ opacity ~.5 | `--border` | Lưới nền (cảm giác dashboard) |
 | Chữ chính | `#FAFAFA` | `--foreground` | Luận điểm, tiêu đề |
@@ -64,6 +64,15 @@ Mỗi video = **4–7 "beat" độc lập**, mỗi beat 45–90s, **mỗi beat c
 
 - **Font:** **Inter Variable** (chữ) + **JetBrains Mono Variable** (số liệu, SQL, code) — y hệt app (`--font-inter`, `--font-jetbrains-mono`). Số trong dashboard để JetBrains Mono cho chất "tech/SaaS". Tiêu đề `font-weight: 800`, chữ chạy 700.
 - **Glow:** từ khoá nhấn dùng `text-shadow` **xanh `#227FE1`** nhẹ — "phát sáng", không loè.
+
+#### Lớp "polish" — bắt buộc để trông cao cấp, không phẳng (thêm 2026-06-24)
+Nền đen trơn + fade đơn = trông nghiệp dư. Đã chuẩn hoá trong `video-remotion/src/ui.tsx` (`Bg`, `FadeUp`):
+- **Nền chiều sâu:** radial-gradient (sáng giữa, tối mép) + 2–3 **quầng sáng (orb)** màu brand (`accent`/`purple`/`good`) blur mạnh, opacity 8–18%, **trôi nhẹ** theo sin(frame) → khung không "chết".
+- **Grain:** lớp SVG `feTurbulence` opacity ~5%, `mixBlendMode: overlay` → khử banding, thêm texture.
+- **Lưới** mờ hơn (opacity .25) + **mask radial** để mép tan vào nền.
+- **Thẻ/số:** `linear-gradient` nhẹ + viền sáng trong (`inset 0 1px rgba(255,255,255,.07)`) + đổ bóng + **glow theo màu số** + vạch accent mảnh trên đỉnh.
+- **Chữ:** `letter-spacing: -0.02em` cho tiêu đề lớn; reveal kèm **blur-in** (8px→0) ngoài fade+slide.
+- **Accent dùng `#3B82F6`** (blue-500, sáng/pop hơn `#227FE1` khi nén video) cho chữ nhấn & glow.
 - **Chuyển động:** ease-out, vào nhanh ra chậm. Chữ xuất hiện **theo nhịp đọc** (cần timestamp từ Whisper — xem mục E). Tránh xoay/lật màu mè; ưu tiên fade + slide nhỏ + scale nhẹ.
 
 ### Motif hình ảnh tái dùng
@@ -79,6 +88,13 @@ Dashboard/biểu đồ cột, dòng SQL/Text-to-SQL hiện mượt, số đếm 
 - **Viết cho tai, không cho mắt** (xem mục H). Số phải đọc trôi: viết `4,2 tỷ` Vbee đọc ổn, nhưng từ Anh ngữ nên phiên: `KPI` → giữ "ca-pi-ai" nếu giọng đọc sai thì ghi chú `[đọc: ...]` trong script.
 - **Dấu nghỉ:** chèn `...` hoặc tách câu để tạo khoảng lặng trước câu chốt. Vbee nghỉ theo dấu câu — dùng dấu chấm nhiều hơn dấu phẩy ở câu nhấn.
 
+### Vbee API — đã kiểm chứng (2026-06-24, chạy thật OK)
+- **Endpoint:** `POST https://vbee.vn/api/v1/tts` · header `Authorization: Bearer <TOKEN>` · `Content-Type: application/json`.
+- Cần **App ID + Token** (tạo ở https://api.vbee.vn/apps). Body **bắt buộc có `callback_url`** — thiếu là `400 Validation Failed`. Không cần dựng server callback: POST trả `result.request_id`, rồi **poll** `GET https://vbee.vn/api/v1/tts/{request_id}` đến khi `result.status == "SUCCESS"` → tải `result.audio_link` (là mp3). Generate mất ~3–20s/beat.
+- **Body mẫu:** `{app_id, input_text, voice_code, audio_type:"mp3", bitrate:128, speed_rate:"0.95", callback_url}` (`speed_rate` là CHUỖI; `0.95` cho câu chốt nặng hơn).
+- **Giọng đề cử (nam, trầm/uy tín cho B2B):** `hn_male_manhdung_news_48k-fhg` (tin tức, uy tín) · `hn_male_thanhlong_talk_48k-fhg` (talk, giọng chuyên gia) · `sg_male_minhhoang_full_48k-fhg` (nam Sài Gòn). Nữ: `hn_female_ngochuyen_full_48k-fhg`. Full 461 giọng: `video-assets/voices-all.json`.
+- **Bảo mật:** App ID + Token là bí mật — **KHÔNG commit**, để trong env `VBEE_APP_ID` / `VBEE_TOKEN`. (Token chia sẻ trong chat nên cân nhắc xoay lại ở portal nếu cần.)
+
 ---
 
 ## E. Pipeline sản xuất
@@ -93,7 +109,9 @@ Dashboard/biểu đồ cột, dòng SQL/Text-to-SQL hiện mượt, số đếm 
 6. Đóng gói ──►  Title/desc/thumbnail/chapters (mục I)  →  YouTube + TikTok
 ```
 
-> Bước 3 (Whisper) là điểm dễ bị quên nhất. Không có nó, kinetic typography phải canh tay từng từ — bất khả thi ở quy mô.
+> Bước 3 (timestamp) là điểm dễ bị quên nhất. Không có nó, kinetic typography phải canh tay từng từ — bất khả thi ở quy mô.
+>
+> ⚠️ **Thực tế trên máy này (2026-06-24):** `faster-whisper`/`ctranslate2` **segfault khi load model** (cả global lẫn venv sạch — lỗi native với Python 3.13 + setup doanh nghiệp). Đã thay bằng **forced-alignment bằng năng lượng âm thanh** (`video-remotion/align.py`, dùng PyAV — không ML, không crash): vì ta **đã có text chính xác**, chỉ cần căn THỜI GIAN, không cần phiên âm. Cách này còn *chính xác hơn* Whisper cho tiếng Việt (Whisper có thể nghe sai chữ). Muốn ASR thật (khi không có sẵn text): chạy Whisper qua WSL/Docker/Python 3.11.
 
 **Khuyến nghị khởi động:** làm **TAY 1 video end-to-end** trước (xác nhận chất lượng giọng Vbee với từ chuyên ngành + nhịp). Ưng rồi mới scaffold Remotion. Đừng dựng pipeline tự động trước khi 1 video chứng minh được view/giữ chân.
 

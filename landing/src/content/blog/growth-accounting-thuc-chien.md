@@ -67,53 +67,7 @@ Trước khi gõ một công thức nào, bạn phải chốt ba định nghĩa.
 Khi ba định nghĩa đã chốt, quy trình là một dây chuyền ba khâu: **(1)** lấy bảng giao dịch thô → **(2)** với mỗi khách, mỗi kỳ, gán đúng một trạng thái bằng cách so với lịch sử → **(3)** đếm số khách (hoặc cộng tiền) theo từng trạng thái, từng kỳ. Kết quả là một bảng như thế này:
 
 <div class="viz">
-<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <!-- column headers -->
-  <text x="8" y="28" fill="#64748B" font-size="13" font-weight="700">Trạng thái</text>
-  <text x="250" y="28" fill="#64748B" font-size="13" text-anchor="middle">T1</text>
-  <text x="350" y="28" fill="#64748B" font-size="13" text-anchor="middle">T2</text>
-  <text x="450" y="28" fill="#64748B" font-size="13" text-anchor="middle">T3</text>
-  <text x="550" y="28" fill="#64748B" font-size="13" text-anchor="middle">T4</text>
-  <!-- new -->
-  <text x="8" y="68" fill="#10B981" font-size="14" font-weight="700">+ new</text>
-  <text x="250" y="68" fill="#34D399" font-size="14" font-weight="600" text-anchor="middle">120</text>
-  <text x="350" y="68" fill="#34D399" font-size="14" font-weight="600" text-anchor="middle">95</text>
-  <text x="450" y="68" fill="#34D399" font-size="14" font-weight="600" text-anchor="middle">88</text>
-  <text x="550" y="68" fill="#34D399" font-size="14" font-weight="600" text-anchor="middle">102</text>
-  <!-- retained -->
-  <text x="8" y="104" fill="#0EA5A4" font-size="14" font-weight="700">retained</text>
-  <text x="250" y="104" fill="#5EEAD4" font-size="14" font-weight="600" text-anchor="middle">—</text>
-  <text x="350" y="104" fill="#5EEAD4" font-size="14" font-weight="600" text-anchor="middle">74</text>
-  <text x="450" y="104" fill="#5EEAD4" font-size="14" font-weight="600" text-anchor="middle">96</text>
-  <text x="550" y="104" fill="#5EEAD4" font-size="14" font-weight="600" text-anchor="middle">118</text>
-  <!-- resurrected -->
-  <text x="8" y="140" fill="#22c55e" font-size="14" font-weight="700">+ resurrected</text>
-  <text x="250" y="140" fill="#86efac" font-size="14" font-weight="600" text-anchor="middle">—</text>
-  <text x="350" y="140" fill="#86efac" font-size="14" font-weight="600" text-anchor="middle">11</text>
-  <text x="450" y="140" fill="#86efac" font-size="14" font-weight="600" text-anchor="middle">18</text>
-  <text x="550" y="140" fill="#86efac" font-size="14" font-weight="600" text-anchor="middle">22</text>
-  <!-- churned -->
-  <text x="8" y="176" fill="#EF4444" font-size="14" font-weight="700">− churned</text>
-  <text x="250" y="176" fill="#FCA5A5" font-size="14" font-weight="600" text-anchor="middle">—</text>
-  <text x="350" y="176" fill="#FCA5A5" font-size="14" font-weight="600" text-anchor="middle">46</text>
-  <text x="450" y="176" fill="#FCA5A5" font-size="14" font-weight="600" text-anchor="middle">52</text>
-  <text x="550" y="176" fill="#FCA5A5" font-size="14" font-weight="600" text-anchor="middle">61</text>
-  <!-- divider -->
-  <line x1="8" y1="196" x2="600" y2="196" stroke="#334155" stroke-width="1"/>
-  <!-- net MAU -->
-  <text x="8" y="226" fill="#E2E8F0" font-size="14" font-weight="700">MAU cuối kỳ</text>
-  <text x="250" y="226" fill="#F1F5F9" font-size="14" font-weight="700" text-anchor="middle">120</text>
-  <text x="350" y="226" fill="#F1F5F9" font-size="14" font-weight="700" text-anchor="middle">134</text>
-  <text x="450" y="226" fill="#F1F5F9" font-size="14" font-weight="700" text-anchor="middle">184</text>
-  <text x="550" y="226" fill="#F1F5F9" font-size="14" font-weight="700" text-anchor="middle">265</text>
-  <!-- Quick Ratio -->
-  <rect x="4" y="246" width="600" height="44" rx="8" fill="#022C22" stroke="#FCD34D" stroke-width="1.5"/>
-  <text x="20" y="274" fill="#FCD34D" font-size="14" font-weight="700">Quick Ratio</text>
-  <text x="250" y="274" fill="#475569" font-size="14" text-anchor="middle">—</text>
-  <text x="350" y="274" fill="#FDE68A" font-size="14" font-weight="700" text-anchor="middle">2,3</text>
-  <text x="450" y="274" fill="#FDE68A" font-size="14" font-weight="700" text-anchor="middle">2,0</text>
-  <text x="550" y="274" fill="#FDE68A" font-size="14" font-weight="700" text-anchor="middle">2,0</text>
-</svg>
+<div class="viz-chart" data-chart="growth" data-chart-data='{"periods":["T1","T2","T3","T4"],"series":[{"name":"new","key":"new","values":[120,95,88,102]},{"name":"retained","key":"retained","values":[null,74,96,118]},{"name":"resurrected","key":"resurrected","values":[null,11,18,22]},{"name":"churned","key":"churned","values":[null,46,52,61],"negative":true},{"name":"MAU cuối kỳ","key":"active","values":[120,134,184,265],"type":"line"},{"name":"Quick Ratio","key":"quickRatio","values":[null,2.3,2.0,2.0],"type":"line","yAxis":1}]}'></div>
 <div class="viz-caption">Bảng growth accounting đã lắp ráp: mỗi cột một tháng, mỗi dòng một trạng thái. Quick Ratio = (new + resurrected) / churned. (Số minh họa.)</div>
 </div>
 

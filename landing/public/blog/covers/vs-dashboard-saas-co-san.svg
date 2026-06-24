@@ -1,0 +1,66 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="merge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4ADE80"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">SO SÁNH &amp; LỰA CHỌN</text>
+  <text x="80" y="156" fill="#F1F5F9" font-size="44" font-weight="800">Dashboard sẵn vs Semantix</text>
+  <text x="80" y="204" fill="#94A3B8" font-size="25" font-weight="500">Mỗi nền tảng cho bạn một bảng số —</text>
+  <text x="80" y="238" fill="#94A3B8" font-size="25" font-weight="500">không nơi nào cho bạn bức tranh tổng</text>
+  <g transform="translate(80,300)">
+    <text x="0" y="0" fill="#64748B" font-size="15" font-weight="700" letter-spacing="1">NHIỀU DASHBOARD RỜI RẠC</text>
+    <rect x="0" y="18" width="150" height="92" rx="10" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="14" y="42" fill="#94A3B8" font-size="14" font-weight="700">Shopee</text>
+    <rect x="14" y="58" width="20" height="36" fill="#475569"/>
+    <rect x="42" y="70" width="20" height="24" fill="#475569"/>
+    <rect x="70" y="52" width="20" height="42" fill="#475569"/>
+    <rect x="170" y="18" width="150" height="92" rx="10" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="184" y="42" fill="#94A3B8" font-size="14" font-weight="700">TikTok Shop</text>
+    <circle cx="244" cy="78" r="24" fill="#475569"/>
+    <path d="M244 78 L244 54 A24 24 0 0 1 266 86 Z" fill="#64748B"/>
+    <rect x="0" y="124" width="150" height="92" rx="10" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="14" y="148" fill="#94A3B8" font-size="14" font-weight="700">KiotViet</text>
+    <polyline points="14,196 48,168 82,184 116,156" fill="none" stroke="#475569" stroke-width="3"/>
+    <rect x="170" y="124" width="150" height="92" rx="10" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="184" y="148" fill="#94A3B8" font-size="14" font-weight="700">Ads / Kế toán</text>
+    <rect x="184" y="170" width="20" height="36" fill="#475569"/>
+    <rect x="212" y="182" width="20" height="24" fill="#475569"/>
+    <rect x="240" y="162" width="20" height="44" fill="#475569"/>
+  </g>
+  <g transform="translate(560,415)">
+    <circle r="36" fill="#0B1120" stroke="#22D3EE" stroke-width="2"/>
+    <text x="0" y="11" fill="#22D3EE" font-size="26" font-weight="800" text-anchor="middle">vs</text>
+  </g>
+  <g transform="translate(680,300)">
+    <text x="0" y="0" fill="#34D399" font-size="15" font-weight="700" letter-spacing="1">MỘT MÀN HÌNH GỘP — HỎI &amp; ĐÁP</text>
+    <rect x="0" y="18" width="440" height="240" rx="14" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <rect x="22" y="40" width="396" height="44" rx="12" fill="#1E293B"/>
+    <text x="40" y="68" fill="#E2E8F0" font-size="16" font-weight="500">Kênh nào lãi thật sau phí sàn + ads?</text>
+    <path d="M220 88 L220 108" stroke="url(#merge)" stroke-width="3"/>
+    <path d="M212 102 L220 114 L228 102 Z" fill="#34D399"/>
+    <g transform="translate(40,130)">
+      <line x1="0" y1="86" x2="360" y2="86" stroke="#334155" stroke-width="1.5"/>
+      <rect x="20" y="44" width="46" height="42" rx="3" fill="url(#bar)"/>
+      <text x="43" y="106" fill="#64748B" font-size="12" text-anchor="middle">Shopee</text>
+      <rect x="100" y="20" width="46" height="66" rx="3" fill="url(#bar)"/>
+      <text x="123" y="106" fill="#64748B" font-size="12" text-anchor="middle">TikTok</text>
+      <rect x="180" y="58" width="46" height="28" rx="3" fill="url(#bar)"/>
+      <text x="203" y="106" fill="#64748B" font-size="12" text-anchor="middle">KiotViet</text>
+      <rect x="260" y="34" width="46" height="52" rx="3" fill="url(#bar)"/>
+      <text x="283" y="106" fill="#64748B" font-size="12" text-anchor="middle">Tổng</text>
+    </g>
+  </g>
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

@@ -53,39 +53,7 @@ Vì là một tỷ số quanh mẫu số "user mất đi", Quick Ratio có một
 - **< 1** — mẫu số thắng. Bạn mất nhiều hơn thêm. **MAU đang co lại** — kể cả khi tháng này con số tổng trông vẫn ổn nhờ quán tính.
 
 <div class="viz">
-<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <!-- zones -->
-  <rect x="70" y="30" width="560" height="110" fill="#16a34a" opacity="0.10"/>
-  <rect x="70" y="140" width="560" height="110" fill="#dc2626" opacity="0.10"/>
-  <!-- baseline 1.0 -->
-  <line x1="70" y1="140" x2="630" y2="140" stroke="#f59e0b" stroke-width="2" stroke-dasharray="7 6"/>
-  <text x="636" y="145" fill="#f59e0b" font-size="14" font-weight="700">1,0</text>
-  <!-- y axis -->
-  <line x1="70" y1="30" x2="70" y2="250" stroke="#475569" stroke-width="2"/>
-  <line x1="70" y1="250" x2="630" y2="250" stroke="#475569" stroke-width="2"/>
-  <!-- zone labels -->
-  <text x="84" y="56" fill="#22c55e" font-size="14" font-weight="700">VÙNG XANH — đang lớn (&gt;1)</text>
-  <text x="84" y="236" fill="#f87171" font-size="14" font-weight="700">VÙNG ĐỎ — đang co (&lt;1)</text>
-  <!-- QR line: starts strong, dips below 1, recovers -->
-  <polyline points="100,70 188,90 276,120 364,170 452,150 540,108 600,84"
-    fill="none" stroke="#0d9488" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-  <!-- dots -->
-  <circle cx="100" cy="70"  r="5" fill="#22c55e"/>
-  <circle cx="188" cy="90"  r="5" fill="#22c55e"/>
-  <circle cx="276" cy="120" r="5" fill="#22c55e"/>
-  <circle cx="364" cy="170" r="5" fill="#f87171"/>
-  <circle cx="452" cy="150" r="5" fill="#f87171"/>
-  <circle cx="540" cy="108" r="5" fill="#22c55e"/>
-  <circle cx="600" cy="84"  r="5" fill="#22c55e"/>
-  <!-- month labels -->
-  <text x="100" y="270" fill="#94A3B8" font-size="12" text-anchor="middle">T1</text>
-  <text x="188" y="270" fill="#94A3B8" font-size="12" text-anchor="middle">T2</text>
-  <text x="276" y="270" fill="#94A3B8" font-size="12" text-anchor="middle">T3</text>
-  <text x="364" y="270" fill="#94A3B8" font-size="12" text-anchor="middle">T4</text>
-  <text x="452" y="270" fill="#94A3B8" font-size="12" text-anchor="middle">T5</text>
-  <text x="540" y="270" fill="#94A3B8" font-size="12" text-anchor="middle">T6</text>
-  <text x="600" y="270" fill="#94A3B8" font-size="12" text-anchor="middle">T7</text>
-</svg>
+<div class="viz-chart" data-chart="line" data-chart-data='{"xLabels":["T1","T2","T3","T4","T5","T6","T7"],"series":[{"name":"Quick Ratio","values":[1.6,1.4,1.2,0.8,0.9,1.3,1.5],"color":"#0d9488","endLabel":true}],"markLine":[{"y":1,"label":"Ngưỡng 1,0","color":"#f59e0b"}],"markArea":[{"from":1,"to":2,"color":"rgba(22,163,74,.10)"},{"from":0,"to":1,"color":"rgba(220,38,38,.10)"}]}'></div>
 <div class="viz-caption">Quick Ratio theo tháng. Mọi điểm trên lằn 1,0 (vùng xanh) là MAU đang lớn; rơi xuống dưới (vùng đỏ, T4–T5) là đang co lại. Lằn 1,0 là vạch tim ngừng đập. *(số liệu minh họa)*</div>
 </div>
 

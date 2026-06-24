@@ -67,49 +67,7 @@ Ba dòng, một phép cộng-trừ. Khi tách ra như vậy, "+100" ngừng là 
 Growth accounting có một biểu đồ đặc trưng, và một khi đã quen, bạn sẽ không bao giờ nhìn MAU theo kiểu cũ nữa. Đó là **cột chồng (stacked bar)** — mỗi tháng một cột. Phần *dương* (retained + new + resurrected) dựng lên phía trên trục 0; phần *churned* được vẽ **âm**, thò xuống dưới trục như một cái rễ.
 
 <div class="viz">
-<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <!-- baseline (trục 0) -->
-  <line x1="70" y1="210" x2="650" y2="210" stroke="#475569" stroke-width="1.5"/>
-  <text x="58" y="214" fill="#64748B" font-size="11" text-anchor="end">0</text>
-  <!-- legend -->
-  <rect x="80"  y="14" width="12" height="12" rx="2" fill="#15803d"/><text x="98"  y="24" fill="#94a3b8" font-size="11">retained</text>
-  <rect x="168" y="14" width="12" height="12" rx="2" fill="#22c55e"/><text x="186" y="24" fill="#94a3b8" font-size="11">new</text>
-  <rect x="232" y="14" width="12" height="12" rx="2" fill="#4ade80"/><text x="250" y="24" fill="#94a3b8" font-size="11">resurrected</text>
-  <rect x="330" y="14" width="12" height="12" rx="2" fill="#f87171"/><text x="348" y="24" fill="#94a3b8" font-size="11">churned (âm)</text>
-  <!-- Cột T1 -->
-  <rect x="92"  y="150" width="64" height="60" fill="#15803d"/>
-  <rect x="92"  y="118" width="64" height="32" fill="#22c55e"/>
-  <rect x="92"  y="104" width="64" height="14" fill="#4ade80"/>
-  <rect x="92"  y="210" width="64" height="34" fill="#f87171"/>
-  <text x="124" y="262" fill="#94a3b8" font-size="12" text-anchor="middle" font-weight="600">T1</text>
-  <!-- Cột T2 -->
-  <rect x="194" y="140" width="64" height="70" fill="#15803d"/>
-  <rect x="194" y="106" width="64" height="34" fill="#22c55e"/>
-  <rect x="194" y="92"  width="64" height="14" fill="#4ade80"/>
-  <rect x="194" y="210" width="64" height="30" fill="#f87171"/>
-  <text x="226" y="262" fill="#94a3b8" font-size="12" text-anchor="middle" font-weight="600">T2</text>
-  <!-- Cột T3 -->
-  <rect x="296" y="128" width="64" height="82" fill="#15803d"/>
-  <rect x="296" y="96"  width="64" height="32" fill="#22c55e"/>
-  <rect x="296" y="84"  width="64" height="12" fill="#4ade80"/>
-  <rect x="296" y="210" width="64" height="26" fill="#f87171"/>
-  <text x="328" y="262" fill="#94a3b8" font-size="12" text-anchor="middle" font-weight="600">T3</text>
-  <!-- Cột T4 -->
-  <rect x="398" y="116" width="64" height="94" fill="#15803d"/>
-  <rect x="398" y="86"  width="64" height="30" fill="#22c55e"/>
-  <rect x="398" y="74"  width="64" height="12" fill="#4ade80"/>
-  <rect x="398" y="210" width="64" height="22" fill="#f87171"/>
-  <text x="430" y="262" fill="#94a3b8" font-size="12" text-anchor="middle" font-weight="600">T4</text>
-  <!-- Cột T5 -->
-  <rect x="500" y="102" width="64" height="108" fill="#15803d"/>
-  <rect x="500" y="72"  width="64" height="30" fill="#22c55e"/>
-  <rect x="500" y="60"  width="64" height="12" fill="#4ade80"/>
-  <rect x="500" y="210" width="64" height="18" fill="#f87171"/>
-  <text x="532" y="262" fill="#94a3b8" font-size="12" text-anchor="middle" font-weight="600">T5</text>
-  <!-- nhãn vùng -->
-  <text x="630" y="150" fill="#475569" font-size="11" text-anchor="end" transform="rotate(-90 630 150)">MAU đang ở lại / tăng thêm</text>
-  <text x="630" y="228" fill="#7f1d1d" font-size="11" text-anchor="end">churn thu hẹp dần →</text>
-</svg>
+<div class="viz-chart" data-chart="growth" data-chart-data='{"periods":["T1","T2","T3","T4","T5"],"series":[{"name":"Giữ chân","key":"retained","values":[60,70,82,94,108]},{"name":"Mới","key":"new","values":[32,34,32,30,30]},{"name":"Quay lại","key":"resurrected","values":[14,14,12,12,12]},{"name":"Rời bỏ","key":"churned","values":[34,30,26,22,18],"negative":true}]}'></div>
 <div class="viz-caption">Cột chồng growth accounting (số minh họa): phần dương = retained + new + resurrected; phần đỏ thò xuống trục 0 là churned. Ở đây phần đỏ co lại dần qua từng tháng — dấu hiệu một doanh nghiệp đang bịt được lỗ rò, không chỉ đổ thêm nước.</div>
 </div>
 

@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bghd015" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <marker id="ahd015" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#818CF8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bghd015)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="120" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">HƯỚNG DẪN THỰC CHIẾN</text>
+  <text x="80" y="200" fill="#ffffff" font-size="52" font-weight="800">NocoBase + Semantix</text>
+  <text x="80" y="262" fill="#CBD5E1" font-size="28" font-weight="600">Định nghĩa một lần — Semantix đọc hết</text>
+  <text x="80" y="540" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- left: NocoBase database with definitions -->
+  <g transform="translate(110,310)">
+    <text x="0" y="-10" fill="#94A3B8" font-size="17" font-weight="600">NocoBase &amp; định nghĩa sẵn</text>
+    <rect x="0" y="6" width="290" height="190" rx="14" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+    <ellipse cx="40" cy="34" rx="18" ry="8" fill="#1E293B" stroke="#475569"/>
+    <text x="70" y="40" fill="#E2E8F0" font-size="16" font-weight="700">orders</text>
+    <rect x="20" y="58" width="170" height="26" rx="6" fill="#1E293B" stroke="#3730A3"/>
+    <text x="32" y="76" fill="#C7D2FE" font-size="14">Doanh thu · số → measure</text>
+    <rect x="20" y="92" width="170" height="26" rx="6" fill="#1E293B" stroke="#3730A3"/>
+    <text x="32" y="110" fill="#C7D2FE" font-size="14">Ngày đặt · date → thời gian</text>
+    <rect x="20" y="126" width="200" height="26" rx="6" fill="#1E293B" stroke="#3730A3"/>
+    <text x="32" y="144" fill="#C7D2FE" font-size="14">Trạng thái · enum kèm nhãn</text>
+    <rect x="20" y="160" width="200" height="26" rx="6" fill="#1E293B" stroke="#3730A3"/>
+    <text x="32" y="178" fill="#C7D2FE" font-size="14">orders → customers · 1:N</text>
+  </g>
+  <!-- arrow: read all -->
+  <g transform="translate(420,400)">
+    <path d="M0 0 L150 0" stroke="#818CF8" stroke-width="3.5" fill="none" marker-end="url(#ahd015)"/>
+    <text x="78" y="-16" fill="#818CF8" font-size="16" font-weight="700" text-anchor="middle">đọc hết</text>
+    <text x="78" y="28" fill="#64748B" font-size="14" text-anchor="middle">khỏi gõ lại</text>
+  </g>
+  <!-- right: Semantix model pre-built -->
+  <g transform="translate(620,310)">
+    <text x="0" y="-10" fill="#94A3B8" font-size="17" font-weight="600">Semantix · Mô hình dựng sẵn</text>
+    <rect x="0" y="6" width="290" height="190" rx="14" fill="#0B1220" stroke="#4ADE80" stroke-width="2"/>
+    <text x="20" y="44" fill="#4ADE80" font-size="16" font-weight="700">Mô hình dữ liệu ✓</text>
+    <rect x="20" y="58" width="250" height="26" rx="6" fill="#0F1E14" stroke="#166534"/>
+    <text x="32" y="76" fill="#86EFAC" font-size="14">Tên hiển thị · loại ngữ nghĩa</text>
+    <rect x="20" y="92" width="250" height="26" rx="6" fill="#0F1E14" stroke="#166534"/>
+    <text x="32" y="110" fill="#86EFAC" font-size="14">measure / dimension / time</text>
+    <rect x="20" y="126" width="250" height="26" rx="6" fill="#0F1E14" stroke="#166534"/>
+    <text x="32" y="144" fill="#86EFAC" font-size="14">Quan hệ 1:1 / 1:N / N:M</text>
+    <rect x="20" y="160" width="250" height="26" rx="6" fill="#0F1E14" stroke="#166534"/>
+    <text x="32" y="178" fill="#86EFAC" font-size="14">Enum + nhãn + màu sẵn sàng</text>
+  </g>
+</svg>

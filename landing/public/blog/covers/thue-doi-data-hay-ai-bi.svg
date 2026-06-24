@@ -1,0 +1,72 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="answer" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4ADE80"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">SO SÁNH &amp; LỰA CHỌN</text>
+  <!-- title -->
+  <text x="80" y="158" fill="#F1F5F9" font-size="48" font-weight="800">Thuê đội data hay dùng AI BI?</text>
+  <text x="80" y="208" fill="#94A3B8" font-size="25" font-weight="500">Bài toán chi phí thật sau 12 tháng —</text>
+  <text x="80" y="240" fill="#94A3B8" font-size="25" font-weight="500">lương chỉ là phần nổi của tảng băng</text>
+  <!-- LEFT: đội data (nhiều người, chậm, đắt) -->
+  <g transform="translate(80,300)">
+    <rect x="0" y="0" width="460" height="230" rx="14" fill="#0F172A" stroke="#3F1D1D" stroke-width="2"/>
+    <text x="24" y="36" fill="#F87171" font-size="16" font-weight="700" letter-spacing="1">THUÊ ĐỘI DATA</text>
+    <!-- queue of people waiting -->
+    <g transform="translate(40,70)">
+      <circle cx="0" cy="0" r="16" fill="#475569"/>
+      <rect x="-13" y="18" width="26" height="30" rx="8" fill="#475569"/>
+      <circle cx="46" cy="0" r="16" fill="#475569"/>
+      <rect x="33" y="18" width="26" height="30" rx="8" fill="#475569"/>
+      <circle cx="92" cy="0" r="16" fill="#475569"/>
+      <rect x="79" y="18" width="26" height="30" rx="8" fill="#475569"/>
+      <text x="150" y="6" fill="#94A3B8" font-size="14">xếp hàng chờ</text>
+      <path d="M118 0 L148 0" stroke="#64748B" stroke-width="2"/>
+      <path d="M142 -5 L150 0 L142 5 Z" fill="#64748B"/>
+    </g>
+    <!-- single analyst bottleneck -->
+    <g transform="translate(330,135)">
+      <circle cx="0" cy="0" r="22" fill="#7F1D1D" stroke="#F87171" stroke-width="2"/>
+      <rect x="-18" y="24" width="36" height="40" rx="9" fill="#7F1D1D" stroke="#F87171" stroke-width="2"/>
+      <text x="0" y="88" fill="#FCA5A5" font-size="13" font-weight="600" text-anchor="middle">1 nút cổ chai</text>
+    </g>
+    <text x="24" y="200" fill="#F87171" font-size="14" font-weight="700">chậm • đắt • 60–80% bưng số</text>
+  </g>
+  <!-- VS badge -->
+  <g transform="translate(600,415)">
+    <circle r="34" fill="#0B1120" stroke="#22D3EE" stroke-width="2"/>
+    <text x="0" y="11" fill="#22D3EE" font-size="26" font-weight="800" text-anchor="middle">vs</text>
+  </g>
+  <!-- RIGHT: AI BI (hỏi -> trả lời ngay) -->
+  <g transform="translate(660,300)">
+    <rect x="0" y="0" width="460" height="230" rx="14" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="24" y="36" fill="#34D399" font-size="16" font-weight="700" letter-spacing="1">AI BI</text>
+    <!-- question bubble -->
+    <rect x="24" y="56" width="412" height="44" rx="12" fill="#1E293B"/>
+    <text x="42" y="84" fill="#E2E8F0" font-size="16" font-weight="500">Doanh thu TikTok tháng này thế nào?</text>
+    <!-- arrow -->
+    <path d="M230 104 L230 124" stroke="url(#answer)" stroke-width="3"/>
+    <path d="M222 118 L230 130 L238 118 Z" fill="#34D399"/>
+    <!-- instant answer -->
+    <g transform="translate(40,140)">
+      <line x1="0" y1="66" x2="380" y2="66" stroke="#334155" stroke-width="1.5"/>
+      <rect x="14" y="36" width="40" height="30" rx="3" fill="url(#answer)"/>
+      <rect x="74" y="20" width="40" height="46" rx="3" fill="url(#answer)"/>
+      <rect x="134" y="44" width="40" height="22" rx="3" fill="url(#answer)"/>
+      <rect x="194" y="10" width="40" height="56" rx="3" fill="url(#answer)"/>
+      <rect x="254" y="30" width="40" height="36" rx="3" fill="url(#answer)"/>
+      <text x="320" y="40" fill="#34D399" font-size="14" font-weight="700">trả lời ngay</text>
+    </g>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

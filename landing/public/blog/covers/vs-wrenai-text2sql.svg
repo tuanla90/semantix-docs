@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="layer" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">SO SÁNH &amp; LỰA CHỌN</text>
+  <!-- title -->
+  <text x="80" y="158" fill="#F1F5F9" font-size="46" font-weight="800">Semantix vs WrenAI &amp; text-to-SQL</text>
+  <text x="80" y="208" fill="#94A3B8" font-size="25" font-weight="500">Gắn AI thẳng vào database nghe gọn —</text>
+  <text x="80" y="240" fill="#94A3B8" font-size="25" font-weight="500">nhưng vẫn cần một Semantic Layer</text>
+  <!-- illustration: LLM -> (có/không) Semantic Layer -> database -->
+  <!-- TOP: không có layer -->
+  <text x="80" y="318" fill="#F87171" font-size="17" font-weight="800">KHÔNG có Semantic Layer — đoán</text>
+  <rect x="80" y="332" width="150" height="58" rx="12" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+  <text x="155" y="367" fill="#E2E8F0" font-size="20" font-weight="700" text-anchor="middle">LLM</text>
+  <line x1="230" y1="361" x2="470" y2="361" stroke="#64748B" stroke-width="3" stroke-dasharray="7 7"/>
+  <path d="M462 353 L478 361 L462 369 Z" fill="#64748B"/>
+  <rect x="478" y="332" width="170" height="58" rx="12" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+  <text x="563" y="367" fill="#E2E8F0" font-size="20" font-weight="700" text-anchor="middle">Database</text>
+  <text x="678" y="372" fill="#F87171" font-size="30" font-weight="800">?</text>
+  <!-- BOTTOM: có layer -->
+  <text x="80" y="452" fill="#34D399" font-size="17" font-weight="800">CÓ Semantic Layer — tra cứu</text>
+  <rect x="80" y="466" width="150" height="58" rx="12" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+  <text x="155" y="501" fill="#E2E8F0" font-size="20" font-weight="700" text-anchor="middle">LLM</text>
+  <line x1="230" y1="495" x2="288" y2="495" stroke="#34D399" stroke-width="3"/>
+  <path d="M282 487 L296 495 L282 503 Z" fill="#34D399"/>
+  <rect x="296" y="462" width="186" height="66" rx="12" fill="#0F2A24" stroke="url(#layer)" stroke-width="2.5"/>
+  <text x="389" y="490" fill="#6EE7B7" font-size="16" font-weight="800" text-anchor="middle">Semantic Layer</text>
+  <text x="389" y="512" fill="#86EFAC" font-size="13" text-anchor="middle">định nghĩa có thật</text>
+  <line x1="482" y1="495" x2="540" y2="495" stroke="#34D399" stroke-width="3"/>
+  <path d="M534 487 L548 495 L534 503 Z" fill="#34D399"/>
+  <rect x="548" y="466" width="170" height="58" rx="12" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+  <text x="633" y="501" fill="#E2E8F0" font-size="20" font-weight="700" text-anchor="middle">Database</text>
+  <text x="748" y="506" fill="#34D399" font-size="30" font-weight="800">✓</text>
+  <!-- right-side comparison chips -->
+  <g transform="translate(880,318)">
+    <rect x="0" y="0" width="240" height="50" rx="10" fill="#0F172A" stroke="#3F1D1D" stroke-width="2"/>
+    <text x="20" y="31" fill="#FCA5A5" font-size="16" font-weight="700">text-to-SQL thuần</text>
+    <rect x="0" y="64" width="240" height="50" rx="10" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="20" y="95" fill="#6EE7B7" font-size="16" font-weight="700">WrenAI</text>
+    <rect x="0" y="128" width="240" height="50" rx="10" fill="#0F172A" stroke="#22D3EE" stroke-width="2.5"/>
+    <text x="20" y="159" fill="#7FE9F5" font-size="16" font-weight="800">Semantix</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

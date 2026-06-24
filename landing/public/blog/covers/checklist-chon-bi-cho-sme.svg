@@ -1,0 +1,59 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="tick" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4ADE80"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">SO SÁNH &amp; LỰA CHỌN</text>
+  <!-- title -->
+  <text x="80" y="168" fill="#F1F5F9" font-size="50" font-weight="800">Checklist chọn công cụ BI cho SME</text>
+  <text x="80" y="222" fill="#94A3B8" font-size="26" font-weight="500">7 câu hỏi bạn phải tự trả lời —</text>
+  <text x="80" y="256" fill="#94A3B8" font-size="26" font-weight="500">trước khi trả tiền cho bất kỳ công cụ nào</text>
+  <!-- checklist panel -->
+  <g transform="translate(80,300)">
+    <rect x="0" y="0" width="1040" height="220" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="28" y="40" fill="#64748B" font-size="16" font-weight="700" letter-spacing="1">7 CÂU HỎI TRƯỚC KHI TRẢ TIỀN</text>
+    <!-- row 1 -->
+    <g transform="translate(28,66)">
+      <rect x="0" y="0" width="26" height="26" rx="6" fill="url(#tick)"/>
+      <path d="M6 13 L11 18 L20 7" fill="none" stroke="#0B1120" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="40" y="19" fill="#E2E8F0" font-size="17" font-weight="500">Ai thực sự dùng nó hằng ngày?</text>
+    </g>
+    <g transform="translate(28,108)">
+      <rect x="0" y="0" width="26" height="26" rx="6" fill="url(#tick)"/>
+      <path d="M6 13 L11 18 L20 7" fill="none" stroke="#0B1120" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="40" y="19" fill="#E2E8F0" font-size="17" font-weight="500">Câu cố định hay câu mới liên tục?</text>
+    </g>
+    <g transform="translate(28,150)">
+      <rect x="0" y="0" width="26" height="26" rx="6" fill="url(#tick)"/>
+      <path d="M6 13 L11 18 L20 7" fill="none" stroke="#0B1120" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="40" y="19" fill="#E2E8F0" font-size="17" font-weight="500">&#8220;Doanh thu&#8221; đã định nghĩa một lần?</text>
+    </g>
+    <!-- row 2 (right column) -->
+    <g transform="translate(560,66)">
+      <rect x="0" y="0" width="26" height="26" rx="6" fill="url(#tick)"/>
+      <path d="M6 13 L11 18 L20 7" fill="none" stroke="#0B1120" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="40" y="19" fill="#E2E8F0" font-size="17" font-weight="500">TCO thật là bao nhiêu?</text>
+    </g>
+    <g transform="translate(560,108)">
+      <rect x="0" y="0" width="26" height="26" rx="6" fill="url(#tick)"/>
+      <path d="M6 13 L11 18 L20 7" fill="none" stroke="#0B1120" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="40" y="19" fill="#E2E8F0" font-size="17" font-weight="500">Dữ liệu có cần ở lại nhà bạn?</text>
+    </g>
+    <g transform="translate(560,150)">
+      <rect x="0" y="0" width="26" height="26" rx="6" fill="url(#tick)"/>
+      <path d="M6 13 L11 18 L20 7" fill="none" stroke="#0B1120" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="40" y="19" fill="#E2E8F0" font-size="17" font-weight="500">Hiểu tiếng Việt? Có bị khóa không?</text>
+    </g>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

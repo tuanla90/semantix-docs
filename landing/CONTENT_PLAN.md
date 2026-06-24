@@ -141,12 +141,12 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | ss-002 | Semantix vs Power BI/Tableau cho SME (góc "hai bài toán khác nhau") | ✅ | `semantix-vs-power-bi` — cặp với ss-001, góc nhìn khác (cố ý giữ riêng) |
 | ss-003 | Semantix vs Metabase/Superset | ✅ | `vs-metabase-superset` |
 | ss-004 | Semantix vs ThoughtSpot (BI AI-native) | ✅ | `vs-thoughtspot` |
-| ss-005 | Nên thuê đội data hay dùng AI BI? Bài toán chi phí | 🟡 | business_research |
+| ss-005 | Nên thuê đội data hay dùng AI BI? Bài toán chi phí | ✅ | `thue-doi-data-hay-ai-bi` |
 | ss-006 | Semantix vs Excel/Google Sheets: khi nào bảng tính hết "gánh" nổi | ✅ | `vs-google-sheets` |
-| ss-007 | AI BI vs thuê freelancer dựng dashboard: chi phí thật sau 1 năm | ⚪ | business_research |
-| ss-008 | Semantix vs WrenAI/text-to-SQL thuần: vì sao cần Semantic Layer | ⚪ | 07-text2sql-landscape |
-| ss-009 | "Miễn phí" thường đắt nhất: tổng chi phí sở hữu (TCO) của một công cụ BI | 🟡 | business_research |
-| ss-010 | Checklist chọn công cụ BI cho SME: 7 câu hỏi trước khi trả tiền | 🟡 | PROJECT_OVERVIEW |
+| ss-007 | AI BI vs thuê freelancer dựng dashboard: chi phí thật sau 1 năm | ✅ | `vs-freelancer-dashboard` |
+| ss-008 | Semantix vs WrenAI/text-to-SQL thuần: vì sao cần Semantic Layer | ✅ | `vs-wrenai-text2sql` |
+| ss-009 | "Miễn phí" thường đắt nhất: tổng chi phí sở hữu (TCO) của một công cụ BI | ✅ | `tco-cong-cu-bi` |
+| ss-010 | Checklist chọn công cụ BI cho SME: 7 câu hỏi trước khi trả tiền | ✅ | `checklist-chon-bi-cho-sme` |
 | ss-011 | Tự dựng in-house vs mua sẵn: bài toán build-vs-buy cho BI | ⚪ | business_research |
 
 ## D. Việc cần làm tiếp (🔴 chưa viết)

@@ -72,8 +72,12 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | kt-018 | Tư duy dựa trên dữ liệu là gì (Series Tư duy dữ liệu · P1) | ✅ | `tu-duy-du-lieu-la-gi` |
 | kt-019 | Bắt đầu từ câu hỏi, không từ dữ liệu (P2) | ✅ | `bat-dau-tu-cau-hoi` |
 | kt-020 | Tín hiệu vs nhiễu (P7) | ✅ | `tin-hieu-vs-nhieu` |
+| kt-021 | Sự tiến hóa của BI: 4 nấc trưởng thành (mô tả→đề xuất) | ✅ | `tien-hoa-bi` |
 | kt-022 | Goodhart & guardrail metrics (P8) | ✅ | `goodhart-guardrail-metrics` |
 | kt-023 | Quyết định khi dữ liệu chưa đủ (P9) | ✅ | `quyet-dinh-khi-thieu-du-lieu` |
+| kt-024 | Thống kê cho KD (Series · P1): mẫu & tổng thể | ✅ | `mau-va-tong-the` |
+| kt-025 | Thống kê cho KD (P2): độ tin cậy & p-value | ✅ | `do-tin-cay-p-value` |
+| kt-026 | Thống kê cho KD (P3): base rate & xác suất ngược | ✅ | `base-rate-xac-suat-nguoc` |
 
 ### 2 — Phân Tích Dữ Liệu (`pt`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -114,6 +118,9 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | pt-034 | Dự báo (Series · P1): mọi dự báo đều sai nhưng vẫn hữu ích | ✅ | `du-bao-la-gi` |
 | pt-035 | Dự báo (P2): mùa vụ & Tết — seasonality | ✅ | `mua-vu-tet-seasonality` |
 | pt-036 | Dự báo (P3): dự báo nhu cầu tồn kho thực chiến | ✅ | `du-bao-ton-kho-thuc-chien` |
+| pt-037 | Thử nghiệm (Series · P1): HiPPO vs bằng chứng | ✅ | `hippo-vs-thu-nghiem` |
+| pt-038 | Thử nghiệm (P2): thiết kế A/B test đúng cho SME | ✅ | `thiet-ke-ab-test` |
+| pt-039 | Thử nghiệm (P3): đọc kết quả test không tự lừa mình | ✅ | `doc-ket-qua-ab-test` |
 
 ### 3 — Hướng Dẫn Thực Chiến (`hd`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |

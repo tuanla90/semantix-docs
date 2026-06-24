@@ -1,0 +1,52 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="wide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F87171"/>
+      <stop offset="1" stop-color="#FB923C"/>
+    </linearGradient>
+    <linearGradient id="narrow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <!-- series badge -->
+  <g transform="translate(80,112)">
+    <rect x="0" y="0" width="232" height="34" rx="17" fill="#0F172A" stroke="#164E45" stroke-width="1.5"/>
+    <text x="116" y="23" fill="#34D399" font-size="15" font-weight="700" letter-spacing="1" text-anchor="middle">SERIES · PHẦN 2</text>
+  </g>
+  <!-- title -->
+  <text x="80" y="218" fill="#F1F5F9" font-size="50" font-weight="800">Độ tin cậy &amp; p-value</text>
+  <text x="80" y="272" fill="#94A3B8" font-size="26" font-weight="500">Con số nói gì &#8212; và quan trọng hơn,</text>
+  <text x="80" y="306" fill="#94A3B8" font-size="26" font-weight="500">cái nó tuyệt nhiên không nói</text>
+  <!-- illustration: point estimate + wide vs narrow CI bars -->
+  <g transform="translate(80,360)">
+    <rect x="0" y="0" width="1040" height="170" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="28" y="38" fill="#64748B" font-size="15" font-weight="700" letter-spacing="1">CÙNG MỘT ƯỚC LƯỢNG &#8212; HAI CỠ MẪU</text>
+    <!-- center reference line -->
+    <line x1="520" y1="56" x2="520" y2="150" stroke="#22D3EE" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <!-- wide CI (small sample) -->
+    <text x="28" y="86" fill="#94A3B8" font-size="15" font-weight="600">Mẫu nhỏ</text>
+    <line x1="300" y1="92" x2="740" y2="92" stroke="url(#wide)" stroke-width="5"/>
+    <line x1="300" y1="78" x2="300" y2="106" stroke="#F87171" stroke-width="5"/>
+    <line x1="740" y1="78" x2="740" y2="106" stroke="#FB923C" stroke-width="5"/>
+    <circle cx="520" cy="92" r="8" fill="#F87171"/>
+    <text x="760" y="98" fill="#F87171" font-size="15" font-weight="700">dải rộng</text>
+    <!-- narrow CI (large sample) -->
+    <text x="28" y="142" fill="#94A3B8" font-size="15" font-weight="600">Mẫu lớn</text>
+    <line x1="476" y1="140" x2="564" y2="140" stroke="url(#narrow)" stroke-width="5"/>
+    <line x1="476" y1="126" x2="476" y2="154" stroke="#34D399" stroke-width="5"/>
+    <line x1="564" y1="126" x2="564" y2="154" stroke="#22D3EE" stroke-width="5"/>
+    <circle cx="520" cy="140" r="8" fill="#34D399"/>
+    <text x="584" y="146" fill="#34D399" font-size="15" font-weight="700">dải hẹp</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="572" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

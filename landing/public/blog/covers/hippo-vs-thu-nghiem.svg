@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="barB" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="88" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <!-- series badge -->
+  <g transform="translate(80,108)">
+    <rect x="0" y="0" width="218" height="34" rx="17" fill="#0B1120" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="109" y="23" fill="#22D3EE" font-size="15" font-weight="700" letter-spacing="2" text-anchor="middle">SERIES &#183; PHẦN 1</text>
+  </g>
+  <!-- title -->
+  <text x="80" y="216" fill="#F1F5F9" font-size="50" font-weight="800">HiPPO vs bằng chứng</text>
+  <text x="80" y="268" fill="#94A3B8" font-size="26" font-weight="500">Người lương cao nhất quyết &#8212;</text>
+  <text x="80" y="302" fill="#94A3B8" font-size="26" font-weight="500">hay dữ liệu quyết?</text>
+  <!-- LEFT: HiPPO opinion looms large -->
+  <g transform="translate(80,350)">
+    <rect x="0" y="0" width="460" height="190" rx="14" fill="#0F172A" stroke="#7F1D1D" stroke-width="2"/>
+    <text x="24" y="36" fill="#F87171" font-size="16" font-weight="700" letter-spacing="1">Ý KIẾN SẾP</text>
+    <!-- big speech bubble -->
+    <rect x="24" y="54" width="412" height="86" rx="14" fill="#1E293B"/>
+    <path d="M70 140 L70 168 L104 140 Z" fill="#1E293B"/>
+    <text x="44" y="92" fill="#FCA5A5" font-size="24" font-weight="800">&#8220;Tôi làm nghề 10 năm,</text>
+    <text x="44" y="124" fill="#FCA5A5" font-size="24" font-weight="800">tôi biết khách thích gì.&#8221;</text>
+    <text x="24" y="178" fill="#64748B" font-size="14">To tiếng nhất &#8212; không bằng chứng</text>
+  </g>
+  <!-- VS badge -->
+  <g transform="translate(600,445)">
+    <circle r="32" fill="#0B1120" stroke="#22D3EE" stroke-width="2"/>
+    <text x="0" y="10" fill="#22D3EE" font-size="24" font-weight="800" text-anchor="middle">vs</text>
+  </g>
+  <!-- RIGHT: A/B variants with numbers -->
+  <g transform="translate(660,350)">
+    <rect x="0" y="0" width="460" height="190" rx="14" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="24" y="36" fill="#34D399" font-size="16" font-weight="700" letter-spacing="1">HAI BIẾN THỂ A / B</text>
+    <!-- variant A -->
+    <g transform="translate(24,54)">
+      <rect x="0" y="0" width="196" height="108" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+      <text x="18" y="30" fill="#94A3B8" font-size="15" font-weight="700">Bản A</text>
+      <rect x="18" y="44" width="120" height="26" rx="6" fill="#334155"/>
+      <line x1="18" y1="92" x2="178" y2="92" stroke="#334155" stroke-width="1.5"/>
+      <rect x="18" y="78" width="22" height="14" fill="#475569"/>
+      <rect x="46" y="70" width="22" height="22" fill="#475569"/>
+      <rect x="74" y="82" width="22" height="10" fill="#475569"/>
+      <text x="148" y="60" fill="#CBD5E1" font-size="22" font-weight="800">3,1%</text>
+    </g>
+    <!-- variant B -->
+    <g transform="translate(240,54)">
+      <rect x="0" y="0" width="196" height="108" rx="10" fill="#1E293B" stroke="#164E45" stroke-width="2"/>
+      <text x="18" y="30" fill="#94A3B8" font-size="15" font-weight="700">Bản B</text>
+      <rect x="18" y="44" width="120" height="26" rx="6" fill="url(#barB)"/>
+      <line x1="18" y1="92" x2="178" y2="92" stroke="#334155" stroke-width="1.5"/>
+      <rect x="18" y="74" width="22" height="18" fill="#34D399"/>
+      <rect x="46" y="62" width="22" height="30" fill="#34D399"/>
+      <rect x="74" y="80" width="22" height="12" fill="#34D399"/>
+      <text x="146" y="60" fill="#34D399" font-size="22" font-weight="800">3,8%</text>
+    </g>
+  </g>
+  <!-- footer -->
+  <text x="80" y="572" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
+</svg>

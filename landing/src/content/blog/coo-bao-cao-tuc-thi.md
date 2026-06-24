@@ -13,7 +13,7 @@ coverAlt: "Chồng báo cáo và lịch tuần dày đặc thu lại thành mộ
 
 *Lưu ý: anh Dũng dưới đây là chân dung minh họa, dựng từ nhiều COO/giám đốc vận hành chúng tôi từng trò chuyện — không phải một khách hàng cụ thể. Các con số là ví dụ để bạn hình dung, không phải số liệu thật của bất kỳ ai.*
 
-Sáng thứ Hai, anh Dũng — COO một chuỗi bán lẻ kiêm phân phối tầm trung, hơn 40 điểm bán và một kho tổng — mở email và thấy năm bản báo cáo đã nằm sẵn: doanh thu tuần, tồn kho theo nhóm hàng, công nợ, hiệu suất từng điểm bán, và dòng tiền. Đẹp, đầy đủ, đúng định dạng. Vấn đề là tất cả đều nói về tuần trước. Và quyết định khó nhất trong tuần — có nên dừng nhập một nhóm hàng đang phình tồn ở ba kho miền Trung không — thì anh phải chốt vào *chiều nay*, với dữ liệu của *bảy ngày trước*.
+Sáng thứ Hai, anh Dũng — COO (Chief Operating Officer — giám đốc vận hành) một chuỗi bán lẻ kiêm phân phối tầm trung, hơn 40 điểm bán và một kho tổng — mở email và thấy năm bản báo cáo đã nằm sẵn: doanh thu tuần, tồn kho theo nhóm hàng, công nợ, hiệu suất từng điểm bán, và dòng tiền. Đẹp, đầy đủ, đúng định dạng. Vấn đề là tất cả đều nói về tuần trước. Và quyết định khó nhất trong tuần — có nên dừng nhập một nhóm hàng đang phình tồn ở ba kho miền Trung không — thì anh phải chốt vào *chiều nay*, với dữ liệu của *bảy ngày trước*.
 
 Phản xạ đầu tiên của hầu hết COO ở vị trí này rất hợp lý: *"Mình cần thêm báo cáo. Một bản tồn kho theo ngày, một bản dòng tiền cập nhật giữa tuần, thêm vài lát cắt nữa cho chắc."* Nghe có lý — nhưng đây đúng là chỗ ngược đời: **vấn đề của anh Dũng không phải thiếu báo cáo, mà là báo cáo đến quá muộn để còn kịp là một quyết định.** Và càng đặt thêm báo cáo thủ công, công ty của anh càng ra quyết định *chậm hơn*, không nhanh hơn.
 
@@ -55,7 +55,7 @@ Buổi sáng của anh giờ không bắt đầu bằng việc đọc năm file.
 
 > *"Ba kho miền Trung, nhóm hàng A: tồn khả dụng hôm nay và tốc độ bán 14 ngày gần nhất? Còn bao nhiêu ngày là hết, hay là đang ế?"*
 
-Số ra trong vài giây, kèm biểu đồ. Không phải vì AI thông minh hơn bạn vận hành kia — mà vì nó không cần ngủ, không xếp hàng sau bản báo cáo tuần, và đọc chung một "cuốn từ điển nghiệp vụ" với anh nên không hiểu nhầm "tồn" là gì. Đây chính là chỗ AI cần một lớp [semantic layer](/blog/semantic-layer/) để trả lời nhất quán, chứ không phải một con bot cắm thẳng vào database rồi đoán.
+Số ra trong vài giây, kèm biểu đồ. Không phải vì AI thông minh hơn bạn vận hành kia — mà vì nó không cần ngủ, không xếp hàng sau bản báo cáo tuần, và đọc chung một "cuốn từ điển nghiệp vụ" với anh nên không hiểu nhầm "tồn" là gì. Đây chính là chỗ AI cần một lớp [semantic layer](/blog/semantic-layer/) (tầng định nghĩa nghiệp vụ dùng chung) để trả lời nhất quán, chứ không phải một con bot cắm thẳng vào database rồi đoán.
 
 Cái thay đổi không phải anh có thêm một báo cáo đẹp. Cái thay đổi là **khoảng cách giữa một thắc mắc và một câu trả lời rút từ vài ngày xuống vài giây** — và với người ký quyết định mỗi ngày, khoảng cách đó chính là tiền và là hàng tồn không phình thêm.
 

@@ -63,7 +63,7 @@ Phễu cơ bản đếm theo kiểu "trong một phiên". Khách thêm vào gi�
 - Đặt **cửa sổ chuyển đổi (conversion window)** khớp với chu kỳ mua thật: ecom thời trang vài ngày là đủ; đồ nội thất hay xe có thể cần 30–60 ngày.
 - Phân biệt **"chưa mua"** với **"sẽ không mua"**. Một khách trong cửa sổ vẫn còn cơ hội — đừng vội xếp họ vào "đã mất".
 
-> Quy tắc vàng: trước khi hỏi "bao nhiêu phần trăm rớt?", hãy hỏi **"rớt trong bao lâu?"** Không có cửa sổ thời gian, mọi con số drop-off đều vô nghĩa.
+> Quy tắc vàng: trước khi hỏi "bao nhiêu phần trăm rớt?", hãy hỏi **"rớt trong bao lâu?"** Không có cửa sổ thời gian, mọi con số drop-off (tỷ lệ rớt khỏi một bước trong phễu) đều vô nghĩa.
 
 ## Bẫy 2: Bỏ qua tốc độ — vận tốc cũng là một tín hiệu
 
@@ -118,7 +118,7 @@ Một bước nâng cấp tự nhiên: thay vì một phễu cho "tất cả kh�
 
 ## Funnel nâng cao với Semantix
 
-Tự tay làm tất cả những thứ trên — đặt cửa sổ chuyển đổi, đo vận tốc, bổ phễu theo từng segment, cohort hóa — là nhiều ngày SQL cho một analyst, và làm lại từ đầu mỗi lần đổi giả định.
+Tự tay làm tất cả những thứ trên — đặt cửa sổ chuyển đổi, đo vận tốc, bổ phễu theo từng segment, cohort hóa — là nhiều ngày SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) cho một analyst, và làm lại từ đầu mỗi lần đổi giả định.
 
 Semantix không phải chatbot cắm vào database rồi đoán mò. Bạn định nghĩa các bước, "mua thành công", segment một lần trong [Semantic Layer](/blog/semantic-layer/), rồi hỏi bằng tiếng Việt:
 

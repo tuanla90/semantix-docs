@@ -13,9 +13,9 @@ coverAlt: "Cột chi phí token cao bị một lớp lọc ngữ cảnh cắt xu
 
 *Muốn AI trả lời câu hỏi dữ liệu của bạn mà không đốt token vô tội vạ? [Dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/)*
 
-Đầu tháng, bạn mở hoá đơn API của nhà cung cấp AI và giật mình: con số gấp gần **ba lần** tháng trước. Phản xạ đầu tiên rất tự nhiên — "chắc đội mình hỏi nhiều hơn". Bạn mở log ra đếm. Số câu hỏi gần như **không đổi**. Vậy tiền chảy đi đâu?
+Đầu tháng, bạn mở hoá đơn API (Application Programming Interface — giao diện để phần mềm gọi dịch vụ AI) của nhà cung cấp AI và giật mình: con số gấp gần **ba lần** tháng trước. Phản xạ đầu tiên rất tự nhiên — "chắc đội mình hỏi nhiều hơn". Bạn mở log ra đếm. Số câu hỏi gần như **không đổi**. Vậy tiền chảy đi đâu?
 
-Đây là nghịch lý mà gần như doanh nghiệp nào cắm AI vào dữ liệu cũng vấp phải, chỉ là phát hiện sớm hay muộn: hoá đơn AI phình to **không phải vì bạn hỏi nhiều** — mà vì mỗi câu hỏi đang vác theo cả tấn **ngữ cảnh thừa**. Mỗi lần ai đó gõ một câu hỏi ngắn năm chữ, hệ thống lặng lẽ nhét theo cả nghìn dòng schema thô, vài đoạn prompt nhồi sẵn, lịch sử hội thoại không cần thiết — và bạn trả tiền cho **từng token** trong đống đó.
+Đây là nghịch lý mà gần như doanh nghiệp nào cắm AI vào dữ liệu cũng vấp phải, chỉ là phát hiện sớm hay muộn: hoá đơn AI phình to **không phải vì bạn hỏi nhiều** — mà vì mỗi câu hỏi đang vác theo cả tấn **ngữ cảnh thừa**. Mỗi lần ai đó gõ một câu hỏi ngắn năm chữ, hệ thống lặng lẽ nhét theo cả nghìn dòng schema (cấu trúc bảng/cột của database) thô, vài đoạn prompt (câu lệnh/ngữ cảnh đưa vào cho AI) nhồi sẵn, lịch sử hội thoại không cần thiết — và bạn trả tiền cho **từng token (đơn vị văn bản LLM xử lý và tính phí)** trong đống đó.
 
 Tin tốt: phần lớn đống ngữ cảnh thừa ấy có thể cắt mà **không** đụng tới chất lượng câu trả lời. Cắt được 40–60% chi phí là chuyện khả thi — và hầu hết nằm ở chỗ bạn không ngờ.
 
@@ -33,7 +33,7 @@ Hiểu được chỗ này là chìa khoá: muốn cắt chi phí, đừng tìm 
 
 Đây là nguồn lãng phí lớn nhất, và cũng dễ bị bỏ qua nhất. Cách làm "cắm AI thẳng vào database" mặc định là **dump toàn bộ schema thô** vào prompt: tên bảng, tên cột, kiểu dữ liệu, đôi khi cả vài dòng dữ liệu mẫu cho mỗi bảng. Doanh nghiệp 300 bảng thì mỗi câu hỏi vác theo mô tả của cả 300 bảng — trong khi câu hỏi chỉ chạm tới 2 bảng.
 
-Một **Semantic Layer** lật ngược chuyện này. Thay vì để AI tự bơi trong schema thô, nó đưa cho AI đúng vài định nghĩa nghiệp vụ liên quan — "doanh thu", "chi nhánh", "tháng này" — đã được mô tả gọn và chuẩn. AI không cần thấy 298 bảng còn lại. Ngữ cảnh vừa **gọn hơn** (ít token hơn) vừa **chuẩn hơn** (AI bớt đoán, bớt phải viết lại). Đây cũng chính là lớp nền mà chúng tôi mổ xẻ trong [Semantic Layer: vì sao công ty bạn có ba con số doanh thu](/blog/semantic-layer/) — nó vừa khử lỗi *vừa* cắt token.
+Một **Semantic Layer (tầng định nghĩa nghiệp vụ dùng chung)** lật ngược chuyện này. Thay vì để AI tự bơi trong schema thô, nó đưa cho AI đúng vài định nghĩa nghiệp vụ liên quan — "doanh thu", "chi nhánh", "tháng này" — đã được mô tả gọn và chuẩn. AI không cần thấy 298 bảng còn lại. Ngữ cảnh vừa **gọn hơn** (ít token hơn) vừa **chuẩn hơn** (AI bớt đoán, bớt phải viết lại). Đây cũng chính là lớp nền mà chúng tôi mổ xẻ trong [Semantic Layer: vì sao công ty bạn có ba con số doanh thu](/blog/semantic-layer/) — nó vừa khử lỗi *vừa* cắt token.
 
 *Ví dụ minh hoạ:* một câu hỏi vác theo schema thô tốn ~8.000 token đầu vào; cũng câu đó, đưa qua ngữ cảnh đã chuẩn hoá còn ~2.000 token. Riêng đòn này đã cắt phần lớn hoá đơn. (Con số chỉ để minh hoạ — hiệu quả thật tuỳ độ phức tạp schema của bạn.)
 
@@ -59,11 +59,11 @@ Không phải câu hỏi nào cũng cần con dao mổ trâu. *"Tổng đơn hô
 
 Ngay cả sau khi đã bỏ schema thô, phần ngữ cảnh còn lại vẫn thường **dư**. Lịch sử hội thoại mười lượt trước trong khi câu hiện tại chẳng liên quan. Năm ví dụ mẫu trong khi hai cái là đủ. Mô tả dài dòng cho những bảng câu hỏi này không đụng tới.
 
-**Tỉa ngữ cảnh (context pruning/compression)** là bước lọc trước khi gửi: chỉ giữ đúng phần liên quan tới *câu hỏi này*. Dùng tìm kiếm ngữ nghĩa để rút đúng định nghĩa cần thiết, tóm tắt lịch sử chat dài thành vài dòng, cắt ví dụ mẫu thừa. Ý tưởng giống *schema linking* trong Text-to-SQL — nhưng ở đây mục tiêu thẳng vào **token và tiền**, không chỉ độ chính xác.
+**Tỉa ngữ cảnh (context pruning/compression)** là bước lọc trước khi gửi: chỉ giữ đúng phần liên quan tới *câu hỏi này*. Dùng tìm kiếm ngữ nghĩa để rút đúng định nghĩa cần thiết, tóm tắt lịch sử chat dài thành vài dòng, cắt ví dụ mẫu thừa. Ý tưởng giống *schema linking* trong Text-to-SQL (AI biến câu hỏi thành câu lệnh SQL) — nhưng ở đây mục tiêu thẳng vào **token và tiền**, không chỉ độ chính xác.
 
 *Ví dụ minh hoạ:* tỉa lịch sử hội thoại và ví dụ mẫu thừa có thể cắt thêm 15–30% token đầu vào trên mỗi câu — cộng dồn với các đòn trên thành khác biệt lớn cuối tháng.
 
-## Đòn bẩy 5 — Tái dùng định nghĩa, đừng để LLM suy diễn lại mỗi lần
+## Đòn bẩy 5 — Tái dùng định nghĩa, đừng để LLM (Large Language Model — mô hình ngôn ngữ lớn) suy diễn lại mỗi lần
 
 Đòn cuối tinh tế hơn nhưng tích luỹ rất mạnh. Khi không có định nghĩa sẵn, mỗi lần gặp "khách hàng hoạt động", AI phải **suy diễn lại từ đầu**: đọc schema, đoán điều kiện, dựng logic — tốn token cho phần suy luận, và lần sau gặp lại vẫn làm lại từ đầu. Như bắt một nhân viên tính lại công thức doanh thu mỗi sáng vì hôm qua không ai chịu ghi nó ra giấy.
 

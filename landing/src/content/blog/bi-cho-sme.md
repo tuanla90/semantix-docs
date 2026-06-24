@@ -13,11 +13,11 @@ coverAlt: "Dữ liệu rời rạc từ nhiều kênh hội tụ thành một qu
 
 Một chủ shop thời trang ở TP.HCM mở điện thoại lúc 11 giờ đêm. App Shopee báo doanh thu hôm nay. App TikTok Shop báo một con số khác. KiotViet ở cửa hàng báo con số thứ ba. Cộng lại trên đầu ngón tay được khoảng 38 triệu — chắc vậy. Câu hỏi thật sự trong đầu chị không phải "hôm nay bán được bao nhiêu", mà là: *"Tháng sau nên nhập thêm mẫu nào, bỏ mẫu nào, và Tết tới ôm hàng bao nhiêu thì vừa?"*
 
-Chị có đủ số liệu để chết đuối trong đó. Nhưng không có lấy một con số đủ tin để ra quyết định ấy. Phản xạ thường thấy lúc này là tự nhủ "shop mình còn nhỏ, làm gì tới mức cần **Business Intelligence**". Đó chính xác là hiểu lầm tốn tiền nhất mà một chủ SME có thể mắc — và bài này dành mười phút để gỡ nó.
+Chị có đủ số liệu để chết đuối trong đó. Nhưng không có lấy một con số đủ tin để ra quyết định ấy. Phản xạ thường thấy lúc này là tự nhủ "shop mình còn nhỏ, làm gì tới mức cần **Business Intelligence** (BI — biến dữ liệu thành quyết định)". Đó chính xác là hiểu lầm tốn tiền nhất mà một chủ SME có thể mắc — và bài này dành mười phút để gỡ nó.
 
 ## BI thật ra là gì — và ba hiểu lầm khiến SME tránh xa nó
 
-Hỏi mười chủ doanh nghiệp vừa và nhỏ "BI là gì", chín người sẽ trả lời bằng một hình ảnh: cái dashboard nhiều màu, đầy biểu đồ tròn, trên màn hình lớn trong phòng họp tập đoàn. Hình ảnh đó là gốc của ba hiểu lầm:
+Hỏi mười chủ doanh nghiệp vừa và nhỏ "BI là gì", chín người sẽ trả lời bằng một hình ảnh: cái dashboard (bảng số trực quan) nhiều màu, đầy biểu đồ tròn, trên màn hình lớn trong phòng họp tập đoàn. Hình ảnh đó là gốc của ba hiểu lầm:
 
 - **"BI là dashboard đẹp."** Sai. Dashboard chỉ là *cái hiển thị*. Một biểu đồ đẹp dựng trên số liệu lẫn lộn vẫn là một quyết định sai được tô màu gradient.
 - **"BI là công cụ đắt tiền của tập đoàn."** Sai. Đó là một category sản phẩm, không phải bản chất của việc. Tập đoàn mua công cụ đắt vì họ có vấn đề đắt, không phải vì BI đắt.
@@ -61,7 +61,7 @@ Quên các chỉ số hào nhoáng đi. Một SME đa kênh ở Việt Nam, nế
 
 ## Self-service: trả quyền hỏi data về tay người làm kinh doanh
 
-Cản trở cuối cùng khiến SME nghĩ BI "không dành cho mình" là con người: *"Phải có nhân viên data, biết SQL, mới làm được."* Đúng với BI của mười năm trước. Mỗi câu hỏi mới phải xếp hàng chờ một người biết SQL viết truy vấn — chủ doanh nghiệp hỏi, vài ngày sau mới có số, lúc đó cơ hội đã trôi.
+Cản trở cuối cùng khiến SME nghĩ BI "không dành cho mình" là con người: *"Phải có nhân viên data, biết SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu), mới làm được."* Đúng với BI của mười năm trước. Mỗi câu hỏi mới phải xếp hàng chờ một người biết SQL viết truy vấn — chủ doanh nghiệp hỏi, vài ngày sau mới có số, lúc đó cơ hội đã trôi.
 
 Làn sóng **self-service analytics** lật ngược điều đó: trả quyền hỏi dữ liệu về tay người *có câu hỏi*, tức là business. Người hiểu câu hỏi và người gõ được câu trả lời, lần đầu tiên, là cùng một người. Với lớp AI hỏi-đáp bằng tiếng Việt, chủ shop gõ thẳng *"so doanh thu ba kênh tháng này, trừ phí sàn"* và nhận số trong vài giây — không qua khâu trung gian nào. *(Chúng tôi bàn kỹ cách đặt câu hỏi cho ra đúng số trong bài [5 câu hỏi nên hỏi AI hôm nay](/blog/ai-questions/).)*
 

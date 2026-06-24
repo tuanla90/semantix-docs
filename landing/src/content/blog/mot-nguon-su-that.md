@@ -11,13 +11,13 @@ cover: "/blog/covers/mot-nguon-su-that.svg"
 coverAlt: "Năm phòng ban mỗi nơi một con số doanh thu khác nhau quy về một định nghĩa chung"
 ---
 
-Sáng thứ Hai, cuộc họp giao ban. Sếp hỏi một câu tưởng đơn giản: *"Doanh thu tháng vừa rồi bao nhiêu?"* Trưởng phòng Sales mở file của mình: 4,2 tỷ. Kế toán lật bảng của Finance: 3,8 tỷ. Marketing chiếu dashboard ads: 4,5 tỷ. Ba con số, ba khuôn mặt bắt đầu khó chịu, và mười lăm phút sau cuộc họp biến thành phiên tòa xử xem *ai sai*.
+Sáng thứ Hai, cuộc họp giao ban. Sếp hỏi một câu tưởng đơn giản: *"Doanh thu tháng vừa rồi bao nhiêu?"* Trưởng phòng Sales mở file của mình: 4,2 tỷ. Kế toán lật bảng của Finance: 3,8 tỷ. Marketing chiếu dashboard (bảng số trực quan) ads: 4,5 tỷ. Ba con số, ba khuôn mặt bắt đầu khó chịu, và mười lăm phút sau cuộc họp biến thành phiên tòa xử xem *ai sai*.
 
 Sự thật phũ phàng: không ai sai cả. Sales tính cả đơn đã chốt nhưng chưa giao. Finance chỉ tính đơn đã thu được tiền và trừ đơn hoàn. Marketing đếm theo giá trị đơn hàng gán cho chiến dịch, gồm cả phần khách mua thêm. Mỗi người đều đúng — *theo định nghĩa trong file của mình.* Phản xạ đầu tiên của bạn lúc này có thể là "vậy gom hết data về một chỗ là xong". Nhưng đó chính là chỗ hiểu lầm đắt nhất về **một nguồn sự thật** — và bài này dành tám phút để gỡ.
 
 ## "Một nguồn sự thật" thật ra là gì
 
-Cụm từ **single source of truth** bị hiểu lệch ngay từ chữ "nguồn". Đa số nghe xong liền hình dung ra một *cái kho*: một database trung tâm, một data warehouse, một file Excel master mà cả công ty cùng nhìn vào. Cứ dồn mọi thứ về đấy là có sự thật chung.
+Cụm từ **single source of truth** (một nguồn sự thật chung — một định nghĩa thống nhất, không phải một database chung) bị hiểu lệch ngay từ chữ "nguồn". Đa số nghe xong liền hình dung ra một *cái kho*: một database (cơ sở dữ liệu) trung tâm, một data warehouse (kho dữ liệu tập trung để phân tích), một file Excel master mà cả công ty cùng nhìn vào. Cứ dồn mọi thứ về đấy là có sự thật chung.
 
 Sai. Một nguồn sự thật **không phải là nơi dữ liệu được lưu — mà là nơi dữ liệu được *định nghĩa*.** Hai chuyện này khác nhau như cái thư viện khác cuốn từ điển. Bạn có thể nhồi cả triệu cuốn sách vào một thư viện duy nhất, nhưng nếu mỗi người đọc hiểu chữ "doanh thu" một kiểu, bạn vẫn có năm sự thật trong một tòa nhà. Cái tạo ra sự thật chung không phải bốn bức tường, mà là cuốn từ điển treo ở cửa — chỗ ghi rõ "doanh thu" nghĩa là *cái gì*, tính *thế nào*, gồm và trừ *những gì*.
 
@@ -25,7 +25,7 @@ Sai. Một nguồn sự thật **không phải là nơi dữ liệu được lư
 
 ## Gom data về một database KHÔNG tự động tạo một sự thật
 
-Đây là cú twist mà rất nhiều dự án data đắt tiền vấp phải. Công ty bỏ vài trăm triệu dựng một data warehouse, kéo dữ liệu Sales, Finance, Marketing, kho, CRM về cùng một nơi. Ai cũng tưởng "xong, giờ chỉ có một nguồn rồi". Sáu tháng sau, cuộc họp giao ban vẫn ba con số như cũ.
+Đây là cú twist mà rất nhiều dự án data đắt tiền vấp phải. Công ty bỏ vài trăm triệu dựng một data warehouse, kéo dữ liệu Sales, Finance, Marketing, kho, CRM (Customer Relationship Management — phần mềm quản lý quan hệ khách hàng) về cùng một nơi. Ai cũng tưởng "xong, giờ chỉ có một nguồn rồi". Sáu tháng sau, cuộc họp giao ban vẫn ba con số như cũ.
 
 Vì sao? Vì khi mỗi phòng truy vấn cái warehouse đó, họ vẫn viết câu lệnh theo *định nghĩa riêng của mình*.
 

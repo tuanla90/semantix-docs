@@ -15,7 +15,7 @@ Một chủ shop thời trang ở TP.HCM mở báo cáo cuối quý, lọc top 5
 
 Ba tháng sau, doanh thu vẫn tụt. Lý do: gần một nửa nhóm "top chi tiêu" ấy là những người mua **một lần duy nhất** — một đám cưới, một lần sắm đồ công sở — rồi không bao giờ quay lại. Còn nhóm khách mua đều đặn 2–3 triệu mỗi tháng, những người thật sự nuôi cửa hàng, thì đang lặng lẽ rời đi vì chẳng ai để ý tới họ.
 
-Đây là nghịch lý ít người chịu tin: **khách chi nhiều nhất chưa chắc là khách tốt nhất.** Một đại gia mua một lần 50 triệu rồi biến mất kém giá trị hơn một người mua đều đặn 2 triệu mỗi tháng suốt hai năm. Và bạn sẽ không bao giờ phân biệt được hai loại khách này nếu chỉ nhìn vào một con số tổng chi tiêu. Bạn cần **RFM**.
+Đây là nghịch lý ít người chịu tin: **khách chi nhiều nhất chưa chắc là khách tốt nhất.** Một đại gia mua một lần 50 triệu rồi biến mất kém giá trị hơn một người mua đều đặn 2 triệu mỗi tháng suốt hai năm. Và bạn sẽ không bao giờ phân biệt được hai loại khách này nếu chỉ nhìn vào một con số tổng chi tiêu. Bạn cần **RFM** (Recency, Frequency, Monetary — phân khúc khách theo lần mua gần nhất, tần suất mua và số tiền chi).
 
 ## RFM là gì — và vì sao một con số không đủ
 
@@ -89,10 +89,10 @@ Khi đã có điểm R, F, M, người ta gộp khách thành các nhóm kinh đ
 </div>
 
 - **Champions (R cao, F cao, M cao):** nhóm vàng. **Việc cần làm:** đừng giảm giá — họ đã yêu bạn rồi. Hãy thưởng (early access, quà cảm ơn, chương trình giới thiệu). Một voucher 30% cho Champions là tiền vứt đi: họ vẫn mua dù không có nó.
-- **Loyal (R khá, F cao):** xương sống doanh thu. **Việc cần làm:** cross-sell, up-sell, nuôi để họ leo lên Champions. Đây là nhóm chủ shop ở đầu bài đã bỏ quên.
-- **New / Potential (R cao, F thấp):** vừa mua lần đầu. **Việc cần làm:** tập trung vào **lần mua thứ hai** — onboarding, gợi ý sản phẩm đi kèm. Khoảng cách từ đơn 1 sang đơn 2 là cú nhảy quan trọng nhất trong vòng đời khách.
-- **At-Risk (R tệ, nhưng F và M từng cao):** khách quý đang trượt đi. **Việc cần làm:** đây mới là nơi ngân sách win-back nên đổ vào — một tin nhắn "đã lâu không gặp" kèm ưu đãi cá nhân hóa thường rẻ hơn nhiều so với tìm một khách mới tương đương.
-- **Hibernating / Lost (R tệ, F thấp, M thấp):** **Việc cần làm:** một, hai lần "đánh thức" chi phí thấp, không được thì buông. Đốt tiền kéo lại nhóm này là lựa chọn tệ nhất về ROI.
+- **Loyal (R khá, F cao):** xương sống doanh thu. **Việc cần làm:** cross-sell (bán chéo — gợi sản phẩm bổ trợ), up-sell (bán nâng cấp — gợi phiên bản cao hơn), nuôi để họ leo lên Champions. Đây là nhóm chủ shop ở đầu bài đã bỏ quên.
+- **New / Potential (R cao, F thấp):** vừa mua lần đầu. **Việc cần làm:** tập trung vào **lần mua thứ hai** — onboarding (dẫn dắt khách mới làm quen), gợi ý sản phẩm đi kèm. Khoảng cách từ đơn 1 sang đơn 2 là cú nhảy quan trọng nhất trong vòng đời khách.
+- **At-Risk (R tệ, nhưng F và M từng cao):** khách quý đang trượt đi. **Việc cần làm:** đây mới là nơi ngân sách win-back (giành lại khách cũ) nên đổ vào — một tin nhắn "đã lâu không gặp" kèm ưu đãi cá nhân hóa thường rẻ hơn nhiều so với tìm một khách mới tương đương.
+- **Hibernating / Lost (R tệ, F thấp, M thấp):** **Việc cần làm:** một, hai lần "đánh thức" chi phí thấp, không được thì buông. Đốt tiền kéo lại nhóm này là lựa chọn tệ nhất về ROI (Return on Investment — tỷ suất hoàn vốn, lợi ích thu được so với chi phí bỏ ra).
 
 Bạn để ý chứ: cùng một con số tổng chi tiêu có thể nằm ở Champions, At-Risk hay Lost — và mỗi nơi đòi một hành động ngược nhau hoàn toàn. Đó chính là thứ mà cột "tổng chi" không bao giờ nói cho bạn.
 
@@ -109,13 +109,13 @@ Nếu bạn từng đọc về [Cohort Analysis](/blog/cohort-analysis/), bạn 
 
 ## RFM với Semantix
 
-Trước đây, làm RFM tử tế ngốn của analyst cả buổi: viết SQL tính quintile cho từng chiều, ghép ba điểm, ánh xạ sang nhóm, rồi dựng bảng. Sai một ngưỡng là phải làm lại từ đầu.
+Trước đây, làm RFM tử tế ngốn của analyst cả buổi: viết SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) tính quintile cho từng chiều, ghép ba điểm, ánh xạ sang nhóm, rồi dựng bảng. Sai một ngưỡng là phải làm lại từ đầu.
 
 Semantix không phải một chatbot cắm vào database rồi đoán bừa. Bạn kết nối dữ liệu một lần, định nghĩa "khách hàng", "đơn hàng", "doanh thu" trong [Semantic Layer](/blog/semantic-layer/), rồi hỏi thẳng bằng tiếng Việt:
 
 > **"Phân khúc RFM khách hàng 12 tháng qua, liệt kê nhóm At-Risk có giá trị cao nhất và cách họ thường mua."**
 
-Semantix hiểu đây là một phân tích RFM, tự tính điểm theo chính dữ liệu của bạn, gán nhóm, và trả về danh sách kèm chân dung — không cần SQL, không cần dựng pivot. Từ đó bạn biết *chính xác* ai cần một tin nhắn win-back vào tuần này. Nếu chưa quen cách đặt câu hỏi cho ra phân khúc đúng, [bài về câu hỏi tốt cho AI](/blog/ai-questions/) có sẵn công thức.
+Semantix hiểu đây là một phân tích RFM, tự tính điểm theo chính dữ liệu của bạn, gán nhóm, và trả về danh sách kèm chân dung — không cần SQL, không cần dựng pivot (bảng tổng hợp xoay chiều). Từ đó bạn biết *chính xác* ai cần một tin nhắn win-back vào tuần này. Nếu chưa quen cách đặt câu hỏi cho ra phân khúc đúng, [bài về câu hỏi tốt cho AI](/blog/ai-questions/) có sẵn công thức.
 
 ## Tóm lại
 

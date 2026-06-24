@@ -35,8 +35,8 @@ Câu trả lời ngược đời nhưng hiệu quả: **một AI khác, được
 
 Ý tưởng đơn giản đến bất ngờ. Thay vì một AI vừa đề xuất vừa tự duyệt, ta tách thành hai vai rạch ròi:
 
-- **Agent A — người đề xuất (proposer).** Nhận câu hỏi, dựng phân tích, viết SQL, đưa ra diễn giải. Nhiệm vụ của nó là *trả lời*.
-- **Agent B — người phản biện (critic).** Không tin Agent A. Nhiệm vụ của nó là *tìm chỗ sai*: truy lại schema, soi từng giả định, kiểm tra phép so sánh có cùng kỳ không, bộ lọc có bỏ sót gì không, định nghĩa "doanh thu" có khớp không.
+- **Agent A — người đề xuất (proposer).** Agent (tác tử AI tự lập kế hoạch và gọi công cụ) này nhận câu hỏi, dựng phân tích, viết SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu), đưa ra diễn giải. Nhiệm vụ của nó là *trả lời*.
+- **Agent B — người phản biện (critic).** Không tin Agent A. Nhiệm vụ của nó là *tìm chỗ sai*: truy lại schema (cấu trúc bảng/cột của database), soi từng giả định, kiểm tra phép so sánh có cùng kỳ không, bộ lọc có bỏ sót gì không, định nghĩa "doanh thu" có khớp không.
 
 Hai agent này **tranh luận** qua một hoặc vài vòng. Agent B nêu điểm nghi ngờ, Agent A bảo vệ hoặc sửa lại. Khi cả hai **hội tụ** — hoặc khi Agent B không còn lỗ hổng nào để bới — kết quả mới được chốt thành báo cáo.
 

@@ -15,7 +15,7 @@ Trong phòng họp sáng thứ Hai, anh Sales đứng lên: "Doanh thu tháng n�
 
 Phản xạ đầu tiên của cả phòng là đi tìm lỗi tính toán — chắc ai đó cộng nhầm, hoặc Excel kéo công thức thiếu một dòng. Nhưng gần như chắc chắn **không ai cộng sai cả**. Anh Sales tính cả đơn đã chốt nhưng chưa giao. Chị Kế toán chỉ tính đơn đã thu tiền và đã trừ hàng hoàn. Hai con số khác nhau vì hai người đang gọi **hai thứ khác nhau** bằng đúng một từ: "doanh thu".
 
-Đây là sự thật ngược đời ít người chịu tin: lý do hai báo cáo lệch nhau hiếm khi là sai số tính toán — mà là mọi người chưa thống nhất *cái gì đang được đo, cắt theo lát nào, và so với mục tiêu nào.* Gỡ được chuyện đó chỉ cần hiểu đúng ba từ vựng nền tảng: **Metric**, **Dimension** và **KPI**. Ba từ ai cũng nói, ít người phân biệt rạch ròi — và đó là gốc của hầu hết những cuộc cãi nhau quanh con số.
+Đây là sự thật ngược đời ít người chịu tin: lý do hai báo cáo lệch nhau hiếm khi là sai số tính toán — mà là mọi người chưa thống nhất *cái gì đang được đo, cắt theo lát nào, và so với mục tiêu nào.* Gỡ được chuyện đó chỉ cần hiểu đúng ba từ vựng nền tảng: **Metric (con số đo được)**, **Dimension (lát cắt để xoay nhìn metric)** và **KPI (Key Performance Indicator — chỉ số hiệu suất then chốt)**. Ba từ ai cũng nói, ít người phân biệt rạch ròi — và đó là gốc của hầu hết những cuộc cãi nhau quanh con số.
 
 ## Ba từ, ba việc hoàn toàn khác nhau
 
@@ -64,7 +64,7 @@ Sự khác biệt nằm gọn ở chữ "mục tiêu":
 
 Nói cách khác, KPI = metric + mục tiêu + ngữ cảnh đánh giá. Mọi KPI đều là metric, nhưng phần lớn metric chỉ là số đo bình thường, không phải KPI. Một công ty đo *hàng trăm* metric, nhưng chỉ nên chọn ra **5–10 KPI** thật sự phản ánh sức khỏe kinh doanh — nhiều hơn thì không ai nhìn nổi, mà nhìn không nổi thì coi như không có.
 
-Cái bẫy phổ biến: nhồi 30 con số lên một dashboard rồi gọi tất cả là "KPI". Khi mọi thứ đều là chỉ số then chốt thì **không gì là then chốt cả** — mắt người ta lướt qua hết, chẳng con số nào thúc được một hành động.
+Cái bẫy phổ biến: nhồi 30 con số lên một dashboard (bảng số trực quan tổng hợp nhiều biểu đồ trên một màn hình) rồi gọi tất cả là "KPI". Khi mọi thứ đều là chỉ số then chốt thì **không gì là then chốt cả** — mắt người ta lướt qua hết, chẳng con số nào thúc được một hành động.
 
 ## Vì sao lẫn lộn ba từ này khiến báo cáo cãi nhau
 
@@ -81,7 +81,7 @@ Ba mầm mống lẫn lộn, gộp lại thành mười lăm phút cãi nhau mà
 Semantix không giải bài này bằng cách thêm một dashboard đẹp hơn — vì cãi nhau về con số chưa bao giờ là do thiếu biểu đồ. Gốc rễ là mỗi người mang một định nghĩa riêng. Nên cách tiếp cận đi vào tận chỗ đó:
 
 1. **Định nghĩa metric một lần** trong [Semantic Layer — tầng nghiệp vụ dùng chung](/blog/semantic-layer/): "doanh thu" được chốt là *đã thu tiền, đã trừ hoàn, không gồm phí ship* — và từ đó **ai hỏi cũng ra đúng con số ấy**, dù là sếp, Sales hay kế toán.
-2. **Khai báo dimension sẵn:** theo kênh, theo tháng, theo sản phẩm — để bất cứ ai cũng xoay khối Rubik được mà không cần biết một dòng SQL.
+2. **Khai báo dimension sẵn:** theo kênh, theo tháng, theo sản phẩm — để bất cứ ai cũng xoay khối Rubik được mà không cần biết một dòng SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu).
 3. **Gắn mục tiêu thành KPI:** chọn ra dăm con số then chốt, treo mốc lên, theo dõi tự động.
 
 Một lần định nghĩa. Cả công ty nói cùng một ngôn ngữ. Báo cáo ngừng cãi nhau — không phải vì ai đó thắng, mà vì không còn gì để cãi.

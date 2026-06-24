@@ -23,13 +23,13 @@ coverAlt: "Phễu hành vi từ truy cập đến activation và giữ chân"
   </ol>
 </div>
 
-Hai phần đầu của series nhóm khách theo **thời điểm** họ bắt đầu. Nhưng cohort mạnh hơn thế nhiều: bạn có thể nhóm theo **họ đến từ đâu** và **họ đã làm gì lúc đầu**. Đây là lúc cohort chuyển từ "chẩn đoán" sang "kê đơn" — không chỉ cho biết bạn ốm, mà chỉ ra phải uống thuốc gì.
+Hai phần đầu của series nhóm khách theo **thời điểm** họ bắt đầu. Nhưng cohort (nhóm khách gộp theo thời điểm bắt đầu) mạnh hơn thế nhiều: bạn có thể nhóm theo **họ đến từ đâu** và **họ đã làm gì lúc đầu**. Đây là lúc cohort chuyển từ "chẩn đoán" sang "kê đơn" — không chỉ cho biết bạn ốm, mà chỉ ra phải uống thuốc gì.
 
 Sự thật nền tảng: **không phải khách hàng nào cũng như nhau.** Đường cong giữ chân tổng là trung bình của nhiều nhóm rất khác nhau — và cái trung bình đó che giấu cả nhóm đang cứu bạn lẫn nhóm đang rút máu bạn.
 
 ## Acquisition cohort: kênh rẻ nhất thường là kênh đắt nhất
 
-Nhóm khách theo **kênh hoặc chiến dịch** họ đến (Google Ads, giới thiệu, TikTok, organic...), rồi vẽ đường cong giữ chân cho từng kênh. Bạn gần như luôn thấy điều này:
+Nhóm khách theo **kênh hoặc chiến dịch acquisition** (acquisition — thu hút khách mới) họ đến (Google Ads, giới thiệu, TikTok, organic...), rồi vẽ đường cong giữ chân cho từng kênh. Bạn gần như luôn thấy điều này:
 
 > Kênh có **chi phí mỗi đơn đầu tiên rẻ nhất** thường lại là kênh có **chi phí mỗi khách giữ được đắt nhất.**
 
@@ -41,7 +41,7 @@ Chỉ nhìn CAC (chi phí thu hút) mà không ghép với đường cong giữ 
 
 Đây là ứng dụng giá trị nhất của cohort cho sản phẩm. Thay vì nhóm theo *khi nào* hay *từ đâu*, hãy nhóm theo **những gì khách làm trong vài ngày đầu** — rồi xem hành động nào dự báo việc họ ở lại lâu dài.
 
-Khoảnh khắc đó gọi là **activation moment** (hay "aha moment"): hành động sớm mà sau khi làm, xác suất giữ chân tăng vọt. Vài ví dụ kinh điển trong ngành:
+Khoảnh khắc đó gọi là **activation moment** (hay "aha moment" — thời điểm khách lần đầu nhận được giá trị thật từ sản phẩm): hành động sớm mà sau khi làm, xác suất giữ chân tăng vọt. Vài ví dụ kinh điển trong ngành:
 
 - Mạng xã hội: kết bạn với **≥ N người trong 10 ngày đầu**.
 - Công cụ cộng tác: tạo nhóm và **mời ít nhất 1 đồng nghiệp** trong phiên đầu.

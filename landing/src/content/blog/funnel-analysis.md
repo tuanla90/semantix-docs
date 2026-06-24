@@ -11,11 +11,11 @@ cover: "/blog/covers/funnel-analysis.svg"
 coverAlt: "Phễu chuyển đổi thu hẹp dần qua 4 bước với một điểm rò rỉ chính được đánh dấu"
 ---
 
-Một shop thời trang trên Shopee tháng vừa rồi tăng gấp đôi ngân sách ads. Traffic vào trang sản phẩm tăng từ 40.000 lên 82.000 lượt. Chủ shop hài lòng — cho tới khi nhìn doanh thu: gần như đứng im. Tiền ads thì đã đốt thật.
+Một shop thời trang trên Shopee tháng vừa rồi tăng gấp đôi ngân sách ads. Traffic (lượng truy cập) vào trang sản phẩm tăng từ 40.000 lên 82.000 lượt. Chủ shop hài lòng — cho tới khi nhìn doanh thu: gần như đứng im. Tiền ads thì đã đốt thật.
 
 Phản xạ đầu tiên của họ là kết luận "ads kém hiệu quả, đổi agency thôi". Nhưng đó là chẩn đoán sai bệnh. Khi mổ xẻ phễu, sự thật lộ ra: **67% khách thêm hàng vào giỏ rồi biến mất ở đúng một bước — nhập địa chỉ giao hàng.** *(ví dụ minh họa)* Traffic chưa bao giờ là vấn đề. Họ đang bơm thêm nước vào một cái xô mà lỗ thủng nằm gần đáy. Bơm càng mạnh, nước chảy ra càng nhiều.
 
-Đây là nghịch lý ít người chịu tin: **mọi phễu bán hàng đều có MỘT điểm chảy máu chính. Bịt đúng điểm đó tạo impact gấp 3–5 lần so với tối ưu lặt vặt mọi bước.** Và bạn sẽ không thấy nó nếu chỉ nhìn doanh thu tổng. Chỉ **Funnel Analysis** kể được.
+Đây là nghịch lý ít người chịu tin: **mọi phễu bán hàng đều có MỘT điểm chảy máu chính. Bịt đúng điểm đó tạo impact gấp 3–5 lần so với tối ưu lặt vặt mọi bước.** Và bạn sẽ không thấy nó nếu chỉ nhìn doanh thu tổng. Chỉ **Funnel Analysis** (phân tích phễu chuyển đổi — chuỗi bước khách đi qua từ xem đến mua) kể được.
 
 ## Funnel Analysis là gì?
 
@@ -23,7 +23,7 @@ Phễu (funnel) là chuỗi các bước khách phải đi qua từ lúc biết 
 
 **Xem sản phẩm → Thêm vào giỏ → Bắt đầu thanh toán → Mua thành công.**
 
-Mỗi tầng hẹp hơn tầng trước — vì luôn có người rơi rụng. Đó là chuyện bình thường: không phải ai xem cũng mua. Funnel Analysis không đếm số người ở mỗi tầng (số tuyệt đối), mà đo **tỷ lệ chuyển tiếp giữa hai tầng liền kề** — và đi tìm chỗ tỷ lệ đó tụt bất thường.
+Mỗi tầng hẹp hơn tầng trước — vì luôn có người rơi rụng. Đó là chuyện bình thường: không phải ai xem cũng mua. Funnel Analysis không đếm số người ở mỗi tầng (số tuyệt đối), mà đo **tỷ lệ chuyển tiếp giữa hai tầng liền kề** (conversion rate — tỷ lệ chuyển đổi) — và đi tìm chỗ tỷ lệ đó tụt bất thường.
 
 Hình dung cái phễu như một đường ống nhiều đoạn nối tiếp. Nước (khách) chảy từ trên xuống. Bạn không cần biết tổng lượng nước thất thoát — bạn cần biết *đoạn ống nào đang nứt to nhất*.
 
@@ -65,15 +65,15 @@ Bước "Giỏ → Thanh toán" tụt xuống 33% trong khi các bước khác g
 
 > Quy tắc vàng: **một phễu không được đọc bằng độ cao của tầng cuối, mà bằng độ dốc giữa các tầng.** Tầng nào dốc bất thường, ống nứt nằm ở đó.
 
-## Drop-off bình thường vs bất thường: làm sao phân biệt?
+## Drop-off (tỷ lệ rơi rụng) bình thường vs bất thường: làm sao phân biệt?
 
 Câu hỏi đúng không phải "bước này rớt bao nhiêu phần trăm?" mà là "bước này rớt **nhiều hơn mức nên rớt** bao nhiêu?". Rớt 56% ở bước "Xem → Giỏ" nghe khủng khiếp, nhưng với ecom đó là *bình thường* — phần lớn người xem chỉ lướt, chưa có ý định mua. Ngược lại, rớt 67% ở bước "Giỏ → Thanh toán" là *bất thường*: những người này đã bỏ công chọn hàng, bấm thêm vào giỏ — họ có ý định rõ ràng. Mất 2/3 trong số đó là máu chảy.
 
 Ba cách tìm ngưỡng "bình thường" để so:
 
-1. **So với chính bạn trong quá khứ.** Tháng này bước checkout rớt 67%, ba tháng trước rớt 48% — vậy có gì đó vừa hỏng (đổi giao diện? thêm bước? phí ship tăng?).
+1. **So với chính bạn trong quá khứ.** Tháng này bước checkout (thanh toán) rớt 67%, ba tháng trước rớt 48% — vậy có gì đó vừa hỏng (đổi giao diện? thêm bước? phí ship tăng?).
 2. **So với benchmark ngành.** Tỷ lệ bỏ giỏ hàng (cart abandonment) trung bình ngành ecom toàn cầu quanh **68–70%** theo nhiều khảo sát. Nếu bạn ở mức đó, đừng hoảng — đó là mặt bằng chung. Nếu bạn ở **85%**, mới đáng báo động.
-3. **So sánh giữa các segment.** Cùng một bước, khách trên mobile rớt 80% còn desktop rớt 50% — vấn đề nằm ở trải nghiệm mobile, không phải ở bản thân cái bước đó.
+3. **So sánh giữa các segment (phân khúc khách).** Cùng một bước, khách trên mobile (điện thoại) rớt 80% còn desktop (máy tính) rớt 50% — vấn đề nằm ở trải nghiệm mobile, không phải ở bản thân cái bước đó.
 
 Không có con số "rớt bao nhiêu là xấu" tuyệt đối. Chỉ có *rớt nhiều hơn cái nên rớt* — và muốn biết, bạn phải có thứ để đối chiếu. (Đây cũng chính là tinh thần của một [câu hỏi dữ liệu tốt: luôn có đối chiếu](/blog/ai-questions/).)
 
@@ -109,7 +109,7 @@ Trước đây, dựng một phễu tử tế là việc của analyst: viết S
 
 Semantix không phải một chatbot cắm vào database rồi đoán mò. Nó hiểu "phễu", "drop-off", "mua thành công" nghĩa là gì trong *ngữ cảnh dữ liệu của bạn* — vì các khái niệm đó đã được định nghĩa một lần trong [Semantic Layer](/blog/semantic-layer/). Từ đó nó tự sinh SQL khớp cấu trúc bảng của bạn và trả về phễu kèm % rớt từng bước, tách theo segment — ngay lập tức. Bạn chỉ việc đọc chỗ nào dốc bất thường.
 
-Phễu cũng không sống một mình. Sau khi tìm ra khách rớt ở đâu, câu hỏi tiếp theo thường là *ai* rớt và *họ có quay lại không* — đó là lúc bạn ghép Funnel với [Cohort Analysis](/blog/cohort-analysis/) để thấy bức tranh đầy đủ.
+Phễu cũng không sống một mình. Sau khi tìm ra khách rớt ở đâu, câu hỏi tiếp theo thường là *ai* rớt và *họ có quay lại không* — đó là lúc bạn ghép Funnel với [Cohort Analysis](/blog/cohort-analysis/) (phân tích theo nhóm khách gộp theo thời điểm bắt đầu) để thấy bức tranh đầy đủ.
 
 ## Tóm lại
 

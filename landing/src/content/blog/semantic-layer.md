@@ -52,7 +52,7 @@ Không phải ngẫu nhiên mà những hệ AI hỏi-đáp dữ liệu mạnh n
 
 ### 2. Bảo mật theo dòng, tập trung một chỗ
 
-Semantic Layer cho phép kiểm soát ai thấy dữ liệu nào ngay tại tầng định nghĩa. Quản lý miền Bắc chỉ thấy số liệu miền Bắc — dù họ mở dashboard hay hỏi AI cùng một câu. Bảo mật không còn phụ thuộc vào việc từng analyst có nhớ thêm điều kiện `WHERE` hay không.
+Semantic Layer cho phép kiểm soát ai thấy dữ liệu nào ngay tại tầng định nghĩa. Quản lý miền Bắc chỉ thấy số liệu miền Bắc — dù họ mở dashboard (bảng số trực quan) hay hỏi AI cùng một câu. Bảo mật không còn phụ thuộc vào việc từng analyst có nhớ thêm điều kiện `WHERE` hay không.
 
 ### 3. Tốc độ phân tích tăng theo cấp số nhân
 
@@ -75,7 +75,7 @@ Semantix được xây từ đầu xoay quanh Semantic Layer. Thay vì hỏi AI 
 | Mỗi người tính doanh thu một kiểu | Một định nghĩa duy nhất cho toàn tổ chức |
 | AI đoán mò logic nghiệp vụ → số sai mà trông đúng | AI hiểu đúng ngữ cảnh từ đầu |
 | SQL mới cho mỗi câu hỏi mới | Logic tái sử dụng, trả lời tức thì |
-| Bảo mật phụ thuộc từng truy vấn | Row-level security tập trung |
+| Bảo mật phụ thuộc từng truy vấn | Row-Level Security (RLS — phân quyền theo hàng, mỗi người chỉ thấy đúng dòng được phép) tập trung |
 
 Nếu bạn đang cân nhắc triển khai AI Analytics, câu hỏi đầu tiên không phải "AI nào tốt nhất?" — mà là **"Công ty mình đã có một định nghĩa thống nhất cho 'doanh thu' chưa?"** Trả lời được câu đó, bạn đã đi trước phần lớn doanh nghiệp.
 

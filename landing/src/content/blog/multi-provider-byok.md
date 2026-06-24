@@ -15,19 +15,19 @@ Buổi demo diễn ra hoàn hảo. Bạn gõ *"so doanh thu ba kênh tháng này
 
 Nhưng có một câu hỏi không ai hỏi trong buổi demo đó, và nó mới là câu quan trọng nhất: *câu hỏi của bạn — kèm theo dữ liệu khách hàng để trả lời nó — vừa đi đâu?* Ai đang giữ **chìa khoá** (API key) mở cánh cửa AI ấy? Và nếu ngày mai nhà cung cấp đó tăng giá gấp đôi, đóng cửa, hoặc đổi điều khoản để dùng dữ liệu của bạn làm dữ liệu huấn luyện — bạn còn lựa chọn nào không?
 
-Phản xạ thường thấy là: "AI nào trả lời ngon nhất thì dùng cái đó, lo gì." Đó chính xác là cái bẫy. Chọn AI giỏi nhất hôm nay không sai — nhưng **khoá cứng** mình vào duy nhất nó thì là một rủi ro bạn không nhìn thấy, cho tới ngày nó trở thành hoá đơn hoặc một dòng tin pháp lý.
+Phản xạ thường thấy là: "AI nào trả lời ngon nhất thì dùng cái đó, lo gì." Đó chính xác là cái bẫy. Chọn AI giỏi nhất hôm nay không sai — nhưng **khoá cứng** mình vào duy nhất nó (một model — mô hình AI cụ thể) thì là một rủi ro bạn không nhìn thấy, cho tới ngày nó trở thành hoá đơn hoặc một dòng tin pháp lý.
 
 ## Vendor lock-in & dữ liệu: rủi ro ẩn
 
 **Vendor lock-in** (khoá nhà cung cấp) là khi việc rời bỏ một nhà cung cấp trở nên đắt đỏ tới mức bạn ở lại không phải vì nó tốt nhất, mà vì đi quá tốn. Với AI, cái khoá này có hai lớp — và lớp thứ hai nguy hiểm hơn nhiều.
 
-Lớp thứ nhất là **chi phí**. Bạn xây toàn bộ quy trình quanh một model, gắn chặt vào API của nó, đào tạo nhân sự theo nó. Khi nhà cung cấp tăng giá token, bạn không có đòn bẩy nào để mặc cả — chuyển đi tốn hàng tháng kỹ thuật, nên bạn nuốt mức giá mới. Lock-in biến một quyết định kỹ thuật thành một khoản tiền cố định mỗi tháng, không lối thoát.
+Lớp thứ nhất là **chi phí**. Bạn xây toàn bộ quy trình quanh một model, gắn chặt vào API của nó, đào tạo nhân sự theo nó. Khi nhà cung cấp tăng giá token (đơn vị văn bản mà mô hình AI xử lý và tính phí), bạn không có đòn bẩy nào để mặc cả — chuyển đi tốn hàng tháng kỹ thuật, nên bạn nuốt mức giá mới. Lock-in biến một quyết định kỹ thuật thành một khoản tiền cố định mỗi tháng, không lối thoát.
 
 Lớp thứ hai, ít người nhìn ra, là **dữ liệu**. Khi bạn gửi câu hỏi tới một AI dùng chung, bạn không chỉ gửi câu chữ — bạn gửi kèm ngữ cảnh: tên khách, con số doanh thu, cấu trúc nghiệp vụ. Với nhiều dịch vụ AI tiêu dùng, điều khoản mặc định cho phép họ *giữ lại và dùng* dữ liệu đó để cải thiện model. Nói thẳng: dữ liệu kinh doanh của bạn có thể trở thành dữ liệu huấn luyện của người khác — và bạn đã đồng ý từ lúc bấm "Tôi đồng ý".
 
 > Quy tắc vàng: nếu bạn không cầm chìa khoá và không biết dữ liệu của mình dừng lại ở đâu, thì AI đó không phục vụ bạn — bạn đang cho nó mượn tài sản của mình.
 
-Hãy hình dung bằng một ẩn dụ quen: dùng AI mà nhà cung cấp giữ key cũng như **thuê trọ mà chủ nhà giữ chìa khoá phòng bạn**. Mọi thứ ổn cho tới ngày chủ trọ tăng giá, đổi luật, hoặc tự vào phòng "dọn dẹp". Bạn ở trong nhà nhưng không làm chủ nó. **BYOK** lật ngược điều này: chìa khoá nằm trong túi bạn.
+Hãy hình dung bằng một ẩn dụ quen: dùng AI mà nhà cung cấp giữ key cũng như **thuê trọ mà chủ nhà giữ chìa khoá phòng bạn**. Mọi thứ ổn cho tới ngày chủ trọ tăng giá, đổi luật, hoặc tự vào phòng "dọn dẹp". Bạn ở trong nhà nhưng không làm chủ nó. **BYOK** (Bring Your Own Key — tự mang khóa API của mình) lật ngược điều này: chìa khoá nằm trong túi bạn.
 
 ## BYOK: bạn cắm chìa khoá của chính mình
 
@@ -51,7 +51,7 @@ BYOK mới là một nửa câu chuyện. Nửa còn lại là **đa nhà cung c
 
 *Ví dụ minh hoạ — chọn model rẻ cho việc nhẹ:* không phải câu hỏi nào cũng cần model đắt nhất. Phân loại một câu hỏi đơn giản, tóm tắt một bảng nhỏ — một model rẻ làm tốt với chi phí bằng một phần mười. Việc nặng, suy luận phức tạp mới gọi tới model cao cấp. Đa nhà cung cấp cho phép **định tuyến theo việc**: đúng model cho đúng tác vụ, thay vì trả giá hạng nhất cho mọi chuyến đi. *(Đây là một trục lớn trong [tối ưu chi phí token AI](/blog/toi-uu-chi-phi-token-ai/) mà nhiều doanh nghiệp bỏ lỡ.)*
 
-*Ví dụ minh hoạ — tuân thủ:* một số dữ liệu nhạy cảm không được phép rời khỏi hạ tầng của bạn. Với đa nhà cung cấp, bạn định tuyến những câu hỏi chạm vào dữ liệu đó tới một **model nội bộ / on-premise**, trong khi các câu hỏi thông thường vẫn dùng model đám mây mạnh nhất. Một nền tảng, hai đường đi, đúng với từng mức nhạy cảm.
+*Ví dụ minh hoạ — tuân thủ:* một số dữ liệu nhạy cảm không được phép rời khỏi hạ tầng của bạn. Với đa nhà cung cấp, bạn định tuyến những câu hỏi chạm vào dữ liệu đó tới một **model nội bộ / on-premise** (triển khai trên hạ tầng tự quản của doanh nghiệp), trong khi các câu hỏi thông thường vẫn dùng model đám mây mạnh nhất. Một nền tảng, hai đường đi, đúng với từng mức nhạy cảm.
 
 ## Vì sao điều này đặc biệt quan trọng ở Việt Nam
 
@@ -65,7 +65,7 @@ Bối cảnh **tuân thủ dữ liệu** ở Việt Nam đang siết lại, khô
 
 Semantix **không** bán cho bạn một "gói AI" để rồi nhốt bạn vào model của nó. Nó **không** đứng giữa bạn và nhà cung cấp AI để cộng một lớp phí mờ. Nó **không** buộc dữ liệu của bạn phải đi qua một đường duy nhất do nó định đoạt.
 
-Thay vào đó: bạn **cắm key của chính mình** (BYOK) cho nhà cung cấp bạn chọn — Claude, GPT, Gemini, hay một model nội bộ. Bạn **đổi nhà cung cấp** khi giá thay đổi hoặc nhu cầu tuân thủ đòi hỏi, mà tầng nghiệp vụ bên dưới không phải dựng lại. Semantix giữ phần khó — **Semantic Layer**, định nghĩa nghiệp vụ, bảo mật theo dòng — ổn định, còn model phía sau là **ổ cắm** bạn tự chọn phích. *(Vì sao việc làm chủ cả [dữ liệu của bạn](/blog/du-lieu-ban/) là nền của mọi thứ, và vì sao SME cũng cần đúng tư duy này, xem [BI cho SME](/blog/bi-cho-sme/).)*
+Thay vào đó: bạn **cắm key của chính mình** (BYOK) cho nhà cung cấp bạn chọn — Claude, GPT, Gemini, hay một model nội bộ. Bạn **đổi nhà cung cấp** khi giá thay đổi hoặc nhu cầu tuân thủ đòi hỏi, mà tầng nghiệp vụ bên dưới không phải dựng lại. Semantix giữ phần khó — **Semantic Layer** (tầng định nghĩa nghiệp vụ dùng chung), định nghĩa nghiệp vụ, bảo mật theo dòng — ổn định, còn model phía sau là **ổ cắm** bạn tự chọn phích. *(Vì sao việc làm chủ cả [dữ liệu của bạn](/blog/du-lieu-ban/) là nền của mọi thứ, và vì sao SME cũng cần đúng tư duy này, xem [BI cho SME](/blog/bi-cho-sme/).)*
 
 Nói cách khác, Semantix không phải nhà cung cấp AI. Nó là hạ tầng để bạn dùng AI mà vẫn cầm chìa khoá.
 

@@ -11,11 +11,11 @@ cover: "/blog/covers/vs-google-sheets.svg"
 coverAlt: "Một bảng tính tĩnh với dấu hỏi nằm ngoài khung, mũi tên chuyển sang câu hỏi tiếng Việt cho ra câu trả lời động"
 ---
 
-10 giờ tối. Bạn đang xem cái dashboard Google Sheets mình dựng cả tuần mới xong — đẹp, gọn, mười mấy biểu đồ tự cập nhật. Rồi mắt bạn dừng lại ở một con số lạ: **doanh thu TikTok Shop tuần này tụt 18%.** Câu hỏi bật ra ngay trong đầu: *tụt là do giảm số đơn, hay do khách mua giỏ nhỏ đi?*
+10 giờ tối. Bạn đang xem cái dashboard (bảng số trực quan) Google Sheets mình dựng cả tuần mới xong — đẹp, gọn, mười mấy biểu đồ tự cập nhật. Rồi mắt bạn dừng lại ở một con số lạ: **doanh thu TikTok Shop tuần này tụt 18%.** Câu hỏi bật ra ngay trong đầu: *tụt là do giảm số đơn, hay do khách mua giỏ nhỏ đi?*
 
-Bạn nhìn lại dashboard. Không có biểu đồ nào trả lời câu đó. Vì lúc dựng, bạn đâu có nghĩ tới nó. Thế là 10 giờ tối, bạn mở một tab mới, kéo pivot, gõ `=AVERAGEIF`, lọc tay theo kênh, theo tuần. Nửa tiếng sau bạn có câu trả lời — và cũng vừa kịp quên mất mình định hỏi gì tiếp theo.
+Bạn nhìn lại dashboard. Không có biểu đồ nào trả lời câu đó. Vì lúc dựng, bạn đâu có nghĩ tới nó. Thế là 10 giờ tối, bạn mở một tab mới, kéo pivot (bảng tổng hợp xoay chiều trong bảng tính), gõ `=AVERAGEIF`, lọc tay theo kênh, theo tuần. Nửa tiếng sau bạn có câu trả lời — và cũng vừa kịp quên mất mình định hỏi gì tiếp theo.
 
-Đây là lúc lộ ra điều ít người chịu tin: **đối thủ thật của một công cụ BI không phải Power BI hay Tableau — mà là chính file bảng tính bạn đang mở.** Và một dashboard bảng tính, dù bạn tự dựng hay mua template, **chỉ trả lời được đúng những câu mà người làm ra nó đã nghĩ tới trước.** Toàn bộ giá trị của phân tích lại nằm ở **câu hỏi tiếp theo bạn chưa kịp hỏi** — câu bật ra lúc 10 giờ tối khi thấy một con số lạ.
+Đây là lúc lộ ra điều ít người chịu tin: **đối thủ thật của một công cụ BI (Business Intelligence — biến dữ liệu thành quyết định) không phải Power BI hay Tableau — mà là chính file bảng tính bạn đang mở.** Và một dashboard bảng tính, dù bạn tự dựng hay mua template, **chỉ trả lời được đúng những câu mà người làm ra nó đã nghĩ tới trước.** Toàn bộ giá trị của phân tích lại nằm ở **câu hỏi tiếp theo bạn chưa kịp hỏi** — câu bật ra lúc 10 giờ tối khi thấy một con số lạ.
 
 ## Vì sao bảng tính "gánh" được rất lâu — và vì sao đó là cái bẫy
 
@@ -33,9 +33,9 @@ Họp sáng thứ Hai. Anh chủ chuỗi mở file quen thuộc — mười mấ
 
 Phản xạ đầu tiên là nghĩ "chắc ai đó kéo nhầm". Không ai sai cả — vấn đề là **"doanh thu" trong file đó chưa bao giờ được định nghĩa một lần.**
 
-*Ví dụ minh hoạ:* sheet có cột `Tổng tiền` và cột `Đã thu`. Người A pivot trên `Tổng tiền`, người B trên `Đã thu`, người C lọc thêm "trạng thái = hoàn thành" rồi mới cộng. Ba người thành thật, ba con số lệch nhau **10–15%**, và không có cách nào biết ai "đúng" vì không có ai đúng làm chuẩn. Tệ hơn cả: những định nghĩa đó **nằm ẩn trong các ô** — một `=SUMIFS` lồng ba tầng ở ô `M2` mà bạn không bao giờ mở ra đọc. Nếu bạn mua một file template, bạn còn **thừa kế nguyên giả định nghiệp vụ** của người làm ra nó: họ tính doanh thu theo đơn đã đặt hay đã giao? Có trừ đơn hoàn, trừ phí sàn không? Bạn không biết — và đang ra quyết định dựa trên một định nghĩa chưa từng nhìn thấy.
+*Ví dụ minh hoạ:* sheet có cột `Tổng tiền` và cột `Đã thu`. Người A pivot trên `Tổng tiền`, người B trên `Đã thu`, người C lọc thêm "trạng thái = hoàn thành" rồi mới cộng. Ba người thành thật, ba con số lệch nhau **10–15%**, và không có cách nào biết ai "đúng" vì không có ai đúng làm chuẩn. Tệ hơn cả: những định nghĩa đó **nằm ẩn trong các ô** — một `=SUMIFS` lồng ba tầng ở ô `M2` mà bạn không bao giờ mở ra đọc. Nếu bạn mua một file template (mẫu dựng sẵn), bạn còn **thừa kế nguyên giả định nghiệp vụ** của người làm ra nó: họ tính doanh thu theo đơn đã đặt hay đã giao? Có trừ đơn hoàn, trừ phí sàn không? Bạn không biết — và đang ra quyết định dựa trên một định nghĩa chưa từng nhìn thấy.
 
-## 2. Dashboard tĩnh trả câu đã đoán trước; phân tích thật là một CHUỖI drill-down
+## 2. Dashboard tĩnh trả câu đã đoán trước; phân tích thật là một CHUỖI drill-down (khoan sâu từng lớp dữ liệu)
 
 Một template bán sẵn thường có 10–15 biểu đồ dựng sẵn: doanh thu theo ngày, top sản phẩm, tỷ lệ theo kênh. Đẹp. Đủ cho cái nhìn tổng quan. Nhưng phân tích thực sự không sống ở cái nhìn tổng quan. Nó sống ở khoảnh khắc bạn thấy một con số *lệch* và buột miệng "ủa, vì sao?".
 
@@ -49,7 +49,7 @@ Mỗi mũi tên trong chuỗi đó, trong Google Sheets, là **một pivot mới
 
 ## 3. Có những phân tích bảng tính làm KHÔNG nổi — hoặc làm thì cực đau
 
-Cả một lớp phân tích mà bảng tính gần như bó tay, vì chúng đòi JOIN nhiều bảng và SQL nhiều bước — thứ Sheets không sinh ra để làm:
+Cả một lớp phân tích mà bảng tính gần như bó tay, vì chúng đòi JOIN (ghép nhiều bảng theo khóa chung) nhiều bảng và SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) nhiều bước — thứ Sheets không sinh ra để làm:
 
 - **Cohort retention heatmap** — nhóm khách theo tháng mua đầu, rồi theo dõi từng nhóm rụng dần qua các tháng. Trong Sheets, đây là địa ngục công thức mảng.
 - **RFM segmentation** — chấm điểm từng khách theo độ gần đây, tần suất, giá trị, rồi chia "VIP", "sắp rời bỏ", "ngủ đông". Làm được trên lý thuyết, nhưng cập nhật thủ công mỗi tháng thì không ai trụ nổi.
@@ -80,7 +80,7 @@ Bạn muốn cho quản lý chi nhánh A xem doanh số của riêng chi nhánh 
 
 ## … những điều đó trong Semantix
 
-Định vị Semantix dễ nhất bằng **phủ định**: nó **không bắt bạn bỏ Google Sheets**, không bắt dựng data warehouse, không bắt học SQL. Semantix dựng **ngay trên chính Google Sheets bạn đang dùng** — sheet là *cánh cửa vào, không phải cái trần*.
+Định vị Semantix dễ nhất bằng **phủ định**: nó **không bắt bạn bỏ Google Sheets**, không bắt dựng data warehouse (kho dữ liệu tập trung cho phân tích), không bắt học SQL. Semantix dựng **ngay trên chính Google Sheets bạn đang dùng** — sheet là *cánh cửa vào, không phải cái trần*.
 
 Khác biệt cốt lõi nằm ở một thứ bảng tính không có: **"doanh thu" được định nghĩa đúng một lần** — gọi là [Semantic Layer](/blog/semantic-layer/). Bạn, kế toán và sếp hỏi cùng một câu sẽ ra **cùng một số**, vì cả ba đang hỏi cùng một định nghĩa, không phải ba pivot mỗi người kéo một kiểu. Một lần định nghĩa, dùng mãi mãi. Quy trình gọn lại còn ba bước:
 

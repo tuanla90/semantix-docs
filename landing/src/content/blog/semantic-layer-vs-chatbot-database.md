@@ -13,7 +13,7 @@ coverAlt: "Hai luồng: database nối thẳng tới AI bằng mũi tên rối k
 
 *Muốn AI trả lời câu hỏi dữ liệu của bạn mà không đoán mò? [Dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/)*
 
-Buổi demo nào cũng giống nhau. Ai đó cắm một con AI thẳng vào database, gõ "doanh thu tháng này bao nhiêu?" bằng tiếng Việt, và vài giây sau màn hình hiện ra một con số gọn gàng. Cả phòng ồ lên. Trông như phép màu — không cần analyst, không cần SQL, hỏi gì đáp nấy.
+Buổi demo nào cũng giống nhau. Ai đó cắm một con AI thẳng vào database, gõ "doanh thu tháng này bao nhiêu?" bằng tiếng Việt, và vài giây sau màn hình hiện ra một con số gọn gàng. Cả phòng ồ lên. Trông như phép màu — không cần analyst, không cần SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu), hỏi gì đáp nấy.
 
 Câu thứ hai vẫn ổn. "Top 5 sản phẩm bán chạy?" — ra bảng đẹp. Đến câu thứ ba mới vỡ: *"doanh thu sau khi trừ hoàn hàng của chi nhánh miền Bắc quý vừa rồi"*. AI vẫn trả về một con số dứt khoát. Vấn đề là **không ai trong phòng biết con số đó có thật sự trừ hoàn hàng không, có chỉ tính miền Bắc không, "quý vừa rồi" nó hiểu là quý nào.** Nó ra một con số. Chỉ thế thôi.
 
@@ -21,7 +21,7 @@ Phản xạ đầu tiên của bạn có thể là: "AI bây giờ đủ giỏi 
 
 ## "Chatbot cắm thẳng DB" thật ra làm gì
 
-Cơ chế của kiểu này đơn giản đến mức dễ tin là đủ. Hệ thống **dump toàn bộ schema** — danh sách bảng, cột, kiểu dữ liệu — vào prompt, kèm câu hỏi của bạn, rồi để LLM **tự đoán**: bảng nào chứa câu trả lời, join nào nối chúng lại, cột nào là "doanh thu", lọc thế nào. AI nhìn vào `orders`, thấy có `gross_amount`, `discount_amount`, `refund_amount`, `tax` — và chọn lấy một tổ hợp *nghe hợp lý nhất*.
+Cơ chế của kiểu này đơn giản đến mức dễ tin là đủ. Hệ thống **dump toàn bộ schema** (cấu trúc bảng/cột của database) — danh sách bảng, cột, kiểu dữ liệu — vào prompt (đoạn mô tả nạp cho AI), kèm câu hỏi của bạn, rồi để LLM (Large Language Model — mô hình ngôn ngữ lớn) **tự đoán**: bảng nào chứa câu trả lời, join nào nối chúng lại, cột nào là "doanh thu", lọc thế nào. AI nhìn vào `orders`, thấy có `gross_amount`, `discount_amount`, `refund_amount`, `tax` — và chọn lấy một tổ hợp *nghe hợp lý nhất*.
 
 Hãy hình dung bạn thuê **một phiên dịch viên giỏi ngữ pháp tuyệt đối, nhưng chưa từng làm trong ngành của bạn.** Bạn đưa cho họ một cuốn sổ kế toán đầy thuật ngữ nội bộ và bảo "dịch giúp tôi câu này". Họ dịch trơn tru, ngữ pháp không một lỗi. Chỉ là khi gặp chữ "doanh thu thuần" trong sổ của bạn, họ phải *tự đoán* nó nghĩa là gì — vì không ai đưa cho họ cuốn từ điển nội bộ của công ty. Đoán đúng hay sai, họ vẫn nói ra với giọng tự tin y hệt.
 
@@ -50,11 +50,11 @@ WHERE created_at >= '2026-07-01'
 
 Hai con số chênh nhau 15–20%. Cả hai "đúng cú pháp". Và bạn không có cách nào biết lần nào theo đúng định nghĩa thật của mình.
 
-Trong một **Semantic Layer**, "doanh thu" được khai báo *đúng một lần* — kèm trừ gì, lọc gì, ở trạng thái nào — và AI buộc phải dùng định nghĩa đó. Khoảng trống để đoán biến mất, vì câu trả lời đã được viết sẵn trong cuốn từ điển.
+Trong một **Semantic Layer** (tầng định nghĩa nghiệp vụ dùng chung), "doanh thu" được khai báo *đúng một lần* — kèm trừ gì, lọc gì, ở trạng thái nào — và AI buộc phải dùng định nghĩa đó. Khoảng trống để đoán biến mất, vì câu trả lời đã được viết sẵn trong cuốn từ điển.
 
 ## 2. Join sai quan hệ: số bị thổi phồng mà không văng lỗi
 
-Kiểu này tinh vi hơn, vì nó **không báo lỗi**. AI cần nối `orders` với `order_items` nhưng quên rằng một đơn có nhiều dòng sản phẩm. Kết quả: mỗi đơn bị đếm lặp theo số sản phẩm, doanh thu phình lên mà không ai hay.
+Kiểu này tinh vi hơn, vì nó **không báo lỗi**. AI cần join (nối bảng) `orders` với `order_items` nhưng quên rằng một đơn có nhiều dòng sản phẩm. Kết quả: mỗi đơn bị đếm lặp theo số sản phẩm, doanh thu phình lên mà không ai hay.
 
 *Ví dụ minh hoạ:*
 
@@ -96,9 +96,9 @@ Một Semantic Layer áp **bảo mật theo dòng** (row-level security) ngay t�
 
 Đến đây có một sợi chỉ xuyên suốt cả năm khía cạnh, và nó là điểm dễ hiểu sai nhất.
 
-Semantix **không phải chatbot cắm vào database** — mà là AI tra một **cuốn từ điển nghiệp vụ có luật**. Khác biệt không nằm ở việc dùng AI thông minh hơn. Một model to hơn vẫn đoán token theo xác suất; nó chỉ bịa *mượt* hơn, tức là khó phát hiện hơn. Khác biệt nằm ở chỗ **bạn định nghĩa entity, metric, quan hệ và luật MỘT LẦN** trong semantic layer — rồi AI sinh SQL *neo vào* đó, thay vì đoán schema từ con số không.
+Semantix **không phải chatbot cắm vào database** — mà là AI tra một **cuốn từ điển nghiệp vụ có luật**. Khác biệt không nằm ở việc dùng AI thông minh hơn. Một model to hơn vẫn đoán token theo xác suất; nó chỉ bịa *mượt* hơn, tức là khó phát hiện hơn. Khác biệt nằm ở chỗ **bạn định nghĩa entity (thực thể nghiệp vụ — khách, đơn, sản phẩm), metric (con số đo được như doanh thu, số đơn), quan hệ và luật MỘT LẦN** trong semantic layer — rồi AI sinh SQL *neo vào* đó, thay vì đoán schema từ con số không.
 
-Quay lại người phiên dịch ở đầu bài: anh ta không trở nên đáng tin hơn vì bạn thuê một người thông minh hơn. Anh ta đáng tin vì cuối cùng có ai đó **đưa cho anh cuốn từ điển nội bộ của công ty** — đánh dấu rõ "doanh thu thuần" nghĩa là gì, thuật ngữ nào cấm dùng sai, và dặn: gặp gì không chắc thì hỏi, đừng đoán. Không ngẫu nhiên mà những hệ Text-to-SQL mạnh nhất thế giới — WrenAI, hay SuperSonic của Tencent — đều xây *quanh* một semantic layer, chứ không gắn AI thẳng vào database. Phong trào "metrics layer" / "semantic layer" (dbt, Cube, LookML) ra đời đúng để giải bài toán này.
+Quay lại người phiên dịch ở đầu bài: anh ta không trở nên đáng tin hơn vì bạn thuê một người thông minh hơn. Anh ta đáng tin vì cuối cùng có ai đó **đưa cho anh cuốn từ điển nội bộ của công ty** — đánh dấu rõ "doanh thu thuần" nghĩa là gì, thuật ngữ nào cấm dùng sai, và dặn: gặp gì không chắc thì hỏi, đừng đoán. Không ngẫu nhiên mà những hệ Text-to-SQL (kỹ thuật để AI biến câu hỏi ngôn ngữ tự nhiên thành câu lệnh SQL) mạnh nhất thế giới — WrenAI, hay SuperSonic của Tencent — đều xây *quanh* một semantic layer, chứ không gắn AI thẳng vào database. Phong trào "metrics layer" / "semantic layer" (dbt, Cube, LookML) ra đời đúng để giải bài toán này.
 
 > Quy tắc vàng: đừng hỏi "AI có đủ giỏi để hiểu database của tôi không". Hãy hỏi "AI đang *tra luật* hay đang *đoán schema*". Một câu trả lời đáng tin không đến từ một AI thông minh hơn — nó đến từ một cuốn từ điển nghiệp vụ mà AI buộc phải dùng.
 

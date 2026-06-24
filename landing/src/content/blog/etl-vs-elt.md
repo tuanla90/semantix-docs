@@ -11,9 +11,9 @@ cover: "/blog/covers/etl-vs-elt.svg"
 coverAlt: "Hai luồng xử lý dữ liệu E-T-L và E-L-T với thứ tự khối Transform và Load hoán đổi"
 ---
 
-Một COO ở TP.HCM hỏi đội data một câu tưởng đơn giản: *"Khách mua lần đầu mùa sale tháng 10 có quay lại mua mùa Tết không?"* Câu trả lời không phải một con số. Câu trả lời là: *"Để bọn em dựng lại pipeline, khoảng ba ngày nữa có."* Tuần sau, chị hỏi một câu khác. Lại ba ngày. Mỗi câu hỏi mới của business là một đơn hàng đặt cho kỹ sư, xếp hàng chờ xử lý.
+Một COO (Chief Operating Officer — giám đốc vận hành) ở TP.HCM hỏi đội data một câu tưởng đơn giản: *"Khách mua lần đầu mùa sale tháng 10 có quay lại mua mùa Tết không?"* Câu trả lời không phải một con số. Câu trả lời là: *"Để bọn em dựng lại pipeline (đường ống dữ liệu — quy trình tự động đưa dữ liệu từ nguồn về kho), khoảng ba ngày nữa có."* Tuần sau, chị hỏi một câu khác. Lại ba ngày. Mỗi câu hỏi mới của business là một đơn hàng đặt cho kỹ sư, xếp hàng chờ xử lý.
 
-Phản xạ đầu tiên là trách đội data làm chậm. Nhưng họ không chậm — họ đang bị một quyết định kiến trúc từ nhiều năm trước trói tay. Quyết định đó nằm gọn trong thứ tự ba chữ cái: **E-T-L** hay **E-L-T**. Đảo vị trí chữ T và chữ L nghe như chuyện kỹ thuật vặt của dân hạ tầng. Thực ra nó quyết định một điều rất đời: ai trong công ty được phép đặt câu hỏi mới với dữ liệu — chỉ kỹ sư, hay cả bạn.
+Phản xạ đầu tiên là trách đội data làm chậm. Nhưng họ không chậm — họ đang bị một quyết định kiến trúc từ nhiều năm trước trói tay. Quyết định đó nằm gọn trong thứ tự ba chữ cái: **ETL** (Extract, Transform, Load) hay **ELT** (Extract, Load, Transform). Đảo vị trí chữ T và chữ L nghe như chuyện kỹ thuật vặt của dân hạ tầng. Thực ra nó quyết định một điều rất đời: ai trong công ty được phép đặt câu hỏi mới với dữ liệu — chỉ kỹ sư, hay cả bạn.
 
 ## ETL và ELT là gì — và khác nhau đúng một chỗ
 
@@ -55,11 +55,11 @@ Với **ETL**, vì phải biến đổi *trước khi* nạp, nên ai đó phả
 
 Với **ELT**, dữ liệu thô đã nằm sẵn trong kho. Việc biến đổi xảy ra *sau*, lúc có câu hỏi — và có thể do nhiều người làm, bằng nhiều công cụ, kể cả công cụ hỏi bằng tiếng Việt. Người *có câu hỏi* và người *lấy được câu trả lời* lần đầu tiên có thể là cùng một người. Đây chính là nền móng kỹ thuật cho [self-service analytics — trả quyền hỏi data về tay business](/blog/hop-nhat-da-kenh/): nó chỉ chạy được khi dữ liệu thô đã ở sẵn một chỗ, chờ được hỏi.
 
-*Ví dụ minh họa:* một chuỗi F&B đổ thô doanh số 8 chi nhánh vào kho theo kiểu ELT. Tuần này quản lý hỏi "chi nhánh nào lỗ giờ trưa", tuần sau hỏi "món nào kéo khách nhưng không ra lời" — không câu nào cần dựng lại pipeline, vì nguyên liệu thô đã nằm trong tủ, chỉ "nấu" lại theo câu hỏi. Thời gian từ câu hỏi đến câu trả lời rớt từ *vài ngày* xuống *vài phút*.
+*Ví dụ minh họa:* một chuỗi F&B (Food & Beverage — ngành ăn uống) đổ thô doanh số 8 chi nhánh vào kho theo kiểu ELT. Tuần này quản lý hỏi "chi nhánh nào lỗ giờ trưa", tuần sau hỏi "món nào kéo khách nhưng không ra lời" — không câu nào cần dựng lại pipeline, vì nguyên liệu thô đã nằm trong tủ, chỉ "nấu" lại theo câu hỏi. Thời gian từ câu hỏi đến câu trả lời rớt từ *vài ngày* xuống *vài phút*.
 
 ## Vậy SME nên chọn gì?
 
-Câu trả lời thẳng: với gần như mọi SME đa kênh hôm nay, **ELT là mặc định đúng** — và bạn thường không cần tự dựng nó.
+Câu trả lời thẳng: với gần như mọi SME (Small & Medium Enterprise — doanh nghiệp nhỏ và vừa) đa kênh hôm nay, **ELT là mặc định đúng** — và bạn thường không cần tự dựng nó.
 
 Lý do: nhu cầu phân tích của SME *thay đổi liên tục*. Hôm nay lo tồn kho Tết, tháng sau lo giữ chân khách mùa sale, quý sau lo biên lợi nhuận từng kênh. Một kiến trúc bắt bạn biết-trước-mọi-câu-hỏi (ETL) là sai ngay từ tiền đề — vì bạn *không* biết trước. ELT giữ dữ liệu thô lại, để mỗi câu hỏi mới không phải trả giá bằng một pipeline mới.
 

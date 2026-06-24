@@ -18,16 +18,16 @@ coverAlt: "Biểu đồ waterfall doanh thu: new, expansion, resurrected cộng 
   <ol>
     <li><a href="/blog/growth-accounting/">Phần 1 — Nền tảng: phương trình tăng trưởng</a></li>
     <li><a href="/blog/growth-accounting-quick-ratio/">Phần 2 — Quick Ratio: nhịp tim tăng trưởng</a></li>
-    <li class="current">Phần 3 — Từ user sang tiền: Net Dollar Retention</li>
+    <li class="current">Phần 3 — Từ người dùng sang tiền: Net Dollar Retention</li>
     <li><a href="/blog/growth-accounting-thuc-chien/">Phần 4 — Thực chiến: dựng bảng growth accounting</a></li>
   </ol>
 </div>
 
-Tháng vừa rồi, một công ty phần mềm B2B Việt Nam mất 8% số khách đang trả phí. Đội Sales nhìn con số đó tái mặt. Nhưng đến cuối tháng, doanh thu định kỳ (MRR) lại **tăng 5%**. Không ai gian lận sổ sách. Không có hợp đồng khổng lồ nào rơi từ trên trời xuống. *(Các con số trong bài là ví dụ minh họa.)*
+Tháng vừa rồi, một công ty phần mềm B2B Việt Nam mất 8% số khách đang trả phí. Đội Sales nhìn con số đó tái mặt. Nhưng đến cuối tháng, doanh thu định kỳ (MRR — Monthly Recurring Revenue, doanh thu định kỳ hàng tháng) lại **tăng 5%**. Không ai gian lận sổ sách. Không có hợp đồng khổng lồ nào rơi từ trên trời xuống. *(Các con số trong bài là ví dụ minh họa.)*
 
-Phản xạ đầu tiên của bạn có thể là "chắc kéo được nhiều khách mới quá". Nhưng không — số khách mới tháng đó còn ít hơn bình thường. Sự thật ngược đời nằm ở chỗ khác: **nhóm khách CŨ — những người ở lại — năm nay chi nhiều hơn năm ngoái, đủ để bù cả phần khách rời đi lẫn phần khách mới hụt.** Hiện tượng này có tên: **negative churn**. Và nếu bạn chỉ đếm đầu người, bạn sẽ không bao giờ nhìn thấy nó.
+Phản xạ đầu tiên của bạn có thể là "chắc kéo được nhiều khách mới quá". Nhưng không — số khách mới tháng đó còn ít hơn bình thường. Sự thật ngược đời nằm ở chỗ khác: **nhóm khách CŨ — những người ở lại — năm nay chi nhiều hơn năm ngoái, đủ để bù cả phần khách rời đi lẫn phần khách mới hụt.** Hiện tượng này có tên: **negative churn** (churn âm — khách cũ chi thêm đủ để lấn át phần khách rời bỏ). Và nếu bạn chỉ đếm đầu người, bạn sẽ không bao giờ nhìn thấy nó.
 
-Hai phần đầu của series, ta đếm **user** — ai vào, ai ở lại, ai rời đi (xem lại [Quick Ratio bản user](/blog/growth-accounting-quick-ratio/)). Phần này ta chuyển sang thứ thật sự trả lương: **tiền**. Và khi chuyển từ người sang tiền, hai dòng chảy mới xuất hiện — hai dòng mà bản đếm-đầu-người mù tịt.
+Hai phần đầu của series, ta đếm **user** (người dùng) — ai vào, ai ở lại, ai rời đi (xem lại [Quick Ratio bản user](/blog/growth-accounting-quick-ratio/)). Phần này ta chuyển sang thứ thật sự trả lương: **tiền**. Và khi chuyển từ người sang tiền, hai dòng chảy mới xuất hiện — hai dòng mà bản đếm-đầu-người mù tịt.
 
 ## Đếm người là chưa đủ: hai dòng tiền mà bản user bỏ lỡ
 
@@ -115,20 +115,20 @@ Bây giờ tách riêng phần khách **hiện có**. Bỏ "new" ra ngoài, ch�
 
 Bình thường net churn **dương**: tập khách cũ hao mòn dần, mỗi tháng mất đi một ít doanh thu. Phải kéo khách mới về để bù. Đó là cái xô thủng đáy quen thuộc.
 
-Nhưng khi **expansion + resurrected vượt qua churned + contraction**, net churn trở thành **âm**. Đây là điều kỳ diệu mà dân SaaS gọi là **negative churn** — hay "chén thánh" của tăng trưởng: *tập khách hiện có vẫn tự lớn lên theo thời gian, dù bạn không thêm một khách mới nào.*
+Nhưng khi **expansion + resurrected vượt qua churned + contraction**, net churn trở thành **âm**. Đây là điều kỳ diệu mà dân SaaS (Software as a Service — phần mềm cho thuê theo thuê bao) gọi là **negative churn** — hay "chén thánh" của tăng trưởng: *tập khách hiện có vẫn tự lớn lên theo thời gian, dù bạn không thêm một khách mới nào.*
 
-Nhìn theo cohort, hiện tượng này hiện ra dưới một cái tên khác: **NRR (Net Revenue Retention)**, còn gọi là NDR (Net Dollar Retention) — phần trăm doanh thu giữ lại từ một nhóm khách sau một năm, *sau khi* cộng expansion và trừ churn/contraction.
+Nhìn theo cohort (nhóm khách gộp theo thời điểm bắt đầu), hiện tượng này hiện ra dưới một cái tên khác: **NRR (Net Revenue Retention — tỷ lệ giữ doanh thu ròng từ một nhóm khách)**, còn gọi là NDR (Net Dollar Retention) — phần trăm doanh thu giữ lại từ một nhóm khách sau một năm, *sau khi* cộng expansion và trừ churn/contraction.
 
 - **NRR = 90%** → một nhóm khách trị giá 100 đồng năm ngoái, năm nay còn 90. Đang co.
 - **NRR = 120%** → nhóm đó nay đem về **120** đồng — dù không thêm khách nào. Negative churn.
 
 Benchmark ngành phần mềm quốc tế xem **NRR > 100%** là dấu hiệu một sản phẩm khỏe: bạn ngồi yên, doanh thu từ khách cũ vẫn tự đi lên. *(Ngưỡng 100% là chuẩn ngành quốc tế, không phải con số bắt buộc cho mọi mô hình Việt Nam.)*
 
-Ở Việt Nam, negative churn không chỉ có ở SaaS. Một shop ecom đạt negative churn khi **nhóm khách cũ năm nay chi nhiều hơn năm ngoái đủ để bù số người đã rời** — giỏ to hơn, mua thêm dòng sản phẩm mới, lên hạng thành viên. Gói hội viên F&B, hợp đồng B2B có upsell, hay app subscription đều có thể chạm tới trạng thái này. Khi đó tăng trưởng không còn phụ thuộc vào việc liên tục đốt tiền acquisition — một vị thế cực kỳ vững.
+Ở Việt Nam, negative churn không chỉ có ở SaaS. Một shop ecom đạt negative churn khi **nhóm khách cũ năm nay chi nhiều hơn năm ngoái đủ để bù số người đã rời** — giỏ to hơn, mua thêm dòng sản phẩm mới, lên hạng thành viên. Gói hội viên F&B, hợp đồng B2B có upsell, hay app subscription đều có thể chạm tới trạng thái này. Khi đó tăng trưởng không còn phụ thuộc vào việc liên tục đốt tiền acquisition (thu hút khách mới) — một vị thế cực kỳ vững.
 
 ## Quick Ratio bản tiền & con số 4 của SaaS
 
-Ở Phần 2, ta đã gặp **Quick Ratio** bản user. Bản tiền cũng cùng tinh thần — đong sức khỏe của *dòng chảy* doanh thu kỳ hiện tại — nhưng có thêm hai dòng mới:
+Ở Phần 2, ta đã gặp **Quick Ratio** (tỉ lệ "tăng trên hao" = (khách mới + quay lại) / khách rời đi) bản user. Bản tiền cũng cùng tinh thần — đong sức khỏe của *dòng chảy* doanh thu kỳ hiện tại — nhưng có thêm hai dòng mới:
 
 > **Dollar Quick Ratio = (new + resurrected + expansion) / (churned + contraction)**
 
@@ -140,7 +140,7 @@ Phiên bản nổi tiếng nhất do Mamoon Hamid (Kleiner Perkins) phổ biến
 
 Benchmark "khỏe" của ông cho startup SaaS giai đoạn tăng trưởng là **khoảng 4** — thêm được 4 đồng cho mỗi 1 đồng mất đi. *(Đây là ngưỡng ngành quốc tế, dùng để định hướng, không phải mục tiêu cứng cho SME Việt.)*
 
-Nhưng con số tổng chưa kể hết. Điều quan trọng là **chất lượng** của tử số. Tăng trưởng do **expansion dẫn dắt** (expansion > new) là loại chất lượng cao nhất: doanh thu mới phần lớn đến từ khách *đã có*, mà bán thêm cho khách cũ thì rẻ hơn rất nhiều so với đi tìm khách mới. Công ty expansion-led lớn nhanh hơn cả tốc độ chi phí phình ra — đúng như Khách Loyal trong [phân tích RFM](/blog/rfm-segmentation/) mà ta nuôi để họ leo lên Champions.
+Nhưng con số tổng chưa kể hết. Điều quan trọng là **chất lượng** của tử số. Tăng trưởng do **expansion dẫn dắt** (expansion > new) là loại chất lượng cao nhất: doanh thu mới phần lớn đến từ khách *đã có*, mà bán thêm cho khách cũ thì rẻ hơn rất nhiều so với đi tìm khách mới. Công ty expansion-led lớn nhanh hơn cả tốc độ chi phí phình ra — đúng như Khách Loyal trong [phân tích RFM](/blog/rfm-segmentation/) (Recency, Frequency, Monetary — phân khúc khách theo lần mua gần nhất, tần suất và số tiền chi) mà ta nuôi để họ leo lên Champions.
 
 ## NRR vs Quick Ratio: đừng nhầm hai câu hỏi
 
@@ -155,7 +155,7 @@ NRR là một bức ảnh chụp số phận của một nhóm khách theo thờ
 
 ## Tất cả nằm ở định nghĩa "doanh thu" — và đó là việc của Semantix
 
-Cả năm dòng tiền, NRR lẫn dollar Quick Ratio đều dựa trên một thứ tưởng hiển nhiên mà thật ra rất rối: **thế nào là "doanh thu" của một khách trong một kỳ?** Tính theo ngày ghi nhận hay ngày xuất hóa đơn? Doanh thu gộp hay đã trừ hoàn/hủy? Một khách hạ gói rồi mua thêm món lẻ — là expansion hay contraction? Trả lời lệch một câu, cả bảng growth accounting lệch theo.
+Cả năm dòng tiền, NRR lẫn dollar Quick Ratio đều dựa trên một thứ tưởng hiển nhiên mà thật ra rất rối: **thế nào là "doanh thu" của một khách trong một kỳ?** Tính theo ngày ghi nhận hay ngày xuất hóa đơn? Doanh thu gộp hay đã trừ hoàn/hủy? Một khách hạ gói rồi mua thêm món lẻ — là expansion hay contraction? Trả lời lệch một câu, cả bảng growth accounting (kế toán tăng trưởng) lệch theo.
 
 Semantix không phải một chatbot cắm thẳng vào database rồi đoán "doanh thu" là cột nào. Bạn định nghĩa "doanh thu", "khách hàng", "expansion" **một lần** trong [Semantic Layer](/blog/semantic-layer/) — chuẩn theo nghiệp vụ của chính bạn — rồi hỏi bằng tiếng Việt:
 

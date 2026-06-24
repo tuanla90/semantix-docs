@@ -13,7 +13,7 @@ coverAlt: "Một tin nhắn báo cáo doanh thu kèm biểu đồ mini tự gử
 
 *Muốn báo cáo tự tìm đến bạn mỗi sáng thay vì bạn phải đi tìm nó? [Dùng thử miễn phí với Google Sheets — thiết lập báo cáo tự động trong dưới 15 phút.](/docs/vi/free-trial/)*
 
-Một chị quản lý chuỗi mỹ phẩm 4 cửa hàng kể với tôi câu chuyện này. Chị có một dashboard rất đẹp — biểu đồ doanh thu, tồn kho, top sản phẩm, đủ cả. Vấn đề là tuần đó chị đi công tác, mấy hôm liền không mở. Đến khi mở ra, một mã serum bán chạy nhất đã hết hàng từ ba ngày trước. Ba ngày đó, mỗi khách hỏi mua là một đơn mất, một khách có thể không quay lại.
+Một chị quản lý chuỗi mỹ phẩm 4 cửa hàng kể với tôi câu chuyện này. Chị có một dashboard (bảng số trực quan) rất đẹp — biểu đồ doanh thu, tồn kho, top sản phẩm, đủ cả. Vấn đề là tuần đó chị đi công tác, mấy hôm liền không mở. Đến khi mở ra, một mã serum bán chạy nhất đã hết hàng từ ba ngày trước. Ba ngày đó, mỗi khách hỏi mua là một đơn mất, một khách có thể không quay lại.
 
 Phản xạ đầu tiên của chị là tự trách: "Tại mình lười không mở app." Nhưng đó không phải lỗi của chị. **Đó là lỗi thiết kế.** Một dashboard chỉ hữu ích đúng vào khoảnh khắc bạn nhớ mở nó ra — mà con người thì bận, hay quên, và sự cố thì không bao giờ chọn ngày bạn rảnh.
 
@@ -31,7 +31,7 @@ Và với chủ shop Việt — vừa chạy sàn Shopee, vừa livestream TikTo
 
 ## Chọn ĐÚNG vài con số cho một tin nhắn sáng — đừng nhồi 20 chỉ số
 
-Sai lầm phổ biến nhất khi mới làm báo cáo tự động: tham. Nhồi tất cả những gì đo được vào một tin nhắn — doanh thu, lợi nhuận, số đơn, tỷ lệ hoàn, lượt xem, tồn kho từng mã, CTR ads... Kết quả là một bức tường số dài dằng dặc mà đọc xong bạn không rút ra được gì.
+Sai lầm phổ biến nhất khi mới làm báo cáo tự động: tham. Nhồi tất cả những gì đo được vào một tin nhắn — doanh thu, lợi nhuận, số đơn, tỷ lệ hoàn, lượt xem, tồn kho từng mã, CTR (Click-Through Rate — tỷ lệ nhấp vào quảng cáo) ads... Kết quả là một bức tường số dài dằng dặc mà đọc xong bạn không rút ra được gì.
 
 Một tin nhắn sáng tốt giống một tiêu đề báo, không phải cả tờ báo. Nó trả lời đúng một câu: **"Hôm qua ổn không, có gì cần để mắt không?"** Quy tắc của tôi: chọn 4–6 con số, mỗi con số phải dẫn tới một hành động hoặc một sự an tâm.
 
@@ -44,7 +44,7 @@ Một tin nhắn sáng tốt giống một tiêu đề báo, không phải cả 
 > ⚠️ **Sắp hết hàng:** Serum B5 còn **12 sản phẩm**
 > 📈 Kênh dẫn đầu: TikTok Shop (47% doanh thu)
 
-Đọc trong 10 giây, biết ngay cần nhập thêm Serum B5. So sánh với một tin nhắn 20 dòng liệt kê mọi SKU: bạn sẽ lướt qua, rồi bỏ qua, rồi tắt thông báo. **Một báo cáo bị tắt thông báo thì tệ hơn không có báo cáo** — vì bạn tưởng mình đang được canh, mà thật ra không.
+Đọc trong 10 giây, biết ngay cần nhập thêm Serum B5. So sánh với một tin nhắn 20 dòng liệt kê mọi SKU (Stock Keeping Unit — đơn vị lưu kho, mã định danh từng loại hàng): bạn sẽ lướt qua, rồi bỏ qua, rồi tắt thông báo. **Một báo cáo bị tắt thông báo thì tệ hơn không có báo cáo** — vì bạn tưởng mình đang được canh, mà thật ra không.
 
 > Quy tắc vàng: mỗi con số trong tin nhắn sáng phải trả lời được câu "rồi sao?". Nếu một chỉ số không dẫn tới hành động hay an tâm, nó không thuộc về tin nhắn này. Mẹo chọn câu hỏi cho ra số "dẫn tới quyết định", tôi đã mổ xẻ trong [5 câu hỏi nên hỏi AI hôm nay](/blog/ai-questions/).
 

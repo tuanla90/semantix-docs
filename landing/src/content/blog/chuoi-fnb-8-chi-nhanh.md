@@ -13,7 +13,7 @@ coverAlt: "Tám file Excel từ tám chi nhánh F&B hội tụ về một màn h
 
 *Lưu ý: anh Tâm dưới đây là chân dung minh họa, dựng từ nhiều chủ chuỗi F&B chúng tôi từng trò chuyện — không phải một khách hàng cụ thể. Các con số là ví dụ để bạn hình dung, không phải số liệu thật của bất kỳ ai.*
 
-7 giờ sáng, anh Tâm — chủ một chuỗi cà phê và đồ ăn nhẹ 8 chi nhánh ở TP.HCM — mở Zalo và thấy đủ 8 file Excel doanh thu hôm qua. Anh thở phào: tám quán, tám báo cáo, mọi thứ đầy đủ. Rồi anh bắt đầu ghép chúng lại, và lần nào cũng vậy — con số tổng chẳng bao giờ khớp với cảm giác trong túi tiền của anh.
+7 giờ sáng, anh Tâm — chủ một chuỗi cà phê và đồ ăn nhẹ (F&B — Food & Beverage, ngành ăn uống) 8 chi nhánh ở TP.HCM — mở Zalo và thấy đủ 8 file Excel doanh thu hôm qua. Anh thở phào: tám quán, tám báo cáo, mọi thứ đầy đủ. Rồi anh bắt đầu ghép chúng lại, và lần nào cũng vậy — con số tổng chẳng bao giờ khớp với cảm giác trong túi tiền của anh.
 
 Phản xạ của anh Tâm rất hợp lý: *"Tám chi nhánh thì tám file là đúng rồi, mình chỉ cần một template chung cho gọn."* Nhưng đây là chỗ ngược đời mà anh mất gần một năm mới nhìn ra: **tám chi nhánh không có nghĩa là tám file Excel — nó có nghĩa là anh đang quản tám phiên bản sự thật khác nhau, mà cứ tưởng là một.** Mỗi quản lý chi nhánh hiểu "doanh thu", "hủy món", "ca lỗ" theo một kiểu riêng. Gộp tám file đó lại không cho anh một bức tranh — nó cho anh một mớ trộn lẫn nhìn *giống như* một bức tranh.
 
@@ -21,7 +21,7 @@ Phản xạ của anh Tâm rất hợp lý: *"Tám chi nhánh thì tám file là
 
 Anh Tâm không thiếu dữ liệu. Mỗi sáng anh ngập trong nó. Vấn đề nằm sâu hơn, ở bốn lớp:
 
-- **Tám nguồn.** Tám quán, tám máy POS, tám người xuất file vào tám thời điểm khác nhau. Có quán dùng KiotViet, có quán dùng phần mềm khác, có quán vẫn gõ tay vào Google Sheets.
+- **Tám nguồn.** Tám quán, tám máy POS (Point of Sale — máy bán hàng tại quầy), tám người xuất file vào tám thời điểm khác nhau. Có quán dùng KiotViet, có quán dùng phần mềm khác, có quán vẫn gõ tay vào Google Sheets.
 - **Tám định nghĩa.** Quán A tính "doanh thu" gồm cả tiền tip và phí ship. Quán B trừ tip ra. Quán C ghi doanh thu theo đơn đặt, quán D theo đơn đã thanh toán. Cùng một từ, tám nghĩa.
 - **Hợp nhất bằng tay mỗi sáng.** Anh `copy-paste` tám file vào một sheet tổng, sửa cột cho khớp, dò lỗi công thức. Mỗi sáng mất 60–90 phút *(ví dụ minh họa)*.
 - **Số ra muộn.** Tới lúc anh ghép xong và nhìn được toàn cảnh thì đã gần trưa — và đó là bức tranh của *hôm qua*, không phải hôm nay.
@@ -40,7 +40,7 @@ Vấn đề ở đây là cái bảng tổng của anh chỉ cộng doanh thu, k
 
 Cú thứ hai còn ngược đời hơn. Tổng hợp tám quán cho thấy một món đá xay khuyến mãi đứng đầu bảng số lượng bán cả chuỗi. Trên giấy, đó là ngôi sao.
 
-Nhưng khi anh Tâm ngồi tính lại giá vốn — nguyên liệu, topping, ly nhựa, phần khuyến mãi mua-1-tặng-1 ở vài quán — thì món đó có **margin âm**. Càng bán càng lỗ. Nó "chạy" chỉ vì ba quán đang chạy chương trình tặng kèm mà không ai ghi rõ trong file, nên ở bảng tổng nó hiện ra như một thành công.
+Nhưng khi anh Tâm ngồi tính lại giá vốn — nguyên liệu, topping, ly nhựa, phần khuyến mãi mua-1-tặng-1 ở vài quán — thì món đó có **margin âm** (margin là biên lợi nhuận — phần lời còn lại trên mỗi đồng doanh thu; âm nghĩa là càng bán càng lỗ). Càng bán càng lỗ. Nó "chạy" chỉ vì ba quán đang chạy chương trình tặng kèm mà không ai ghi rõ trong file, nên ở bảng tổng nó hiện ra như một thành công.
 
 > Quy tắc vàng: một con số chỉ có nghĩa khi mọi chi nhánh tính nó theo cùng một định nghĩa. "Bán chạy" mà không gắn với "lời thật trên mỗi đơn vị" chỉ là tiếng ồn — và tiếng ồn to thì dễ bị nhầm là tín hiệu.
 
@@ -58,7 +58,7 @@ Vấn đề chưa bao giờ là quán nào giỏi hơn. Vấn đề là **không
 
 Đến đây, cám dỗ tiếp theo của anh Tâm là thuê một bạn làm báo cáo, hoặc mua một dashboard hoành tráng. Nhưng cả hai đều bỏ qua gốc rễ: nếu tám nguồn vẫn nói tám ngôn ngữ, thì một dashboard đẹp chỉ là **vẽ lại sự nhầm lẫn cho bắt mắt hơn**.
 
-Thứ anh cần đến trước tiên là một nơi mà "doanh thu", "ca", "hủy món", "margin" được định nghĩa **đúng một lần** cho cả chuỗi — rồi tám chi nhánh đều phải tuân theo định nghĩa đó. Đây chính là vai trò của một [Semantic Layer](/blog/semantic-layer/): nó là cuốn từ điển nghiệp vụ chung, để khi bất kỳ ai hỏi "doanh thu quán nào cao nhất tháng này", câu trả lời luôn dùng cùng một nghĩa của chữ "doanh thu".
+Thứ anh cần đến trước tiên là một nơi mà "doanh thu", "ca", "hủy món", "margin" được định nghĩa **đúng một lần** cho cả chuỗi — rồi tám chi nhánh đều phải tuân theo định nghĩa đó. Đây chính là vai trò của một [Semantic Layer](/blog/semantic-layer/) (tầng định nghĩa nghiệp vụ dùng chung): nó là cuốn từ điển nghiệp vụ chung, để khi bất kỳ ai hỏi "doanh thu quán nào cao nhất tháng này", câu trả lời luôn dùng cùng một nghĩa của chữ "doanh thu".
 
 ## … trong Semantix
 

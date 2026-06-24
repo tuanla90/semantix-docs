@@ -13,7 +13,7 @@ coverAlt: "Dữ liệu được khoá sau một lớp kiểm soát, AI chỉ nh�
 
 Một chủ doanh nghiệp ngồi trước buổi demo một công cụ AI phân tích dữ liệu, gật gù vì nó trả lời nhanh thật. Rồi câu hỏi quen thuộc bật ra, gần như theo phản xạ: *"Nhưng đưa hết số liệu khách hàng, doanh thu, công thức giá của tôi cho AI — lỡ nó rò ra ngoài thì sao? Có an toàn không?"*
 
-Đó là câu hỏi đúng để lo, nhưng sai về cách đặt. Vì "AI có an toàn không" là một câu hỏi *có/không* — và bất kỳ câu hỏi có/không nào về bảo mật cũng đều dẫn tới một câu trả lời vô nghĩa. Một con dao "có an toàn không"? Tuỳ ai cầm, cầm thế nào, cất ở đâu. **Rủi ro không nằm trong bản thân model AI — nó nằm trong cách bạn triển khai model đó.** Bài này gỡ câu hỏi mơ hồ ấy ra thành ba câu hỏi sắc, mà trả lời được ba câu này thì bạn đã đi trước phần lớn người dùng đang lo lắng một cách chung chung.
+Đó là câu hỏi đúng để lo, nhưng sai về cách đặt. Vì "AI có an toàn không" là một câu hỏi *có/không* — và bất kỳ câu hỏi có/không nào về bảo mật cũng đều dẫn tới một câu trả lời vô nghĩa. Một con dao "có an toàn không"? Tuỳ ai cầm, cầm thế nào, cất ở đâu. **Rủi ro không nằm trong bản thân model AI (mô hình AI) — nó nằm trong cách bạn triển khai model đó.** Bài này gỡ câu hỏi mơ hồ ấy ra thành ba câu hỏi sắc, mà trả lời được ba câu này thì bạn đã đi trước phần lớn người dùng đang lo lắng một cách chung chung.
 
 ## Đặt lại câu hỏi cho đúng
 
@@ -25,7 +25,7 @@ Với dữ liệu cho AI, ba câu hỏi thay thế đúng là:
 - **Dữ liệu gửi đi *đâu*** — về máy chủ của ai, và họ có *giữ lại* để huấn luyện model không?
 - **Ai giữ *chìa khoá*** — bạn, hay nhà cung cấp công cụ?
 
-Ba câu này không có đáp án chung cho "AI". Chúng có đáp án khác nhau tuỳ *kiến trúc* của từng sản phẩm. Cùng một model GPT hay Claude, một sản phẩm có thể bê cả database của bạn ra ngoài, sản phẩm khác chỉ cho AI nhìn qua một lớp định nghĩa. Giống nhau cái model, khác nhau trời vực về rủi ro.
+Ba câu này không có đáp án chung cho "AI". Chúng có đáp án khác nhau tuỳ *kiến trúc* của từng sản phẩm. Cùng một model GPT hay Claude, một sản phẩm có thể bê cả database (cơ sở dữ liệu) của bạn ra ngoài, sản phẩm khác chỉ cho AI nhìn qua một lớp định nghĩa. Giống nhau cái model, khác nhau trời vực về rủi ro.
 
 ## AI thật ra "thấy" gì — schema hay dữ liệu thô?
 
@@ -33,10 +33,10 @@ Ba câu này không có đáp án chung cho "AI". Chúng có đáp án khác nha
 
 Phân biệt hai thứ rất khác nhau:
 
-- **Schema / định nghĩa nghiệp vụ:** "có bảng `don_hang`, cột `doanh_thu`, định nghĩa là tổng tiền sau trừ hoàn." Đây là *bản đồ*, không phải lãnh thổ.
+- **Schema (cấu trúc bảng/cột của cơ sở dữ liệu) / định nghĩa nghiệp vụ:** "có bảng `don_hang`, cột `doanh_thu`, định nghĩa là tổng tiền sau trừ hoàn." Đây là *bản đồ*, không phải lãnh thổ.
 - **Dữ liệu thô:** "khách Nguyễn Văn A mua đơn 4,2 triệu lúc 9h tối ngày 12." Đây mới là thứ nhạy cảm.
 
-Một kiến trúc tốt cho AI đọc *bản đồ* để viết câu truy vấn, rồi câu truy vấn đó chạy *bên trong* hệ thống của bạn, và chỉ **kết quả tổng hợp** — ví dụ "doanh thu tháng này 4,2 tỷ" — mới quay về. AI chưa từng nhìn thấy danh sách khách hàng. Nó như một đầu bếp được đưa thực đơn và công thức, nấu trong bếp của bạn, chứ không phải được khuân cả tủ lạnh nhà bạn về bếp của họ. Đây cũng là khác biệt cốt lõi giữa [một semantic layer và kiểu "chatbot cắm thẳng vào database"](/blog/semantic-layer-vs-chatbot-database/) — một bên đưa AI tấm bản đồ, một bên giao cho nó cả chìa khoá kho.
+Một kiến trúc tốt cho AI đọc *bản đồ* để viết câu truy vấn, rồi câu truy vấn đó chạy *bên trong* hệ thống của bạn, và chỉ **kết quả tổng hợp** — ví dụ "doanh thu tháng này 4,2 tỷ" — mới quay về. AI chưa từng nhìn thấy danh sách khách hàng. Nó như một đầu bếp được đưa thực đơn và công thức, nấu trong bếp của bạn, chứ không phải được khuân cả tủ lạnh nhà bạn về bếp của họ. Đây cũng là khác biệt cốt lõi giữa [một semantic layer (tầng định nghĩa nghiệp vụ dùng chung) và kiểu "chatbot cắm thẳng vào database"](/blog/semantic-layer-vs-chatbot-database/) — một bên đưa AI tấm bản đồ, một bên giao cho nó cả chìa khoá kho.
 
 ## Dữ liệu gửi đi đâu — và có bị "học thuộc" không?
 
@@ -44,9 +44,9 @@ Câu hỏi thứ hai làm chủ DN mất ngủ nhất: *gửi câu hỏi và d�
 
 Phải tách bạch hai chuyện thường bị gộp:
 
-**Một, gửi đi đâu.** Khi bạn dùng một model qua API (OpenAI, Anthropic, Google…), câu hỏi đi tới máy chủ của họ, xử lý, trả về. Với các nhà cung cấp lớn qua kênh API doanh nghiệp, chính sách phổ biến hiện nay là **không dùng dữ liệu API để huấn luyện lại model** — khác hẳn bản chat miễn phí dành cho người dùng cá nhân. *(Đây là điểm cần đọc kỹ điều khoản, không tin truyền miệng.)*
+**Một, gửi đi đâu.** Khi bạn dùng một model qua API (Application Programming Interface — giao diện lập trình để các phần mềm gọi nhau) của OpenAI, Anthropic, Google…, câu hỏi đi tới máy chủ của họ, xử lý, trả về. Với các nhà cung cấp lớn qua kênh API doanh nghiệp, chính sách phổ biến hiện nay là **không dùng dữ liệu API để huấn luyện lại model** — khác hẳn bản chat miễn phí dành cho người dùng cá nhân. *(Đây là điểm cần đọc kỹ điều khoản, không tin truyền miệng.)*
 
-**Hai, ai gọi API đó.** Nếu nhà cung cấp công cụ dùng *tài khoản AI của họ* để gọi, dữ liệu của bạn đi qua hạ tầng của họ — bạn phải tin cả hai lớp. Mô hình **BYOK — Bring Your Own Key** lật ngược: bạn cắm *khoá API của chính bạn*, dữ liệu đi thẳng từ hệ thống của bạn tới nhà cung cấp model, công cụ ở giữa không giữ lại gì. *(Vì sao chủ quyền khoá lại quan trọng đến vậy, chúng tôi bàn kỹ trong [Multi-provider & BYOK: chủ quyền dữ liệu cho doanh nghiệp](/blog/multi-provider-byok/).)*
+**Hai, ai gọi API đó.** Nếu nhà cung cấp công cụ dùng *tài khoản AI của họ* để gọi, dữ liệu của bạn đi qua hạ tầng của họ — bạn phải tin cả hai lớp. Mô hình **BYOK (Bring Your Own Key — tự mang khóa API)** lật ngược: bạn cắm *khoá API của chính bạn*, dữ liệu đi thẳng từ hệ thống của bạn tới nhà cung cấp model, công cụ ở giữa không giữ lại gì. *(Vì sao chủ quyền khoá lại quan trọng đến vậy, chúng tôi bàn kỹ trong [Multi-provider & BYOK: chủ quyền dữ liệu cho doanh nghiệp](/blog/multi-provider-byok/).)*
 
 > Quy tắc vàng: đừng hỏi "AI có lưu dữ liệu của tôi không" — hỏi "*ai* đang cầm khoá gọi AI, và hợp đồng nói gì về việc giữ lại dữ liệu."
 
@@ -55,7 +55,7 @@ Phải tách bạch hai chuyện thường bị gộp:
 Đến đây là câu hỏi nền tảng nhất: quyền kiểm soát. Một sản phẩm AI tử tế cho bạn chọn một trong các nấc, theo mức độ nhạy cảm của dữ liệu:
 
 - **BYOK:** khoá API là của bạn, hoá đơn AI là của bạn, và bạn rút khoá lúc nào là cắt đứt lúc đó. Nhà cung cấp công cụ không thể chạm vào kênh AI ấy.
-- **On-premise / self-hosted:** với dữ liệu không được phép rời máy chủ — y tế, tài chính, dữ liệu theo quy định — toàn bộ hệ thống chạy *trong* hạ tầng của bạn. Dữ liệu không ra khỏi tường lửa.
+- **On-premise / self-hosted (triển khai trên hạ tầng tự quản của doanh nghiệp):** với dữ liệu không được phép rời máy chủ — y tế, tài chính, dữ liệu theo quy định — toàn bộ hệ thống chạy *trong* hạ tầng của bạn. Dữ liệu không ra khỏi tường lửa.
 
 Ẩn dụ cho dễ hình dung: gửi tiền ngân hàng, bạn vẫn giữ thẻ và mã PIN — ngân hàng giữ *hộ*, không *sở hữu*. Một kiến trúc AI sai là kiểu bạn đưa luôn cả thẻ lẫn PIN cho một bên thứ ba rồi mong họ tử tế. Một kiến trúc đúng là bạn giữ chìa, hệ thống chỉ mượn quyền đi qua đúng cánh cửa được mở.
 

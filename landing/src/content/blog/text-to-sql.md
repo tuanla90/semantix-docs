@@ -11,9 +11,9 @@ cover: "/blog/covers/text-to-sql.svg"
 coverAlt: "Câu hỏi tiếng Việt được chuyển thành câu lệnh SQL đúng định nghĩa"
 ---
 
-Hãy bắt đầu bằng một con số làm nhiều người ngạc nhiên: các nghiên cứu năm 2025 cho thấy mô hình ngôn ngữ lớn (LLM) viết ra câu SQL **đúng cú pháp tới 95–99% số lần**. Gần như không bao giờ lỗi cú pháp.
+Hãy bắt đầu bằng một con số làm nhiều người ngạc nhiên: các nghiên cứu năm 2025 cho thấy mô hình ngôn ngữ lớn (LLM — Large Language Model) viết ra câu SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) **đúng cú pháp tới 95–99% số lần**. Gần như không bao giờ lỗi cú pháp.
 
-Phản xạ đầu tiên của bạn có thể là: "Vậy thì yên tâm rồi." Nhưng đây mới đúng là chỗ nguy hiểm nhất của Text-to-SQL — và là lý do tại sao "gắn ChatGPT vào database" nghe thì hấp dẫn mà triển khai thật lại vỡ trận.
+Phản xạ đầu tiên của bạn có thể là: "Vậy thì yên tâm rồi." Nhưng đây mới đúng là chỗ nguy hiểm nhất của Text-to-SQL (AI biến câu hỏi tiếng Việt thành câu lệnh SQL) — và là lý do tại sao "gắn ChatGPT vào database" nghe thì hấp dẫn mà triển khai thật lại vỡ trận.
 
 Bởi vì **đúng cú pháp không có nghĩa là đúng số.** Một câu SQL chạy trơn tru, trả về một bảng đẹp đẽ, một con số tròn trịa — và sai. Không có dòng báo lỗi nào. Không ai biết. Bạn mang con số đó vào phòng họp và ra quyết định.
 
@@ -72,13 +72,13 @@ Nghe đơn giản nhưng riêng tiếng Việt đã đủ làm công cụ nướ
 
 ### Lớp 2 — Tìm đúng ngữ cảnh (Schema linking + RAG)
 
-Một doanh nghiệp có thể có hàng trăm bảng, hàng nghìn cột. Đưa hết cho AI vừa đắt vừa làm nó nhiễu. Thay vào đó, hệ thống dùng **tìm kiếm ngữ nghĩa (RAG)** để chỉ rút ra đúng bảng/cột liên quan đến câu hỏi này — bước gọi là *schema linking*, và nó là một trong những yếu tố quyết định độ chính xác cao nhất.
+Một doanh nghiệp có thể có hàng trăm bảng, hàng nghìn cột. Đưa hết cho AI vừa đắt vừa làm nó nhiễu. Thay vào đó, hệ thống dùng **tìm kiếm ngữ nghĩa (RAG — Retrieval-Augmented Generation: cho AI tra đúng tài liệu trước khi trả lời)** để chỉ rút ra đúng bảng/cột liên quan đến câu hỏi này — bước gọi là *schema linking*, và nó là một trong những yếu tố quyết định độ chính xác cao nhất.
 
 Đi kèm là **Golden SQL**: kho các cặp câu-hỏi–SQL đã được duyệt trước. Khi bạn hỏi câu mới, hệ thống tìm vài câu tương tự trong quá khứ đưa cho AI làm mẫu (*few-shot*). Nói cách khác, AI không phải nhớ cả database — nó được đưa đúng trang sách cần đọc, kèm vài lời giải mẫu.
 
 ### Lớp 3 — Sinh SQL trên nền Semantic Layer (lớp chống sai số quan trọng nhất)
 
-Đến đây AI mới viết SQL — nhưng không từ con số không. Nó dựa trên **Semantic Layer**: nơi "doanh thu", "khách hàng hoạt động", "tỷ lệ chuyển đổi" được định nghĩa *một lần, chuẩn xác*. Quay lại ví dụ ở trên: nếu công ty đã khai báo doanh thu = phiên bản B, thì AI không còn cơ hội đoán theo A nữa.
+Đến đây AI mới viết SQL — nhưng không từ con số không. Nó dựa trên **Semantic Layer** (tầng định nghĩa nghiệp vụ dùng chung): nơi "doanh thu", "khách hàng hoạt động", "tỷ lệ chuyển đổi" được định nghĩa *một lần, chuẩn xác*. Quay lại ví dụ ở trên: nếu công ty đã khai báo doanh thu = phiên bản B, thì AI không còn cơ hội đoán theo A nữa.
 
 Đây cũng là nơi chặn những kết hợp vô lý bằng luật (ví dụ tính trung bình của một mã đơn hàng), và chặn việc AI bịa ra bảng/cột không tồn tại. Không ngẫu nhiên mà những hệ Text-to-SQL mạnh nhất thế giới — WrenAI, SuperSonic của Tencent — đều xây quanh ý tưởng này.
 
@@ -86,7 +86,7 @@ Một doanh nghiệp có thể có hàng trăm bảng, hàng nghìn cột. Đưa
 
 ### Lớp 4 — Thực thi an toàn & kiểm tra kết quả
 
-Trước khi chạy, hệ thống tự chèn **Row-Level Security**: nếu bạn là quản lý miền Bắc, câu SQL âm thầm được thêm `WHERE region = 'North'` — bạn không thấy, không bỏ qua được. Truy vấn được giới hạn thời gian và số dòng để một câu hỏi vu vơ không quét cháy cả database.
+Trước khi chạy, hệ thống tự chèn **Row-Level Security** (RLS — phân quyền theo hàng, mỗi người chỉ thấy đúng dòng được phép): nếu bạn là quản lý miền Bắc, câu SQL âm thầm được thêm `WHERE region = 'North'` — bạn không thấy, không bỏ qua được. Truy vấn được giới hạn thời gian và số dòng để một câu hỏi vu vơ không quét cháy cả database.
 
 Những hệ tốt còn thêm một bước ít ai làm: **kiểm tra kết quả có hợp lý không** — ví dụ doanh thu ra số âm, hay bảng rỗng trong khi đáng lẽ phải có dữ liệu, thì cảnh báo thay vì lặng lẽ trả về. Đây là tuyến phòng thủ cuối chống lại đúng cái bẫy "số sai trông như đúng".
 

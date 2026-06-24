@@ -13,11 +13,11 @@ coverAlt: "Người làm kinh doanh tự gõ câu hỏi tiếng Việt và nhậ
 
 Chín giờ sáng thứ Hai, trong cuộc họp tuần, một giám đốc kinh doanh hỏi một câu rất đời thường: *"Tuần rồi kênh nào thật sự lời nhất sau khi trừ phí sàn và ads?"* Câu hỏi được ghi lại, chuyển cho bạn nhân viên data duy nhất của công ty. Bạn ấy đang dở ba việc khác. Đến chiều thứ Sáu, file Excel với câu trả lời mới nằm trong hộp thư. Đẹp, chính xác, đầy đủ. Chỉ có một vấn đề: quyết định cần ra dựa trên con số đó đã phải chốt từ chiều thứ Ba — nên người ta chốt bằng cảm giác.
 
-Đây không phải lỗi của ai cả. Không phải bạn data lười, cũng không phải sếp hỏi sai. Đây là một **nút thắt cấu trúc**: trong hầu hết doanh nghiệp, người *có câu hỏi* và người *gõ được câu trả lời* là hai người khác nhau. Mọi câu hỏi mới phải đi qua một cây cầu hẹp — và cây cầu đó luôn tắc. Phản xạ thường thấy lúc này là "chắc cần mua thêm một công cụ dashboard xịn hơn". Bài này dành chín phút để chỉ ra vì sao đó là chữa nhầm bệnh.
+Đây không phải lỗi của ai cả. Không phải bạn data lười, cũng không phải sếp hỏi sai. Đây là một **nút thắt cấu trúc**: trong hầu hết doanh nghiệp, người *có câu hỏi* và người *gõ được câu trả lời* là hai người khác nhau. Mọi câu hỏi mới phải đi qua một cây cầu hẹp — và cây cầu đó luôn tắc. Phản xạ thường thấy lúc này là "chắc cần mua thêm một công cụ dashboard (bảng số trực quan tổng hợp nhiều biểu đồ trên một màn hình) xịn hơn". Bài này dành chín phút để chỉ ra vì sao đó là chữa nhầm bệnh.
 
 ## Self-service analytics là gì — và nút cổ chai thật ra nằm ở con người
 
-**Self-service analytics** là mô hình trong đó người làm kinh doanh tự đặt câu hỏi với dữ liệu và tự nhận câu trả lời — không phải xếp hàng chờ một người trung gian biết SQL viết truy vấn hộ. Định nghĩa thì gọn, nhưng cái nó sửa lại là một vết nứt rất sâu.
+**Self-service analytics (tự phục vụ phân tích)** là mô hình trong đó người làm kinh doanh tự đặt câu hỏi với dữ liệu và tự nhận câu trả lời — không phải xếp hàng chờ một người trung gian biết SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) viết truy vấn hộ. Định nghĩa thì gọn, nhưng cái nó sửa lại là một vết nứt rất sâu.
 
 Hãy hình dung một nhà hàng đông khách, nơi thực khách không được phép nói chuyện trực tiếp với bếp. Muốn gọi món, bạn viết yêu cầu ra giấy, đưa cho một anh bồi bàn duy nhất, anh ấy mang vào bếp, rồi mang món ra. Khi nhà hàng có mười bàn, mô hình này chạy ổn. Khi có một trăm bàn, anh bồi bàn trở thành nút cổ chai: bếp rảnh, khách đói, nhưng món vẫn ra chậm — vì tất cả phải đi qua một người.
 
@@ -27,7 +27,7 @@ Hãy hình dung một nhà hàng đông khách, nơi thực khách không đư�
 
 ## Vì sao "mua thêm một dashboard" không phải là self-service
 
-Đây là chỗ tốn tiền nhất, nên nói thẳng. Khi nghe "cần để mọi người tự xem số", phản xạ của nhiều doanh nghiệp là mua một công cụ BI, dựng sẵn ba chục dashboard, gắn lên màn hình và tuyên bố "giờ ai cũng tự xem được rồi". Sai ở một chỗ tinh vi: dashboard chỉ trả lời được những câu hỏi **đã được đoán trước** lúc dựng nó.
+Đây là chỗ tốn tiền nhất, nên nói thẳng. Khi nghe "cần để mọi người tự xem số", phản xạ của nhiều doanh nghiệp là mua một công cụ BI (Business Intelligence — trí tuệ doanh nghiệp, biến dữ liệu thành quyết định), dựng sẵn ba chục dashboard, gắn lên màn hình và tuyên bố "giờ ai cũng tự xem được rồi". Sai ở một chỗ tinh vi: dashboard chỉ trả lời được những câu hỏi **đã được đoán trước** lúc dựng nó.
 
 Một dashboard là một câu trả lời đông cứng cho một câu hỏi của ngày hôm qua. Nó tuyệt vời cho thứ bạn theo dõi đều đặn — doanh thu ngày, tồn kho, số đơn. Nhưng quyết định kinh doanh thật sự lại sống ở những câu hỏi *chưa từng có sẵn*: *"Khách mua combo trong đợt sale 9/9 có quay lại mua giá gốc không?"* Câu đó không nằm trong dashboard nào. Để có nó, bạn lại phải quay về xếp hàng chờ đội data — y như cũ.
 

@@ -11,13 +11,13 @@ cover: "/blog/covers/chia-se-bao-cao-khong-lo-data.svg"
 coverAlt: "Một báo cáo được chia tới nhiều người, mỗi người chỉ thấy lát cắt dữ liệu của mình, phần còn lại bị che mờ"
 ---
 
-Tối thứ Sáu. Anh chủ một chuỗi 4 cửa hàng mở file Excel doanh thu tổng, rồi bắt đầu một nghi thức quen thuộc: copy sheet ra, xóa cột lương, xóa biên lợi nhuận, lọc chỉ giữ chi nhánh Quận 7, lưu thành `bao-cao-Q7.xlsx`. Lặp lại cho Quận 1, Thủ Đức, Gò Vấp. Bốn file, bốn lần xóa cột, bốn lần "ủa file này mình cắt cột margin chưa nhỉ?". Đến file thứ ba thì anh không chắc nữa, nên mở lại từ đầu cho chắc. 40 phút mỗi tuần, chỉ để *giấu bớt* dữ liệu trước khi dám gửi đi.
+Tối thứ Sáu. Anh chủ một chuỗi 4 cửa hàng mở file Excel doanh thu tổng, rồi bắt đầu một nghi thức quen thuộc: copy sheet ra, xóa cột lương, xóa biên lợi nhuận, lọc chỉ giữ chi nhánh Quận 7, lưu thành `bao-cao-Q7.xlsx`. Lặp lại cho Quận 1, Thủ Đức, Gò Vấp. Bốn file, bốn lần xóa cột, bốn lần "ủa file này mình cắt cột margin chưa nhỉ?". Đến file thứ ba thì anh không chắc nữa, nên mở lại từ đầu cho chắc. 40 phút mỗi tuần, chỉ để *giấu bớt* dữ liệu trước khi dám gửi đi. *(Cột "margin" ở đây là biên lợi nhuận.)*
 
 Phản xạ của bạn lúc này có thể là: "Thôi để mình tự làm báo cáo cho chắc, gửi tay từng người, vậy mới kiểm soát được ai thấy gì." Nghe an toàn. Nhưng đây là chỗ ngược đời ít người chịu nhìn thẳng: **chính cái việc giấu thủ công đó đang vừa rò rỉ data vừa bóp nghẹt năng suất của cả đội.** Bạn tưởng đang kiểm soát, thực ra đang làm thủ kho cho dữ liệu của chính mình — và làm sai.
 
 ## Vấn đề gốc: không phải giấu hay không, mà là giấu thế nào
 
-Chủ doanh nghiệp nào cũng có một nỗi sợ chính đáng: lộ lương, lộ doanh thu thật, lộ biên lợi nhuận. Nên phản xạ là *không chia sẻ gì cả* — giữ dashboard cho riêng mình, ai cần số thì mình cắt tay gửi. An toàn tuyệt đối, đúng không?
+Chủ doanh nghiệp nào cũng có một nỗi sợ chính đáng: lộ lương, lộ doanh thu thật, lộ biên lợi nhuận. Nên phản xạ là *không chia sẻ gì cả* — giữ dashboard (bảng số trực quan) cho riêng mình, ai cần số thì mình cắt tay gửi. An toàn tuyệt đối, đúng không?
 
 Không. Cái giá của "an toàn tuyệt đối" này là cả công ty mù. Quản lý chi nhánh không biết chi nhánh mình đang lời hay lỗ cho tới khi bạn rảnh tay cắt file. Sale không biết mình đứng đâu so với chỉ tiêu. Mọi quyết định đều phải đi vòng qua bạn — bạn thành nút thắt cổ chai của chính công ty mình.
 
@@ -41,7 +41,7 @@ Làm tay nghĩa là: mỗi tuần lọc đơn theo từng `mã_nhân_viên`, xu�
 
 ## Kế toán thấy tiền nhưng không thấy lương — phân quyền cả theo cột
 
-Có loại nhạy cảm không nằm ở *hàng* mà nằm ở *cột*. Kế toán cần thấy doanh thu, công nợ, dòng tiền — nhưng bảng lương nhân sự thì thuộc HR, không phải việc của họ.
+Có loại nhạy cảm không nằm ở *hàng* mà nằm ở *cột*. Kế toán cần thấy doanh thu, công nợ, dòng tiền — nhưng bảng lương nhân sự thì thuộc HR (Human Resources — bộ phận nhân sự), không phải việc của họ.
 
 Lúc này phân quyền theo hàng đi kèm một người anh em: ẩn cột theo vai trò. Vai trò `kế_toán` thấy mọi cột tài chính nhưng cột `lương` bị che. Vai trò `nhân_sự` thì ngược lại — thấy lương, không thấy biên lợi nhuận từng đơn. Vẫn là một nguồn dữ liệu, định nghĩa một lần, mỗi vai trò một lát cắt.
 

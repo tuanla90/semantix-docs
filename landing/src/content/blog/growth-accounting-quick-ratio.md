@@ -101,7 +101,7 @@ Nói cách khác, với app tiêu dùng, đừng mơ Quick Ratio = 5. Giữ đư
 
 > Quy tắc vàng: **với consumer app, sống còn không phải là đẩy Quick Ratio lên thật cao — mà là giữ nó đừng bao giờ rơi xuống dưới 1.** Mỗi tháng dưới 1 là một tháng cái xô cạn thêm.
 
-Còn bản cho **SaaS — nơi Quick Ratio được tính trên doanh thu thay vì user, và ngưỡng "khỏe" cao hơn hẳn (giới đầu tư hay nhắc con số quanh 4)** — là một câu chuyện khác hẳn về bản chất. Tôi để dành trọn vẹn cho **Phần 3**, khi chúng ta chuyển từ đếm user sang đếm tiền. Ở đây chỉ cần nhớ: đừng lấy ngưỡng của SaaS áp lên app tiêu dùng, và ngược lại. Hai cơ thể khác nhau thì nhịp tim khỏe cũng khác nhau.
+Còn bản cho **SaaS (Software as a Service — phần mềm cho thuê theo thuê bao) — nơi Quick Ratio được tính trên doanh thu thay vì người dùng, và ngưỡng "khỏe" cao hơn hẳn (giới đầu tư hay nhắc con số quanh 4)** — là một câu chuyện khác hẳn về bản chất. Tôi để dành trọn vẹn cho **Phần 3**, khi chúng ta chuyển từ đếm user sang đếm tiền. Ở đây chỉ cần nhớ: đừng lấy ngưỡng của SaaS áp lên app tiêu dùng, và ngược lại. Hai cơ thể khác nhau thì nhịp tim khỏe cũng khác nhau.
 
 ## Bẫy chết người: Quick Ratio đẹp nhờ đốt tiền acquisition
 
@@ -116,9 +116,9 @@ Vấn đề: **QR cao không có nghĩa là product khỏe.** Một công ty có
 - Công ty A: new vừa phải, churned thấp. QR = 1,8 vì giữ chân tốt. Khỏe thật.
 - Công ty B: new khổng lồ (mua bằng ads), churned cũng khổng lồ. QR = 1,8 vì bơm đủ nhanh. Ngừng bơm là sụp.
 
-Cùng một con số, hai số phận trái ngược. Quick Ratio một mình không phân biệt được hai trường hợp này — và đó chính là lý do **không bao giờ đọc Quick Ratio đứng một mình.** Bạn phải đọc nó *kèm* retention và cohort.
+Cùng một con số, hai số phận trái ngược. Quick Ratio một mình không phân biệt được hai trường hợp này — và đó chính là lý do **không bao giờ đọc Quick Ratio đứng một mình.** Bạn phải đọc nó *kèm* retention (giữ chân — tỷ lệ khách còn hoạt động sau một khoảng thời gian) và cohort (nhóm khách gộp theo thời điểm bắt đầu).
 
-Cụ thể: hãy nhìn Quick Ratio cạnh **đường cong giữ chân** của các cohort gần đây (cách đọc đường cong này tôi đã mổ kỹ ở [Cohort & Retention — đọc PMF](/blog/cohort-retention-pmf/)). Sequoia mô tả rất gọn: một doanh nghiệp khỏe có Quick Ratio vững **đi cùng** đường cong retention phẳng dần hoặc đi lên — hình "nụ cười" (smile). Còn nếu QR quanh 1 mà đường cong retention cứ rơi thẳng về 0, thì bạn đang nhìn một cơ thể bù nước liên tục để khỏi chết khát: dừng acquisition một nhịp là tụt huyết áp.
+Cụ thể: hãy nhìn Quick Ratio cạnh **đường cong giữ chân** của các cohort gần đây (cách đọc đường cong này tôi đã mổ kỹ ở [Cohort & Retention — đọc PMF](/blog/cohort-retention-pmf/)). Sequoia mô tả rất gọn: một doanh nghiệp khỏe có Quick Ratio vững **đi cùng** đường cong retention phẳng dần hoặc đi lên — hình "nụ cười" (smile). Còn nếu QR quanh 1 mà đường cong retention cứ rơi thẳng về 0, thì bạn đang nhìn một cơ thể bù nước liên tục để khỏi chết khát: dừng acquisition (thu hút khách mới) một nhịp là tụt huyết áp.
 
 ## Quick Ratio + Cohort: cặp đôi không thể tách
 
@@ -153,7 +153,7 @@ Quick Ratio là nhịp tim của tăng trưởng — một con số, đọc tron
 
 Một nhịp tim mạnh là tin tốt. Một nhịp tim mạnh *vì đang được bơm doping* là tin xấu đội lốt tin tốt. Quick Ratio cho bạn con số; cohort cho bạn sự thật đằng sau con số. Đọc cả hai, và bạn đi trước phần lớn founder vẫn đang ăn mừng một nhịp tim mà họ chưa kịp hỏi vì sao nó đập nhanh đến thế.
 
-Ở **Phần 3**, chúng ta đổi đơn vị đo: từ đếm *người* sang đếm *tiền*. Quick Ratio bản doanh thu, và một chỉ số mạnh hơn nữa — Net Dollar Retention — sẽ kể cho bạn nghe liệu mỗi đồng doanh thu cũ đang nở ra hay teo lại theo thời gian.
+Ở **Phần 3**, chúng ta đổi đơn vị đo: từ đếm *người* sang đếm *tiền*. Quick Ratio bản doanh thu, và một chỉ số mạnh hơn nữa — NDR (Net Dollar Retention — tỷ lệ giữ doanh thu từ khách cũ) — sẽ kể cho bạn nghe liệu mỗi đồng doanh thu cũ đang nở ra hay teo lại theo thời gian.
 
 ---
 

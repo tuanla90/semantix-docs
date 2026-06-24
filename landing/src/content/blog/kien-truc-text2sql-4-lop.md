@@ -11,15 +11,15 @@ cover: "/blog/covers/kien-truc-text2sql-4-lop.svg"
 coverAlt: "Câu hỏi tiếng Việt đi qua bốn tầng lọc rồi ra câu lệnh SQL đúng định nghĩa nghiệp vụ"
 ---
 
-Ai cũng tưởng biến một câu hỏi tiếng Việt thành SQL là phép thuật một-bước: ném câu hỏi vào LLM, nhận về câu lệnh, chạy, ra số. Sự thật ngược lại — và đây mới là chỗ đau: nó là một **dây chuyền bốn lớp lọc**, và cái lớp người ta hay bỏ qua nhất lại chính là lớp quyết định "số đúng hay số sai".
+Ai cũng tưởng biến một câu hỏi tiếng Việt thành SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) là phép thuật một-bước: ném câu hỏi vào LLM (Large Language Model — mô hình ngôn ngữ lớn), nhận về câu lệnh, chạy, ra số. Sự thật ngược lại — và đây mới là chỗ đau: nó là một **dây chuyền bốn lớp lọc**, và cái lớp người ta hay bỏ qua nhất lại chính là lớp quyết định "số đúng hay số sai".
 
-Bỏ một lớp ở giữa, bạn không có một hệ Text2SQL yếu hơn một chút. Bạn có một **chatbot cắm thẳng vào database** — thứ trả lời rất tự tin, rất mượt, và sai theo cách không ai bắt được.
+Bỏ một lớp ở giữa, bạn không có một hệ Text2SQL (AI biến câu hỏi thành câu lệnh SQL) yếu hơn một chút. Bạn có một **chatbot cắm thẳng vào database** — thứ trả lời rất tự tin, rất mượt, và sai theo cách không ai bắt được.
 
 ## Vì sao "một-bước" là ảo tưởng
 
 Hãy hình dung điều mọi người mặc định trong đầu: câu hỏi tiếng Việt đi vào, một mô hình ngôn ngữ khổng lồ nuốt nó, SQL đi ra. Một hộp đen, một bước. Nghe gọn. Và sai về bản chất.
 
-Vì LLM **không tra cứu** database của bạn. Nó đoán token tiếp theo dựa trên hàng tỷ dòng văn bản đã học — trong đó có hàng nghìn schema trên internet. Khi bạn hỏi "doanh thu", nó viết ra thứ *nghe hợp lý nhất với phần còn lại của thế giới*, không phải thứ *đúng với riêng công ty bạn*. Một-bước nghĩa là giao toàn bộ độ chính xác cho một phép đoán xác suất. (Vì sao mô hình tự tin bịa ra cả cột không tồn tại, chúng tôi mổ xẻ trong bài [LLM bịa ra SQL](/blog/llm-bia-sql/).)
+Vì LLM **không tra cứu** database của bạn. Nó đoán token (đơn vị văn bản LLM xử lý và tính phí) tiếp theo dựa trên hàng tỷ dòng văn bản đã học — trong đó có hàng nghìn schema (cấu trúc bảng/cột của database) trên internet. Khi bạn hỏi "doanh thu", nó viết ra thứ *nghe hợp lý nhất với phần còn lại của thế giới*, không phải thứ *đúng với riêng công ty bạn*. Một-bước nghĩa là giao toàn bộ độ chính xác cho một phép đoán xác suất. (Vì sao mô hình tự tin bịa ra cả cột không tồn tại, chúng tôi mổ xẻ trong bài [LLM bịa ra SQL](/blog/llm-bia-sql/).)
 
 Hãy nghĩ về nó như **lọc nước nhiều tầng.** Nước sông đầu nguồn không thành nước uống chỉ vì chảy qua *một* cái lưới. Nó qua lưới chặn rác, qua than hoạt tính khử mùi, qua màng lọc tinh, rồi qua đèn UV diệt khuẩn. Bỏ một tầng, nước vẫn *trông* trong — nhưng thứ giết bạn là cái không nhìn thấy. Text2SQL nghiêm túc cũng vậy: bốn tầng, mỗi tầng khử một loại sai mà mắt thường không bắt được.
 
@@ -82,7 +82,7 @@ Database sẽ vui vẻ chạy câu trên và trả về một con số. Lớp 3 
 
 Lớp cuối làm cái ít hệ nào chịu làm: **không tin câu SQL ngay cả khi nó đã được sinh.**
 
-Trước khi chạy, hệ thống đối chiếu từng tên bảng, tên cột với schema thật — tên nào không khớp, chặn và yêu cầu viết lại, chứ không để database báo lỗi cho người dùng cuối tự đoán. Truy vấn được tự chèn **Row-Level Security**: bạn là quản lý miền Bắc thì câu lệnh âm thầm thêm `WHERE region = 'North'`, bạn không thấy và không bỏ qua được. Và sau khi chạy, kết quả được soi lại tính hợp lý — doanh thu ra số âm, hay bảng rỗng trong khi đáng lẽ phải có dữ liệu, thì **cảnh báo thay vì lặng lẽ trả về**.
+Trước khi chạy, hệ thống đối chiếu từng tên bảng, tên cột với schema thật — tên nào không khớp, chặn và yêu cầu viết lại, chứ không để database báo lỗi cho người dùng cuối tự đoán. Truy vấn được tự chèn **Row-Level Security (RLS — phân quyền theo hàng: mỗi người chỉ thấy đúng các dòng được phép)**: bạn là quản lý miền Bắc thì câu lệnh âm thầm thêm `WHERE region = 'North'`, bạn không thấy và không bỏ qua được. Và sau khi chạy, kết quả được soi lại tính hợp lý — doanh thu ra số âm, hay bảng rỗng trong khi đáng lẽ phải có dữ liệu, thì **cảnh báo thay vì lặng lẽ trả về**.
 
 Nếu thấy bất thường, vòng tự sửa khởi động: AI nhận lỗi cụ thể, viết lại, kiểm tra lại. Đây là đèn UV ở cuối dây chuyền lọc — tầng cuối bắt đúng những con vi khuẩn lọt qua mọi lưới phía trước. Đây cũng là tuyến phòng thủ cuối chống đúng cái bẫy "số sai trông như đúng". (Cơ chế Text2SQL từ góc nhìn vận hành, chúng tôi viết riêng trong bài [Text-to-SQL hoạt động ra sao](/blog/text-to-sql/).)
 
@@ -97,7 +97,7 @@ Semantix **không phải** "một ChatGPT cắm vào database hỏi gì cũng tr
 3. **Sinh SQL có ràng buộc** — lắp ghép từ bản đồ, chặn tổ hợp vô lý.
 4. **Kiểm chứng và tự sửa** — validate, áp bảo mật, soi kết quả, sửa nếu sai.
 
-Bạn hỏi bằng tiếng Việt như nói với một analyst giỏi — trả lời trong vài giây, không bao giờ bận, và luôn dùng đúng một định nghĩa "doanh thu". (Vì sao SME cần đúng cách tiếp cận này ngay cả khi chưa có đội data, xem [BI cho SME](/blog/bi-cho-sme/).)
+Bạn hỏi bằng tiếng Việt như nói với một analyst (chuyên viên phân tích dữ liệu) giỏi — trả lời trong vài giây, không bao giờ bận, và luôn dùng đúng một định nghĩa "doanh thu". (Vì sao SME cần đúng cách tiếp cận này ngay cả khi chưa có đội data, xem [BI cho SME](/blog/bi-cho-sme/).)
 
 ## Tóm lại
 

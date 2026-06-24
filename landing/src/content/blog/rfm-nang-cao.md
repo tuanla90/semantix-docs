@@ -11,7 +11,7 @@ cover: "/blog/covers/rfm-nang-cao.svg"
 coverAlt: "Lưới RFM 5×5 đầy đủ với 11 nhóm khách và ma trận dịch chuyển"
 ---
 
-Một analyst làm RFM đúng theo sách: chia khách thành năm nhóm bằng nhau (quintile) trên cả ba chiều R, F, M, gán điểm 1–5, dựng bảng đẹp đẽ. Trình bày xong, sếp gật gù.
+Một analyst làm RFM (Recency, Frequency, Monetary — phân khúc khách theo lần mua gần nhất, tần suất mua và số tiền chi) đúng theo sách: chia khách thành năm nhóm bằng nhau (quintile — chia tệp khách thành 5 phần bằng nhau) trên cả ba chiều R, F, M, gán điểm 1–5, dựng bảng đẹp đẽ. Trình bày xong, sếp gật gù.
 
 Rồi ai đó mở phân phối điểm Frequency ra xem. **62% khách có điểm F = 1** — vì họ mua đúng một lần. Một con số khác chiếm 18% nữa: khách mua đúng hai lần. Cái gọi là "năm nhóm bằng nhau" thật ra là hai cục u khổng lồ và ba ô gần như rỗng.
 
@@ -25,7 +25,7 @@ Cách làm đúng:
 
 - **Tách "một lần" khỏi "mua lại" trước tiên.** Ranh giới giữa khách đơn-1 và khách đơn-2-trở-lên thường quan trọng hơn cả thang điểm F. Hãy coi nó là một lát cắt cứng.
 - **Dùng ngưỡng thủ công cho F**, không ép quintile: ví dụ 1 / 2 / 3–5 / 6–10 / 10+ đơn — phản ánh đúng thực tế ngành bạn.
-- **Giữ quintile cho R và M** nếu chúng trải đều, nhưng luôn nhìn histogram trước khi tin vào điểm số.
+- **Giữ quintile cho R và M** nếu chúng trải đều, nhưng luôn nhìn histogram (biểu đồ phân phối — cho thấy giá trị tụ ở đâu) trước khi tin vào điểm số.
 
 > Quy tắc vàng: **đừng ép một phân phối lệch vào năm ô bằng nhau.** Histogram của F phải được nhìn tận mắt trước khi bạn chấm một điểm nào.
 
@@ -37,7 +37,7 @@ Cách làm đúng:
 | **Ngưỡng cố định (luật nghiệp vụ)** | Ổn định, dễ giải thích, khớp ngành | Cần hiểu nghiệp vụ; phải rà lại khi hành vi đổi |
 | **Phân cụm (k-means trên R,F,M)** | Tìm nhóm "tự nhiên", không cần đặt ngưỡng tay | Hộp đen, kết quả đổi giữa các lần chạy; M phải lấy log trước, nếu không một vài đại gia kéo lệch toàn bộ |
 
-Với một SME cần *giải thích được* cho phòng marketing, **ngưỡng cố định** thường thắng. Phân cụm chỉ đáng dùng khi bạn có quy mô dữ liệu lớn và người biết xử lý — và kể cả khi đó, hãy log-transform Monetary, nếu không nhóm cụm sẽ chỉ phản ánh vài hóa đơn khổng lồ.
+Với một SME (Small and Medium Enterprise — doanh nghiệp vừa và nhỏ) cần *giải thích được* cho phòng marketing, **ngưỡng cố định** thường thắng. Phân cụm chỉ đáng dùng khi bạn có quy mô dữ liệu lớn và người biết xử lý — và kể cả khi đó, hãy log-transform Monetary, nếu không nhóm cụm sẽ chỉ phản ánh vài hóa đơn khổng lồ.
 
 ## Bản đồ đầy đủ: 11 nhóm, không phải 5
 
@@ -137,7 +137,7 @@ Cách làm: chấm RFM ở hai thời điểm liên tiếp, rồi dựng **ma tr
   <rect x="440" y="208" width="100" height="44" rx="5" fill="#a5b4fc"/><text x="490" y="236" fill="#1e1b4b" font-size="14" font-weight="700" text-anchor="middle">22%</text>
   <rect x="560" y="208" width="100" height="44" rx="5" fill="#fca5a5"/><text x="610" y="236" fill="#1e1b4b" font-size="14" font-weight="700" text-anchor="middle">40%</text>
 </svg>
-<div class="viz-caption">Ma trận dịch chuyển: % khách mỗi nhóm rơi vào nhóm nào kỳ sau. Ô đỏ — 55% At-Risk trượt thẳng xuống Lost — là chỗ tiền rò rỉ. 40% khách New biến mất ngay là báo động onboarding.</div>
+<div class="viz-caption">Ma trận dịch chuyển: % khách mỗi nhóm rơi vào nhóm nào kỳ sau. Ô đỏ — 55% At-Risk trượt thẳng xuống Lost — là chỗ tiền rò rỉ. 40% khách New biến mất ngay là báo động onboarding (dẫn dắt khách mới làm quen).</div>
 </div>
 
 Ma trận này biến RFM từ một nhãn dán tĩnh thành một hệ thống cảnh báo sớm. Nó cũng là cầu nối tự nhiên với [Cohort Analysis](/blog/cohort-analysis/): cohort theo dõi một nhóm khách *theo thời điểm bắt đầu*, còn ma trận dịch chuyển RFM theo dõi dòng chảy *giữa các bậc giá trị*.
@@ -157,13 +157,13 @@ Sai lầm thường gặp: hành động với nhóm *đông nhất*. Đúng hơ
 | Loyal | 520 | 4 triệu | 15% | 312 triệu |
 | Hibernating | 900 | 1,2 triệu | 85% | 918 triệu* |
 
-Nhóm Hibernating tuy "giá trị lâm nguy" trên giấy cao, nhưng xác suất *cứu được* rất thấp — nên ROI của win-back thường âm (đánh dấu \*). Ưu tiên thật nằm ở **At-Risk giá trị cao** và **Can't Lose**: ít người, nhưng mỗi người cứu được là cả một khoản.
+Nhóm Hibernating tuy "giá trị lâm nguy" trên giấy cao, nhưng xác suất *cứu được* rất thấp — nên ROI (Return on Investment — tỷ suất hoàn vốn) của win-back (giành lại khách cũ) thường âm (đánh dấu \*). Ưu tiên thật nằm ở **At-Risk giá trị cao** và **Can't Lose**: ít người, nhưng mỗi người cứu được là cả một khoản.
 
 ## Vận hành: làm một lần là vô dụng
 
 - **Tần suất làm mới:** RFM phải chạy định kỳ (tuần/tháng), không phải một lần rồi quên — vì giá trị nằm ở chuyển động.
 - **Tự động hóa kích hoạt:** khi một khách *đổi nhóm* (Champions → At-Risk), bắn một hành động tương ứng, đừng đợi chiến dịch quý sau.
-- **Đo lift bằng nhóm đối chứng:** giữ lại một nhóm holdout không nhận win-back. Không có đối chứng, bạn không bao giờ biết doanh thu quay lại là nhờ chiến dịch hay tự nó đến.
+- **Đo lift (phần tăng thêm nhờ chiến dịch) bằng nhóm đối chứng:** giữ lại một nhóm holdout (nhóm giữ lại, cố ý không tác động để so sánh) không nhận win-back. Không có đối chứng, bạn không bao giờ biết doanh thu quay lại là nhờ chiến dịch hay tự nó đến.
 
 > Quy tắc vàng (nhắc lại từ bài nền tảng): **RFM để chọn hành động, không để dán nhãn.** Một phân khúc không dẫn tới việc bạn làm khác đi chỉ là trang trí.
 

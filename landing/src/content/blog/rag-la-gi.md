@@ -13,7 +13,7 @@ coverAlt: "Một câu hỏi đi qua bước tra cứu kho tài liệu trước k
 
 Bạn gõ vào ô chat: *"Doanh thu kênh TikTok Shop quý trước là bao nhiêu?"* AI trả lời ngay, trôi chảy, có cả con số lẻ tới hàng triệu, kèm một câu nhận xét nghe rất chuyên nghiệp. Bạn gần như đã tin. Chỉ có điều: con số đó sai. Không phải sai một chút — sai vì nó **chưa hề mở dữ liệu của bạn ra xem**. Nó đáp lại bằng thứ duy nhất nó có trong tay lúc đó: trí nhớ.
 
-Phản xạ đầu tiên của hầu hết mọi người là: "Chắc do model còn yếu, đợi bản thông minh hơn ra sẽ hết." Đó là chỗ hiểu lầm tốn tiền nhất khi đưa AI vào phân tích dữ liệu. Một model giỏi gấp mười lần vẫn bịa y như vậy — nếu bạn bắt nó trả lời từ trí nhớ. Cái nó thiếu không phải trí thông minh. Cái nó thiếu là **quyền tra cứu đúng tài liệu trước khi mở miệng**. Và đó chính xác là việc **RAG** sinh ra để làm.
+Phản xạ đầu tiên của hầu hết mọi người là: "Chắc do model còn yếu, đợi bản thông minh hơn ra sẽ hết." Đó là chỗ hiểu lầm tốn tiền nhất khi đưa AI vào phân tích dữ liệu. Một model giỏi gấp mười lần vẫn bịa y như vậy — nếu bạn bắt nó trả lời từ trí nhớ. Cái nó thiếu không phải trí thông minh. Cái nó thiếu là **quyền tra cứu đúng tài liệu trước khi mở miệng**. Và đó chính xác là việc **RAG (Retrieval-Augmented Generation — cho AI tra tài liệu trước khi trả lời)** sinh ra để làm.
 
 ## Vì sao một LLM giỏi vẫn bịa — chuyện thi mở sách và thi học thuộc
 
@@ -54,11 +54,11 @@ Người ta hay nghĩ RAG chỉ để tra cứu tài liệu PDF, sổ tay, FAQ. 
 
 Khi bạn hỏi *"so doanh thu ba kênh tháng này"*, để viết được một câu truy vấn đúng, AI cần biết những thứ **không nằm trong trí nhớ huấn luyện của nó**:
 
-- Bảng nào chứa đơn hàng, cột nào là doanh thu, cột nào là phí sàn? *(schema)*
+- Bảng nào chứa đơn hàng, cột nào là doanh thu, cột nào là phí sàn? *(schema — cấu trúc bảng/cột của cơ sở dữ liệu)*
 - "Doanh thu" của công ty bạn là gồm cả đơn chưa giao, hay đã trừ đơn hoàn? *(định nghĩa nghiệp vụ)*
 - "Tháng này" tính theo ngày đặt hay ngày thanh toán? "Ba kênh" gồm những kênh nào?
 
-Không có những mẩu này trong tay, AI giỏi đến mấy cũng **đoán** — và một câu SQL chạy trơn, đúng cú pháp, vẫn trả về con số sai vì nó đoán nhầm cột, nhầm định nghĩa. *(Vì sao SQL "đúng mà sai" lại nguy hiểm hơn SQL lỗi hẳn, chúng tôi mổ kỹ trong [Vì sao LLM hay bịa SQL — và cách chống ảo giác](/blog/llm-bia-sql/) và [Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi mà vẫn trả về số sai](/blog/text-to-sql/).)*
+Không có những mẩu này trong tay, AI giỏi đến mấy cũng **đoán** — và một câu SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) chạy trơn, đúng cú pháp, vẫn trả về con số sai vì nó đoán nhầm cột, nhầm định nghĩa. *(Vì sao SQL "đúng mà sai" lại nguy hiểm hơn SQL lỗi hẳn, chúng tôi mổ kỹ trong [Vì sao LLM hay bịa SQL — và cách chống ảo giác](/blog/llm-bia-sql/) và [Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi mà vẫn trả về số sai](/blog/text-to-sql/).)*
 
 *Ví dụ minh họa:* hỏi cùng một câu *"doanh thu khách quay lại quý trước"*. Không có bước tra cứu, AI tự định nghĩa "khách quay lại" theo cách phổ biến nhất nó từng đọc trên internet — và ra một con số. Có bước tra cứu đúng định nghĩa của bạn ("mua ≥2 lần, lần gần nhất trong 90 ngày"), nó ra một con số khác hẳn. Cùng câu hỏi, cùng database, hai kết quả — khác nhau **chỉ vì một bên có tra cứu, một bên đoán.**
 

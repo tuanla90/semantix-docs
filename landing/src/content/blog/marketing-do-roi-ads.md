@@ -13,11 +13,11 @@ coverAlt: "Ba kênh ads Facebook, TikTok, Google mỗi kênh tự nhận công, 
 
 *Lưu ý: chị Mai dưới đây là chân dung minh họa, dựng từ nhiều trưởng phòng marketing chúng tôi từng trò chuyện — không phải một khách hàng cụ thể. Các con số ROAS, ngân sách và doanh thu là ví dụ để bạn hình dung, không phải số liệu thật của bất kỳ ai.*
 
-Sáng thứ Hai, chị Mai — trưởng phòng marketing một thương hiệu mỹ phẩm bán trên Shopee và website, ngân sách ads tầm vài trăm triệu mỗi tháng — mở ba dashboard cùng lúc. Facebook Ads Manager: ROAS 4,2, xanh mướt. TikTok: 3,8, xanh. Google Ads: 5,1, xanh nhất. Cả ba đều bảo chị đang lãi đậm. Vấn đề: chị cộng phần doanh thu mà ba nền tảng tự nhận công lại, ra một con số **lớn hơn tổng doanh thu thật của cả công ty tháng đó**.
+Sáng thứ Hai, chị Mai — trưởng phòng marketing một thương hiệu mỹ phẩm bán trên Shopee và website, ngân sách ads (chi phí quảng cáo) tầm vài trăm triệu mỗi tháng — mở ba dashboard (bảng số trực quan) cùng lúc. Facebook Ads Manager: ROAS (Return on Ad Spend — doanh thu trên mỗi đồng quảng cáo) 4,2, xanh mướt. TikTok: 3,8, xanh. Google Ads: 5,1, xanh nhất. Cả ba đều bảo chị đang lãi đậm. Vấn đề: chị cộng phần doanh thu mà ba nền tảng tự nhận công lại, ra một con số **lớn hơn tổng doanh thu thật của cả công ty tháng đó**.
 
-Phản xạ đầu tiên của chị Mai — cũng là của hầu hết trưởng phòng marketing — rất hợp lý: *"Mình thiếu số liệu. Phải nhờ data team kéo thêm báo cáo, ghép cho khớp."* Chị đã định gửi yêu cầu.
+Phản xạ đầu tiên của chị Mai — cũng là của hầu hết trưởng phòng marketing — rất hợp lý: *"Mình thiếu số liệu. Phải nhờ data team (đội phụ trách dữ liệu) kéo thêm báo cáo, ghép cho khớp."* Chị đã định gửi yêu cầu.
 
-Nhưng đây là chỗ ngược đời mà chị chỉ nhận ra sau đó: **phòng marketing không hề thiếu số liệu ads — mỗi nền tảng phun ra cả tấn. Cái chị thiếu là MỘT con số ROI mà cả ba kênh cùng đồng ý.** Và ba con số kia không thể cùng đúng — không phải vì nền tảng nói dối, mà vì mỗi đứa đang tự đếm công cho mình.
+Nhưng đây là chỗ ngược đời mà chị chỉ nhận ra sau đó: **phòng marketing không hề thiếu số liệu ads — mỗi nền tảng phun ra cả tấn. Cái chị thiếu là MỘT con số ROI (Return on Investment — tỷ suất hoàn vốn) mà cả ba kênh cùng đồng ý.** Và ba con số kia không thể cùng đúng — không phải vì nền tảng nói dối, mà vì mỗi đứa đang tự đếm công cho mình.
 
 ## Vấn đề gốc: ai cũng nhận công cho cùng một đơn hàng
 
@@ -29,7 +29,7 @@ Bây giờ ba nền tảng kết sổ:
 - **Facebook** thấy cô ấy click trên Facebook → nhận công.
 - **Google** thấy click cuối cùng dẫn thẳng tới đơn → nhận công.
 
-Cả ba đều ghi *cùng một đơn* vào báo cáo của mình. Đây gọi là **attribution** — quy kết doanh thu cho kênh nào "có công". Vấn đề: mỗi nền tảng chỉ nhìn thấy phần sân của nó, và mặc định quy tất cả công về mình. Cộng ba báo cáo lại, bạn đếm một đơn hàng **ba lần**. Đó là **double-count** (thực ra ở đây là triple-count).
+Cả ba đều ghi *cùng một đơn* vào báo cáo của mình. Đây gọi là **attribution** — quy kết doanh thu cho kênh nào "có công". Vấn đề: mỗi nền tảng chỉ nhìn thấy phần sân của nó, và mặc định quy tất cả công về mình. Cộng ba báo cáo lại, bạn đếm một đơn hàng **ba lần**. Đó là **double-count** (đếm trùng — một đơn bị tính cho nhiều kênh; thực ra ở đây là triple-count, đếm ba lần).
 
 Ẩn dụ gọn thế này: ba nền tảng giống như ba người bán hàng cùng chạy theo một vị khách trong siêu thị. Khách mua một giỏ hàng. Cuối ngày cả ba cùng về báo sếp "đơn đó là của em" — và sếp, nếu tin cả ba, sẽ tưởng cửa hàng bán được ba giỏ. Không ai nói dối. Họ chỉ không nói chuyện với nhau.
 
@@ -41,7 +41,7 @@ Cả ba đều ghi *cùng một đơn* vào báo cáo của mình. Đây gọi l
 
 Thứ chị thiếu không phải dữ liệu. Là một **định nghĩa "doanh thu do ads" dùng chung** cho cả ba kênh. Câu hỏi cốt lõi rất đơn giản nhưng chưa ai trả lời thống nhất: *một đơn hàng thì tính công cho kênh nào?* Click cuối? Lượt chạm đầu? Chia đều? Cho tới khi cả công ty chốt một câu trả lời và áp nó lên **cùng một bảng đơn hàng gốc**, mọi con số ROAS từ nền tảng chỉ là góc nhìn thiên vị của từng kênh về chính nó.
 
-Đây đúng là bài toán mà một [Semantic Layer](/blog/semantic-layer/) sinh ra để giải: định nghĩa khái niệm nghiệp vụ **một lần**, ở một chỗ, rồi mọi câu hỏi sau đó đều tính theo đúng định nghĩa đó. "Doanh thu do ads" phải là một dòng định nghĩa, không phải ba con số rời rạc do ba nhà cung cấp tự khai.
+Đây đúng là bài toán mà một [Semantic Layer](/blog/semantic-layer/) (tầng định nghĩa nghiệp vụ dùng chung) sinh ra để giải: định nghĩa khái niệm nghiệp vụ **một lần**, ở một chỗ, rồi mọi câu hỏi sau đó đều tính theo đúng định nghĩa đó. "Doanh thu do ads" phải là một dòng định nghĩa, không phải ba con số rời rạc do ba nhà cung cấp tự khai.
 
 ## Khi bạn cộng ROAS ba kênh, bạn đang cộng quả táo với quả cam
 

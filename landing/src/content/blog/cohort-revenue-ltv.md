@@ -29,12 +29,12 @@ Phần cuối của series ghép giữ chân với doanh thu — nơi cohort th�
 
 ## Revenue cohort: theo dõi tiền, không phải đầu người
 
-Thay vì hỏi "tháng 6 còn lại bao nhiêu *người*?", revenue cohort hỏi "nhóm khách tháng 1 đã tạo ra **bao nhiêu tiền tích luỹ** tính đến nay?". Bạn cộng dồn doanh thu của từng nhóm theo tuổi đời.
+Thay vì hỏi "tháng 6 còn lại bao nhiêu *người*?", revenue cohort (nhóm khách gộp theo thời điểm bắt đầu, đo bằng doanh thu) hỏi "nhóm khách tháng 1 đã tạo ra **bao nhiêu tiền tích luỹ** tính đến nay?". Bạn cộng dồn doanh thu của từng nhóm theo tuổi đời.
 
 Hình dạng đường tích luỹ này quyết định số phận tài chính của bạn:
 
-- Đường **chững lại sớm**: khách trả một lần rồi thôi. LTV thấp, khó scale.
-- Đường **vẫn dốc lên** sau nhiều tháng: khách chi thêm theo thời gian (mua lại, nâng gói, giỏ hàng lớn hơn). Đây là *expansion revenue* — và nó là thứ biến một doanh nghiệp tốt thành một doanh nghiệp tuyệt vời.
+- Đường **chững lại sớm**: khách trả một lần rồi thôi. LTV (Customer Lifetime Value — giá trị trọn đời của một khách) thấp, khó scale.
+- Đường **vẫn dốc lên** sau nhiều tháng: khách chi thêm theo thời gian (mua lại, nâng gói, giỏ hàng lớn hơn). Đây là *expansion revenue* (doanh thu mở rộng — phần khách cũ chi thêm) — và nó là thứ biến một doanh nghiệp tốt thành một doanh nghiệp tuyệt vời.
 
 ## Câu hỏi triệu đô: bao giờ một cohort hoà vốn?
 
@@ -79,7 +79,7 @@ Con số này thay đổi cách bạn điều hành:
 
 ### SaaS — expansion và NRR
 
-Doanh thu giữ lại ròng (NRR) là vua. Revenue cohort cho thấy nhóm khách cũ tự lớn lên qua nâng gói và mua thêm. NRR trên 100% (đã nói ở [Phần 2](/blog/cohort-retention-pmf/)) nghĩa là bạn tăng trưởng kể cả khi ngừng thu hút khách mới — và nó hiện ra rõ nhất trên đường doanh thu tích luỹ vẫn dốc lên.
+Doanh thu giữ lại ròng (NRR — Net Revenue Retention: tỷ lệ giữ doanh thu từ tập khách cũ sau khi cộng phần mở rộng và trừ phần rời bỏ) là vua. Revenue cohort cho thấy nhóm khách cũ tự lớn lên qua nâng gói và mua thêm. NRR trên 100% (đã nói ở [Phần 2](/blog/cohort-retention-pmf/)) nghĩa là bạn tăng trưởng kể cả khi ngừng thu hút khách mới — và nó hiện ra rõ nhất trên đường doanh thu tích luỹ vẫn dốc lên.
 
 ### F&B / Bán lẻ — tần suất và giỏ hàng
 

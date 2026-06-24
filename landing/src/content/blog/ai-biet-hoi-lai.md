@@ -49,7 +49,7 @@ Bán trên Shopee, Lazada, TikTok Shop thì con số khách trả **không phả
 
 ## Mơ hồ kiểu 4 — Đơn vị và cấp độ gộp
 
-Một câu hỏi gọn vẫn có thể giấu một cái bẫy đơn vị. "Giá trị đơn trung bình" — trung bình trên mỗi đơn, hay mỗi khách? "Tăng trưởng" — tuyệt đối bằng tiền, hay phần trăm? "Khách hàng" — đếm theo số điện thoại, hay theo từng tài khoản (một khách có thể đặt cả trên app lẫn web)?
+Một câu hỏi gọn vẫn có thể giấu một cái bẫy đơn vị. "Giá trị đơn trung bình" — trung bình trên mỗi đơn, hay mỗi khách? "Tăng trưởng" — tuyệt đối bằng tiền, hay phần trăm? "Khách hàng" — đếm theo số điện thoại, hay theo từng tài khoản (một khách có thể đặt cả trên ứng dụng lẫn web)?
 
 *Ví dụ minh hoạ:* bạn hỏi "trung bình mỗi khách chi bao nhiêu". Nếu AI gộp theo số điện thoại, một khách mua 3 lần được tính là một người chi nhiều. Nếu gộp theo từng đơn đăng nhập, cùng người đó bị tách thành ba "khách" chi ít. Con số trung bình nhảy gấp đôi tuỳ cách hiểu — và cả hai đều ra một bảng đẹp.
 
@@ -61,7 +61,7 @@ Cần nói rõ trước một điều, vì đây là chỗ dễ hiểu sai nhấ
 
 Định vị của Semantix là **phủ định** của cả hai cách đó. Một mặt, hệ thống được thiết kế để **dừng lại và hỏi lại đúng chỗ** khi câu hỏi thiếu thông tin làm đổi con số — thay vì trả lời tự tin cho một câu bạn chưa hỏi rõ. Cơ chế này nối tiếp đúng tinh thần đã mô tả trong bài [vì sao LLM tự tin bịa ra SQL — và cơ chế nào chặn](/blog/llm-bia-sql/): bịa giỏi nhất là bịa khi không ai bắt phải thú nhận mình đang đoán, nên vòng làm rõ buộc AI thú nhận.
 
-Mặt khác — và đây là phần quan trọng — những điểm mơ hồ **lặp đi lặp lại** không nên phải hỏi đi hỏi lại mỗi ngày. "Doanh thu", "đơn hoàn tất", "khách hoạt động" được định nghĩa **một lần, chuẩn xác** trong **semantic layer**, rồi neo vào đó cho mọi câu hỏi về sau. Khi định nghĩa đã có sẵn, AI không còn khoảng trống để đoán *và* không cần hỏi lại những thứ đã chốt. Nó chỉ hỏi lại phần thật sự còn để ngỏ. Đó là khác biệt giữa [một AI hiểu nghiệp vụ và một chatbot cắm thẳng vào database](/blog/semantic-layer-vs-chatbot-database/).
+Mặt khác — và đây là phần quan trọng — những điểm mơ hồ **lặp đi lặp lại** không nên phải hỏi đi hỏi lại mỗi ngày. "Doanh thu", "đơn hoàn tất", "khách hoạt động" được định nghĩa **một lần, chuẩn xác** trong **semantic layer** (Semantic Layer — tầng định nghĩa nghiệp vụ dùng chung), rồi neo vào đó cho mọi câu hỏi về sau. Khi định nghĩa đã có sẵn, AI không còn khoảng trống để đoán *và* không cần hỏi lại những thứ đã chốt. Nó chỉ hỏi lại phần thật sự còn để ngỏ. Đó là khác biệt giữa [một AI hiểu nghiệp vụ và một chatbot cắm thẳng vào database](/blog/semantic-layer-vs-chatbot-database/).
 
 Nói cách khác: vòng làm rõ lo phần *câu hỏi mới còn mơ hồ*, semantic layer lo phần *định nghĩa đã chốt một lần*. Giống một **nhân viên mới giỏi**: ngày đầu cậu hỏi lại sếp "doanh thu mình tính trước hay sau phí sàn?" — nhưng hỏi **đúng một lần**, ghi vào sổ tay, và từ hôm sau dùng đúng định nghĩa đó mà không phiền bạn nữa. Cậu đáng tin không phải vì không bao giờ hỏi, mà vì biết hỏi đúng lúc rồi nhớ.
 

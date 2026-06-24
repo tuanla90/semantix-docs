@@ -18,20 +18,20 @@ coverAlt: "Một bảng growth accounting đã dựng xong: các tháng nhân v�
   <ol>
     <li><a href="/blog/growth-accounting/">Phần 1 — Nền tảng: phương trình tăng trưởng</a></li>
     <li><a href="/blog/growth-accounting-quick-ratio/">Phần 2 — Quick Ratio: nhịp tim tăng trưởng</a></li>
-    <li><a href="/blog/growth-accounting-revenue/">Phần 3 — Từ user sang tiền: Net Dollar Retention</a></li>
+    <li><a href="/blog/growth-accounting-revenue/">Phần 3 — Từ người dùng sang tiền: Net Dollar Retention</a></li>
     <li class="current">Phần 4 — Thực chiến: dựng bảng growth accounting</li>
   </ol>
 </div>
 
-Ba phần vừa rồi, chúng ta đã đi qua lý thuyết: [phương trình tăng trưởng](/blog/growth-accounting/) (MAU kỳ này = kỳ trước + new + resurrected − churned), [Quick Ratio](/blog/growth-accounting-quick-ratio/) như nhịp tim, và [Net Dollar Retention](/blog/growth-accounting-revenue/) khi đếm tiền thay vì đếm người. Đẹp trên giấy. Nhưng giấy không trả lương.
+Ba phần vừa rồi, chúng ta đã đi qua lý thuyết: [phương trình tăng trưởng](/blog/growth-accounting/) (MAU (Monthly Active User — số khách hoạt động hàng tháng) kỳ này = kỳ trước + new + resurrected − churned), [Quick Ratio](/blog/growth-accounting-quick-ratio/) (tỉ lệ "tăng trên hao" = (khách mới + quay lại) / khách rời đi) như nhịp tim, và [Net Dollar Retention](/blog/growth-accounting-revenue/) (NDR — tỷ lệ giữ doanh thu từ khách cũ) khi đếm tiền thay vì đếm người. Đẹp trên giấy. Nhưng giấy không trả lương.
 
-Giờ là phần khác hẳn: bắt tay dựng một bảng growth accounting **thật** cho shop hoặc SaaS của bạn. Và đây là chỗ tôi phải cảnh báo trước cho thẳng thắn: **dựng bảng này bằng tay trong Excel là một cơn ác mộng.** Không phải vì toán khó — phép tính chỉ là cộng trừ. Mà vì để biết mỗi khách kỳ này thuộc loại nào, bạn phải so trạng thái của họ với *kỳ trước*, kỳ trước nữa, kéo qua từng tháng. Đó là một chuỗi JOIN và công thức lồng nhau dài đến chóng mặt — và làm lại từ đầu mỗi tháng.
+Giờ là phần khác hẳn: bắt tay dựng một bảng growth accounting (kế toán tăng trưởng) **thật** cho shop hoặc SaaS (Software as a Service — phần mềm cho thuê theo thuê bao) của bạn. Và đây là chỗ tôi phải cảnh báo trước cho thẳng thắn: **dựng bảng này bằng tay trong Excel là một cơn ác mộng.** Không phải vì toán khó — phép tính chỉ là cộng trừ. Mà vì để biết mỗi khách kỳ này thuộc loại nào, bạn phải so trạng thái của họ với *kỳ trước*, kỳ trước nữa, kéo qua từng tháng. Đó là một chuỗi JOIN và công thức lồng nhau dài đến chóng mặt — và làm lại từ đầu mỗi tháng.
 
 Đây chính là chỗ AI + Semantic Layer thay đổi cuộc chơi. Nhưng trước khi nói máy làm thế nào, bạn phải hiểu *nó đang làm gì*. Nên ta đi từ dữ liệu.
 
 ## Bạn cần đúng MỘT bảng dữ liệu — không cần data warehouse
 
-Tin tốt đầu tiên: growth accounting không đòi hỏi hạ tầng khủng. Bạn cần **đúng một bảng** — bảng giao dịch hoặc đơn hàng — với ba cột tối thiểu:
+Tin tốt đầu tiên: growth accounting không đòi hỏi hạ tầng khủng — không cần cả data warehouse (kho dữ liệu tập trung, tối ưu cho phân tích). Bạn cần **đúng một bảng** — bảng giao dịch hoặc đơn hàng — với ba cột tối thiểu:
 
 | Định danh khách | Thời điểm | Giá trị |
 |---|---|---|
@@ -54,7 +54,7 @@ Nếu bạn đếm cả tiền, thêm hai trạng thái: **expansion** (khách c
 
 Trước khi gõ một công thức nào, bạn phải chốt ba định nghĩa. Bỏ qua bước này là cách nhanh nhất để có một bảng đẹp đẽ và sai bét.
 
-**1. "Active" nghĩa là gì?** Một khách được tính là "có mặt" trong kỳ khi nào — khi họ *có đơn hàng*? Khi họ *đăng nhập*? Khi họ *mở app*? Với shop bán hàng, "có đơn trong kỳ" là định nghĩa tự nhiên. Với SaaS, có thể là "đăng nhập ít nhất một lần". Không có đáp án đúng tuyệt đối — nhưng có một quy tắc sắt: **định nghĩa MỘT lần, rồi giữ nguyên.** Đổi định nghĩa giữa chừng thì mọi so sánh giữa các tháng đều vô nghĩa.
+**1. "Active" nghĩa là gì?** Một khách được tính là "có mặt" trong kỳ khi nào — khi họ *có đơn hàng*? Khi họ *đăng nhập*? Khi họ *mở ứng dụng*? Với shop bán hàng, "có đơn trong kỳ" là định nghĩa tự nhiên. Với SaaS, có thể là "đăng nhập ít nhất một lần". Không có đáp án đúng tuyệt đối — nhưng có một quy tắc sắt: **định nghĩa MỘT lần, rồi giữ nguyên.** Đổi định nghĩa giữa chừng thì mọi so sánh giữa các tháng đều vô nghĩa.
 
 **2. Chọn kỳ đúng — và đây là cái bẫy lớn nhất.** Tháng là mặc định hợp lý cho ecom và SaaS, nơi khách mua/dùng đều đặn. Nhưng hãy tưởng tượng bạn bán **nội thất**, hoặc đồ điện tử lớn. Một khách mua bộ sofa hôm nay sẽ không mua bộ nữa vào tháng sau — chu kỳ mua của họ là vài năm. Nếu bạn chọn kỳ là *tháng*, thì tháng nào gần như **mọi khách cũng trông như "churn"**, và bảng của bạn sẽ gào lên rằng doanh nghiệp đang sụp đổ trong khi nó hoàn toàn khỏe mạnh.
 
@@ -151,7 +151,7 @@ Và vì growth accounting cần dữ liệu giao dịch đầy đủ, nó dựa 
 
 Growth accounting trả lời một câu: *"Kỳ này, dòng chảy khách hàng diễn ra thế nào?"* — vào bao nhiêu, ra bao nhiêu, ròng còn bao nhiêu. Nhưng nó *không* cho biết khách ở lại bao lâu theo tuổi đời.
 
-Đó là việc của [Cohort Analysis](/blog/cohort-analysis/): nhóm khách theo thời điểm bắt đầu, theo dõi từng nhóm hao mòn ra sao qua tháng 1, tháng 3, tháng 6. Hai góc nhìn bổ sung nhau như hai mặt của cùng đồng tiền:
+Đó là việc của [Cohort Analysis](/blog/cohort-analysis/) (phân tích theo nhóm khách gộp theo thời điểm bắt đầu): nhóm khách theo thời điểm bắt đầu, theo dõi từng nhóm hao mòn ra sao qua tháng 1, tháng 3, tháng 6. Hai góc nhìn bổ sung nhau như hai mặt của cùng đồng tiền:
 
 - **Growth accounting** = ảnh chụp dòng chảy *mỗi kỳ* (chiều ngang thời gian thực).
 - **Cohort** = đường cong giữ chân *mỗi nhóm theo tuổi đời* (chiều dọc vòng đời).

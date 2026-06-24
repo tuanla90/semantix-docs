@@ -13,13 +13,13 @@ coverAlt: "Biểu đồ Pareto: ít sản phẩm đầu tạo phần lớn doanh
 
 Một chủ shop mỹ phẩm đọc về nguyên lý 80/20, mở báo cáo, và thấy đúng như sách: 22% mã hàng tạo ra 79% doanh thu. Kết luận có vẻ hiển nhiên — "tập trung vào ngôi sao, dẹp phần còn lại cho gọn kho". Cô cắt gần một nửa danh mục: những mã bán lẻ tẻ, doanh thu cỏn con.
 
-Ba tháng sau, doanh thu *cả nhóm ngôi sao* cũng tụt. Vì sao? Những mã "kém" bị cắt hóa ra là lý do khách ghé cửa hàng — một loại serum hiếm, một màu son lạ — và khi vào, họ mua kèm luôn mấy món best-seller. Cắt cái đuôi, cô vô tình cắt luôn dòng khách nuôi cái đầu.
+Ba tháng sau, doanh thu *cả nhóm ngôi sao* cũng tụt. Vì sao? Những mã "kém" bị cắt hóa ra là lý do khách ghé cửa hàng — một loại serum hiếm, một màu son lạ — và khi vào, họ mua kèm luôn mấy món best-seller (bán chạy nhất). Cắt cái đuôi, cô vô tình cắt luôn dòng khách nuôi cái đầu.
 
 Đây là nghịch lý ít người chịu tin: **biết 80/20 là phần dễ. Phần khó — và nguy hiểm — là biết phải *làm gì* với nó.** Áp dụng Pareto một cách ngây thơ thường phá nhiều hơn xây. Bài này là cách đọc Pareto cho đúng, và bốn cái bẫy quanh nó.
 
 ## Nguyên lý 80/20 thật ra là gì
 
-Nguyên lý Pareto nói: trong nhiều hệ thống, **phần lớn kết quả đến từ một thiểu số nguyên nhân.** 80% doanh thu từ 20% sản phẩm; 80% lợi nhuận từ 20% khách; 80% khiếu nại từ 20% lỗi.
+Nguyên lý Pareto (quy luật 80/20 — khoảng 20% nguyên nhân thường tạo ra 80% kết quả) nói: trong nhiều hệ thống, **phần lớn kết quả đến từ một thiểu số nguyên nhân.** 80% doanh thu từ 20% sản phẩm; 80% lợi nhuận từ 20% khách; 80% khiếu nại từ 20% lỗi.
 
 Hai hiểu lầm cần dẹp ngay:
 
@@ -68,17 +68,17 @@ Cách trình bày kinh điển là **biểu đồ Pareto**: cột xếp giảm d
 
 Áp Pareto **hai lần** và điều kỳ lạ xảy ra: nếu 20% tạo 80%, thì 20% của nhóm 20% đó (tức **4%**) tạo 80% của 80% (tức **64%**). Quy tắc 64/4. Trong nhiều shop, một nhúm rất nhỏ — 4–5% sản phẩm, hoặc một dúm khách — gánh hơn nửa doanh thu.
 
-Hệ quả hành động: nhóm "vital few" của bạn thường **nhỏ hơn bạn tưởng**, và xứng đáng được chăm ở mức gần như cá nhân hoá — đừng để nó chìm trong một danh sách "top 20%" dài dằng dặc.
+Hệ quả hành động: nhóm "vital few" (thiểu số sống còn — số ít tạo phần lớn kết quả) của bạn thường **nhỏ hơn bạn tưởng**, và xứng đáng được chăm ở mức gần như cá nhân hoá — đừng để nó chìm trong một danh sách "top 20%" dài dằng dặc.
 
 ## Sự thật 3: Pareto của doanh thu ≠ Pareto của lợi nhuận
 
-Đây là cú lật quan trọng nhất. Danh sách "20% sản phẩm tạo 80% **doanh thu**" thường *khác hẳn* danh sách "20% tạo 80% **lợi nhuận**". Một mã best-seller bán bằng giá vốn (đại hạ giá để kéo traffic) đứng đầu bảng doanh thu nhưng có thể *âm* lợi nhuận. Trong khi một mã bán chậm, biên 60%, lại là con bò sữa thầm lặng.
+Đây là cú lật quan trọng nhất. Danh sách "20% sản phẩm tạo 80% **doanh thu**" thường *khác hẳn* danh sách "20% tạo 80% **lợi nhuận**". Một mã best-seller bán bằng giá vốn (đại hạ giá để kéo traffic — lượng khách ghé) đứng đầu bảng doanh thu nhưng có thể *âm* lợi nhuận. Trong khi một mã bán chậm, biên 60%, lại là con bò sữa thầm lặng.
 
 Nếu bạn ra quyết định "giữ/bỏ" dựa trên Pareto doanh thu, bạn đang tôn vinh nhầm ngôi sao. **Luôn chạy Pareto trên lợi nhuận gộp, không chỉ doanh thu** — y như bài học [Monetary trong RFM nâng cao](/blog/rfm-nang-cao/): doanh thu nói cái được ghi nhận, lợi nhuận nói cái bạn thật sự giữ lại.
 
 ## Cái bẫy chết người: cắt cái đuôi dài
 
-Giờ đến sai lầm của shop mỹ phẩm đầu bài. Pareto cám dỗ bạn "dẹp 80% trivial many cho gọn". Nhưng **cái đuôi dài (long tail) thường nuôi cái đầu** theo những cách không hiện ra trên báo cáo doanh thu từng-mã:
+Giờ đến sai lầm của shop mỹ phẩm đầu bài. Pareto cám dỗ bạn "dẹp 80% trivial many (đa số tầm thường — số đông đóng góp nhỏ) cho gọn". Nhưng **cái đuôi dài (long tail) thường nuôi cái đầu** theo những cách không hiện ra trên báo cáo doanh thu từng-mã:
 
 <div class="viz">
 <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
@@ -110,11 +110,11 @@ Bốn giá trị ẩn của cái đuôi:
 
 ## Pareto ngược: 20% nguyên nhân gây 80% rắc rối
 
-Pareto không chỉ để tìm cái tốt — nó mạnh ngang vậy khi soi cái xấu. Thường **20% loại lỗi gây 80% khiếu nại**, 20% lý do gây 80% đơn hoàn, 20% bước gây 80% ticket hỗ trợ. Dựng biểu đồ Pareto cho *vấn đề* (sắp xếp lỗi theo tần suất) là cách nhanh nhất biết nên sửa gì trước — thay vì dàn lực mỏng khắp nơi. Đây là một trong những ứng dụng cổ điển và hiệu quả nhất của Pareto trong vận hành & chất lượng.
+Pareto không chỉ để tìm cái tốt — nó mạnh ngang vậy khi soi cái xấu. Thường **20% loại lỗi gây 80% khiếu nại**, 20% lý do gây 80% đơn hoàn, 20% bước gây 80% ticket (phiếu yêu cầu hỗ trợ) hỗ trợ. Dựng biểu đồ Pareto cho *vấn đề* (sắp xếp lỗi theo tần suất) là cách nhanh nhất biết nên sửa gì trước — thay vì dàn lực mỏng khắp nơi. Đây là một trong những ứng dụng cổ điển và hiệu quả nhất của Pareto trong vận hành & chất lượng.
 
 ## Pareto với Semantix
 
-Tự tay làm Pareto đúng — xếp hạng theo *lợi nhuận* chứ không doanh thu, đo tỷ lệ thật, soi đóng góp của đuôi vào giỏ hàng, rồi lặp cho cả sản phẩm lẫn khách lẫn lỗi — là nhiều buổi SQL cho analyst.
+Tự tay làm Pareto đúng — xếp hạng theo *lợi nhuận* chứ không doanh thu, đo tỷ lệ thật, soi đóng góp của đuôi vào giỏ hàng, rồi lặp cho cả sản phẩm lẫn khách lẫn lỗi — là nhiều buổi SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) cho analyst.
 
 Semantix không phải chatbot cắm vào database rồi đoán mò. Bạn định nghĩa "lợi nhuận gộp", "đơn hàng", "sản phẩm" một lần trong [Semantic Layer](/blog/semantic-layer/), rồi hỏi bằng tiếng Việt:
 

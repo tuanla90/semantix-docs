@@ -17,7 +17,7 @@ coverAlt: "Chủ shop đa kênh hỏi tiếng Việt, AI trả lời bằng bi�
 
 Phản xạ đầu tiên của chị Hà — cũng là phản xạ của hầu hết chủ shop đến quy mô này — rất hợp lý: *"Mình cần thuê một bạn làm data. Hoặc thuê ngoài dựng cho cái dashboard tử tế, để khỏi phải ngồi ghép Excel mỗi sáng nữa."*
 
-Chị đã suýt làm vậy. Và đây là chỗ ngược đời mà chị chỉ nhận ra sau đó vài tháng: **thứ chị thiếu không phải một người biết SQL — mà là một câu trả lời đúng vào lúc chị cần nó, kể cả lúc 11 giờ đêm thứ Sáu.** Hai thứ đó nghe giống nhau, nhưng giải bằng hai cách hoàn toàn khác.
+Chị đã suýt làm vậy. Và đây là chỗ ngược đời mà chị chỉ nhận ra sau đó vài tháng: **thứ chị thiếu không phải một người biết SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) — mà là một câu trả lời đúng vào lúc chị cần nó, kể cả lúc 11 giờ đêm thứ Sáu.** Hai thứ đó nghe giống nhau, nhưng giải bằng hai cách hoàn toàn khác.
 
 ## Bài toán của một chủ shop đa kênh
 
@@ -33,7 +33,7 @@ Một đội data giải được phần kỹ thuật. Nhưng nó không giải 
 
 ## Khi "thuê người làm data" không giải được vấn đề thật
 
-Giả sử chị Hà thuê thật. Một bạn analyst giỏi, lương — ví dụ minh họa — 18 đến 25 triệu mỗi tháng, cộng thời gian onboard một, hai tháng để bạn ấy hiểu shop bán gì, "đơn thành công" nghĩa là gì trên từng sàn.
+Giả sử chị Hà thuê thật. Một bạn analyst (chuyên viên phân tích dữ liệu) giỏi, lương — ví dụ minh họa — 18 đến 25 triệu mỗi tháng, cộng thời gian onboard (làm quen việc) một, hai tháng để bạn ấy hiểu shop bán gì, "đơn thành công" nghĩa là gì trên từng sàn.
 
 Rồi chuyện gì xảy ra? Mọi câu hỏi của chị vẫn phải đi qua một người. Chị nhắn "doanh thu thực sau phí của TikTok Shop tuần này bao nhiêu?", bạn ấy nhận, viết truy vấn, gửi lại — nhanh thì nửa tiếng, gặp lúc bạn ấy đang bận thì sáng mai. Và 11 giờ đêm thứ Sáu, lúc chị phát hiện lỗ hổng số liệu, thì bạn ấy đã tan làm.
 
@@ -45,13 +45,13 @@ Nói cách khác: thuê một người biết SQL là mua thêm **một cánh ta
 
 ## Một ngày làm việc kiểu mới: hỏi thay vì đợi
 
-Chị Hà chọn hướng khác. Thay vì thuê người dựng dashboard, chị kết nối ba nguồn dữ liệu — Shopee, TikTok Shop, KiotViet — vào một nền tảng AI BI tự phục vụ, định nghĩa một lần các khái niệm nghiệp vụ ("doanh thu thực" = đã trừ phí sàn, chỉ tính đơn thành công), rồi từ đó hỏi bằng tiếng Việt.
+Chị Hà chọn hướng khác. Thay vì thuê người dựng dashboard, chị kết nối ba nguồn dữ liệu — Shopee, TikTok Shop, KiotViet — vào một nền tảng AI BI (Business Intelligence — biến dữ liệu thành quyết định) tự phục vụ, định nghĩa một lần các khái niệm nghiệp vụ ("doanh thu thực" = đã trừ phí sàn, chỉ tính đơn thành công), rồi từ đó hỏi bằng tiếng Việt.
 
 Buổi sáng của chị bây giờ không bắt đầu bằng `VLOOKUP`. Nó bắt đầu bằng một câu gõ vào ô chat:
 
 > *"Doanh thu thực sau phí của ba kênh hôm qua so với cùng thứ tuần trước? Kênh nào tụt?"*
 
-Số ra trong vài giây, kèm biểu đồ. Không phải vì AI thông minh hơn bạn analyst kia — mà vì nó không cần ngủ, không xếp hàng, và đọc chung một "cuốn từ điển nghiệp vụ" với chị nên không hiểu nhầm "doanh thu" là gì. Đây chính là phần mà AI cần một lớp Semantic Layer để trả lời đúng, không phải chỉ một con bot cắm thẳng vào database. (Vì sao chất lượng câu trả lời phụ thuộc vào *câu hỏi* nhiều hơn vào model, chúng tôi viết riêng trong [5 câu hỏi nên hỏi AI hôm nay](/blog/ai-questions/).)
+Số ra trong vài giây, kèm biểu đồ. Không phải vì AI thông minh hơn bạn analyst kia — mà vì nó không cần ngủ, không xếp hàng, và đọc chung một "cuốn từ điển nghiệp vụ" với chị nên không hiểu nhầm "doanh thu" là gì. Đây chính là phần mà AI cần một lớp Semantic Layer (tầng định nghĩa nghiệp vụ dùng chung) để trả lời đúng, không phải chỉ một con bot cắm thẳng vào database. (Vì sao chất lượng câu trả lời phụ thuộc vào *câu hỏi* nhiều hơn vào model, chúng tôi viết riêng trong [5 câu hỏi nên hỏi AI hôm nay](/blog/ai-questions/).)
 
 Cái thay đổi không phải chị có thêm một dashboard đẹp. Cái thay đổi là **khoảng cách giữa một thắc mắc và một câu trả lời rút từ vài ngày xuống vài giây** — và khoảng cách đó, với người ra quyết định mỗi ngày, chính là tiền.
 
@@ -61,7 +61,7 @@ Cái thay đổi không phải chị có thêm một dashboard đẹp. Cái thay
 
 - *"Mã áo nào tồn trên 60 ngày mà tuần qua bán dưới 5 cái — gom lại xả đợt này được không?"*
 - *"Khách mua cả ba sàn là một người hay ba người? Giá trị trọn đời thật của họ bao nhiêu?"*
-- *"Khung giờ nào trên TikTok Shop ra đơn margin cao nhất để xếp lịch livestream?"*
+- *"Khung giờ nào trên TikTok Shop ra đơn margin (biên lợi nhuận — phần lời còn lại trên mỗi đồng doanh thu) cao nhất để xếp lịch livestream?"*
 - *"Sản phẩm này bán chạy thật, hay chỉ vì mình đang đếm ba dòng cho một mã?"*
 
 *Ví dụ minh họa một lần chốt:* số trả về cho thấy TikTok Shop doanh thu gộp cao hơn cửa hàng KiotViet chừng 30%, nhưng sau phí sàn cộng phí affiliate, lợi nhuận thực lại thấp hơn 15%. Chị Hà dồn ngân sách livestream vào đúng nhóm sản phẩm còn sống được margin trên TikTok, đẩy các mã mỏng lời về bán tại quầy. Quyết định đó mất chị đúng một buổi tối — thay vì một tuần chờ ai đó ghép số.

@@ -29,7 +29,7 @@ Lỗi nguy hiểm nhất ở đây không phải lỗi công thức — loại �
 
 Trước khi nói cách hợp nhất, phải gọi tên ba cái bẫy đã làm hỏng mọi file gộp tay.
 
-**Bẫy 1 — Mã sản phẩm không khớp.** Cùng một chiếc áo thun, Shopee cho mã `SP-1023`, TikTok Shop để `TT88123`, KiotViet lưu theo barcode nội bộ `VAY-TRANG-M`. Khi gộp, bạn không thể biết ba dòng này là *một* sản phẩm — nên báo cáo "sản phẩm bán chạy" của bạn vỡ vụn thành ba dòng riêng, mỗi dòng nửa sự thật.
+**Bẫy 1 — Mã sản phẩm không khớp.** Cùng một chiếc áo thun, Shopee cho mã `SP-1023`, TikTok Shop để `TT88123`, KiotViet lưu theo barcode nội bộ `VAY-TRANG-M`. Khi gộp, bạn không thể biết ba dòng này là *một* sản phẩm — nên báo cáo "sản phẩm bán chạy" của bạn vỡ vụn thành ba dòng riêng, mỗi dòng nửa sự thật. (Mỗi mã hàng như vậy là một SKU — Stock Keeping Unit — đơn vị lưu kho, mã định danh từng loại hàng.)
 
 **Bẫy 2 — Phí sàn mỗi nơi một kiểu.** Shopee trừ phí cố định + phí thanh toán + phí voucher xtra. TikTok Shop trừ hoa hồng theo ngành hàng + phí affiliate. KiotViet bán tại quầy thì gần như không phí sàn. Nếu bạn so doanh thu *gộp* (trước phí) giữa các kênh, bạn đang so quả táo với quả cam — và rất dễ dồn tiền marketing vào kênh trông "doanh thu cao" nhưng thực ra lỗ sau phí.
 
@@ -57,7 +57,7 @@ Làm xong năm bước này, bạn có một bảng duy nhất — *một nguồ
 
 Có bảng gộp rồi vẫn chưa đủ. Câu hỏi cũ quay lại: trong bảng đó, "doanh thu" là cột nào? Gộp trước phí hay sau phí? Tính đơn hủy không?
 
-Đây là lúc cần một lớp **Semantic Layer** — hãy hình dung nó như cuốn từ điển nghiệp vụ đặt giữa dữ liệu thô và mọi báo cáo. Bạn định nghĩa "doanh thu" đúng một lần, ví dụ:
+Đây là lúc cần một lớp **Semantic Layer** (tầng định nghĩa nghiệp vụ dùng chung) — hãy hình dung nó như cuốn từ điển nghiệp vụ đặt giữa dữ liệu thô và mọi báo cáo. Bạn định nghĩa "doanh thu" đúng một lần, ví dụ:
 
 ```
 doanh_thu_thực = SUM(giá_trị_đơn - phí_sàn)
@@ -71,17 +71,17 @@ Từ đó về sau, bất kỳ ai hỏi "doanh thu Shopee tháng này", "doanh t
 Đây là phần thưởng thật. Khi ba kênh đã về một nguồn sự thật và "doanh thu" đã chuẩn hóa, những câu hỏi trước đây *không thể* trả lời bỗng trả lời được trong vài giây:
 
 - **"Kênh nào lời thật sau phí sàn?"** — Không phải kênh doanh thu cao nhất, mà kênh *còn lại nhiều nhất* sau khi trừ hoa hồng, phí thanh toán, voucher.
-- *Ví dụ minh họa:* TikTok Shop có doanh thu gộp cao hơn KiotViet 30%, nhưng sau phí sàn và phí affiliate, lợi nhuận thực lại thấp hơn 15%. Quyết định: dồn ngân sách livestream vào đúng nhóm sản phẩm có margin sống được trên TikTok Shop, đẩy các SKU mỏng margin về bán tại quầy.
+- *Ví dụ minh họa:* TikTok Shop có doanh thu gộp cao hơn KiotViet 30%, nhưng sau phí sàn và phí affiliate, lợi nhuận thực lại thấp hơn 15%. Quyết định: dồn ngân sách livestream vào đúng nhóm sản phẩm có margin (biên lợi nhuận) sống được trên TikTok Shop, đẩy các SKU mỏng margin về bán tại quầy.
 - **"Một khách mua cả ba kênh — họ là một người hay ba người?"** — Khi đã ánh xạ, bạn thấy đúng giá trị trọn đời của khách, không đếm trùng.
 - **"Sản phẩm này thực sự bán chạy, hay chỉ bán chạy vì tôi đang đếm ba dòng cho một SKU?"**
 
-Khi đã có nguồn sự thật, bước tự nhiên tiếp theo là dựng dashboard sống trên đó — chủ đề chúng tôi sẽ đi sâu trong bài [Từ Google Sheets đến dashboard trong 15 phút](/blog/google-sheets-dashboard/).
+Khi đã có nguồn sự thật, bước tự nhiên tiếp theo là dựng dashboard (bảng số trực quan) sống trên đó — chủ đề chúng tôi sẽ đi sâu trong bài [Từ Google Sheets đến dashboard trong 15 phút](/blog/google-sheets-dashboard/).
 
 ## Hợp nhất với Semantix
 
 Semantix không phải "một công cụ gộp Excel cho nhanh hơn". Nó là hạ tầng để bạn làm đúng một lần ba việc khó: **kết nối nhiều nguồn** (Shopee, TikTok Shop, KiotViet, Google Sheets, database) về một chỗ; **chuẩn hóa mã SP, trạng thái và phí** ngay tại tầng dữ liệu; và **định nghĩa "doanh thu" một lần** trong Semantic Layer để mọi câu hỏi sau đó đều nhất quán.
 
-Sau khi kết nối, bạn không cần viết SQL hay nhớ trừ phí. Bạn hỏi bằng tiếng Việt — *"kênh nào lời thật nhất tháng này sau phí sàn?"* — và AI hiểu đúng câu hỏi vì nó đọc chung một cuốn từ điển nghiệp vụ với bạn. *(Muốn biết vì sao hỏi tiếng Việt lại ra đúng SQL? Đọc [Text-to-SQL là gì](/blog/text-to-sql/).)*
+Sau khi kết nối, bạn không cần viết SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) hay nhớ trừ phí. Bạn hỏi bằng tiếng Việt — *"kênh nào lời thật nhất tháng này sau phí sàn?"* — và AI hiểu đúng câu hỏi vì nó đọc chung một cuốn từ điển nghiệp vụ với bạn. *(Muốn biết vì sao hỏi tiếng Việt lại ra đúng SQL? Đọc [Text-to-SQL là gì](/blog/text-to-sql/) — kỹ thuật để AI biến câu hỏi tiếng Việt thành câu lệnh SQL.)*
 
 ## Tóm lại
 

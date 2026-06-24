@@ -11,21 +11,21 @@ cover: "/blog/covers/vs-powerbi-tableau.svg"
 coverAlt: "Chi phí Power BI và Tableau tăng theo số người dùng, Semantix giữ phẳng"
 ---
 
-Một giám đốc vận hành kể với chúng tôi: công ty anh đầu tư Tableau, thuê hẳn một analyst dựng dashboard. Sáu tháng sau, anh vẫn nhắn Zalo cho bạn analyst đó mỗi khi cần một con số mới — và chờ một đến ba ngày.
+Một giám đốc vận hành kể với chúng tôi: công ty anh đầu tư Tableau, thuê hẳn một analyst (chuyên viên phân tích dữ liệu) dựng dashboard (bảng số trực quan). Sáu tháng sau, anh vẫn nhắn Zalo cho bạn analyst đó mỗi khi cần một con số mới — và chờ một đến ba ngày.
 
-Đây là nghịch lý ít người nói ra: **một công cụ BI mạnh hơn có thể trả lời được ít câu hỏi *thực tế* của bạn hơn.** Không phải vì nó kém, mà vì nó chỉ trả lời những gì đã được dựng sẵn. Cả nhóm BI dashboard truyền thống — Power BI, Tableau, Looker, Qlik — đều là những cỗ máy tuyệt vời cho đúng việc chúng sinh ra để làm. Vấn đề là việc đó có thể không phải việc bạn cần. *(Bài này so sánh ở tầm cả nhóm; nếu bạn đang cân nhắc riêng một sản phẩm, xem [Semantix vs Power BI](/blog/semantix-vs-power-bi/) để đào sâu vào DAX, license và hệ sinh thái Microsoft.)*
+Đây là nghịch lý ít người nói ra: **một công cụ BI mạnh hơn có thể trả lời được ít câu hỏi *thực tế* của bạn hơn.** Không phải vì nó kém, mà vì nó chỉ trả lời những gì đã được dựng sẵn. Cả nhóm BI (Business Intelligence — biến dữ liệu thành quyết định) dashboard truyền thống — Power BI, Tableau, Looker, Qlik — đều là những cỗ máy tuyệt vời cho đúng việc chúng sinh ra để làm. Vấn đề là việc đó có thể không phải việc bạn cần. *(Bài này so sánh ở tầm cả nhóm; nếu bạn đang cân nhắc riêng một sản phẩm, xem [Semantix vs Power BI](/blog/semantix-vs-power-bi/) để đào sâu vào DAX, license và hệ sinh thái Microsoft.)*
 
 ## Hai triết lý khác nhau, không phải hai phiên bản của cùng một thứ
 
-BI truyền thống — Power BI, Tableau, Looker, Qlik — đều theo triết lý **dashboard-first**: một người thạo công cụ (analyst) dựng trước các báo cáo, người dùng cuối *tiêu thụ* chúng — lọc, drill, xem. Mọi câu hỏi nằm ngoài dashboard đều phải quay lại hàng đợi của analyst.
+BI truyền thống — Power BI, Tableau, Looker, Qlik — đều theo triết lý **dashboard-first** (báo cáo dựng sẵn trước): một người thạo công cụ (analyst) dựng trước các báo cáo, người dùng cuối *tiêu thụ* chúng — lọc, drill (khoan sâu vào chi tiết), xem. Mọi câu hỏi nằm ngoài dashboard đều phải quay lại hàng đợi của analyst.
 
-Semantix theo triết lý **question-first**: người dùng hỏi bất kỳ câu nào bằng tiếng Việt, AI sinh truy vấn và trả lời ngay. Dashboard là kết quả, không phải điều kiện.
+Semantix theo triết lý **question-first** (câu hỏi đặt trước): người dùng hỏi bất kỳ câu nào bằng tiếng Việt, AI sinh truy vấn và trả lời ngay. Dashboard là kết quả, không phải điều kiện.
 
 > Không phải cái nào "tốt hơn" — chúng giải hai bài toán khác nhau. Câu hỏi đúng là: *phần lớn giá trị của bạn nằm ở báo cáo lặp lại, hay ở những câu hỏi mới mỗi ngày?*
 
 ## Bài toán chi phí: cái giá của mô hình tính theo người dùng
 
-Đây là khác biệt có thể thấy ngay trên hoá đơn. Power BI và Tableau tính tiền **theo từng người dùng**. Mỗi nhân viên muốn xem dữ liệu = thêm một license hàng tháng. Càng dân chủ hoá dữ liệu, bạn càng bị phạt tiền.
+Đây là khác biệt có thể thấy ngay trên hoá đơn. Power BI và Tableau tính tiền **theo từng người dùng**. Mỗi nhân viên muốn xem dữ liệu = thêm một license (giấy phép sử dụng trả phí) hàng tháng. Càng dân chủ hoá dữ liệu, bạn càng bị phạt tiền.
 
 <div class="viz">
 <svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
@@ -49,7 +49,7 @@ Semantix theo triết lý **question-first**: người dùng hỏi bất kỳ c�
   <circle cx="650" cy="250" r="5" fill="#4ADE80"/>
   <text x="556" y="244" fill="#4ADE80" font-size="14" font-weight="700">Semantix</text>
 </svg>
-<div class="viz-caption">Mô hình per-user khiến chi phí leo dốc theo số người dùng. Semantix tính theo instance — một bản phục vụ cả công ty, chi phí gần như phẳng.</div>
+<div class="viz-caption">Mô hình per-user (tính tiền theo từng người dùng) khiến chi phí leo dốc theo số người dùng. Semantix tính theo instance (một bản cài đặt) — một bản phục vụ cả công ty, chi phí gần như phẳng.</div>
 </div>
 
 Con số tham khảo (giá công khai, ước tính theo quy mô):
@@ -60,7 +60,7 @@ Con số tham khảo (giá công khai, ước tính theo quy mô):
 | Power BI Pro | ~$10/user + Premium capacity | $600–3.000/tháng |
 | **Semantix** | **Theo instance, không theo user** | **Gần như phẳng bất kể số user** |
 
-Với Semantix, bạn còn trả AI theo mức dùng thật (chỉ tốn khi có người hỏi) và có thể chuyển sang model rẻ như Gemini Flash để tiết kiệm phần lớn chi phí suy luận.
+Với Semantix, bạn còn trả AI theo mức dùng thật (chỉ tốn khi có người hỏi) và có thể chuyển sang model (mô hình AI) rẻ như Gemini Flash để tiết kiệm phần lớn chi phí suy luận.
 
 ## So sánh thẳng
 
@@ -69,11 +69,11 @@ Với Semantix, bạn còn trả AI theo mức dùng thật (chỉ tốn khi có
 | Hỏi câu mới ngoài dashboard | Cần analyst dựng (1–3 ngày) | Hỏi tiếng Việt, trả lời tức thì |
 | Người dùng không kỹ thuật | Tiêu thụ dashboard có sẵn | Tự hỏi, tự nhận câu trả lời |
 | AI hỏi-đáp ngôn ngữ tự nhiên | Hạn chế / cần add-on | Cốt lõi, đa nhà cung cấp |
-| Tạo metric mới | Cần DAX / LookML | Định nghĩa trong Semantic Layer, hỏi bằng tiếng Việt |
+| Tạo metric (chỉ số đo được) mới | Cần DAX / LookML (ngôn ngữ công thức riêng của Power BI / Looker) | Định nghĩa trong Semantic Layer (tầng định nghĩa nghiệp vụ dùng chung), hỏi bằng tiếng Việt |
 | Thư viện biểu đồ | **Rất phong phú, dẫn đầu thị trường** | 27 loại — đủ rộng nhưng ít hơn |
 | Hệ sinh thái & cộng đồng | **Khổng lồ, lâu đời** | Trẻ hơn |
 | Mô hình giá | Theo người dùng | Theo instance |
-| Self-hosted / chủ quyền dữ liệu | Hạn chế (cloud-first) | Có, dữ liệu không rời server |
+| Self-hosted (tự cài trên máy chủ riêng) / chủ quyền dữ liệu | Hạn chế (cloud-first — ưu tiên chạy trên cloud) | Có, dữ liệu không rời server |
 | Tối ưu tiếng Việt | Không | Có |
 
 ## Khi nào bạn *nên* chọn Power BI hoặc Tableau
@@ -85,9 +85,9 @@ Một bài so sánh trung thực phải nói rõ điều này. Hãy chọn Power
 - Bạn đã có **đội analyst thạo DAX/LookML** và một hệ sinh thái Microsoft/Salesforce sẵn.
 - Bạn cần các tích hợp enterprise lâu đời mà một sản phẩm trẻ chưa có.
 
-Nếu phần lớn giá trị của bạn nằm ở **những câu hỏi mới mỗi ngày từ những người không biết SQL** — thì đó là sân của AI hỏi-đáp, không phải dashboard truyền thống.
+Nếu phần lớn giá trị của bạn nằm ở **những câu hỏi mới mỗi ngày từ những người không biết SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu)** — thì đó là sân của AI hỏi-đáp, không phải dashboard truyền thống.
 
-## Mental model để quyết định
+## Mental model (khung tư duy) để quyết định
 
 > Đừng hỏi "công cụ nào mạnh nhất?". Hãy hỏi **"câu hỏi của tôi có nằm sẵn trong một dashboard không?"** Nếu có, BI truyền thống ổn. Nếu phần lớn câu hỏi của bạn là *mới* — bạn cần thứ trả lời được câu chưa ai dựng trước.
 

@@ -13,7 +13,7 @@ coverAlt: "Một bảng tính Google Sheets biến đổi thành mini-dashboard 
 
 *Muốn tự tay làm thử ngay khi đọc xong? [Dùng thử miễn phí với Google Sheets — kết nối và hỏi câu đầu trong dưới 15 phút.](/docs/vi/free-trial/)*
 
-Một chủ shop thời trang ở Gò Vấp từng nói với tôi: "Em muốn có cái dashboard xem doanh thu, nhưng nghe nói phải thuê người dựng *data warehouse*, chắc vài tuần với chục triệu, thôi để sau." Câu này tôi nghe đi nghe lại đến mức thuộc lòng.
+Một chủ shop thời trang ở Gò Vấp từng nói với tôi: "Em muốn có cái dashboard (bảng số trực quan) xem doanh thu, nhưng nghe nói phải thuê người dựng *data warehouse* (kho dữ liệu tập trung cho phân tích), chắc vài tuần với chục triệu, thôi để sau." Câu này tôi nghe đi nghe lại đến mức thuộc lòng.
 
 Và mỗi lần, tôi đều hỏi ngược: "Chị đang ghi đơn hàng ở đâu?" — Câu trả lời gần như luôn giống nhau: một file Google Sheets.
 
@@ -21,9 +21,9 @@ Và mỗi lần, tôi đều hỏi ngược: "Chị đang ghi đơn hàng ở đ
 
 ## Vì sao Google Sheets là điểm khởi đầu đúng (chứ không phải bước đệm tạm bợ)
 
-Có một định kiến rằng Sheets là "đồ chơi", còn data thật phải nằm trong database xịn. Nhưng với phần lớn shop và SME Việt, sự thật là: **dữ liệu kinh doanh quan trọng nhất của bạn đang sống trong Sheets** — đơn hàng, tồn kho, chi phí ads, danh sách khách. Nó không tạm bợ. Nó là thật.
+Có một định kiến rằng Sheets là "đồ chơi", còn data thật phải nằm trong database xịn. Nhưng với phần lớn shop và SME (Small and Medium Enterprise — doanh nghiệp vừa và nhỏ) Việt, sự thật là: **dữ liệu kinh doanh quan trọng nhất của bạn đang sống trong Sheets** — đơn hàng, tồn kho, chi phí ads, danh sách khách. Nó không tạm bợ. Nó là thật.
 
-Vấn đề không phải Sheets thiếu dữ liệu. Vấn đề là dữ liệu nằm im. Bạn cuộn lên cuộn xuống, lọc tay, dựng pivot, rồi tuần sau làm lại từ đầu. Giống như có cả một kho hàng nhưng không có người thủ kho — đồ thì đầy đấy, mà hỏi cái gì cũng phải tự đi tìm.
+Vấn đề không phải Sheets thiếu dữ liệu. Vấn đề là dữ liệu nằm im. Bạn cuộn lên cuộn xuống, lọc tay, dựng pivot (bảng tổng hợp xoay trong bảng tính), rồi tuần sau làm lại từ đầu. Giống như có cả một kho hàng nhưng không có người thủ kho — đồ thì đầy đấy, mà hỏi cái gì cũng phải tự đi tìm.
 
 Việc cần làm không phải "chuyển nhà" dữ liệu sang nơi sang trọng hơn. Việc cần làm là cho dữ liệu một cái miệng để nó trả lời bạn. Và để làm được, chỉ cần sheet của bạn đủ sạch để **máy đọc được**.
 
@@ -58,7 +58,7 @@ Một phút, và cái "kho hàng" của bạn vừa có thủ kho.
 
 ## Bước 3: Hỏi câu đầu tiên bằng tiếng Việt
 
-Đây là khoảnh khắc "à há". Bạn không cần SQL, không cần biết tên bảng. Gõ thẳng tiếng Việt như nhắn cho một nhân viên giỏi:
+Đây là khoảnh khắc "à há". Bạn không cần SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu), không cần biết tên bảng. Gõ thẳng tiếng Việt như nhắn cho một nhân viên giỏi:
 
 > *"Doanh thu từng kênh trong tháng này, kênh nào cao nhất?"*
 
@@ -85,7 +85,7 @@ Bạn có thể nói: "Pivot table trong Sheets cũng làm được mà." Đúng
 
 Pivot là **bạn ra lệnh cho máy**: kéo trường này vào hàng, trường kia vào cột, chọn hàm tính. Mỗi câu hỏi mới là một lần dựng lại. Semantix là **bạn hỏi, máy hiểu**: đổi câu hỏi chỉ là gõ một câu khác, không dựng lại gì.
 
-Quan trọng hơn, Semantix định nghĩa "doanh thu" *một lần* — gọi là [Semantic Layer](/blog/semantic-layer/) — nên bạn, cộng sự, và sếp hỏi cùng một câu sẽ ra cùng một số. Pivot thì mỗi người kéo mỗi kiểu, ba người ra ba con số.
+Quan trọng hơn, Semantix định nghĩa "doanh thu" *một lần* — gọi là [Semantic Layer](/blog/semantic-layer/) (tầng định nghĩa nghiệp vụ dùng chung) — nên bạn, cộng sự, và sếp hỏi cùng một câu sẽ ra cùng một số. Pivot thì mỗi người kéo mỗi kiểu, ba người ra ba con số.
 
 Và khi shop bạn lớn lên — thêm Shopee, thêm TikTok Shop, thêm KiotViet — bạn không bị kẹt ở Sheets. Cùng cách hỏi đó áp được lên dữ liệu [hợp nhất đa kênh](/blog/hop-nhat-da-kenh/) về một chỗ. Google Sheets là cánh cửa vào, không phải cái trần.
 

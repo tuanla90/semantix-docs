@@ -13,7 +13,7 @@ coverAlt: "Một bảng dữ liệu chung, mỗi người dùng chỉ soi thấy
 
 Một chuỗi cửa hàng 12 chi nhánh ở TP.HCM muốn các quản lý chi nhánh tự xem số mỗi sáng, không phải nhắn tin xin báo cáo. Nghe đơn giản. Nhưng ngay lập tức có một câu hỏi làm cả ý tưởng đứng hình: nếu mở bảng doanh thu cho quản lý chi nhánh Quận 1, anh ấy cũng thấy luôn số của Quận 7, Thủ Đức, cả 12 chi nhánh. Doanh thu, biên lợi nhuận, lương — của người khác.
 
-Phản xạ thường thấy lúc này là khoá lại cho chắc: thôi, không mở nữa, ai cần thì xin. An toàn thật. Nhưng cũng vừa giết chết toàn bộ ý tưởng "để mọi người tự xem số". Đây chính là cái thế kẹt mà **Row-Level Security** sinh ra để gỡ — và nghịch lý ít người chịu tin là: muốn *chia sẻ* dữ liệu rộng hơn, bạn phải *khoá* nó chặt hơn, chứ không phải lỏng hơn.
+Phản xạ thường thấy lúc này là khoá lại cho chắc: thôi, không mở nữa, ai cần thì xin. An toàn thật. Nhưng cũng vừa giết chết toàn bộ ý tưởng "để mọi người tự xem số". Đây chính là cái thế kẹt mà **Row-Level Security (RLS — phân quyền theo hàng dữ liệu)** sinh ra để gỡ — và nghịch lý ít người chịu tin là: muốn *chia sẻ* dữ liệu rộng hơn, bạn phải *khoá* nó chặt hơn, chứ không phải lỏng hơn.
 
 ## Row-Level Security là gì — và vấn đề gốc nó giải
 

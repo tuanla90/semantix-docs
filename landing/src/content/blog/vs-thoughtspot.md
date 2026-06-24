@@ -11,13 +11,13 @@ cover: "/blog/covers/vs-thoughtspot.svg"
 coverAlt: "Bản đồ định vị: Semantix ở góc AI cao và hợp túi tiền SME"
 ---
 
-Trong cả bài so sánh này, ThoughtSpot là đối thủ tôi tôn trọng nhất — vì chúng tôi tin vào cùng một điều: **tương lai của BI là hỏi bằng ngôn ngữ tự nhiên, không phải kéo-thả dashboard.** ThoughtSpot tiên phong ý tưởng "tìm kiếm dữ liệu như tìm Google" từ rất sớm, và sản phẩm của họ tinh xảo, trưởng thành, có vô số khách hàng enterprise lớn.
+Trong cả bài so sánh này, ThoughtSpot là đối thủ tôi tôn trọng nhất — vì chúng tôi tin vào cùng một điều: **tương lai của BI (Business Intelligence — biến dữ liệu thành quyết định) là hỏi bằng ngôn ngữ tự nhiên, không phải kéo-thả dashboard (bảng số trực quan).** ThoughtSpot tiên phong ý tưởng "tìm kiếm dữ liệu như tìm Google" từ rất sớm, và sản phẩm của họ tinh xảo, trưởng thành, có vô số khách hàng enterprise (doanh nghiệp lớn) lớn.
 
 Nên đây không phải bài "vì sao chúng tôi tốt hơn". Đây là bài về **bạn là ai**. Vì với một doanh nghiệp Việt Nam vừa và nhỏ, hai bức tường hiện ra rất nhanh: cái giá, và mô hình triển khai.
 
 ## Điểm chung: cả hai đặt cược vào AI hỏi-đáp
 
-Khác với Power BI hay Metabase (sinh ra trong kỷ nguyên dashboard rồi gắn AI sau), cả ThoughtSpot và Semantix đều **AI-native từ gốc**: bạn hỏi, hệ thống hiểu ý định, sinh truy vấn, trả lời kèm insight. Cả hai đều có semantic layer để neo AI vào nghĩa nghiệp vụ, đều chống ảo giác, đều hướng tới người dùng không biết SQL.
+Khác với Power BI hay Metabase (sinh ra trong kỷ nguyên dashboard rồi gắn AI sau), cả ThoughtSpot và Semantix đều **AI-native từ gốc** (thiết kế lấy AI làm lõi ngay từ đầu): bạn hỏi, hệ thống hiểu ý định, sinh truy vấn, trả lời kèm insight (phát hiện đáng chú ý). Cả hai đều có semantic layer (tầng định nghĩa nghiệp vụ dùng chung) để neo AI vào nghĩa nghiệp vụ, đều chống ảo giác, đều hướng tới người dùng không biết SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu).
 
 Cần nói thẳng: ở độ chín và độ bóng bẩy của trải nghiệm, ThoughtSpot có lợi thế của người đi trước nhiều năm và hệ sinh thái tích hợp enterprise rộng. Đó là sự thật.
 
@@ -50,26 +50,26 @@ Cần nói thẳng: ở độ chín và độ bóng bẩy của trải nghiệm,
 <div class="viz-caption">Bản đồ định vị BI. Góc trên-phải — AI-native cao mà vẫn hợp túi tiền SME — gần như bỏ trống. Đó là chỗ Semantix đứng.</div>
 </div>
 
-Semantix tính theo instance (không per-user) với chi phí AI biến đổi — rẻ hơn nhiều lần. Cùng triết lý AI, nhưng đặt ở một mức giá mà một cửa hàng đa kênh hay một công ty 50 người thực sự với tới.
+Semantix tính theo instance (mỗi bản cài đặt riêng, không per-user — không tính theo từng người dùng) với chi phí AI biến đổi — rẻ hơn nhiều lần. Cùng triết lý AI, nhưng đặt ở một mức giá mà một cửa hàng đa kênh hay một công ty 50 người thực sự với tới.
 
 ## Bức tường thứ hai: mô hình triển khai
 
 Ngoài giá, ba khác biệt về *cách vận hành* quan trọng với doanh nghiệp Việt:
 
-1. **Đa nhà cung cấp AI & BYOK.** ThoughtSpot gắn với engine AI của họ. Semantix cho bạn chọn GPT-4o, Claude, Gemini, DeepSeek — hoặc mang khóa API của riêng bạn (BYOK), tránh khóa nhà cung cấp và tối ưu chi phí (chuyển sang Gemini Flash tiết kiệm phần lớn).
-2. **Self-hosted & chủ quyền dữ liệu.** Semantix có thể chạy trên hạ tầng của bạn, dữ liệu không rời server — quan trọng với ngành nhạy cảm (tài chính, y tế) và yêu cầu tuân thủ nội địa.
+1. **Đa nhà cung cấp AI & BYOK (Bring Your Own Key — tự mang khóa AI của riêng mình).** ThoughtSpot gắn với engine (cỗ máy lõi) AI của họ. Semantix cho bạn chọn GPT-4o, Claude, Gemini, DeepSeek — hoặc mang khóa API (khóa truy cập dịch vụ AI) của riêng bạn (BYOK), tránh khóa nhà cung cấp và tối ưu chi phí (chuyển sang Gemini Flash tiết kiệm phần lớn).
+2. **Self-hosted (tự chạy trên hạ tầng của mình) & chủ quyền dữ liệu.** Semantix có thể chạy trên hạ tầng của bạn, dữ liệu không rời server — quan trọng với ngành nhạy cảm (tài chính, y tế) và yêu cầu tuân thủ nội địa.
 3. **Tối ưu tiếng Việt.** Hiểu "quý vừa rồi", "đầu năm đến giờ", ngữ cảnh kinh doanh Việt — thay vì một sản phẩm tiếng-Anh-trước.
 
 ## So sánh thẳng
 
 | Tiêu chí | ThoughtSpot | Semantix |
 |---|---|---|
-| Triết lý | **AI-native, search-driven** | AI-native, hỏi-đáp tiếng Việt |
+| Triết lý | **AI-native, search-driven (phân tích kiểu tìm-kiếm)** | AI-native, hỏi-đáp tiếng Việt |
 | Độ chín & độ bóng bẩy | **Trưởng thành, đi trước nhiều năm** | Trẻ hơn |
 | Tích hợp enterprise | **Rộng, lâu đời** | Đang mở rộng |
 | Giá (ước tính) | $5.000–20.000+/tháng | Thấp hơn nhiều lần, theo instance |
 | Nhà cung cấp AI | Engine riêng | Đa nhà cung cấp + BYOK |
-| Self-hosted / chủ quyền dữ liệu | Hạn chế (cloud-first) | Có |
+| Self-hosted / chủ quyền dữ liệu | Hạn chế (cloud-first — ưu tiên chạy trên cloud nhà cung cấp) | Có |
 | Tối ưu tiếng Việt | Không | Có |
 | Đối tượng | Enterprise lớn, toàn cầu | SME & doanh nghiệp Việt |
 
@@ -80,7 +80,7 @@ Ngoài giá, ba khác biệt về *cách vận hành* quan trọng với doanh n
 - Bạn cần **hệ sinh thái tích hợp rộng** mà một sản phẩm trẻ chưa có đủ.
 - Tiếng Việt và self-hosted không phải ưu tiên của bạn.
 
-## Mental model để quyết định
+## Mental model (khung tư duy) để quyết định
 
 > Với BI truyền thống, câu hỏi là "dashboard hay AI?". Với ThoughtSpot, cả hai đã cùng chọn AI — nên câu hỏi rút gọn lại thành: **"sản phẩm AI này được định giá và triển khai cho ai?"** ThoughtSpot được thiết kế cho enterprise toàn cầu. Semantix được thiết kế cho doanh nghiệp Việt vừa và nhỏ — cùng một niềm tin vào AI, ở một mức giá và một mô hình mà bạn dùng được hôm nay.
 

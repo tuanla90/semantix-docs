@@ -253,11 +253,11 @@ function formatDate(date: Date) {
   {toc.length > 1 && (
     <aside class="post-toc">
       <div class="toc-label">Mục lục</div>
-      <nav class="toc-nav">
+      <div class="toc-nav">
         {toc.map(h => (
           <a href={`#${h.slug}`} class={`toc-link depth-${h.depth}`} data-slug={h.slug}>{h.text}</a>
         ))}
-      </nav>
+      </div>
     </aside>
   )}
 </div>

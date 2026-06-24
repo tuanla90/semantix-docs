@@ -41,11 +41,11 @@ Trước khi nói cách hợp nhất, phải gọi tên ba cái bẫy đã làm 
 
 Đây là điểm xoay của cả bài. Hầu hết mọi người gộp ở **tầng báo cáo** — tức là chờ mỗi kênh xuất ra con số cuối, rồi ghép các con số đó lại. Sai chỗ này: khi đã thành con số cuối, bạn mất hết khả năng kiểm tra cách nó được tính, và mọi khác biệt định nghĩa bị chôn vào trong.
 
-Cách đúng là gộp ở **tầng dữ liệu** — kéo dữ liệu *thô* từng dòng đơn của cả ba kênh về một chỗ, *trước khi* tính bất cứ con số nào. Một dòng đơn Shopee, một dòng đơn TikTok Shop, một dòng đơn KiotViet, nằm cạnh nhau trong cùng một bảng, giữ nguyên chi tiết. Lúc này bạn mới chuẩn hóa và tính.
+Cách đúng là gộp ở **tầng dữ liệu** — đặt dữ liệu *thô* từng dòng đơn của cả ba kênh cạnh nhau trong cùng một bảng, *trước khi* tính bất cứ con số nào. Một dòng đơn Shopee, một dòng đơn TikTok Shop, một dòng đơn KiotViet, nằm cạnh nhau, giữ nguyên chi tiết. Lúc này bạn mới chuẩn hóa và tính. Cách Semantix làm việc này không phải copy ba nguồn về một kho rồi mới phân tích, mà gộp đa kênh bằng **Bảng ảo** (virtual table — bảng được định nghĩa một lần, gộp + làm sạch các nguồn *ngay lúc truy vấn*, không nhân bản dữ liệu) — xem [Bảng ảo: gộp dữ liệu đa kênh ngay lúc hỏi](/blog/bang-ao-gop-du-lieu/).
 
 Checklist để gộp ở tầng dữ liệu đúng cách:
 
-1. **Kéo dữ liệu thô**, không kéo báo cáo tổng. Giữ từng dòng đơn với đầy đủ trạng thái, phí, mã SP.
+1. **Đọc dữ liệu thô tại nguồn**, không kéo báo cáo tổng (và không cần copy cả kho về một chỗ). Giữ từng dòng đơn với đầy đủ trạng thái, phí, mã SP.
 2. **Lập bảng ánh xạ mã sản phẩm** — một bảng nối `SP-1023` ↔ `TT88123` ↔ `VAY-TRANG-M` về một mã chung duy nhất.
 3. **Thêm cột `kênh`** cho mỗi dòng (Shopee / TikTok Shop / KiotViet) để vẫn xé nhỏ theo kênh khi cần.
 4. **Chuẩn hóa trạng thái đơn** về một bộ chung: `thành_công`, `hủy`, `hoàn`.
@@ -79,7 +79,7 @@ Khi đã có nguồn sự thật, bước tự nhiên tiếp theo là dựng das
 
 ## Hợp nhất với Semantix
 
-Semantix không phải "một công cụ gộp Excel cho nhanh hơn". Nó là hạ tầng để bạn làm đúng một lần ba việc khó: **kết nối nhiều nguồn** (Shopee, TikTok Shop, KiotViet, Google Sheets, database) về một chỗ; **chuẩn hóa mã SP, trạng thái và phí** ngay tại tầng dữ liệu; và **định nghĩa "doanh thu" một lần** trong Semantic Layer để mọi câu hỏi sau đó đều nhất quán.
+Semantix không phải "một công cụ gộp Excel cho nhanh hơn". Nó là hạ tầng để bạn làm đúng một lần ba việc khó: **kết nối nhiều nguồn** (Shopee, TikTok Shop, KiotViet, Google Sheets, database) rồi **gộp (union) + làm sạch (clean) bằng Bảng ảo ngay lúc truy vấn** — không copy dữ liệu về kho, nên số luôn mới; **chuẩn hóa mã SP, trạng thái và phí** ngay tại tầng dữ liệu; và **định nghĩa "doanh thu" một lần** trong Semantic Layer để mọi câu hỏi sau đó đều nhất quán.
 
 Sau khi kết nối, bạn không cần viết SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) hay nhớ trừ phí. Bạn hỏi bằng tiếng Việt — *"kênh nào lời thật nhất tháng này sau phí sàn?"* — và AI hiểu đúng câu hỏi vì nó đọc chung một cuốn từ điển nghiệp vụ với bạn. *(Muốn biết vì sao hỏi tiếng Việt lại ra đúng SQL? Đọc [Text-to-SQL là gì](/blog/text-to-sql/) — kỹ thuật để AI biến câu hỏi tiếng Việt thành câu lệnh SQL.)*
 
@@ -87,7 +87,7 @@ Sau khi kết nối, bạn không cần viết SQL (Structured Query Language �
 
 | Gộp Excel tay mỗi sáng | Hợp nhất ở tầng dữ liệu |
 |---|---|
-| Đăng nhập 3–4 nền tảng, xuất 3 file lệch cấu trúc | Kết nối một lần, dữ liệu tự về một chỗ |
+| Đăng nhập 3–4 nền tảng, xuất 3 file lệch cấu trúc | Kết nối một lần, Bảng ảo gộp ngay lúc hỏi (không copy về kho) |
 | Mã SP không khớp → sản phẩm vỡ thành 3 dòng | Ánh xạ về một mã chung, đếm đúng một SKU |
 | So doanh thu gộp (trước phí) → dồn tiền sai kênh | So doanh thu thực sau phí → biết kênh nào lời thật |
 | Mỗi sàn một định nghĩa "đơn", "doanh thu" | Một định nghĩa chuẩn cho cả ba kênh |
@@ -97,4 +97,4 @@ Câu hỏi đầu tiên không phải "phần mềm nào gộp Excel nhanh nhấ
 
 ---
 
-*Muốn thôi gộp Excel tay và để dữ liệu ba kênh tự về một chỗ? [Dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một nguồn, thêm các kênh sau.*
+*Muốn thôi gộp Excel tay và để Bảng ảo gộp ba kênh ngay lúc hỏi — không cần đồng bộ về kho? [Dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một nguồn, thêm các kênh sau.*

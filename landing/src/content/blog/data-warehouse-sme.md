@@ -40,7 +40,7 @@ Bây giờ nhìn lại một SME đa kênh điển hình ở Việt Nam: vài ng
 
 Đây là điểm dễ nhầm nhất, nên nói rõ. Khi chủ shop than "dữ liệu của em loạn quá", họ hầu như luôn đang mô tả một trong hai vấn đề — và *không* vấn đề nào cần warehouse để giải.
 
-**Vấn đề một: dữ liệu nằm rải rác.** Shopee một nơi, TikTok Shop một nơi, KiotViet một nơi. Muốn nhìn toàn cảnh phải tải về, copy-paste, dò tay. Đây là bài toán *hợp nhất nguồn*, và nó được giải bằng việc kéo các nguồn về một chỗ chung — chuyện mà [hợp nhất Shopee + TikTok Shop + KiotViet về một chỗ](/blog/hop-nhat-da-kenh/) làm được mà không cần dựng cả một kho.
+**Vấn đề một: dữ liệu nằm rải rác.** Shopee một nơi, TikTok Shop một nơi, KiotViet một nơi. Muốn nhìn toàn cảnh phải tải về, copy-paste, dò tay. Đây là bài toán *hợp nhất nguồn*, và nó được giải bằng việc nối các nguồn rồi gộp (union) chúng lại ngay lúc hỏi — chuyện mà [gộp dữ liệu đa kênh bằng bảng ảo](/blog/bang-ao-gop-du-lieu/) làm được mà không cần chép dữ liệu về một kho.
 
 **Vấn đề hai: mỗi nơi một định nghĩa.** Sàn tính "doanh thu" gồm cả đơn chưa giao; kế toán trừ đơn hoàn; quản lý kho tính theo số xuất. Ba con số, ai cũng đúng theo cách của mình. Đây là bài toán *định nghĩa nghiệp vụ*, và nó được giải bằng một [Semantic Layer — tầng định nghĩa dùng chung](/blog/semantic-layer/): định nghĩa "doanh thu" *một lần*, ai hỏi cũng ra cùng số.
 
@@ -63,7 +63,7 @@ Mua một data warehouse khi chưa cần giống như mua một xe tải 10 tấ
 
 Semantix không bắt đầu bằng câu "hãy xây cho bạn một data warehouse". Với phần lớn SME, câu đó là trả lời sai cho một câu hỏi chưa được đặt. Cách tiếp cận đi ngược lại — giải đúng bài toán *bạn đang có* trước:
 
-1. **Hợp nhất nguồn** — Shopee, TikTok Shop, KiotViet, Google Sheets — về một chỗ chung, hết cảnh copy-paste tay. Đây là "một chỗ chung", không phải một cái kho cần đội ngũ nuôi.
+1. **Kết nối nguồn rồi gộp bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/)** — Shopee, TikTok Shop, KiotViet, Google Sheets — gộp (union) và làm sạch ngay lúc hỏi, hết cảnh copy-paste tay. Dữ liệu ở lại nguồn, luôn mới — đây là "một chỗ chung" *về mặt định nghĩa*, không phải một cái kho cần đội ngũ nuôi và càng không phải chép dữ liệu đi đâu.
 2. **Định nghĩa nghiệp vụ một lần** trong Semantic Layer: "doanh thu", "lợi nhuận sau phí", "khách quay lại" — chuẩn cho cả tổ chức, để mọi câu hỏi ra cùng một số.
 3. **Hỏi bằng tiếng Việt** và nhận số trong vài giây — vì với quy mô SME, dữ liệu đã hợp nhất và định nghĩa đã chuẩn là đủ để trả lời, không cần một tầng kho ở giữa.
 

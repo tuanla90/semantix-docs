@@ -94,7 +94,7 @@ Cách tư duy đúng không phải "thuê **hay** dùng AI BI" như hai lựa ch
 
 ## Cộng hưởng, không phải thay thế — chuyện đó trong Semantix
 
-Định vị Semantix dễ nhất bằng **phủ định**: nó **không thay thế một analyst giỏi.** Nó xoá bỏ phần việc bưng-số lặp lại — kết nối Shopee, TikTok Shop, KiotViet về một mối, hợp nhất tự động, định nghĩa "doanh thu" đúng một lần — để analyst của bạn được làm đúng việc bạn trả lương cho họ: *phân tích sâu*. Một người, nhờ vậy, gánh được khối lượng của ba.
+Định vị Semantix dễ nhất bằng **phủ định**: nó **không thay thế một analyst giỏi.** Nó xoá bỏ phần việc bưng-số lặp lại — kết nối Shopee, TikTok Shop, KiotViet rồi gộp (union) và làm sạch bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/) ngay lúc hỏi (không copy về kho, dữ liệu luôn mới), định nghĩa "doanh thu" đúng một lần — để analyst của bạn được làm đúng việc bạn trả lương cho họ: *phân tích sâu*. Một người, nhờ vậy, gánh được khối lượng của ba.
 
 Và với SME chưa đủ lực thuê analyst riêng, Semantix làm phần còn lại trở nên khả thi: cả đội **tự hỏi bằng tiếng Việt** mà không cần ai đứng giữa. Quy trình gọn lại còn ba bước:
 

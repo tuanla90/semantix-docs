@@ -45,7 +45,7 @@ Nói cách khác: thuê một người biết SQL là mua thêm **một cánh ta
 
 ## Một ngày làm việc kiểu mới: hỏi thay vì đợi
 
-Chị Hà chọn hướng khác. Thay vì thuê người dựng dashboard, chị kết nối ba nguồn dữ liệu — Shopee, TikTok Shop, KiotViet — vào một nền tảng AI BI (Business Intelligence — biến dữ liệu thành quyết định) tự phục vụ, định nghĩa một lần các khái niệm nghiệp vụ ("doanh thu thực" = đã trừ phí sàn, chỉ tính đơn thành công), rồi từ đó hỏi bằng tiếng Việt.
+Chị Hà chọn hướng khác. Thay vì thuê người dựng dashboard, chị kết nối ba nguồn dữ liệu — Shopee, TikTok Shop, KiotViet — vào một nền tảng AI BI (Business Intelligence — biến dữ liệu thành quyết định) tự phục vụ. Dữ liệu không bị copy về một kho: nền tảng gộp (union) và làm sạch ba nguồn bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/) ngay lúc chị hỏi, nên số luôn ở nguồn và luôn mới. Chị định nghĩa một lần các khái niệm nghiệp vụ ("doanh thu thực" = đã trừ phí sàn, chỉ tính đơn thành công), rồi từ đó hỏi bằng tiếng Việt.
 
 Buổi sáng của chị bây giờ không bắt đầu bằng `VLOOKUP`. Nó bắt đầu bằng một câu gõ vào ô chat:
 
@@ -78,7 +78,7 @@ Với shop quy mô chị Hà, đây thường là nước đi đúng: chưa cầ
 
 ## Semantix đứng ở đâu trong câu chuyện này
 
-Semantix không phải "một bạn analyst rẻ hơn", cũng không phải một con chatbot cắm thẳng vào database rồi đoán mò. Nó là **hạ tầng để chủ shop đa kênh tự phục vụ**: kết nối Shopee, TikTok Shop, KiotViet, Google Sheets về một chỗ; chuẩn hóa mã sản phẩm, trạng thái đơn và phí sàn ngay tại tầng dữ liệu; và định nghĩa "doanh thu" đúng một lần trong Semantic Layer, để mọi câu hỏi sau đó đều nhất quán.
+Semantix không phải "một bạn analyst rẻ hơn", cũng không phải một con chatbot cắm thẳng vào database rồi đoán mò. Nó là **hạ tầng để chủ shop đa kênh tự phục vụ**: kết nối Shopee, TikTok Shop, KiotViet, Google Sheets rồi gộp (union) + làm sạch bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/) ngay lúc truy vấn — không copy dữ liệu về kho, số luôn ở nguồn và luôn mới; chuẩn hóa mã sản phẩm, trạng thái đơn và phí sàn ngay tại tầng dữ liệu; và định nghĩa "doanh thu" đúng một lần trong Semantic Layer, để mọi câu hỏi sau đó đều nhất quán.
 
 Sau khi kết nối, chị Hà không viết một dòng SQL, không nhớ trừ phí. Chị hỏi bằng tiếng Việt — *"kênh nào lời thật nhất tháng này sau phí sàn?"* — và nhận số ngay, kể cả 11 giờ đêm. Semantix lo phần *trả lời*. Phần *quyết định* vẫn là của chị — và đó đúng là chỗ nó nên thuộc về.
 
@@ -96,4 +96,4 @@ Câu hỏi đầu tiên của chị Hà không nên là "thuê ai biết SQL?" �
 
 ---
 
-*Bạn cũng đang ghép Excel ba sàn mỗi sáng và cân nhắc thuê người? Thử để dữ liệu tự về một chỗ và hỏi câu đầu tiên bằng tiếng Việt — [dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một nguồn, thêm các kênh sau.*
+*Bạn cũng đang ghép Excel ba sàn mỗi sáng và cân nhắc thuê người? Thử kết nối nguồn rồi để bảng ảo gộp lúc hỏi — không copy về kho — và hỏi câu đầu tiên bằng tiếng Việt — [dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một nguồn, thêm các kênh sau.*

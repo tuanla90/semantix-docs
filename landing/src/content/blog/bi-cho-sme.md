@@ -71,7 +71,7 @@ Nhưng — và đây là cái bẫy ít người để ý — self-service chỉ
 
 Semantix không định vị mình là "thêm một dashboard nữa". Vấn đề của SME đa kênh chưa bao giờ là *thiếu biểu đồ* — mà là thiếu một con số đủ tin để ra quyết định. Nên cách tiếp cận đi ngược chiều thông thường:
 
-1. **Hợp nhất nguồn** — Shopee, TikTok Shop, KiotViet, cả Google Sheets — về một chỗ, hết cảnh copy-paste tay.
+1. **Kết nối nguồn** — Shopee, TikTok Shop, KiotViet, cả Google Sheets — rồi [gộp (union) + làm sạch bằng bảng ảo ngay lúc hỏi](/blog/bang-ao-gop-du-lieu/), hết cảnh copy-paste tay. Không copy dữ liệu về kho nào — số ở lại nguồn nên luôn mới.
 2. **Định nghĩa nghiệp vụ một lần** trong Semantic Layer: "doanh thu", "lợi nhuận sau phí", "khách quay lại" — chuẩn cho cả tổ chức.
 3. **Hỏi bằng tiếng Việt**, AI hiểu đúng ngữ cảnh rồi mới trả lời — chứ không đoán mò. *(Vì sao chuyện "đoán mò" lại chí mạng, xem [Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi mà vẫn trả về số sai](/blog/text-to-sql/).)*
 

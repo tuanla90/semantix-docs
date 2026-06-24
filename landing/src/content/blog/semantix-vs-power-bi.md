@@ -85,7 +85,7 @@ Semantix sinh ra để hỏi bằng tiếng Việt như nói với một analyst
 
 Power BI có hàng trăm connector (đầu nối tới nguồn dữ liệu) — nhưng phần lớn hướng tới hệ thống doanh nghiệp phương Tây (Dynamics, Salesforce, SQL Server, Azure). Để kéo Shopee và TikTok Shop về, thường phải qua **connector trung gian của bên thứ ba hoặc dựng pipeline (luồng xử lý dữ liệu) thủ công** — lại cần người kỹ thuật, lại cần gateway giữ chạy. Tệ hơn: ghép ba nguồn này để ra **một** con số doanh thu hợp nhất là một bài toán dữ liệu thật, không phải kéo thả.
 
-Semantix tiếp cận thẳng các nguồn Việt và **hợp nhất** chúng về một mối — bạn hỏi "doanh thu toàn kênh tháng này" và nó cộng đúng cả ba sàn. *(Đây là minh họa năng lực định hướng theo thị trường Việt, không phải con số benchmark.)*
+Semantix tiếp cận thẳng các nguồn Việt và **gộp (union) + làm sạch chúng bằng bảng ảo ngay lúc bạn hỏi** — không kéo/copy dữ liệu về một kho, dữ liệu ở lại nguồn và luôn mới. Bạn hỏi "doanh thu toàn kênh tháng này" và nó cộng đúng cả ba sàn ngay tại thời điểm hỏi. *(Cơ chế bảng ảo này tôi mổ xẻ kỹ trong [Bảng ảo: gộp dữ liệu không cần copy về một chỗ](/blog/bang-ao-gop-du-lieu/). Đây là minh họa năng lực định hướng theo thị trường Việt, không phải con số benchmark.)*
 
 ## Hệ sinh thái Microsoft — lợi thế thật, nhưng có điều kiện
 
@@ -102,7 +102,7 @@ Nhưng lợi thế đó là một **con dao hai lưỡi**: nó mạnh khi bạn 
 | Tác giả vs người xem | Desktop (**Windows-only**) để dựng + Service để xem | Toàn bộ qua trình duyệt, mọi hệ điều hành |
 | Dữ liệu tươi | Cần dựng & giữ **data gateway** + lịch refresh | Kết nối nguồn, không tự vận hành gateway |
 | Q&A ngôn ngữ tự nhiên | Có, nhưng **tối ưu tiếng Anh** | Tiếng Việt là cách dùng chính |
-| Nguồn dữ liệu Việt | Thường qua connector trung gian / pipeline | Tiếp cận & hợp nhất trực tiếp |
+| Nguồn dữ liệu Việt | Thường qua connector trung gian / pipeline | Kết nối thẳng, gộp bằng bảng ảo lúc hỏi (không copy về kho) |
 | Hệ sinh thái | Mạnh **nếu** đã trong Microsoft/Azure | Không phụ thuộc hệ M365 |
 | Thời gian khởi động | Vài tuần (mô hình + DAX + gateway) | Vài giờ tới một ngày |
 

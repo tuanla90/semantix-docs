@@ -64,7 +64,7 @@ Thứ anh cần đến trước tiên là một nơi mà "doanh thu", "ca", "h�
 
 Semantix không phải "một template Excel xịn", cũng không phải con chatbot cắm thẳng vào tám máy POS rồi đoán mò. Nó là hạ tầng để chủ chuỗi F&B nhìn cả tám quán như **một**:
 
-1. **Hợp nhất tám nguồn.** Kết nối tám điểm bán — KiotViet, Google Sheets, phần mềm POS khác nhau — về một chỗ, tự động mỗi đêm. Anh Tâm không còn `copy-paste` lúc 7 giờ sáng.
+1. **Gộp tám nguồn lúc hỏi.** Kết nối tám điểm bán — KiotViet, Google Sheets, phần mềm POS khác nhau — rồi gộp (union) + làm sạch bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/) ngay lúc truy vấn. Không copy dữ liệu về kho: số ở lại từng quán và luôn mới. Anh Tâm không còn `copy-paste` lúc 7 giờ sáng.
 2. **Định nghĩa một lần.** "Doanh thu thực" = đã thanh toán, đã trừ khuyến mãi, không tính tip; "ca lỗ" = doanh thu ca thấp hơn chi phí ca. Định nghĩa một lần trong Semantic Layer, áp cho cả tám quán. Tám phiên bản sự thật gộp lại thành một.
 3. **Phân quyền theo chi nhánh.** Quản lý quán Quận 1 chỉ thấy số quán Quận 1; anh Tâm thấy toàn chuỗi. Không ai phải gửi file qua Zalo, không ai thấy số không phải của mình. (Cách chia báo cáo mà không lộ dữ liệu nhạy cảm, xem thêm [Chia sẻ báo cáo cho nhân viên mà không lộ data nhạy cảm](/blog/chia-se-bao-cao-khong-lo-data/).)
 
@@ -74,9 +74,9 @@ Sau khi kết nối, buổi sáng của anh Tâm không bắt đầu bằng tám
 
 | | Tám file Excel mỗi sáng | Một màn hình trong Semantix |
 |---|---|---|
-| **Số nguồn** | 8 file rời, 8 người xuất | 8 nguồn tự hợp nhất mỗi đêm |
+| **Số nguồn** | 8 file rời, 8 người xuất | 8 nguồn gộp ngay lúc hỏi, không copy về kho |
 | **Định nghĩa "doanh thu"** | 8 kiểu khác nhau | 1 định nghĩa chung cho cả chuỗi |
-| **Hợp nhất** | Tay, 60–90 phút mỗi sáng | Tự động, xong trước khi anh thức dậy |
+| **Hợp nhất** | Tay, 60–90 phút mỗi sáng | Bảng ảo gộp lúc truy vấn, số luôn mới |
 | **Khi nào có số** | Gần trưa, là số hôm qua | Vài giây, bất cứ lúc nào |
 | **So sánh chi nhánh** | Sai vì mỗi quán đo một kiểu | Công bằng vì cùng một thước đo |
 | **Phân quyền** | Gửi file qua Zalo, ai cũng thấy | Mỗi quản lý chỉ thấy quán mình |
@@ -85,4 +85,4 @@ Câu hỏi đầu tiên của anh Tâm không nên là "làm sao gộp tám file
 
 ---
 
-*Bạn cũng đang ghép Excel nhiều chi nhánh mỗi sáng? Thử để dữ liệu tự về một chỗ và định nghĩa "doanh thu" đúng một lần — [dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một chi nhánh, thêm các quán còn lại sau.*
+*Bạn cũng đang ghép Excel nhiều chi nhánh mỗi sáng? Thử kết nối nguồn rồi để bảng ảo gộp lúc hỏi — không copy về kho — và định nghĩa "doanh thu" đúng một lần — [dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một chi nhánh, thêm các quán còn lại sau.*

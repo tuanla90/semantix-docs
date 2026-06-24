@@ -65,7 +65,7 @@ Có một loại dữ liệu bẩn không nằm trong dữ liệu, mà nằm tro
 
 Nói thẳng để khỏi hiểu lầm: Semantix **không phải** một con chatbot cắm vào database rồi đoán mò câu trả lời. Một chatbot như vậy, đặt lên dữ liệu bẩn, chỉ giúp bạn ra số sai *nhanh hơn*. Cách tiếp cận đi ngược lại — sửa nguồn trước, hỏi sau:
 
-1. **Kết nối nguồn** — Shopee, TikTok Shop, KiotViet, Google Sheets — về một chỗ, hết cảnh export trùng và copy-paste tay.
+1. **Kết nối nguồn** — Shopee, TikTok Shop, KiotViet, Google Sheets — rồi [gộp (union) + làm sạch bằng bảng ảo ngay lúc hỏi](/blog/bang-ao-gop-du-lieu/), không copy dữ liệu về kho nào nên số luôn ở nguồn và mới, hết cảnh export trùng và copy-paste tay.
 2. **Chuẩn hóa và định nghĩa một lần** trong Semantic Layer: "Shopee" và "SP" được gộp về một kênh, ngày tháng quy về một định dạng, và "doanh thu" có *một* định nghĩa duy nhất cho cả tổ chức.
 3. **Hỏi bằng tiếng Việt** — và vì lớp bên dưới đã sạch, câu trả lời đứng trên nền vững, không phải trên đất lún.
 

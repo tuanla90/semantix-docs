@@ -74,7 +74,7 @@ Mỗi câu trả lời rẻ đi không chỉ tiết kiệm thời gian. Nó **m�
 
 ## Gỡ nút thắt trong Semantix
 
-Semantix không phải "một bạn làm báo cáo rẻ hơn", cũng không phải một con chatbot cắm thẳng vào database rồi đoán mò. Nó là **hạ tầng để người vận hành tự phục vụ**: kết nối các hệ thống điểm bán, kho và công nợ về một chỗ; chuẩn hóa mã hàng, trạng thái đơn và quy ước tồn ngay tại tầng dữ liệu; và định nghĩa "doanh thu", "tồn khả dụng", "công nợ quá hạn" đúng một lần, để mọi câu hỏi sau đó đều nhất quán giữa anh và cả ban giám đốc.
+Semantix không phải "một bạn làm báo cáo rẻ hơn", cũng không phải một con chatbot cắm thẳng vào database rồi đoán mò. Nó là **hạ tầng để người vận hành tự phục vụ**: kết nối các hệ thống điểm bán, kho và công nợ rồi gộp (union) + làm sạch bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/) ngay lúc truy vấn — không copy dữ liệu về kho, số luôn ở nguồn và luôn mới; chuẩn hóa mã hàng, trạng thái đơn và quy ước tồn ngay tại tầng dữ liệu; và định nghĩa "doanh thu", "tồn khả dụng", "công nợ quá hạn" đúng một lần, để mọi câu hỏi sau đó đều nhất quán giữa anh và cả ban giám đốc.
 
 Sau khi kết nối, anh Dũng không đợi ai ghép số. Anh hỏi bằng tiếng Việt — *"kho nào sắp hết nhóm hàng A trong 14 ngày tới?"* — và nhận số ngay, kể cả 4 giờ chiều thứ Sáu. Báo cáo định kỳ vẫn còn, nhưng giờ là thứ chạy tự động: anh có thể [đẩy thẳng một bản tóm tắt mỗi sáng qua Telegram/Zalo](/blog/bao-cao-telegram-zalo/) thay vì để ai đó dựng tay, và [chia sẻ cho từng quản lý điểm bán mà không lộ số của điểm khác](/blog/chia-se-bao-cao-khong-lo-data/). Semantix lo phần *trả lời*. Phần *quyết định* vẫn là của anh — và đó đúng là chỗ nó nên thuộc về.
 
@@ -92,4 +92,4 @@ Câu hỏi đầu tiên của anh Dũng không nên là "đặt thêm báo cáo 
 
 ---
 
-*Công ty bạn cũng ra quyết định trễ một nhịp vì báo cáo đến muộn? Thử để dữ liệu tự về một chỗ và hỏi câu đầu tiên bằng tiếng Việt — [dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một nguồn, thêm các hệ thống sau.*
+*Công ty bạn cũng ra quyết định trễ một nhịp vì báo cáo đến muộn? Thử kết nối nguồn rồi để bảng ảo gộp lúc hỏi — không copy về kho, số luôn mới — và hỏi câu đầu tiên bằng tiếng Việt — [dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một nguồn, thêm các hệ thống sau.*

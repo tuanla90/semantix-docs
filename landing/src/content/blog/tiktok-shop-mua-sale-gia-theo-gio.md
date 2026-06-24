@@ -51,7 +51,7 @@ Nếu bạn xếp lịch livestream và phân bổ KOC (Key Opinion Consumer —
 
 ## … trong Semantix
 
-Vấn đề gốc không phải bạn thiếu dữ liệu — TikTok Shop ngập số. Vấn đề là khoảng cách giữa lúc số đổi và lúc bạn đọc được nó. Semantix không phải một con bot cắm thẳng vào sàn rồi đoán mò; nó là **lớp hạ tầng kéo dữ liệu về gần thời gian thực và để bạn hỏi bằng tiếng Việt theo từng giờ**.
+Vấn đề gốc không phải bạn thiếu dữ liệu — TikTok Shop ngập số. Vấn đề là khoảng cách giữa lúc số đổi và lúc bạn đọc được nó. Semantix không phải một con bot cắm thẳng vào sàn rồi đoán mò; nó là **lớp hạ tầng kết nối nguồn rồi gộp + làm sạch bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/) ngay lúc bạn hỏi — không copy dữ liệu về kho, nên số luôn ở nguồn và luôn mới — để bạn hỏi bằng tiếng Việt theo từng giờ**.
 
 Bạn định nghĩa "margin thực" một lần — đã trừ giá vốn, phí sàn, hoa hồng affiliate — rồi sau đó cứ hỏi thẳng giữa đêm sale:
 
@@ -77,4 +77,4 @@ Câu hỏi đầu tiên của Quân cho mùa sale sau không nên là "làm sao 
 
 ---
 
-*Mùa sale tới đang đến gần và bạn vẫn đọc số theo báo cáo cuối ngày? Thử kéo dữ liệu TikTok Shop về một chỗ và hỏi câu đầu tiên theo từng giờ — [dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một nguồn, thêm các kênh sau.*
+*Mùa sale tới đang đến gần và bạn vẫn đọc số theo báo cáo cuối ngày? Thử kết nối dữ liệu TikTok Shop rồi hỏi thẳng trên nguồn theo từng giờ — không copy về kho, số luôn mới — [dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một nguồn, thêm các kênh sau.*

@@ -108,7 +108,7 @@ Bảng dưới gom lại năm kiểu bẩn, chúng đánh vào đâu, và vì sa
 
 Nói thẳng để khỏi hiểu lầm: Semantix **không phải** một cái máy "đổi giúp bạn sang model to hơn". Cách tiếp cận đi ngược lại — làm cho dữ liệu *đúng từ gốc* trước khi nó tới bất kỳ model hay AI nào:
 
-1. **Kết nối nguồn về một chỗ** — Shopee, TikTok Shop, KiotViet, Google Sheets — để hết cảnh export trùng và copy-paste tay sinh ra dòng lặp.
+1. **Kết nối nguồn** — Shopee, TikTok Shop, KiotViet, Google Sheets — rồi [gộp (union) + làm sạch bằng bảng ảo ngay lúc hỏi](/blog/bang-ao-gop-du-lieu/), không copy dữ liệu về kho nào nên số luôn ở nguồn và mới, hết cảnh export trùng và copy-paste tay sinh ra dòng lặp.
 2. **Chuẩn hoá và định nghĩa một lần** trong [Semantic Layer (tầng định nghĩa nghiệp vụ dùng chung)](/blog/semantic-layer/): đơn vị tiền tệ, định dạng ngày, và mỗi chỉ số có *một* định nghĩa duy nhất — nên feature đưa vào model không còn lẫn thang đo.
 3. **Validate trước khi dùng** — đối chiếu giá trị với schema, bắt outlier và trùng lặp *trước khi* chúng kịp kéo lệch việc học.
 

@@ -110,7 +110,7 @@ Cách cân bằng thực tế: gộp tự động *chỉ* khi khoá cứng đã 
 
 Làm de-dup thủ công trong Excel là cơn ác mộng: lọc, sắp xếp, dò mắt từng cặp, rồi nhân lên hàng vạn dòng. Semantix tiếp cận từ gốc — gộp trùng nằm ở tầng chuẩn hoá dữ liệu, *trước khi* bất kỳ con số nào được tính.
 
-Bạn kết nối Shopee, TikTok Shop, KiotViet, Google Sheets về một chỗ (xem [hợp nhất dữ liệu đa kênh](/blog/hop-nhat-da-kenh/)), khai báo SĐT/email là khoá định danh, và Semantix tự chuẩn hoá rồi gộp các bản ghi trùng khoá — đồng thời đẩy các cặp "ngờ ngợ" sang cho bạn duyệt thay vì gộp liều. Khi bạn hỏi "LTV trung bình quý này" hay "cohort giữ chân sáu tháng", con số đứng trên một tệp khách đã sạch trùng, không phải trên một đám hồ sơ phân mảnh.
+Bạn kết nối Shopee, TikTok Shop, KiotViet, Google Sheets rồi [gộp (union) + làm sạch bằng bảng ảo ngay lúc hỏi](/blog/bang-ao-gop-du-lieu/) — dữ liệu ở lại nguồn, không copy về kho nào — khai báo SĐT/email là khoá định danh, và Semantix tự chuẩn hoá rồi gộp các bản ghi trùng khoá — đồng thời đẩy các cặp "ngờ ngợ" sang cho bạn duyệt thay vì gộp liều. Khi bạn hỏi "LTV trung bình quý này" hay "cohort giữ chân sáu tháng", con số đứng trên một tệp khách đã sạch trùng, không phải trên một đám hồ sơ phân mảnh.
 
 ## Tóm lại
 

@@ -87,7 +87,7 @@ Pivot là **bạn ra lệnh cho máy**: kéo trường này vào hàng, trườn
 
 Quan trọng hơn, Semantix định nghĩa "doanh thu" *một lần* — gọi là [Semantic Layer](/blog/semantic-layer/) (tầng định nghĩa nghiệp vụ dùng chung) — nên bạn, cộng sự, và sếp hỏi cùng một câu sẽ ra cùng một số. Pivot thì mỗi người kéo mỗi kiểu, ba người ra ba con số.
 
-Và khi shop bạn lớn lên — thêm Shopee, thêm TikTok Shop, thêm KiotViet — bạn không bị kẹt ở Sheets. Cùng cách hỏi đó áp được lên dữ liệu [hợp nhất đa kênh](/blog/hop-nhat-da-kenh/) về một chỗ. Google Sheets là cánh cửa vào, không phải cái trần.
+Và khi shop bạn lớn lên — thêm Shopee, thêm TikTok Shop, thêm KiotViet — bạn không bị kẹt ở Sheets. Cùng cách hỏi đó áp được lên nhiều nguồn được [gộp bằng bảng ảo](/blog/bang-ao-gop-du-lieu/) ngay lúc hỏi — dữ liệu ở lại nguồn, không phải chép về một kho. Google Sheets là cánh cửa vào, không phải cái trần.
 
 *(Nếu bạn đã tự dựng — hoặc mua sẵn — một dashboard trong Google Sheets và đang tự hỏi Semantix thêm được gì, [đây là câu trả lời thẳng thắn](/blog/vs-google-sheets/): vì sao một dashboard bảng tính chỉ trả lời được câu hỏi người làm ra nó đã nghĩ tới.)*
 

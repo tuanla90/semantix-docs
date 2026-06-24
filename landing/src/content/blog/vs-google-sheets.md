@@ -84,11 +84,11 @@ Bạn muốn cho quản lý chi nhánh A xem doanh số của riêng chi nhánh 
 
 Khác biệt cốt lõi nằm ở một thứ bảng tính không có: **"doanh thu" được định nghĩa đúng một lần** — gọi là [Semantic Layer](/blog/semantic-layer/). Bạn, kế toán và sếp hỏi cùng một câu sẽ ra **cùng một số**, vì cả ba đang hỏi cùng một định nghĩa, không phải ba pivot mỗi người kéo một kiểu. Một lần định nghĩa, dùng mãi mãi. Quy trình gọn lại còn ba bước:
 
-1. **Kết nối** Google Sheets (hoặc Shopee, TikTok Shop, KiotViet) — không cài gì, không code. Ba sàn được nối về một mối *trước khi* bạn hỏi câu nào.
+1. **Kết nối** Google Sheets (hoặc Shopee, TikTok Shop, KiotViet) — không cài gì, không code. Ba sàn được [gộp (union) + làm sạch bằng bảng ảo ngay lúc bạn hỏi](/blog/bang-ao-gop-du-lieu/), dữ liệu ở lại nguồn — không copy về kho nào.
 2. **Định nghĩa** các khái niệm nghiệp vụ một lần: doanh thu là gì, đơn hợp lệ là gì.
 3. **Hỏi bằng tiếng Việt**: *"doanh thu TikTok tháng này tụt là do ít đơn hơn hay giỏ hàng nhỏ đi?"* → *"sản phẩm nào kéo mức giảm đó?"* → *"khách giảm mua là cũ hay mới?"* — cả chuỗi là một cuộc trò chuyện liền mạch, không dựng lại pivot nào.
 
-Phân quyền theo dòng, hợp nhất đa kênh tự động, cảnh báo ngưỡng, và hỏi câu mới mà không gãy công thức — đó là những thứ bảng tính cấu trúc không cho được, không phải vì nó kém, mà vì nó sinh ra cho một bài toán khác. *(Muốn xem 4 bước cụ thể từ một sheet đơn hàng tới dashboard, đọc [Từ Google Sheets đến dashboard](/blog/google-sheets-dashboard/).)*
+Phân quyền theo dòng, gộp đa kênh bằng bảng ảo ngay lúc hỏi (không copy về kho), cảnh báo ngưỡng, và hỏi câu mới mà không gãy công thức — đó là những thứ bảng tính cấu trúc không cho được, không phải vì nó kém, mà vì nó sinh ra cho một bài toán khác. *(Muốn xem 4 bước cụ thể từ một sheet đơn hàng tới dashboard, đọc [Từ Google Sheets đến dashboard](/blog/google-sheets-dashboard/).)*
 
 ## Tóm lại
 
@@ -98,7 +98,7 @@ Phân quyền theo dòng, hợp nhất đa kênh tự động, cảnh báo ngư�
 | Câu nằm ngoài cái đã dựng → tự dựng pivot mới | Hỏi tiếng Việt, trả lời tức thì |
 | Drill-down: mỗi bước một pivot | Một chuỗi trò chuyện liền mạch |
 | Cohort / RFM / Funnel / Churn: cực đau hoặc bất khả | Mỗi cái là một câu hỏi |
-| Hợp nhất đa kênh: `VLOOKUP`, vỡ thầm lặng | Kết nối & hợp nhất tự động |
+| Hợp nhất đa kênh: `VLOOKUP`, vỡ thầm lặng | Gộp bằng bảng ảo lúc hỏi, không copy về kho |
 | Lỗi dữ liệu sai thầm lặng, không báo | Một nguồn sự thật được kiểm tra |
 | Phân quyền: gửi nguyên file = lộ hết | Theo dòng — chỉ thấy phần của mình |
 | Khối lượng lớn: ì, giật, treo | Không đụng trần khi lớn lên |

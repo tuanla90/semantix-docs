@@ -55,7 +55,7 @@ Lớp AI hỏi-đáp bằng tiếng Việt xóa nốt rào đó. Người làm k
 
 Semantix không định vị mình là "thêm một dashboard nữa cho mọi người tự xem". Nút thắt của doanh nghiệp đa kênh chưa bao giờ là *thiếu biểu đồ* — mà là khoảng cách giữa người có câu hỏi và người gõ được câu trả lời. Nên cách tiếp cận đi thẳng vào khoảng cách đó:
 
-1. **Hợp nhất nguồn** — Shopee, TikTok Shop, KiotViet, cả Google Sheets — về một chỗ, để không ai phải copy-paste tay trước khi hỏi.
+1. **Kết nối nguồn, gộp bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/)** — Shopee, TikTok Shop, KiotViet, cả Google Sheets — gộp (union) ngay lúc hỏi, để không ai phải copy-paste tay trước khi hỏi; dữ liệu ở lại nguồn, không chép về kho.
 2. **Định nghĩa nghiệp vụ một lần** trong Semantic Layer — đây là "một sự thật chung" làm cho self-service an toàn thay vì hỗn loạn.
 3. **Hỏi bằng tiếng Việt** — bất kỳ ai trong tổ chức gõ câu hỏi của mình và nhận số kèm biểu đồ ngay, không qua trung gian.
 

@@ -69,13 +69,13 @@ Có ngoại lệ không? Có. Khi dữ liệu cực nhạy cảm phải làm s�
 
 Semantix không phải một công cụ ETL để bạn ngồi kéo-thả ống dẫn dữ liệu. Định vị bằng phủ định: nó **không** bắt bạn biết trước cần phân tích gì, cũng **không** bắt bạn viết một dòng code biến đổi nào.
 
-Cách tiếp cận đi theo tinh thần ELT, nhưng thêm một tầng khóa:
+Cách tiếp cận giữ đúng *tinh thần* ELT — biến đổi sau, lúc có câu hỏi — nhưng đẩy nó đi xa hơn một bước: không copy dữ liệu thô về bất kỳ kho nào.
 
-1. **Đổ nguồn về một chỗ** — Shopee, TikTok Shop, KiotViet, Google Sheets — dữ liệu thô được nạp vào, chưa cần biết trước câu hỏi.
+1. **Kết nối nguồn, gộp bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/)** — Shopee, TikTok Shop, KiotViet, Google Sheets — các nguồn được kết nối rồi gộp (union) và làm sạch ngay lúc truy vấn, dữ liệu ở lại nguồn và luôn mới, chưa cần biết trước câu hỏi.
 2. **Định nghĩa nghiệp vụ ở tầng trên, một lần** — "doanh thu", "lợi nhuận sau phí", "khách quay lại" được định nghĩa ở [Semantic Layer — tầng nghĩa dùng chung](/blog/semantic-layer/), thay vì nung cứng vào pipeline. Phần "Transform" của ELT không còn là việc của riêng kỹ sư; nó thành một định nghĩa nghiệp vụ ai cũng đọc được.
 3. **Hỏi bằng tiếng Việt** — bạn gõ câu hỏi mới, AI biến đổi *lúc đó* trên nền dữ liệu thô đã có. Không pipeline mới, không chờ ba ngày.
 
-Nói cách khác: ELT đưa dữ liệu thô về một chỗ, Semantic Layer đảm bảo ai "nấu" lại cũng ra cùng một định nghĩa. Tự do hỏi đi kèm một sự thật chung.
+Nói cách khác: bảng ảo gộp các nguồn lại ngay lúc hỏi (không chép về kho), Semantic Layer đảm bảo ai "nấu" lại cũng ra cùng một định nghĩa. Tự do hỏi đi kèm một sự thật chung.
 
 ## Tóm lại
 

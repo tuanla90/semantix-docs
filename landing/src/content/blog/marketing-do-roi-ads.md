@@ -77,7 +77,7 @@ Semantix không phải "một bạn data kéo báo cáo nhanh hơn", cũng khôn
 
 Cách nó giải bài toán của chị Mai theo ba bước:
 
-1. **Hợp nhất về một chỗ.** Kéo chi tiêu Facebook Ads, TikTok Ads, Google Ads, Shopee Ads cùng bảng đơn hàng (Shopee + website) về một nơi — bài toán hợp nhất nguồn mà chúng tôi mô tả kỹ trong [hợp nhất dữ liệu đa kênh](/blog/hop-nhat-da-kenh/).
+1. **Kết nối rồi gộp lúc hỏi.** Kết nối chi tiêu Facebook Ads, TikTok Ads, Google Ads, Shopee Ads cùng bảng đơn hàng (Shopee + website), rồi gộp (union) + làm sạch bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/) ngay lúc truy vấn — không copy về kho, số luôn ở nguồn và luôn mới — bài toán gộp nguồn mà chúng tôi mô tả kỹ trong [hợp nhất dữ liệu đa kênh](/blog/hop-nhat-da-kenh/).
 2. **Định nghĩa ROI một lần.** Chốt "doanh thu do ads" và quy tắc attribution ngay tại Semantic Layer — một định nghĩa, áp cho cả ba kênh, không kênh nào tự chấm điểm cho mình nữa.
 3. **Hỏi bằng tiếng Việt.** Chị Mai gõ thẳng: *"ROI thật của từng kênh ads tháng này sau khi chia công theo phễu là bao nhiêu?"* — số ra trong vài giây, cùng một thước cho cả ba, không cần chờ data team.
 
@@ -97,4 +97,4 @@ Câu hỏi đầu tiên của chị Mai không nên là *"data team kéo thêm b
 
 ---
 
-*Phòng marketing của bạn cũng đang có ba con số ROI không kênh nào chịu kênh nào? Thử kéo chi tiêu ads và đơn hàng về một chỗ, định nghĩa ROI một lần rồi hỏi bằng tiếng Việt — [dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một kênh, thêm các kênh sau.*
+*Phòng marketing của bạn cũng đang có ba con số ROI không kênh nào chịu kênh nào? Thử kết nối chi tiêu ads và đơn hàng rồi để bảng ảo gộp lúc hỏi — không copy về kho — định nghĩa ROI một lần rồi hỏi bằng tiếng Việt — [dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Bắt đầu từ một kênh, thêm các kênh sau.*

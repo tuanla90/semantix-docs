@@ -11,7 +11,10 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content, headings } = await post.render();
+
+// Right-rail table of contents — section headings only (h2 + h3)
+const toc = headings.filter(h => h.depth === 2 || h.depth === 3);
 
 const allPosts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -24,7 +27,15 @@ function formatDate(date: Date) {
 ---
 <BaseLayout title={`${post.data.title} — Semantix Blog`} description={post.data.description}>
 
+<!-- Scoped styles: template elements (layout, hero, sidebar, footer) -->
 <style>
+  /* Reading progress bar */
+  .reading-progress {
+    position: fixed; top: 0; left: 0; height: 3px; width: 0;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    z-index: 200; transition: width .1s linear;
+  }
+
   .post-hero { padding: 100px 24px 64px; background: linear-gradient(160deg,#0F172A 0%,#1E1B4B 60%,#0F172A 100%); }
   .post-hero-inner { max-width: 760px; margin: 0 auto; }
   .post-cat { font-size: 12px; font-weight: 700; color: #818CF8; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
@@ -34,62 +45,38 @@ function formatDate(date: Date) {
   .post-date   { font-size: 14px; color: #64748B; }
   .post-read   { font-size: 13px; color: #64748B; padding: 4px 12px; border: 1px solid #334155; border-radius: 100px; }
 
-  /* Article */
-  .post-layout { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
-
-  .post-content { font-size: 16.5px; color: var(--dark-2); line-height: 1.85; }
-  .post-content h2 { font-size: clamp(20px,2.4vw,26px); font-weight: 800; color: var(--dark); letter-spacing: -0.5px; margin: 48px 0 16px; line-height: 1.3; }
-  .post-content h3 { font-size: 19px; font-weight: 700; color: var(--dark); margin: 36px 0 12px; }
-  .post-content p  { margin-bottom: 20px; }
-  .post-content strong { color: var(--dark); font-weight: 700; }
-  .post-content ul, .post-content ol { padding-left: 24px; margin-bottom: 20px; }
-  .post-content li { margin-bottom: 8px; }
-  .post-content a  { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
-  .post-content a:hover { color: var(--primary-dark); }
-  .post-content blockquote {
-    border-left: 4px solid var(--primary); margin: 32px 0; padding: 16px 24px;
-    background: var(--surface); border-radius: 0 12px 12px 0;
-    font-style: italic; color: var(--dark-2);
-  }
-  .post-content code {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 6px; padding: 2px 8px; font-size: 14px; font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  }
-  .post-content pre {
-    background: #0F172A; border-radius: 12px; padding: 24px; overflow-x: auto; margin-bottom: 24px;
-  }
-  .post-content pre code {
-    background: transparent; border: none; padding: 0; color: #E2E8F0; font-size: 14px;
-  }
-  .post-content table { width: 100%; border-collapse: collapse; margin-bottom: 28px; font-size: 14.5px; }
-  .post-content th { background: var(--surface); font-weight: 700; color: var(--dark); text-align: left; padding: 12px 16px; border: 1px solid var(--border); }
-  .post-content td { padding: 12px 16px; border: 1px solid var(--border); color: var(--dark-2); vertical-align: top; }
-  .post-content tr:nth-child(even) td { background: #FAFAFA; }
-  .post-content hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
-  .post-content em { color: var(--muted); }
-
-  /* Images & figures */
-  .post-content img { max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 12px 0; }
-  .post-content figure { margin: 32px 0; }
-  .post-content figure img { margin: 0 auto; border: 1px solid var(--border); }
-  .post-content figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
-  .post-content figcaption { font-size: 13.5px; color: var(--muted); text-align: center; margin-top: 12px; font-style: italic; }
-  /* Inline data-viz wrapper (SVG diagrams) */
-  .post-content .viz { margin: 32px 0; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; }
-  .post-content .viz svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
-  .post-content .viz-caption { font-size: 13.5px; color: var(--muted); text-align: center; margin-top: 14px; font-style: italic; }
-
-  /* Series navigation box */
-  .post-content .series-nav { margin: 0 0 36px; padding: 20px 24px; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 0 12px 12px 0; }
-  .post-content .series-nav-title { font-size: 13px; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
-  .post-content .series-nav ol { margin: 0; padding-left: 22px; }
-  .post-content .series-nav li { margin-bottom: 6px; font-size: 14.5px; }
-  .post-content .series-nav li.current { font-weight: 700; color: var(--dark); list-style: disc; }
-  .post-content .series-nav a { color: var(--primary); }
-
   /* Cover image */
   .post-cover { max-width: 760px; margin: -32px auto 0; padding: 0 24px; }
   .post-cover img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--border); display: block; }
+
+  /* Two-column reading layout: article centered in viewport, TOC in the right gutter */
+  .post-layout {
+    max-width: 1180px; margin: 0 auto; padding: 56px 24px 96px;
+    display: grid; grid-template-columns: 1fr min(760px, 100%) 1fr; align-items: start;
+  }
+  .post-main { grid-column: 2; min-width: 0; }
+
+  /* Right-rail TOC */
+  .post-toc {
+    grid-column: 3; justify-self: start; width: min(100%, 240px);
+    padding-left: 40px; align-self: start;
+    position: sticky; top: 92px; max-height: calc(100vh - 120px); overflow-y: auto;
+  }
+  .toc-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 14px; }
+  .toc-nav { display: flex; flex-direction: column; border-left: 2px solid var(--border); }
+  .toc-link {
+    font-size: 13px; line-height: 1.45; color: var(--muted); text-decoration: none;
+    padding: 7px 0 7px 16px; margin-left: -2px; border-left: 2px solid transparent;
+    transition: color .15s, border-color .15s;
+  }
+  .toc-link.depth-3 { padding-left: 30px; font-size: 12.5px; }
+  .toc-link:hover { color: var(--dark); }
+  .toc-link.active { color: var(--primary); border-left-color: var(--primary); font-weight: 600; }
+
+  @media (max-width: 1100px) {
+    .post-layout { display: block; max-width: 760px; }
+    .post-toc { display: none; }
+  }
 
   /* Divider before author */
   .post-footer { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
@@ -114,6 +101,99 @@ function formatDate(date: Date) {
   .back-link:hover { color: var(--primary-dark); }
 </style>
 
+<!--
+  GLOBAL styles: <Content /> renders markdown to HTML that does NOT receive Astro's
+  scope attribute, so article-body rules must be global. The `.post-content` prefix
+  keeps them from leaking to the rest of the site.
+-->
+<style is:global>
+  .post-content { font-size: 17px; color: var(--dark-2); line-height: 1.8; }
+  .post-content > *:first-child { margin-top: 0; }
+
+  .post-content h2 {
+    font-size: clamp(21px,2.4vw,27px); font-weight: 800; color: var(--dark);
+    letter-spacing: -0.5px; line-height: 1.3;
+    margin: 56px 0 18px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
+    scroll-margin-top: 88px;
+  }
+  .post-content h3 {
+    font-size: 19px; font-weight: 700; color: var(--dark);
+    margin: 40px 0 14px; line-height: 1.4; scroll-margin-top: 88px;
+  }
+  .post-content p { margin: 0 0 20px; }
+  .post-content strong { color: var(--dark); font-weight: 700; }
+  .post-content em { color: var(--muted); }
+  .post-content a  { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  .post-content a:hover { color: var(--primary-dark); }
+
+  /* Lists — markers indented in, accented */
+  .post-content ul, .post-content ol { margin: 0 0 22px; padding-left: 26px; }
+  .post-content li { margin-bottom: 10px; padding-left: 4px; }
+  .post-content li::marker { color: var(--primary); font-weight: 700; }
+  .post-content ul ul, .post-content ol ol, .post-content ul ol, .post-content ol ul { margin: 10px 0 0; }
+
+  .post-content blockquote {
+    border-left: 4px solid var(--primary); margin: 32px 0; padding: 16px 24px;
+    background: var(--surface); border-radius: 0 12px 12px 0;
+    font-style: italic; color: var(--dark-2);
+  }
+  .post-content blockquote p:last-child { margin-bottom: 0; }
+
+  .post-content code {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 2px 8px; font-size: 14px; font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+  .post-content pre { background: #0F172A; border-radius: 12px; padding: 24px; overflow-x: auto; margin: 0 0 24px; }
+  .post-content pre code { background: transparent; border: none; padding: 0; color: #E2E8F0; font-size: 14px; }
+
+  /* Tables — clearly framed, rounded, zebra rows */
+  .post-content table {
+    width: 100%; border-collapse: separate; border-spacing: 0; margin: 30px 0;
+    font-size: 15px; border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden; box-shadow: var(--shadow);
+  }
+  .post-content thead th { background: var(--surface); }
+  .post-content th {
+    font-weight: 700; color: var(--dark); text-align: left; padding: 13px 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .post-content td { padding: 13px 18px; border-bottom: 1px solid var(--border); color: var(--dark-2); vertical-align: top; }
+  .post-content th:not(:last-child), .post-content td:not(:last-child) { border-right: 1px solid var(--border); }
+  .post-content tbody tr:last-child td { border-bottom: none; }
+  .post-content tbody tr:nth-child(even) td { background: #FAFBFC; }
+  .post-content tbody tr:hover td { background: #F4F6FF; }
+
+  .post-content hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+  /* Images & figures */
+  .post-content img { max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 12px 0; }
+  .post-content figure { margin: 32px 0; }
+  .post-content figure img { margin: 0 auto; border: 1px solid var(--border); }
+  .post-content figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .post-content figcaption { font-size: 13.5px; color: var(--muted); text-align: center; margin-top: 12px; font-style: italic; }
+
+  /* Inline data-viz wrapper (SVG diagrams) */
+  .post-content .viz { margin: 32px 0; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; }
+  .post-content .viz svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .post-content .viz-caption { font-size: 13.5px; color: var(--muted); text-align: center; margin-top: 14px; font-style: italic; }
+
+  /* Series navigation box */
+  .post-content .series-nav { margin: 0 0 36px; padding: 20px 24px; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 0 12px 12px 0; }
+  .post-content .series-nav-title { font-size: 13px; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+  .post-content .series-nav ol { margin: 0; padding-left: 22px; }
+  .post-content .series-nav li { margin-bottom: 6px; font-size: 14.5px; }
+  .post-content .series-nav li.current { font-weight: 700; color: var(--dark); list-style: disc; }
+  .post-content .series-nav a { color: var(--primary); }
+
+  @media (max-width: 640px) {
+    .post-content { font-size: 16px; }
+    .post-content table { font-size: 14px; }
+    .post-content th, .post-content td { padding: 11px 14px; }
+  }
+</style>
+
+<div class="reading-progress" id="reading-progress"></div>
+
 <!-- Hero -->
 <div class="post-hero">
   <div class="post-hero-inner">
@@ -133,40 +213,85 @@ function formatDate(date: Date) {
   </div>
 )}
 
-<!-- Article -->
+<!-- Article + TOC -->
 <div class="post-layout">
-  <a href="/blog/" class="back-link">← Tất cả bài viết</a>
+  <div class="post-main">
+    <a href="/blog/" class="back-link">← Tất cả bài viết</a>
 
-  <article class="post-content">
-    <Content />
-  </article>
+    <article class="post-content">
+      <Content />
+    </article>
 
-  <!-- Author -->
-  <div class="post-footer">
-    <div class="author-card">
-      <div class="author-avatar">{post.data.author.charAt(post.data.author.indexOf(' ') + 1)}</div>
-      <div>
-        <div class="author-name">{post.data.author}</div>
-        <div class="author-label">Đội Ngũ Semantix</div>
+    <!-- Author -->
+    <div class="post-footer">
+      <div class="author-card">
+        <div class="author-avatar">{post.data.author.charAt(post.data.author.indexOf(' ') + 1)}</div>
+        <div>
+          <div class="author-name">{post.data.author}</div>
+          <div class="author-label">Đội Ngũ Semantix</div>
+        </div>
       </div>
     </div>
+
+    <!-- Related -->
+    {related.length > 0 && (
+      <div class="related">
+        <div class="related-label">Bài Viết Liên Quan</div>
+        <div class="related-grid">
+          {related.map(p => (
+            <a href={`/blog/${p.slug}/`} class="related-card">
+              <div class="rc-cat">{p.data.category}</div>
+              <div class="rc-title">{p.data.title}</div>
+              <div class="rc-read">{p.data.readTime} phút đọc</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
   </div>
 
-  <!-- Related -->
-  {related.length > 0 && (
-    <div class="related">
-      <div class="related-label">Bài Viết Liên Quan</div>
-      <div class="related-grid">
-        {related.map(p => (
-          <a href={`/blog/${p.slug}/`} class="related-card">
-            <div class="rc-cat">{p.data.category}</div>
-            <div class="rc-title">{p.data.title}</div>
-            <div class="rc-read">{p.data.readTime} phút đọc</div>
-          </a>
+  {toc.length > 1 && (
+    <aside class="post-toc">
+      <div class="toc-label">Mục lục</div>
+      <nav class="toc-nav">
+        {toc.map(h => (
+          <a href={`#${h.slug}`} class={`toc-link depth-${h.depth}`} data-slug={h.slug}>{h.text}</a>
         ))}
-      </div>
-    </div>
+      </nav>
+    </aside>
   )}
 </div>
+
+<script>
+  const bar = document.getElementById('reading-progress');
+  const article = document.querySelector<HTMLElement>('.post-content');
+  const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.toc-link'));
+  const targets = links.map(l => document.getElementById(l.dataset.slug ?? ''));
+
+  function update() {
+    // Reading progress
+    if (bar && article) {
+      const rect = article.getBoundingClientRect();
+      const total = rect.height - window.innerHeight;
+      const scrolled = Math.min(Math.max(-rect.top, 0), Math.max(total, 0));
+      bar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+    }
+
+    // Scroll-spy: highlight the last heading scrolled past
+    if (links.length) {
+      let activeIndex = -1;
+      for (let i = 0; i < targets.length; i++) {
+        const t = targets[i];
+        if (t && t.getBoundingClientRect().top - 120 <= 0) activeIndex = i;
+      }
+      if (activeIndex === -1) activeIndex = 0;
+      links.forEach((l, i) => l.classList.toggle('active', i === activeIndex));
+    }
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+</script>
 
 </BaseLayout>

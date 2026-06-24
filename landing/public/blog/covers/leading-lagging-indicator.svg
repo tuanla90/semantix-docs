@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgPt026" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="roadPt026" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgPt026)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="220" fill="#ffffff" font-size="52" font-weight="800">Leading vs Lagging</text>
+  <text x="80" y="284" fill="#CBD5E1" font-size="29" font-weight="600">Đo cái lái được, không phải cái đã rồi</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- windshield: leading, look ahead at the road -->
+  <g transform="translate(700,165)">
+    <rect x="0" y="0" width="240" height="150" rx="18" fill="#0B1220" stroke="#4ADE80" stroke-width="2"/>
+    <clipPath id="wsClipPt026"><rect x="6" y="6" width="228" height="138" rx="14"/></clipPath>
+    <g clip-path="url(#wsClipPt026)">
+      <rect x="6" y="6" width="228" height="138" fill="url(#roadPt026)"/>
+      <path d="M40 144 L108 40 L132 40 L200 144 Z" fill="#0B1220"/>
+      <g stroke="#FACC15" stroke-width="6" stroke-dasharray="14 12">
+        <line x1="120" y1="144" x2="120" y2="44"/>
+      </g>
+      <circle cx="120" cy="34" r="9" fill="#4ADE80"/>
+    </g>
+    <text x="120" y="180" fill="#4ADE80" font-size="18" font-weight="700" text-anchor="middle">kính chắn gió</text>
+    <text x="120" y="204" fill="#94A3B8" font-size="15" text-anchor="middle">báo trước — lái được</text>
+  </g>
+  <!-- rearview mirror: lagging, the road already passed -->
+  <g transform="translate(700,400)">
+    <rect x="0" y="0" width="240" height="84" rx="42" fill="#0B1220" stroke="#EF4444" stroke-width="2"/>
+    <clipPath id="rvClipPt026"><rect x="8" y="8" width="224" height="68" rx="34"/></clipPath>
+    <g clip-path="url(#rvClipPt026)">
+      <rect x="8" y="8" width="224" height="68" fill="#1E293B"/>
+      <path d="M70 76 L108 30 L132 30 L170 76 Z" fill="#0B1220"/>
+      <line x1="120" y1="76" x2="120" y2="34" stroke="#64748B" stroke-width="5" stroke-dasharray="9 8"/>
+    </g>
+    <line x1="120" y1="84" x2="120" y2="98" stroke="#475569" stroke-width="4"/>
+    <text x="120" y="126" fill="#EF4444" font-size="18" font-weight="700" text-anchor="middle">gương chiếu hậu</text>
+    <text x="120" y="150" fill="#94A3B8" font-size="15" text-anchor="middle">báo sau — đã rồi</text>
+  </g>
+</svg>

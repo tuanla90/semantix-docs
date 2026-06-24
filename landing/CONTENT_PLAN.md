@@ -69,6 +69,11 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | kt-015 | Data governance: ai sở hữu con số & ai chịu trách nhiệm khi nó sai | ⚪ | khái niệm nền tảng |
 | kt-016 | Bảo vệ dữ liệu cá nhân (Nghị định 13/2023): SME thu data khách cần biết gì | 🟡 | bối cảnh pháp lý VN |
 | kt-017 | Embedding & vector search: vì sao AI hiểu câu gần nghĩa — nền tảng dưới RAG | 🟡 | gắn rag-la-gi |
+| kt-018 | Tư duy dựa trên dữ liệu là gì (Series Tư duy dữ liệu · P1) | ✅ | `tu-duy-du-lieu-la-gi` |
+| kt-019 | Bắt đầu từ câu hỏi, không từ dữ liệu (P2) | ✅ | `bat-dau-tu-cau-hoi` |
+| kt-020 | Tín hiệu vs nhiễu (P7) | ✅ | `tin-hieu-vs-nhieu` |
+| kt-022 | Goodhart & guardrail metrics (P8) | ✅ | `goodhart-guardrail-metrics` |
+| kt-023 | Quyết định khi dữ liệu chưa đủ (P9) | ✅ | `quyet-dinh-khi-thieu-du-lieu` |
 
 ### 2 — Phân Tích Dữ Liệu (`pt`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -95,16 +100,17 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | pt-021 | Growth Accounting (Phần 4): thực chiến — dựng bảng growth accounting | ✅ | `growth-accounting-thuc-chien` |
 | pt-020 | Funnel nâng cao: cái phễu là lời nói dối tiện lợi — khi nào nó khiến bạn sửa nhầm chỗ | ✅ | `funnel-nang-cao` |
 | pt-022 | Bốn tầng phân tích (mô tả → chẩn đoán → dự đoán → đề xuất): bạn đang ở đâu | 🟡 | data literacy |
-| pt-023 | Tương quan ≠ nhân quả: hai số cùng tăng không nghĩa là cái này gây ra cái kia | 🟡 | data literacy |
-| pt-024 | Trung bình nói dối (mean vs median): vì sao 'doanh thu trung bình' đánh lừa bạn | 🟡 | data literacy |
+| pt-023 | Tương quan không phải nhân quả (Series Tư duy dữ liệu · P4) | ✅ | `tuong-quan-nhan-qua` |
+| pt-024 | Trung bình nói dối (Series Tư duy dữ liệu · P5) | ✅ | `trung-binh-noi-doi` |
 | pt-025 | Vanity metrics: những con số đẹp nhất thường dẫn tới quyết định tệ nhất | ⚪ | data literacy |
-| pt-026 | Leading vs lagging indicators: đo cái lái được, không phải cái đã rồi | ⚪ | data literacy |
+| pt-026 | Leading vs lagging (Series Tư duy dữ liệu · P6) | ✅ | `leading-lagging-indicator` |
 | pt-027 | Dữ liệu bẩn giết mô hình: đừng vội đổi model, hãy dọn data | ✅ | `du-lieu-ban-giet-model` |
 | pt-028 | 5 sai lầm kinh điển khi phân tích dữ liệu (và cách tránh) | ✅ | `sai-lam-khi-phan-tich-du-lieu` |
 | pt-029 | Chia mô hình theo độ đầy của dữ liệu (data completeness) | ✅ | `phan-khuc-model-theo-do-day-du-lieu` |
 | pt-030 | Outlier: rác cần bỏ hay mỏ vàng cần giữ | ✅ | `outlier-rac-hay-mo-vang` |
 | pt-031 | Một khách, năm hồ sơ: de-dup trước khi tính LTV/cohort | ✅ | `de-dup-khach-hang-truoc-khi-tinh-ltv` |
 | pt-032 | Ô trống cũng biết nói: "thiếu dữ liệu" là một tín hiệu | ✅ | `thieu-du-lieu-cung-la-tin-hieu` |
+| pt-033 | Những thiên kiến giết chết quyết định (Series Tư duy dữ liệu · P3) | ✅ | `thien-kien-trong-doc-so` |
 
 ### 3 — Hướng Dẫn Thực Chiến (`hd`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |

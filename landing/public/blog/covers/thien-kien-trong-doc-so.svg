@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgPt027" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="lensPt027" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#818CF8" stop-opacity="0.18"/>
+      <stop offset="0.7" stop-color="#818CF8" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#818CF8" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="lensClipPt027">
+      <circle cx="930" cy="300" r="150"/>
+    </clipPath>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgPt027)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="226" fill="#ffffff" font-size="50" font-weight="800">Thiên kiến trong</text>
+  <text x="80" y="286" fill="#ffffff" font-size="50" font-weight="800">cách bạn đọc số</text>
+  <text x="80" y="346" fill="#CBD5E1" font-size="26" font-weight="600">Chỉ nhìn thấy điều mình muốn tin</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: a row of data bars, mostly dimmed; lens highlights only the "agreeable" ones -->
+  <g transform="translate(720,180)">
+    <!-- dimmed full dataset -->
+    <rect x="20"  y="120" width="34" height="100" rx="4" fill="#334155" opacity="0.55"/>
+    <rect x="66"  y="70"  width="34" height="150" rx="4" fill="#334155" opacity="0.55"/>
+    <rect x="112" y="150" width="34" height="70"  rx="4" fill="#334155" opacity="0.55"/>
+    <rect x="158" y="40"  width="34" height="180" rx="4" fill="#334155" opacity="0.55"/>
+    <rect x="204" y="100" width="34" height="120" rx="4" fill="#334155" opacity="0.55"/>
+    <rect x="250" y="60"  width="34" height="160" rx="4" fill="#334155" opacity="0.55"/>
+    <rect x="296" y="130" width="34" height="90"  rx="4" fill="#334155" opacity="0.55"/>
+    <rect x="342" y="50"  width="34" height="170" rx="4" fill="#334155" opacity="0.55"/>
+    <rect x="388" y="110" width="34" height="110" rx="4" fill="#334155" opacity="0.55"/>
+  </g>
+  <!-- lens glow -->
+  <circle cx="930" cy="300" r="150" fill="url(#lensPt027)"/>
+  <!-- highlighted bars inside the lens (the only ones the viewer "sees") -->
+  <g clip-path="url(#lensClipPt027)">
+    <rect x="824" y="250" width="34" height="160" rx="4" fill="#818CF8"/>
+    <rect x="870" y="220" width="34" height="180" rx="4" fill="#A5B4FC"/>
+    <rect x="916" y="270" width="34" height="170" rx="4" fill="#818CF8"/>
+    <rect x="962" y="230" width="34" height="180" rx="4" fill="#A5B4FC"/>
+    <rect x="1008" y="262" width="34" height="180" rx="4" fill="#818CF8"/>
+  </g>
+  <!-- magnifying glass over the agreeable subset -->
+  <g transform="translate(930,300)">
+    <circle cx="0" cy="0" r="150" fill="none" stroke="#4ADE80" stroke-width="6"/>
+    <circle cx="0" cy="0" r="150" fill="none" stroke="#0B1220" stroke-width="2" opacity="0.4"/>
+    <line x1="106" y1="106" x2="190" y2="190" stroke="#4ADE80" stroke-width="16" stroke-linecap="round"/>
+    <text x="0" y="-100" fill="#4ADE80" font-size="18" font-weight="700" text-anchor="middle">hợp ý</text>
+  </g>
+  <!-- label for the ignored remainder -->
+  <text x="740" y="470" fill="#64748B" font-size="17" font-weight="600">phần còn lại: bỏ qua &amp; mờ đi</text>
+</svg>

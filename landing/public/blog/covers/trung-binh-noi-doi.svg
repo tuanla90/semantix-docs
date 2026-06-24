@@ -1,0 +1,38 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgpt024" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgpt024)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="232" fill="#ffffff" font-size="54" font-weight="800">Trung bình nói dối</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="30" font-weight="600">Con số không khách nào thật sự chi</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: skewed distribution, mean dragged away from median -->
+  <g transform="translate(700,150)">
+    <line x1="0" y1="250" x2="430" y2="250" stroke="#334155" stroke-width="2"/>
+    <rect x="6"   y="186" width="34" height="64"  rx="3" fill="#475569"/>
+    <rect x="46"  y="150" width="34" height="100" rx="3" fill="#64748B"/>
+    <rect x="86"  y="120" width="34" height="130" rx="3" fill="#818CF8"/>
+    <rect x="126" y="142" width="34" height="108" rx="3" fill="#64748B"/>
+    <rect x="166" y="178" width="34" height="72"  rx="3" fill="#475569"/>
+    <rect x="206" y="206" width="34" height="44"  rx="3" fill="#475569"/>
+    <rect x="246" y="222" width="34" height="28"  rx="3" fill="#475569"/>
+    <rect x="286" y="230" width="34" height="20"  rx="3" fill="#475569"/>
+    <rect x="392" y="92"  width="34" height="158" rx="3" fill="#F87171"/>
+    <text x="409" y="82" fill="#F87171" font-size="15" font-weight="700" text-anchor="middle">đơn sỉ</text>
+    <line x1="103" y1="40" x2="103" y2="262" stroke="#4ADE80" stroke-width="3" stroke-dasharray="7 5"/>
+    <text x="103" y="30" fill="#4ADE80" font-size="17" font-weight="700" text-anchor="middle">trung vị</text>
+    <line x1="248" y1="40" x2="248" y2="262" stroke="#FBBF24" stroke-width="3" stroke-dasharray="7 5"/>
+    <text x="248" y="30" fill="#FBBF24" font-size="17" font-weight="700" text-anchor="middle">trung bình</text>
+    <path d="M118 18 C160 6 210 6 233 18" stroke="#FBBF24" stroke-width="2" fill="none" opacity="0.7"/>
+  </g>
+</svg>

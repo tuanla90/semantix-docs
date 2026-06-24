@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#162033"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <!-- series badge -->
+  <g transform="translate(80,112)">
+    <rect x="0" y="0" width="190" height="34" rx="17" fill="#0B1120" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="95" y="23" fill="#22D3EE" font-size="15" font-weight="700" letter-spacing="1" text-anchor="middle">SERIES · PHẦN 3</text>
+  </g>
+  <!-- title -->
+  <text x="80" y="216" fill="#F1F5F9" font-size="50" font-weight="800">Tín hiệu vs nhiễu</text>
+  <text x="80" y="262" fill="#94A3B8" font-size="25" font-weight="500">Đừng phản ứng với mọi dao động —</text>
+  <text x="80" y="296" fill="#94A3B8" font-size="25" font-weight="500">phần lớn chỉ là hơi thở, không phải triệu chứng</text>
+  <!-- illustration: jagged line in a band + one signal spike -->
+  <g transform="translate(80,360)">
+    <!-- normal band -->
+    <rect x="0" y="60" width="1040" height="90" rx="6" fill="url(#band)" opacity="0.7"/>
+    <line x1="0" y1="60" x2="1040" y2="60" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <line x1="0" y1="150" x2="1040" y2="150" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="1052" y="64" fill="#64748B" font-size="14">dải bình thường</text>
+    <!-- mean line -->
+    <line x1="0" y1="105" x2="1040" y2="105" stroke="#22D3EE" stroke-width="2" opacity="0.6"/>
+    <!-- jagged noise line, staying inside band -->
+    <polyline points="0,100 70,135 140,80 210,140 280,90 350,138 420,85 490,130 560,95 630,142 700,88 770,135" fill="none" stroke="#94A3B8" stroke-width="3"/>
+    <!-- signal spike breaking above the band -->
+    <polyline points="770,135 840,90 910,8" fill="none" stroke="#34D399" stroke-width="4"/>
+    <circle cx="910" cy="8" r="9" fill="#34D399"/>
+    <text x="838" y="-8" fill="#34D399" font-size="17" font-weight="800">TÍN HIỆU</text>
+    <text x="280" y="40" fill="#94A3B8" font-size="15" font-weight="600">nhiễu — dao động trong dải</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="572" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

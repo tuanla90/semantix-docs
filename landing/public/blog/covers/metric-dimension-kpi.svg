@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgkt006" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgkt006)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <text x="80" y="232" fill="#ffffff" font-size="54" font-weight="800">Metric, Dimension, KPI</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="30" font-weight="600">Ba từ — ba việc khác nhau</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: one metric, sliced by dimensions, with a KPI target line -->
+  <g transform="translate(770,150)">
+    <!-- the metric: one big number -->
+    <text x="120" y="44" fill="#818CF8" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="1">METRIC</text>
+    <!-- KPI target line above the bars -->
+    <line x1="0" y1="78" x2="290" y2="78" stroke="#4ADE80" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="300" y="83" fill="#4ADE80" font-size="16" font-weight="700">KPI</text>
+    <!-- the number sliced into dimension bars (rubik slices) -->
+    <g transform="translate(0,90)">
+      <rect x="0" y="40" width="44" height="120" rx="6" fill="#475569"/>
+      <rect x="62" y="14" width="44" height="146" rx="6" fill="#818CF8"/>
+      <rect x="124" y="58" width="44" height="102" rx="6" fill="#64748B"/>
+      <rect x="186" y="0" width="44" height="160" rx="6" fill="#7DD3FC"/>
+      <rect x="248" y="74" width="44" height="86" rx="6" fill="#475569"/>
+    </g>
+    <!-- dimension labels under the slices -->
+    <g transform="translate(0,266)" fill="#94A3B8" font-size="14" text-anchor="middle">
+      <text x="22" y="0">Kênh</text>
+      <text x="84" y="0">Tháng</text>
+      <text x="146" y="0">SP</text>
+      <text x="208" y="0">Vùng</text>
+      <text x="270" y="0">…</text>
+    </g>
+    <text x="120" y="312" fill="#64748B" font-size="16" font-weight="600" text-anchor="middle" letter-spacing="1">DIMENSION — các lát cắt</text>
+  </g>
+</svg>

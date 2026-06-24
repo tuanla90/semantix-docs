@@ -23,7 +23,7 @@ coverAlt: "Bảng heatmap cohort giữ chân khách hàng theo tháng"
   </ol>
 </div>
 
-Năm 2023, một startup SaaS Việt Nam tự hào khoe MRR tăng 40% trong 6 tháng. Nhìn từ bên ngoài: một công ty đang thắng. Nhìn vào Cohort Analysis: **70% khách đăng ký tháng 1 đã rời đi trong vòng 90 ngày**. Họ đang đổ tiền acquisition để bù vào lỗ hổng retention — như đổ nước vào cái xô thủng đáy.
+Năm 2023, một startup SaaS (Software as a Service — phần mềm cho thuê theo thuê bao) Việt Nam tự hào khoe MRR (Monthly Recurring Revenue — doanh thu định kỳ hàng tháng) tăng 40% trong 6 tháng. Nhìn từ bên ngoài: một công ty đang thắng. Nhìn vào Cohort Analysis (phân tích theo nhóm khách gộp theo thời điểm bắt đầu): **70% khách đăng ký tháng 1 đã rời đi trong vòng 90 ngày**. Họ đang đổ tiền acquisition (thu hút khách mới) để bù vào lỗ hổng retention (tỷ lệ giữ chân) — như đổ nước vào cái xô thủng đáy.
 
 Đây là nghịch lý ít người chịu tin: **một con số tổng đang tăng có thể che giấu một doanh nghiệp đang chết dần.** Và bạn sẽ không bao giờ thấy nó trong dashboard tổng hợp. Chỉ Cohort Analysis kể được.
 
@@ -48,7 +48,6 @@ Kết quả thường được trình bày dưới dạng **heatmap** — mỗi 
   <text x="366" y="24" fill="#64748B" font-size="13" text-anchor="middle">Tháng 2</text>
   <text x="476" y="24" fill="#64748B" font-size="13" text-anchor="middle">Tháng 3</text>
   <text x="586" y="24" fill="#64748B" font-size="13" text-anchor="middle">Tháng 6</text>
-
   <!-- Row Jan -->
   <text x="8" y="68" fill="#475569" font-size="14" font-weight="600">T1/24</text>
   <rect x="96"  y="36" width="100" height="48" rx="6" fill="#15803d"/><text x="146" y="66" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">100%</text>
@@ -56,7 +55,6 @@ Kết quả thường được trình bày dưới dạng **heatmap** — mỗi 
   <rect x="316" y="36" width="100" height="48" rx="6" fill="#4ade80"/><text x="366" y="66" fill="#06351f" font-size="15" font-weight="700" text-anchor="middle">48%</text>
   <rect x="426" y="36" width="100" height="48" rx="6" fill="#86efac"/><text x="476" y="66" fill="#06351f" font-size="15" font-weight="700" text-anchor="middle">41%</text>
   <rect x="536" y="36" width="100" height="48" rx="6" fill="#bbf7d0"/><text x="586" y="66" fill="#06351f" font-size="15" font-weight="700" text-anchor="middle">29%</text>
-
   <!-- Row Feb -->
   <text x="8" y="126" fill="#475569" font-size="14" font-weight="600">T2/24</text>
   <rect x="96"  y="94" width="100" height="48" rx="6" fill="#15803d"/><text x="146" y="124" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">100%</text>
@@ -64,7 +62,6 @@ Kết quả thường được trình bày dưới dạng **heatmap** — mỗi 
   <rect x="316" y="94" width="100" height="48" rx="6" fill="#22c55e"/><text x="366" y="124" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">55%</text>
   <rect x="426" y="94" width="100" height="48" rx="6" fill="#4ade80"/><text x="476" y="124" fill="#06351f" font-size="15" font-weight="700" text-anchor="middle">48%</text>
   <rect x="536" y="94" width="100" height="48" rx="6" fill="#1e293b" stroke="#334155"/><text x="586" y="124" fill="#475569" font-size="15" text-anchor="middle">—</text>
-
   <!-- Row Mar -->
   <text x="8" y="184" fill="#475569" font-size="14" font-weight="600">T3/24</text>
   <rect x="96"  y="152" width="100" height="48" rx="6" fill="#15803d"/><text x="146" y="182" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">100%</text>
@@ -72,7 +69,6 @@ Kết quả thường được trình bày dưới dạng **heatmap** — mỗi 
   <rect x="316" y="152" width="100" height="48" rx="6" fill="#22c55e"/><text x="366" y="182" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">52%</text>
   <rect x="426" y="152" width="100" height="48" rx="6" fill="#1e293b" stroke="#334155"/><text x="476" y="182" fill="#475569" font-size="15" text-anchor="middle">—</text>
   <rect x="536" y="152" width="100" height="48" rx="6" fill="#1e293b" stroke="#334155"/><text x="586" y="182" fill="#475569" font-size="15" text-anchor="middle">—</text>
-
   <!-- Row Apr -->
   <text x="8" y="242" fill="#475569" font-size="14" font-weight="600">T4/24</text>
   <rect x="96"  y="210" width="100" height="48" rx="6" fill="#15803d"/><text x="146" y="240" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">100%</text>

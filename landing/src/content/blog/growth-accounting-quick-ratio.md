@@ -18,20 +18,20 @@ coverAlt: "Đường Quick Ratio dạng nhịp tim cắt qua lằn ngang 1,0 v�
   <ol>
     <li><a href="/blog/growth-accounting/">Phần 1 — Nền tảng: phương trình tăng trưởng</a></li>
     <li class="current">Phần 2 — Quick Ratio: nhịp tim tăng trưởng</li>
-    <li><a href="/blog/growth-accounting-revenue/">Phần 3 — Từ user sang tiền: Net Dollar Retention</a></li>
+    <li><a href="/blog/growth-accounting-revenue/">Phần 3 — Từ người dùng sang tiền: Net Dollar Retention</a></li>
     <li><a href="/blog/growth-accounting-thuc-chien/">Phần 4 — Thực chiến: dựng bảng growth accounting</a></li>
   </ol>
 </div>
 
 Một founder hỏi tôi câu mà ai cũng từng hỏi: *"Anh cho em đúng MỘT con số thôi — để em biết tăng trưởng tháng này có thật sự khỏe không."* Anh ấy mệt với dashboard ba mươi biểu đồ. Anh muốn một thứ liếc một cái là biết nên ăn mừng hay nên lo.
 
-Có một con số như vậy. Nó tên là **Quick Ratio**, và nó hoạt động đúng như một nhịp tim: gộp tất cả chuyện sống chết của product vào một con số duy nhất, đập đều đặn theo từng kỳ. Trên một mức là khỏe. Dưới mức đó là đang yếu đi. Bạn không cần đọc ba mươi biểu đồ — bạn cần biết tim còn đập mạnh không.
+Có một con số như vậy. Nó tên là **Quick Ratio** (tỉ lệ "tăng trên hao" = (khách mới + quay lại) / khách rời đi), và nó hoạt động đúng như một nhịp tim: gộp tất cả chuyện sống chết của product vào một con số duy nhất, đập đều đặn theo từng kỳ. Trên một mức là khỏe. Dưới mức đó là đang yếu đi. Bạn không cần đọc ba mươi biểu đồ — bạn cần biết tim còn đập mạnh không.
 
 Nhưng đây là chỗ ít người chịu tin: **một nhịp tim đẹp vẫn có thể che một căn bệnh.** Quick Ratio cao chưa chắc là tin tốt — đôi khi nó là tiếng tim đập nhanh vì bạn đang bơm doping vào, không phải vì cơ thể khỏe. Chúng ta sẽ đến đó. Trước hết, hãy hiểu con số.
 
 ## Quick Ratio là gì: gộp growth và churn vào một số
 
-Ở [Phần 1](/blog/growth-accounting/) chúng ta đã lập phương trình tăng trưởng: MAU tháng này = MAU tháng trước **+ user mới + user quay lại − user rời bỏ**. Mỗi tháng có người bước vào và người bước ra. Growth Accounting tách rạch ròi bốn dòng chảy đó.
+Ở [Phần 1](/blog/growth-accounting/) chúng ta đã lập phương trình tăng trưởng: MAU (Monthly Active User — số khách hoạt động hàng tháng) tháng này = MAU tháng trước **+ người dùng mới + người dùng quay lại − người dùng rời bỏ**. Mỗi tháng có người bước vào và người bước ra. Growth Accounting (kế toán tăng trưởng — tách thay đổi mỗi kỳ thành mới / quay lại / giữ chân / rời đi) tách rạch ròi bốn dòng chảy đó.
 
 Quick Ratio lấy đúng những dòng chảy ấy và ép chúng thành một tỷ số:
 
@@ -40,7 +40,7 @@ Quick Ratio = (user mới + user quay lại) / user rời bỏ
             = (new + resurrected) / churned
 ```
 
-Tử số là tất cả những gì làm MAU lớn lên — người dùng mới toanh cộng với người từng bỏ đi nay quay lại (resurrected). Mẫu số là tất cả những gì làm MAU teo đi — người dùng đã active mà kỳ này biến mất.
+Tử số là tất cả những gì làm MAU lớn lên — người dùng mới toanh cộng với người từng bỏ đi nay quay lại (resurrected — khách hồi sinh). Mẫu số là tất cả những gì làm MAU teo đi — người dùng đã hoạt động (active) mà kỳ này biến mất.
 
 Cách đọc trực giác nhất, và cũng là cách tôi luôn nói với founder: **với mỗi 1 user mất đi, bạn thêm được bao nhiêu user?** Quick Ratio = 1,8 nghĩa là cứ mất 1 người, bạn bù vào 1,8 người — lời ra 0,8. Quick Ratio = 0,7 nghĩa là cứ mất 1 người, bạn chỉ kéo về được 0,7 — lỗ 0,3 mỗi vòng. Cái xô của bạn đang đầy lên hay đang cạn, tất cả nằm gọn trong một con số.
 
@@ -95,7 +95,7 @@ Vẽ Quick Ratio theo tháng cho bạn thứ mà một con số đơn lẻ khôn
 
 Đây là lúc phải cẩn thận với con số. Ai cũng muốn nghe "Quick Ratio trên X là đạt". Sự thật khó chịu hơn: **ngưỡng "tốt" phụ thuộc vào mô hình kinh doanh của bạn**, và những con số dưới đây là *ngưỡng tham chiếu ngành* để bạn định hướng, không phải đích để gán cứng cho doanh nghiệp mình.
 
-Với **app tiêu dùng điển hình** (consumer app — mạng xã hội, app mua sắm, công cụ free), một sự thật khiến nhiều founder bất ngờ: Quick Ratio thường chỉ **nhỉnh hơn 1 một chút**. Phân tích kinh điển của Amplitude trên một app thực cho thấy QR dao động quanh **1–1,5** suốt nhiều tháng — *kể cả những tháng họ ra tính năng mới*. Lý do? Consumer app có churn rất cao: bạn kéo về một đống user mỗi tháng, và cũng mất gần một đống. Phần "lời" mỏng manh thường đến từ resurrection — những người quay lại. QR rớt **dưới 1,0** là tín hiệu MAU sắp teo.
+Với **app tiêu dùng điển hình** (consumer app — mạng xã hội, ứng dụng mua sắm, công cụ free), một sự thật khiến nhiều founder bất ngờ: Quick Ratio thường chỉ **nhỉnh hơn 1 một chút**. Phân tích kinh điển của Amplitude trên một ứng dụng thực cho thấy QR dao động quanh **1–1,5** suốt nhiều tháng — *kể cả những tháng họ ra tính năng mới*. Lý do? Consumer app có churn (tỷ lệ khách rời bỏ) rất cao: bạn kéo về một đống người dùng mỗi tháng, và cũng mất gần một đống. Phần "lời" mỏng manh thường đến từ resurrection — những người quay lại. QR rớt **dưới 1,0** là tín hiệu MAU sắp teo.
 
 Nói cách khác, với app tiêu dùng, đừng mơ Quick Ratio = 5. Giữ được nó ổn định trên 1 đã là một cuộc chiến.
 

@@ -1,0 +1,95 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgUc004" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accUc004" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="barUc004" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#A5B4FC"/>
+    </linearGradient>
+    <marker id="arrowUc004" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#818CF8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgUc004)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+
+  <text x="80" y="120" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">CÂU CHUYỆN &amp; USE CASE</text>
+  <text x="80" y="208" fill="#ffffff" font-size="46" font-weight="800">Chuỗi F&amp;B 8 chi nhánh</text>
+  <text x="80" y="262" fill="#CBD5E1" font-size="25" font-weight="600">Tám file Excel mỗi sáng — gộp về một màn hình</text>
+  <text x="80" y="540" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+
+  <!-- motif: 8 chi nhánh (file Excel) hội tụ về một màn hình báo cáo -->
+  <g transform="translate(700,150)">
+    <!-- eight branch file cards stacked left -->
+    <g font-size="13" font-weight="700" text-anchor="middle">
+      <g transform="translate(0,0)">
+        <rect x="0" y="0" width="92" height="34" rx="8" fill="#1E293B" stroke="#34D399" stroke-width="1.8"/>
+        <text x="46" y="22" fill="#6EE7B7">Quận 1</text>
+      </g>
+      <g transform="translate(0,44)">
+        <rect x="0" y="0" width="92" height="34" rx="8" fill="#1E293B" stroke="#F97316" stroke-width="1.8"/>
+        <text x="46" y="22" fill="#FB923C">Quận 3</text>
+      </g>
+      <g transform="translate(0,88)">
+        <rect x="0" y="0" width="92" height="34" rx="8" fill="#1E293B" stroke="#22D3EE" stroke-width="1.8"/>
+        <text x="46" y="22" fill="#67E8F9">Bình Thạnh</text>
+      </g>
+      <g transform="translate(0,132)">
+        <rect x="0" y="0" width="92" height="34" rx="8" fill="#1E293B" stroke="#A78BFA" stroke-width="1.8"/>
+        <text x="46" y="22" fill="#C4B5FD">Quận 7</text>
+      </g>
+      <g transform="translate(0,176)">
+        <rect x="0" y="0" width="92" height="34" rx="8" fill="#1E293B" stroke="#FBBF24" stroke-width="1.8"/>
+        <text x="46" y="22" fill="#FCD34D">Thủ Đức</text>
+      </g>
+      <g transform="translate(0,220)">
+        <rect x="0" y="0" width="92" height="34" rx="8" fill="#1E293B" stroke="#F472B6" stroke-width="1.8"/>
+        <text x="46" y="22" fill="#F9A8D4">Tân Bình</text>
+      </g>
+      <g transform="translate(0,264)">
+        <rect x="0" y="0" width="92" height="34" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.8"/>
+        <text x="46" y="22" fill="#7DD3FC">Gò Vấp</text>
+      </g>
+      <g transform="translate(0,308)">
+        <rect x="0" y="0" width="92" height="34" rx="8" fill="#1E293B" stroke="#4ADE80" stroke-width="1.8"/>
+        <text x="46" y="22" fill="#86EFAC">Phú Nhuận</text>
+      </g>
+    </g>
+
+    <!-- converging arrows from 8 cards to one screen -->
+    <g stroke="#818CF8" stroke-width="2" fill="none" opacity="0.7">
+      <path d="M96 17  C 180 60, 240 130, 286 168" marker-end="url(#arrowUc004)"/>
+      <path d="M96 61  C 180 90, 240 140, 286 174" marker-end="url(#arrowUc004)"/>
+      <path d="M96 105 C 180 120, 240 150, 286 180" marker-end="url(#arrowUc004)"/>
+      <path d="M96 149 L 286 184" marker-end="url(#arrowUc004)"/>
+      <path d="M96 193 L 286 190" marker-end="url(#arrowUc004)"/>
+      <path d="M96 237 C 180 215, 240 200, 286 196" marker-end="url(#arrowUc004)"/>
+      <path d="M96 281 C 180 245, 240 215, 286 202" marker-end="url(#arrowUc004)"/>
+      <path d="M96 325 C 180 270, 240 225, 286 208" marker-end="url(#arrowUc004)"/>
+    </g>
+
+    <!-- one unified screen / report panel -->
+    <g transform="translate(300,110)">
+      <rect x="0" y="0" width="190" height="160" rx="16" fill="url(#accUc004)"/>
+      <text x="95" y="30" fill="#ffffff" font-size="15" font-weight="800" text-anchor="middle">MỘT MÀN HÌNH</text>
+      <g transform="translate(28,48)">
+        <rect x="0" y="58" width="24" height="42" rx="3" fill="url(#barUc004)"/>
+        <rect x="38" y="34" width="24" height="66" rx="3" fill="url(#barUc004)"/>
+        <rect x="76" y="14" width="24" height="86" rx="3" fill="url(#barUc004)"/>
+        <rect x="114" y="46" width="24" height="54" rx="3" fill="url(#barUc004)"/>
+        <line x1="-4" y1="104" x2="146" y2="104" stroke="#E0E7FF" stroke-width="2" opacity="0.7"/>
+      </g>
+    </g>
+  </g>
+</svg>

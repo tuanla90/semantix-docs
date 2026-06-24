@@ -74,45 +74,38 @@ Khi ba định nghĩa đã chốt, quy trình là một dây chuyền ba khâu: 
   <text x="350" y="28" fill="#64748B" font-size="13" text-anchor="middle">T2</text>
   <text x="450" y="28" fill="#64748B" font-size="13" text-anchor="middle">T3</text>
   <text x="550" y="28" fill="#64748B" font-size="13" text-anchor="middle">T4</text>
-
   <!-- new -->
   <text x="8" y="68" fill="#10B981" font-size="14" font-weight="700">+ new</text>
   <text x="250" y="68" fill="#34D399" font-size="14" font-weight="600" text-anchor="middle">120</text>
   <text x="350" y="68" fill="#34D399" font-size="14" font-weight="600" text-anchor="middle">95</text>
   <text x="450" y="68" fill="#34D399" font-size="14" font-weight="600" text-anchor="middle">88</text>
   <text x="550" y="68" fill="#34D399" font-size="14" font-weight="600" text-anchor="middle">102</text>
-
   <!-- retained -->
   <text x="8" y="104" fill="#0EA5A4" font-size="14" font-weight="700">retained</text>
   <text x="250" y="104" fill="#5EEAD4" font-size="14" font-weight="600" text-anchor="middle">—</text>
   <text x="350" y="104" fill="#5EEAD4" font-size="14" font-weight="600" text-anchor="middle">74</text>
   <text x="450" y="104" fill="#5EEAD4" font-size="14" font-weight="600" text-anchor="middle">96</text>
   <text x="550" y="104" fill="#5EEAD4" font-size="14" font-weight="600" text-anchor="middle">118</text>
-
   <!-- resurrected -->
   <text x="8" y="140" fill="#22c55e" font-size="14" font-weight="700">+ resurrected</text>
   <text x="250" y="140" fill="#86efac" font-size="14" font-weight="600" text-anchor="middle">—</text>
   <text x="350" y="140" fill="#86efac" font-size="14" font-weight="600" text-anchor="middle">11</text>
   <text x="450" y="140" fill="#86efac" font-size="14" font-weight="600" text-anchor="middle">18</text>
   <text x="550" y="140" fill="#86efac" font-size="14" font-weight="600" text-anchor="middle">22</text>
-
   <!-- churned -->
   <text x="8" y="176" fill="#EF4444" font-size="14" font-weight="700">− churned</text>
   <text x="250" y="176" fill="#FCA5A5" font-size="14" font-weight="600" text-anchor="middle">—</text>
   <text x="350" y="176" fill="#FCA5A5" font-size="14" font-weight="600" text-anchor="middle">46</text>
   <text x="450" y="176" fill="#FCA5A5" font-size="14" font-weight="600" text-anchor="middle">52</text>
   <text x="550" y="176" fill="#FCA5A5" font-size="14" font-weight="600" text-anchor="middle">61</text>
-
   <!-- divider -->
   <line x1="8" y1="196" x2="600" y2="196" stroke="#334155" stroke-width="1"/>
-
   <!-- net MAU -->
   <text x="8" y="226" fill="#E2E8F0" font-size="14" font-weight="700">MAU cuối kỳ</text>
   <text x="250" y="226" fill="#F1F5F9" font-size="14" font-weight="700" text-anchor="middle">120</text>
   <text x="350" y="226" fill="#F1F5F9" font-size="14" font-weight="700" text-anchor="middle">134</text>
   <text x="450" y="226" fill="#F1F5F9" font-size="14" font-weight="700" text-anchor="middle">184</text>
   <text x="550" y="226" fill="#F1F5F9" font-size="14" font-weight="700" text-anchor="middle">265</text>
-
   <!-- Quick Ratio -->
   <rect x="4" y="246" width="600" height="44" rx="8" fill="#022C22" stroke="#FCD34D" stroke-width="1.5"/>
   <text x="20" y="274" fill="#FCD34D" font-size="14" font-weight="700">Quick Ratio</text>

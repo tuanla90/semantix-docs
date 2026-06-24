@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Từ điển thuật ngữ Data / BI / AI — sắp xếp A–Z.
+// Mỗi mục: t = thuật ngữ, ab = dạng đầy đủ (viết tắt), vi = nghĩa tiếng Việt, slug = bài liên quan (tùy chọn).
+type Term = { t: string; ab?: string; vi: string; slug?: string };
+
+const terms: Term[] = [
+  { t: 'ABC inventory', vi: 'Phân loại hàng tồn theo giá trị: nhóm A ít mã nhưng giữ phần lớn vốn, nhóm C nhiều mã nhưng giá trị nhỏ — để quản từng nhóm khác nhau.' },
+  { t: 'Activation', vi: 'Thời điểm khách lần đầu nhận được giá trị thật từ sản phẩm (chứ không chỉ đăng ký).', slug: 'cohort-behavioral' },
+  { t: 'Acquisition', vi: 'Thu hút khách hàng mới (qua quảng cáo, marketing…).', slug: 'growth-accounting' },
+  { t: 'Agent (AI)', vi: 'Tác tử AI tự lập kế hoạch nhiều bước và gọi công cụ để hoàn thành nhiệm vụ, thay vì chỉ trả lời một câu.', slug: 'dual-agent-debate' },
+  { t: 'Anomaly detection', vi: 'Phát hiện bất thường: tự động nhận ra điểm số liệu lệch hẳn so với thường lệ (vd doanh thu rớt đột ngột).' },
+  { t: 'AOV', ab: 'Average Order Value', vi: 'Giá trị đơn hàng trung bình = tổng doanh thu chia tổng số đơn.' },
+  { t: 'ARPU', ab: 'Average Revenue Per User', vi: 'Doanh thu trung bình trên mỗi người dùng trong một kỳ.' },
+  { t: 'Attribution', vi: 'Quy kết doanh thu cho kênh "có công" dẫn tới đơn hàng; mỗi nền tảng tự nhận công nên dễ đếm trùng.', slug: 'marketing-do-roi-ads' },
+  { t: 'BI', ab: 'Business Intelligence', vi: 'Trí tuệ doanh nghiệp — kỷ luật biến dữ liệu rời rạc thành quyết định, không chỉ là dashboard đẹp.', slug: 'bi-cho-sme' },
+  { t: 'BYOK', ab: 'Bring Your Own Key', vi: 'Tự mang khóa API của mình: doanh nghiệp dùng tài khoản AI riêng để giữ quyền kiểm soát dữ liệu và chi phí.', slug: 'multi-provider-byok' },
+  { t: 'CAC', ab: 'Customer Acquisition Cost', vi: 'Chi phí trung bình để có được một khách hàng mới.' },
+  { t: 'Churn', vi: 'Khách rời bỏ: người dùng hoạt động kỳ trước nhưng kỳ này thì không. Churn rate là tỷ lệ rời bỏ trong kỳ.', slug: 'cohort-retention-pmf' },
+  { t: 'Churn prediction', vi: 'Dự đoán khách sắp rời đi dựa trên hành vi, để giữ chân trước khi họ rời.' },
+  { t: 'Cohort', vi: 'Nhóm khách gộp theo thời điểm bắt đầu (vd cùng mua tháng 1), rồi theo dõi từng nhóm "già đi" theo thời gian.', slug: 'cohort-analysis' },
+  { t: 'Context window', vi: 'Lượng văn bản tối đa mà một mô hình AI có thể "nhớ" và xử lý trong một lần.', slug: 'toi-uu-chi-phi-token-ai' },
+  { t: 'Conversion rate', vi: 'Tỷ lệ chuyển đổi giữa hai bước trong phễu (vd số người thanh toán / số người thêm giỏ).', slug: 'funnel-analysis' },
+  { t: 'Dashboard', vi: 'Bảng số trực quan tổng hợp nhiều biểu đồ/chỉ số trên một màn hình. Là cái hiển thị, không phải bản chất của BI.' },
+  { t: 'Data governance', vi: 'Quản trị dữ liệu: quy định ai sở hữu con số, ai chịu trách nhiệm khi nó sai, ai được xem gì.' },
+  { t: 'Data lake', vi: 'Hồ dữ liệu — kho lưu dữ liệu thô ở mọi định dạng, biến đổi sau khi cần.' },
+  { t: 'Data modeling', vi: 'Cách thiết kế bảng và quan hệ giữa chúng (fact/dimension) — quyết định bạn hỏi được những câu nào.' },
+  { t: 'Data warehouse', vi: 'Kho dữ liệu tập trung, tách khỏi hệ thống vận hành, được tối ưu cho phân tích và báo cáo.', slug: 'data-warehouse-sme' },
+  { t: 'DAU', ab: 'Daily Active User', vi: 'Số người dùng hoạt động trong một ngày.' },
+  { t: 'Dimension', vi: 'Lát cắt để xoay nhìn một metric (theo kênh, theo tháng, theo sản phẩm…).', slug: 'metric-dimension-kpi' },
+  { t: 'Embedding', vi: 'Mã hóa văn bản thành dãy số (vector) để máy so sánh ý nghĩa gần/xa, nền tảng cho tìm kiếm theo nghĩa và RAG.' },
+  { t: 'ELT', ab: 'Extract, Load, Transform', vi: 'Trích xuất → nạp dữ liệu thô về trước → biến đổi khi cần. Trả quyền phân tích về tay người có câu hỏi.', slug: 'etl-vs-elt' },
+  { t: 'ETL', ab: 'Extract, Transform, Load', vi: 'Trích xuất → biến đổi → nạp. Phải biết trước cần gì, nên thường khóa dữ liệu trong tay kỹ sư.', slug: 'etl-vs-elt' },
+  { t: 'Fact / Dimension', vi: 'Bảng fact chứa số đo (doanh thu, số lượng); bảng dimension chứa mô tả để cắt lát (sản phẩm, thời gian, kênh).' },
+  { t: 'Fine-tune', vi: 'Huấn luyện thêm một mô hình AI trên dữ liệu riêng để nó hợp ngữ cảnh hơn (khác với RAG là cho tra cứu).' },
+  { t: 'Funnel', vi: 'Phễu chuyển đổi — chuỗi bước khách đi qua (xem → thêm giỏ → thanh toán); phân tích để tìm chỗ rò rỉ.', slug: 'funnel-analysis' },
+  { t: 'Growth Accounting', vi: 'Kế toán tăng trưởng — "báo cáo lãi/lỗ" cho người dùng: tách thay đổi mỗi kỳ thành mới / quay lại / giữ chân / rời đi.', slug: 'growth-accounting' },
+  { t: 'Hallucination', vi: 'Ảo giác AI — mô hình tự tin "bịa" ra thông tin nghe hợp lý nhưng sai.', slug: 'llm-bia-sql' },
+  { t: 'KPI', ab: 'Key Performance Indicator', vi: 'Chỉ số hiệu suất then chốt — một metric được gắn mục tiêu cụ thể.', slug: 'metric-dimension-kpi' },
+  { t: 'Lagging indicator', vi: 'Chỉ số báo sau — phản ánh kết quả đã xảy ra (vd doanh thu quý), khó tác động trực tiếp.' },
+  { t: 'Leading indicator', vi: 'Chỉ số báo trước — dự báo kết quả tương lai và lái được (vd số khách dùng thử).' },
+  { t: 'LLM', ab: 'Large Language Model', vi: 'Mô hình ngôn ngữ lớn — AI được huấn luyện trên lượng văn bản khổng lồ để hiểu và sinh ngôn ngữ.', slug: 'llm-bia-sql' },
+  { t: 'LTV / CLV', ab: 'Customer Lifetime Value', vi: 'Giá trị trọn đời của một khách hàng — tổng lợi nhuận kỳ vọng từ họ suốt thời gian gắn bó.', slug: 'cohort-revenue-ltv' },
+  { t: 'Market Basket', vi: 'Phân tích giỏ hàng — tìm các sản phẩm hay được mua kèm nhau để bán chéo đúng cách.' },
+  { t: 'MAU', ab: 'Monthly Active User', vi: 'Số người dùng (khách hàng) hoạt động trong một tháng.', slug: 'growth-accounting' },
+  { t: 'Metric', vi: 'Con số đo được (doanh thu, số đơn, số khách) — khác với dimension là lát cắt.', slug: 'metric-dimension-kpi' },
+  { t: 'NDR', ab: 'Net Dollar Retention', vi: 'Tỷ lệ giữ doanh thu từ tập khách cũ sau khi cộng phần mở rộng và trừ phần rời bỏ — vượt 100% là khách cũ tự lớn lên.', slug: 'growth-accounting-revenue' },
+  { t: 'Net New MAU', vi: 'Tăng ròng người dùng hoạt động trong kỳ = mới + quay lại − rời đi. Chính là con số "+x%" mà dashboard hay khoe.', slug: 'growth-accounting' },
+  { t: 'OLAP', ab: 'Online Analytical Processing', vi: 'Hệ thống tối ưu cho phân tích — tổng hợp, cắt lát số liệu nhiều chiều phục vụ báo cáo.' },
+  { t: 'OLTP', ab: 'Online Transaction Processing', vi: 'Hệ thống xử lý giao dịch vận hành (bán hàng, đặt đơn) — không nên chạy báo cáo nặng thẳng lên đây.' },
+  { t: 'On-premise', vi: 'Triển khai phần mềm trên hạ tầng tự quản của doanh nghiệp, thay vì trên cloud của nhà cung cấp.' },
+  { t: 'P&L', ab: 'Profit & Loss', vi: 'Báo cáo lãi/lỗ — tách doanh thu khỏi chi phí để thấy tiền đến từ đâu, đi đâu.' },
+  { t: 'Pareto (80/20)', vi: 'Quy luật 80/20 — khoảng 20% nguyên nhân thường tạo ra 80% kết quả (vd 20% sản phẩm nuôi 80% lợi nhuận).', slug: 'pareto-80-20' },
+  { t: 'PMF', ab: 'Product–Market Fit', vi: 'Mức độ sản phẩm khớp nhu cầu thị trường — thường thấy qua đường cong giữ chân phẳng ra thay vì rơi về 0.', slug: 'cohort-retention-pmf' },
+  { t: 'Quick Ratio', vi: 'Tỉ lệ "tăng trên hao" = (khách mới + quay lại) / khách rời đi. Trên 1 là đang lớn, dưới 1 là đang teo.', slug: 'growth-accounting-quick-ratio' },
+  { t: 'RAG', ab: 'Retrieval-Augmented Generation', vi: 'Sinh có truy hồi — cho AI tra đúng tài liệu/ngữ cảnh trước khi trả lời, để bớt bịa.', slug: 'rag-la-gi' },
+  { t: 'Resurrected user', vi: 'Khách từng rời đi nay quay lại hoạt động sau một thời gian vắng mặt.', slug: 'growth-accounting' },
+  { t: 'Retention', vi: 'Giữ chân — tỷ lệ khách còn hoạt động sau một khoảng thời gian kể từ khi bắt đầu.', slug: 'cohort-retention-pmf' },
+  { t: 'RFM', ab: 'Recency, Frequency, Monetary', vi: 'Phân khúc khách theo lần mua gần nhất, tần suất mua và số tiền chi — để bán đúng người.', slug: 'rfm-segmentation' },
+  { t: 'RLS', ab: 'Row-Level Security', vi: 'Phân quyền theo hàng — mỗi người chỉ thấy đúng các dòng dữ liệu được phép, ngay tại tầng dữ liệu.', slug: 'row-level-security' },
+  { t: 'ROAS', ab: 'Return on Ad Spend', vi: 'Doanh thu thu về trên mỗi đồng chi quảng cáo.', slug: 'marketing-do-roi-ads' },
+  { t: 'ROI', ab: 'Return on Investment', vi: 'Tỷ suất hoàn vốn — lợi ích thu được so với chi phí bỏ ra.' },
+  { t: 'SaaS', ab: 'Software as a Service', vi: 'Phần mềm cho thuê theo thuê bao (thường hàng tháng), dùng qua internet thay vì mua đứt.' },
+  { t: 'Schema', vi: 'Cấu trúc bảng/cột của một cơ sở dữ liệu — AI cần "đọc" schema để biết hỏi vào đâu.' },
+  { t: 'Seasonality', vi: 'Tính mùa vụ — quy luật lên xuống lặp lại của số liệu theo thời điểm (Tết, cuối tuần, mùa sale).' },
+  { t: 'Self-service analytics', vi: 'Tự phục vụ phân tích — người làm kinh doanh tự hỏi và tự có câu trả lời, không phải chờ đội data.', slug: 'self-service-analytics' },
+  { t: 'Semantic Layer', vi: 'Tầng định nghĩa nghiệp vụ dùng chung — nơi "doanh thu", "khách quay lại"… được định nghĩa một lần cho cả tổ chức.', slug: 'semantic-layer' },
+  { t: 'Single source of truth', vi: 'Một nguồn sự thật chung — một định nghĩa thống nhất, không phải một database chung.', slug: 'mot-nguon-su-that' },
+  { t: 'SQL', ab: 'Structured Query Language', vi: 'Ngôn ngữ truy vấn cơ sở dữ liệu — câu lệnh để lấy và tính toán số liệu.' },
+  { t: 'Text-to-SQL', vi: 'Kỹ thuật để AI biến câu hỏi tiếng Việt/ngôn ngữ tự nhiên thành câu lệnh SQL.', slug: 'text-to-sql' },
+  { t: 'Token', vi: 'Đơn vị văn bản mà mô hình AI xử lý và tính phí (một từ tiếng Việt thường là vài token).', slug: 'toi-uu-chi-phi-token-ai' },
+  { t: 'Top-line', vi: 'Con số tổng ngoài cùng của báo cáo (thường là doanh thu hoặc tăng trưởng), trước khi bóc tách bên trong.' },
+  { t: 'Vanity metric', vi: 'Chỉ số "đẹp mã" (lượt xem, follower) trông oai nhưng không dẫn tới quyết định hành động được.' },
+  { t: 'Vector search', vi: 'Tìm kiếm theo độ gần nghĩa (qua embedding) thay vì khớp đúng từ khóa.' },
+  { t: 'Vintage analysis', vi: 'Phân tích theo "lứa" hình thành (vd các khoản vay cùng tháng giải ngân) để so sánh chất lượng qua thời gian.' },
+  { t: 'WAU', ab: 'Weekly Active User', vi: 'Số người dùng hoạt động trong một tuần.' },
+];
+
+// Sắp xếp A–Z theo thuật ngữ (không phân biệt hoa thường, bỏ ký tự đầu không phải chữ).
+const collator = new Intl.Collator('vi', { sensitivity: 'base' });
+terms.sort((a, b) => collator.compare(a.t, b.t));
+
+function letterOf(t: string) {
+  const c = t.replace(/[^A-Za-z]/, '').charAt(0).toUpperCase();
+  return c || '#';
+}
+
+// Gom theo chữ cái đầu.
+const groups: { letter: string; items: Term[] }[] = [];
+for (const term of terms) {
+  const L = letterOf(term.t);
+  let g = groups.find(x => x.letter === L);
+  if (!g) { g = { letter: L, items: [] }; groups.push(g); }
+  g.items.push(term);
+}
+const letters = groups.map(g => g.letter);
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+---
+<BaseLayout title="Từ điển thuật ngữ — Semantix Blog" description="Giải nghĩa tiếng Việt các thuật ngữ Data, BI và AI thường gặp: MAU, churn, cohort, RAG, ETL, semantic layer… Sắp xếp theo A–Z.">
+
+<style>
+  .glo-hero { padding: 110px 24px 56px; background: linear-gradient(160deg,#0F172A 0%,#1E1B4B 60%,#0F172A 100%); text-align: center; }
+  .glo-hero h1 { font-size: clamp(30px,4.5vw,48px); font-weight: 900; color: #fff; letter-spacing: -1.2px; margin-bottom: 14px; }
+  .glo-hero p  { font-size: 17px; color: #94A3B8; max-width: 560px; margin: 0 auto; line-height: 1.6; }
+
+  .glo-body { max-width: 820px; margin: 0 auto; padding: 40px 24px 96px; }
+
+  .glo-search { width: 100%; padding: 13px 18px; border-radius: 12px; border: 1px solid var(--border);
+    font-size: 15px; background: var(--white); color: var(--dark); outline: none; margin-bottom: 20px; font-family: inherit; }
+  .glo-search:focus { border-color: var(--primary); }
+
+  .az-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 36px; position: sticky; top: 72px; z-index: 5;
+    background: rgba(255,255,255,.9); backdrop-filter: blur(8px); padding: 10px 0; }
+  .az-link { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;
+    border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; color: var(--dark-3);
+    background: var(--surface); border: 1px solid var(--border); transition: background .15s, color .15s; }
+  .az-link:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .az-link.off { opacity: .3; pointer-events: none; }
+
+  .glo-group { margin-bottom: 8px; scroll-margin-top: 130px; }
+  .glo-letter { font-size: 22px; font-weight: 900; color: var(--primary); letter-spacing: -0.5px;
+    padding-bottom: 8px; border-bottom: 2px solid var(--border); margin: 32px 0 18px; }
+  .glo-item { padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .glo-term { font-size: 17px; font-weight: 800; color: var(--dark); letter-spacing: -0.2px; }
+  .glo-ab { font-size: 13.5px; font-weight: 600; color: var(--muted); margin-left: 8px; }
+  .glo-vi { font-size: 15px; color: var(--dark-2); line-height: 1.65; margin-top: 6px; }
+  .glo-link { font-size: 13px; font-weight: 600; color: var(--primary); text-decoration: none; margin-top: 8px; display: inline-block; }
+  .glo-link:hover { color: var(--primary-dark); text-decoration: underline; }
+
+  .glo-empty { text-align: center; color: var(--muted); padding: 40px 0; font-size: 15px; display: none; }
+  .glo-back { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--primary); text-decoration: none; margin-bottom: 24px; }
+</style>
+
+<div class="glo-hero">
+  <div class="badge" style="margin-bottom:18px"><span class="badge-dot"></span>Tra cứu nhanh</div>
+  <h1>Từ điển thuật ngữ</h1>
+  <p>Giải nghĩa tiếng Việt các thuật ngữ Data, BI và AI thường gặp trong blog — viết cho người làm, không phải người nghiên cứu.</p>
+</div>
+
+<div class="glo-body">
+  <a href="/blog/" class="glo-back">← Tất cả bài viết</a>
+
+  <input type="search" id="glo-search" class="glo-search" placeholder="Tìm thuật ngữ… (vd: MAU, churn, semantic layer)" autocomplete="off" />
+
+  <div class="az-bar">
+    {alphabet.map(L => (
+      <a class={`az-link ${letters.includes(L) ? '' : 'off'}`} href={`#letter-${L}`}>{L}</a>
+    ))}
+  </div>
+
+  {groups.map(g => (
+    <section class="glo-group" id={`letter-${g.letter}`} data-letter={g.letter}>
+      <div class="glo-letter">{g.letter}</div>
+      {g.items.map(term => (
+        <div class="glo-item" data-term={`${term.t} ${term.ab ?? ''} ${term.vi}`.toLowerCase()}>
+          <div>
+            <span class="glo-term">{term.t}</span>
+            {term.ab && <span class="glo-ab">{term.ab}</span>}
+          </div>
+          <div class="glo-vi">{term.vi}</div>
+          {term.slug && <a class="glo-link" href={`/blog/${term.slug}/`}>→ Đọc bài liên quan</a>}
+        </div>
+      ))}
+    </section>
+  ))}
+
+  <div class="glo-empty" id="glo-empty">Không tìm thấy thuật ngữ nào khớp.</div>
+</div>
+
+<script>
+  const search = document.getElementById('glo-search') as HTMLInputElement;
+  const items = Array.from(document.querySelectorAll<HTMLElement>('.glo-item'));
+  const groups = Array.from(document.querySelectorAll<HTMLElement>('.glo-group'));
+  const empty = document.getElementById('glo-empty')!;
+
+  // Bỏ dấu để tìm được cả khi gõ thiếu dấu.
+  const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd');
+
+  search.addEventListener('input', () => {
+    const q = norm(search.value.trim());
+    let anyVisible = false;
+    items.forEach(it => {
+      const match = !q || norm(it.dataset.term || '').includes(q);
+      it.style.display = match ? '' : 'none';
+      if (match) anyVisible = true;
+    });
+    // Ẩn nhóm chữ cái không còn mục nào hiện.
+    groups.forEach(g => {
+      const visible = g.querySelector('.glo-item:not([style*="display: none"])');
+      g.style.display = visible ? '' : 'none';
+    });
+    empty.style.display = anyVisible ? 'none' : 'block';
+  });
+</script>
+
+</BaseLayout>

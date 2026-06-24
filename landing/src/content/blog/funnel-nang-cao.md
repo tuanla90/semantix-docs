@@ -15,7 +15,7 @@ Bài [Funnel Analysis nhập môn](/blog/funnel-analysis/) dạy bạn một đi
 
 Sự thật đó là: **cái phễu là một mô hình sai — chỉ là một mô hình sai *hữu ích*.** Nó giả định khách hàng đi một đường thẳng, một chiều, trong một lần ngồi: xem → giỏ → thanh toán → mua. Khách thật thì không. Họ thêm vào giỏ trên điện thoại lúc nghỉ trưa, mở lại trên laptop tối hôm sau, bỏ đi ba ngày, rồi quay lại mua qua một link quảng cáo khác. Hành trình thật là một mớ vòng lặp và đường tắt — còn cái phễu ép nó thành một đường ống thẳng.
 
-Hầu hết thời gian, sự đơn giản hóa đó vô hại. Nhưng có bốn tình huống nó **đánh lừa bạn** — và khiến bạn dồn tiền sửa nhầm chỗ. Funnel nâng cao là biết nhận ra bốn tình huống đó.
+Hầu hết thời gian, sự đơn giản hóa đó vô hại. Nhưng có bốn tình huống nó **đánh lừa bạn** — và khiến bạn dồn tiền sửa nhầm chỗ. Funnel (phễu chuyển đổi) nâng cao là biết nhận ra bốn tình huống đó.
 
 ## Cái phễu giả định một đường thẳng. Khách thì không.
 
@@ -32,7 +32,6 @@ Hầu hết thời gian, sự đơn giản hóa đó vô hại. Nhưng có bốn
   <rect x="98"  y="156" width="104" height="42" rx="6" fill="#0e7490"/><text x="150" y="183" fill="#fff" font-size="13" text-anchor="middle">Thanh toán</text>
   <rect x="112" y="212" width="76"  height="42" rx="6" fill="#15803d"/><text x="150" y="239" fill="#fff" font-size="13" text-anchor="middle">Mua</text>
   <text x="150" y="284" fill="#64748B" font-size="12" text-anchor="middle">thẳng · một chiều · một lần ngồi</text>
-
   <!-- RIGHT: messy journey -->
   <text x="490" y="28" fill="#64748B" font-size="13" font-weight="700" text-anchor="middle">Hành trình thật</text>
   <circle cx="410" cy="70"  r="28" fill="#1E293B" stroke="#6366F1" stroke-width="2"/><text x="410" y="75" fill="#C7D2FE" font-size="13" text-anchor="middle">Xem</text>
@@ -77,7 +76,7 @@ Một bước có tỷ lệ giữ ổn định nhưng *chậm dần đều* là 
 
 ## Bẫy 3: Phễu tổng khỏe mạnh che giấu một segment đang chết
 
-Đây là cái bẫy tốn kém nhất, và là một dạng nghịch lý Simpson. Phễu tổng của bạn trông ổn — nhưng nó là trung bình của những segment rất khác nhau. Một segment xuất sắc có thể che lấp một segment đang chảy máu.
+Đây là cái bẫy tốn kém nhất, và là một dạng nghịch lý Simpson. Phễu tổng của bạn trông ổn — nhưng nó là trung bình của những segment (phân khúc — một nhóm khách có chung đặc điểm, vd thiết bị, kênh, khu vực) rất khác nhau. Một segment xuất sắc có thể che lấp một segment đang chảy máu.
 
 <div class="viz">
 <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
@@ -87,14 +86,12 @@ Một bước có tỷ lệ giữ ổn định nhưng *chậm dần đều* là 
   <rect x="110" y="92"  width="140" height="40" rx="6" fill="#22c55e"/><text x="180" y="118" fill="#fff" font-size="13" text-anchor="middle">Thanh toán — 70%</text>
   <rect x="130" y="140" width="100" height="40" rx="6" fill="#16a34a"/><text x="180" y="166" fill="#fff" font-size="13" text-anchor="middle">Mua — 60%</text>
   <text x="180" y="206" fill="#16a34a" font-size="13" font-weight="700" text-anchor="middle">✓ chuyển đổi 60%</text>
-
   <!-- Mobile funnel -->
   <text x="500" y="28" fill="#dc2626" font-size="14" font-weight="800" text-anchor="middle">Mobile (70% traffic)</text>
   <rect x="400" y="44"  width="200" height="40" rx="6" fill="#b91c1c"/><text x="500" y="70" fill="#fff" font-size="13" text-anchor="middle">Giỏ — 100%</text>
   <rect x="430" y="92"  width="140" height="40" rx="6" fill="#dc2626"/><text x="500" y="118" fill="#fff" font-size="13" text-anchor="middle">Thanh toán — 65%</text>
   <rect x="468" y="140" width="64"  height="40" rx="6" fill="#ef4444"/><text x="500" y="166" fill="#fff" font-size="13" text-anchor="middle">Mua — 30%</text>
   <text x="500" y="206" fill="#dc2626" font-size="13" font-weight="700" text-anchor="middle">✗ chuyển đổi 30%</text>
-
   <!-- blended -->
   <line x1="60" y1="236" x2="620" y2="236" stroke="#334155" stroke-width="1"/>
   <text x="340" y="264" fill="#475569" font-size="14" font-weight="700" text-anchor="middle">Phễu tổng: ~39% — "tạm ổn"</text>
@@ -103,7 +100,7 @@ Một bước có tỷ lệ giữ ổn định nhưng *chậm dần đều* là 
 <div class="viz-caption">Cùng một bước checkout: desktop giữ 60%, mobile chỉ 30%. Vì mobile chiếm 70% traffic, phễu tổng (~39%) trông "tạm" — trong khi segment lớn nhất đang chết. *(số liệu minh họa)*</div>
 </div>
 
-Tệ hơn nữa: một thay đổi có thể *cải thiện phễu tổng* trong khi *làm hỏng* một segment quan trọng — ví dụ một popup giảm giá kéo conversion chung lên nhưng đuổi nhóm khách giá trị cao đi. Nếu chỉ nhìn tổng, bạn ăn mừng đúng lúc đang tự bắn vào chân.
+Tệ hơn nữa: một thay đổi có thể *cải thiện phễu tổng* trong khi *làm hỏng* một segment quan trọng — ví dụ một popup giảm giá kéo conversion (tỷ lệ chuyển đổi) chung lên nhưng đuổi nhóm khách giá trị cao đi. Nếu chỉ nhìn tổng, bạn ăn mừng đúng lúc đang tự bắn vào chân.
 
 > Quy tắc vàng: **không bao giờ tin một phễu tổng mà chưa bổ nó ra theo segment.** Thiết bị, kênh, khách mới/cũ, khu vực — ít nhất một lát cắt, trước khi kết luận bất cứ điều gì.
 
@@ -111,13 +108,13 @@ Tệ hơn nữa: một thay đổi có thể *cải thiện phễu tổng* trong
 
 Bạn bịt bước checkout, tháng sau conversion tăng 8%. Ăn mừng? Khoan. Tháng sau cũng là mùa cao điểm, cũng là lúc đối thủ hết hàng, cũng là lúc bạn chạy thêm ads. **So sánh trước/sau trộn lẫn tác động của bản sửa với mọi thứ khác đang đổi cùng lúc.**
 
-Cách duy nhất biết bản sửa có thật sự hiệu quả: **một thí nghiệm có nhóm đối chứng** (A/B test) — một nửa khách thấy bước checkout mới, một nửa thấy bản cũ, so hai nhóm *trong cùng khoảng thời gian*. Nếu không thể A/B, ít nhất hãy so với một segment không bị tác động làm "đối chứng tự nhiên", và cảnh giác với mùa vụ.
+Cách duy nhất biết bản sửa có thật sự hiệu quả: **một thí nghiệm có nhóm đối chứng** (A/B test — chia ngẫu nhiên hai nhóm để so phiên bản A với B) — một nửa khách thấy bước checkout mới, một nửa thấy bản cũ, so hai nhóm *trong cùng khoảng thời gian*. Nếu không thể A/B, ít nhất hãy so với một segment không bị tác động làm "đối chứng tự nhiên", và cảnh giác với mùa vụ.
 
 Đây cũng là lý do "drop-off ≠ mất vĩnh viễn": nhiều khách bỏ giỏ vẫn quay lại qua kênh khác. Đo *tác động tăng thêm thật* (incremental) khó hơn nhiều so với nhìn một con số nhích lên — nhưng đó là khác biệt giữa quyết định dựa trên bằng chứng và quyết định dựa trên trùng hợp.
 
 ## Phễu theo cohort: ghép hai công cụ lại
 
-Một bước nâng cấp tự nhiên: thay vì một phễu cho "tất cả khách tháng này", hãy dựng phễu **riêng cho từng nhóm khách theo thời điểm vào** — tức cohort hóa cái phễu. Bạn sẽ thấy phễu của khách tuần này so với tuần trước *tại cùng tuổi đời* — tách được tác động của một thay đổi ra khỏi nhiễu, đúng tinh thần của [Cohort Analysis](/blog/cohort-analysis/). Funnel cho biết *bước nào* rò; cohort cho biết phễu *đang tốt lên hay xấu đi theo thời gian*.
+Một bước nâng cấp tự nhiên: thay vì một phễu cho "tất cả khách tháng này", hãy dựng phễu **riêng cho từng nhóm khách theo thời điểm vào** — tức cohort (nhóm khách gộp theo thời điểm bắt đầu) hóa cái phễu. Bạn sẽ thấy phễu của khách tuần này so với tuần trước *tại cùng tuổi đời* — tách được tác động của một thay đổi ra khỏi nhiễu, đúng tinh thần của [Cohort Analysis](/blog/cohort-analysis/). Funnel cho biết *bước nào* rò; cohort cho biết phễu *đang tốt lên hay xấu đi theo thời gian*.
 
 ## Funnel nâng cao với Semantix
 

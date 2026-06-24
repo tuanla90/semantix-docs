@@ -37,7 +37,6 @@ Cần nói thẳng: ở độ chín và độ bóng bẩy của trải nghiệm,
   <text x="86" y="248" fill="#64748B" font-size="13" text-anchor="end">đắt đỏ</text>
   <text x="614" y="248" fill="#64748B" font-size="13">hợp túi tiền SME</text>
   <text x="476" y="80" fill="#16A34A" font-size="13" font-weight="700" text-anchor="middle">vùng trống: AI cao + giá hợp lý</text>
-
   <!-- competitors -->
   <circle cx="190" cy="120" r="9" fill="#F87171"/><text x="204" y="116" fill="#FCA5A5" font-size="13" font-weight="700">ThoughtSpot</text>
   <circle cx="220" cy="320" r="9" fill="#94A3B8"/><text x="234" y="316" fill="#94A3B8" font-size="13">Power BI / Tableau</text>

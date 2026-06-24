@@ -13,7 +13,7 @@ coverAlt: "Ba định nghĩa doanh thu rời rạc hợp nhất thành một con
 
 Phòng Sales nói doanh thu tháng trước là 4,2 tỷ. Phòng Finance nói 3,8 tỷ. CEO hỏi Data Team thì được con số thứ ba: 4,05 tỷ. Cả ba đều **đúng** — họ chỉ đang đo những thứ khác nhau mà ai cũng gọi là "doanh thu".
 
-Phản xạ thường thấy khi gặp cảnh này là đổ cho dữ liệu bẩn, hoặc nghĩ "chắc cần một công cụ BI xịn hơn". Cả hai đều sai. Vấn đề không nằm ở dữ liệu, cũng không ở công cụ. Vấn đề là **chưa ai từng định nghĩa "doanh thu" ở một chỗ duy nhất** — và đó chính xác là việc của **Semantic Layer**.
+Phản xạ thường thấy khi gặp cảnh này là đổ cho dữ liệu bẩn, hoặc nghĩ "chắc cần một công cụ BI (Business Intelligence — biến dữ liệu thành quyết định) xịn hơn". Cả hai đều sai. Vấn đề không nằm ở dữ liệu, cũng không ở công cụ. Vấn đề là **chưa ai từng định nghĩa "doanh thu" ở một chỗ duy nhất** — và đó chính xác là việc của **Semantic Layer** (tầng định nghĩa nghiệp vụ dùng chung).
 
 ## Vấn đề: dữ liệu thô không nói được ngôn ngữ của người dùng
 
@@ -24,7 +24,7 @@ Khi bạn mở bảng `orders`, bạn thấy hàng trăm cột: `order_id`, `cre
 - Trừ thêm `refund_amount` cho đơn hoàn hàng?
 - Và `status = 'completed'` hay tính tất cả trạng thái?
 
-Bốn lựa chọn trên cho ra bốn con số lệch nhau tới 15–20%. Mỗi phòng ban, mỗi analyst lặng lẽ chọn một cách khác nhau trong câu SQL của họ — và không ai thấy mình sai, vì câu nào cũng chạy ra số. Đó là nguồn gốc của ba con số trong phòng họp.
+Bốn lựa chọn trên cho ra bốn con số lệch nhau tới 15–20%. Mỗi phòng ban, mỗi analyst lặng lẽ chọn một cách khác nhau trong câu SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) của họ — và không ai thấy mình sai, vì câu nào cũng chạy ra số. Đó là nguồn gốc của ba con số trong phòng họp.
 
 ## Semantic Layer: một cuốn từ điển nghiệp vụ cho cả công ty
 

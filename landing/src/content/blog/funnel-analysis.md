@@ -37,21 +37,17 @@ Hình dung cái phễu như một đường ống nhiều đoạn nối tiếp. 
   <rect x="90" y="20" width="500" height="56" rx="8" fill="#0d9488"/>
   <text x="340" y="54" fill="#fff" font-size="16" font-weight="700" text-anchor="middle">Xem sản phẩm — 82.000</text>
   <text x="610" y="92" fill="#94A3B8" font-size="13" text-anchor="end">↓ giữ 44%</text>
-
   <!-- Tầng 2 -->
   <rect x="165" y="96" width="350" height="56" rx="8" fill="#14b8a6"/>
   <text x="340" y="130" fill="#fff" font-size="16" font-weight="700" text-anchor="middle">Thêm vào giỏ — 36.000</text>
   <text x="610" y="168" fill="#F87171" font-size="13" font-weight="700" text-anchor="end">↓ giữ 33% — RÒ RỈ</text>
-
   <!-- Tầng 3 — điểm chảy máu -->
   <rect x="225" y="172" width="230" height="56" rx="8" fill="#dc2626"/>
   <text x="340" y="206" fill="#fff" font-size="16" font-weight="700" text-anchor="middle">Bắt đầu thanh toán — 12.000</text>
   <text x="610" y="244" fill="#94A3B8" font-size="13" text-anchor="end">↓ giữ 75%</text>
-
   <!-- Tầng 4 -->
   <rect x="260" y="248" width="160" height="56" rx="8" fill="#15803d"/>
   <text x="340" y="282" fill="#fff" font-size="16" font-weight="700" text-anchor="middle">Mua thành công — 9.000</text>
-
   <!-- nhãn cảnh báo -->
   <circle cx="470" cy="200" r="6" fill="#FCA5A5"/>
   <text x="488" y="205" fill="#FCA5A5" font-size="13" font-weight="700">điểm chảy máu chính</text>

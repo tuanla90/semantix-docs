@@ -37,7 +37,6 @@ Tổng chi phí sở hữu (TCO) không chỉ là tiền license. Nó là **ti�
   <text x="6" y="50" fill="#64748B" font-size="12">chi phí</text>
   <text x="6" y="64" fill="#64748B" font-size="12">sở hữu</text>
   <text x="6" y="78" fill="#64748B" font-size="12">thực tế</text>
-
   <!-- Bar A: open-source -->
   <rect x="150" y="292" width="130" height="8"  fill="#4ADE80"/>
   <rect x="150" y="222" width="130" height="68" fill="#6366F1"/>
@@ -45,12 +44,10 @@ Tổng chi phí sở hữu (TCO) không chỉ là tiền license. Nó là **ti�
   <rect x="150" y="82"  width="130" height="68" fill="#A5B4FC"/>
   <text x="215" y="328" fill="#CBD5E1" font-size="14" font-weight="700" text-anchor="middle">Metabase /</text>
   <text x="215" y="346" fill="#CBD5E1" font-size="14" font-weight="700" text-anchor="middle">Superset</text>
-
   <!-- Bar B: Semantix -->
   <rect x="420" y="210" width="130" height="90" fill="#22C55E"/>
   <rect x="420" y="180" width="130" height="26" fill="#86EFAC"/>
   <text x="485" y="328" fill="#CBD5E1" font-size="14" font-weight="700" text-anchor="middle">Semantix</text>
-
   <!-- legend -->
   <rect x="300" y="86"  width="14" height="14" fill="#A5B4FC"/><text x="320" y="98" fill="#94A3B8" font-size="13">Tự ghép AI vào</text>
   <rect x="300" y="156" width="14" height="14" fill="#818CF8"/><text x="320" y="168" fill="#94A3B8" font-size="13">Tự xây semantic layer</text>

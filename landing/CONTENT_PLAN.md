@@ -49,15 +49,20 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | kt-001 | Semantic Layer là gì & vì sao mọi DN cần | ✅ | `semantic-layer` |
 | kt-002 | Text-to-SQL là gì: AI biến câu hỏi tiếng Việt thành SQL ra sao | ✅ | `text-to-sql` |
 | kt-003 | Business Intelligence cho SME: hiểu đúng trong 10 phút | ✅ | `bi-cho-sme` |
-| kt-004 | Row-Level Security: vì sao mỗi nhân viên chỉ thấy data của mình | 🟡 | 03-authorization, contexts/rls |
-| kt-005 | RAG là gì & vì sao quan trọng với AI phân tích dữ liệu | 🟡 | 06-master-system-design |
-| kt-006 | Metric – Dimension – KPI: vỡ lòng từ vựng dữ liệu | ⚪ | contexts/data-model, studio/metrics |
-| kt-007 | Self-service analytics: trả quyền hỏi data về tay business | ⚪ | PRODUCT_REVIEW |
-| kt-008 | Data warehouse là gì — và vì sao SME chưa cần đến nó | 🟡 | PROJECT_OVERVIEW |
-| kt-009 | "Một nguồn sự thật" thật ra nghĩa là gì — và vì sao bạn đang có năm nguồn | 🟡 | contexts, business_research |
+| kt-004 | Row-Level Security: vì sao mỗi nhân viên chỉ thấy data của mình | ✅ | `row-level-security` |
+| kt-005 | RAG là gì & vì sao quan trọng với AI phân tích dữ liệu | ✅ | `rag-la-gi` |
+| kt-006 | Metric – Dimension – KPI: vỡ lòng từ vựng dữ liệu | ✅ | `metric-dimension-kpi` |
+| kt-007 | Self-service analytics: trả quyền hỏi data về tay business | ✅ | `self-service-analytics` |
+| kt-008 | Data warehouse là gì — và vì sao SME chưa cần đến nó | ✅ | `data-warehouse-sme` |
+| kt-009 | "Một nguồn sự thật" thật ra nghĩa là gì — và vì sao bạn đang có năm nguồn | ✅ | `mot-nguon-su-that` |
 | kt-010 | Dữ liệu bẩn: vì sao 80% thời gian phân tích là dọn dẹp, không phải phân tích | ✅ | `du-lieu-ban` |
-| kt-011 | ETL vs ELT: đưa data về một chỗ mà không cần biết một dòng code | ⚪ | connections |
-| kt-012 | Đưa data cho AI có an toàn không? Ai thấy gì, lưu ở đâu, ai kiểm soát | 🟡 | DEPLOYMENT_ARCHITECTURE, 03-authorization |
+| kt-011 | ETL vs ELT: đưa data về một chỗ mà không cần biết một dòng code | ✅ | `etl-vs-elt` |
+| kt-012 | Đưa data cho AI có an toàn không? Ai thấy gì, lưu ở đâu, ai kiểm soát | ✅ | `data-cho-ai-an-toan` |
+| kt-013 | OLTP vs OLAP: vì sao đừng chạy báo cáo thẳng trên database bán hàng | 🟡 | khái niệm nền tảng; gắn data-warehouse-sme |
+| kt-014 | Data modeling (fact & dimension): cách sắp bảng quyết định câu hỏi hỏi được | 🟡 | gắn metric-dimension-kpi |
+| kt-015 | Data governance: ai sở hữu con số & ai chịu trách nhiệm khi nó sai | ⚪ | khái niệm nền tảng |
+| kt-016 | Bảo vệ dữ liệu cá nhân (Nghị định 13/2023): SME thu data khách cần biết gì | 🟡 | bối cảnh pháp lý VN |
+| kt-017 | Embedding & vector search: vì sao AI hiểu câu gần nghĩa — nền tảng dưới RAG | 🟡 | gắn rag-la-gi |
 
 ### 2 — Phân Tích Dữ Liệu (`pt`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -83,6 +88,11 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | pt-018 | Growth Accounting (Phần 1): phương trình tăng trưởng & con số tăng ròng giấu sự thật | ✅ | `growth-accounting` |
 | pt-021 | Growth Accounting (Phần 4): thực chiến — dựng bảng growth accounting | ✅ | `growth-accounting-thuc-chien` |
 | pt-020 | Funnel nâng cao: cái phễu là lời nói dối tiện lợi — khi nào nó khiến bạn sửa nhầm chỗ | ✅ | `funnel-nang-cao` |
+| pt-022 | Bốn tầng phân tích (mô tả → chẩn đoán → dự đoán → đề xuất): bạn đang ở đâu | 🟡 | data literacy |
+| pt-023 | Tương quan ≠ nhân quả: hai số cùng tăng không nghĩa là cái này gây ra cái kia | 🟡 | data literacy |
+| pt-024 | Trung bình nói dối (mean vs median): vì sao 'doanh thu trung bình' đánh lừa bạn | 🟡 | data literacy |
+| pt-025 | Vanity metrics: những con số đẹp nhất thường dẫn tới quyết định tệ nhất | ⚪ | data literacy |
+| pt-026 | Leading vs lagging indicators: đo cái lái được, không phải cái đã rồi | ⚪ | data literacy |
 
 ### 3 — Hướng Dẫn Thực Chiến (`hd`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -118,11 +128,11 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
 |---|---|---|---|
 | uc-001 | Chủ shop đa kênh: thay cả đội data bằng AI | ✅ | `chu-shop-da-kenh` |
-| uc-002 | COO cần báo cáo 5 lần/tuần: từ Excel vài ngày → vài giây | 🟡 | PRODUCT_REVIEW, marketing_brief |
-| uc-003 | BI analyst: định nghĩa metric một lần, AI phục vụ cả công ty | ⚪ | business_research |
-| uc-004 | Chuỗi F&B 8 chi nhánh: từ 8 file Excel rời rạc đến một màn hình | 🟡 | business_research |
-| uc-005 | Nhà bán TikTok Shop mùa sale: ra quyết định giá theo từng giờ | ⚪ | marketing_brief |
-| uc-006 | Phòng Marketing: đo ROI từng kênh ads mà không chờ data team | ⚪ | business_research, funnel |
+| uc-002 | COO cần báo cáo 5 lần/tuần: từ Excel vài ngày → vài giây | ✅ | `coo-bao-cao-tuc-thi` |
+| uc-003 | BI analyst: định nghĩa metric một lần, AI phục vụ cả công ty | ✅ | `bi-analyst-dinh-nghia-metric` |
+| uc-004 | Chuỗi F&B 8 chi nhánh: từ 8 file Excel rời rạc đến một màn hình | ✅ | `chuoi-fnb-8-chi-nhanh` |
+| uc-005 | Nhà bán TikTok Shop mùa sale: ra quyết định giá theo từng giờ | ✅ | `tiktok-shop-mua-sale-gia-theo-gio` |
+| uc-006 | Phòng Marketing: đo ROI từng kênh ads mà không chờ data team | ✅ | `marketing-do-roi-ads` |
 
 ### 6 — So Sánh & Lựa Chọn (`ss`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -141,7 +151,7 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 
 ## D. Việc cần làm tiếp (🔴 chưa viết)
 
-> **35 bài đã xuất bản** — xem các dòng `✅` kèm slug ở mục C. (đã chuẩn hoá: slug sạch, mã `<dm>-<NNN>` trong frontmatter, không còn trùng số/cover.)
+> **48 bài đã xuất bản** — xem các dòng `✅` kèm slug ở mục C. (đã chuẩn hoá: slug sạch, mã `<dm>-<NNN>` trong frontmatter, không còn trùng số/cover.)
 
 Bốn bài 🔴 — đã viết xong đợt này (4 agent song song):
 
@@ -218,6 +228,7 @@ Bốn bài 🔴 — đã viết xong đợt này (4 agent song song):
 - **Bảng so sánh 2 cột** đối lập trước/sau, tồi/tốt.
 - **Code block** SQL/pseudocode khi giải thích kỹ thuật (đặt định nghĩa nghiệp vụ ra giữa).
 - **Inline SVG viz** bọc trong `<div class="viz">…<div class="viz-caption">`; series dùng `<div class="series-nav">`.
+  - ⚠️ **TUYỆT ĐỐI không để dòng trống bên trong `<svg>…</svg>`** (kể cả giữa các nhóm `<g>`/`<rect>`). Markdown coi dòng trống là kết thúc khối HTML → cắt SVG làm nhiều mảnh, phần sau bị đẩy thành `<p>` khiến `<rect>`/`<text>` văng ra ngoài, biểu đồ vỡ. Dùng comment `<!-- -->` để ngăn nhóm thay cho dòng trống.
 - **Internal link theo ngữ cảnh** ngay trong câu (không gom cuối bài): 1–2 docs + 1–2 blog cùng chủ đề.
 
 ### G8. CTA — luôn là dòng *in nghiêng* cuối bài, sau `---`
@@ -235,3 +246,17 @@ Bốn bài 🔴 — đã viết xong đợt này (4 agent song song):
 - [ ] H2 có thái độ, không khô?  - [ ] Có "Tóm lại" dạng bảng đối chiếu?
 - [ ] Soft sell định vị bằng phủ định, không brochure?  - [ ] 2–4 internal link theo ngữ cảnh?
 - [ ] CTA in nghiêng phân tầng phễu?  - [ ] Bút danh khớp persona chủ đề?
+- [ ] Thuật ngữ tiếng Anh/viết tắt được chú giải lần đầu?  - [ ] Đã thêm thuật ngữ vào [Từ điển thuật ngữ](src/pages/blog/tu-dien-thuat-ngu.astro)?
+
+### G11. Xử lý thuật ngữ tiếng Anh & viết tắt (BẮT BUỘC)
+
+> Mục tiêu: bài thân thiện với người làm kinh doanh Việt, nhưng **không mất** từ khóa SEO/chuyên ngành.
+
+- **Giữ thuật ngữ gốc, KHÔNG dịch bỏ.** Thuật ngữ tiếng Anh/viết tắt (MAU, RAG, ETL, churn, semantic layer…) là từ khóa SEO và để người đọc tra cứu/khớp biểu đồ — giữ nguyên, đừng thay hẳn bằng tiếng Việt.
+- **Chú giải NGAY lần đầu xuất hiện**, theo mẫu: `Thuật ngữ (Dạng đầy đủ — nghĩa tiếng Việt)`.
+  - Viết tắt: `MAU (Monthly Active User — số khách hàng hoạt động hàng tháng)`.
+  - Từ tiếng Anh không viết tắt: `acquisition (thu hút khách mới)`, `top-line (con số tổng ngoài cùng của báo cáo)`.
+  - Từ thuần khái niệm: thêm bản dịch tạm — `growth accounting (tạm dịch: *kế toán tăng trưởng*)`.
+- **Các lần sau** dùng thoải mái thuật ngữ gốc, hoặc luân phiên với từ thuần Việt (`user` → `người dùng`, `active` → `hoạt động`) cho đỡ chói.
+- **Đồng bộ với Từ điển.** Mọi thuật ngữ chú giải trong bài PHẢI có mặt ở trang [Từ điển thuật ngữ](src/pages/blog/tu-dien-thuat-ngu.astro) (`/blog/tu-dien-thuat-ngu/`), sắp A–Z. Thuật ngữ mới chưa có → **thêm một mục** vào mảng `terms` của trang đó (kèm `slug` bài liên quan nếu có); nghĩa tiếng Việt trong bài và trong từ điển phải khớp nhau.
+- Nhãn chỉ số nên để **song ngữ** khi gắn với biểu đồ: `Churned — rời bỏ`, để người đọc map được nhãn tiếng Anh trên chart.

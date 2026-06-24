@@ -53,7 +53,6 @@ Bài nhập môn cho bạn năm nhóm xương sống. Đây là bản đồ đ�
   <text x="354" y="48" fill="#64748B" font-size="12" text-anchor="middle">F=3</text>
   <text x="462" y="48" fill="#64748B" font-size="12" text-anchor="middle">F=4</text>
   <text x="570" y="48" fill="#64748B" font-size="12" text-anchor="middle">F=5</text>
-
   <!-- helper: each cell rect+label -->
   <!-- R5 -->
   <text x="78" y="92" fill="#64748B" font-size="12" text-anchor="end">R5</text>
@@ -113,28 +112,24 @@ Cách làm: chấm RFM ở hai thời điểm liên tiếp, rồi dựng **ma tr
   <text x="370" y="24" fill="#64748B" font-size="12" text-anchor="middle">Loyal</text>
   <text x="490" y="24" fill="#64748B" font-size="12" text-anchor="middle">At-Risk</text>
   <text x="610" y="24" fill="#64748B" font-size="12" text-anchor="middle">Lost</text>
-
   <!-- Row Champions -->
   <text x="8" y="68" fill="#475569" font-size="13" font-weight="600">Champions</text>
   <rect x="200" y="40" width="100" height="44" rx="5" fill="#4338ca"/><text x="250" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">78%</text>
   <rect x="320" y="40" width="100" height="44" rx="5" fill="#818cf8"/><text x="370" y="68" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">12%</text>
   <rect x="440" y="40" width="100" height="44" rx="5" fill="#c7d2fe"/><text x="490" y="68" fill="#1e1b4b" font-size="14" font-weight="700" text-anchor="middle">8%</text>
   <rect x="560" y="40" width="100" height="44" rx="5" fill="#eef2ff"/><text x="610" y="68" fill="#1e1b4b" font-size="14" font-weight="700" text-anchor="middle">2%</text>
-
   <!-- Row Loyal -->
   <text x="8" y="124" fill="#475569" font-size="13" font-weight="600">Loyal</text>
   <rect x="200" y="96" width="100" height="44" rx="5" fill="#a5b4fc"/><text x="250" y="124" fill="#1e1b4b" font-size="14" font-weight="700" text-anchor="middle">20%</text>
   <rect x="320" y="96" width="100" height="44" rx="5" fill="#4338ca"/><text x="370" y="124" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">55%</text>
   <rect x="440" y="96" width="100" height="44" rx="5" fill="#a5b4fc"/><text x="490" y="124" fill="#1e1b4b" font-size="14" font-weight="700" text-anchor="middle">18%</text>
   <rect x="560" y="96" width="100" height="44" rx="5" fill="#eef2ff"/><text x="610" y="124" fill="#1e1b4b" font-size="14" font-weight="700" text-anchor="middle">7%</text>
-
   <!-- Row At-Risk -->
   <text x="8" y="180" fill="#475569" font-size="13" font-weight="600">At-Risk</text>
   <rect x="200" y="152" width="100" height="44" rx="5" fill="#eef2ff"/><text x="250" y="180" fill="#1e1b4b" font-size="14" font-weight="700" text-anchor="middle">5%</text>
   <rect x="320" y="152" width="100" height="44" rx="5" fill="#c7d2fe"/><text x="370" y="180" fill="#1e1b4b" font-size="14" font-weight="700" text-anchor="middle">15%</text>
   <rect x="440" y="152" width="100" height="44" rx="5" fill="#818cf8"/><text x="490" y="180" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">25%</text>
   <rect x="560" y="152" width="100" height="44" rx="5" fill="#ef4444"/><text x="610" y="180" fill="#fff" font-size="14" font-weight="800" text-anchor="middle">55%</text>
-
   <!-- Row New -->
   <text x="8" y="236" fill="#475569" font-size="13" font-weight="600">New</text>
   <rect x="200" y="208" width="100" height="44" rx="5" fill="#c7d2fe"/><text x="250" y="236" fill="#1e1b4b" font-size="14" font-weight="700" text-anchor="middle">8%</text>

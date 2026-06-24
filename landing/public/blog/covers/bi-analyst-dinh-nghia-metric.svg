@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bguc003" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accuc003" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+    <marker id="arrowuc003" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#818CF8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bguc003)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+
+  <text x="80" y="120" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">CÂU CHUYỆN &amp; USE CASE</text>
+  <text x="80" y="208" fill="#ffffff" font-size="46" font-weight="800">BI analyst thời AI</text>
+  <text x="80" y="262" fill="#CBD5E1" font-size="25" font-weight="600">Việc thật không phải viết SQL — mà là định nghĩa sự thật</text>
+  <text x="80" y="540" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+
+  <!-- motif: khối định nghĩa metric ở giữa, nhiều người dùng truy vấn xung quanh đều rút về cùng một số -->
+  <g transform="translate(740,360)">
+    <!-- central definition / semantic layer block -->
+    <g transform="translate(120,-60)">
+      <rect x="0" y="0" width="200" height="120" rx="16" fill="url(#accuc003)"/>
+      <text x="100" y="34" fill="#ffffff" font-size="15" font-weight="800" text-anchor="middle">ĐỊNH NGHĨA</text>
+      <text x="100" y="58" fill="#E0E7FF" font-size="13" font-weight="600" text-anchor="middle">doanh thu thực =</text>
+      <text x="100" y="78" fill="#E0E7FF" font-size="13" font-weight="600" text-anchor="middle">đơn thành công</text>
+      <text x="100" y="98" fill="#E0E7FF" font-size="13" font-weight="600" text-anchor="middle">− phí sàn</text>
+    </g>
+
+    <!-- three users querying -->
+    <g>
+      <!-- user top -->
+      <g transform="translate(40,-150)">
+        <circle cx="0" cy="0" r="22" fill="#1E293B" stroke="#818CF8" stroke-width="2.5"/>
+        <circle cx="0" cy="-7" r="8" fill="#A5B4FC"/>
+        <path d="M-16 11 a16 14 0 0 1 32 0 z" fill="#A5B4FC"/>
+        <text x="0" y="-34" fill="#94A3B8" font-size="13" font-weight="700" text-anchor="middle">CEO</text>
+      </g>
+      <!-- user left -->
+      <g transform="translate(-10,0)">
+        <circle cx="0" cy="0" r="22" fill="#1E293B" stroke="#818CF8" stroke-width="2.5"/>
+        <circle cx="0" cy="-7" r="8" fill="#A5B4FC"/>
+        <path d="M-16 11 a16 14 0 0 1 32 0 z" fill="#A5B4FC"/>
+        <text x="0" y="36" fill="#94A3B8" font-size="13" font-weight="700" text-anchor="middle">Marketing</text>
+      </g>
+      <!-- user bottom -->
+      <g transform="translate(40,150)">
+        <circle cx="0" cy="0" r="22" fill="#1E293B" stroke="#818CF8" stroke-width="2.5"/>
+        <circle cx="0" cy="-7" r="8" fill="#A5B4FC"/>
+        <path d="M-16 11 a16 14 0 0 1 32 0 z" fill="#A5B4FC"/>
+        <text x="0" y="40" fill="#94A3B8" font-size="13" font-weight="700" text-anchor="middle">Vận hành</text>
+      </g>
+    </g>
+
+    <!-- arrows from users into central definition -->
+    <g stroke="#818CF8" stroke-width="2.2" fill="none" opacity="0.75">
+      <path d="M64 -140 C 110 -120, 120 -100, 124 -70" marker-end="url(#arrowuc003)"/>
+      <path d="M16 -4 C 70 -8, 100 -12, 116 -16" marker-end="url(#arrowuc003)"/>
+      <path d="M64 140 C 110 120, 120 100, 124 70" marker-end="url(#arrowuc003)"/>
+    </g>
+
+    <!-- single consistent answer out -->
+    <g transform="translate(340,-12)">
+      <rect x="0" y="0" width="96" height="36" rx="10" fill="#1E293B" stroke="#34D399" stroke-width="2"/>
+      <text x="48" y="24" fill="#6EE7B7" font-size="15" font-weight="800" text-anchor="middle">1 con số</text>
+      <path d="M-22 18 L -2 18" stroke="#34D399" stroke-width="2.4" fill="none" marker-end="url(#arrowuc003)"/>
+    </g>
+  </g>
+</svg>

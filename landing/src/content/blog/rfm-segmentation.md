@@ -57,35 +57,29 @@ Khi đã có điểm R, F, M, người ta gộp khách thành các nhóm kinh đ
   <!-- Axis labels -->
   <text x="20" y="30" fill="#64748B" font-size="13" font-weight="700">Frequency + Monetary (giá trị) →</text>
   <text x="20" y="305" fill="#64748B" font-size="13" font-weight="700" transform="rotate(-90 20 305)">Recency (mua gần đây) →</text>
-
   <!-- Grid cells -->
   <!-- top row: high recency -->
   <rect x="60"  y="44" width="180" height="110" rx="8" fill="#15803d"/>
   <text x="150" y="92" fill="#fff" font-size="17" font-weight="800" text-anchor="middle">Champions</text>
   <text x="150" y="118" fill="#bbf7d0" font-size="12" text-anchor="middle">Mua gần đây, đều,</text>
   <text x="150" y="136" fill="#bbf7d0" font-size="12" text-anchor="middle">giá trị cao</text>
-
   <rect x="248" y="44" width="180" height="110" rx="8" fill="#22c55e"/>
   <text x="338" y="92" fill="#06351f" font-size="17" font-weight="800" text-anchor="middle">Loyal</text>
   <text x="338" y="118" fill="#06351f" font-size="12" text-anchor="middle">Quay lại đều,</text>
   <text x="338" y="136" fill="#06351f" font-size="12" text-anchor="middle">giá trị khá</text>
-
   <rect x="436" y="44" width="184" height="110" rx="8" fill="#4ade80"/>
   <text x="528" y="92" fill="#06351f" font-size="17" font-weight="800" text-anchor="middle">New / Potential</text>
   <text x="528" y="118" fill="#06351f" font-size="12" text-anchor="middle">Vừa mua lần đầu,</text>
   <text x="528" y="136" fill="#06351f" font-size="12" text-anchor="middle">chưa rõ tần suất</text>
-
   <!-- bottom row: low recency -->
   <rect x="60"  y="162" width="180" height="110" rx="8" fill="#f59e0b"/>
   <text x="150" y="210" fill="#3b2606" font-size="17" font-weight="800" text-anchor="middle">At-Risk</text>
   <text x="150" y="236" fill="#3b2606" font-size="12" text-anchor="middle">Từng giá trị cao,</text>
   <text x="150" y="254" fill="#3b2606" font-size="12" text-anchor="middle">lâu rồi chưa quay lại</text>
-
   <rect x="248" y="162" width="180" height="110" rx="8" fill="#fbbf24"/>
   <text x="338" y="210" fill="#3b2606" font-size="17" font-weight="800" text-anchor="middle">Hibernating</text>
   <text x="338" y="236" fill="#3b2606" font-size="12" text-anchor="middle">Im ắng đã lâu,</text>
   <text x="338" y="254" fill="#3b2606" font-size="12" text-anchor="middle">giá trị thấp–vừa</text>
-
   <rect x="436" y="162" width="184" height="110" rx="8" fill="#9ca3af"/>
   <text x="528" y="210" fill="#1f2937" font-size="17" font-weight="800" text-anchor="middle">Lost</text>
   <text x="528" y="236" fill="#1f2937" font-size="12" text-anchor="middle">Mất hẳn,</text>

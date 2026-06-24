@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgkt009" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <marker id="akt009" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#818CF8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgkt009)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <text x="80" y="232" fill="#ffffff" font-size="50" font-weight="800">Một nguồn sự thật?</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="28" font-weight="600">Năm phòng &amp; năm định nghĩa → một</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: five departments, each its own "doanh thu" number, converging to one definition -->
+  <g transform="translate(715,150)">
+    <!-- five source chips, each a different revenue number -->
+    <rect x="0" y="0" width="172" height="40" rx="9" fill="#1E293B" stroke="#334155"/>
+    <text x="14" y="26" fill="#94A3B8" font-size="15">Sales</text>
+    <text x="158" y="26" fill="#F87171" font-size="16" font-weight="700" text-anchor="end">4,2 tỷ</text>
+    <rect x="0" y="56" width="172" height="40" rx="9" fill="#1E293B" stroke="#334155"/>
+    <text x="14" y="82" fill="#94A3B8" font-size="15">Finance</text>
+    <text x="158" y="82" fill="#FBBF24" font-size="16" font-weight="700" text-anchor="end">3,8 tỷ</text>
+    <rect x="0" y="112" width="172" height="40" rx="9" fill="#1E293B" stroke="#334155"/>
+    <text x="14" y="138" fill="#94A3B8" font-size="15">Marketing</text>
+    <text x="158" y="138" fill="#38BDF8" font-size="16" font-weight="700" text-anchor="end">4,5 tỷ</text>
+    <rect x="0" y="168" width="172" height="40" rx="9" fill="#1E293B" stroke="#334155"/>
+    <text x="14" y="194" fill="#94A3B8" font-size="15">Kho</text>
+    <text x="158" y="194" fill="#C084FC" font-size="16" font-weight="700" text-anchor="end">4,0 tỷ</text>
+    <rect x="0" y="224" width="172" height="40" rx="9" fill="#1E293B" stroke="#334155"/>
+    <text x="14" y="250" fill="#94A3B8" font-size="15">CRM</text>
+    <text x="158" y="250" fill="#FB923C" font-size="16" font-weight="700" text-anchor="end">4,3 tỷ</text>
+    <!-- converging arrows to the one definition -->
+    <path d="M178 20 C250 20 250 120 320 132" stroke="#818CF8" stroke-width="3" fill="none" marker-end="url(#akt009)"/>
+    <path d="M178 76 C250 76 250 124 320 132" stroke="#818CF8" stroke-width="3" fill="none" marker-end="url(#akt009)"/>
+    <path d="M178 132 L320 132" stroke="#818CF8" stroke-width="3" fill="none" marker-end="url(#akt009)"/>
+    <path d="M178 188 C250 188 250 140 320 132" stroke="#818CF8" stroke-width="3" fill="none" marker-end="url(#akt009)"/>
+    <path d="M178 244 C250 244 250 144 320 132" stroke="#818CF8" stroke-width="3" fill="none" marker-end="url(#akt009)"/>
+    <!-- the one definition -->
+    <rect x="338" y="92" width="148" height="84" rx="14" fill="#0B1220" stroke="#4ADE80" stroke-width="2"/>
+    <text x="412" y="126" fill="#4ADE80" font-size="17" font-weight="700" text-anchor="middle">1 định nghĩa</text>
+    <text x="412" y="152" fill="#94A3B8" font-size="14" text-anchor="middle">= 1 sự thật</text>
+  </g>
+</svg>

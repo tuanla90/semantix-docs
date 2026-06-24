@@ -23,9 +23,9 @@ coverAlt: "Ba đường cong giữ chân: churn về 0, phẳng ở mức PMF, v
   </ol>
 </div>
 
-Ở [Phần 1](/blog/cohort-analysis/), bạn đã học cách đọc một bảng heatmap cohort. Giờ ta rút bảng đó thành một thứ mạnh hơn nhiều: **một đường cong duy nhất** — và đây là một mental model đáng nhớ cả đời.
+Ở [Phần 1](/blog/cohort-analysis/), bạn đã học cách đọc một bảng heatmap cohort (nhóm khách gộp theo thời điểm bắt đầu). Giờ ta rút bảng đó thành một thứ mạnh hơn nhiều: **một đường cong duy nhất** — và đây là một mental model (mô hình tư duy) đáng nhớ cả đời.
 
-**Hình dạng của đường cong giữ chân quan trọng hơn mọi con số tăng trưởng bạn từng khoe.** Nhà đầu tư giỏi nhìn vào nó trước cả MRR. Lý do: nó là bằng chứng khó ngụy tạo nhất về việc sản phẩm của bạn có thật sự cần thiết hay không.
+**Hình dạng của đường cong giữ chân quan trọng hơn mọi con số tăng trưởng bạn từng khoe.** Nhà đầu tư giỏi nhìn vào nó trước cả MRR (Monthly Recurring Revenue — doanh thu định kỳ hàng tháng). Lý do: nó là bằng chứng khó ngụy tạo nhất về việc sản phẩm của bạn có thật sự cần thiết hay không.
 
 ## Ba hình dạng — ba số phận
 
@@ -40,17 +40,14 @@ Lấy mỗi cohort, vẽ tỷ lệ giữ chân theo tuổi đời, rồi nhìn �
   <text x="40" y="265" fill="#64748B" font-size="13">0</text>
   <text x="-150" y="20" fill="#64748B" font-size="13" transform="rotate(-90 20 150)">% giữ chân</text>
   <text x="540" y="288" fill="#64748B" font-size="13">tuổi đời (tháng)</text>
-
   <!-- curve: churn to 0 -->
   <path d="M60 50 C 160 150, 280 235, 630 255" fill="none" stroke="#EF4444" stroke-width="4"/>
   <circle cx="630" cy="255" r="5" fill="#EF4444"/>
   <text x="470" y="240" fill="#EF4444" font-size="14" font-weight="700">① về 0% — không PMF</text>
-
   <!-- curve: flatten at PMF -->
   <path d="M60 50 C 150 120, 230 150, 630 152" fill="none" stroke="#22C55E" stroke-width="4"/>
   <circle cx="630" cy="152" r="5" fill="#22C55E"/>
   <text x="430" y="138" fill="#16A34A" font-size="14" font-weight="700">② phẳng — có PMF</text>
-
   <!-- curve: smile / negative churn -->
   <path d="M60 50 C 150 130, 240 165, 400 150 C 520 138, 580 110, 630 80" fill="none" stroke="#6366F1" stroke-width="4"/>
   <circle cx="630" cy="80" r="5" fill="#6366F1"/>
@@ -65,14 +62,14 @@ Nếu mọi cohort cuối cùng đều về gần 0%, sản phẩm của bạn k
 
 ### ② Phẳng ra — đã có product-market fit
 
-Khi đường cong **chững lại** ở một mức dương thay vì rơi về 0, bạn có một nhóm người thật sự cần sản phẩm. *Mức* nó chững lại cho biết độ mạnh của PMF:
+Khi đường cong **chững lại** ở một mức dương thay vì rơi về 0, bạn có một nhóm người thật sự cần sản phẩm. *Mức* nó chững lại cho biết độ mạnh của PMF (Product–Market Fit — mức độ sản phẩm khớp nhu cầu thị trường):
 
 - Phẳng ở **15–20%**: có PMF với một segment nhỏ. Hãy tìm xem segment đó là ai và mở rộng đúng nhóm đó.
 - Phẳng ở **40%+**: PMF mạnh. *Đây* mới là lúc đổ tiền vào acquisition, vì cái xô đã kín đáy.
 
 ### ③ Đi lên — negative churn (thánh địa)
 
-Hiếm và đáng mơ ước nhất: đường cong chạm đáy rồi **đi lên**. Nhóm khách còn lại chi tiêu nhiều hơn theo thời gian — qua nâng cấp gói, mua thêm, dùng nhiều hơn — đủ để *bù và vượt* phần khách rời đi. Đây là *negative churn*, hay doanh thu giữ lại ròng (NRR) **trên 100%**: mỗi nhóm khách tự lớn lên mà không cần thêm một khách mới nào. Đó là động cơ tăng trưởng kép mà các SaaS hàng đầu thế giới đều có.
+Hiếm và đáng mơ ước nhất: đường cong chạm đáy rồi **đi lên**. Nhóm khách còn lại chi tiêu nhiều hơn theo thời gian — qua nâng cấp gói, mua thêm, dùng nhiều hơn — đủ để *bù và vượt* phần khách rời đi. Đây là *negative churn* (churn âm — phần khách cũ chi thêm vượt cả phần rời bỏ; churn là tỷ lệ khách rời bỏ), hay doanh thu giữ lại ròng (NRR — Net Revenue Retention) **trên 100%**: mỗi nhóm khách tự lớn lên mà không cần thêm một khách mới nào. Đó là động cơ tăng trưởng kép mà các SaaS hàng đầu thế giới đều có.
 
 ## "Đường cong nằm ngang ở đâu" — không phải "bắt đầu ở đâu"
 

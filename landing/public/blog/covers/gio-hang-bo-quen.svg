@@ -1,0 +1,54 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="cart" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="162" fill="#F1F5F9" font-size="50" font-weight="800">Giỏ hàng bỏ quên</text>
+  <text x="80" y="216" fill="#94A3B8" font-size="26" font-weight="500">Tiền đang nằm ngay trước cửa checkout —</text>
+  <text x="80" y="250" fill="#94A3B8" font-size="26" font-weight="500">nhóm gần mua nhất lại dễ bỏ nhất</text>
+  <!-- full cart left behind -->
+  <g transform="translate(120,330)">
+    <rect x="-20" y="-20" width="340" height="220" rx="16" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="20" y="14" fill="#64748B" font-size="15" font-weight="700" letter-spacing="1">GIỎ ĐẦY HÀNG</text>
+    <!-- cart body -->
+    <path d="M40 60 L52 60 L70 130 L190 130 L208 78 L78 78" fill="none" stroke="url(#cart)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="86" cy="156" r="13" fill="none" stroke="url(#cart)" stroke-width="5"/>
+    <circle cx="176" cy="156" r="13" fill="none" stroke="url(#cart)" stroke-width="5"/>
+    <!-- items piled in -->
+    <rect x="84" y="42" width="34" height="34" rx="4" fill="#22D3EE"/>
+    <rect x="124" y="34" width="34" height="42" rx="4" fill="#34D399"/>
+    <rect x="164" y="48" width="30" height="28" rx="4" fill="#38BDF8"/>
+    <text x="144" y="190" fill="#94A3B8" font-size="14" text-anchor="middle">đã chọn xong · sẵn sàng mua</text>
+  </g>
+  <!-- abandoned checkout button -->
+  <g transform="translate(540,400)">
+    <rect x="0" y="0" width="240" height="66" rx="12" fill="#1E293B" stroke="#7F1D1D" stroke-width="2"/>
+    <text x="120" y="42" fill="#F87171" font-size="22" font-weight="800" text-anchor="middle">THANH TOÁN</text>
+    <line x1="14" y1="14" x2="226" y2="52" stroke="#7F1D1D" stroke-width="3" opacity="0.6"/>
+    <text x="120" y="98" fill="#F87171" font-size="14" font-weight="600" text-anchor="middle">bị bỏ lại</text>
+  </g>
+  <!-- customer turning away -->
+  <g transform="translate(900,360)" stroke="#FBBF24" stroke-width="5" fill="none" stroke-linecap="round">
+    <circle cx="40" cy="20" r="20" fill="#FBBF24" stroke="none"/>
+    <path d="M40 40 L40 110"/>
+    <path d="M40 58 L8 84"/>
+    <path d="M40 58 L70 40"/>
+    <path d="M40 110 L16 160"/>
+    <path d="M40 110 L66 158"/>
+  </g>
+  <g transform="translate(1000,420)" stroke="#FBBF24" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M0 20 L60 20"/>
+    <path d="M42 2 L62 20 L42 38"/>
+  </g>
+  <text x="900" y="546" fill="#94A3B8" font-size="14">khách quay đi</text>
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

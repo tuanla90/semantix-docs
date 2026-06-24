@@ -66,8 +66,8 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | kt-012 | Đưa data cho AI có an toàn không? Ai thấy gì, lưu ở đâu, ai kiểm soát | ✅ | `data-cho-ai-an-toan` |
 | kt-013 | OLTP vs OLAP: vì sao đừng chạy báo cáo thẳng trên database bán hàng | ✅ | `oltp-vs-olap` |
 | kt-014 | Data modeling (fact & dimension): cách sắp bảng quyết định câu hỏi hỏi được | ✅ | `data-modeling-fact-dimension` |
-| kt-015 | Data governance: ai sở hữu con số & ai chịu trách nhiệm khi nó sai | ⚪ | khái niệm nền tảng |
-| kt-016 | Bảo vệ dữ liệu cá nhân (Nghị định 13/2023): SME thu data khách cần biết gì | 🟡 | bối cảnh pháp lý VN |
+| kt-015 | Data governance: ai sở hữu con số & ai chịu trách nhiệm khi nó sai | ✅ | `data-governance` |
+| kt-016 | Bảo vệ dữ liệu cá nhân (Nghị định 13/2023): SME thu data khách cần biết gì | ✅ | `bao-ve-du-lieu-ca-nhan-nghi-dinh-13` |
 | kt-017 | Embedding & vector search: vì sao AI hiểu câu gần nghĩa — nền tảng dưới RAG | ✅ | `embedding-vector-search` |
 | kt-027 | Data Lake vs Data Warehouse: SME cần cái nào và khi nào | ✅ | `data-lake-vs-warehouse` |
 | kt-028 | Thống kê mô tả (Series · P1): độ lệch chuẩn & phương sai | ✅ | `do-lech-chuan` |
@@ -95,13 +95,13 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | pt-005 | RFM Segmentation: phân khúc khách để bán đúng người | ✅ | `rfm-segmentation` |
 | pt-006 | Funnel Analysis: tìm chỗ rò rỉ trong phễu bán hàng | ✅ | `funnel-analysis` |
 | pt-007 | Pareto 80/20: 20% sản phẩm nào nuôi 80% lợi nhuận | ✅ | `pareto-80-20` |
-| pt-008 | Đọc tăng trưởng đúng cách: MoM, YoY và bẫy số liệu | 🟡 | advanced-analysis |
+| pt-008 | Đọc tăng trưởng đúng cách: MoM, YoY và bẫy số liệu | ✅ | `doc-tang-truong-mom-yoy` |
 | pt-009 | Anomaly detection: tự phát hiện bất thường doanh thu | ✅ | `anomaly-detection` |
 | pt-010 | Vintage analysis cho tài chính & cho vay | ✅ | `vintage-analysis` |
-| pt-011 | Market Basket: sản phẩm nào "đi cùng nhau" — và cách bán kèm đúng | 🟡 | ai-chat/advanced-analysis |
+| pt-011 | Market Basket: sản phẩm nào "đi cùng nhau" — và cách bán kèm đúng | ✅ | `market-basket-ban-kem` |
 | pt-012 | Churn prediction: nhận ra khách sắp rời đi trước khi họ rời | ✅ | `churn-prediction` |
-| pt-013 | Giỏ hàng bỏ quên: tiền đang nằm ngay trước cửa checkout | ⚪ | funnel, ai-chat |
-| pt-014 | Mùa vụ & Tết: đọc seasonality để không vừa cháy hàng vừa tồn kho | ⚪ | advanced-analysis |
+| pt-013 | Giỏ hàng bỏ quên: tiền đang nằm ngay trước cửa checkout | ✅ | `gio-hang-bo-quen` |
+| pt-014 | Mùa vụ & Tết: đọc seasonality để không vừa cháy hàng vừa tồn kho | ✅ | `mua-vu-tet-seasonality` |
 | pt-015 | ABC inventory: 20% mã hàng giữ 80% vốn tồn — đừng quản như nhau | ✅ | `abc-inventory` |
 | pt-016 | RFM nâng cao: scoring lệch, 11 nhóm, ma trận dịch chuyển | ✅ | `rfm-nang-cao` |
 | pt-019 | Growth Accounting (Phần 3): từ user sang tiền — Net Dollar Retention | ✅ | `growth-accounting-revenue` |
@@ -109,10 +109,10 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | pt-018 | Growth Accounting (Phần 1): phương trình tăng trưởng & con số tăng ròng giấu sự thật | ✅ | `growth-accounting` |
 | pt-021 | Growth Accounting (Phần 4): thực chiến — dựng bảng growth accounting | ✅ | `growth-accounting-thuc-chien` |
 | pt-020 | Funnel nâng cao: cái phễu là lời nói dối tiện lợi — khi nào nó khiến bạn sửa nhầm chỗ | ✅ | `funnel-nang-cao` |
-| pt-022 | Bốn tầng phân tích (mô tả → chẩn đoán → dự đoán → đề xuất): bạn đang ở đâu | 🟡 | data literacy |
+| pt-022 | Bốn tầng phân tích (mô tả → chẩn đoán → dự đoán → đề xuất): bạn đang ở đâu | ✅ | `tien-hoa-bi` |
 | pt-023 | Tương quan không phải nhân quả (Series Tư duy dữ liệu · P4) | ✅ | `tuong-quan-nhan-qua` |
 | pt-024 | Trung bình nói dối (Series Tư duy dữ liệu · P5) | ✅ | `trung-binh-noi-doi` |
-| pt-025 | Vanity metrics: những con số đẹp nhất thường dẫn tới quyết định tệ nhất | ⚪ | data literacy |
+| pt-025 | Vanity metrics: những con số đẹp nhất thường dẫn tới quyết định tệ nhất | ✅ | `vanity-metrics` |
 | pt-026 | Leading vs lagging (Series Tư duy dữ liệu · P6) | ✅ | `leading-lagging-indicator` |
 | pt-027 | Dữ liệu bẩn giết mô hình: đừng vội đổi model, hãy dọn data | ✅ | `du-lieu-ban-giet-model` |
 | pt-028 | 5 sai lầm kinh điển khi phân tích dữ liệu (và cách tránh) | ✅ | `sai-lam-khi-phan-tich-du-lieu` |
@@ -129,6 +129,16 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | pt-039 | Thử nghiệm (P3): đọc kết quả test không tự lừa mình | ✅ | `doc-ket-qua-ab-test` |
 | pt-047 | Tương quan & hồi quy: đo độ mạnh quan hệ + định lượng/dự đoán bằng hồi quy | ✅ | `correlation-regression` |
 | pt-049 | Sentiment Analysis: biến kho review tiếng Việt thành tín hiệu cảnh báo sớm | ✅ | `sentiment-analysis` |
+| pt-040 | Roll rate: ma trận chuyển nhóm — báo sớm hơn churn tổng | ✅ | `roll-rate` |
+| pt-042 | Survival analysis: đường cong sống sót (một dạng cohort) | ✅ | `survival-analysis` |
+| pt-043 | Time Series & Forecast: trend/mùa vụ/nhiễu + dự báo | ✅ | `time-series-forecast` |
+| pt-044 | AARRR (Series Khung đo lường · P1): phễu hải tặc | ✅ | `aarrr-pirate-metrics` |
+| pt-045 | HEART (P2): khung trải nghiệm của Google | ✅ | `heart-framework` |
+| pt-046 | Khung SP vs marketing (P3): nối AARRR/HEART với AIDA/5A | ✅ | `khung-san-pham-vs-marketing` |
+| pt-048 | PCA: giảm chiều, lộ phân khúc ẩn | ✅ | `pca-principal-component` |
+| pt-050 | Scenario analysis: vài tương lai từ vài giả định (what-if) | ✅ | `scenario-analysis` |
+| pt-051 | WHY analysis: phân rã vì sao con số đổi (price-volume-mix) | ✅ | `why-analysis` |
+| pt-052 | CLV framework: trần cho CAC, tính theo phân khúc | ✅ | `clv-framework` |
 
 ### 3 — Hướng Dẫn Thực Chiến (`hd`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -137,10 +147,10 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | hd-002 | Hợp nhất Shopee + TikTok Shop + KiotViet về một chỗ | ✅ | `hop-nhat-da-kenh` |
 | hd-003 | Từ Google Sheets đến dashboard trong 15 phút | ✅ | `google-sheets-dashboard` |
 | hd-004 | Tự động gửi báo cáo hằng ngày qua Telegram/Zalo | ✅ | `bao-cao-telegram-zalo` |
-| hd-005 | Viết câu hỏi cho AI để nhận đúng kết quả | 🟡 | deep-dives/ai-best-practices |
-| hd-006 | Xây Semantic Layer đầu tiên: định nghĩa "doanh thu" chuẩn | 🟡 | studio/contexts, user-guide/06 |
-| hd-007 | Xuất báo cáo PowerPoint 1-click cho cuộc họp | ⚪ | PROJECT_OVERVIEW (SlideJ) |
-| hd-008 | Thiết lập cảnh báo KPI để không bỏ lỡ bất thường | ⚪ | notifications |
+| hd-017 | Viết câu hỏi cho AI để nhận đúng kết quả | 🟡 | deep-dives/ai-best-practices |
+| hd-018 | Xây Semantic Layer đầu tiên: định nghĩa "doanh thu" chuẩn | 🟡 | studio/contexts, user-guide/06 |
+| hd-019 | Xuất báo cáo PowerPoint 1-click cho cuộc họp | ⚪ | PROJECT_OVERVIEW (SlideJ) |
+| hd-020 | Thiết lập cảnh báo KPI để không bỏ lỡ bất thường | ⚪ | notifications |
 | hd-009 | Chia sẻ báo cáo cho nhân viên mà không lộ data nhạy cảm | ✅ | `chia-se-bao-cao-khong-lo-data` |
 | hd-010 | Dashboard doanh thu cho chuỗi F&B nhiều chi nhánh | 🟡 | connections, studio |
 | hd-011 | Theo dõi tồn kho realtime & tự cảnh báo sắp hết hàng | ⚪ | notifications, connections |

@@ -1,0 +1,52 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <!-- title -->
+  <text x="80" y="168" fill="#F1F5F9" font-size="50" font-weight="800">Market Basket</text>
+  <text x="80" y="222" fill="#94A3B8" font-size="26" font-weight="500">Sản phẩm nào &#8220;đi cùng nhau&#8221; —</text>
+  <text x="80" y="256" fill="#94A3B8" font-size="26" font-weight="500">và cách bán kèm đúng</text>
+  <!-- illustration: cart + linked products -->
+  <g transform="translate(80,320)">
+    <!-- edges between products (đi kèm) -->
+    <line x1="120" y1="120" x2="320" y2="60" stroke="url(#edge)" stroke-width="5"/>
+    <line x1="120" y1="120" x2="300" y2="190" stroke="url(#edge)" stroke-width="4"/>
+    <line x1="320" y1="60" x2="520" y2="100" stroke="#475569" stroke-width="2" stroke-dasharray="6 6"/>
+    <line x1="300" y1="190" x2="500" y2="210" stroke="url(#edge)" stroke-width="5"/>
+    <line x1="520" y1="100" x2="500" y2="210" stroke="#475569" stroke-width="2" stroke-dasharray="6 6"/>
+    <line x1="300" y1="190" x2="700" y2="150" stroke="url(#edge)" stroke-width="4"/>
+    <!-- cart node (center) -->
+    <g transform="translate(120,120)">
+      <circle r="52" fill="#0F172A" stroke="#22D3EE" stroke-width="3"/>
+      <path d="M-22 -14 L24 -14 L18 12 L-14 12 Z" fill="none" stroke="#34D399" stroke-width="3" stroke-linejoin="round"/>
+      <line x1="-22" y1="-14" x2="-30" y2="-24" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="-10" cy="24" r="5" fill="#34D399"/>
+      <circle cx="12" cy="24" r="5" fill="#34D399"/>
+    </g>
+    <!-- product nodes -->
+    <circle cx="320" cy="60" r="40" fill="#15803d"/>
+    <circle cx="300" cy="190" r="42" fill="#22c55e"/>
+    <circle cx="500" cy="210" r="36" fill="#4ade80"/>
+    <circle cx="700" cy="150" r="34" fill="#4ade80"/>
+    <circle cx="520" cy="100" r="30" fill="#475569"/>
+    <!-- little product glyphs -->
+    <rect x="308" y="48" width="24" height="24" rx="4" fill="#bbf7d0"/>
+    <rect x="288" y="178" width="24" height="24" rx="4" fill="#06351f"/>
+    <rect x="490" y="200" width="20" height="20" rx="4" fill="#06351f"/>
+    <rect x="691" y="141" width="18" height="18" rx="4" fill="#06351f"/>
+    <rect x="512" y="92" width="16" height="16" rx="4" fill="#1f2937"/>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

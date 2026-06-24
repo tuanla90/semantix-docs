@@ -1,0 +1,53 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="lock" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <!-- title -->
+  <text x="80" y="162" fill="#F1F5F9" font-size="46" font-weight="800">Bảo vệ dữ liệu cá nhân</text>
+  <text x="80" y="216" fill="#F1F5F9" font-size="46" font-weight="800">(Nghị định 13/2023)</text>
+  <text x="80" y="262" fill="#94A3B8" font-size="25" font-weight="500">Thu số điện thoại &amp; đơn hàng của khách —</text>
+  <text x="80" y="296" fill="#94A3B8" font-size="25" font-weight="500">SME cần biết gì để không vướng luật</text>
+  <!-- customer record card, locked -->
+  <g transform="translate(700,330)">
+    <rect x="0" y="0" width="420" height="200" rx="16" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="28" y="42" fill="#64748B" font-size="15" font-weight="700" letter-spacing="1">HỒ SƠ KHÁCH HÀNG</text>
+    <!-- name row -->
+    <text x="28" y="80" fill="#94A3B8" font-size="16">Tên</text>
+    <rect x="120" y="66" width="180" height="18" rx="5" fill="#1E293B"/>
+    <!-- phone row -->
+    <text x="28" y="116" fill="#94A3B8" font-size="16">SĐT</text>
+    <text x="120" y="118" fill="#E2E8F0" font-size="17" font-weight="600" letter-spacing="2">090• ••• •••</text>
+    <!-- consent row -->
+    <text x="28" y="152" fill="#94A3B8" font-size="16">Đồng ý nhận tin</text>
+    <circle cx="270" cy="147" r="15" fill="none" stroke="#34D399" stroke-width="2.5"/>
+    <path d="M263 147 L268 152 L278 141" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="300" y="153" fill="#34D399" font-size="15" font-weight="700">consent</text>
+    <!-- lock badge -->
+    <g transform="translate(348,150)">
+      <rect x="0" y="14" width="48" height="38" rx="8" fill="url(#lock)"/>
+      <path d="M9 14 V6 a15 15 0 0 1 30 0 V14" fill="none" stroke="url(#lock)" stroke-width="6"/>
+      <circle cx="24" cy="31" r="5" fill="#0B1120"/>
+      <rect x="22" y="31" width="4" height="11" rx="2" fill="#0B1120"/>
+    </g>
+  </g>
+  <!-- shield mark on left lower -->
+  <g transform="translate(80,360)">
+    <path d="M70 0 L140 26 V96 a70 70 0 0 1 -70 66 a70 70 0 0 1 -70 -66 V26 Z" fill="#111A2E" stroke="#22D3EE" stroke-width="2.5"/>
+    <path d="M40 80 L62 104 L104 56" fill="none" stroke="url(#lock)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="70" y="200" fill="#94A3B8" font-size="17" font-weight="600" text-anchor="middle">đồng ý · mục đích</text>
+    <text x="70" y="226" fill="#94A3B8" font-size="17" font-weight="600" text-anchor="middle">quyền · bảo vệ</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

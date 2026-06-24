@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bghd010" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="barhd010" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bghd010)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">HƯỚNG DẪN THỰC CHIẾN</text>
+  <text x="80" y="226" fill="#ffffff" font-size="50" font-weight="800">Dashboard doanh thu</text>
+  <text x="80" y="288" fill="#ffffff" font-size="50" font-weight="800">chuỗi F&amp;B</text>
+  <text x="80" y="350" fill="#CBD5E1" font-size="28" font-weight="600">Tám chi nhánh → một màn hình</text>
+  <text x="80" y="522" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: a dashboard panel with KPI cards + per-branch revenue bars -->
+  <g transform="translate(720,160)">
+    <rect x="0" y="0" width="400" height="290" rx="18" fill="#0B1220" stroke="#334155" stroke-width="1.5"/>
+    <!-- KPI cards row -->
+    <rect x="24" y="24" width="110" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+    <text x="38" y="48" fill="#94A3B8" font-size="13">Doanh thu</text>
+    <text x="38" y="74" fill="#ffffff" font-size="22" font-weight="800">2,4 tỷ</text>
+    <rect x="145" y="24" width="110" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+    <text x="159" y="48" fill="#94A3B8" font-size="13">Lợi nhuận</text>
+    <text x="159" y="74" fill="#4ADE80" font-size="22" font-weight="800">0,5 tỷ</text>
+    <rect x="266" y="24" width="110" height="64" rx="10" fill="#1E293B" stroke="#334155"/>
+    <text x="280" y="48" fill="#94A3B8" font-size="13">So tuần</text>
+    <text x="280" y="74" fill="#818CF8" font-size="22" font-weight="800">+8%</text>
+    <!-- per-branch revenue bars -->
+    <g transform="translate(24,250)">
+      <rect x="0" y="-128" width="34" height="128" rx="4" fill="url(#barhd010)"/>
+      <rect x="46" y="-112" width="34" height="112" rx="4" fill="url(#barhd010)"/>
+      <rect x="92" y="-100" width="34" height="100" rx="4" fill="url(#barhd010)"/>
+      <rect x="138" y="-94" width="34" height="94" rx="4" fill="url(#barhd010)"/>
+      <rect x="184" y="-82" width="34" height="82" rx="4" fill="#475569"/>
+      <rect x="230" y="-76" width="34" height="76" rx="4" fill="#475569"/>
+      <rect x="276" y="-66" width="34" height="66" rx="4" fill="#475569"/>
+      <rect x="322" y="-56" width="34" height="56" rx="4" fill="#EF4444"/>
+    </g>
+    <line x1="24" y1="250" x2="376" y2="250" stroke="#334155" stroke-width="1.5"/>
+  </g>
+</svg>

@@ -176,11 +176,23 @@ function buildLineOption(d: AnyOption): AnyOption {
       ]),
     };
   }
+  const realNames = (d.series as any[]).map((s) => s.name);
+  // Dải tin cậy (forecast band): 2 series area xếp chồng — lower trong suốt + (upper−lower) mờ.
+  if (d.band && d.band.lower && d.band.upper) {
+    const lo = d.band.lower as number[], hi = d.band.upper as number[];
+    const bandColor = d.band.color || '#6366f1';
+    series.unshift(
+      { name: '', type: 'line', data: lo, stack: 'band', symbol: 'none', silent: true, z: 0,
+        lineStyle: { opacity: 0 }, areaStyle: { opacity: 0 } },
+      { name: 'Dải tin cậy', type: 'line', data: hi.map((h, i) => h - (lo[i] ?? 0)), stack: 'band', symbol: 'none', silent: true, z: 0,
+        lineStyle: { opacity: 0 }, areaStyle: { color: bandColor, opacity: 0.12 } },
+    );
+  }
   return {
     textStyle: { fontFamily: FONT },
     grid: { top: 24, left: 8, right: hasEnd ? 96 : 16, bottom: 44, containLabel: true },
     tooltip: { ...baseTooltip('axis'), valueFormatter: (v: any) => (v == null ? '–' : `${v}${unit}`) },
-    legend: baseLegend(),
+    legend: { ...baseLegend(), data: realNames },
     xAxis: catAxis({ data: d.xLabels, boundaryGap: false }),
     yAxis: valAxis({ axisLabel: { color: AXIS_LABEL, fontFamily: FONT, fontSize: 11, formatter: (v: number) => `${v}${unit}` } }),
     series,
@@ -230,11 +242,168 @@ function buildWaterfallOption(d: AnyOption): AnyOption {
   };
 }
 
+// ── Scatter / bubble: điểm (x,y) + kích thước + nhãn, có thể nối đường cong ──
+// data = { xName?, yName?, connect?:bool, showAxisValue?:bool,
+//          points:[{name, x, y, size?, color?, q?(tooltip phụ)}] }
+function buildScatterOption(d: AnyOption): AnyOption {
+  const pts = d.points as any[];
+  const fb = LINE_PALETTE;
+  const series: AnyOption[] = [];
+  if (d.connect) {
+    const line = [...pts].sort((a, b) => a.x - b.x).map((p) => [p.x, p.y]);
+    series.push({ type: 'line', data: line, smooth: true, symbol: 'none', silent: true, z: 1,
+      lineStyle: { color: '#cbd5e1', width: 2, type: 'dashed' } });
+  }
+  series.push({
+    type: 'scatter', z: 2,
+    data: pts.map((p, i) => ({
+      value: [p.x, p.y], name: p.name, note: p.q,
+      symbolSize: p.size || (d.hideLabels ? 14 : 28),
+      itemStyle: { color: p.color || (d.hideLabels ? '#6366f1' : fb[i % fb.length]), opacity: d.hideLabels ? 0.7 : 0.92 },
+      label: { show: !d.hideLabels && p.name != null, position: 'top', formatter: p.name, color: '#0f172a', fontFamily: FONT, fontSize: 12, fontWeight: 700 },
+    })),
+  });
+  // Đường hồi quy (linear least-squares) cho scatter dạng đám mây
+  if (d.trendline) {
+    const xs = pts.map((p) => p.x), ys = pts.map((p) => p.y), n = xs.length;
+    const mx = xs.reduce((a, b) => a + b, 0) / n, my = ys.reduce((a, b) => a + b, 0) / n;
+    let num = 0, den = 0;
+    for (let i = 0; i < n; i++) { num += (xs[i] - mx) * (ys[i] - my); den += (xs[i] - mx) ** 2; }
+    const slope = den ? num / den : 0, b0 = my - slope * mx;
+    const x0 = Math.min(...xs), x1 = Math.max(...xs);
+    series.push({ type: 'line', z: 3, symbol: 'none', silent: true,
+      data: [[x0, slope * x0 + b0], [x1, slope * x1 + b0]],
+      lineStyle: { color: '#ef4444', width: 2.5, type: 'dashed' } });
+  }
+  const hideVal = !d.showAxisValue;
+  return {
+    textStyle: { fontFamily: FONT },
+    grid: { top: 30, left: 12, right: 24, bottom: 44, containLabel: true },
+    tooltip: { ...baseTooltip('item'),
+      formatter: (p: any) => `<b>${p.name}</b>${p.data && p.data.note ? `<br/>${p.data.note}` : ''}` },
+    xAxis: valAxis({ name: d.xName, nameLocation: 'middle', nameGap: 22, min: 0,
+      axisLabel: { show: !hideVal, color: AXIS_LABEL, fontFamily: FONT, fontSize: 11 }, splitLine: { show: false },
+      nameTextStyle: { color: TEXT_COLOR, fontFamily: FONT, fontSize: 12, fontWeight: 600 } }),
+    yAxis: valAxis({ name: d.yName, nameLocation: 'middle', nameGap: 16, min: 0,
+      axisLabel: { show: !hideVal, color: AXIS_LABEL, fontFamily: FONT, fontSize: 11 }, splitLine: { show: false },
+      nameTextStyle: { color: TEXT_COLOR, fontFamily: FONT, fontSize: 12, fontWeight: 600 } }),
+    series,
+  };
+}
+
+// ── Roll rate: ma trận chuyển nhóm (Starting bucket → Next bucket), heatmap xanh lá ──
+// data = { from:[bucket], to:[bucket], matrix:[[v|null]], unit?:"%" }  (rows=from, cols=to)
+function buildRollrateOption(d: AnyOption): AnyOption {
+  const from = d.from as string[], to = d.to as string[], unit = d.unit ?? '%';
+  const yAxisData = [...from].reverse(); // nhóm đầu nằm trên cùng
+  const pts: any[] = []; let max = 0;
+  (d.matrix as (number | null)[][]).forEach((row, fi) => {
+    row.forEach((v, ti) => {
+      if (v === null || v === undefined) return;
+      if (Number(v) > max) max = Number(v);
+      pts.push([ti, yAxisData.indexOf(from[fi]), Number(v)]);
+    });
+  });
+  return {
+    textStyle: { fontFamily: FONT },
+    grid: { left: 8, right: 12, top: 12, bottom: 56, containLabel: true },
+    tooltip: { ...baseTooltip('item'),
+      formatter: (p: any) => `Từ <b>${yAxisData[p.value[1]]}</b> → <b>${to[p.value[0]]}</b><br/>${p.value[2]}${unit}` },
+    xAxis: catAxis({ data: to, splitArea: { show: true },
+      axisLabel: { color: AXIS_LABEL, fontFamily: FONT, fontSize: 11, fontWeight: 500, interval: 0, rotate: to.length > 4 ? 18 : 0 } }),
+    yAxis: catAxis({ data: yAxisData, splitArea: { show: true }, axisLine: { show: false } }),
+    visualMap: { min: 0, max: d.max ?? max, calculable: true, orient: 'horizontal', left: 'center',
+      bottom: 8, itemWidth: 14, itemHeight: 120,
+      inRange: { color: ['#f0fdf4', '#86efac', '#22c55e', '#15803d'] },
+      textStyle: { color: TEXT_COLOR, fontFamily: FONT, fontSize: 11 } },
+    series: [{ type: 'heatmap', data: pts,
+      label: { show: true, fontFamily: FONT, fontSize: 11, fontWeight: 600, formatter: (p: any) => `${p.value[2]}${unit}` },
+      itemStyle: { borderColor: '#ffffff', borderWidth: 2, borderRadius: 3 },
+      emphasis: { itemStyle: { shadowBlur: 8, shadowColor: 'rgba(0,0,0,.2)' } } }],
+  };
+}
+
+// ── Funnel (phễu): các bước thu hẹp dần ──────────────────────────────────
+// data = { steps:[{name, value, color?}], unit?:"" }
+function buildFunnelOption(d: AnyOption): AnyOption {
+  const steps = d.steps as any[]; const unit = d.unit ?? '';
+  const fb = LINE_PALETTE;
+  return {
+    textStyle: { fontFamily: FONT },
+    tooltip: { ...baseTooltip('item'), formatter: (p: any) => `${p.name}<br/><b>${p.value}${unit}</b>` },
+    legend: { show: false },
+    series: [{
+      type: 'funnel', left: '10%', right: '10%', top: 16, bottom: 16,
+      minSize: '24%', maxSize: '100%', sort: d.sort ?? 'descending', gap: 3,
+      funnelAlign: 'center',
+      label: { show: true, position: 'inside', color: '#fff', fontFamily: FONT, fontSize: 12, fontWeight: 700,
+        formatter: (p: any) => `${p.name}: ${p.value}${unit}` },
+      labelLine: { show: false },
+      itemStyle: { borderColor: '#fff', borderWidth: 2 },
+      emphasis: { label: { fontSize: 13 } },
+      data: steps.map((s, i) => ({ name: s.name, value: s.value, itemStyle: { color: s.color || fb[i % fb.length] } })),
+    }],
+  };
+}
+
+// ── Radar: nhiều trục (vd HEART 5 chiều) ──────────────────────────────────
+// data = { indicators:[{name, max}], series:[{name, values, color?}], unit?:"" }
+function buildRadarOption(d: AnyOption): AnyOption {
+  const fb = LINE_PALETTE;
+  return {
+    textStyle: { fontFamily: FONT },
+    tooltip: { ...baseTooltip('item') },
+    legend: baseLegend(),
+    radar: {
+      indicator: d.indicators, radius: '64%', center: ['50%', '52%'],
+      axisName: { color: TEXT_COLOR, fontFamily: FONT, fontSize: 12, fontWeight: 600 },
+      splitLine: { lineStyle: { color: LINE_COLOR } },
+      splitArea: { areaStyle: { color: ['#ffffff', '#f8fafc'] } },
+      axisLine: { lineStyle: { color: LINE_COLOR } },
+    },
+    series: [{
+      type: 'radar',
+      data: (d.series as any[]).map((s, i) => ({
+        name: s.name, value: s.values,
+        itemStyle: { color: s.color || fb[i % fb.length] },
+        lineStyle: { width: 2 }, areaStyle: { opacity: 0.12 },
+      })),
+    }],
+  };
+}
+
+// ── Bar (cột) đơn giản: nhóm hoặc xếp chồng ──────────────────────────────
+// data = { categories:[], series:[{name, values, color?, stack?}], unit?:"", horizontal?:bool }
+function buildBarOption(d: AnyOption): AnyOption {
+  const fb = LINE_PALETTE;
+  const series = (d.series as any[]).map((s, i) => ({
+    name: s.name, type: 'bar', data: s.values, barMaxWidth: 48,
+    ...(s.stack ? { stack: s.stack } : {}),
+    itemStyle: { color: s.color || fb[i % fb.length], borderRadius: s.stack ? 0 : [RADIUS, RADIUS, 0, 0] },
+  }));
+  const cat = catAxis({ data: d.categories });
+  const val = valAxis({ axisLabel: { color: AXIS_LABEL, fontFamily: FONT, fontSize: 11, formatter: (v: number) => `${v}${d.unit ?? ''}` } });
+  return {
+    textStyle: { fontFamily: FONT },
+    grid: { top: 24, left: 8, right: 12, bottom: 44, containLabel: true },
+    tooltip: baseTooltip('axis'),
+    legend: (d.series as any[]).length > 1 ? baseLegend() : { show: false },
+    xAxis: d.horizontal ? val : cat,
+    yAxis: d.horizontal ? cat : val,
+    series,
+  };
+}
+
 const BUILDERS: Record<string, (d: AnyOption) => AnyOption> = {
   growth: buildGrowthOption,
   cohort: buildCohortOption,
   line: buildLineOption,
   waterfall: buildWaterfallOption,
+  scatter: buildScatterOption,
+  rollrate: buildRollrateOption,
+  funnel: buildFunnelOption,
+  radar: buildRadarOption,
+  bar: buildBarOption,
 };
 
 // ── Lazy-load ECharts từ CDN (echarts@5.5.0) ──────────────────────────────

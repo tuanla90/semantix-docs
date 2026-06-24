@@ -74,10 +74,12 @@ Bóc từng khoản:
 - **Thời gian dựng ban đầu.** Cài đặt thì nhanh. Nhưng dựng semantic layer chuẩn, kết nối Shopee + TikTok Shop + KiotViet, làm sạch dữ liệu, ra bộ dashboard đầu tiên đáng tin — việc đó ngốn **vài tuần đến vài tháng** của người biết việc. *(Ước tính minh hoạ.)*
 - **Chi phí người duy trì.** Đây là khoản lớn nhất và bị bỏ sót nhiều nhất. Một dev/DevOps đủ giỏi để vận hành self-host an toàn ở Việt Nam có lương tham khảo **25–45 triệu/tháng**; một data analyst dựng và sửa báo cáo cũng tầm **15–30 triệu/tháng**. *(Con số minh hoạ, tuỳ thành phố và kinh nghiệm.)* Kể cả chỉ dùng một phần thời gian của họ cho BI, đó vẫn là tiền thật chảy đều mỗi tháng — mãi mãi.
 - **Nâng cấp, bảo mật.** Phiên bản mới, lỗ hổng cần vá, server cần sao lưu. "Miễn phí" cho tới khi hệ thống sập lúc 11 giờ đêm trước ngày họp hội đồng.
-- **Bus-factor.** Đây là rủi ro ít người gọi tên: **bus-factor** (số người mà nếu họ "biến mất" thì dự án đứng — đặt theo câu hỏi giả định "nếu họ bị xe buýt tông thì sao"). Khi cả hệ thống chỉ một người hiểu, bus-factor của bạn bằng 1. Người đó nghỉ việc, bạn thừa hưởng một cỗ máy không ai đọc nổi.
+- **Bus-factor.** Đây là rủi ro ít người gọi tên: **bus-factor** (số người mà nếu họ "biến mất" thì dự án đứng — đặt theo câu hỏi giả định "nếu họ bị xe buýt tông thì sao"). Khi cả hệ thống chỉ một người hiểu, bus-factor của bạn bằng 1. Người đó nghỉ việc, bạn thừa hưởng một cỗ máy không ai đọc nổi. Dân cày anime isekai sẽ thấy quen: bus-factor = 1 nghĩa là cả dự án đang đứng chờ *truck-kun* gọi tên đúng một người — và mất là mất vĩnh viễn, không có nút load lại.
 - **Chi phí cơ hội.** Đội kỹ thuật của bạn lẽ ra làm sản phẩm chính — thứ tạo ra doanh thu, thứ là lý do công ty tồn tại. Mỗi giờ họ bảo trì dashboard là một giờ không làm nghề của bạn.
 
 Đó là cái bẫy sâu nhất: **tự dựng BI quá tay, bạn vô tình biến mình thành một công ty làm BI — thay vì làm nghề bạn giỏi nhất.**
+
+Tôi viết những dòng này vì từng tự tay rơi vào bẫy. Hồi làm trưởng nhóm dữ liệu ở một công ty công nghệ lõi của một hệ sinh thái e-commerce, tôi hí hửng ngồi xây lại bộ kiểm tra chất lượng dữ liệu cho riêng đội mình — viết từng luật, từng ngưỡng cảnh báo. Đến khi gần xong tôi mới phát hiện thư viện mã nguồn mở Great Expectations đã cover gần hết những gì tôi cặm cụi dựng lại từ đầu. Vài tuần công sức của tôi, lẽ ra chỉ là một lệnh cài đặt. Đó là lần đầu tôi nếm nỗi đau build-vs-buy bằng chính thời gian của mình — và nó không gửi hoá đơn bằng tiền, nó gửi bằng những buổi tối lẽ ra tôi đã làm thứ thật sự tạo ra giá trị.
 
 ## Mua sẵn được gì, đánh đổi gì
 

@@ -67,7 +67,7 @@ Ba dòng, một phép cộng-trừ. Khi tách ra như vậy, "+100" ngừng là 
 Growth accounting có một biểu đồ đặc trưng, và một khi đã quen, bạn sẽ không bao giờ nhìn MAU theo kiểu cũ nữa. Đó là **cột chồng (stacked bar)** — mỗi tháng một cột. Phần *dương* (retained + new + resurrected) dựng lên phía trên trục 0; phần *churned* được vẽ **âm**, thò xuống dưới trục như một cái rễ.
 
 <div class="viz">
-<div class="viz-chart" data-chart="growth" data-chart-data='{"periods":["T1","T2","T3","T4","T5"],"series":[{"name":"Giữ chân","key":"retained","values":[60,70,82,94,108]},{"name":"Mới","key":"new","values":[32,34,32,30,30]},{"name":"Quay lại","key":"resurrected","values":[14,14,12,12,12]},{"name":"Rời bỏ","key":"churned","values":[34,30,26,22,18],"negative":true}]}'></div>
+<div class="viz-chart" data-chart="growth" data-chart-data='{"periods":["T1","T2","T3","T4","T5"],"series":[{"name":"Giữ chân","key":"retained","values":[60,70,82,94,108]},{"name":"Quay lại","key":"resurrected","values":[14,14,12,12,12]},{"name":"Mới","key":"new","values":[32,34,32,30,30]},{"name":"Rời bỏ","key":"churned","values":[34,30,26,22,18],"negative":true}]}'></div>
 <div class="viz-caption">Cột chồng growth accounting (số minh họa): phần dương = retained + new + resurrected; phần đỏ thò xuống trục 0 là churned. Ở đây phần đỏ co lại dần qua từng tháng — dấu hiệu một doanh nghiệp đang bịt được lỗ rò, không chỉ đổ thêm nước.</div>
 </div>
 

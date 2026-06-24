@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { AUTHORS } from '../../data/authors';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -12,6 +13,9 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content, headings } = await post.render();
+
+// Bio + credential phong phú cho tác giả thật (Lê Anh Tuấn); persona khác fallback về authorTitle.
+const authorInfo = AUTHORS[post.data.author];
 
 // Right-rail table of contents — section headings only (h2 + h3)
 const toc = headings.filter(h => h.depth === 2 || h.depth === 3);
@@ -165,6 +169,11 @@ function formatDate(date: Date) {
   .post-content tbody tr:last-child td { border-bottom: none; }
   .post-content tbody tr:nth-child(even) td { background: #FAFBFC; }
   .post-content tbody tr:hover td { background: #F4F6FF; }
+  /* Bảng kiểu Semantix: ô số canh phải + chữ số đều; ô delta dạng chip */
+  .post-content td.num, .post-content th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .post-content .cell-chip { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 100px; font-size: 12.5px; font-weight: 700; line-height: 1.6; }
+  .post-content .cell-chip.up { background: #DCFCE7; color: #15803D; }
+  .post-content .cell-chip.down { background: #FEE2E2; color: #B91C1C; }
 
   .post-content hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
 
@@ -234,9 +243,17 @@ function formatDate(date: Date) {
         <div class="author-avatar">{post.data.author.charAt(post.data.author.indexOf(' ') + 1)}</div>
         <div>
           <div class="author-name">{post.data.author}</div>
-          <div class="author-label">{post.data.authorTitle}</div>
+          <div class="author-label">{authorInfo?.title ?? post.data.authorTitle}</div>
         </div>
       </div>
+      {authorInfo?.bio && <p class="author-bio">{authorInfo.bio}</p>}
+      {authorInfo?.links && authorInfo.links.length > 0 && (
+        <div class="author-links">
+          {authorInfo.links.map(l => (
+            <a href={l.href} class="author-link" target="_blank" rel="noopener noreferrer">{l.label} ↗</a>
+          ))}
+        </div>
+      )}
     </div>
 
     <!-- Related -->
@@ -303,6 +320,7 @@ function formatDate(date: Date) {
 <!-- Render chart growth/cohort bằng ECharts (lazy-load CDN, chỉ khi bài có .viz-chart) -->
 <script>
   import '../../scripts/blog-charts.ts';
+  import '../../scripts/blog-tables.ts';
 </script>
 
 </BaseLayout>

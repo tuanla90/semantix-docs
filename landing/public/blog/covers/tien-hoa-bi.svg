@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgkt021" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <marker id="akt021" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#818CF8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgkt021)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <text x="80" y="232" fill="#ffffff" font-size="54" font-weight="800">Sự tiến hóa của BI</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="30" font-weight="600">Bốn nấc — và lợi thế ở ba nấc trên</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: 4 ascending bubbles/steps toward top-right (maturity × advantage) -->
+  <g transform="translate(700,360)">
+    <!-- axes -->
+    <line x1="0" y1="0" x2="430" y2="0" stroke="#475569" stroke-width="2" marker-end="url(#akt021)"/>
+    <line x1="0" y1="0" x2="0" y2="-300" stroke="#475569" stroke-width="2" marker-end="url(#akt021)"/>
+    <text x="430" y="28" fill="#64748B" font-size="15" text-anchor="end">Độ trưởng thành →</text>
+    <text x="-8" y="-300" fill="#64748B" font-size="15" text-anchor="end" transform="rotate(-90 -8 -300)">Lợi thế →</text>
+    <!-- connecting dashed trend -->
+    <path d="M70 -30 C150 -60 200 -110 200 -110 C260 -180 330 -250 350 -250" stroke="#818CF8" stroke-width="2" fill="none" stroke-dasharray="6 6" opacity="0.6"/>
+    <!-- nac 1: Mo ta -->
+    <circle cx="70" cy="-30" r="20" fill="#10b981" opacity="0.92"/>
+    <text x="70" y="-58" fill="#E2E8F0" font-size="16" font-weight="700" text-anchor="middle">Mô tả</text>
+    <!-- nac 2: Chan doan -->
+    <circle cx="190" cy="-100" r="28" fill="#f59e0b" opacity="0.92"/>
+    <text x="190" y="-138" fill="#E2E8F0" font-size="16" font-weight="700" text-anchor="middle">Chẩn đoán</text>
+    <!-- nac 3: Du doan -->
+    <circle cx="280" cy="-175" r="36" fill="#3b82f6" opacity="0.92"/>
+    <text x="280" y="-222" fill="#E2E8F0" font-size="16" font-weight="700" text-anchor="middle">Dự đoán</text>
+    <!-- nac 4: De xuat -->
+    <circle cx="370" cy="-250" r="46" fill="#6366f1" opacity="0.92"/>
+    <text x="370" y="-308" fill="#E2E8F0" font-size="16" font-weight="700" text-anchor="middle">Đề xuất</text>
+  </g>
+</svg>

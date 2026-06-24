@@ -1,0 +1,52 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgPt052" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="barPt052" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#4338CA"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgPt052)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="138" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="222" fill="#ffffff" font-size="52" font-weight="800">Customer Lifetime Value</text>
+  <text x="80" y="288" fill="#CBD5E1" font-size="29" font-weight="600">Trần cho CAC &amp; phân khúc đáng giữ</text>
+  <text x="80" y="528" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: CLV columns by segment under a CAC ceiling line -->
+  <g transform="translate(760,150)">
+    <!-- CAC ceiling line -->
+    <line x1="-10" y1="78" x2="372" y2="78" stroke="#F87171" stroke-width="2.5" stroke-dasharray="8 6"/>
+    <text x="372" y="70" fill="#F87171" font-size="16" font-weight="700" text-anchor="end">Trần CAC</text>
+    <!-- baseline -->
+    <line x1="-10" y1="300" x2="372" y2="300" stroke="#475569" stroke-width="2"/>
+    <!-- segment columns: VIP tall, then descending -->
+    <g>
+      <rect x="14" y="44" width="68" height="256" rx="8" fill="url(#barPt052)"/>
+      <text x="48" y="326" fill="#94A3B8" font-size="16" text-anchor="middle">VIP</text>
+      <text x="48" y="34" fill="#A5B4FC" font-size="16" font-weight="700" text-anchor="middle">24</text>
+    </g>
+    <g>
+      <rect x="104" y="148" width="68" height="152" rx="8" fill="url(#barPt052)" opacity="0.88"/>
+      <text x="138" y="326" fill="#94A3B8" font-size="16" text-anchor="middle">Trung thành</text>
+      <text x="138" y="138" fill="#A5B4FC" font-size="16" font-weight="700" text-anchor="middle">11</text>
+    </g>
+    <g>
+      <rect x="194" y="234" width="68" height="66" rx="8" fill="#64748B"/>
+      <text x="228" y="326" fill="#94A3B8" font-size="16" text-anchor="middle">Thường</text>
+      <text x="228" y="224" fill="#94A3B8" font-size="16" font-weight="700" text-anchor="middle">4.5</text>
+    </g>
+    <g>
+      <rect x="284" y="274" width="68" height="26" rx="8" fill="#475569"/>
+      <text x="318" y="326" fill="#94A3B8" font-size="16" text-anchor="middle">Mới</text>
+      <text x="318" y="264" fill="#64748B" font-size="16" font-weight="700" text-anchor="middle">1.8</text>
+    </g>
+  </g>
+</svg>

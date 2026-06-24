@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgpt049" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <marker id="apt049" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#818CF8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgpt049)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="232" fill="#ffffff" font-size="54" font-weight="800">Sentiment Analysis</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="30" font-weight="600">Chữ của khách &amp; tín hiệu đo được</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: review bubbles -> classified by emotion -> stacked bars over time -->
+  <g transform="translate(640,150)">
+    <!-- review/chat bubbles -->
+    <g>
+      <rect x="0" y="0" width="150" height="44" rx="12" fill="#1E293B" stroke="#334155"/>
+      <text x="16" y="28" fill="#E2E8F0" font-size="16">"ship nhanh, ưng"</text>
+      <rect x="0" y="62" width="150" height="44" rx="12" fill="#1E293B" stroke="#334155"/>
+      <text x="16" y="90" fill="#E2E8F0" font-size="16">"tạm ổn"</text>
+      <rect x="0" y="124" width="150" height="44" rx="12" fill="#1E293B" stroke="#334155"/>
+      <text x="16" y="152" fill="#E2E8F0" font-size="16">"giao chậm quá"</text>
+    </g>
+    <!-- classify arrows to emotion faces -->
+    <path d="M156 22 C210 22 210 22 250 22" stroke="#818CF8" stroke-width="3" fill="none" marker-end="url(#apt049)"/>
+    <path d="M156 84 C210 84 210 84 250 84" stroke="#818CF8" stroke-width="3" fill="none" marker-end="url(#apt049)"/>
+    <path d="M156 146 C210 146 210 146 250 146" stroke="#818CF8" stroke-width="3" fill="none" marker-end="url(#apt049)"/>
+    <!-- emotion faces -->
+    <g transform="translate(272,4)">
+      <circle cx="18" cy="18" r="18" fill="#10b981"/>
+      <circle cx="11" cy="14" r="2.4" fill="#0F172A"/>
+      <circle cx="25" cy="14" r="2.4" fill="#0F172A"/>
+      <path d="M9 22 Q18 30 27 22" stroke="#0F172A" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(272,66)">
+      <circle cx="18" cy="18" r="18" fill="#94a3b8"/>
+      <circle cx="11" cy="14" r="2.4" fill="#0F172A"/>
+      <circle cx="25" cy="14" r="2.4" fill="#0F172A"/>
+      <line x1="10" y1="24" x2="26" y2="24" stroke="#0F172A" stroke-width="2.4" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(272,128)">
+      <circle cx="18" cy="18" r="18" fill="#ef4444"/>
+      <circle cx="11" cy="14" r="2.4" fill="#0F172A"/>
+      <circle cx="25" cy="14" r="2.4" fill="#0F172A"/>
+      <path d="M9 26 Q18 18 27 26" stroke="#0F172A" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    </g>
+    <!-- arrow into stacked bars over time -->
+    <path d="M320 84 C360 84 360 84 400 84" stroke="#818CF8" stroke-width="3" fill="none" marker-end="url(#apt049)"/>
+    <!-- stacked bars by month -->
+    <g transform="translate(420,196)">
+      <line x1="-8" y1="0" x2="200" y2="0" stroke="#475569" stroke-width="2"/>
+      <!-- bar 1 -->
+      <rect x="6" y="-44" width="34" height="22" fill="#10b981"/>
+      <rect x="6" y="-66" width="34" height="14" fill="#94a3b8"/>
+      <rect x="6" y="-78" width="34" height="12" fill="#ef4444"/>
+      <!-- bar 2 -->
+      <rect x="54" y="-50" width="34" height="28" fill="#10b981"/>
+      <rect x="54" y="-70" width="34" height="12" fill="#94a3b8"/>
+      <rect x="54" y="-80" width="34" height="10" fill="#ef4444"/>
+      <!-- bar 3: tieu cuc phinh len -->
+      <rect x="102" y="-40" width="34" height="18" fill="#10b981"/>
+      <rect x="102" y="-62" width="34" height="14" fill="#94a3b8"/>
+      <rect x="102" y="-84" width="34" height="22" fill="#ef4444"/>
+      <!-- bar 4 -->
+      <rect x="150" y="-56" width="34" height="34" fill="#10b981"/>
+      <rect x="150" y="-72" width="34" height="10" fill="#94a3b8"/>
+      <rect x="150" y="-80" width="34" height="8" fill="#ef4444"/>
+      <text x="23" y="16" fill="#64748B" font-size="13" text-anchor="middle">T1</text>
+      <text x="71" y="16" fill="#64748B" font-size="13" text-anchor="middle">T2</text>
+      <text x="119" y="16" fill="#64748B" font-size="13" text-anchor="middle">T3</text>
+      <text x="167" y="16" fill="#64748B" font-size="13" text-anchor="middle">T4</text>
+    </g>
+  </g>
+</svg>

@@ -67,7 +67,7 @@ Trước khi gõ một công thức nào, bạn phải chốt ba định nghĩa.
 Khi ba định nghĩa đã chốt, quy trình là một dây chuyền ba khâu: **(1)** lấy bảng giao dịch thô → **(2)** với mỗi khách, mỗi kỳ, gán đúng một trạng thái bằng cách so với lịch sử → **(3)** đếm số khách (hoặc cộng tiền) theo từng trạng thái, từng kỳ. Kết quả là một bảng như thế này:
 
 <div class="viz">
-<div class="viz-chart" data-chart="growth" data-chart-data='{"periods":["T1","T2","T3","T4"],"series":[{"name":"new","key":"new","values":[120,95,88,102]},{"name":"retained","key":"retained","values":[null,74,96,118]},{"name":"resurrected","key":"resurrected","values":[null,11,18,22]},{"name":"churned","key":"churned","values":[null,46,52,61],"negative":true},{"name":"MAU cuối kỳ","key":"active","values":[120,134,184,265],"type":"line"},{"name":"Quick Ratio","key":"quickRatio","values":[null,2.3,2.0,2.0],"type":"line","yAxis":1}]}'></div>
+<div class="viz-chart" data-chart="growth" data-chart-data='{"periods":["T1","T2","T3","T4"],"series":[{"name":"retained","key":"retained","values":[null,74,96,118]},{"name":"resurrected","key":"resurrected","values":[null,11,18,22]},{"name":"new","key":"new","values":[120,95,88,102]},{"name":"churned","key":"churned","values":[null,46,52,61],"negative":true},{"name":"MAU cuối kỳ","key":"active","values":[120,134,184,265],"type":"line"},{"name":"Quick Ratio","key":"quickRatio","values":[null,2.3,2.0,2.0],"type":"line","yAxis":1}]}'></div>
 <div class="viz-caption">Bảng growth accounting đã lắp ráp: mỗi cột một tháng, mỗi dòng một trạng thái. Quick Ratio = (new + resurrected) / churned. (Số minh họa.)</div>
 </div>
 

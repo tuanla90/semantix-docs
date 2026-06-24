@@ -121,7 +121,7 @@ Quick Ratio là nhịp tim của tăng trưởng — một con số, đọc tron
 
 Một nhịp tim mạnh là tin tốt. Một nhịp tim mạnh *vì đang được bơm doping* là tin xấu đội lốt tin tốt. Quick Ratio cho bạn con số; cohort cho bạn sự thật đằng sau con số. Đọc cả hai, và bạn đi trước phần lớn founder vẫn đang ăn mừng một nhịp tim mà họ chưa kịp hỏi vì sao nó đập nhanh đến thế.
 
-Ở **Phần 3**, chúng ta đổi đơn vị đo: từ đếm *người* sang đếm *tiền*. Quick Ratio bản doanh thu, và một chỉ số mạnh hơn nữa — NDR (Net Dollar Retention — tỷ lệ giữ doanh thu từ khách cũ) — sẽ kể cho bạn nghe liệu mỗi đồng doanh thu cũ đang nở ra hay teo lại theo thời gian.
+Ở [**Phần 3 — Từ người dùng sang tiền (NDR)**](/blog/growth-accounting-revenue/), chúng ta đổi đơn vị đo: từ đếm *người* sang đếm *tiền*. Quick Ratio bản doanh thu, và một chỉ số mạnh hơn nữa — NDR (Net Dollar Retention — tỷ lệ giữ doanh thu từ khách cũ) — sẽ kể cho bạn nghe liệu mỗi đồng doanh thu cũ đang nở ra hay teo lại theo thời gian.
 
 ---
 

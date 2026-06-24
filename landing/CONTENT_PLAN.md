@@ -1,4 +1,4 @@
-﻿# Content Plan — Blog Semantix
+# Content Plan — Blog Semantix
 
 > Mục tiêu: **SEO + Nurture + Thought Leadership** (kết hợp). Backlog ~28 chủ đề đã ưu tiên, không ràng lịch cứng. Ngôn ngữ: **tiếng Việt**.
 > Bài viết lưu tại `landing/src/content/blog/<slug>.md` (slug sạch, không số) — tự xuất hiện trên blog. **Mã bài & quy trình đăng ký BẮT BUỘC:** xem mục ⚙️ ngay dưới.
@@ -152,10 +152,10 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | hd-019 | Xuất báo cáo PowerPoint 1-click cho cuộc họp | ⚪ | PROJECT_OVERVIEW (SlideJ) |
 | hd-020 | Thiết lập cảnh báo KPI để không bỏ lỡ bất thường | ⚪ | notifications |
 | hd-009 | Chia sẻ báo cáo cho nhân viên mà không lộ data nhạy cảm | ✅ | `chia-se-bao-cao-khong-lo-data` |
-| hd-010 | Dashboard doanh thu cho chuỗi F&B nhiều chi nhánh | 🟡 | connections, studio |
-| hd-011 | Theo dõi tồn kho realtime & tự cảnh báo sắp hết hàng | ⚪ | notifications, connections |
-| hd-012 | 7 câu hỏi sai khiến AI trả lời lệch — và cách hỏi lại cho đúng | ⚪ | deep-dives/ai-best-practices |
-| hd-013 | Tạo metric tính toán (lợi nhuận gộp, AOV) không cần công thức Excel | ⚪ | studio/metrics |
+| hd-010 | Dashboard doanh thu cho chuỗi F&B nhiều chi nhánh | ✅ | `dashboard-doanh-thu-fnb` |
+| hd-011 | Theo dõi tồn kho realtime & tự cảnh báo sắp hết hàng | ✅ | `theo-doi-ton-kho-realtime` |
+| hd-012 | 7 câu hỏi sai khiến AI trả lời lệch — và cách hỏi lại cho đúng | ✅ | `7-cau-hoi-sai-voi-ai` |
+| hd-013 | Tạo metric tính toán (lợi nhuận gộp, AOV) không cần công thức Excel | ✅ | `tao-metric-tinh-toan` |
 | hd-014 | Khi nào nên chuyển từ Google Sheets lên database | ✅ | `khi-nao-len-database` |
 | hd-015 | NocoBase + Semantix: định nghĩa một lần, Semantix đọc hết | ✅ | `nocobase-semantix` |
 | hd-016 | Bảng ảo: gộp + làm sạch dữ liệu đa kênh ngay lúc hỏi — không cần đồng bộ về kho | ✅ | `bang-ao-gop-du-lieu` |
@@ -173,8 +173,8 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | ai-004 | Cắt 40–60% chi phí AI: chiến lược tối ưu token | ✅ | `toi-uu-chi-phi-token-ai` |
 | ai-005 | Multi-provider AI & BYOK: chủ quyền dữ liệu cho DN | ✅ | `multi-provider-byok` |
 | ai-006 | Vì sao AI tốt là AI biết hỏi lại — vòng lặp làm rõ trước khi trả lời | ✅ | `ai-biet-hoi-lai` |
-| ai-007 | AI "đọc" được cấu trúc database của bạn như thế nào | ⚪ | 06-master-system-design |
-| ai-008 | On-premise vs Cloud: chạy AI BI khi dữ liệu không được rời máy chủ | ⚪ | DEPLOYMENT_ARCHITECTURE |
+| ai-007 | AI "đọc" được cấu trúc database của bạn như thế nào | ✅ | `schema-linking` |
+| ai-008 | On-premise vs Cloud: chạy AI BI khi dữ liệu không được rời máy chủ | ✅ | `on-premise-vs-cloud-ai-bi` |
 | ai-009 | Semantic Layer vs "chatbot cắm thẳng vào database": khác nhau ở đâu | ✅ | `semantic-layer-vs-chatbot-database` |
 
 ### 5 — Câu Chuyện & Use Case (`uc`)

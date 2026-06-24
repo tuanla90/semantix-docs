@@ -1,0 +1,40 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgPt047" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgPt047)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="232" fill="#ffffff" font-size="52" font-weight="800">Tương quan &amp; hồi quy</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="28" font-weight="600">Mạnh cỡ nào — đổi A, B đổi bao nhiêu</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: scatter cloud + regression line through it -->
+  <g transform="translate(740,150)">
+    <!-- axes -->
+    <line x1="0" y1="300" x2="360" y2="300" stroke="#334155" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="300" stroke="#334155" stroke-width="2"/>
+    <!-- regression line (dashed red, sloping up) -->
+    <line x1="20" y1="270" x2="340" y2="50" stroke="#EF4444" stroke-width="3" stroke-dasharray="8 6"/>
+    <!-- scatter points -->
+    <circle cx="40" cy="255" r="8" fill="#818CF8" opacity="0.85"/>
+    <circle cx="70" cy="248" r="8" fill="#818CF8" opacity="0.85"/>
+    <circle cx="95" cy="232" r="8" fill="#818CF8" opacity="0.85"/>
+    <circle cx="120" cy="225" r="8" fill="#818CF8" opacity="0.85"/>
+    <circle cx="150" cy="200" r="8" fill="#818CF8" opacity="0.85"/>
+    <circle cx="175" cy="195" r="8" fill="#818CF8" opacity="0.85"/>
+    <circle cx="205" cy="165" r="8" fill="#7DD3FC" opacity="0.9"/>
+    <circle cx="235" cy="158" r="8" fill="#818CF8" opacity="0.85"/>
+    <circle cx="260" cy="130" r="8" fill="#818CF8" opacity="0.85"/>
+    <circle cx="290" cy="118" r="8" fill="#7DD3FC" opacity="0.9"/>
+    <circle cx="315" cy="92" r="8" fill="#818CF8" opacity="0.85"/>
+    <circle cx="335" cy="78" r="8" fill="#4ADE80" opacity="0.95"/>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgpt045" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="glowpt045" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6366F1" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgpt045)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <text x="80" y="232" fill="#ffffff" font-size="54" font-weight="800">HEART framework</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="30" font-weight="600">5 chiều của trải nghiệm</text>
+  <text x="80" y="360" fill="#94A3B8" font-size="22" font-weight="500">Phễu đếm số &amp; HEART đo chất lượng</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: radar pentagon, 5 trục HEART -->
+  <g transform="translate(930,300)">
+    <circle cx="0" cy="0" r="210" fill="url(#glowpt045)"/>
+    <!-- nan ngu giac ngoai -->
+    <polygon points="0,-150 142.7,-46.4 88.2,121.4 -88.2,121.4 -142.7,-46.4" fill="none" stroke="#334155" stroke-width="1.5"/>
+    <polygon points="0,-100 95.1,-30.9 58.8,80.9 -58.8,80.9 -95.1,-30.9" fill="none" stroke="#334155" stroke-width="1"/>
+    <polygon points="0,-50 47.6,-15.5 29.4,40.5 -29.4,40.5 -47.6,-15.5" fill="none" stroke="#334155" stroke-width="1"/>
+    <!-- 5 truc -->
+    <line x1="0" y1="0" x2="0" y2="-150" stroke="#334155" stroke-width="1"/>
+    <line x1="0" y1="0" x2="142.7" y2="-46.4" stroke="#334155" stroke-width="1"/>
+    <line x1="0" y1="0" x2="88.2" y2="121.4" stroke="#334155" stroke-width="1"/>
+    <line x1="0" y1="0" x2="-88.2" y2="121.4" stroke="#334155" stroke-width="1"/>
+    <line x1="0" y1="0" x2="-142.7" y2="-46.4" stroke="#334155" stroke-width="1"/>
+    <!-- vong quy truoc (mo) -->
+    <polygon points="0,-90 88.2,-28.7 41.2,56.7 -50.4,69.4 -85.6,-27.8" fill="#CBD5E1" fill-opacity="0.10" stroke="#CBD5E1" stroke-width="1.5"/>
+    <!-- vong quy nay (dam) -->
+    <polygon points="0,-108 121.3,-39.4 50.0,68.8 -57.3,78.9 -114.2,-37.1" fill="#6366F1" fill-opacity="0.22" stroke="#818CF8" stroke-width="2.5"/>
+    <circle cx="0" cy="-108" r="4" fill="#818CF8"/>
+    <circle cx="121.3" cy="-39.4" r="4" fill="#818CF8"/>
+    <circle cx="50.0" cy="68.8" r="4" fill="#818CF8"/>
+    <circle cx="-57.3" cy="78.9" r="4" fill="#818CF8"/>
+    <circle cx="-114.2" cy="-37.1" r="4" fill="#818CF8"/>
+    <!-- nhan 5 chieu -->
+    <text x="0" y="-168" fill="#E2E8F0" font-size="16" font-weight="600" text-anchor="middle">Happiness</text>
+    <text x="162" y="-44" fill="#E2E8F0" font-size="16" font-weight="600" text-anchor="middle">Engagement</text>
+    <text x="104" y="148" fill="#E2E8F0" font-size="16" font-weight="600" text-anchor="middle">Adoption</text>
+    <text x="-104" y="148" fill="#E2E8F0" font-size="16" font-weight="600" text-anchor="middle">Retention</text>
+    <text x="-162" y="-44" fill="#E2E8F0" font-size="16" font-weight="600" text-anchor="middle">Task success</text>
+  </g>
+</svg>

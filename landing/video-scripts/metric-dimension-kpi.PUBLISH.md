@@ -1,7 +1,7 @@
 # Gói đăng — Metric, Dimension, KPI (vkt-006)
 
 Sản phẩm render: `video-remotion/out/metric-long.mp4` (16:9, ~3:29) · `video-remotion/out/metric-short.mp4` (9:16, ~23s).
-Giọng: Vbee `hn_male_manhdung_news_48k-fhg` · tốc độ 0.95.
+Giọng: Vbee **giọng cá nhân** `n_hanoi_male_tuanla2_education_vc` · tốc độ 1.0. Nội dung: đã thêm 'cột ngày' (dimension đổi số) + dẫn KPI liền mạch. Lời chuẩn: `video-remotion/content.py`.
 
 ## YouTube (long-form)
 
@@ -20,12 +20,12 @@ Metric, Dimension, KPI: 3 từ ai cũng nói sai — và vì sao báo cáo cứ 
 **Chapters (dán vào mô tả):**
 ```
 0:00 Ba con số một cái tên — ai sai?
-0:23 Rubik dữ liệu: 3 từ, 3 việc khác nhau
-0:55 Metric — con số mang cái tên mơ hồ
-1:37 Dimension — lát cắt biến số thành câu chuyện
-2:10 KPI — metric có một cái thước
-2:41 Đọc lại cuộc cãi vã bằng 3 từ
-3:09 Tóm lại + ghi nhớ
+0:15 Rubik dữ liệu: 3 từ khác nhau
+0:39 Metric — chốt một định nghĩa
+1:17 Dimension — cột ngày & lát cắt
+1:55 KPI — đo đúng rồi, để làm gì?
+2:33 Đọc lại cuộc cãi bằng 3 từ
+3:00 Tóm lại
 ```
 
 **Thumbnail:** nền `#0A0A0A`, hai thẻ `4,2 tỷ` (xanh) vs `3,8 tỷ` (cam) + chữ to **"AI SAI?"** đỏ.

@@ -65,10 +65,11 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | kt-011 | ETL vs ELT: đưa data về một chỗ mà không cần biết một dòng code | ✅ | `etl-vs-elt` |
 | kt-012 | Đưa data cho AI có an toàn không? Ai thấy gì, lưu ở đâu, ai kiểm soát | ✅ | `data-cho-ai-an-toan` |
 | kt-013 | OLTP vs OLAP: vì sao đừng chạy báo cáo thẳng trên database bán hàng | 🟡 | khái niệm nền tảng; gắn data-warehouse-sme |
-| kt-014 | Data modeling (fact & dimension): cách sắp bảng quyết định câu hỏi hỏi được | 🟡 | gắn metric-dimension-kpi |
+| kt-014 | Data modeling (fact & dimension): cách sắp bảng quyết định câu hỏi hỏi được | ✅ | `data-modeling-fact-dimension` |
 | kt-015 | Data governance: ai sở hữu con số & ai chịu trách nhiệm khi nó sai | ⚪ | khái niệm nền tảng |
 | kt-016 | Bảo vệ dữ liệu cá nhân (Nghị định 13/2023): SME thu data khách cần biết gì | 🟡 | bối cảnh pháp lý VN |
-| kt-017 | Embedding & vector search: vì sao AI hiểu câu gần nghĩa — nền tảng dưới RAG | 🟡 | gắn rag-la-gi |
+| kt-017 | Embedding & vector search: vì sao AI hiểu câu gần nghĩa — nền tảng dưới RAG | ✅ | `embedding-vector-search` |
+| kt-027 | Data Lake vs Data Warehouse: SME cần cái nào và khi nào | ✅ | `data-lake-vs-warehouse` |
 | kt-018 | Tư duy dựa trên dữ liệu là gì (Series Tư duy dữ liệu · P1) | ✅ | `tu-duy-du-lieu-la-gi` |
 | kt-019 | Bắt đầu từ câu hỏi, không từ dữ liệu (P2) | ✅ | `bat-dau-tu-cau-hoi` |
 | kt-020 | Tín hiệu vs nhiễu (P7) | ✅ | `tin-hieu-vs-nhieu` |

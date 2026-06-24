@@ -121,8 +121,11 @@ function formatDate(date: Date) {
     margin: 40px 0 14px; line-height: 1.4; scroll-margin-top: 88px;
   }
   .post-content p { margin: 0 0 20px; }
+  /* Bold = nhấn mạnh (đậm, màu tối). Italic = giảm focus / chú thích (xám). */
   .post-content strong { color: var(--dark); font-weight: 700; }
-  .post-content em { color: var(--muted); }
+  .post-content em { color: var(--muted); font-style: italic; }
+  /* Bold+italic lồng nhau = nhấn mạnh mạnh hơn → giữ màu đậm, không bị xám */
+  .post-content strong em, .post-content em strong { color: var(--dark); }
   .post-content a  { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
   .post-content a:hover { color: var(--primary-dark); }
 

@@ -210,6 +210,10 @@ Bốn bài 🔴 — đã viết xong đợt này (4 agent song song):
 5. **"Tóm lại"** — thường là **bảng đối chiếu 2 cột** (Không có / Có · Câu tồi / Câu tốt) chốt lại luận điểm.
 
 ### G7. Yếu tố định dạng đặc trưng
+- **Nhấn mạnh — tách bạch hai vai trò (QUAN TRỌNG):**
+  - `**đậm**` = **nhấn mạnh / làm nổi bật**: thuật ngữ khóa lần đầu, luận điểm chốt, từ cần "đập vào mắt". Hiển thị màu tối, đậm.
+  - `*nghiêng*` = **giảm focus**: chú thích bên lề, mô tả, ví dụ minh hoạ, câu CTA, lời thì thầm. Hiển thị màu xám — KHÔNG dùng để làm nổi bật một từ giữa câu (sẽ bị mờ đi, phản tác dụng).
+  - Muốn nhấn **rất mạnh**: dùng `**đậm**` (có thể kèm blockquote). Bold+italic lồng nhau (`**...*...*...**`) vẫn giữ màu đậm — nhưng hạn chế, dễ rối.
 - **Blockquote cho "quy tắc vàng" / câu chốt ẩn dụ:** `> Quy tắc vàng: luôn so sánh cohort ở cùng tuổi đời.`
 - **Bảng so sánh 2 cột** đối lập trước/sau, tồi/tốt.
 - **Code block** SQL/pseudocode khi giải thích kỹ thuật (đặt định nghĩa nghiệp vụ ra giữa).

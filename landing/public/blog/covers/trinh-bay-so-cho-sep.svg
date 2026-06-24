@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#1E3A52"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="86" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">HƯỚNG DẪN THỰC CHIẾN</text>
+  <!-- series badge -->
+  <g transform="translate(80,104)">
+    <rect x="0" y="0" width="280" height="34" rx="17" fill="#0F172A" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="20" y="23" fill="#34D399" font-size="15" font-weight="700" letter-spacing="1">SERIES &#183; PHẦN 4 (CUỐI)</text>
+  </g>
+  <!-- title -->
+  <text x="80" y="208" fill="#F1F5F9" font-size="48" font-weight="800">Trình bày số cho sếp</text>
+  <text x="80" y="256" fill="#94A3B8" font-size="25" font-weight="500">Một câu chuyện, một thông điệp, một hành động</text>
+  <!-- illustration: slide with one message -> arrow -> one action -->
+  <g transform="translate(80,300)">
+    <rect x="0" y="0" width="470" height="240" rx="16" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="28" y="44" fill="#64748B" font-size="15" font-weight="700" letter-spacing="1">SLIDE &#183; MỘT THÔNG ĐIỆP</text>
+    <!-- the one message headline -->
+    <text x="28" y="84" fill="#F1F5F9" font-size="22" font-weight="800">Doanh thu TikTok giảm</text>
+    <text x="28" y="112" fill="#34D399" font-size="22" font-weight="800">vì AOV, không vì đơn</text>
+    <!-- one highlighted bar among muted bars -->
+    <g transform="translate(28,140)">
+      <rect x="0" y="44" width="40" height="40" rx="3" fill="#1E293B"/>
+      <rect x="56" y="30" width="40" height="54" rx="3" fill="#1E293B"/>
+      <rect x="112" y="52" width="40" height="32" rx="3" fill="#1E293B"/>
+      <rect x="168" y="14" width="40" height="70" rx="3" fill="url(#bar)" stroke="#22D3EE" stroke-width="2"/>
+      <rect x="224" y="60" width="40" height="24" rx="3" fill="#1E293B"/>
+      <line x1="0" y1="84" x2="380" y2="84" stroke="#334155" stroke-width="1.5"/>
+      <text x="300" y="40" fill="#34D399" font-size="14" font-weight="700">AOV &#8595; 12%</text>
+    </g>
+  </g>
+  <!-- arrow from slide to action -->
+  <g transform="translate(566,420)">
+    <line x1="0" y1="0" x2="74" y2="0" stroke="url(#flow)" stroke-width="5"/>
+    <path d="M74 -10 L96 0 L74 10 Z" fill="#34D399"/>
+  </g>
+  <!-- the one action card -->
+  <g transform="translate(672,330)">
+    <rect x="0" y="0" width="448" height="180" rx="16" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="28" y="44" fill="#34D399" font-size="15" font-weight="700" letter-spacing="1">MỘT HÀNH ĐỘNG</text>
+    <circle cx="44" cy="92" r="16" fill="#134E4A" stroke="#34D399" stroke-width="2"/>
+    <path d="M37 92 L42 98 L52 86" fill="none" stroke="#34D399" stroke-width="3"/>
+    <text x="76" y="86" fill="#E2E8F0" font-size="20" font-weight="700">Đặt lại giá combo,</text>
+    <text x="76" y="114" fill="#E2E8F0" font-size="20" font-weight="700">duyệt trước thứ Sáu</text>
+    <text x="28" y="158" fill="#64748B" font-size="15" font-weight="500" font-style="italic">vậy nên làm gì &#8594; rõ ràng</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="572" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
+</svg>

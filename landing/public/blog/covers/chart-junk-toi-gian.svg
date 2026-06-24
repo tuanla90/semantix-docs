@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="clean" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">HƯỚNG DẪN THỰC CHIẾN</text>
+  <g transform="translate(80,112)">
+    <rect x="0" y="0" width="232" height="34" rx="17" fill="#0B1120" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="116" y="23" fill="#22D3EE" font-size="15" font-weight="700" letter-spacing="1" text-anchor="middle">SERIES &#183; PHẦN 2</text>
+  </g>
+  <text x="80" y="216" fill="#F1F5F9" font-size="50" font-weight="800">Chart junk: bớt mực, tăng nghĩa</text>
+  <text x="80" y="262" fill="#94A3B8" font-size="25" font-weight="500">Dashboard tối giản mà người ta thật sự đọc được</text>
+  <g transform="translate(80,320)">
+    <rect x="0" y="0" width="430" height="200" rx="14" fill="#0F172A" stroke="#7F1D1D" stroke-width="2"/>
+    <text x="22" y="34" fill="#F87171" font-size="15" font-weight="700" letter-spacing="1">RỐI &#8212; ĐẦY RÁC TRANG TRÍ</text>
+    <g stroke="#64748B" stroke-width="1.4">
+      <line x1="22" y1="60" x2="408" y2="60"/>
+      <line x1="22" y1="100" x2="408" y2="100"/>
+      <line x1="22" y1="140" x2="408" y2="140"/>
+    </g>
+    <g>
+      <rect x="60" y="118" width="40" height="58" fill="#F59E0B"/>
+      <polygon points="60,118 74,104 114,104 100,118" fill="#FBBF24"/>
+      <polygon points="100,118 114,104 114,164 100,178" fill="#B45309"/>
+      <rect x="140" y="86" width="40" height="90" fill="#EF4444"/>
+      <polygon points="140,86 154,72 194,72 180,86" fill="#F87171"/>
+      <polygon points="180,86 194,72 194,164 180,178" fill="#991B1B"/>
+      <rect x="220" y="60" width="40" height="116" fill="#8B5CF6"/>
+      <polygon points="220,60 234,46 274,46 260,60" fill="#A78BFA"/>
+      <polygon points="260,60 274,46 274,164 260,178" fill="#5B21B6"/>
+      <rect x="300" y="130" width="40" height="46" fill="#10B981"/>
+      <polygon points="300,130 314,116 354,116 340,130" fill="#34D399"/>
+      <polygon points="340,130 354,116 354,164 340,178" fill="#047857"/>
+    </g>
+    <text x="215" y="194" fill="#F87171" font-size="13" font-weight="600" text-anchor="middle">đâu là cột cao nhất?</text>
+  </g>
+  <g transform="translate(595,408)">
+    <circle r="40" fill="#0B1120" stroke="#22D3EE" stroke-width="2"/>
+    <path d="M-16 0 L10 0 M2 -8 L12 0 L2 8" fill="none" stroke="#22D3EE" stroke-width="3"/>
+  </g>
+  <g transform="translate(690,320)">
+    <rect x="0" y="0" width="430" height="200" rx="14" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="22" y="34" fill="#34D399" font-size="15" font-weight="700" letter-spacing="1">SẠCH &#8212; BỚT MỰC, TĂNG NGHĨA</text>
+    <g stroke="#1E293B" stroke-width="1">
+      <line x1="22" y1="60" x2="408" y2="60"/>
+      <line x1="22" y1="100" x2="408" y2="100"/>
+      <line x1="22" y1="140" x2="408" y2="140"/>
+    </g>
+    <g>
+      <rect x="70" y="118" width="46" height="58" fill="#475569"/>
+      <rect x="150" y="86" width="46" height="90" fill="#475569"/>
+      <rect x="230" y="60" width="46" height="116" fill="url(#clean)"/>
+      <rect x="310" y="130" width="46" height="46" fill="#475569"/>
+    </g>
+    <text x="253" y="52" fill="#22D3EE" font-size="13" font-weight="700" text-anchor="middle">71</text>
+    <text x="215" y="194" fill="#34D399" font-size="13" font-weight="600" text-anchor="middle">cột nhấn bật ra trong một giây</text>
+  </g>
+  <text x="80" y="572" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
+</svg>

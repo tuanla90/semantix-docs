@@ -111,6 +111,9 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | pt-031 | Một khách, năm hồ sơ: de-dup trước khi tính LTV/cohort | ✅ | `de-dup-khach-hang-truoc-khi-tinh-ltv` |
 | pt-032 | Ô trống cũng biết nói: "thiếu dữ liệu" là một tín hiệu | ✅ | `thieu-du-lieu-cung-la-tin-hieu` |
 | pt-033 | Những thiên kiến giết chết quyết định (Series Tư duy dữ liệu · P3) | ✅ | `thien-kien-trong-doc-so` |
+| pt-034 | Dự báo (Series · P1): mọi dự báo đều sai nhưng vẫn hữu ích | ✅ | `du-bao-la-gi` |
+| pt-035 | Dự báo (P2): mùa vụ & Tết — seasonality | ✅ | `mua-vu-tet-seasonality` |
+| pt-036 | Dự báo (P3): dự báo nhu cầu tồn kho thực chiến | ✅ | `du-bao-ton-kho-thuc-chien` |
 
 ### 3 — Hướng Dẫn Thực Chiến (`hd`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -131,6 +134,10 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | hd-014 | Khi nào nên chuyển từ Google Sheets lên database | ✅ | `khi-nao-len-database` |
 | hd-015 | NocoBase + Semantix: định nghĩa một lần, Semantix đọc hết | ✅ | `nocobase-semantix` |
 | hd-016 | Bảng ảo: gộp + làm sạch dữ liệu đa kênh ngay lúc hỏi — không cần đồng bộ về kho | ✅ | `bang-ao-gop-du-lieu` |
+| hd-005 | Trực quan hoá (Series · P1): chọn đúng biểu đồ | ✅ | `chon-dung-bieu-do` |
+| hd-006 | Trực quan hoá (P2): chart junk — bớt mực, tăng nghĩa | ✅ | `chart-junk-toi-gian` |
+| hd-007 | Trực quan hoá (P3): dashboard hành động được | ✅ | `dashboard-hanh-dong-duoc` |
+| hd-008 | Trực quan hoá (P4): trình bày số cho sếp | ✅ | `trinh-bay-so-cho-sep` |
 
 ### 4 — AI & Công Nghệ (`ai`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |
@@ -289,3 +296,25 @@ Bốn bài 🔴 — đã viết xong đợt này (4 agent song song):
 - **Các lần sau** dùng thoải mái thuật ngữ gốc, hoặc luân phiên với từ thuần Việt (`user` → `người dùng`, `active` → `hoạt động`) cho đỡ chói.
 - **Đồng bộ với Từ điển.** Mọi thuật ngữ chú giải trong bài PHẢI có mặt ở trang [Từ điển thuật ngữ](src/pages/blog/tu-dien-thuat-ngu.astro) (`/blog/tu-dien-thuat-ngu/`), sắp A–Z. Thuật ngữ mới chưa có → **thêm một mục** vào mảng `terms` của trang đó (kèm `slug` bài liên quan nếu có); nghĩa tiếng Việt trong bài và trong từ điển phải khớp nhau.
 - Nhãn chỉ số nên để **song ngữ** khi gắn với biểu đồ: `Churned — rời bỏ`, để người đọc map được nhãn tiếng Anh trên chart.
+
+
+### G12. Biểu đồ & bảng — dùng ECharts chuẩn Semantix (BẮT BUỘC)
+
+> Chart **dữ liệu** vẽ bằng ECharts (theme + màu + quy ước chuẩn Semantix), KHÔNG vẽ tay SVG. SVG vẽ tay CHỈ dành cho **hình minh họa khái niệm/ẩn dụ** (tảng băng chi phí, ốc đảo dữ liệu, bản đồ định vị, sơ đồ hành trình…). Cơ chế render: `src/scripts/blog-charts.ts` (lazy-load ECharts 5.5.0 CDN, chỉ tải ở trang có chart).
+
+- **Cú pháp trong markdown:**
+  ```html
+  <div class="viz">
+    <div class="viz-chart" data-chart="KIND" data-chart-data='{JSON}'></div>
+    <div class="viz-caption">…(số minh họa)…</div>
+  </div>
+  ```
+- **KIND đã hỗ trợ + data shape:**
+  - `growth` — cột chồng (dương lên, churn nạp **số âm** → tự xuống dưới trục 0; bo góc tự áp **chỉ khối trên-dương / dưới-âm**). Có thể thêm line trục phụ. `{"periods":[…],"series":[{"name","key":"retained|new|resurrected|expansion|churned|contraction|active|quickRatio","values":[…],"negative"?:true,"type"?:"line","yAxis"?:1}]}`. Màu auto theo `key`.
+  - `cohort` — heatmap retention. `{"cohorts":[…],"periodLabels":["M0",…],"matrix":[[…|null]],"unit"?:"%"}`.
+  - `line` — đa đường + **callout cuối đường** (`endLabel`) + **đường ngưỡng** (`markLine`) + **vùng tô** (`markArea`). `{"xLabels":[…],"yUnit"?:"%","series":[{"name","values":[…],"color"?,"dashed"?,"area"?,"endLabel"?}],"markLine"?:[{"y","label","color"?}],"markArea"?:[{"from","to","color"}]}`.
+  - `waterfall` — bắc cầu. `{"items":[{"label","value","type"?:"total"}],"unit"?:""}` (value âm = giảm; `type:"total"` = cột mốc).
+- **Cần loại chart CHƯA có builder** (funnel, pareto, scatter, histogram/distribution, pie…) → **bổ sung builder vào `blog-charts.ts`** rồi dùng `data-chart`; ĐỪNG vẽ tay SVG cho chart dữ liệu. (Backlog builder đang chờ: funnel, pareto, scatter, distribution; lưới RFM dùng lại `cohort`/heatmap.)
+- **Nếu vẫn vẽ tay SVG** (chỉ cho minh họa khái niệm): TUYỆT ĐỐI **không để dòng trống bên trong `<svg>…</svg>`** (Markdown sẽ cắt khối, vỡ hình — xem G7).
+- **Bảng dữ liệu:** viết markdown bình thường. `src/scripts/blog-tables.ts` tự: ô delta có dấu (`+22%`, `−3%`) → **chip** xanh/đỏ; ô số → **canh phải + tabular-nums**; số nguyên ≥5 chữ số → thêm dấu phân cách. Không reformat số có đơn vị viết tay ("1,8 tỷ").
+- Số liệu trong chart/bảng vẫn là **ví dụ minh họa** — ghi rõ ở caption (theo G5).

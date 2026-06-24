@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="88" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">HƯỚNG DẪN THỰC CHIẾN</text>
+  <!-- series badge -->
+  <g transform="translate(80,108)">
+    <rect x="0" y="0" width="208" height="34" rx="17" fill="#0B1120" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="104" y="23" fill="#22D3EE" font-size="15" font-weight="700" letter-spacing="2" text-anchor="middle">SERIES &#183; PHẦN 1</text>
+  </g>
+  <!-- title -->
+  <text x="80" y="216" fill="#F1F5F9" font-size="50" font-weight="800">Chọn đúng biểu đồ</text>
+  <text x="80" y="266" fill="#94A3B8" font-size="25" font-weight="500">Cột, đường, tròn, scatter — chọn theo câu hỏi,</text>
+  <text x="80" y="300" fill="#94A3B8" font-size="25" font-weight="500">và vì sao đừng lạm dụng pie</text>
+  <!-- illustration: column chart with tick -->
+  <g transform="translate(110,360)">
+    <rect x="0" y="0" width="300" height="160" rx="14" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="20" y="32" fill="#34D399" font-size="14" font-weight="700" letter-spacing="1">CỘT &#183; SO SÁNH</text>
+    <line x1="20" y1="128" x2="280" y2="128" stroke="#334155" stroke-width="1.5"/>
+    <rect x="36" y="86" width="34" height="42" rx="3" fill="url(#bar)"/>
+    <rect x="92" y="64" width="34" height="64" rx="3" fill="url(#bar)"/>
+    <rect x="148" y="74" width="34" height="54" rx="3" fill="url(#bar)"/>
+    <rect x="204" y="48" width="34" height="80" rx="3" fill="url(#bar)"/>
+    <circle cx="262" cy="36" r="16" fill="#064E3B" stroke="#34D399" stroke-width="2"/>
+    <path d="M255 36 l5 6 l9 -12" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- illustration: line chart with tick -->
+  <g transform="translate(450,360)">
+    <rect x="0" y="0" width="300" height="160" rx="14" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="20" y="32" fill="#34D399" font-size="14" font-weight="700" letter-spacing="1">ĐƯỜNG &#183; XU HƯỚNG</text>
+    <line x1="20" y1="128" x2="280" y2="128" stroke="#334155" stroke-width="1.5"/>
+    <polyline points="36,108 92,86 148,94 204,62 260,44" fill="none" stroke="#22D3EE" stroke-width="3"/>
+    <circle cx="36" cy="108" r="4" fill="#22D3EE"/>
+    <circle cx="92" cy="86" r="4" fill="#22D3EE"/>
+    <circle cx="148" cy="94" r="4" fill="#22D3EE"/>
+    <circle cx="204" cy="62" r="4" fill="#22D3EE"/>
+    <circle cx="260" cy="44" r="5" fill="#22D3EE"/>
+    <circle cx="262" cy="36" r="0" fill="none"/>
+  </g>
+  <!-- illustration: pie chart with X -->
+  <g transform="translate(790,360)">
+    <rect x="0" y="0" width="300" height="160" rx="14" fill="#0F172A" stroke="#7F1D1D" stroke-width="2"/>
+    <text x="20" y="32" fill="#F87171" font-size="14" font-weight="700" letter-spacing="1">TRÒN &#183; ĐỪNG LẠM DỤNG</text>
+    <g transform="translate(110,100)">
+      <circle r="50" fill="#334155"/>
+      <path d="M0 0 L0 -50 A50 50 0 0 1 43 25 Z" fill="#475569"/>
+      <path d="M0 0 L43 25 A50 50 0 0 1 -30 40 Z" fill="#64748B"/>
+      <path d="M0 0 L-30 40 A50 50 0 0 1 -47 -17 Z" fill="#52617A"/>
+    </g>
+    <g transform="translate(232,96)">
+      <circle r="18" fill="#450A0A" stroke="#F87171" stroke-width="2"/>
+      <path d="M-7 -7 l14 14 M7 -7 l-14 14" stroke="#F87171" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+  <!-- footer -->
+  <text x="80" y="572" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">HƯỚNG DẪN THỰC CHIẾN</text>
+  <g transform="translate(80,112)">
+    <rect x="0" y="0" width="196" height="34" rx="17" fill="#0B1120" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="20" y="23" fill="#22D3EE" font-size="15" font-weight="700" letter-spacing="1">SERIES &#183; PHẦN 3</text>
+  </g>
+  <text x="80" y="216" fill="#F1F5F9" font-size="48" font-weight="800">Dashboard hành động được</text>
+  <text x="80" y="262" fill="#94A3B8" font-size="25" font-weight="500">Bối cảnh, ngưỡng &amp; màu có chủ đích —</text>
+  <text x="80" y="294" fill="#94A3B8" font-size="25" font-weight="500">để mở ra là biết phải làm gì</text>
+  <g transform="translate(80,330)">
+    <rect x="0" y="0" width="1040" height="190" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="28" y="36" fill="#94A3B8" font-size="15" font-weight="700" letter-spacing="1">DASHBOARD SÁNG NAY</text>
+    <rect x="28" y="52" width="230" height="110" rx="10" fill="#162033" stroke="#1E293B"/>
+    <text x="48" y="80" fill="#64748B" font-size="14">Doanh thu hôm qua</text>
+    <text x="48" y="120" fill="#F1F5F9" font-size="34" font-weight="800">38 tr</text>
+    <text x="48" y="146" fill="#F87171" font-size="15" font-weight="700">&#9660; 12% vs thứ Bảy</text>
+    <rect x="278" y="52" width="230" height="110" rx="10" fill="#162033" stroke="#1E293B"/>
+    <text x="298" y="80" fill="#64748B" font-size="14">Đạt mục tiêu ngày</text>
+    <text x="298" y="120" fill="#F1F5F9" font-size="34" font-weight="800">76%</text>
+    <text x="298" y="146" fill="#FBBF24" font-size="15" font-weight="700">&#9679; dưới kế hoạch</text>
+    <rect x="528" y="52" width="266" height="110" rx="10" fill="#3B0D0D" stroke="#F87171" stroke-width="2.5"/>
+    <text x="548" y="80" fill="#FCA5A5" font-size="14" font-weight="700">Tồn hạt rang &#9888; VƯỢT NGƯỠNG</text>
+    <text x="548" y="120" fill="#FECACA" font-size="34" font-weight="800">6 ngày</text>
+    <text x="548" y="146" fill="#FCA5A5" font-size="15" font-weight="700">ngưỡng = 7 → đặt nhập ngay</text>
+    <g transform="translate(820,58)">
+      <rect x="0" y="62" width="26" height="38" rx="3" fill="url(#bar)"/>
+      <rect x="38" y="44" width="26" height="56" rx="3" fill="url(#bar)"/>
+      <rect x="76" y="74" width="26" height="26" rx="3" fill="#DC2626"/>
+      <rect x="114" y="34" width="26" height="66" rx="3" fill="url(#bar)"/>
+      <rect x="152" y="80" width="26" height="20" rx="3" fill="#DC2626"/>
+      <line x1="0" y1="100" x2="184" y2="100" stroke="#334155" stroke-width="1.5"/>
+      <text x="0" y="124" fill="#475569" font-size="13" font-weight="600">đỏ = dưới ngưỡng</text>
+    </g>
+  </g>
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
+</svg>

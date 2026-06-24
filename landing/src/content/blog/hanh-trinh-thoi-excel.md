@@ -1,4 +1,4 @@
----
+﻿---
 title: "Từ Excel đến Semantix (Phần 1): những năm bảng tính — và lúc Excel hết gánh nổi"
 code: "uc-008"
 series: "tu-excel-den-semantix"
@@ -9,7 +9,7 @@ category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Lê Anh Tuấn"
 authorTitle: "Nhà sáng lập Semantix"
-featured: false
+featured: true
 cover: "/blog/covers/hanh-trinh-thoi-excel.svg"
 coverAlt: "Chồng file Excel quá tải, công thức VLOOKUP gãy, và nhiều phiên bản báo cáo lẫn lộn"
 ---

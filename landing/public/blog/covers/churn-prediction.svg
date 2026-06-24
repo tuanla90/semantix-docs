@@ -1,0 +1,45 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="flag" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F87171"/>
+      <stop offset="1" stop-color="#EF4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <!-- title -->
+  <text x="80" y="162" fill="#F1F5F9" font-size="50" font-weight="800">Churn prediction</text>
+  <text x="80" y="214" fill="#94A3B8" font-size="26" font-weight="500">Nhận ra khách sắp rời đi —</text>
+  <text x="80" y="248" fill="#94A3B8" font-size="26" font-weight="500">trước khi họ thật sự rời</text>
+  <!-- illustration: widening purchase gaps + red flag -->
+  <g transform="translate(80,360)">
+    <text x="0" y="-18" fill="#64748B" font-size="16" font-weight="700" letter-spacing="1">KHOẢNG CÁCH GIỮA CÁC LẦN MUA GIÃN DẦN</text>
+    <line x1="0" y1="60" x2="1040" y2="60" stroke="#334155" stroke-width="2"/>
+    <!-- even, healthy purchases -->
+    <circle cx="40" cy="60" r="11" fill="#22D3EE"/>
+    <circle cx="150" cy="60" r="11" fill="#22D3EE"/>
+    <circle cx="260" cy="60" r="11" fill="#22D3EE"/>
+    <text x="95" y="38" fill="#34D399" font-size="15" font-weight="700" text-anchor="middle">~30 ngày</text>
+    <text x="205" y="38" fill="#34D399" font-size="15" font-weight="700" text-anchor="middle">~30 ngày</text>
+    <!-- widening -->
+    <circle cx="420" cy="60" r="11" fill="#FBBF24"/>
+    <text x="340" y="38" fill="#FBBF24" font-size="15" font-weight="700" text-anchor="middle">45 ngày</text>
+    <circle cx="640" cy="60" r="11" fill="#F59E0B"/>
+    <text x="530" y="38" fill="#F59E0B" font-size="15" font-weight="700" text-anchor="middle">65 ngày &amp; giãn</text>
+    <!-- danger zone -->
+    <line x1="640" y1="60" x2="1040" y2="60" stroke="#7F1D1D" stroke-width="2" stroke-dasharray="8 8"/>
+    <text x="840" y="38" fill="#F87171" font-size="15" font-weight="700" text-anchor="middle">90+ ngày, im ắng</text>
+    <!-- red flag -->
+    <line x1="940" y1="60" x2="940" y2="-46" stroke="#F87171" stroke-width="4"/>
+    <path d="M940 -44 L1010 -24 L940 0 Z" fill="url(#flag)"/>
+    <text x="940" y="100" fill="#F87171" font-size="17" font-weight="800" text-anchor="middle">CỜ NGUY CƠ RỜI</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

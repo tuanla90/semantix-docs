@@ -1,0 +1,45 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">PHÂN TÍCH DỮ LIỆU</text>
+  <!-- title -->
+  <text x="80" y="158" fill="#F1F5F9" font-size="48" font-weight="800">Vintage analysis: đọc chất lượng</text>
+  <text x="80" y="212" fill="#F1F5F9" font-size="48" font-weight="800">theo &#8220;lứa&#8221;</text>
+  <text x="80" y="262" fill="#94A3B8" font-size="25" font-weight="500">So các lứa ở cùng tuổi đời — từ khoản vay tới lứa khách</text>
+  <!-- chart panel -->
+  <g transform="translate(80,310)">
+    <rect x="0" y="0" width="1040" height="210" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="24" y="34" fill="#64748B" font-size="15" font-weight="700" letter-spacing="1">NỢ XẤU THEO LỨA &amp; TUỔI ĐỜI</text>
+    <!-- axes -->
+    <line x1="60" y1="170" x2="980" y2="170" stroke="#334155" stroke-width="1.5"/>
+    <line x1="60" y1="58" x2="60" y2="170" stroke="#334155" stroke-width="1.5"/>
+    <!-- age ticks -->
+    <text x="60" y="192" fill="#64748B" font-size="13" text-anchor="middle">3t</text>
+    <text x="290" y="192" fill="#64748B" font-size="13" text-anchor="middle">6t</text>
+    <text x="520" y="192" fill="#64748B" font-size="13" text-anchor="middle">9t</text>
+    <text x="750" y="192" fill="#64748B" font-size="13" text-anchor="middle">12t</text>
+    <text x="420" y="208" fill="#475569" font-size="13" text-anchor="middle">tuổi đời (tháng) →</text>
+    <!-- lứa cũ (cao = nợ xấu nhiều) -->
+    <polyline points="60,138 290,108 520,82 750,66" fill="none" stroke="#ef4444" stroke-width="3"/>
+    <circle cx="750" cy="66" r="5" fill="#ef4444"/>
+    <text x="768" y="70" fill="#ef4444" font-size="14" font-weight="700">Lứa cũ</text>
+    <!-- lứa giữa -->
+    <polyline points="60,148 290,120 520,96" fill="none" stroke="#f59e0b" stroke-width="3"/>
+    <circle cx="520" cy="96" r="5" fill="#f59e0b"/>
+    <!-- lứa mới hơn -->
+    <polyline points="60,154 290,132" fill="none" stroke="#22d3ee" stroke-width="3"/>
+    <circle cx="290" cy="132" r="5" fill="#22d3ee"/>
+    <!-- lứa mới nhất (thấp = tốt) -->
+    <circle cx="60" cy="160" r="5" fill="#10b981"/>
+    <text x="78" y="164" fill="#10b981" font-size="14" font-weight="700">Lứa mới — thấp hơn ở cùng tuổi, tức tốt hơn</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

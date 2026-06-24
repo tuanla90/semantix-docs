@@ -64,7 +64,7 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | kt-010 | Dữ liệu bẩn: vì sao 80% thời gian phân tích là dọn dẹp, không phải phân tích | ✅ | `du-lieu-ban` |
 | kt-011 | ETL vs ELT: đưa data về một chỗ mà không cần biết một dòng code | ✅ | `etl-vs-elt` |
 | kt-012 | Đưa data cho AI có an toàn không? Ai thấy gì, lưu ở đâu, ai kiểm soát | ✅ | `data-cho-ai-an-toan` |
-| kt-013 | OLTP vs OLAP: vì sao đừng chạy báo cáo thẳng trên database bán hàng | 🟡 | khái niệm nền tảng; gắn data-warehouse-sme |
+| kt-013 | OLTP vs OLAP: vì sao đừng chạy báo cáo thẳng trên database bán hàng | ✅ | `oltp-vs-olap` |
 | kt-014 | Data modeling (fact & dimension): cách sắp bảng quyết định câu hỏi hỏi được | ✅ | `data-modeling-fact-dimension` |
 | kt-015 | Data governance: ai sở hữu con số & ai chịu trách nhiệm khi nó sai | ⚪ | khái niệm nền tảng |
 | kt-016 | Bảo vệ dữ liệu cá nhân (Nghị định 13/2023): SME thu data khách cần biết gì | 🟡 | bối cảnh pháp lý VN |
@@ -91,13 +91,13 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | pt-006 | Funnel Analysis: tìm chỗ rò rỉ trong phễu bán hàng | ✅ | `funnel-analysis` |
 | pt-007 | Pareto 80/20: 20% sản phẩm nào nuôi 80% lợi nhuận | ✅ | `pareto-80-20` |
 | pt-008 | Đọc tăng trưởng đúng cách: MoM, YoY và bẫy số liệu | 🟡 | advanced-analysis |
-| pt-009 | Anomaly detection: tự phát hiện bất thường doanh thu | ⚪ | FEATURE_PLAN (F34), notifications |
-| pt-010 | Vintage analysis cho tài chính & cho vay | ⚪ | advanced-analysis |
+| pt-009 | Anomaly detection: tự phát hiện bất thường doanh thu | ✅ | `anomaly-detection` |
+| pt-010 | Vintage analysis cho tài chính & cho vay | ✅ | `vintage-analysis` |
 | pt-011 | Market Basket: sản phẩm nào "đi cùng nhau" — và cách bán kèm đúng | 🟡 | ai-chat/advanced-analysis |
-| pt-012 | Churn prediction: nhận ra khách sắp rời đi trước khi họ rời | 🟡 | advanced-analysis, cohort |
+| pt-012 | Churn prediction: nhận ra khách sắp rời đi trước khi họ rời | ✅ | `churn-prediction` |
 | pt-013 | Giỏ hàng bỏ quên: tiền đang nằm ngay trước cửa checkout | ⚪ | funnel, ai-chat |
 | pt-014 | Mùa vụ & Tết: đọc seasonality để không vừa cháy hàng vừa tồn kho | ⚪ | advanced-analysis |
-| pt-015 | ABC inventory: 20% mã hàng giữ 80% vốn tồn — đừng quản như nhau | ⚪ | advanced-analysis |
+| pt-015 | ABC inventory: 20% mã hàng giữ 80% vốn tồn — đừng quản như nhau | ✅ | `abc-inventory` |
 | pt-016 | RFM nâng cao: scoring lệch, 11 nhóm, ma trận dịch chuyển | ✅ | `rfm-nang-cao` |
 | pt-019 | Growth Accounting (Phần 3): từ user sang tiền — Net Dollar Retention | ✅ | `growth-accounting-revenue` |
 | pt-017 | Growth Accounting (Phần 2): Quick Ratio — nhịp tim tăng trưởng | ✅ | `growth-accounting-quick-ratio` |
@@ -122,6 +122,8 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | pt-037 | Thử nghiệm (Series · P1): HiPPO vs bằng chứng | ✅ | `hippo-vs-thu-nghiem` |
 | pt-038 | Thử nghiệm (P2): thiết kế A/B test đúng cho SME | ✅ | `thiet-ke-ab-test` |
 | pt-039 | Thử nghiệm (P3): đọc kết quả test không tự lừa mình | ✅ | `doc-ket-qua-ab-test` |
+| pt-047 | Tương quan & hồi quy: đo độ mạnh quan hệ + định lượng/dự đoán bằng hồi quy | ✅ | `correlation-regression` |
+| pt-049 | Sentiment Analysis: biến kho review tiếng Việt thành tín hiệu cảnh báo sớm | ✅ | `sentiment-analysis` |
 
 ### 3 — Hướng Dẫn Thực Chiến (`hd`)
 | Mã | Tiêu đề | Tier | Slug / Nguồn |

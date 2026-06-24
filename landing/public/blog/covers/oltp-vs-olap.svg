@@ -1,0 +1,65 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="oltp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+    <linearGradient id="olap" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <text x="80" y="160" fill="#F1F5F9" font-size="48" font-weight="800">OLTP vs OLAP</text>
+  <text x="80" y="210" fill="#94A3B8" font-size="25" font-weight="500">Vì sao đừng chạy báo cáo nặng</text>
+  <text x="80" y="244" fill="#94A3B8" font-size="25" font-weight="500">thẳng trên database bán hàng</text>
+  <!-- LEFT: OLTP transaction DB, many small writes -->
+  <g transform="translate(80,300)">
+    <rect x="0" y="0" width="430" height="230" rx="14" fill="#0F172A" stroke="#3F2D12" stroke-width="2"/>
+    <text x="24" y="36" fill="#FBBF24" font-size="16" font-weight="700" letter-spacing="1">OLTP &#8212; DB GIAO DỊCH</text>
+    <text x="24" y="58" fill="#64748B" font-size="13" font-weight="500">App bán hàng &#183; nhiều ghi nhỏ, nhanh</text>
+    <!-- cylinder db -->
+    <g transform="translate(40,86)">
+      <ellipse cx="44" cy="14" rx="44" ry="14" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <path d="M0 14 L0 96 A44 14 0 0 0 88 96 L88 14" fill="#162033" stroke="#475569" stroke-width="1.5"/>
+      <ellipse cx="44" cy="96" rx="44" ry="14" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    </g>
+    <!-- many tiny write rows -->
+    <g transform="translate(190,84)">
+      <rect x="0" y="0" width="200" height="16" rx="3" fill="url(#oltp)" opacity="0.9"/>
+      <rect x="0" y="24" width="200" height="16" rx="3" fill="url(#oltp)" opacity="0.75"/>
+      <rect x="0" y="48" width="200" height="16" rx="3" fill="url(#oltp)" opacity="0.6"/>
+      <rect x="0" y="72" width="200" height="16" rx="3" fill="url(#oltp)" opacity="0.45"/>
+      <rect x="0" y="96" width="200" height="16" rx="3" fill="url(#oltp)" opacity="0.3"/>
+      <text x="0" y="134" fill="#FBBF24" font-size="13" font-weight="700">ghi 1 đơn &#183; trừ 1 tồn kho</text>
+    </g>
+  </g>
+  <!-- VS badge -->
+  <g transform="translate(600,415)">
+    <circle r="34" fill="#0B1120" stroke="#22D3EE" stroke-width="2"/>
+    <text x="0" y="11" fill="#22D3EE" font-size="26" font-weight="800" text-anchor="middle">vs</text>
+  </g>
+  <!-- RIGHT: OLAP analytics DB, big aggregation -->
+  <g transform="translate(690,300)">
+    <rect x="0" y="0" width="430" height="230" rx="14" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="24" y="36" fill="#34D399" font-size="16" font-weight="700" letter-spacing="1">OLAP &#8212; DB PHÂN TÍCH</text>
+    <text x="24" y="58" fill="#64748B" font-size="13" font-weight="500">Tổng hợp lớn &#183; cắt lát nhiều chiều</text>
+    <!-- big aggregate bars -->
+    <g transform="translate(40,92)">
+      <line x1="0" y1="96" x2="360" y2="96" stroke="#334155" stroke-width="1.5"/>
+      <rect x="20" y="56" width="46" height="40" rx="4" fill="url(#olap)"/>
+      <rect x="92" y="30" width="46" height="66" rx="4" fill="url(#olap)"/>
+      <rect x="164" y="46" width="46" height="50" rx="4" fill="url(#olap)"/>
+      <rect x="236" y="14" width="46" height="82" rx="4" fill="url(#olap)"/>
+      <rect x="308" y="38" width="46" height="58" rx="4" fill="url(#olap)"/>
+      <text x="0" y="128" fill="#34D399" font-size="13" font-weight="700">doanh thu &#215; chi nhánh &#215; tháng</text>
+    </g>
+  </g>
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">SO SÁNH &amp; LỰA CHỌN</text>
+  <!-- title -->
+  <text x="80" y="158" fill="#F1F5F9" font-size="48" font-weight="800">Tự dựng BI hay mua sẵn?</text>
+  <text x="80" y="210" fill="#94A3B8" font-size="26" font-weight="500">Bài toán build-vs-buy cho SME —</text>
+  <text x="80" y="244" fill="#94A3B8" font-size="26" font-weight="500">và cái hoá đơn thật chỉ đến sau</text>
+  <!-- LEFT: build it yourself (toolbox + gears) -->
+  <g transform="translate(80,300)">
+    <rect x="0" y="0" width="440" height="230" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="24" y="36" fill="#94A3B8" font-size="16" font-weight="700" letter-spacing="1">TỰ DỰNG</text>
+    <text x="24" y="58" fill="#64748B" font-size="14">ghép công cụ + tự bảo trì</text>
+    <!-- gear 1 -->
+    <g transform="translate(140,140)" fill="#475569">
+      <circle r="46" fill="none" stroke="#475569" stroke-width="16"/>
+      <circle r="16" fill="#0F172A" stroke="#475569" stroke-width="6"/>
+      <rect x="-8" y="-60" width="16" height="18"/>
+      <rect x="-8" y="42" width="16" height="18"/>
+      <rect x="-60" y="-8" width="18" height="16"/>
+      <rect x="42" y="-8" width="18" height="16"/>
+    </g>
+    <!-- gear 2 -->
+    <g transform="translate(232,180)" fill="#334155">
+      <circle r="32" fill="none" stroke="#334155" stroke-width="12"/>
+      <circle r="11" fill="#0F172A" stroke="#334155" stroke-width="5"/>
+      <rect x="-6" y="-42" width="12" height="13"/>
+      <rect x="-6" y="29" width="12" height="13"/>
+      <rect x="-42" y="-6" width="13" height="12"/>
+      <rect x="29" y="-6" width="13" height="12"/>
+    </g>
+    <!-- wrench -->
+    <g transform="translate(330,110) rotate(35)" fill="#64748B">
+      <rect x="-7" y="-4" width="70" height="14" rx="6"/>
+      <circle cx="-10" cy="3" r="15"/>
+      <circle cx="-10" cy="3" r="7" fill="#0F172A"/>
+    </g>
+    <text x="24" y="206" fill="#F87171" font-size="14" font-weight="600">chậm • bus-factor • lương người</text>
+  </g>
+  <!-- VS badge -->
+  <g transform="translate(600,415)">
+    <circle r="34" fill="#0B1120" stroke="#22D3EE" stroke-width="2"/>
+    <text x="0" y="11" fill="#22D3EE" font-size="26" font-weight="800" text-anchor="middle">vs</text>
+  </g>
+  <!-- RIGHT: buy ready (delivered box) -->
+  <g transform="translate(680,300)">
+    <rect x="0" y="0" width="440" height="230" rx="14" fill="#0F172A" stroke="#164E45" stroke-width="2"/>
+    <text x="24" y="36" fill="#34D399" font-size="16" font-weight="700" letter-spacing="1">MUA SẴN</text>
+    <text x="24" y="58" fill="#64748B" font-size="14">cắm vào là chạy</text>
+    <!-- delivered box -->
+    <g transform="translate(150,90)">
+      <rect x="0" y="40" width="160" height="100" rx="8" fill="#16361F" stroke="#34D399" stroke-width="2"/>
+      <path d="M0 40 L80 10 L240 10 L160 40 Z" fill="#1E4D3A" stroke="#34D399" stroke-width="2"/>
+      <path d="M160 40 L240 10 L240 110 L160 140 Z" fill="#123026" stroke="#34D399" stroke-width="2"/>
+      <line x1="80" y1="40" x2="80" y2="140" stroke="#34D399" stroke-width="1.5" opacity="0.5"/>
+      <text x="80" y="100" fill="#86EFAC" font-size="30" font-weight="800" text-anchor="middle">✓</text>
+    </g>
+    <text x="24" y="206" fill="#34D399" font-size="14" font-weight="600">nhanh • chi phí biết trước • có hỗ trợ</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

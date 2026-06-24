@@ -173,9 +173,10 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | ss-008 | Semantix vs WrenAI/text-to-SQL thuần: vì sao cần Semantic Layer | ✅ | `vs-wrenai-text2sql` |
 | ss-009 | "Miễn phí" thường đắt nhất: tổng chi phí sở hữu (TCO) của một công cụ BI | ✅ | `tco-cong-cu-bi` |
 | ss-010 | Checklist chọn công cụ BI cho SME: 7 câu hỏi trước khi trả tiền | ✅ | `checklist-chon-bi-cho-sme` |
-| ss-011 | Tự dựng in-house vs mua sẵn: bài toán build-vs-buy cho BI | ⚪ | business_research |
+| ss-011 | Tự dựng in-house vs mua sẵn: build-vs-buy cho SME | ✅ | `build-vs-buy-bi` |
 | ss-012 | Semantix vs Looker Studio (Data Studio) — 'miễn phí, trả bằng gì' | ✅ | `vs-looker-studio` |
 | ss-013 | Semantix vs dashboard sẵn trong Shopee/TikTok/KiotViet | ✅ | `vs-dashboard-saas-co-san` |
+| ss-014 | Looker Studio Pro vs Semantix: Pro thêm gì + so giá | ✅ | `vs-looker-studio-pro` |
 
 ## D. Việc cần làm tiếp (🔴 chưa viết)
 

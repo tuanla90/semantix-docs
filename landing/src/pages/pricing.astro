@@ -16,7 +16,7 @@ const plans = [
       { label: '50 câu hỏi AI / tháng', ok: true },
       { label: 'Xem dashboard mẫu', ok: true },
       { label: 'Database thực (PostgreSQL, MySQL…)', ok: false },
-      { label: 'Đồng bộ đa kênh bán hàng', ok: false },
+      { label: 'Gộp dữ liệu đa nguồn (bảng ảo)', ok: false },
       { label: 'Cảnh báo Zalo / Telegram', ok: false },
       { label: 'Xuất báo cáo PowerPoint', ok: false },
     ],
@@ -32,7 +32,7 @@ const plans = [
     badge: 'Bán Chạy Nhất',
     features: [
       { label: 'Google Sheets + 3 database', ok: true },
-      { label: 'Đồng bộ Shopee, TikTok Shop, KiotViet', ok: true },
+      { label: 'Nối & gộp dữ liệu đa nguồn (mapping + union)', ok: true },
       { label: '3 AI Assistants', ok: true },
       { label: '300 câu hỏi AI / tháng', ok: true },
       { label: 'Dashboard kéo thả + chia sẻ link', ok: true },
@@ -53,7 +53,7 @@ const plans = [
     highlight: false,
     features: [
       { label: 'Tất cả nguồn dữ liệu (10+)', ok: true },
-      { label: 'Đồng bộ đa kênh không giới hạn', ok: true },
+      { label: 'Gộp đa nguồn không giới hạn (bảng ảo)', ok: true },
       { label: '5 AI Assistants', ok: true },
       { label: 'Câu hỏi AI không giới hạn', ok: true },
       { label: 'Từ điển Doanh nghiệp (Semantic Layer)', ok: true },
@@ -89,7 +89,7 @@ const plans = [
 
 const compRows = [
   { label: 'Nguồn dữ liệu kết nối', free: 'Google Sheets', std: 'Sheets + 3 DB', pro: '10+ loại', ent: '10+ + tuỳ chỉnh' },
-  { label: 'Đồng bộ đa kênh (Shopee, KiotViet…)', free: '—', std: '3 kênh', pro: 'Không giới hạn', ent: 'Không giới hạn' },
+  { label: 'Nối & gộp đa nguồn (mapping + union)', free: '—', std: '✓', pro: '✓', ent: '✓' },
   { label: 'AI Assistants', free: '1', std: '3', pro: '5', ent: 'Không giới hạn' },
   { label: 'Câu hỏi AI / tháng', free: '50', std: '300', pro: 'Không giới hạn', ent: 'Không giới hạn' },
   { label: 'Dashboard kéo thả', free: '—', std: '✓', pro: '✓', ent: '✓' },

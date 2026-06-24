@@ -70,6 +70,11 @@ Nguyên tắc tone: *"viết cho người làm, không phải người nghiên c
 | kt-016 | Bảo vệ dữ liệu cá nhân (Nghị định 13/2023): SME thu data khách cần biết gì | 🟡 | bối cảnh pháp lý VN |
 | kt-017 | Embedding & vector search: vì sao AI hiểu câu gần nghĩa — nền tảng dưới RAG | ✅ | `embedding-vector-search` |
 | kt-027 | Data Lake vs Data Warehouse: SME cần cái nào và khi nào | ✅ | `data-lake-vs-warehouse` |
+| kt-028 | Thống kê mô tả (Series · P1): độ lệch chuẩn & phương sai | ✅ | `do-lech-chuan` |
+| kt-029 | Thống kê mô tả (P2): phân vị P50/P90/P99 | ✅ | `phan-vi-percentile` |
+| kt-030 | Thống kê mô tả (P3): đọc hình dạng phân phối | ✅ | `doc-hinh-dang-phan-phoi` |
+| kt-031 | Thống kê mô tả (P4): phần trăm vs điểm phần trăm | ✅ | `phan-tram-vs-diem-phan-tram` |
+| kt-032 | Thống kê mô tả (P5): trung bình có trọng số | ✅ | `trung-binh-co-trong-so` |
 | kt-018 | Tư duy dựa trên dữ liệu là gì (Series Tư duy dữ liệu · P1) | ✅ | `tu-duy-du-lieu-la-gi` |
 | kt-019 | Bắt đầu từ câu hỏi, không từ dữ liệu (P2) | ✅ | `bat-dau-tu-cau-hoi` |
 | kt-020 | Tín hiệu vs nhiễu (P7) | ✅ | `tin-hieu-vs-nhieu` |

@@ -1,0 +1,82 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="86" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <!-- series badge -->
+  <g transform="translate(80,104)">
+    <rect x="0" y="0" width="196" height="34" rx="17" fill="#0F172A" stroke="#164E45" stroke-width="1.5"/>
+    <text x="22" y="23" fill="#34D399" font-size="15" font-weight="700" letter-spacing="1">SERIES &#183; PHẦN 3</text>
+  </g>
+  <!-- title -->
+  <text x="80" y="206" fill="#F1F5F9" font-size="48" font-weight="800">Đọc hình dạng phân phối</text>
+  <text x="80" y="258" fill="#94A3B8" font-size="25" font-weight="500">Một con số trung bình giấu sạch —</text>
+  <text x="80" y="292" fill="#94A3B8" font-size="25" font-weight="500">hình dạng thật mới kể câu chuyện</text>
+  <!-- four mini histograms -->
+  <g transform="translate(80,340)">
+    <!-- panel 1: chuẩn -->
+    <g transform="translate(0,0)">
+      <rect x="0" y="0" width="252" height="180" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+      <text x="20" y="32" fill="#64748B" font-size="15" font-weight="700" letter-spacing="1">CHUẨN</text>
+      <line x1="20" y1="150" x2="232" y2="150" stroke="#334155" stroke-width="1.5"/>
+      <rect x="32"  y="128" width="22" height="22" fill="url(#bar)"/>
+      <rect x="60"  y="108" width="22" height="42" fill="url(#bar)"/>
+      <rect x="88"  y="78"  width="22" height="72" fill="url(#bar)"/>
+      <rect x="116" y="62"  width="22" height="88" fill="url(#bar)"/>
+      <rect x="144" y="78"  width="22" height="72" fill="url(#bar)"/>
+      <rect x="172" y="108" width="22" height="42" fill="url(#bar)"/>
+      <rect x="200" y="128" width="22" height="22" fill="url(#bar)"/>
+    </g>
+    <!-- panel 2: lệch -->
+    <g transform="translate(272,0)">
+      <rect x="0" y="0" width="252" height="180" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+      <text x="20" y="32" fill="#64748B" font-size="15" font-weight="700" letter-spacing="1">LỆCH PHẢI</text>
+      <line x1="20" y1="150" x2="232" y2="150" stroke="#334155" stroke-width="1.5"/>
+      <rect x="32"  y="58"  width="22" height="92" fill="url(#bar)"/>
+      <rect x="60"  y="74"  width="22" height="76" fill="url(#bar)"/>
+      <rect x="88"  y="98"  width="22" height="52" fill="url(#bar)"/>
+      <rect x="116" y="116" width="22" height="34" fill="url(#bar)"/>
+      <rect x="144" y="128" width="22" height="22" fill="url(#bar)"/>
+      <rect x="172" y="136" width="22" height="14" fill="url(#bar)"/>
+      <rect x="200" y="140" width="22" height="10" fill="url(#bar)"/>
+    </g>
+    <!-- panel 3: đuôi dài -->
+    <g transform="translate(544,0)">
+      <rect x="0" y="0" width="252" height="180" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+      <text x="20" y="32" fill="#64748B" font-size="15" font-weight="700" letter-spacing="1">ĐUÔI DÀI</text>
+      <line x1="20" y1="150" x2="232" y2="150" stroke="#334155" stroke-width="1.5"/>
+      <rect x="32"  y="56"  width="22" height="94" fill="url(#bar)"/>
+      <rect x="60"  y="104" width="22" height="46" fill="url(#bar)"/>
+      <rect x="88"  y="126" width="22" height="24" fill="url(#bar)"/>
+      <rect x="116" y="136" width="22" height="14" fill="url(#bar)"/>
+      <rect x="144" y="142" width="22" height="8"  fill="url(#bar)"/>
+      <rect x="172" y="145" width="22" height="5"  fill="#F87171"/>
+      <rect x="200" y="146" width="22" height="4"  fill="#F87171"/>
+    </g>
+    <!-- panel 4: hai đỉnh -->
+    <g transform="translate(816,0)">
+      <rect x="0" y="0" width="252" height="180" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+      <text x="20" y="32" fill="#64748B" font-size="15" font-weight="700" letter-spacing="1">HAI ĐỈNH</text>
+      <line x1="20" y1="150" x2="232" y2="150" stroke="#334155" stroke-width="1.5"/>
+      <rect x="32"  y="92"  width="22" height="58" fill="url(#bar)"/>
+      <rect x="60"  y="64"  width="22" height="86" fill="url(#bar)"/>
+      <rect x="88"  y="96"  width="22" height="54" fill="url(#bar)"/>
+      <rect x="116" y="124" width="22" height="26" fill="#475569"/>
+      <rect x="144" y="96"  width="22" height="54" fill="url(#bar)"/>
+      <rect x="172" y="68"  width="22" height="82" fill="url(#bar)"/>
+      <rect x="200" y="98"  width="22" height="52" fill="url(#bar)"/>
+    </g>
+  </g>
+  <!-- footer -->
+  <text x="80" y="572" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
+</svg>

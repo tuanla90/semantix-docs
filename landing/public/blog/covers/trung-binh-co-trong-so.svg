@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="big" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#0E7490"/>
+    </linearGradient>
+    <linearGradient id="small" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#B45309"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <text x="80" y="86" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <g transform="translate(80,108)">
+    <rect x="0" y="0" width="262" height="38" rx="19" fill="#0B1120" stroke="#334155" stroke-width="1.5"/>
+    <text x="22" y="25" fill="#94A3B8" font-size="16" font-weight="700" letter-spacing="1">SERIES &#183; PHẦN 5 (CUỐI)</text>
+  </g>
+  <text x="80" y="216" fill="#F1F5F9" font-size="50" font-weight="800">Trung bình có trọng số</text>
+  <text x="80" y="268" fill="#94A3B8" font-size="25" font-weight="500">Vì sao bình quân các tỉ lệ là một cái bẫy —</text>
+  <text x="80" y="302" fill="#94A3B8" font-size="25" font-weight="500">và nhóm to luôn kéo con số về phía nó</text>
+  <g transform="translate(600,470)">
+    <line x1="-380" y1="0" x2="380" y2="0" stroke="#1E293B" stroke-width="2"/>
+    <line x1="0" y1="-92" x2="0" y2="40" stroke="#94A3B8" stroke-width="4"/>
+    <polygon points="0,40 -30,72 30,72" fill="#475569"/>
+    <line x1="-300" y1="-72" x2="300" y2="-30" stroke="#64748B" stroke-width="5" stroke-linecap="round"/>
+    <g transform="translate(-300,-72)">
+      <rect x="-110" y="0" width="220" height="96" rx="10" fill="url(#big)" opacity="0.22" stroke="#22D3EE" stroke-width="2"/>
+      <text x="0" y="38" fill="#67E8F9" font-size="22" font-weight="800" text-anchor="middle">Nhóm TO · 2%</text>
+      <text x="0" y="70" fill="#94A3B8" font-size="17" text-anchor="middle">10.000 lượt &#183; nặng</text>
+    </g>
+    <g transform="translate(300,-30)">
+      <rect x="-66" y="0" width="132" height="60" rx="10" fill="url(#small)" opacity="0.22" stroke="#FBBF24" stroke-width="2"/>
+      <text x="0" y="26" fill="#FCD34D" font-size="18" font-weight="800" text-anchor="middle">nhỏ · 10%</text>
+      <text x="0" y="48" fill="#94A3B8" font-size="14" text-anchor="middle">100 lượt &#183; nhẹ</text>
+    </g>
+    <text x="0" y="105" fill="#4ADE80" font-size="22" font-weight="800" text-anchor="middle">Trung bình thật &#8776; 2,08% &#8212; không phải 6%</text>
+  </g>
+  <text x="80" y="572" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
+</svg>

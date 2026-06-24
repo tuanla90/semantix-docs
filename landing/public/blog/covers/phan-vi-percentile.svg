@@ -1,0 +1,48 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="good" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <text x="80" y="86" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <g transform="translate(80,104)">
+    <rect x="0" y="0" width="196" height="34" rx="17" fill="#0F172A" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="98" y="23" fill="#22D3EE" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="1">SERIES &#183; PHẦN 2</text>
+  </g>
+  <text x="80" y="208" fill="#F1F5F9" font-size="50" font-weight="800">Phân vị P50 / P90 / P99</text>
+  <text x="80" y="256" fill="#94A3B8" font-size="25" font-weight="500">Vì sao đo bằng trung bình là tự lừa —</text>
+  <text x="80" y="290" fill="#94A3B8" font-size="25" font-weight="500">cái đuôi xấu mới là chỗ khách rời bỏ</text>
+  <g transform="translate(80,330)">
+    <line x1="0" y1="170" x2="1040" y2="170" stroke="#334155" stroke-width="1.5"/>
+    <rect x="20"  y="120" width="46" height="50"  rx="4" fill="#34D399"/>
+    <rect x="74"  y="78"  width="46" height="92"  rx="4" fill="#34D399"/>
+    <rect x="128" y="56"  width="46" height="114" rx="4" fill="#34D399"/>
+    <rect x="182" y="88"  width="46" height="82"  rx="4" fill="#34D399"/>
+    <rect x="236" y="116" width="46" height="54"  rx="4" fill="#34D399"/>
+    <rect x="290" y="134" width="46" height="36"  rx="4" fill="#64748B"/>
+    <rect x="344" y="146" width="46" height="24"  rx="4" fill="#64748B"/>
+    <rect x="398" y="152" width="46" height="18"  rx="4" fill="#F59E0B"/>
+    <rect x="452" y="156" width="46" height="14"  rx="4" fill="#F59E0B"/>
+    <rect x="506" y="158" width="46" height="12"  rx="4" fill="#F87171"/>
+    <rect x="560" y="160" width="46" height="10"  rx="4" fill="#F87171"/>
+    <rect x="614" y="161" width="46" height="9"   rx="4" fill="#F87171"/>
+    <rect x="668" y="162" width="46" height="8"   rx="4" fill="#F87171"/>
+    <rect x="722" y="163" width="46" height="7"   rx="4" fill="#F87171"/>
+    <rect x="776" y="164" width="46" height="6"   rx="4" fill="#F87171"/>
+    <rect x="830" y="165" width="46" height="5"   rx="4" fill="#F87171"/>
+    <line x1="151" y1="30" x2="151" y2="174" stroke="#22D3EE" stroke-width="2.5" stroke-dasharray="6 5"/>
+    <text x="158" y="26" fill="#22D3EE" font-size="17" font-weight="700">P50</text>
+    <line x1="421" y1="30" x2="421" y2="174" stroke="#FBBF24" stroke-width="2.5" stroke-dasharray="6 5"/>
+    <text x="428" y="26" fill="#FBBF24" font-size="17" font-weight="700">P90</text>
+    <line x1="745" y1="30" x2="745" y2="174" stroke="#F87171" stroke-width="2.5" stroke-dasharray="6 5"/>
+    <text x="630" y="26" fill="#F87171" font-size="17" font-weight="700">P99 &#183; đuôi xấu</text>
+  </g>
+  <text x="80" y="568" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+</svg>

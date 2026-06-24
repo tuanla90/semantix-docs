@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#111A2E"/>
+      <stop offset="1" stop-color="#0A0F1C"/>
+    </linearGradient>
+    <linearGradient id="barFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- category label -->
+  <text x="80" y="92" fill="#22D3EE" font-size="20" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <!-- series badge -->
+  <g transform="translate(80,108)">
+    <rect x="0" y="0" width="186" height="34" rx="17" fill="#0F172A" stroke="#164E45" stroke-width="1.5"/>
+    <text x="93" y="23" fill="#34D399" font-size="15" font-weight="700" letter-spacing="1" text-anchor="middle">SERIES &#183; PHẦN 4</text>
+  </g>
+  <!-- title -->
+  <text x="80" y="208" fill="#F1F5F9" font-size="48" font-weight="800">Phần trăm vs điểm phần trăm</text>
+  <text x="80" y="256" fill="#94A3B8" font-size="25" font-weight="500">Lỗi diễn giải khiến bạn hiểu sai mọi báo cáo &#8212;</text>
+  <text x="80" y="290" fill="#94A3B8" font-size="25" font-weight="500">cùng một con số, hai câu chuyện ngược nhau</text>
+  <!-- illustration: 10% -> 12% bars -->
+  <g transform="translate(80,348)">
+    <rect x="0" y="0" width="1040" height="158" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+    <text x="28" y="40" fill="#64748B" font-size="16" font-weight="700" letter-spacing="1">TỶ LỆ CHUYỂN ĐỔI: 10% &#8594; 12%</text>
+    <!-- scale line -->
+    <line x1="28" y1="92" x2="560" y2="92" stroke="#334155" stroke-width="1.5"/>
+    <!-- old 10% bar -->
+    <rect x="28" y="74" width="280" height="20" rx="3" fill="#475569"/>
+    <text x="168" y="66" fill="#94A3B8" font-size="14" font-weight="700" text-anchor="middle">Cũ: 10%</text>
+    <!-- +2 extension -->
+    <rect x="308" y="74" width="56" height="20" rx="3" fill="url(#barFill)"/>
+    <text x="336" y="66" fill="#34D399" font-size="13" font-weight="800" text-anchor="middle">+2</text>
+    <text x="396" y="89" fill="#34D399" font-size="14" font-weight="700">= 12%</text>
+    <!-- absolute callout -->
+    <text x="28" y="130" fill="#22D3EE" font-size="17" font-weight="800">+2 ĐIỂM phần trăm</text>
+    <text x="270" y="130" fill="#64748B" font-size="14">(chênh lệch tuyệt đối)</text>
+    <!-- divider -->
+    <line x1="560" y1="40" x2="560" y2="128" stroke="#1E293B" stroke-width="1.5"/>
+    <!-- relative callout -->
+    <text x="600" y="74" fill="#F59E0B" font-size="34" font-weight="800">+20%</text>
+    <text x="600" y="104" fill="#94A3B8" font-size="15" font-weight="600">tăng tương đối (so với nền 10%)</text>
+    <text x="600" y="130" fill="#F87171" font-size="14" font-weight="700">&#8220;tăng 2%&#8221; &#8800; &#8220;tăng 2 điểm %&#8221;</text>
+  </g>
+  <!-- footer -->
+  <text x="80" y="566" fill="#475569" font-size="18" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
+</svg>

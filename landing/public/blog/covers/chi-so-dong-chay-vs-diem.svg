@@ -1,0 +1,53 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgKt040" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="flowKt040" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#818CF8" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#7DD3FC" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgKt040)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <text x="80" y="232" fill="#ffffff" font-size="52" font-weight="800">Dòng chảy &amp; điểm</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="29" font-weight="600">Cộng được? Hỏi: đo trong bao lâu</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: a flowing stream (measure flow over an interval) beside a water-level gauge at one point -->
+  <g transform="translate(700,150)">
+    <!-- flowing stream: measured over an interval -->
+    <text x="0" y="-10" fill="#7DD3FC" font-size="18" font-weight="700">DÒNG CHẢY · đo trong khoảng</text>
+    <path d="M0 40 C70 10 130 70 200 40 C270 10 330 70 400 40 L400 110 C330 140 270 80 200 110 C130 140 70 80 0 110 Z" fill="url(#flowKt040)"/>
+    <path d="M0 40 C70 10 130 70 200 40 C270 10 330 70 400 40" stroke="#7DD3FC" stroke-width="3" fill="none"/>
+    <path d="M0 110 C70 80 130 140 200 110 C270 80 330 140 400 110" stroke="#818CF8" stroke-width="2" fill="none" opacity="0.7"/>
+    <!-- interval brackets under the stream -->
+    <line x1="0" y1="150" x2="400" y2="150" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="142" x2="0" y2="158" stroke="#475569" stroke-width="2"/>
+    <line x1="400" y1="142" x2="400" y2="158" stroke="#475569" stroke-width="2"/>
+    <text x="200" y="176" fill="#94A3B8" font-size="16" text-anchor="middle">tháng 1 → tháng 12 · CỘNG được</text>
+    <!-- water-level gauge: measured at one point -->
+    <g transform="translate(60,230)">
+      <text x="0" y="-6" fill="#4ADE80" font-size="18" font-weight="700">ĐIỂM · đo tại một mốc</text>
+      <rect x="40" y="10" width="120" height="120" rx="8" fill="#0B1220" stroke="#334155"/>
+      <rect x="40" y="74" width="120" height="56" rx="0" fill="#1E293B"/>
+      <rect x="40" y="74" width="120" height="56" fill="#38BDF8" opacity="0.25"/>
+      <line x1="40" y1="74" x2="160" y2="74" stroke="#4ADE80" stroke-width="3"/>
+      <g stroke="#475569" stroke-width="1.5">
+        <line x1="160" y1="34" x2="176" y2="34"/>
+        <line x1="160" y1="54" x2="176" y2="54"/>
+        <line x1="160" y1="74" x2="184" y2="74"/>
+        <line x1="160" y1="94" x2="176" y2="94"/>
+        <line x1="160" y1="114" x2="176" y2="114"/>
+      </g>
+      <text x="196" y="79" fill="#4ADE80" font-size="16" font-weight="700">mực lúc này</text>
+      <text x="100" y="156" fill="#94A3B8" font-size="16" text-anchor="middle">cuối kỳ / trung bình · KHÔNG cộng</text>
+    </g>
+  </g>
+</svg>

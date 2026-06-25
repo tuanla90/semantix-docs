@@ -56,6 +56,8 @@ Bạn nhận ra confirmation bias khi thấy mình:
 
 > Quy tắc vàng: nếu mọi dữ liệu bạn xem đều đồng ý với bạn, vấn đề không phải bạn đúng — mà là bạn chưa tìm chỗ mình sai.
 
+Tệ hơn confirmation bias một bậc là khi số liệu ngược chiều đã nằm sẵn trên bàn mà ta vẫn lảng tránh — có cả [sáu cách rất quen để né một con số bất tiện](/blog/ne-so-lieu-bat-tien/) dù dữ liệu rành rành vẫn không đổi quyết định.
+
 Đây cũng là gốc rễ của nhiều [sai lầm kinh điển khi phân tích dữ liệu](/blog/sai-lam-khi-phan-tich-du-lieu/): không phải kỹ thuật yếu, mà là câu hỏi đã thiên vị trước khi một dòng SQL nào được chạy.
 
 ## Thiên kiến kẻ sống sót: chỉ nhìn người thắng, quên người đã biến mất

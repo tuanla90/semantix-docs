@@ -1,6 +1,6 @@
 ---
 title: "Inmon vs Kimball: xây kho dữ liệu từ trên xuống, hay từ dưới lên?"
-code: "kt-040"
+code: "kt-045"
 description: "Kimball dựng nhanh từng phòng ban rồi ghép lại. Inmon dựng một kho chuẩn hoá cho cả công ty trước, rồi mới chia. Hai triết lý trái ngược — chọn sai có thể tốn hàng năm."
 pubDate: 2027-07-31
 category: "Kiến Thức Nền Tảng"
@@ -15,7 +15,7 @@ coverAlt: "Hai cách dựng kho dữ liệu: Inmon từ trên xuống (một kho
 ---
 
 <div class="series-nav">
-  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 9 phần</div>
   <ol>
     <li><a href="/blog/dimension-table-vs-dimension/">Phần 1 — Dimension vs Dimension table</a></li>
     <li><a href="/blog/star-vs-snowflake-schema/">Phần 2 — Star vs Snowflake schema</a></li>
@@ -25,8 +25,10 @@ coverAlt: "Hai cách dựng kho dữ liệu: Inmon từ trên xuống (một kho
     <li><a href="/blog/snapshot-table/">Phần 6 — Snapshot &amp; 3 loại fact</a></li>
     <li><a href="/blog/olap-cube-drill-pivot/">Phần 7 — OLAP cube: drill &amp; pivot</a></li>
     <li><a href="/blog/data-quality-la-gi/">Phần 8 — Data quality: 6 chiều</a></li>
+    <li><a href="/blog/data-mart-la-gi/">Phần 9 — Data mart cho từng phòng</a></li>
   </ol>
 </div>
+
 
 Ở [phần trước](/blog/kimball-dimensional-modeling/), chúng ta gặp Ralph Kimball: dựng từng *data mart* (kho dữ liệu nhỏ phục vụ một phòng ban) theo mô hình chiều, rồi ghép dần lại. Nhanh, thực dụng, hợp với người cần câu trả lời sớm. Nhưng có một trường phái đối lập — và nó không sai, chỉ là chọn một điểm bắt đầu khác hẳn.
 

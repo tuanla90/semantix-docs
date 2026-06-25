@@ -116,7 +116,7 @@ NRR là một bức ảnh chụp số phận của một nhóm khách theo thờ
 
 ## Tất cả nằm ở định nghĩa "doanh thu" — và đó là việc của Semantix
 
-Cả năm dòng tiền, NRR lẫn dollar Quick Ratio đều dựa trên một thứ tưởng hiển nhiên mà thật ra rất rối: **thế nào là "doanh thu" của một khách trong một kỳ?** Tính theo ngày ghi nhận hay ngày xuất hóa đơn? Doanh thu gộp hay đã trừ hoàn/hủy? Một khách hạ gói rồi mua thêm món lẻ — là expansion hay contraction? Trả lời lệch một câu, cả bảng growth accounting (kế toán tăng trưởng) lệch theo.
+Cả năm dòng tiền, NRR lẫn dollar Quick Ratio đều dựa trên một thứ tưởng hiển nhiên mà thật ra rất rối: **thế nào là "doanh thu" của một khách trong một kỳ?** Tính theo ngày ghi nhận hay ngày xuất hóa đơn? Doanh thu gộp hay đã trừ hoàn/hủy? Một khách hạ gói rồi mua thêm món lẻ — là expansion hay contraction? Trả lời lệch một câu, cả bảng growth accounting (kế toán tăng trưởng) lệch theo. Và nhớ rằng doanh thu ghi nhận chưa phải tiền về tài khoản — [doanh thu tăng mà dòng tiền vẫn cạn](/blog/dong-tien-vs-loi-nhuan/) là chuyện thường gặp.
 
 Semantix không phải một chatbot cắm thẳng vào database rồi đoán "doanh thu" là cột nào. Bạn định nghĩa "doanh thu", "khách hàng", "expansion" **một lần** trong [Semantic Layer](/blog/semantic-layer/) — chuẩn theo nghiệp vụ của chính bạn — rồi hỏi bằng tiếng Việt:
 

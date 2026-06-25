@@ -75,7 +75,7 @@ Mean = 1.040k. Median = 155k. Chị chủ shop tin vào mean và nhập hàng ch
 
 Không phải lúc nào median cũng thắng — nhưng có một tín hiệu rõ ràng để cảnh giác: **dữ liệu lệch (skewed)**. Tiền bạc, doanh thu, thời gian chờ, lượt mua trên đầu khách — gần như mọi thứ trong kinh doanh đều lệch phải: phần lớn tụ ở mức thấp, một cái đuôi dài vài giá trị khổng lồ kéo về bên phải. Hễ thấy đuôi đó, mean sẽ bị thổi phồng.
 
-Mẹo thực dụng: **luôn xem mean và median cạnh nhau.** Hai con số sát nhau → dữ liệu cân đối, mean dùng được. Hai con số lệch xa nhau → có outlier hoặc đuôi dài, và median mới là con số mô tả "khách điển hình". Ở shop trên, khoảng cách 155k so với 1.040k là một tiếng còi báo động.
+Mẹo thực dụng: **luôn xem mean và median cạnh nhau.** Hai con số sát nhau → dữ liệu cân đối, mean dùng được. Hai con số lệch xa nhau → có outlier hoặc đuôi dài, và median mới là con số mô tả "khách điển hình". Ở shop trên, khoảng cách 155k so với 1.040k là một tiếng còi báo động. (Và đôi khi cái sai không nằm ở mean hay median, mà ở việc trung bình một con số *lẽ ra không được trung bình* — như [tồn kho hay số dư tài khoản cộng/chia theo tháng](/blog/chi-so-dong-chay-vs-diem/).)
 
 Một bước nữa, tốt hơn cả hai: **nhìn cả phân phối (distribution — toàn bộ hình dạng dữ liệu trải ra sao)**, qua một **histogram (biểu đồ phân phối)**. Phân phối kể câu chuyện mà không con số tóm tắt đơn lẻ nào kể nổi: "à, có một cục lớn ở 150k và một nhúm lẻ trên 5 triệu" — và lập tức bạn biết phải nhập hai dòng hàng cho hai tệp khách khác nhau, thay vì một dòng cho một tệp tưởng tượng. Đây cũng là lý do [phân khúc khách bằng RFM](/blog/rfm-segmentation/) hữu ích hơn nhiều so với gộp tất cả vào một con số trung bình.
 

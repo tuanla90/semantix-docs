@@ -27,7 +27,7 @@ Hai cái đầu thuộc về *bản thân con số*; cái thứ ba thuộc về 
 
 **Metric là một đại lượng đo được, gói gọn trong một con số.** Doanh thu. Số đơn hàng. Số khách mới. Giá trị đơn trung bình. Tỷ lệ hoàn hàng. Đặc điểm chung: hỏi "bao nhiêu" thì trả lời được bằng một con số duy nhất.
 
-Nghe đơn giản, nhưng cái bẫy nằm ngay ở đây. Một metric chỉ rõ ràng khi **định nghĩa của nó rõ ràng**. "Doanh thu" nghe như một con số ai cũng hiểu, nhưng thử hỏi năm người trong công ty:
+Nghe đơn giản, nhưng cái bẫy nằm ngay ở đây. Một metric chỉ rõ ràng khi **định nghĩa của nó rõ ràng** — và rõ luôn cả việc nó có thật sự *cộng, trung bình được* không, vì có những con số trông như số mà tính trung bình ra kết quả vô nghĩa (xem [4 loại thang đo dữ liệu](/blog/4-loai-thang-do-du-lieu/)). "Doanh thu" nghe như một con số ai cũng hiểu, nhưng thử hỏi năm người trong công ty:
 
 - Tính theo đơn **đã chốt** hay đơn **đã thu tiền**?
 - Có trừ đơn **hoàn, hủy** không?

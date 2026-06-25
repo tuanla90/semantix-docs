@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgkt044" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <marker id="akt044" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#818CF8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgkt044)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <text x="80" y="232" fill="#ffffff" font-size="54" font-weight="800">Data mart</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="30" font-weight="600">Cắt một quầy riêng cho mỗi phòng</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: a big supermarket (warehouse) on the left, a small specialized counter (mart) cut out on the right -->
+  <g transform="translate(700,160)">
+    <!-- supermarket = warehouse -->
+    <rect x="0" y="40" width="270" height="230" rx="14" fill="#0B1220" stroke="#334155" stroke-width="2"/>
+    <path d="M0 54 L135 0 L270 54 Z" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+    <text x="135" y="36" fill="#94A3B8" font-size="17" font-weight="700" text-anchor="middle">SIÊU THỊ</text>
+    <!-- shelves: lots of mixed bays = all company data -->
+    <g transform="translate(22,72)">
+      <rect x="0" y="0" width="34" height="22" rx="3" fill="#475569"/>
+      <rect x="42" y="0" width="34" height="22" rx="3" fill="#64748B"/>
+      <rect x="84" y="0" width="34" height="22" rx="3" fill="#475569"/>
+      <rect x="126" y="0" width="34" height="22" rx="3" fill="#52617A"/>
+      <rect x="168" y="0" width="34" height="22" rx="3" fill="#64748B"/>
+      <rect x="0" y="34" width="34" height="22" rx="3" fill="#52617A"/>
+      <rect x="42" y="34" width="34" height="22" rx="3" fill="#475569"/>
+      <rect x="84" y="34" width="34" height="22" rx="3" fill="#64748B"/>
+      <rect x="126" y="34" width="34" height="22" rx="3" fill="#475569"/>
+      <rect x="168" y="34" width="34" height="22" rx="3" fill="#52617A"/>
+      <rect x="0" y="68" width="34" height="22" rx="3" fill="#64748B"/>
+      <rect x="42" y="68" width="34" height="22" rx="3" fill="#52617A"/>
+      <rect x="84" y="68" width="34" height="22" rx="3" fill="#475569"/>
+      <rect x="126" y="68" width="34" height="22" rx="3" fill="#64748B"/>
+      <rect x="168" y="68" width="34" height="22" rx="3" fill="#475569"/>
+    </g>
+    <text x="135" y="252" fill="#64748B" font-size="14" text-anchor="middle">mọi dữ liệu toàn công ty</text>
+    <!-- cut-out arrow to the mart -->
+    <path d="M278 150 C330 150 330 150 372 150" stroke="#818CF8" stroke-width="3" fill="none" marker-end="url(#akt044)"/>
+    <text x="326" y="138" fill="#818CF8" font-size="13" text-anchor="middle">cắt ra</text>
+    <!-- data mart = one specialized counter -->
+    <rect x="392" y="92" width="118" height="118" rx="12" fill="#0B1220" stroke="#4ADE80" stroke-width="2"/>
+    <path d="M392 104 L451 70 L510 104 Z" fill="#14532D" stroke="#4ADE80" stroke-width="2"/>
+    <text x="451" y="98" fill="#4ADE80" font-size="13" font-weight="700" text-anchor="middle">QUẦY</text>
+    <g transform="translate(408,124)">
+      <rect x="0" y="0" width="38" height="24" rx="3" fill="#4ADE80"/>
+      <rect x="48" y="0" width="38" height="24" rx="3" fill="#34D399"/>
+      <rect x="0" y="32" width="38" height="24" rx="3" fill="#34D399"/>
+      <rect x="48" y="32" width="38" height="24" rx="3" fill="#4ADE80"/>
+    </g>
+    <text x="451" y="232" fill="#94A3B8" font-size="14" text-anchor="middle" font-weight="600">chỉ phần một phòng cần</text>
+  </g>
+</svg>

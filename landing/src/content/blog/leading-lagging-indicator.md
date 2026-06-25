@@ -63,7 +63,7 @@ Cám dỗ lớn nhất khi hiểu ra điều này là dựng một dashboard 40 
 Một leading metric tốt phải vượt qua ba bài kiểm tra:
 
 1. **Đi trước.** Nó thay đổi *trước* khi doanh thu thay đổi. Nếu nó nhúc nhích cùng lúc với doanh thu, nó không phải leading — nó chỉ là một lagging indicator mặc áo khác.
-2. **Lái được.** Bạn có một hành động cụ thể tác động vào nó *trong tuần này*. Số khách dùng thử thì bạn lái được bằng quảng cáo, ưu đãi, onboarding. "Tâm trạng thị trường" thì không — bỏ qua.
+2. **Lái được.** Bạn có một hành động cụ thể tác động vào nó *trong tuần này* — đây chính là khác biệt giữa [chỉ số bạn bấm được và chỉ số kết quả](/blog/input-vs-output-metrics/). Số khách dùng thử thì bạn lái được bằng quảng cáo, ưu đãi, onboarding. "Tâm trạng thị trường" thì không — bỏ qua.
 3. **Đo được đều đặn.** Hằng ngày hoặc hằng tuần, không phải quý. Một chỉ số báo trước mà mỗi quý mới biết một lần thì chẳng còn báo trước gì.
 
 Với một quán cà phê, đó có thể chỉ là **số khách quay lại trong 14 ngày**. Với một nhà bán hàng đa kênh, có thể là **tỷ lệ khách mua lần 2**. Một, nhiều nhất là hai. Phần còn lại là tiếng ồn.

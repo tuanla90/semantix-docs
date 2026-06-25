@@ -1,0 +1,56 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgKt042" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="pageKt042" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgKt042)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="138" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <text x="80" y="222" fill="#ffffff" font-size="52" font-weight="800">Data catalog</text>
+  <text x="80" y="286" fill="#CBD5E1" font-size="29" font-weight="600">Từ điển cho chính dữ liệu của bạn</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: an open dictionary / index of table-column cards -->
+  <g transform="translate(700,168)">
+    <!-- book spine + open pages -->
+    <rect x="0" y="0" width="430" height="250" rx="16" fill="url(#pageKt042)" stroke="#334155"/>
+    <line x1="215" y1="14" x2="215" y2="236" stroke="#334155" stroke-width="2" stroke-dasharray="4 6"/>
+    <!-- left page: a catalog entry -->
+    <rect x="22" y="22" width="172" height="20" rx="5" fill="#312E81"/>
+    <text x="32" y="37" fill="#C7D2FE" font-size="13" font-weight="700">rev_amt</text>
+    <rect x="22" y="54" width="172" height="9" rx="4" fill="#475569"/>
+    <rect x="22" y="70" width="140" height="9" rx="4" fill="#475569"/>
+    <text x="22" y="104" fill="#94A3B8" font-size="11" font-weight="700">CHỦ SỞ HỮU</text>
+    <rect x="22" y="112" width="110" height="9" rx="4" fill="#3F3F6B"/>
+    <text x="22" y="146" fill="#94A3B8" font-size="11" font-weight="700">NGUỒN GỐC</text>
+    <rect x="22" y="154" width="150" height="9" rx="4" fill="#3F3F6B"/>
+    <g transform="translate(22,186)">
+      <rect x="0" y="0" width="78" height="22" rx="11" fill="#0B2A1B" stroke="#22C55E"/>
+      <text x="39" y="15" fill="#4ADE80" font-size="11" font-weight="700" text-anchor="middle">đáng tin</text>
+    </g>
+    <!-- right page: index of tables/columns -->
+    <text x="238" y="38" fill="#94A3B8" font-size="12" font-weight="700" letter-spacing="1">MỤC LỤC BẢNG &amp; CỘT</text>
+    <g font-size="13" font-weight="600">
+      <rect x="238" y="52" width="14" height="14" rx="3" fill="#818CF8"/>
+      <text x="262" y="64" fill="#E2E8F0">dim_cust</text>
+      <rect x="238" y="82" width="14" height="14" rx="3" fill="#7DD3FC"/>
+      <text x="262" y="94" fill="#E2E8F0">dim_cust_v2</text>
+      <rect x="238" y="112" width="14" height="14" rx="3" fill="#818CF8"/>
+      <text x="262" y="124" fill="#E2E8F0">fact_sales</text>
+      <rect x="238" y="142" width="14" height="14" rx="3" fill="#4ADE80"/>
+      <text x="262" y="154" fill="#E2E8F0">metric: doanh thu</text>
+      <rect x="238" y="172" width="14" height="14" rx="3" fill="#818CF8"/>
+      <text x="262" y="184" fill="#E2E8F0">metric: khách mới</text>
+    </g>
+  </g>
+</svg>

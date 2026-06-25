@@ -14,7 +14,7 @@ coverAlt: "Khối lập phương dữ liệu ba chiều Sản phẩm × Thời g
 ---
 
 <div class="series-nav">
-  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 9 phần</div>
   <ol>
     <li><a href="/blog/dimension-table-vs-dimension/">Phần 1 — Dimension vs Dimension table</a></li>
     <li><a href="/blog/star-vs-snowflake-schema/">Phần 2 — Star vs Snowflake schema</a></li>
@@ -24,8 +24,10 @@ coverAlt: "Khối lập phương dữ liệu ba chiều Sản phẩm × Thời g
     <li><a href="/blog/snapshot-table/">Phần 6 — Snapshot &amp; 3 loại fact</a></li>
     <li class="current">Phần 7 — OLAP cube: drill &amp; pivot</li>
     <li><a href="/blog/data-quality-la-gi/">Phần 8 — Data quality: 6 chiều</a></li>
+    <li><a href="/blog/data-mart-la-gi/">Phần 9 — Data mart cho từng phòng</a></li>
   </ol>
 </div>
+
 
 Cuộc họp sáng thứ Hai. Bạn vừa đọc xong con số: doanh thu quý vừa rồi **8,4 tỷ**. Tưởng xong. Nhưng sếp bắt đầu hỏi. "Theo từng tháng thì sao?" Bạn lật báo cáo theo tháng. "Theo vùng?" Lật báo cáo theo vùng. "Vùng nào trong tháng 6 yếu nhất?" Bạn ngồi ghép tay. "Cái vùng HCM đó — bóc xuống từng chi nhánh xem chi nhánh nào kéo tụt?" Bạn... hứa chiều gửi.
 

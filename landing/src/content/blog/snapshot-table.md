@@ -14,7 +14,7 @@ coverAlt: "Máy ảnh chụp trạng thái kho theo từng ngày — ẩn dụ s
 ---
 
 <div class="series-nav">
-  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 9 phần</div>
   <ol>
     <li><a href="/blog/dimension-table-vs-dimension/">Phần 1 — Dimension vs Dimension table</a></li>
     <li><a href="/blog/star-vs-snowflake-schema/">Phần 2 — Star vs Snowflake schema</a></li>
@@ -24,8 +24,10 @@ coverAlt: "Máy ảnh chụp trạng thái kho theo từng ngày — ẩn dụ s
     <li class="current">Phần 6 — Snapshot &amp; 3 loại fact</li>
     <li><a href="/blog/olap-cube-drill-pivot/">Phần 7 — OLAP cube: drill &amp; pivot</a></li>
     <li><a href="/blog/data-quality-la-gi/">Phần 8 — Data quality: 6 chiều</a></li>
+    <li><a href="/blog/data-mart-la-gi/">Phần 9 — Data mart cho từng phòng</a></li>
   </ol>
 </div>
+
 
 Sếp hỏi một câu nghe rất đơn giản: *"Cho anh xem tồn kho cuối mỗi ngày trong 30 ngày vừa rồi."* Bạn mở bảng dữ liệu lên và khựng lại. Cái bạn có là **bảng giao dịch kho** — mỗi lần nhập, mỗi lần xuất là một dòng. Mã SP01 nhập 200 cái hôm mùng 1, xuất 17 cái sáng mùng 2, xuất tiếp 9 cái chiều mùng 2, nhập thêm 50 hôm mùng 5… hàng nghìn dòng lẻ.
 

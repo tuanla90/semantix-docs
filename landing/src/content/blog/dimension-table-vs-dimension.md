@@ -14,7 +14,7 @@ coverAlt: "Một bảng dữ liệu bên trái, các góc cắt tỏa ra từ n�
 ---
 
 <div class="series-nav">
-  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 9 phần</div>
   <ol>
     <li class="current">Phần 1 — Dimension vs Dimension table</li>
     <li><a href="/blog/star-vs-snowflake-schema/">Phần 2 — Star vs Snowflake schema</a></li>
@@ -24,8 +24,10 @@ coverAlt: "Một bảng dữ liệu bên trái, các góc cắt tỏa ra từ n�
     <li><a href="/blog/snapshot-table/">Phần 6 — Snapshot &amp; 3 loại fact</a></li>
     <li><a href="/blog/olap-cube-drill-pivot/">Phần 7 — OLAP cube: drill &amp; pivot</a></li>
     <li><a href="/blog/data-quality-la-gi/">Phần 8 — Data quality: 6 chiều</a></li>
+    <li><a href="/blog/data-mart-la-gi/">Phần 9 — Data mart cho từng phòng</a></li>
   </ol>
 </div>
+
 
 Cuộc họp setup báo cáo, anh dev nói: *"Dimension sản phẩm em đã build xong, có đủ tên, nhóm, giá vốn."* Chị phân tích gật gù rồi hỏi tiếp: *"Thế dimension theo tháng có chưa?"* Anh dev khựng lại: *"Ơ, tháng nằm trong dimension thời gian mà chị."* Hai người nhìn nhau, mỗi người tưởng người kia lẫn.
 

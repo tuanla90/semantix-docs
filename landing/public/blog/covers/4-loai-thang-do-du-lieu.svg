@@ -1,0 +1,41 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgKt041" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgKt041)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="120" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <text x="80" y="206" fill="#ffffff" font-size="50" font-weight="800">4 loại thang đo</text>
+  <text x="80" y="270" fill="#CBD5E1" font-size="28" font-weight="600">Biết thang đo → biết được phép tính gì</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: 4-step staircase, "allowed math" rises with each step -->
+  <g transform="translate(560,150)">
+    <!-- step 1: nominal -->
+    <rect x="0" y="240" width="140" height="60" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="70" y="278" fill="#94A3B8" font-size="18" font-weight="700" text-anchor="middle">Định danh</text>
+    <text x="70" y="324" fill="#64748B" font-size="14" text-anchor="middle">đếm</text>
+    <!-- step 2: ordinal -->
+    <rect x="150" y="180" width="140" height="120" rx="8" fill="#1E293B" stroke="#475569"/>
+    <text x="220" y="218" fill="#CBD5E1" font-size="18" font-weight="700" text-anchor="middle">Thứ bậc</text>
+    <text x="220" y="324" fill="#64748B" font-size="14" text-anchor="middle">+ median</text>
+    <!-- step 3: interval -->
+    <rect x="300" y="120" width="140" height="180" rx="8" fill="#312E81" stroke="#6366F1"/>
+    <text x="370" y="158" fill="#E2E8F0" font-size="18" font-weight="700" text-anchor="middle">Khoảng</text>
+    <text x="370" y="324" fill="#818CF8" font-size="14" text-anchor="middle">+ mean</text>
+    <!-- step 4: ratio -->
+    <rect x="450" y="40" width="140" height="260" rx="8" fill="#0B1220" stroke="#4ADE80" stroke-width="2"/>
+    <text x="520" y="78" fill="#4ADE80" font-size="18" font-weight="800" text-anchor="middle">Tỉ lệ</text>
+    <text x="520" y="324" fill="#4ADE80" font-size="14" text-anchor="middle">+ tỉ số</text>
+    <!-- rising arrow over the steps -->
+    <path d="M30 230 L210 170 L390 110 L500 60" stroke="#818CF8" stroke-width="3" fill="none" stroke-dasharray="2 8" stroke-linecap="round" opacity="0.7"/>
+    <text x="40" y="20" fill="#94A3B8" font-size="15" font-style="italic">được phép tính &amp; tăng dần →</text>
+  </g>
+</svg>

@@ -14,7 +14,7 @@ coverAlt: "Sơ đồ star schema theo Kimball: một bảng fact trung tâm nố
 ---
 
 <div class="series-nav">
-  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 9 phần</div>
   <ol>
     <li><a href="/blog/dimension-table-vs-dimension/">Phần 1 — Dimension vs Dimension table</a></li>
     <li><a href="/blog/star-vs-snowflake-schema/">Phần 2 — Star vs Snowflake schema</a></li>
@@ -24,8 +24,10 @@ coverAlt: "Sơ đồ star schema theo Kimball: một bảng fact trung tâm nố
     <li><a href="/blog/snapshot-table/">Phần 6 — Snapshot &amp; 3 loại fact</a></li>
     <li><a href="/blog/olap-cube-drill-pivot/">Phần 7 — OLAP cube: drill &amp; pivot</a></li>
     <li><a href="/blog/data-quality-la-gi/">Phần 8 — Data quality: 6 chiều</a></li>
+    <li><a href="/blog/data-mart-la-gi/">Phần 9 — Data mart cho từng phòng</a></li>
   </ol>
 </div>
+
 
 
 Mở phần mềm bán hàng của bạn ra, nhìn vào cấu trúc database (cơ sở dữ liệu — kho các bảng dữ liệu) bên dưới, bạn sẽ thấy một thứ rất *đẹp*: hàng chục bảng nhỏ gọn, không lặp dữ liệu, mỗi thứ nằm đúng một chỗ. Bảng khách hàng riêng, bảng địa chỉ riêng, bảng tỉnh/thành riêng, bảng sản phẩm riêng, bảng nhóm hàng riêng. Một kỹ sư nhìn vào sẽ gật gù: chuẩn hoá cao, sạch sẽ, đúng sách.

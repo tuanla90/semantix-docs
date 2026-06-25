@@ -14,7 +14,7 @@ coverAlt: "Sơ đồ so sánh star schema hình ngôi sao với snowflake schema
 ---
 
 <div class="series-nav">
-  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 9 phần</div>
   <ol>
     <li><a href="/blog/dimension-table-vs-dimension/">Phần 1 — Dimension vs Dimension table</a></li>
     <li class="current">Phần 2 — Star vs Snowflake schema</li>
@@ -24,8 +24,10 @@ coverAlt: "Sơ đồ so sánh star schema hình ngôi sao với snowflake schema
     <li><a href="/blog/snapshot-table/">Phần 6 — Snapshot &amp; 3 loại fact</a></li>
     <li><a href="/blog/olap-cube-drill-pivot/">Phần 7 — OLAP cube: drill &amp; pivot</a></li>
     <li><a href="/blog/data-quality-la-gi/">Phần 8 — Data quality: 6 chiều</a></li>
+    <li><a href="/blog/data-mart-la-gi/">Phần 9 — Data mart cho từng phòng</a></li>
   </ol>
 </div>
+
 
 
 Bạn có đúng một đống dữ liệu: đơn hàng, sản phẩm, khách, kênh bán. Bây giờ đặt nó lên bàn và tự hỏi nên *sắp các bảng thế nào*. Hoá ra có hai trường phái rõ rệt — và nghịch lý nằm ở đây: cái trông **"đúng sách"** hơn, gọn gàng hơn, ít trùng dữ liệu hơn, lại chính là cái khiến mỗi câu hỏi của bạn phải đi qua nhiều bảng hơn, chạy chậm hơn, và khó đọc hơn.

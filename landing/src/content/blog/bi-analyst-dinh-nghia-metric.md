@@ -47,7 +47,7 @@ Hãy hình dung Semantic Layer như **cuốn từ điển nghiệp vụ chính t
 
 Từ giây phút đó, mọi câu hỏi — dù do người hỏi hay do AI dịch — đều tra cùng cuốn từ điển ấy. Marketing hỏi "doanh thu Tết", Vận hành hỏi "doanh thu theo kho", CEO hỏi "doanh thu sau phí" — cả ba rút về **cùng một định nghĩa**, nên không bao giờ lệch nhau. Chị Linh không còn viết truy vấn thứ một nghìn lẻ một. Chị viết cái *luật* mà cả nghìn truy vấn sau đó phải tuân theo.
 
-*Ví dụ minh họa một tuần điển hình kiểu cũ:* chị nhận 40 yêu cầu báo cáo, mỗi cái mười lăm phút đến một tiếng, hết veo tuần. Kiểu mới: chị bỏ hai ngày định nghĩa chuẩn 30 metric (con số đo được) cốt lõi trong Semantic Layer, rồi 40 yêu cầu kia tự phục vụ được hết — còn chị rảnh tay đào cái câu hỏi mà trước giờ không ai có thời gian trả lời: *"Nhóm khách nào đang âm thầm rời bỏ?"*
+*Ví dụ minh họa một tuần điển hình kiểu cũ:* chị nhận 40 yêu cầu báo cáo, mỗi cái mười lăm phút đến một tiếng, hết veo tuần. Kiểu mới: chị bỏ hai ngày định nghĩa chuẩn 30 metric (con số đo được) cốt lõi trong Semantic Layer, rồi 40 yêu cầu kia tự phục vụ được hết — còn chị rảnh tay đào cái câu hỏi mà trước giờ không ai có thời gian trả lời: *"Nhóm khách nào đang âm thầm rời bỏ?"* — đúng kiểu câu hỏi mà [dashboard toàn màu xanh vẫn không trả lời được khi ta chỉ nhìn chỉ số doanh nghiệp mà quên chỉ số khách hàng](/blog/business-metrics-vs-customer-metrics/).
 
 ## AI phục vụ self-service (tự phục vụ — người làm kinh doanh tự hỏi và tự có câu trả lời) — và analyst là kiến trúc sư phía sau
 

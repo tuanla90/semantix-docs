@@ -74,6 +74,8 @@ Semantic Layer là **cuốn từ điển nghiệp vụ** đặt giữa dữ li�
 <div class="viz-caption">Cùng một câu hỏi. (A) Không có tầng định nghĩa, AI đoán "doanh thu" là gì — ra số nào cũng được. (B) Có Semantic Layer, AI tra đúng định nghĩa có thật rồi mới sinh SQL.</div>
 </div>
 
+Tôi nói điều này không phải từ slide, mà từ chỗ đang ngồi. Ở một ngân hàng tôi đang làm, tôi dẫn nhóm BI và đang POC chính cái semantic layer này thành dự án trọng điểm của trung tâm chuyển đổi số. Lý do rất cụ thể: nghiệp vụ banking phức tạp đến mức "số dư", "khách hàng hoạt động", "dư nợ" mỗi phòng hiểu một kiểu — nếu để một hệ [text-to-SQL](/blog/text-to-sql/) tự đoán những định nghĩa đó, nó sẽ ra SQL chạy ngon nhưng trả số sai mà không ai bắt được. Tôi từng tự tay dựng cả một hệ tracking ở một công ty công nghệ lõi của hệ sinh thái e-commerce; bài học lớn nhất không phải "model nào mạnh", mà là nơi nào ghi định nghĩa nghiệp vụ làm chuẩn để máy tra, thay vì đoán.
+
 Đây không phải ý kiến riêng của Semantix. Những hệ hỏi-đáp dữ liệu mạnh nhất thế giới đều đi cùng một hướng: WrenAI xây quanh semantic layer, SuperSonic của Tencent cũng vậy. Khi nhiều đội kỹ thuật độc lập hội tụ về cùng một kiến trúc, đó thường không phải trùng hợp — đó là dấu hiệu của một quy luật. *(Bốn lớp lọc biến câu hỏi thành SQL, xem [Kiến trúc Text2SQL 4 lớp](/blog/kien-truc-text2sql-4-lop/).)*
 
 ## So sánh thẳng

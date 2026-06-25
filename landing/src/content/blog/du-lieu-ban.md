@@ -59,6 +59,8 @@ Có một loại dữ liệu bẩn không nằm trong dữ liệu, mà nằm tro
 
 *Ví dụ minh hoạ:* sheet bán hàng tính "doanh thu" gồm cả đơn chưa giao. Kế toán trừ đơn hoàn. Kho tính theo số lượng xuất quy ra tiền. Ba người, ba con số cho cùng một từ "doanh thu", chênh nhau **67 triệu** trong một tháng — và ai cũng đúng theo file của mình. Đây là loại bẩn tệ nhất vì nó không sửa được bằng cách lau dữ liệu. Bạn có thể chuẩn hóa mọi cái tên, sửa mọi định dạng ngày, xóa mọi dòng trùng — và vẫn nhận ba con số doanh thu khác nhau, vì gốc rễ là ba định nghĩa khác nhau.
 
+Hồi làm trưởng nhóm dữ liệu ở một công ty công nghệ lõi của một hệ sinh thái e-commerce, tôi gặp đúng cái bẫy này theo cách đắt nhất. Doanh thu mà team marketing nhìn được tính theo *ngày đặt đơn*; còn kế toán chỉ ghi nhận khi đơn giao thành công, đã trừ hoàn và huỷ. Hai con số cho cùng một từ "doanh thu", lệch nhau hẳn một khoảng — và cả hai đều không sai, chỉ là định nghĩa khác nhau. Tệ hơn, hệ tracking kiểu Google Analytics không hề bắt các event vận hành về sau như vận chuyển hay hoàn/huỷ, nên gap đó càng giãn ra mà chẳng ai thấy. Bài học tôi rút ra: trước khi cãi nhau con số nào đúng, hãy thống nhất "doanh thu" *nghĩa là gì* đã.
+
 Đây chính là khoảng trống mà một [Semantic Layer — tầng định nghĩa nghiệp vụ dùng chung](/blog/semantic-layer/) sinh ra để bịt: định nghĩa "doanh thu" *một lần*, chuẩn xác, để ai hỏi cũng ra cùng một số. Không phải ngẫu nhiên mà các nền tảng dữ liệu hiện đại như dbt hay Cube đều đặt việc định nghĩa chỉ-một-lần vào trung tâm kiến trúc của họ.
 
 ## Dọn dữ liệu trong Semantix

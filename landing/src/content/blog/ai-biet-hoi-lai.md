@@ -23,6 +23,8 @@ Chúng ta đã quen tin rằng phản hồi nhanh là dấu hiệu giỏi. Với
 
 Hãy nghĩ tới một **bác sĩ giỏi**. Bạn nói "tôi đau đầu", bác sĩ giỏi không kê đơn ngay. Ông hỏi lại: đau bên nào, từ bao giờ, có sốt không, có buồn nôn không. Vài câu hỏi đúng chỗ tách một cơn cảm xoàng khỏi một thứ nghiêm trọng. Một "bác sĩ" kê thuốc ngay khi nghe hai chữ "đau đầu" không phải nhanh — mà là ẩu. Câu hỏi nghiệp vụ cũng vậy: phần lớn đều thiếu thông tin then chốt, và **AI tốt biết hỏi lại đúng câu trước khi cầm bút**.
 
+Tôi rút ra điều này rõ nhất từ những buổi đi dạy GA4 ở Vietmoz. Học viên hay mang lên một câu hỏi nghe rất gọn — "tháng này có bao nhiêu chuyển đổi?" — và mong tôi đáp ngay. Nhưng tôi học được rằng câu hỏi tốt đầu tiên phải là câu hỏi của *người dạy*: bạn đo chuyển đổi ở event nào, có lọc traffic nội bộ chưa, một phiên mua hai lần thì tính một hay hai? Hỏi lại trước khi trả lời không phải để câu giờ — đó là cách tôn trọng con số. Một học viên hỏi tôi đúng một lần rồi ghi vào sổ còn đáng tin hơn người gật đầu liền mà mang số sai về báo cáo.
+
 > Quy tắc vàng: khi câu hỏi còn mơ hồ ở chỗ làm đổi con số, AI tốt dừng lại hỏi một câu — chứ không đoán rồi trả lời cho một câu bạn chưa thực sự hỏi.
 
 Dưới đây là bốn kiểu mơ hồ hay gặp nhất trong câu hỏi của người làm kinh doanh — và vì sao mỗi kiểu đều là một cái bẫy nếu AI không chịu hỏi lại.

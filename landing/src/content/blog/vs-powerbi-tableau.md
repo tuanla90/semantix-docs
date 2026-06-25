@@ -93,6 +93,8 @@ Nếu phần lớn giá trị của bạn nằm ở **những câu hỏi mới m
 
 Nhiều doanh nghiệp cuối cùng dùng **cả hai**: Power BI cho vài báo cáo tài chính chuẩn hoá, Semantix cho mọi câu hỏi vận hành phát sinh hằng ngày. Đó là một lựa chọn hợp lý — miễn là bạn không trả tiền per-user cho hàng trăm người chỉ để họ thỉnh thoảng xem một con số.
 
+Ở một ngân hàng tôi đang làm, nhóm BI khởi đầu hoàn toàn trên Power BI. Nhưng khi muốn đưa dashboard đến tay nhiều phòng ban hơn, chính bài toán chi phí per-user ở trên là thứ tôi mang ra bảo vệ trước ban điều hành: mỗi nhân viên muốn xem số là thêm một license, càng dân chủ hoá càng bị phạt tiền. Tôi đã thuyết phục được việc chuyển dần sang Data Studio (Looker Studio) — 0đ, tích hợp thẳng BigQuery — như bước đệm để self-service. Lý do thực dụng thuần tuý: chi phí và tích hợp, không phải vì Power BI dở. Tôi có kể kỹ hành trình đó trong bài [từ Power BI sang Data Studio](/blog/hanh-trinh-power-bi-data-studio/).
+
 ---
 
 *Muốn xem AI trả lời câu hỏi dữ liệu của bạn bằng tiếng Việt trong vài giây? [Dùng thử miễn phí.](/docs/vi/free-trial/) Đọc thêm: [vì sao AI cần Semantic Layer để không trả số sai](/blog/semantic-layer/).*

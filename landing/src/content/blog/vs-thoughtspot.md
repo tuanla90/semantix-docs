@@ -60,6 +60,8 @@ Ngoài giá, ba khác biệt về *cách vận hành* quan trọng với doanh n
 2. **Self-hosted (tự chạy trên hạ tầng của mình) & chủ quyền dữ liệu.** Semantix có thể chạy trên hạ tầng của bạn, dữ liệu không rời server — quan trọng với ngành nhạy cảm (tài chính, y tế) và yêu cầu tuân thủ nội địa.
 3. **Tối ưu tiếng Việt.** Hiểu "quý vừa rồi", "đầu năm đến giờ", ngữ cảnh kinh doanh Việt — thay vì một sản phẩm tiếng-Anh-trước.
 
+> Điểm thứ ba này tôi thấm hơn cả. Ở một ngân hàng tôi đang làm, lúc POC semantic layer tôi từng tự tay dựng một lớp [text-to-sql](/blog/text-to-sql/) cho người dùng nghiệp vụ hỏi dữ liệu bằng tiếng Việt. Vướng mắc lớn nhất không phải sinh SQL, mà là tiếng Việt: "quý vừa rồi", "đầu kỳ", "dư nợ nhóm 2" — mỗi cụm là một quy ước nghiệp vụ phải gắn vào semantic layer, không phải dịch từng chữ. Một sản phẩm tiếng-Anh-trước sẽ hiểu cú pháp nhưng trượt ngữ cảnh. Với nghiệp vụ banking vốn đã phức tạp, cái khoảng trượt đó đủ để một con số đúng cú pháp nói dối.
+
 ## So sánh thẳng
 
 | Tiêu chí | ThoughtSpot | Semantix |

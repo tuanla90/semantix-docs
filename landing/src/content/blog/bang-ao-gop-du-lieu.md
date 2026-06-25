@@ -48,6 +48,8 @@ Gộp ba bảng đa kênh mà không làm sạch thì chẳng khác gì đổ ba
 - **Điền NULL cho cột thiếu.** Kênh nào không có cột `phi_affiliate` thì dòng đó để NULL, thay vì làm vỡ cả phép gộp. Schema vẫn vuông vức.
 - **Chuẩn hóa về một schema chung.** Mọi dòng — dù từ kênh nào — ra cùng một bộ cột, cùng kiểu dữ liệu. Đây chính là *một nguồn sự thật* ở tầng dữ liệu, mà không phải chép dữ liệu đi đâu cả.
 
+> **Tôi học việc map cột này bằng nước mắt.** Hồi ở một tập đoàn viễn thông đầu ngành, tôi đi khảo sát và làm giàu dữ liệu cho team Data Science — gộp nhiều nguồn có cùng nghĩa nhưng đặt tên mỗi nơi mỗi kiểu. Bài học thấm nhất: đừng vội union khi chưa thống nhất *cái mỗi cột thực sự đại diện cho điều gì*. Hai cột tên giống nhau mà một bên là "tiền trước giảm giá", một bên là "tiền sau giảm giá", ghép vào là tổng doanh thu sai mà nhìn vẫn rất "tròn trịa". Đó cũng là lý do tôi thích tách bạch bảng sự kiện và bảng chiều ([fact–dimension](/blog/data-modeling-fact-dimension/)): khi mỗi cột đã biết nó thuộc về đâu, việc map về schema chung mới hết mơ hồ.
+
 Đây là phần nối tiếp tự nhiên của bài [Hợp nhất đa kênh](/blog/hop-nhat-da-kenh/): bài đó nói *vì sao* phải gộp ở tầng dữ liệu và ba cái bẫy khi gộp tay; bài này nói *cách làm* gộp đó **không cần copy về kho**.
 
 ## Không copy: định nghĩa được "tiêm" vào câu hỏi của bạn

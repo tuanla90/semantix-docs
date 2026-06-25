@@ -86,6 +86,8 @@ Với chatbot cắm thẳng DB, **mỗi câu hỏi là một lần tung xúc x�
 
 Semantic Layer giải đúng bài này. Định nghĩa nằm ở một chỗ duy nhất, nên **cùng câu hỏi ra cùng con số**, bất kể ai hỏi, hỏi khi nào, hỏi thế nào. Tính nhất quán không phải tính năng phụ — nó là nền của niềm tin. *(Đây cũng là vấn đề ba-con-số-doanh-thu mà [Semantic Layer sinh ra để bịt](/blog/semantic-layer/).)*
 
+Tôi đang là trưởng nhóm BI ở một ngân hàng tôi đang làm, và đây đúng là chỗ tôi vỡ ra rằng cắm chatbot thẳng vào DB không bao giờ đủ. Nghiệp vụ banking phức tạp đến mức một chữ "dư nợ" thôi đã rẽ thành dăm cách hiểu tuỳ phòng ban — chưa nói tới "doanh thu". Để một con AI tự đoán schema giữa rừng bảng đó thì mỗi câu hỏi là một lần tung xúc xắc. Vì thế tôi đẩy semantic layer thành dự án trọng điểm của trung tâm chuyển đổi số, làm cái lớp ở giữa để mọi định nghĩa được chốt một lần. Để hiểu vì sao cái lớp này là thứ không thể bỏ, [Semantic Layer là gì](/blog/semantic-layer/) giải thích gọn.
+
 ## 5. Không kiểm soát quyền và độ tin
 
 Cắm AI thẳng vào database nghĩa là cho nó nhìn thấy *mọi thứ*. Quản lý chi nhánh miền Bắc hỏi "doanh thu theo vùng" — và nếu không có lớp chặn, AI vui vẻ trả luôn cả số miền Nam, cả bảng lương. Bảo mật khi đó phụ thuộc vào việc AI có *nhớ* tự thêm điều kiện lọc hay không. Đặt cược dữ liệu nhạy cảm vào trí nhớ của một cỗ máy đoán-token là một canh bạc tồi.

@@ -47,6 +47,8 @@ BI nghiêm túc đi ngược lại: bắt đầu từ **câu hỏi kinh doanh**,
 
 Nói gọn: Excel là cuốn sổ tay chép tay. BI là thư viện có người thủ thư biết đúng mọi định nghĩa. Khi shop còn 50 đơn một ngày, cuốn sổ tay đủ dùng. Khi lên 500 đơn trên ba kênh, cuốn sổ bắt đầu nói dối bạn mà bạn không hay.
 
+> Tôi đi tư vấn chuyển đổi số cho khá nhiều SME đủ ngành — bán hàng, kho, xuất nhập khẩu, may mặc in ấn, cả phòng khám y tế — và lần nào "doanh thu" cũng là chỗ vỡ trận đầu tiên: file của chủ tính cả đơn chưa giao, file kế toán đã trừ đơn hoàn, file kho lại đếm theo số lượng xuất. Ba con số, ba người, ai cũng đúng theo file của mình. Hành trình công cụ tư vấn của tôi đi từ Google Sheets sang AppSheet rồi đến [Nocobase](/blog/nocobase-semantix/), và thứ thực sự dập được mớ lẫn lộn đó không phải công cụ nào "xịn" hơn, mà là khoảnh khắc tôi ngồi xuống tự tay dựng lại cấu trúc dữ liệu theo nghiệp vụ và chốt định nghĩa *một lần*. Đổi tool mà không chốt định nghĩa thì chỉ là đổi chỗ nói dối.
+
 ## Ba câu hỏi BI mọi SME nên trả lời được
 
 Quên các chỉ số hào nhoáng đi. Một SME đa kênh ở Việt Nam, nếu trả lời gọn được ba câu sau, đã đi trước phần lớn đối thủ. *(Các con số dưới đây là ví dụ minh họa.)*

@@ -27,6 +27,8 @@ Sếp Marketing nhắn: *"Cho chị doanh thu chiến dịch Tết theo kênh."*
 
 Tệ hơn: vì mọi truy vấn đều viết ad-hoc (làm rời rạc theo từng yêu cầu, không theo chuẩn chung), mỗi người lại định nghĩa "doanh thu" hơi khác nhau một chút. Bạn analyst A tính cả đơn chờ hoàn. Bạn B trừ ra. Hai báo cáo, hai con số, cùng một cái tên. (Vì sao một công ty lại có ba con số doanh thu mà không số nào sai, chúng tôi mổ xẻ riêng trong bài [Semantic Layer là gì](/blog/semantic-layer/).)
 
+Cái này tôi không đọc trong sách. Hồi còn làm vận hành, tôi tự học SQL chỉ để "đọc số tìm chỗ hỏng" — và đúng vào lúc cần nhất thì gặp cảnh ba người mang ba con số doanh thu vào một cuộc họp, không số nào sai cú pháp, mà chẳng số nào khớp nhau. Lý do duy nhất: chưa ai định nghĩa "doanh thu" một lần cho cả công ty tin theo. Hôm đó tôi hiểu nút cổ chai thật ra không phải tốc độ gõ query, mà là việc cả tổ chức thiếu **một nguồn sự thật chung** — thứ tôi gọi đúng tên trong bài [Một nguồn sự thật](/blog/mot-nguon-su-that/).
+
 ## Sự thật ngược đời: phần AI làm được là phần dễ
 
 Khi AI viết được SQL, nó lấy đi đúng cái phần lặp đi lặp lại kia — phần "máy dịch". Và nếu công việc của chị Linh *chỉ* là dịch câu hỏi thành truy vấn, thì đúng, chị nên lo.

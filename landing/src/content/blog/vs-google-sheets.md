@@ -27,6 +27,8 @@ Nhưng đây là nghịch lý: **cái khiến bảng tính tiện hôm nay chín
 
 Bảng tính không thua vì nó *yếu*. Nó thua vì nó **quá vạn năng** — cái gì cũng làm được, nên không cái gì có một nguồn sự thật. Dưới đây là những chỗ nó bắt đầu hụt hơi — không phải vì Sheets dở, mà vì nó sinh ra để làm việc khác.
 
+Tôi nói cái này từ kinh nghiệm tự tay xây. Làm tư vấn chuyển đổi số ngoài giờ, hành trình công cụ của tôi đi đúng đường cong đó: bắt đầu bằng Google Sheets, lớn lên thì chuyển sang AppSheet, giờ là Nocobase. Tôi từng dựng cơ sở dữ liệu cho khách đủ ngành — bán hàng, kho, xuất nhập khẩu, may mặc in ấn, cả phòng khám y tế — và lần nào cũng tới một điểm: Sheets không gãy vì thiếu công thức, nó gãy vì *không ai ép được một định nghĩa đứng yên khi nhiều người cùng sửa*. Đó cũng là lúc tôi học SQL hồi còn làm vận hành, chỉ để "đọc số tìm lỗi" mà bảng tính giấu đi — chuyện tôi kể kỹ trong [hành trình thời Excel](/blog/hanh-trinh-thoi-excel/).
+
 ## 1. Một khái niệm, ba định nghĩa — vì sao ba người ra ba số
 
 Họp sáng thứ Hai. Anh chủ chuỗi mở file quen thuộc — mười mấy sheet, mỗi sheet một kênh, một tháng. Bạn marketing đọc "doanh thu tháng này **1,2 tỷ**". Bạn kế toán lắc đầu: "**1,08 tỷ** chứ, em vừa kéo lại". Anh chủ thì nhớ con số **1,15 tỷ** trong sheet tổng hợp tuần trước. Ba người, ba số, cùng một file.

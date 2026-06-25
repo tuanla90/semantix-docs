@@ -58,6 +58,8 @@ Với Semantix, người dùng cuối **không viết gì cả** — họ hỏi 
 
 *(Các con số license cụ thể thay đổi theo gói, theo vùng và theo thời điểm; ở đây tôi cố ý nói định tính thay vì trích giá có thể đã lỗi thời — bạn nên kiểm tra bảng giá hiện hành.)* Điểm cốt lõi: **càng muốn nhiều người trong công ty tự xem data, hóa đơn Power BI càng leo** — bạn bị phạt tiền vì dân chủ hóa dữ liệu. Semantix tính theo instance: một bản phục vụ cả công ty, thêm người xem không phải thêm đầu license.
 
+> Tôi nói chuyện này từ góc người trong cuộc. Ở một ngân hàng tôi đang làm, tôi từng đứng trước ban điều hành để bảo vệ quan điểm chuyển từ Power BI sang Data Studio — và lập luận nặng ký nhất không phải tính năng, mà chính là bài toán license theo đầu người: mỗi lần muốn thêm một phòng ban tự xem báo cáo là một lần ngân sách nhân lên. Khi đích cuối là *dân chủ hóa dữ liệu* cho cả tổ chức, mô hình phạt-tiền-theo-người-xem đi ngược lại đúng cái mình muốn. Tôi kể chi tiết cuộc chuyển đổi đó — gồm cả những chỗ tôi tính sai trọng số khi chấm điểm công cụ — trong [hành trình từ Power BI sang Data Studio](/blog/hanh-trinh-power-bi-data-studio/).
+
 ## Power BI Desktop vs Service — và chuyện cái Mac
 
 Power BI tách làm hai phần, và sự tách biệt này gây bất ngờ cho nhiều SME:

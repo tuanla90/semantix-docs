@@ -116,6 +116,8 @@ Hai cái giá còn lại đến khi bạn lớn lên:
 
 Trong những trường hợp này, Looker Studio không phải cái bẫy — nó là món hời thật. *Cái bẫy chỉ nảy sinh khi bạn dùng một công cụ báo cáo Google để làm động cơ phân tích đa nguồn — rồi trả phần chênh bằng giờ công và số lệch.*
 
+Tôi nói điều này không phải từ sách vở. Ở một ngân hàng tôi đang làm, tôi đã đứng trước ban điều hành bảo vệ quan điểm chuyển từ Power BI sang Data Studio, và lý lẽ chính của tôi chính là cái "0đ + cắm thẳng BigQuery" này: nó là bước đệm self-service tốt nhất để dân chủ hoá dữ liệu, để người làm nghiệp vụ tự xem số mà không phải chờ đội BI dựng từng báo cáo. Tôi vốn là fan nền tảng Google vì UX tối giản, nên tôi thật lòng đứng về phía nó ở đúng cái khung nó giỏi. Nhưng chính lúc kéo nghiệp vụ banking phức tạp vào — nhiều định nghĩa "doanh thu", nhiều nguồn — tôi mới thấy rõ chỗ Data Studio đuối, và đó là lúc tôi bắt đầu POC semantic layer. Tôi đã kể kỹ hành trình đó trong [hành trình Power BI → Data Studio](/blog/hanh-trinh-power-bi-data-studio/).
+
 ## … những điều đó trong Semantix
 
 Định vị Semantix dễ nhất bằng **phủ định.** Semantix không phải "Looker Studio nhưng dashboard đẹp hơn". Nó giải đúng ba chỗ Looker Studio để lại cái giá ẩn:

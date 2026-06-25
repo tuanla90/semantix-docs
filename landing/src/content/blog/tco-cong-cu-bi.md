@@ -70,6 +70,8 @@ Một đợt triển khai BI mã nguồn mở nghiêm túc cho SME thường ng�
 
 "Miễn phí" cho tới khi server sập lúc 11 giờ đêm trước ngày họp hội đồng. Lúc đó bạn mới thấy lớp 3 có giá bao nhiêu.
 
+Tôi tự trả lớp 3 này một lần, bằng chính thời gian của mình. Hồi làm data, tôi ngồi xây lại nguyên một bộ kiểm tra chất lượng dữ liệu — viết tay đủ thứ rule, ngưỡng, cảnh báo — rồi mới phát hiện Great Expectations đã cover gần hết những gì tôi cần. Không tốn một đồng license nào, nhưng tôi đã đốt hàng tuần công sức cho thứ một thư viện có sẵn làm tốt hơn. Đó đúng là nỗi đau build-vs-buy: hoá đơn không nằm trên báo giá, nó nằm trên những tuần tôi không lấy lại được. Từ đó tôi luôn hỏi trước "cái này có ai làm sẵn chưa" trước khi gõ dòng code đầu tiên — y hệt phép tính trong [Build vs Buy cho BI](/blog/build-vs-buy-bi/).
+
 ### Lớp 4 — Chi phí cơ hội: cái hoá đơn vô hình mà đắt nhất
 
 Đây là lớp không xuất hiện trên bất kỳ sổ kế toán nào, nhưng thường là lớn nhất. Hai dạng:

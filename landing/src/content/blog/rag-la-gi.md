@@ -62,6 +62,8 @@ Không có những mẩu này trong tay, AI giỏi đến mấy cũng **đoán**
 
 *Ví dụ minh họa:* hỏi cùng một câu *"doanh thu khách quay lại quý trước"*. Không có bước tra cứu, AI tự định nghĩa "khách quay lại" theo cách phổ biến nhất nó từng đọc trên internet — và ra một con số. Có bước tra cứu đúng định nghĩa của bạn ("mua ≥2 lần, lần gần nhất trong 90 ngày"), nó ra một con số khác hẳn. Cùng câu hỏi, cùng database, hai kết quả — khác nhau **chỉ vì một bên có tra cứu, một bên đoán.**
 
+Tôi thấm chuyện "rừng cột" này theo đúng nghĩa đen. Hồi làm trưởng nhóm dữ liệu ở một công ty công nghệ lõi của một hệ sinh thái e-commerce, kho tracking bán cấu trúc của tôi có hàng trăm cột, nhiều cột tên na ná nhau. Giờ ở một ngân hàng tôi đang làm, nghiệp vụ trải ra cả chục bảng, mỗi bảng vài chục cột — tôi làm lâu còn phải mở từ điển dữ liệu ra dò, nói gì một LLM thi vo. Bước tra cứu đúng bảng, đúng cột trước khi viết truy vấn — tôi hay gọi là [schema linking](/blog/schema-linking/) — chính là chỗ phân biệt một câu SQL "đúng cú pháp, sai con số" với một câu thật sự trả lời câu hỏi.
+
 ## RAG trong Semantix
 
 Đến đây thì câu chuyện gọn lại. Semantix không bán cho bạn "một model thông minh hơn để bớt bịa" — vì như đã nói, thông minh hơn không phải lời giải. Cách tiếp cận đi ngược lại: xây sẵn **cuốn tài liệu** để AI tra cứu trước mỗi câu trả lời.

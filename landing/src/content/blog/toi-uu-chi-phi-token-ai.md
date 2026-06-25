@@ -55,6 +55,8 @@ Không phải câu hỏi nào cũng cần con dao mổ trâu. *"Tổng đơn hô
 
 *Ví dụ minh hoạ:* đẩy 50% câu dễ xuống một model rẻ hơn 5–10 lần, phần chi phí của nhóm câu đó gần như biến mất, kéo tổng hoá đơn xuống đáng kể mà người dùng không nhận ra khác biệt về chất lượng câu trả lời.
 
+Ở một ngân hàng tôi đang làm, chi phí là thứ ban điều hành soi từng đồng, nên phản xạ của tôi là không sính cho mọi câu chạy qua model mạnh nhất. Bài học này tôi học từ hồi mới làm data science: tôi từng mê mô hình phức tạp, đến khi leader chỉ thẳng rằng với phần lớn bài toán thì rule-base cộng số lớn đã đủ làm base — một bộ trọng số tay đơn giản còn đúng tới khoảng 90%. Token cũng vậy. Trước khi nghĩ tới model đắt, tôi hỏi: câu này có thực sự cần suy luận không, hay chỉ là đếm-cộng mà một luật tất định xử lý được, không tốn token nào? Baseline đơn giản thường đã đủ — và rẻ hơn rất nhiều.
+
 ## Đòn bẩy 4 — Nén và tỉa ngữ cảnh trước khi gửi
 
 Ngay cả sau khi đã bỏ schema thô, phần ngữ cảnh còn lại vẫn thường **dư**. Lịch sử hội thoại mười lượt trước trong khi câu hiện tại chẳng liên quan. Năm ví dụ mẫu trong khi hai cái là đủ. Mô tả dài dòng cho những bảng câu hỏi này không đụng tới.

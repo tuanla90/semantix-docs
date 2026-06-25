@@ -59,6 +59,8 @@ Cách đúng là kéo công thức **xuống một tầng thấp hơn báo cáo*
 
 Đây chính là cái mà giới kỹ thuật gọi là **single source of truth (một nguồn sự thật chung — một định nghĩa thống nhất, không phải một database chung)**. Không phải vì nó nghe sang, mà vì nó xóa sổ cả một loại lỗi: *"số sai trông như đúng"*. Một công thức gõ tay trong Excel chạy ra số tròn trịa nhưng thiếu phí ship sẽ không bao giờ tự báo cho bạn biết nó sai. Một metric định nghĩa ở tầng dữ liệu thì chỉ có một phiên bản để mà đúng. *(Vì sao "một nguồn sự thật" không có nghĩa là gom hết data về một kho, đọc thêm [Một nguồn sự thật thật ra nghĩa là gì](/blog/mot-nguon-su-that/).)*
 
+Tôi đã từng vấp đúng loại lỗi này, hồi còn làm sản phẩm ở một công ty giáo dục. Tôi `group by` theo chương rồi đếm số câu hỏi, thấy vài chương "thiếu câu" nên vội đề xuất soạn thêm. Công thức chạy đúng, số ra tròn trịa — nhưng tôi quên mất rằng đề thi còn có ma trận trọng số và độ khó: một chương ít câu không có nghĩa là thiếu, nó chỉ chiếm tỷ trọng nhỏ. Cái "metric" đếm-đầu-câu của tôi đúng cú pháp mà sai bản chất, vì nó bỏ quên ngữ cảnh nằm ngoài con số. Bài học: một công thức chỉ đáng tin khi định nghĩa của nó *bao trọn* ngữ cảnh, chứ không phải khi nó chịu chạy. *(Tôi viết kỹ hơn về chuyện chốt định nghĩa metric trước khi đếm trong bài [BI analyst định nghĩa metric thế nào](/blog/bi-analyst-dinh-nghia-metric/).)*
+
 ## Tạo metric tính toán trong Semantix
 
 Semantix không giải bài này bằng cách cho bạn một ô Excel đẹp hơn để gõ lại công thức — vì gõ lại công thức ở đâu thì vẫn là gõ lại. Cách tiếp cận là dời công thức ra khỏi báo cáo, đặt vào tầng dữ liệu:

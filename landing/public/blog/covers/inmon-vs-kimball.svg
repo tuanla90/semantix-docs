@@ -1,0 +1,38 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="680" height="360" fill="#0F172A"/>
+  <!-- divider -->
+  <line x1="340" y1="40" x2="340" y2="320" stroke="#1E293B" stroke-width="2" stroke-dasharray="4 6"/>
+
+  <!-- LEFT: Inmon top-down -->
+  <text x="170" y="44" fill="#A5B4FC" font-size="15" font-weight="800" text-anchor="middle">INMON · từ trên xuống</text>
+  <rect x="50" y="64" width="240" height="46" rx="9" fill="#312E81" stroke="#818CF8" stroke-width="1.5"/>
+  <text x="170" y="86" fill="#E0E7FF" font-size="13" font-weight="700" text-anchor="middle">Kho dữ liệu doanh nghiệp</text>
+  <text x="170" y="102" fill="#C7D2FE" font-size="11.5" text-anchor="middle">chuẩn hoá · một nguồn sự thật</text>
+  <!-- arrows down -->
+  <path d="M110 110 L88 150" stroke="#6366F1" stroke-width="2"/><path d="M84 142 L86 154 L94 148 Z" fill="#6366F1"/>
+  <path d="M170 110 L170 150" stroke="#6366F1" stroke-width="2"/><path d="M166 142 L170 154 L174 142 Z" fill="#6366F1"/>
+  <path d="M230 110 L252 150" stroke="#6366F1" stroke-width="2"/><path d="M246 148 L254 154 L256 142 Z" fill="#6366F1"/>
+  <!-- data marts -->
+  <rect x="48" y="156" width="76" height="40" rx="7" fill="#1E293B"/><text x="86" y="181" fill="#94A3B8" font-size="11.5" font-weight="600" text-anchor="middle">mart</text>
+  <rect x="132" y="156" width="76" height="40" rx="7" fill="#1E293B"/><text x="170" y="181" fill="#94A3B8" font-size="11.5" font-weight="600" text-anchor="middle">mart</text>
+  <rect x="216" y="156" width="76" height="40" rx="7" fill="#1E293B"/><text x="254" y="181" fill="#94A3B8" font-size="11.5" font-weight="600" text-anchor="middle">mart</text>
+  <text x="170" y="232" fill="#64748B" font-size="12" text-anchor="middle">Dựng chuẩn trước, chia sau.</text>
+  <text x="170" y="250" fill="#64748B" font-size="12" text-anchor="middle">Chậm khởi động, chắc về sau.</text>
+
+  <!-- RIGHT: Kimball bottom-up -->
+  <text x="510" y="44" fill="#86EFAC" font-size="15" font-weight="800" text-anchor="middle">KIMBALL · từ dưới lên</text>
+  <rect x="388" y="64" width="76" height="40" rx="7" fill="#1E293B"/><text x="426" y="89" fill="#94A3B8" font-size="11.5" font-weight="600" text-anchor="middle">mart</text>
+  <rect x="472" y="64" width="76" height="40" rx="7" fill="#1E293B"/><text x="510" y="89" fill="#94A3B8" font-size="11.5" font-weight="600" text-anchor="middle">mart</text>
+  <rect x="556" y="64" width="76" height="40" rx="7" fill="#1E293B"/><text x="594" y="89" fill="#94A3B8" font-size="11.5" font-weight="600" text-anchor="middle">mart</text>
+  <!-- arrows up/merge -->
+  <path d="M426 104 L448 150" stroke="#22C55E" stroke-width="2"/><path d="M442 132 L450 152 L452 138 Z" fill="#22C55E"/>
+  <path d="M510 104 L510 150" stroke="#22C55E" stroke-width="2"/><path d="M506 132 L510 120 L514 132 Z" fill="#22C55E"/>
+  <path d="M594 104 L572 150" stroke="#22C55E" stroke-width="2"/><path d="M578 132 L570 152 L568 138 Z" fill="#22C55E"/>
+  <rect x="390" y="156" width="240" height="46" rx="9" fill="#14532D" stroke="#4ADE80" stroke-width="1.5"/>
+  <text x="510" y="178" fill="#DCFCE7" font-size="13" font-weight="700" text-anchor="middle">Bức tranh toàn công ty</text>
+  <text x="510" y="194" fill="#BBF7D0" font-size="11.5" text-anchor="middle">ghép dần qua bus matrix</text>
+  <text x="510" y="232" fill="#64748B" font-size="12" text-anchor="middle">Có giá trị nhanh từng phòng.</text>
+  <text x="510" y="250" fill="#64748B" font-size="12" text-anchor="middle">Phải kỷ luật để khỏi rời rạc.</text>
+
+  <text x="340" y="312" fill="#475569" font-size="12.5" text-anchor="middle">Cùng đích — một nguồn sự thật. Khác đường đi tới đó.</text>
+</svg>

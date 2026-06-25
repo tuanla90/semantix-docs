@@ -2,10 +2,10 @@
 title: "Kimball & mô hình hóa chiều: vì sao một thiết kế database 'sai chuẩn' lại là thiết kế đúng cho phân tích"
 code: "kt-034"
 description: "Database vận hành của bạn chuẩn hoá đẹp tới mức hỏi 'doanh thu theo tỉnh theo tháng' phải join 8 bảng. Kimball lật ngược: thiết kế lấy câu hỏi làm trung tâm."
-pubDate: 2027-07-24
+pubDate: 2027-07-28
 category: "Kiến Thức Nền Tảng"
-series: "mo-hinh-chieu-du-lieu"
-seriesOrder: 2
+series: "thiet-ke-kho-du-lieu"
+seriesOrder: 3
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
@@ -14,13 +14,19 @@ coverAlt: "Sơ đồ star schema theo Kimball: một bảng fact trung tâm nố
 ---
 
 <div class="series-nav">
-  <div class="series-nav-title">🧭 Series Mô hình hóa chiều dữ liệu · 3 phần</div>
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
   <ol>
-    <li><a href="/blog/star-vs-snowflake-schema/">Phần 1 — Star vs Snowflake schema</a></li>
-    <li class="current">Phần 2 — Kimball &amp; mô hình hóa chiều</li>
-    <li><a href="/blog/scd-slowly-changing-dimension/">Phần 3 — SCD: chiều thay đổi chậm</a></li>
+    <li><a href="/blog/dimension-table-vs-dimension/">Phần 1 — Dimension vs Dimension table</a></li>
+    <li><a href="/blog/star-vs-snowflake-schema/">Phần 2 — Star vs Snowflake schema</a></li>
+    <li class="current">Phần 3 — Kimball: mô hình chiều</li>
+    <li><a href="/blog/inmon-vs-kimball/">Phần 4 — Inmon vs Kimball</a></li>
+    <li><a href="/blog/scd-slowly-changing-dimension/">Phần 5 — SCD: chiều thay đổi chậm</a></li>
+    <li><a href="/blog/snapshot-table/">Phần 6 — Snapshot &amp; 3 loại fact</a></li>
+    <li><a href="/blog/olap-cube-drill-pivot/">Phần 7 — OLAP cube: drill &amp; pivot</a></li>
+    <li><a href="/blog/data-quality-la-gi/">Phần 8 — Data quality: 6 chiều</a></li>
   </ol>
 </div>
+
 
 Mở phần mềm bán hàng của bạn ra, nhìn vào cấu trúc database (cơ sở dữ liệu — kho các bảng dữ liệu) bên dưới, bạn sẽ thấy một thứ rất *đẹp*: hàng chục bảng nhỏ gọn, không lặp dữ liệu, mỗi thứ nằm đúng một chỗ. Bảng khách hàng riêng, bảng địa chỉ riêng, bảng tỉnh/thành riêng, bảng sản phẩm riêng, bảng nhóm hàng riêng. Một kỹ sư nhìn vào sẽ gật gù: chuẩn hoá cao, sạch sẽ, đúng sách.
 

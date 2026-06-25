@@ -2,10 +2,10 @@
 title: "Star schema vs Snowflake schema: cái \"đúng sách\" hơn lại khiến bạn hỏi chậm hơn"
 code: "kt-033"
 description: "Cùng một đống dữ liệu, hai cách sắp bảng. Một cái hỏi nhanh và dễ đọc. Một cái gọn hơn, đúng chuẩn hơn — nhưng join mệt hơn. Chọn cái nào?"
-pubDate: 2027-07-21
+pubDate: 2027-07-24
 category: "Kiến Thức Nền Tảng"
-series: "mo-hinh-chieu-du-lieu"
-seriesOrder: 1
+series: "thiet-ke-kho-du-lieu"
+seriesOrder: 2
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
@@ -14,13 +14,19 @@ coverAlt: "Sơ đồ so sánh star schema hình ngôi sao với snowflake schema
 ---
 
 <div class="series-nav">
-  <div class="series-nav-title">🧭 Series Mô hình hóa chiều dữ liệu · 3 phần</div>
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
   <ol>
-    <li class="current">Phần 1 — Star vs Snowflake schema</li>
-    <li><a href="/blog/kimball-dimensional-modeling/">Phần 2 — Kimball &amp; mô hình hóa chiều</a></li>
-    <li><a href="/blog/scd-slowly-changing-dimension/">Phần 3 — SCD: chiều thay đổi chậm</a></li>
+    <li><a href="/blog/dimension-table-vs-dimension/">Phần 1 — Dimension vs Dimension table</a></li>
+    <li class="current">Phần 2 — Star vs Snowflake schema</li>
+    <li><a href="/blog/kimball-dimensional-modeling/">Phần 3 — Kimball: mô hình chiều</a></li>
+    <li><a href="/blog/inmon-vs-kimball/">Phần 4 — Inmon vs Kimball</a></li>
+    <li><a href="/blog/scd-slowly-changing-dimension/">Phần 5 — SCD: chiều thay đổi chậm</a></li>
+    <li><a href="/blog/snapshot-table/">Phần 6 — Snapshot &amp; 3 loại fact</a></li>
+    <li><a href="/blog/olap-cube-drill-pivot/">Phần 7 — OLAP cube: drill &amp; pivot</a></li>
+    <li><a href="/blog/data-quality-la-gi/">Phần 8 — Data quality: 6 chiều</a></li>
   </ol>
 </div>
+
 
 Bạn có đúng một đống dữ liệu: đơn hàng, sản phẩm, khách, kênh bán. Bây giờ đặt nó lên bàn và tự hỏi nên *sắp các bảng thế nào*. Hoá ra có hai trường phái rõ rệt — và nghịch lý nằm ở đây: cái trông **"đúng sách"** hơn, gọn gàng hơn, ít trùng dữ liệu hơn, lại chính là cái khiến mỗi câu hỏi của bạn phải đi qua nhiều bảng hơn, chạy chậm hơn, và khó đọc hơn.
 

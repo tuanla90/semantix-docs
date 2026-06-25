@@ -21,7 +21,7 @@ Bỏ thuật ngữ sang một bên trước, rồi gắn tên sau.
 
 **OLTP (Online Transaction Processing — hệ xử lý giao dịch trực tuyến)** là bộ não chạy *việc vận hành hằng ngày*: phần mềm bán hàng, app đặt đơn, hệ thống kho. Việc của nó là **ghi và sửa từng dòng thật nhanh, thật chính xác**: ghi một đơn, trừ một món tồn kho, cập nhật một trạng thái giao hàng. Cái **database vận hành** (hay database sản xuất — cơ sở dữ liệu đang trực tiếp chạy hoạt động kinh doanh thật) phía sau KiotViet, phía sau app bán hàng của bạn — đó là một hệ OLTP. Nó được tối ưu để hàng nghìn thao tác nhỏ chen nhau cùng lúc mà không vấp.
 
-**OLAP (Online Analytical Processing — hệ xử lý phân tích trực tuyến)** thì ngược lại: nó sinh ra để *trả lời câu hỏi phân tích*. Tổng hợp, cắt lát theo nhiều chiều — doanh thu theo mã hàng, theo chi nhánh, theo tháng, so với năm ngoái. Nó không quan tâm ghi từng đơn nhanh thế nào; nó quan tâm quét và gộp hàng triệu dòng để ra một bảng tổng cho ra hồn.
+**OLAP (Online Analytical Processing — hệ xử lý phân tích trực tuyến)** thì ngược lại: nó sinh ra để *trả lời câu hỏi phân tích*. Tổng hợp, cắt lát theo nhiều chiều — doanh thu theo mã hàng, theo chi nhánh, theo tháng, so với năm ngoái. Chính cái việc xoay-cắt nhiều chiều này có hẳn bộ thao tác riêng đáng biết, đào sâu trong bài [OLAP cube: drill down, pivot, slice & dice](/blog/olap-cube-drill-pivot/). Nó không quan tâm ghi từng đơn nhanh thế nào; nó quan tâm quét và gộp hàng triệu dòng để ra một bảng tổng cho ra hồn.
 
 > Quy tắc vàng: OLTP giỏi *ghi nhanh từng dòng*, OLAP giỏi *đọc và gộp cả khối*. Bắt cái này làm việc của cái kia, cái nào cũng chậm.
 

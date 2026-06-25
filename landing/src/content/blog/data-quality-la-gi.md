@@ -2,14 +2,30 @@
 code: "kt-038"
 title: "Data quality là gì: vì sao một bảng 'ổn' vẫn có thể đầy đủ nhưng sai — hoặc đúng nhưng trễ ba ngày"
 description: "'Dữ liệu của em ổn mà.' Ổn theo chiều nào? Chất lượng dữ liệu không phải một thứ — là 6 chiều đo được, và hỏng chiều nào sẽ kéo theo một quyết định sai khác nhau."
-pubDate: 2027-08-11
+pubDate: 2027-08-14
 category: "Kiến Thức Nền Tảng"
+series: "thiet-ke-kho-du-lieu"
+seriesOrder: 8
 readTime: 9
 author: "Trần Minh Khoa"
 featured: false
 cover: "/blog/covers/data-quality-la-gi.svg"
 coverAlt: "Radar sáu chiều chất lượng dữ liệu — đường trước khi dọn lệch nặng so với đường sau khi chuẩn hóa"
 ---
+
+<div class="series-nav">
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
+  <ol>
+    <li><a href="/blog/dimension-table-vs-dimension/">Phần 1 — Dimension vs Dimension table</a></li>
+    <li><a href="/blog/star-vs-snowflake-schema/">Phần 2 — Star vs Snowflake schema</a></li>
+    <li><a href="/blog/kimball-dimensional-modeling/">Phần 3 — Kimball: mô hình chiều</a></li>
+    <li><a href="/blog/inmon-vs-kimball/">Phần 4 — Inmon vs Kimball</a></li>
+    <li><a href="/blog/scd-slowly-changing-dimension/">Phần 5 — SCD: chiều thay đổi chậm</a></li>
+    <li><a href="/blog/snapshot-table/">Phần 6 — Snapshot &amp; 3 loại fact</a></li>
+    <li><a href="/blog/olap-cube-drill-pivot/">Phần 7 — OLAP cube: drill &amp; pivot</a></li>
+    <li class="current">Phần 8 — Data quality: 6 chiều</li>
+  </ol>
+</div>
 
 "Dữ liệu của em ổn mà." Câu này bạn nghe — hoặc tự nói — gần như mỗi tuần. Nhưng *ổn theo chiều nào?*
 

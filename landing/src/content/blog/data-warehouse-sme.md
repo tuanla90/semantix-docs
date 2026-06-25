@@ -67,7 +67,7 @@ Semantix không bắt đầu bằng câu "hãy xây cho bạn một data warehou
 2. **Định nghĩa nghiệp vụ một lần** trong Semantic Layer: "doanh thu", "lợi nhuận sau phí", "khách quay lại" — chuẩn cho cả tổ chức, để mọi câu hỏi ra cùng một số.
 3. **Hỏi bằng tiếng Việt** và nhận số trong vài giây — vì với quy mô SME, dữ liệu đã hợp nhất và định nghĩa đã chuẩn là đủ để trả lời, không cần một tầng kho ở giữa.
 
-Và khi nào dữ liệu của bạn *thật sự* lớn tới ngưỡng cần một warehouse — nhiều nguồn nặng, lịch sử nhiều năm, truy vấn làm nghẽn hệ thống — thì đó là lúc *nâng cấp*, không phải lúc bắt đầu. Một semantic layer dựng tốt không bị vứt đi khi bạn lên warehouse; nó ngồi *bên trên* cái kho và vẫn là nơi giữ định nghĩa chung. Nói cách khác: Semantix không phải là "data warehouse cho người nghèo", mà là thứ giải đúng bài toán SME đang vướng — và không bắt bạn trả trước cho quy mô chưa tới. *(Muốn thử ngay với dữ liệu thật của mình, [dùng thử miễn phí với Google Sheets](/docs/vi/free-trial/).)*
+Và khi nào dữ liệu của bạn *thật sự* lớn tới ngưỡng cần một warehouse — nhiều nguồn nặng, lịch sử nhiều năm, truy vấn làm nghẽn hệ thống — thì đó là lúc *nâng cấp*, không phải lúc bắt đầu (và lúc đó, [cách thực sự mô hình hoá kho dữ liệu cho phân tích theo Kimball](/blog/kimball-dimensional-modeling/) mới là việc đáng làm cho tử tế). Một semantic layer dựng tốt không bị vứt đi khi bạn lên warehouse; nó ngồi *bên trên* cái kho và vẫn là nơi giữ định nghĩa chung. Nói cách khác: Semantix không phải là "data warehouse cho người nghèo", mà là thứ giải đúng bài toán SME đang vướng — và không bắt bạn trả trước cho quy mô chưa tới. *(Muốn thử ngay với dữ liệu thật của mình, [dùng thử miễn phí với Google Sheets](/docs/vi/free-trial/).)*
 
 ## Tóm lại
 

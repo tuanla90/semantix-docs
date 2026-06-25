@@ -2,10 +2,10 @@
 title: "SCD — Slowly Changing Dimension: khi khách đổi địa chỉ, đơn cũ của chị về tỉnh nào?"
 code: "kt-035"
 description: "Chị Hà chuyển từ Hà Nội vào TP.HCM. Đơn cũ của chị giờ tính về tỉnh nào? Câu trả lời quyết định cả báo cáo doanh thu theo vùng đúng hay sai."
-pubDate: 2027-07-28
+pubDate: 2027-08-04
 category: "Kiến Thức Nền Tảng"
-series: "mo-hinh-chieu-du-lieu"
-seriesOrder: 3
+series: "thiet-ke-kho-du-lieu"
+seriesOrder: 5
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
@@ -14,13 +14,19 @@ coverAlt: "Một bản ghi khách hàng đổi giá trị tỉnh theo thời gia
 ---
 
 <div class="series-nav">
-  <div class="series-nav-title">🧭 Series Mô hình hóa chiều dữ liệu · 3 phần</div>
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
   <ol>
-    <li><a href="/blog/star-vs-snowflake-schema/">Phần 1 — Star vs Snowflake schema</a></li>
-    <li><a href="/blog/kimball-dimensional-modeling/">Phần 2 — Kimball &amp; mô hình hóa chiều</a></li>
-    <li class="current">Phần 3 — SCD: chiều thay đổi chậm</li>
+    <li><a href="/blog/dimension-table-vs-dimension/">Phần 1 — Dimension vs Dimension table</a></li>
+    <li><a href="/blog/star-vs-snowflake-schema/">Phần 2 — Star vs Snowflake schema</a></li>
+    <li><a href="/blog/kimball-dimensional-modeling/">Phần 3 — Kimball: mô hình chiều</a></li>
+    <li><a href="/blog/inmon-vs-kimball/">Phần 4 — Inmon vs Kimball</a></li>
+    <li class="current">Phần 5 — SCD: chiều thay đổi chậm</li>
+    <li><a href="/blog/snapshot-table/">Phần 6 — Snapshot &amp; 3 loại fact</a></li>
+    <li><a href="/blog/olap-cube-drill-pivot/">Phần 7 — OLAP cube: drill &amp; pivot</a></li>
+    <li><a href="/blog/data-quality-la-gi/">Phần 8 — Data quality: 6 chiều</a></li>
   </ol>
 </div>
+
 
 Chị Hà là khách thân thiết, ba năm liền đặt hàng đều đặn khi còn ở Hà Nội. Tháng trước chị chuyển hẳn vào TP.HCM, và bạn cập nhật địa chỉ trong hệ thống. Chuyện rất đỗi bình thường — cho tới sáng nay, khi sếp mở **báo cáo doanh thu theo vùng** và hỏi: *"Sao doanh thu miền Bắc quý trước tự nhiên tụt mà chẳng có lý do gì?"*
 

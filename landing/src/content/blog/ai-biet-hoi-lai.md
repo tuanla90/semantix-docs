@@ -67,7 +67,7 @@ Mặt khác — và đây là phần quan trọng — những điểm mơ hồ *
 
 Nói cách khác: vòng làm rõ lo phần *câu hỏi mới còn mơ hồ*, semantic layer lo phần *định nghĩa đã chốt một lần*. Giống một **nhân viên mới giỏi**: ngày đầu cậu hỏi lại sếp "doanh thu mình tính trước hay sau phí sàn?" — nhưng hỏi **đúng một lần**, ghi vào sổ tay, và từ hôm sau dùng đúng định nghĩa đó mà không phiền bạn nữa. Cậu đáng tin không phải vì không bao giờ hỏi, mà vì biết hỏi đúng lúc rồi nhớ.
 
-Tư duy này cũng là lý do vì sao, như bài [nút thắt không phải model, mà là câu hỏi bạn đặt ra](/blog/ai-questions/) đã chỉ ra, giá trị thật nằm ở chất lượng câu hỏi — và một AI biết hỏi lại chính là công cụ giúp bạn mài câu hỏi cho sắc.
+Tư duy này cũng là lý do vì sao, như bài [nút thắt không phải model, mà là câu hỏi bạn đặt ra](/blog/ai-questions/) đã chỉ ra, giá trị thật nằm ở chất lượng câu hỏi — và một AI biết hỏi lại chính là công cụ giúp bạn mài câu hỏi cho sắc. Nếu muốn tự mài trước khi gõ, [cách viết một câu hỏi tốt cho AI](/blog/viet-cau-hoi-cho-ai/) cho bạn một checklist để hỏi đúng ý ngay từ lần đầu.
 
 ## Tóm lại
 

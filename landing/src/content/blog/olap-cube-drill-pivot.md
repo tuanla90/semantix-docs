@@ -2,14 +2,30 @@
 title: "OLAP cube: cùng một con số doanh thu, sếp xoay được năm cách — mà không phải năm báo cáo"
 code: "kt-037"
 description: "Sếp hỏi doanh thu theo tháng. Rồi theo vùng. Rồi vùng-trong-tháng. Rồi bóc xuống chi nhánh. Đó không phải năm báo cáo — là năm cách xoay cùng một khối."
-pubDate: 2027-08-04
+pubDate: 2027-08-11
 category: "Kiến Thức Nền Tảng"
+series: "thiet-ke-kho-du-lieu"
+seriesOrder: 7
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/olap-cube-drill-pivot.svg"
 coverAlt: "Khối lập phương dữ liệu ba chiều Sản phẩm × Thời gian × Vùng với các mũi tên minh họa drill down, pivot và slice"
 ---
+
+<div class="series-nav">
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
+  <ol>
+    <li><a href="/blog/dimension-table-vs-dimension/">Phần 1 — Dimension vs Dimension table</a></li>
+    <li><a href="/blog/star-vs-snowflake-schema/">Phần 2 — Star vs Snowflake schema</a></li>
+    <li><a href="/blog/kimball-dimensional-modeling/">Phần 3 — Kimball: mô hình chiều</a></li>
+    <li><a href="/blog/inmon-vs-kimball/">Phần 4 — Inmon vs Kimball</a></li>
+    <li><a href="/blog/scd-slowly-changing-dimension/">Phần 5 — SCD: chiều thay đổi chậm</a></li>
+    <li><a href="/blog/snapshot-table/">Phần 6 — Snapshot &amp; 3 loại fact</a></li>
+    <li class="current">Phần 7 — OLAP cube: drill &amp; pivot</li>
+    <li><a href="/blog/data-quality-la-gi/">Phần 8 — Data quality: 6 chiều</a></li>
+  </ol>
+</div>
 
 Cuộc họp sáng thứ Hai. Bạn vừa đọc xong con số: doanh thu quý vừa rồi **8,4 tỷ**. Tưởng xong. Nhưng sếp bắt đầu hỏi. "Theo từng tháng thì sao?" Bạn lật báo cáo theo tháng. "Theo vùng?" Lật báo cáo theo vùng. "Vùng nào trong tháng 6 yếu nhất?" Bạn ngồi ghép tay. "Cái vùng HCM đó — bóc xuống từng chi nhánh xem chi nhánh nào kéo tụt?" Bạn... hứa chiều gửi.
 

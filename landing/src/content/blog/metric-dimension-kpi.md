@@ -97,7 +97,7 @@ Semantix không giải bài này bằng cách thêm một dashboard đẹp hơn 
 
 1. **Định nghĩa metric một lần** trong [Semantic Layer — tầng nghiệp vụ dùng chung](/blog/semantic-layer/): "doanh thu" được chốt là *đã thu tiền, đã trừ hoàn, không gồm phí ship, tính theo ngày thanh toán* — gồm cả cột ngày chuẩn — và từ đó **ai hỏi cũng ra đúng con số ấy**, dù là sếp, Sales hay kế toán.
 2. **Khai báo dimension sẵn:** theo kênh, theo sản phẩm, theo cột ngày — để bất cứ ai cũng xoay khối Rubik được mà không cần biết một dòng SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu).
-3. **Gắn mục tiêu thành KPI:** chọn ra dăm con số then chốt, treo mốc lên, theo dõi tự động.
+3. **Gắn mục tiêu thành KPI:** chọn ra dăm con số then chốt, treo mốc lên, theo dõi tự động — thậm chí [cảnh báo ngay khi một KPI vượt ngưỡng](/blog/canh-bao-kpi/) để biết trong ngày thay vì đợi tới buổi họp.
 
 Một lần định nghĩa. Cả công ty nói cùng một ngôn ngữ. Báo cáo ngừng cãi nhau — không phải vì ai đó thắng, mà vì không còn gì để cãi.
 

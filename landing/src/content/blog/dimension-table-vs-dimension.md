@@ -2,14 +2,30 @@
 title: "\"Dimension table\" vs \"dimension\": cùng một từ — một người chỉ cái bảng, một người chỉ góc cắt"
 code: "kt-039"
 description: "Hai người họp cãi nhau cả buổi vì chữ \"dimension\". Hóa ra một người đang nói cái BẢNG, người kia nói GÓC CẮT. Không ai sai — chỉ là một từ gánh hai nghĩa."
-pubDate: 2027-08-18
+pubDate: 2027-07-21
 category: "Kiến Thức Nền Tảng"
+series: "thiet-ke-kho-du-lieu"
+seriesOrder: 1
 readTime: 7
 author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/dimension-table-vs-dimension.svg"
 coverAlt: "Một bảng dữ liệu bên trái, các góc cắt tỏa ra từ nó sang phải"
 ---
+
+<div class="series-nav">
+  <div class="series-nav-title">🧭 Series Thiết kế kho dữ liệu · 8 phần</div>
+  <ol>
+    <li class="current">Phần 1 — Dimension vs Dimension table</li>
+    <li><a href="/blog/star-vs-snowflake-schema/">Phần 2 — Star vs Snowflake schema</a></li>
+    <li><a href="/blog/kimball-dimensional-modeling/">Phần 3 — Kimball: mô hình chiều</a></li>
+    <li><a href="/blog/inmon-vs-kimball/">Phần 4 — Inmon vs Kimball</a></li>
+    <li><a href="/blog/scd-slowly-changing-dimension/">Phần 5 — SCD: chiều thay đổi chậm</a></li>
+    <li><a href="/blog/snapshot-table/">Phần 6 — Snapshot &amp; 3 loại fact</a></li>
+    <li><a href="/blog/olap-cube-drill-pivot/">Phần 7 — OLAP cube: drill &amp; pivot</a></li>
+    <li><a href="/blog/data-quality-la-gi/">Phần 8 — Data quality: 6 chiều</a></li>
+  </ol>
+</div>
 
 Cuộc họp setup báo cáo, anh dev nói: *"Dimension sản phẩm em đã build xong, có đủ tên, nhóm, giá vốn."* Chị phân tích gật gù rồi hỏi tiếp: *"Thế dimension theo tháng có chưa?"* Anh dev khựng lại: *"Ơ, tháng nằm trong dimension thời gian mà chị."* Hai người nhìn nhau, mỗi người tưởng người kia lẫn.
 

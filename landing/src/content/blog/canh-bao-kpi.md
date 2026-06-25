@@ -6,7 +6,7 @@ pubDate: 2025-09-04
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
 author: "Lê Thị Hương"
-featured: false
+featured: true
 cover: "/blog/covers/canh-bao-kpi.svg"
 coverAlt: "Đường KPI tụt dần chạm vạch ngưỡng đỏ và bật ra một chuông cảnh báo"
 ---

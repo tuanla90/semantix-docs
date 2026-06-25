@@ -6,7 +6,7 @@ pubDate: 2026-04-15
 category: "AI & Công Nghệ"
 readTime: 13
 author: "Lê Anh Tuấn"
-featured: false
+featured: true
 cover: "/blog/covers/llm-bia-sql.svg"
 coverAlt: "Một khối SQL có dòng bịa được đánh dấu đỏ, đối lại lá chắn các tầng chặn ảo giác"
 ---

@@ -6,7 +6,7 @@ pubDate: 2025-08-31
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Thị Hương"
-featured: false
+featured: true
 cover: "/blog/covers/bao-cao-telegram-zalo.svg"
 coverAlt: "Một tin nhắn báo cáo doanh thu kèm biểu đồ mini tự gửi vào điện thoại đúng giờ sáng"
 ---

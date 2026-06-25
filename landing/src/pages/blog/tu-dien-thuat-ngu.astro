@@ -287,6 +287,27 @@ const terms: Term[] = [
   { t: 'Sensitivity analysis', match: ['sensitivity analysis', 'phân tích độ nhạy', 'độ nhạy'], vi: 'Phân tích độ nhạy: nhúc nhích một biến (±10%) rồi đo kết quả lắc bao nhiêu, để biết biến nào lắc kết quả mạnh nhất và đáng đưa vào kịch bản.', slug: 'scenario-analysis' },
   { t: 'Base case', match: ['base case', 'best case', 'worst case', 'kịch bản cơ sở', 'kịch bản tốt nhất', 'kịch bản xấu nhất'], vi: 'Bộ ba kịch bản kinh điển: base case (cơ sở — mọi thứ như dự kiến), best case (tốt nhất — lạc quan) và worst case (xấu nhất — thận trọng), mỗi cái ứng với một câu chuyện giả định khác nhau.', slug: 'scenario-analysis' },
   { t: 'Assumption', match: ['assumption', 'giả định'], vi: 'Giả định: điều ngầm cho là đúng làm nền cho một dự báo/kế hoạch (vd "sức mua giữ nguyên"). Giả định viết ra thì tranh luận được; giả định ẩn thì âm thầm làm hỏng kế hoạch.', slug: 'scenario-analysis' },
+  // Bổ sung: series Thiết kế kho dữ liệu + Hiểu chỉ số
+  { t: 'Inmon', ab: 'Enterprise Data Warehouse', match: ['inmon', 'edw', 'enterprise data warehouse', 'top-down'], vi: 'Trường phái xây kho dữ liệu từ trên xuống: dựng một kho doanh nghiệp chuẩn hoá làm nguồn sự thật trước, rồi mới rút data mart cho từng phòng. Đối trọng của Kimball, hợp tổ chức lớn/ngành chặt chẽ.', slug: 'inmon-vs-kimball' },
+  { t: 'Kimball', match: ['kimball', 'bottom-up'], vi: 'Trường phái xây kho dữ liệu từ dưới lên: dựng từng data mart dạng chiều (star schema) theo đúng câu hỏi cần trả lời, rồi gắn kết dần. Thực dụng, có giá trị sớm, hợp SME.', slug: 'kimball-dimensional-modeling' },
+  { t: 'Mô hình hóa chiều', ab: 'Dimensional modeling', match: ['dimensional modeling', 'mo hinh hoa chieu', 'mô hình hóa chiều'], vi: 'Thiết kế dữ liệu xoay quanh câu hỏi phân tích thay vì quanh việc lưu trữ: tách bảng fact (số đo) và dimension (mô tả), cố ý phi chuẩn hoá để mỗi câu hỏi chạm ít bảng nhất.', slug: 'kimball-dimensional-modeling' },
+  { t: 'Grain', match: ['grain', 'độ mịn', 'do min'], vi: 'Độ mịn của bảng fact: một dòng đại diện cho cái gì (một đơn? một dòng sản phẩm trong đơn?). Chọn grain trước tiên, mọi thứ khác theo sau — chọn sai là âm thầm mất câu hỏi.', slug: 'kimball-dimensional-modeling' },
+  { t: 'Bus matrix', match: ['bus matrix', 'ma trận bus'], vi: 'Bảng đối chiếu các bảng fact với bộ dimension dùng chung giữa chúng — bộ khung để nhiều data mart gắn kết nhất quán thay vì rời rạc mỗi nơi một định nghĩa.', slug: 'kimball-dimensional-modeling' },
+  { t: 'Star schema', match: ['star schema', 'lược đồ sao', 'luoc do sao'], vi: 'Lược đồ hình sao: bảng fact ở giữa, các dimension phẳng toả quanh — mỗi câu hỏi chỉ một bước nối, đọc nhanh và người không kỹ thuật cũng hiểu.', slug: 'star-vs-snowflake-schema' },
+  { t: 'Snowflake schema', match: ['snowflake schema', 'lược đồ bông tuyết'], vi: 'Lược đồ bông tuyết: như star nhưng mỗi dimension lại tách nhỏ tiếp (chuẩn hoá) — ít trùng dữ liệu hơn nhưng phải join nhiều bảng hơn, hỏi chậm hơn.', slug: 'star-vs-snowflake-schema' },
+  { t: 'Dimension table', match: ['dimension table', 'bảng dimension', 'bảng chiều'], vi: '"Dimension" là góc cắt số liệu (theo tỉnh, theo tháng); "dimension table" là cái bảng vật lý lưu mô tả của góc cắt đó. Cùng một từ, hai nghĩa — hay gây cãi nhau.', slug: 'dimension-table-vs-dimension' },
+  { t: 'SCD', ab: 'Slowly Changing Dimension', match: ['scd', 'slowly changing dimension', 'chiều thay đổi chậm'], vi: 'Cách xử lý khi một thuộc tính mô tả (vd tỉnh của khách) đổi theo thời gian: Type 1 ghi đè, Type 2 thêm dòng giữ lịch sử, Type 3 giữ một mức cũ. Chọn sai là báo cáo lịch sử lệch.', slug: 'scd-slowly-changing-dimension' },
+  { t: 'Snapshot table', match: ['snapshot table', 'bảng chụp', 'periodic snapshot', 'accumulating snapshot'], vi: 'Bảng fact "chụp ảnh" trạng thái theo chu kỳ (vd tồn kho cuối mỗi ngày) thay vì cộng dồn từng giao dịch — trả lời nhanh câu "tại thời điểm đó là bao nhiêu".', slug: 'snapshot-table' },
+  { t: 'OLAP cube', match: ['olap cube', 'khối olap', 'slice and dice', 'slice dice'], vi: 'Nhìn dữ liệu như một khối nhiều chiều: drill down (bóc sâu), drill up (cuộn lên), pivot (xoay trục), slice/dice (cắt lát) — cùng một con số xoay được nhiều cách mà không cần nhiều báo cáo.', slug: 'olap-cube-drill-pivot' },
+  { t: 'Data mart', match: ['data mart', 'quầy dữ liệu'], vi: 'Một "quầy" dữ liệu nhỏ cắt riêng cho một phòng ban từ kho chung — chỉ chứa bảng và chỉ số phòng đó cần, để khỏi lạc giữa hàng trăm bảng.', slug: 'data-mart-la-gi' },
+  { t: 'Data catalog', match: ['data catalog', 'từ điển dữ liệu'], vi: 'Cuốn từ điển cho chính dữ liệu của bạn: ghi rõ mỗi bảng, mỗi cột thực sự chứa gì và ai sở hữu — để tri thức không nằm gọn trong đầu một người rồi bốc hơi khi họ nghỉ.', slug: 'data-catalog-tu-dien-du-lieu' },
+  { t: 'Data quality', match: ['data quality', 'chất lượng dữ liệu'], vi: 'Chất lượng dữ liệu đo theo 6 chiều: chính xác, đầy đủ, nhất quán, kịp thời, hợp lệ, duy nhất. "Dữ liệu ổn" theo chiều nào mới là câu hỏi đúng.', slug: 'data-quality-la-gi' },
+  { t: 'Thang đo dữ liệu', ab: '4 loại thang đo', match: ['thang đo', 'thang do', 'nominal', 'ordinal', 'interval', 'ratio', 'định danh', 'thứ bậc'], vi: 'Bốn loại thang đo (định danh, thứ bậc, khoảng, tỉ lệ) quyết định phép tính nào có nghĩa — vd "mã sản phẩm trung bình" là vô nghĩa vì mã chỉ là nhãn định danh.', slug: '4-loai-thang-do-du-lieu' },
+  { t: 'Chỉ số dòng chảy & điểm', ab: 'Flow vs Stock', match: ['flow metric', 'stock metric', 'dòng chảy', 'chỉ số điểm', 'flow', 'stock'], vi: 'Chỉ số dòng chảy (flow) cộng dồn theo kỳ được (doanh thu cả năm = cộng 12 tháng); chỉ số điểm (stock) là trạng thái tại một thời điểm (tồn kho) — cộng các kỳ lại là sai.', slug: 'chi-so-dong-chay-vs-diem' },
+  { t: 'Dòng tiền vs lợi nhuận', match: ['dòng tiền', 'dong tien', 'lợi nhuận', 'cash flow', 'profit'], vi: 'Lợi nhuận là lãi trên sổ sách; dòng tiền là tiền thật ra vào tài khoản. Báo lãi 200 triệu mà vẫn không đủ trả lương là vì hai con số này khác nhau.', slug: 'dong-tien-vs-loi-nhuan' },
+  { t: 'Input vs Output metric', match: ['input metric', 'output metric', 'chỉ số đầu vào', 'chỉ số đầu ra'], vi: 'Output (doanh thu) là kết quả bạn không bấm nút đổi được; input (số cuộc gọi, lượt thêm giỏ) là cái lái được hôm nay để dời output ngày mai.', slug: 'input-vs-output-metrics' },
+  { t: 'Business vs Customer metric', match: ['business metric', 'customer metric', 'chỉ số doanh nghiệp', 'chỉ số khách hàng'], vi: 'Chỉ số doanh nghiệp (doanh thu, số đơn) đo sức khoẻ công ty; chỉ số khách hàng (hài lòng, quay lại) đo sức khoẻ quan hệ — dashboard xanh mà khách đã âm thầm bỏ đi.', slug: 'business-metrics-vs-customer-metrics' },
+  { t: 'Cảnh báo ngưỡng', ab: 'Threshold alert', match: ['threshold alert', 'cảnh báo ngưỡng', 'alert fatigue', 'cảnh báo kpi'], vi: 'Nhắn ngay khi một KPI vượt lằn ranh đặt trước, thay vì đợi báo cáo định kỳ. Đặt quá nhạy thì dính "alert fatigue" — reo nhiều tới mức người ta tắt sạch.', slug: 'canh-bao-kpi' },
 ];
 
 // Sắp xếp A–Z theo thuật ngữ (không phân biệt hoa thường, bỏ ký tự đầu không phải chữ).
@@ -352,6 +373,11 @@ const usage = computeUsage(terms, posts);
   .glo-usage-link:hover { color: var(--primary); text-decoration: underline; }
   .glo-usage-link.primary { color: var(--primary); font-weight: 600; }
   .glo-sep { color: var(--border); }
+  .glo-more { display: none; }
+  .glo-usage.expanded .glo-more { display: inline; }
+  .glo-usage-toggle { margin-left: 6px; font-size: 12.5px; font-weight: 600; color: var(--primary);
+    background: none; border: none; padding: 0; cursor: pointer; font-family: inherit; }
+  .glo-usage-toggle:hover { text-decoration: underline; }
 
   .glo-empty { text-align: center; color: var(--muted); padding: 40px 0; font-size: 15px; display: none; }
   .glo-back { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--primary); text-decoration: none; margin-bottom: 24px; }
@@ -389,10 +415,13 @@ const usage = computeUsage(terms, posts);
               <span class="glo-usage-label">Xuất hiện trong ({usage.get(term.t)!.length}):</span>
               {usage.get(term.t)!.map((u, i) => (
                 <>
-                  {i > 0 && <span class="glo-sep"> · </span>}
-                  <a class={`glo-usage-link${u.primary ? ' primary' : ''}`} href={`/blog/${u.slug}/`}>{shortLabel(u.title)}</a>
+                  {i > 0 && <span class={`glo-sep${i >= 6 ? ' glo-more' : ''}`}> · </span>}
+                  <a class={`glo-usage-link${u.primary ? ' primary' : ''}${i >= 6 ? ' glo-more' : ''}`} href={`/blog/${u.slug}/`}>{shortLabel(u.title)}</a>
                 </>
               ))}
+              {usage.get(term.t)!.length > 6 && (
+                <button type="button" class="glo-usage-toggle" data-more={`+${usage.get(term.t)!.length - 6} nữa`}>+{usage.get(term.t)!.length - 6} nữa</button>
+              )}
             </div>
           )}
           {(!usage.get(term.t) || usage.get(term.t)!.length === 0) && term.slug && (
@@ -429,6 +458,16 @@ const usage = computeUsage(terms, posts);
       g.style.display = visible ? '' : 'none';
     });
     empty.style.display = anyVisible ? 'none' : 'block';
+  });
+
+  // "Xuất hiện trong": chỉ hiện 6 bài đầu, còn lại bấm "+N nữa" để mở.
+  document.querySelectorAll<HTMLButtonElement>('.glo-usage-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const box = btn.closest('.glo-usage');
+      if (!box) return;
+      const expanded = box.classList.toggle('expanded');
+      btn.textContent = expanded ? 'thu gọn' : (btn.dataset.more || '');
+    });
   });
 </script>
 

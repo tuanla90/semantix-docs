@@ -40,6 +40,21 @@ function phraseRegex(phrase: string): RegExp {
   return new RegExp(`(?<![a-z0-9])${esc}(?![a-z0-9])`, 'i');
 }
 
+/**
+ * Acronym = chữ in HOA 2–5 ký tự (CAC, DAU, MAU, ROAS…). Khi bỏ dấu, các từ này
+ * dễ trùng từ tiếng Việt thường gặp ("CAC"→"cac"="các", "DAU"→"dau"="đâu/đầu").
+ * Nên acronym phải khớp ĐÚNG HOA, KHÔNG bỏ dấu.
+ */
+function isAcronym(p: string): boolean {
+  return /^[A-Z][A-Z0-9]{1,4}$/.test(p.trim());
+}
+
+/** Regex acronym: khớp đúng hoa, theo ranh giới từ, KHÔNG dùng cờ 'i'. */
+function acronymRegex(phrase: string): RegExp {
+  const esc = phrase.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`(?<![A-Za-z0-9])${esc}(?![A-Za-z0-9])`);
+}
+
 /** Các cụm cần tìm cho một thuật ngữ. */
 function patternsFor(term: GlossaryTerm): string[] {
   if (term.match && term.match.length) return term.match;
@@ -54,18 +69,20 @@ export function computeUsage(
   terms: GlossaryTerm[],
   posts: PostLike[],
 ): Map<string, UsageHit[]> {
-  const docs = posts.map(p => ({
-    slug: p.slug,
-    title: p.data.title,
-    text: normalize(`${p.data.title} ${p.data.description ?? ''} ${p.body ?? ''}`),
-  }));
+  const docs = posts.map(p => {
+    const raw = `${p.data.title} ${p.data.description ?? ''} ${p.body ?? ''}`;
+    return { slug: p.slug, title: p.data.title, raw, text: normalize(raw) };
+  });
 
   const map = new Map<string, UsageHit[]>();
   for (const term of terms) {
-    const regexes = patternsFor(term).map(phraseRegex);
+    const patterns = patternsFor(term);
+    // Acronym (CAC, DAU…) khớp đúng hoa trên text gốc; cụm thường khớp đã bỏ dấu.
+    const normRe = patterns.filter(p => !isAcronym(p)).map(phraseRegex);
+    const acroRe = patterns.filter(isAcronym).map(acronymRegex);
     const hits: UsageHit[] = [];
     for (const d of docs) {
-      if (regexes.some(r => r.test(d.text))) {
+      if (normRe.some(r => r.test(d.text)) || acroRe.some(r => r.test(d.raw))) {
         hits.push({ slug: d.slug, title: d.title, primary: d.slug === term.slug });
       }
     }

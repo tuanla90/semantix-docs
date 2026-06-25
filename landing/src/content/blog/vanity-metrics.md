@@ -94,7 +94,7 @@ Và cảnh giác một cái bẫy rất hay mắc: người ta thích khoe vanit
 
 ## Vanity metric trong Semantix
 
-Semantix không bày thêm cho bạn một dashboard lấp lánh để bạn tự ru mình. Ý tưởng ngược lại: khi bạn hỏi "livestream tháng này thế nào", thay vì phun ra mỗi tổng lượt xem, nó gợi ý nhìn cả tỉ lệ người xem đặt đơn và doanh thu trên mỗi nghìn lượt — để bạn không nhầm độ phủ với kết quả.
+Semantix không bày thêm cho bạn một dashboard lấp lánh để bạn tự ru mình. Ý tưởng ngược lại: bạn **định nghĩa sẵn các chỉ số lái được** — tỉ lệ người xem đặt đơn, doanh thu trên mỗi nghìn lượt — trong tầng ngữ nghĩa, rồi hỏi thẳng chúng thay vì chỉ tổng lượt xem. Con số bạn nhận về là loại lái được, vì đó là chỉ số bạn đã chọn để theo dõi — không nhầm độ phủ với kết quả.
 
 Bạn định nghĩa "doanh thu trên mỗi khách" hay "tỉ lệ chốt đơn" **một lần** trong tầng ngữ nghĩa, rồi hỏi lại mỗi sáng bằng tiếng Việt: *"Tỉ lệ chốt đơn TikTok tuần này so với trung bình bốn tuần thế nào?"*. Con số trả về luôn là loại lái được, không phải loại để khoe.
 

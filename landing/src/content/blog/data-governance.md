@@ -33,7 +33,7 @@ Bỏ hết thuật ngữ sang một bên. Một con số chỉ đáng tin khi b�
 
 | Trụ | Câu hỏi cốt lõi | Thiếu nó thì | Công cụ trong Semantix |
 |---|---|---|---|
-| 1. Sở hữu | **Ai chốt** định nghĩa con số này? | Năm phòng năm cách tính, cãi nhau mãi | Data owner cho mỗi metric |
+| 1. Sở hữu | **Ai chốt** định nghĩa con số này? | Năm phòng năm cách tính, cãi nhau mãi | Định nghĩa chốt một lần + quyền sửa theo RBAC |
 | 2. Phân quyền | **Ai được xem** dữ liệu nào? | Mở hết thì lộ; khoá hết thì tắc | Phân quyền / RLS |
 | 3. Định nghĩa | Định nghĩa chuẩn **ở đâu**? | Mỗi file một công thức, lệch âm thầm | Semantic Layer |
 | 4. Trách nhiệm | Số sai thì **ai sửa**, sửa **thế nào**? | Số sai trôi đi, không ai phát hiện | Quy trình đổi định nghĩa |
@@ -129,11 +129,11 @@ Ba bước. Không hội đồng, không biểu mẫu. Nhưng có nó, số sai 
 
 Semantix không bán cho bạn "một bộ quy trình governance" — vì bộ quy trình nằm trên giấy thì SME nào cũng bỏ xó. Thay vào đó, bốn trụ được **cài thẳng vào chỗ bạn làm việc với số**, để governance là thứ tự nhiên xảy ra chứ không phải việc phải nhớ làm.
 
-1. **Owner gắn vào metric** — mỗi chỉ số trong Studio có một người chủ và một định nghĩa chốt; muốn đổi phải qua owner, không ai lặng lẽ sửa.
+1. **Định nghĩa chốt + kiểm soát quyền sửa** — mỗi chỉ số trong Studio có một định nghĩa chốt duy nhất; chỉ người có quyền (theo RBAC) mới sửa được, và thay đổi để lại vết trong nhật ký — không ai lặng lẽ đổi.
 2. **Phân quyền tại tầng dữ liệu** — RLS định nghĩa "phần của tôi" một lần, áp cho mọi báo cáo và mọi câu hỏi tiếng Việt; lọc tại nguồn trước khi dữ liệu rời server.
 3. **Định nghĩa sống ở Semantic Layer** — một nơi duy nhất giữ "doanh thu nghĩa là gì"; sửa một chỗ, cả công ty cập nhật theo.
 
-Nói cách khác, Semantix không phải "một dashboard có thêm tính năng phân quyền", mà là hạ tầng để mỗi con số luôn có chủ, có định nghĩa, và có người chịu trách nhiệm — bốn trụ governance, không phải bốn cuốn sổ tay.
+Nói cách khác, Semantix không phải "một dashboard có thêm tính năng phân quyền", mà là hạ tầng để mỗi con số luôn có một định nghĩa chốt, được kiểm soát quyền sửa, và có vết ai đã đổi — bốn trụ governance, không phải bốn cuốn sổ tay.
 
 ## Tóm lại
 

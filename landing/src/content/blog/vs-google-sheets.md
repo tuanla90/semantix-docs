@@ -90,7 +90,7 @@ Khác biệt cốt lõi nằm ở một thứ bảng tính không có: **"doanh 
 2. **Định nghĩa** các khái niệm nghiệp vụ một lần: doanh thu là gì, đơn hợp lệ là gì.
 3. **Hỏi bằng tiếng Việt**: *"doanh thu TikTok tháng này tụt là do ít đơn hơn hay giỏ hàng nhỏ đi?"* → *"sản phẩm nào kéo mức giảm đó?"* → *"khách giảm mua là cũ hay mới?"* — cả chuỗi là một cuộc trò chuyện liền mạch, không dựng lại pivot nào.
 
-Phân quyền theo dòng, gộp đa kênh bằng bảng ảo ngay lúc hỏi (không copy về kho), cảnh báo ngưỡng, và hỏi câu mới mà không gãy công thức — đó là những thứ bảng tính cấu trúc không cho được, không phải vì nó kém, mà vì nó sinh ra cho một bài toán khác. *(Muốn xem 4 bước cụ thể từ một sheet đơn hàng tới dashboard, đọc [Từ Google Sheets đến dashboard](/blog/google-sheets-dashboard/).)*
+Phân quyền theo dòng, gộp đa kênh bằng bảng ảo ngay lúc hỏi (không copy về kho), cảnh báo khi số liệu bất thường, và hỏi câu mới mà không gãy công thức — đó là những thứ bảng tính cấu trúc không cho được, không phải vì nó kém, mà vì nó sinh ra cho một bài toán khác. *(Muốn xem 4 bước cụ thể từ một sheet đơn hàng tới dashboard, đọc [Từ Google Sheets đến dashboard](/blog/google-sheets-dashboard/).)*
 
 ## Tóm lại
 

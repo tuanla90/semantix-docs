@@ -126,4 +126,4 @@ Lần tới khi bạn định treo một con số mục tiêu cho đội, đừn
 
 ---
 
-*Muốn mỗi KPI của shop luôn có guardrail đi kèm, cảnh báo ngay khi biên bị phá? [Dùng thử Semantix miễn phí.](/docs/vi/free-trial/) Hoặc đọc tiếp [Phần 9 — Quyết định khi dữ liệu chưa đủ](/blog/quyet-dinh-khi-thieu-du-lieu/) để biết phải làm gì khi bạn còn chưa có đủ con số để canh.*
+*Muốn mỗi KPI của shop luôn có guardrail đi kèm, cảnh báo khi biên rớt dưới ngưỡng? [Dùng thử Semantix miễn phí.](/docs/vi/free-trial/) Hoặc đọc tiếp [Phần 9 — Quyết định khi dữ liệu chưa đủ](/blog/quyet-dinh-khi-thieu-du-lieu/) để biết phải làm gì khi bạn còn chưa có đủ con số để canh.*

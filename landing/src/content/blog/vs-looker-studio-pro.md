@@ -42,7 +42,7 @@ Câu trả lời ngắn: **phần lớn là có** — và ở vài chỗ, Semant
 | AI | Không | Gemini gắn thêm | **AI-native: hỏi-đáp tiếng Việt** + semantic layer |
 | Hỏi tự do bằng ngôn ngữ | Không | Không | **Có** |
 | Đa nguồn ngoài Google | Hạn chế | Hạn chế | **Có** — gộp đa nguồn mapping + union |
-| Self-host / AI provider riêng | Không | Không | **Có** — Ollama / Azure OpenAI |
+| Self-host / AI provider riêng | Không | Không | **Có** — Ollama / model tương thích OpenAI |
 
 Đọc bảng theo chiều dọc, một hình mẫu hiện ra. Ở những ô **quản trị và phân phối** — workspace, sở hữu tổ chức, lịch gửi, hỗ trợ — Pro và Semantix gần như ngang nhau; cả hai đều giải đúng cái đau của bản Free. Khác biệt nằm ở bốn ô cuối, và đó là **khác biệt bản chất, không phải khác biệt tính năng.**
 

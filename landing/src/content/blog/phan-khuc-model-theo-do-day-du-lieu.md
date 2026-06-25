@@ -127,4 +127,4 @@ Bài toán này không hề trừu tượng. Mọi SME bán đa kênh đều có
 
 ---
 
-*Muốn AI tự nhận ra hồ sơ khách của bạn đang lổ chổ và phân khúc giúp bạn? [Dùng thử Semantix miễn phí.](/docs/vi/free-trial/)*
+*Muốn khai báo "độ đầy hồ sơ" một lần trong Semantic Layer rồi phân khúc khách nhất quán trong mọi báo cáo — hỏi bằng tiếng Việt? [Dùng thử Semantix miễn phí.](/docs/vi/free-trial/)*

@@ -70,8 +70,8 @@ Ghép lại, bức tranh hoàn chỉnh: phần mềm self-host trong nhà, dữ 
 
 Semantix không định vị mình là "một dịch vụ cloud mà bạn buộc phải đẩy dữ liệu lên đó". Với tổ chức có ràng buộc dữ liệu, cách tiếp cận đi đúng theo logic ở trên:
 
-1. **Triển khai tự lưu trữ (self-host) ở gói Enterprise** — toàn bộ Semantix đóng gói chạy bằng **Docker / Kubernetes** ngay trong hạ tầng nội bộ của bạn. Dữ liệu không rời trung tâm dữ liệu của doanh nghiệp.
-2. **AI provider riêng** — bạn cấu hình **Ollama chạy nội bộ** để cả model AI cũng nằm trong nhà, hoặc trỏ sang **Azure OpenAI** nếu đã có hạ tầng riêng. Không phụ thuộc một đường ra internet công cộng.
+1. **Triển khai tự lưu trữ (self-host) ở gói Enterprise** — toàn bộ Semantix đóng gói chạy bằng **Docker** (có sẵn `Dockerfile` + `docker-compose`) ngay trong hạ tầng nội bộ của bạn, và triển khai được trên Kubernetes nếu bạn đã có nền tảng đó. Dữ liệu không rời trung tâm dữ liệu của doanh nghiệp.
+2. **AI provider riêng** — bạn cấu hình **Ollama chạy nội bộ** để cả model AI cũng nằm trong nhà, hoặc trỏ sang **một endpoint tương thích OpenAI** (ví dụ Azure OpenAI, qua cấu hình `baseURL`) nếu đã có hạ tầng riêng. Không phụ thuộc một đường ra internet công cộng.
 3. **Bạn vẫn giữ khóa** — kết hợp với **BYOK (Bring Your Own Key — tự mang khóa API của mình)** và định tuyến đa nhà cung cấp, bạn kiểm soát chính xác mỗi câu hỏi đi đâu. *(Vì sao chủ quyền khóa quan trọng đến vậy, xem [Multi-provider & BYOK: chủ quyền dữ liệu cho doanh nghiệp](/blog/multi-provider-byok/).)*
 
 Nói cách khác, an toàn ở đây không phải lời hứa "chúng tôi không nhìn dữ liệu của bạn đâu", mà là một *kiến trúc* khiến việc dữ liệu ra ngoài gần như không có đường xảy ra — vì cả ba thứ (phần mềm, dữ liệu, model AI) đều ở chung một phía tường lửa với bạn. Còn nếu bạn là một [SME chưa cần đến mức ấy](/blog/bi-cho-sme/), bản cloud chạy ngay trong vài phút vẫn là lựa chọn gọn nhất.

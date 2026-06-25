@@ -84,7 +84,7 @@ Một nền tảng AI BI (Business Intelligence — biến dữ liệu thành qu
 |---|---|---|
 | Phí ban đầu | **Thấp, thấy rõ** (5–30tr một lần) | Theo gói, đều đặn |
 | Câu hỏi mới phát sinh | Thuê tiếp, 1–3tr/lần | Hỏi thêm, không tốn thêm |
-| Khi nguồn dữ liệu đổi | Dashboard gãy, phải thuê sửa | Tự thích ứng |
+| Khi nguồn dữ liệu đổi | Dashboard gãy, phải thuê sửa | Cập nhật ánh xạ ở một chỗ (semantic layer), không dò sửa từng biểu đồ |
 | Bảo trì giữa các lần sửa | **Không ai trông** | Nền tảng tự lo |
 | Phụ thuộc người ngoài | Cao — kiến thức trong đầu freelancer | Không — bạn tự hỏi |
 | Thời gian chờ một câu mới | 2–3 ngày (nếu họ rảnh) | Vài giây |

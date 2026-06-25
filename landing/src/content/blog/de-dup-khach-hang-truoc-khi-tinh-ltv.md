@@ -108,9 +108,11 @@ Cách cân bằng thực tế: gộp tự động *chỉ* khi khoá cứng đã 
 
 ## Gộp trùng với Semantix
 
-Làm de-dup thủ công trong Excel là cơn ác mộng: lọc, sắp xếp, dò mắt từng cặp, rồi nhân lên hàng vạn dòng. Semantix tiếp cận từ gốc — gộp trùng nằm ở tầng chuẩn hoá dữ liệu, *trước khi* bất kỳ con số nào được tính.
+Làm de-dup thủ công trong Excel là cơn ác mộng: lọc, sắp xếp, dò mắt từng cặp, rồi nhân lên hàng vạn dòng. Semantix tiếp cận từ gốc — việc đếm khách theo **khoá định danh** nằm ở tầng định nghĩa, *trước khi* bất kỳ con số nào được tính.
 
-Bạn kết nối Shopee, TikTok Shop, KiotViet, Google Sheets rồi [gộp (union) + làm sạch bằng bảng ảo ngay lúc hỏi](/blog/bang-ao-gop-du-lieu/) — dữ liệu ở lại nguồn, không copy về kho nào — khai báo SĐT/email là khoá định danh, và Semantix tự chuẩn hoá rồi gộp các bản ghi trùng khoá — đồng thời đẩy các cặp "ngờ ngợ" sang cho bạn duyệt thay vì gộp liều. Khi bạn hỏi "LTV trung bình quý này" hay "cohort giữ chân sáu tháng", con số đứng trên một tệp khách đã sạch trùng, không phải trên một đám hồ sơ phân mảnh.
+Bạn kết nối Shopee, TikTok Shop, KiotViet, Google Sheets rồi [gộp (union) + làm sạch bằng bảng ảo ngay lúc hỏi](/blog/bang-ao-gop-du-lieu/) — dữ liệu ở lại nguồn, không copy về kho nào. Trong [Semantic Layer](/blog/semantic-layer/), bạn **khai báo SĐT (hoặc email) đã chuẩn hoá làm khoá định danh khách hàng** — chuẩn hoá bằng một cột tính toán, ví dụ bỏ khoảng trắng hay thống nhất đầu số. Sau đó mọi chỉ số — đếm khách, LTV, cohort giữ chân — được **đếm theo khoá định danh đó** thay vì theo từng dòng đơn rời rạc, nên con số đứng trên tệp khách *gộp theo khoá*, không phải trên một đám hồ sơ phân mảnh.
+
+Cần nói thẳng giới hạn: Semantix gộp **chính xác theo khoá bạn khai báo** — nó không tự đoán rằng hai hồ sơ *khác khoá* thực ra là một người. Những cặp trùng "ngờ ngợ" cần **khớp mờ (fuzzy)** vẫn là bước bạn tự xử lý ở khâu chuẩn bị dữ liệu (đúng như phần trên đã khuyến nghị: đưa vào danh sách chờ người duyệt). Cái Semantix lo cho bạn là phần còn lại — và là phần chiếm phần lớn khối lượng: gộp đúng theo khoá đã chuẩn hoá, một lần, cho mọi câu hỏi về sau.
 
 ## Tóm lại
 

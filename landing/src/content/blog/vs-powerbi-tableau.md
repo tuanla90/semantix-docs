@@ -70,7 +70,7 @@ Với Semantix, bạn còn trả AI theo mức dùng thật (chỉ tốn khi có
 | Người dùng không kỹ thuật | Tiêu thụ dashboard có sẵn | Tự hỏi, tự nhận câu trả lời |
 | AI hỏi-đáp ngôn ngữ tự nhiên | Hạn chế / cần add-on | Cốt lõi, đa nhà cung cấp |
 | Tạo metric (chỉ số đo được) mới | Cần DAX / LookML (ngôn ngữ công thức riêng của Power BI / Looker) | Định nghĩa trong Semantic Layer (tầng định nghĩa nghiệp vụ dùng chung), hỏi bằng tiếng Việt |
-| Thư viện biểu đồ | **Rất phong phú, dẫn đầu thị trường** | 27 loại — đủ rộng nhưng ít hơn |
+| Thư viện biểu đồ | **Rất phong phú, dẫn đầu thị trường** | Đủ loại phổ biến (cột, đường, tròn, combo, waterfall, funnel, heatmap, treemap, radar…) — ít hơn |
 | Hệ sinh thái & cộng đồng | **Khổng lồ, lâu đời** | Trẻ hơn |
 | Mô hình giá | Theo người dùng | Theo instance |
 | Self-hosted (tự cài trên máy chủ riêng) / chủ quyền dữ liệu | Hạn chế (cloud-first — ưu tiên chạy trên cloud) | Có, dữ liệu không rời server |

@@ -76,11 +76,11 @@ Cái hay của việc định ngưỡng *trước*: khi đường thận trọng
 
 ## Scenario trong Semantix
 
-Để dựng kịch bản, đa số doanh nghiệp Việt mở một file Excel khổng lồ, ô nọ trỏ ô kia, sửa một con số là cả bảng vỡ — và chỉ một người trong công ty dám đụng vào nó. Semantix không phải một cỗ máy phán con số thần thánh, cũng *không* hứa hẹn mô phỏng Monte Carlo nghìn lần tung xúc xắc. Nó là một lớp giúp bạn dựng nền **cơ sở dữ liệu** chung, chạy [dự báo](/blog/du-bao-la-gi/) trên đó, rồi *đổi giả định để so kịch bản* — tất cả bằng cách hỏi thẳng tiếng Việt:
+Để dựng kịch bản, đa số doanh nghiệp Việt mở một file Excel khổng lồ, ô nọ trỏ ô kia, sửa một con số là cả bảng vỡ — và chỉ một người trong công ty dám đụng vào nó. Semantix không phải một cỗ máy phán con số thần thánh, cũng *không* hứa hẹn mô phỏng Monte Carlo, lẫn một "bộ trượt giả định" tự sinh mọi kịch bản. Cái nó làm chắc chắn: dựng nền **dữ liệu** chung và chạy một [dự báo](/blog/du-bao-la-gi/) thật trên đó — đường cơ sở kèm khoảng tin cậy — bằng cách hỏi thẳng tiếng Việt:
 
-> **"Dự báo doanh thu 6 tháng tới ở ba kịch bản: lượng khách giảm 10%, giữ nguyên, và tăng 15% — đặt ba đường cạnh nhau."**
+> **"Dự báo doanh thu 6 tháng tới từ dữ liệu bán hàng, kèm khoảng tin cậy."**
 
-Semantix dựng đường cơ sở từ dữ liệu thật, cho bạn nhấc từng giả định lên hạ xuống, rồi vẽ các kịch bản cạnh nhau để bạn *nhìn thấy cái khoảng loe ra* thay vì ôm một con số trần trụi. *(Các con số ở trên là ví dụ minh hoạ.)* Đổi một giả định, hỏi lại một câu, là có bản so sánh mới — không cần ai "đụng vào file Excel thiêng".
+Semantix dựng đường cơ sở từ dữ liệu thật kèm dải tin cậy — cho bạn cái *khoảng loe ra* thay vì một con số trần trụi. Còn các **kịch bản giả định** ("nếu lượng khách giảm 10%", "nếu tăng 15%") thì bạn **tự dựng**: điều chỉnh đầu vào, hoặc hỏi lại một câu khác rồi đặt các kết quả cạnh nhau để so. Chưa có bộ trượt giả định tự động — nhưng vì mỗi câu chỉ mất vài giây và đều đứng trên cùng một định nghĩa dùng chung, việc thử nhiều kịch bản vẫn nhanh hơn nhiều so với "đụng vào file Excel thiêng" mà cả công ty sợ làm vỡ. *(Các con số ở trên là ví dụ minh hoạ.)*
 
 ## Tóm lại
 
@@ -96,4 +96,4 @@ Semantix dựng đường cơ sở từ dữ liệu thật, cho bạn nhấc t�
 
 ---
 
-*Muốn so ba kịch bản doanh thu ngay trên dữ liệu của bạn, chỉ bằng một câu hỏi tiếng Việt? [Dùng thử Semantix miễn phí với Google Sheets.](/docs/vi/free-trial/) Hoặc đọc lại [vì sao mọi dự báo đều sai mà vẫn hữu ích](/blog/du-bao-la-gi/) để hiểu cái nền mà mọi kịch bản đứng lên.*
+*Muốn một dự báo doanh thu kèm khoảng tin cậy ngay trên dữ liệu của bạn, hỏi bằng tiếng Việt — rồi tự thử từng kịch bản? [Dùng thử Semantix miễn phí với Google Sheets.](/docs/vi/free-trial/) Hoặc đọc lại [vì sao mọi dự báo đều sai mà vẫn hữu ích](/blog/du-bao-la-gi/) để hiểu cái nền mà mọi kịch bản đứng lên.*

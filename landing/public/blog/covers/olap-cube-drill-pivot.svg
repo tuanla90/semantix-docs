@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgkt037" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.6" stop-color="#1E1B4B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="facekt037" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4338CA"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <marker id="arrkt037" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#818CF8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bgkt037)"/>
+  <g stroke="#312E81" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <text x="80" y="140" fill="#818CF8" font-size="22" font-weight="700" letter-spacing="3">KIẾN THỨC NỀN TẢNG</text>
+  <text x="80" y="232" fill="#ffffff" font-size="54" font-weight="800">OLAP cube &amp; xoay chiều</text>
+  <text x="80" y="298" fill="#CBD5E1" font-size="30" font-weight="600">Drill &amp; pivot &amp; slice &amp; dice</text>
+  <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
+  <!-- motif: 3D data cube + rotation arrows -->
+  <g transform="translate(760,150)">
+    <path d="M40 120 L200 120 L200 280 L40 280 Z" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+    <path d="M40 120 L110 60 L270 60 L200 120 Z" fill="#162033" stroke="#475569" stroke-width="2"/>
+    <path d="M200 120 L270 60 L270 220 L200 280 Z" fill="#0B1120" stroke="#475569" stroke-width="2"/>
+    <line x1="93" y1="120" x2="93" y2="280" stroke="#334155" stroke-width="1.2"/>
+    <line x1="146" y1="120" x2="146" y2="280" stroke="#334155" stroke-width="1.2"/>
+    <line x1="40" y1="173" x2="200" y2="173" stroke="#334155" stroke-width="1.2"/>
+    <line x1="40" y1="226" x2="200" y2="226" stroke="#334155" stroke-width="1.2"/>
+    <rect x="146" y="173" width="54" height="53" fill="url(#facekt037)" opacity="0.85"/>
+    <text x="173" y="206" fill="#C7D2FE" font-size="16" font-weight="700" text-anchor="middle">8,4 tỷ</text>
+    <text x="120" y="312" fill="#FBBF24" font-size="16" font-weight="700" text-anchor="middle">Thời gian</text>
+    <text x="305" y="150" fill="#34D399" font-size="16" font-weight="700">Vùng</text>
+    <text x="10" y="200" fill="#F472B6" font-size="16" font-weight="700" transform="rotate(-90 10 200)" text-anchor="middle">Sản phẩm</text>
+    <path d="M70 40 A150 60 0 0 1 300 40" fill="none" stroke="#818CF8" stroke-width="3" marker-end="url(#arrkt037)"/>
+    <path d="M300 250 A150 60 0 0 1 70 300" fill="none" stroke="#818CF8" stroke-width="3" marker-end="url(#arrkt037)" opacity="0.7"/>
+  </g>
+</svg>

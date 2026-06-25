@@ -79,7 +79,7 @@ Semantix được xây từ đầu xoay quanh Semantic Layer. Thay vì hỏi AI 
 | SQL mới cho mỗi câu hỏi mới | Logic tái sử dụng, trả lời tức thì |
 | Bảo mật phụ thuộc từng truy vấn | Row-Level Security (RLS — phân quyền theo hàng, mỗi người chỉ thấy đúng dòng được phép) tập trung |
 
-Nếu bạn đang cân nhắc triển khai AI Analytics, câu hỏi đầu tiên không phải "AI nào tốt nhất?" — mà là **"Công ty mình đã có một định nghĩa thống nhất cho 'doanh thu' chưa?"** Trả lời được câu đó, bạn đã đi trước phần lớn doanh nghiệp.
+Nếu bạn đang cân nhắc triển khai AI Analytics, câu hỏi đầu tiên không phải "AI nào tốt nhất?" — mà là **"Công ty mình đã có một định nghĩa thống nhất cho 'doanh thu' chưa?"** Trả lời được câu đó, bạn đã đi trước phần lớn doanh nghiệp. Và nếu muốn bắt tay dựng định nghĩa đầu tiên ngay hôm nay, tôi có hướng dẫn từng bước trong [Xây Semantic Layer đầu tiên](/blog/xay-semantic-layer-dau-tien/) — bắt đầu bằng đúng một metric, không phải cả vũ trụ.
 
 ---
 

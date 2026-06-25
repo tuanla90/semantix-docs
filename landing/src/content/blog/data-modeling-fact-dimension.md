@@ -155,6 +155,8 @@ Nói cách khác: mô hình fact/dimension là *nền móng*, semantic layer là
 
 > Mental model: bảng fact là **động từ** ("đã bán cái gì, bao nhiêu"), bảng dimension là **tính từ** ("của ai, loại nào, ở đâu, khi nào"). Câu hỏi kinh doanh nào cũng là một động từ ghép với vài tính từ — sắp bảng đúng hai vai đó, là bạn hỏi được mọi câu.
 
+Khi đã nắm fact/dimension, bước tiếp là *sắp các bảng đó thành hình gì* và xử lý khi dimension thay đổi — tôi đào sâu trong series [Mô hình hóa chiều dữ liệu](/blog/star-vs-snowflake-schema/): star vs snowflake, cách Kimball, và SCD khi khách đổi thông tin.
+
 ---
 
 *Muốn hỏi dữ liệu bằng tiếng Việt mà không phải tự dựng fact, dimension hay viết một dòng SQL nào? [Dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/)*

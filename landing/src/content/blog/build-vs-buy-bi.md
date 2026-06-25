@@ -6,7 +6,7 @@ pubDate: 2026-03-18
 category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"
-featured: false
+featured: true
 cover: "/blog/covers/build-vs-buy-bi.svg"
 coverAlt: "Cân nhắc hai bên: tự dựng BI từ bộ công cụ và bánh răng vs mua sẵn một hộp giao ngay"
 ---

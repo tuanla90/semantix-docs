@@ -8,7 +8,7 @@ pubDate: 2025-06-08
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"
-featured: true
+featured: false
 cover: "/blog/covers/cohort-analysis.svg"
 coverAlt: "Bảng heatmap cohort giữ chân khách hàng theo tháng"
 ---

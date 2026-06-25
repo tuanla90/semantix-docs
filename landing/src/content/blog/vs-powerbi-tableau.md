@@ -6,7 +6,7 @@ pubDate: 2026-07-17
 category: "So Sánh & Lựa Chọn"
 readTime: 11
 author: "Lê Anh Tuấn"
-featured: true
+featured: false
 cover: "/blog/covers/vs-powerbi-tableau.svg"
 coverAlt: "Chi phí Power BI và Tableau tăng theo số người dùng, Semantix giữ phẳng"
 ---

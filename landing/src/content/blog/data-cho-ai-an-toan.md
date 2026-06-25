@@ -57,6 +57,8 @@ Phải tách bạch hai chuyện thường bị gộp:
 - **BYOK:** khoá API là của bạn, hoá đơn AI là của bạn, và bạn rút khoá lúc nào là cắt đứt lúc đó. Nhà cung cấp công cụ không thể chạm vào kênh AI ấy.
 - **On-premise / self-hosted (triển khai trên hạ tầng tự quản của doanh nghiệp):** với dữ liệu không được phép rời máy chủ — y tế, tài chính, dữ liệu theo quy định — toàn bộ hệ thống chạy *trong* hạ tầng của bạn. Dữ liệu không ra khỏi tường lửa.
 
+Tôi đang làm trưởng nhóm BI ở một ngân hàng, nên cái nấc "on-premise" này với tôi không phải lựa chọn xa xỉ mà là điều kiện cần. Dữ liệu giao dịch, hồ sơ khách hàng ở đây thuộc loại không được phép rời máy chủ — có những cột mà ngay cả nội bộ chúng tôi cũng phải xin quyền mới đụng tới. Mỗi lần cân nhắc đưa một công cụ mới vào, câu đầu tiên tôi hỏi không bao giờ là "model này thông minh cỡ nào", mà là "dữ liệu có ra khỏi tường lửa của bank không, và ai cầm khoá gọi nó". Một công cụ trả lời hay đến mấy mà không qua được cửa đó thì coi như chưa từng tồn tại đối với tôi.
+
 Ẩn dụ cho dễ hình dung: gửi tiền ngân hàng, bạn vẫn giữ thẻ và mã PIN — ngân hàng giữ *hộ*, không *sở hữu*. Một kiến trúc AI sai là kiểu bạn đưa luôn cả thẻ lẫn PIN cho một bên thứ ba rồi mong họ tử tế. Một kiến trúc đúng là bạn giữ chìa, hệ thống chỉ mượn quyền đi qua đúng cánh cửa được mở.
 
 ## Phân quyền theo hàng — để AI cũng chỉ thấy phần được phép

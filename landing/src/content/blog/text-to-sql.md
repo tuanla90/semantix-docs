@@ -82,6 +82,8 @@ Một doanh nghiệp có thể có hàng trăm bảng, hàng nghìn cột. Đưa
 
 Đây cũng là nơi chặn những kết hợp vô lý bằng luật (ví dụ tính trung bình của một mã đơn hàng), và chặn việc AI bịa ra bảng/cột không tồn tại. Không ngẫu nhiên mà những hệ Text-to-SQL mạnh nhất thế giới — WrenAI, SuperSonic của Tencent — đều xây quanh ý tưởng này.
 
+Hồi ở một công ty công nghệ lõi của một hệ sinh thái e-commerce, tôi tự dựng một hệ tracking giống Google Analytics, và bài học xương máu là: cùng chữ "doanh thu" mà mỗi phòng hiểu một kiểu. Marketing tính theo ngày đặt đơn; kế toán chỉ ghi nhận khi đơn giao xong, đã trừ hoàn/huỷ. Nếu để truy vấn tự đoán, số sẽ lệch nhau cả chục phần trăm mà không ai thấy sai. Chính vì neo mọi định nghĩa vào một chỗ duy nhất mà báo cáo của tôi khớp số backend tới ~98%, trong khi GA4 chỉ khớp khoảng 60%. Một con SQL chạy được mà không neo vào định nghĩa nghiệp vụ thì vẫn là một con số biết nói dối.
+
 > Nếu Text-to-SQL là động cơ, thì Semantic Layer là vô lăng và phanh. Thiếu nó, xe vẫn chạy — nhưng bạn không lái được.
 
 ### Lớp 4 — Thực thi an toàn & kiểm tra kết quả

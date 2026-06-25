@@ -63,6 +63,8 @@ Cả hai **đều chạy. Đều ra số. Đều đúng cú pháp.** Nhưng chê
 
 > Quy tắc vàng: AI chỉ được phép *lắp ghép* từ những định nghĩa đã có, không được *bịa* ra định nghĩa mới. Mỗi khái niệm nghiệp vụ phải neo vào một mục có thật trong Semantic Layer — nếu không, chặn.
 
+Tôi tin lớp này nhất vì đã trả giá để hiểu nó. Hồi làm trưởng nhóm BI ở một ngân hàng, tôi mới thấm: cùng chữ "doanh thu", marketing hiểu một kiểu, kế toán hiểu một kiểu, và mỗi báo cáo ngầm chọn một định nghĩa khác nhau mà không ai khai ra. Đúng cái gap mà hồi làm dữ liệu tracking ở một công ty công nghệ lõi của hệ sinh thái e-commerce tôi đã gặp: doanh thu chỉ tính theo ngày đặt, còn hoàn–huỷ về sau thì mù. Vì vậy giờ tôi đang biến semantic layer thành dự án trọng điểm: ghim mỗi khái niệm *một lần*. Bỏ lớp này, bạn không tăng tốc — bạn nhân bản sự nhập nhằng lên quy mô máy.
+
 ## Lớp 3 — Sinh SQL có ràng buộc: viết từ bản đồ, không viết từ trí nhớ
 
 Đến đây AI mới thật sự viết SQL. Nhưng không từ con số không — nó viết **trong khung ràng buộc** mà lớp 2 dựng sẵn.

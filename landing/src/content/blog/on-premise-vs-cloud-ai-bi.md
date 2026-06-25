@@ -54,6 +54,8 @@ Quyết định gói gọn trong ba câu hỏi:
 
 **Ba, đội ngũ kham nổi vận hành không?** Có sẵn phòng máy và đội IT thì on-premise là chi phí biên nhỏ. Một đội ba người không nên ôm cụm Kubernetes — cloud giải phóng họ khỏi việc không phải sở trường.
 
+Tôi đang là trưởng nhóm BI ở một ngân hàng, nên ba câu hỏi này không phải lý thuyết — chúng là cuộc họp tôi ngồi trong đó. Có lần tôi đứng trước ban điều hành bảo vệ quan điểm chuyển từ Power BI sang Data Studio: lập luận thắng được không phải vì công cụ "xịn hơn", mà vì nó vẫn nằm gọn trong vùng kiểm soát dữ liệu mà nghiệp vụ ngân hàng đòi hỏi. Bài học tôi rút ra: ở ngành bị quản chặt, câu hỏi đầu tiên không bao giờ là "tính năng", mà là "dữ liệu này *có được phép* đi tới đó không". Trả lời xong câu đó rồi mới đến lượt so tính năng.
+
 *Không phải chọn một lần cho mãi mãi.* Nhiều tổ chức đi cloud cho dữ liệu thường, on-premise cho phần nhạy cảm. Vấn đề là: công cụ bạn chọn *có cho bạn cả hai cửa* không, hay khóa chặt bạn vào một?
 
 ## Điểm then chốt: để cả model AI cũng không ra ngoài

@@ -81,6 +81,8 @@ AI sa vào những phép này vì nó thấy mẫu "AVG(cột số)" rất phổ
 
 AI không biết — và nó **đoán**. Mỗi lần hỏi có thể đoán một kiểu. Một lần nó lấy `gross_amount`, lần sau trừ chiết khấu. Hai con số chênh nhau 15–20%, cả hai đều "đúng cú pháp", và bạn không cách nào biết lần nào theo định nghĩa thật của mình. Đây chính xác là cái bẫy "số sai trông như đúng".
 
+Tôi gặp đúng cái bẫy này mỗi ngày ở một ngân hàng tôi đang làm. Nghiệp vụ banking phức tạp tới mức "doanh thu" không có một nghĩa — nó tách ra theo sản phẩm, theo thời điểm ghi nhận, theo đơn đã/chưa tất toán. Một LLM gắn thẳng vào kho dữ liệu mà không có lớp neo nghiệp vụ sẽ đoán bừa một nhánh và trả về con số trông rất dứt khoát. Đây chính là lý do tôi đang đẩy POC semantic layer thành dự án trọng điểm của trung tâm chuyển đổi số: không phải để AI thông minh hơn, mà để mỗi định nghĩa chỉ còn đúng một nghĩa, hết chỗ cho nó tự diễn giải.
+
 **Tuyến phòng thủ: Semantic Layer — một định nghĩa chuẩn, dùng cho mọi câu hỏi.** Khi "doanh thu", "khách hàng hoạt động", "tỷ lệ chuyển đổi" được định nghĩa *một lần, chuẩn xác* ở tầng ngữ nghĩa, AI không còn khoảng trống nào để đoán. Nó không bịa định nghĩa, vì định nghĩa đã có sẵn và nó buộc phải dùng. Không ngẫu nhiên mà những hệ Text-to-SQL mạnh nhất thế giới — WrenAI, hay SuperSonic của Tencent — đều xây *quanh* một semantic layer, chứ không gắn AI thẳng vào database. *(Vì sao đây là lớp nền của mọi thứ, xem [Semantic Layer: vì sao công ty bạn có ba con số doanh thu](/blog/semantic-layer/).)*
 
 ## Kiểu 5 — Tự tin khi đáng lẽ nên hỏi lại

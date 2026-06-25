@@ -53,6 +53,8 @@ Năm phòng, năm file, năm định nghĩa "doanh thu". Không có lỗi cú ph
 
 Đây là cùng một căn bệnh mà mọi SME đa kênh mắc khi [làm BI mà thiếu một định nghĩa chung](/blog/bi-cho-sme/): càng nhiều người tự do làm báo cáo, càng nhiều phiên bản sự thật — trừ phi có một nơi giữ định nghĩa gốc.
 
+Tôi từng ngồi đúng giữa "ba người ba số" này hồi còn ráp báo cáo bằng Excel. Trong một cuộc họp, sếp hỏi doanh thu, và ba người bê ra ba con số lệch nhau — tôi mất gần cả buổi truy ngược mới hiểu lý do: chữ "doanh thu" chưa từng được ai định nghĩa lấy một lần. Không ai làm ẩu, không ai gian; mỗi người chỉ trung thành với cái công thức hợp lý nhất *với phần việc của mình*. Bài học tôi rút ra là chuyện này không phải lỗi cá nhân mà là lỗ hổng quản trị: thiếu một thỏa thuận được viết ra thì năm cái file sẽ tự đẻ ra năm sự thật — đây cũng chính là chỗ [data governance](/blog/data-governance/) phải bước vào.
+
 ## Sự thật chung không nằm ở dữ liệu — nó nằm ở thỏa thuận
 
 Nếu định nghĩa là gốc của vấn đề, thì lời giải cũng phải ở tầng định nghĩa. Một nguồn sự thật thật sự là một **thỏa thuận được viết ra một lần, ở một chỗ, và mọi báo cáo đều buộc phải đi qua nó.**

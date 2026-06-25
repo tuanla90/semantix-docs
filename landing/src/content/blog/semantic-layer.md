@@ -40,6 +40,8 @@ Từ đó trở đi, bất kỳ ai trong tổ chức — dù hỏi bằng SQL, b
 
 Đây không phải khái niệm bên lề. Phong trào "metrics layer" / "semantic layer" (dbt, Cube, LookML...) ra đời đúng để giải bài toán này. Và như sẽ thấy ở dưới, nó còn quan trọng gấp đôi trong thời đại AI.
 
+Tôi nói cái này từ chỗ đang thấm đòn. Ở một ngân hàng tôi đang làm, nghiệp vụ phức tạp hơn e-commerce nhiều lần — một "số dư", một "khách hàng hoạt động" có thể hiểu theo dăm bảy kiểu tùy phòng ban, tùy sản phẩm. Càng làm BI ở đây tôi càng thấy rõ: thiếu một tầng định nghĩa dùng chung thì mọi dashboard đẹp đến mấy cũng chỉ là ba con số cãi nhau ở phiên bản cao cấp hơn. Vì thế tôi đang POC semantic layer để đưa nó thành dự án trọng điểm của trung tâm chuyển đổi số. Bản chất nó là cách bắt cả tổ chức cùng đọc [một nguồn sự thật](/blog/mot-nguon-su-that/) thay vì mỗi người tự dịch dữ liệu thô theo ý mình.
+
 ## Vì sao Semantic Layer quan trọng hơn bao giờ hết
 
 ### 1. AI cần ngữ cảnh, nếu không nó sẽ đoán

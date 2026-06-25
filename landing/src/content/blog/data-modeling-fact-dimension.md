@@ -127,7 +127,9 @@ Quay lại câu hỏi của sếp đầu bài: *doanh thu áo khoác, qua TikTok
 
 Nói ngay kẻo hiểu lầm: SME không cần biến mình thành công ty dữ liệu. Bạn **không cần** snowflake schema, không cần data warehouse mười tầng, không cần thuê kỹ sư dựng pipeline cho một cửa hàng vài nghìn đơn mỗi tháng. Over-engineer (làm quá mức cần thiết) cũng tai hại như làm ẩu.
 
-Cái bạn cần chỉ là *hiểu* sự khác nhau giữa **bảng fact** và **bảng dimension** — đủ để khi dữ liệu lớn lên, bạn không tự nhốt mình trong một bảng tính phẳng bế tắc. Biết tách "số đo" khỏi "mô tả", biết để mỗi sản phẩm/khách/kênh tồn tại đúng một dòng gốc — bấy nhiêu thôi đã đưa bạn đi trước phần lớn người vẫn đang copy-paste trong một sheet khổng lồ. *(Khi nào thì cuốn bảng tính hết "gánh" nổi và nên lên database, chúng tôi bàn riêng trong bài [Khi nào nên rời Google Sheets lên database](/blog/khi-nao-len-database/).)*
+Cái bạn cần chỉ là *hiểu* sự khác nhau giữa **bảng fact** và **bảng dimension** — đủ để khi dữ liệu lớn lên, bạn không tự nhốt mình trong một bảng tính phẳng bế tắc. Biết tách "số đo" khỏi "mô tả", biết để mỗi sản phẩm/khách/kênh tồn tại đúng một dòng gốc — bấy nhiêu thôi đã đưa bạn đi trước phần lớn người vẫn đang copy-paste trong một sheet khổng lồ.
+
+Làm job ngoài, tôi tự tay dựng database cho đủ kiểu khách: một xưởng may in ấn, một kho hàng, một phòng khám y tế. Bài học lớn nhất là fact và dimension **không bao giờ nên bắt đầu từ sơ đồ**, mà từ nghiệp vụ. Ở phòng khám, "một lượt khám" mới là sự kiện cần đếm (fact); bác sĩ, dịch vụ, bệnh nhân chỉ là chiều để cắt lát. Ở xưởng may thì "một lệnh sản xuất" mới là fact. Cứ ngồi hỏi khách *"việc gì đáng đếm nhất ở đây?"* — câu trả lời chính là bảng fact, phần còn lại tự rơi vào các dimension. *(Khi nào thì cuốn bảng tính hết "gánh" nổi và nên lên database, chúng tôi bàn riêng trong bài [Khi nào nên rời Google Sheets lên database](/blog/khi-nao-len-database/).)*
 
 ## Fact / dimension trong Semantix
 

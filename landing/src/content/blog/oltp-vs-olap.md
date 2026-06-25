@@ -27,6 +27,8 @@ Bỏ thuật ngữ sang một bên trước, rồi gắn tên sau.
 
 Nói cách khác: OLTP là quầy thu ngân — phục vụ từng khách thật nhanh. OLAP là phòng kế toán cuối tháng — ngồi cộng sổ của cả chuỗi. Bạn không bắt thu ngân vừa tính tiền cho khách vừa lập báo cáo tài chính năm, đúng không? Database của bạn cũng vậy.
 
+Cái trực giác này tôi không học từ sách, mà từ việc tự tay xây database cho khách job ngoài — một xưởng may, một phòng khám, vài shop kho và xuất nhập khẩu. Khi ngồi thiết kế bảng cho nghiệp vụ "ghi đơn, trừ tồn, đổi trạng thái", tôi tổ chức dữ liệu theo một kiểu; nhưng đến lúc khách hỏi "tháng này so tháng trước thế nào", tôi nhận ra cái cấu trúc tối ưu cho ghi nhanh lại cồng kềnh khủng khiếp khi đi tổng hợp. Cùng một bộ dữ liệu, hai cách tổ chức cãi nhau — chính là OLTP và OLAP đang kéo về hai phía.
+
 ## Vì sao chạy báo cáo nặng trên OLTP lại làm treo việc bán hàng
 
 Hình dung database vận hành như một quầy thu ngân duy nhất, đông khách. Mỗi đơn hàng là một khách bước tới: ghi nhanh, vài phần nghìn giây, xong, next. Cả hệ thống được thiết kế để cái hàng này *chảy* — không ai phải đợi lâu.

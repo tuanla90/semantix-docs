@@ -44,6 +44,8 @@ Lý do thứ hai là **mỗi câu hỏi phải xếp hàng**. Ngay cả ở nấ
 
 Và đây là chỗ nhiều người nhầm lẫn nhất: **mua công cụ mạnh hơn không tự đẩy bạn lên nấc cao hơn**. Nhảy thẳng lên dự đoán khi dữ liệu nấc 1 còn lẫn lộn — số liệu ba kênh chưa khớp, mỗi báo cáo một định nghĩa — thì mô hình dự báo chỉ học từ dữ liệu bẩn và bịa ra tương lai sai. Leo nấc phải tuần tự, và mỗi nấc phải đứng trên một nền vững. *(Vì sao dữ liệu bẩn phá mọi thứ phía trên, xem [Dữ liệu bẩn: 80% thời gian phân tích là dọn dẹp](/blog/du-lieu-ban/).)*
 
+Tôi xin lấy chính hành trình nghề mình ra làm bằng chứng cho chuyện "đổi tool không tự lên nấc". Hơn mười năm tôi đi qua từng lớp công cụ: bắt đầu bằng Excel để đọc số xem cái gì đang có vấn đề, rồi Power BI và Looker Studio, rồi Superset, Metabase ở một công ty công nghệ lõi của hệ sinh thái e-commerce, và giờ là tự dựng semantic layer ở một ngân hàng. Mỗi lần đổi tool, tôi cứ tưởng mình "lên đời". Nhưng nấc thật sự chỉ nhích lên khi nền bên dưới — định nghĩa chỉ số dùng chung — được dọn cho sạch. Công cụ chỉ là cái thang; nấc bạn đứng vẫn do nền móng quyết định. *(Tôi kể kỹ chặng đầu trong [hành trình thời Excel](/blog/hanh-trinh-thoi-excel/).)*
+
 ## Leo nấc trong Semantix — không phải bằng cách dựng cả đội data
 
 Semantix không định vị mình là "thêm một dashboard nữa" để bạn đứng lâu hơn ở nấc 1. Ngược lại: ý tưởng là **rút ngắn con đường lên nấc 2–3** mà không bắt SME phải tuyển nguyên một đội data trước.

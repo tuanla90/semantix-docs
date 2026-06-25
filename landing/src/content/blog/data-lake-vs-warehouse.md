@@ -89,6 +89,8 @@ Nói cách khác: nếu warehouse còn thường là "trả lời đúng cho câ
 
 Để ý: cả ba điều kiện đều xoay quanh *quy mô và sự đa dạng thật*, cộng với *năng lực quản trị*. Nếu bạn gật đầu với cả ba, lake đáng cân nhắc. Nếu chỉ vì "nghe cũng hay" thì chưa.
 
+Tôi nói "quy mô thật" là có lý do. Hồi làm DA ở một tập đoàn viễn thông đầu ngành, dữ liệu lớn đến mức Excel hay một database thường không gánh nổi — tôi phải xử lý và tối ưu bằng Scala Spark thì mới chạy ra việc. Đó mới là cái ngưỡng khiến kiến trúc kiểu hồ trở nên hợp lý: khối lượng buộc bạn phải đổ thô rồi tính sau, không có lựa chọn khác. Nên mỗi lần nghe một SME vài chục nghìn đơn một tháng định "dựng data lake", tôi hay khựng lại — vì cái mặn mòi của lake chỉ lộ ra ở quy mô mà phần lớn SME còn lâu mới chạm tới.
+
 *(Còn nếu băn khoăn thật của bạn là "đưa dữ liệu từ nhiều nguồn về một chỗ rồi biến đổi lúc nào" — đó là chuyện thứ tự nạp và biến đổi: **ETL** làm sạch trước rồi mới nạp, **ELT** nạp thô trước rồi biến đổi sau — xem [ETL vs ELT](/blog/etl-vs-elt/) — chứ không nhất thiết là chuyện chọn hồ hay kho.)*
 
 ## Đừng xây lake vì "nghe ngầu"

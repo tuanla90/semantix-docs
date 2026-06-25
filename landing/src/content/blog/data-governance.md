@@ -60,6 +60,8 @@ Bảng phân vai owner nhẹ tênh, chỉ cần một bảng tính:
 
 *(Tên và định nghĩa là ví dụ minh hoạ.)* Lưu ý: owner là một **người có tên**, không phải một phòng ban. "Phòng Sales sở hữu" nghe có vẻ ổn nhưng thực ra vẫn vô chủ — vì khi cãi nhau, không ai trong phòng có quyền nói câu cuối. Một metric, một cái tên.
 
+Tôi học bài này từ chính lần mình làm hỏng. Thời còn biên tập sách Vật lý, tôi group by chương để đếm số câu hỏi, thấy vài chương "ít câu" liền hồn nhiên đề xuất soạn thêm cho cân. Vấn đề: con số "số câu mỗi chương" đó không có chủ. Không ai chốt rằng nó phải đọc cùng ma trận đề, trọng số và độ khó — nên tôi đọc trần con số rồi kết luận một chiều, suýt ép cả nhóm viết thừa một đống câu sai trọng tâm. Cái thiếu hôm đó không phải dữ liệu, mà đúng là thứ bài này đang nói: một cái tên gắn vào con số, người dám nói "định nghĩa của nó là thế này, và đọc nó phải kèm ngữ cảnh kia."
+
 ## Trụ 2 — Ai được xem gì: phân quyền là một phần của governance
 
 Sở hữu xong con số rồi, câu tiếp theo: **ai được nhìn thấy nó?** Đây là trụ **phân quyền** — quyết định mỗi người trong công ty thấy được lát cắt dữ liệu nào.

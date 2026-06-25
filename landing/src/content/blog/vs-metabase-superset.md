@@ -87,6 +87,12 @@ Bạn *có thể* tự lắp ráp tất cả những mảnh này lên Metabase �
 | Cộng đồng & hệ sinh thái | **Lớn, lâu đời** | Trẻ hơn |
 | Phù hợp với | Đội có kỹ sư, cần kiểm soát toàn bộ | SME không có đội data |
 
+## Tôi đã từng ngồi đúng ghế người đi chọn
+
+Tôi nói những điều trên không phải từ lý thuyết. Có lần tôi được giao phân tích xem cả công ty nên đứng trên nền BI nào, và tôi dựng hẳn một bảng tiêu chí chấm điểm để quyết cho khách quan. Bài học đầu tiên đến *trước* cả kết quả: **trọng số của tôi và trọng số của sếp không giống nhau** — tôi coi trọng khả năng tùy biến, sếp coi trọng chi phí — nên tôi phải làm lại bảng chấm từ đầu. Đây đúng là lý do một con số (kể cả "điểm" của một công cụ) cần [được định nghĩa và đồng thuận một lần](/blog/mot-nguon-su-that/): thiếu nó, đến tiêu chí chọn công cụ cũng mỗi người một kiểu.
+
+Khi chấm xong, Metabase rớt vì **quá khó tùy biến** theo nghiệp vụ của chúng tôi; một lựa chọn thương mại khác thì vướng phí *và* dữ liệu vẫn phải rời hạ tầng; Superset thắng. Nhưng — và đây đúng là điểm của cả bài này — *"thắng" không có nghĩa là "miễn phí".* Superset về với chúng tôi kèm nguyên cái hoá đơn thời gian kỹ sư: cài, vận hành, rồi tự ghép từng mảnh thông minh lên trên. Tôi đã chọn mã nguồn mở, và tôi đã tự tay trả cái giá mà bài này đang nói tới — một phiên bản khác của [bài toán tự dựng hay mua sẵn](/blog/build-vs-buy-bi/).
+
 ## Khi nào bạn *nên* chọn Metabase hoặc Superset
 
 - Bạn có **đội kỹ sư/data** đủ sức cài đặt và vận hành lâu dài.

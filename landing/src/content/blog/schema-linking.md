@@ -97,6 +97,8 @@ Với một con người mới vào công ty, đọc đống tên này cũng ph�
 
 Cả ba trường hợp, SQL chạy ngon, ra một con số tròn trịa, không một dòng báo lỗi. Bạn mang nó vào phòng họp. Đó chính là cái bẫy: **schema linking sai không gây lỗi đỏ — nó gây số sai trông như đúng.** (Cùng họ với cái bẫy mà chúng tôi mổ trong bài [Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi mà vẫn trả về số sai](/blog/text-to-sql/).)
 
+Tôi thấm cái "rừng cột na ná nhau" này từ hai phía. Hồi làm trưởng nhóm DA ở một công ty công nghệ lõi của hệ sinh thái e-commerce, dữ liệu tracking bán cấu trúc đẻ ra cột nhanh hơn người ta kịp đặt tên cho tử tế — một sự kiện có dăm bảy trường na ná. Giờ làm BI ở một ngân hàng, vấn đề đảo chiều: nghiệp vụ chia ra hàng chục bảng, mỗi bảng vài chục cột, và "doanh thu" với người làm tín dụng khác hẳn "doanh thu" của khối thẻ. Bài học chung của cả hai nơi giống nhau đến lạ: không ai thuộc hết được cấu trúc, nên thứ cứu mình không phải trí nhớ mà là cái nhãn nghĩa dán sẵn lên từng cột.
+
 ## Cách nối đúng: cho AI thứ mà schema trần không có
 
 Tin tốt: bài toán này giải được, và cách giải không phải "đổi sang AI thông minh hơn" — mà là **cho AI thêm ngữ cảnh** mà schema trần thiếu. Có ba mảnh ghép:

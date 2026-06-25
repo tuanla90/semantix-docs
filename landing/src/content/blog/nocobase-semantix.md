@@ -55,6 +55,8 @@ Mọi thông tin này **đã từng tồn tại** — ngay lúc bạn thiết k�
 
 Nói cách khác: với NocoBase, **bạn định nghĩa dữ liệu đúng một lần — ngay lúc dựng database — và phần định nghĩa đó được lưu lại tử tế**, không bốc hơi. Đây là khác biệt nền tảng, không phải tính năng phụ.
 
+Tôi nói cái này với tư cách người đã đi cả hành trình đó bằng tay. Mảng tư vấn chuyển đổi số ngoài giờ của tôi đi từ Google Sheets, qua AppSheet, rồi dừng lại ở NocoBase — và tôi tự dựng database cho đủ ngành: bán hàng, kho, xuất nhập khẩu, một xưởng in may mặc, một phòng khám. Cái khiến tôi chốt NocoBase chính là chỗ này: lúc dựng bảng cho phòng khám, tôi đã đặt nhãn "Trạng thái lịch hẹn", khai sẵn các giá trị, nối quan hệ bệnh nhân–lịch hẹn. Trước đây phần định nghĩa nghiệp vụ ấy nằm trong đầu tôi rồi bốc hơi; giờ nó nằm trong metadata, để công cụ phía sau đọc lại — thay vì bắt tôi khai lần hai từ trí nhớ.
+
 ## Kết nối `nocobase`: Semantix đọc thẳng metadata đó
 
 Semantix có một engine kết nối tên `nocobase`. Việc của nó rất gọn: đọc thẳng bộ metadata NocoBase vừa nói ở trên, rồi **dựng sẵn Mô hình dữ liệu** cho bạn. Cụ thể, khi bạn cắm một database NocoBase vào, Semantix tự đọc và ánh xạ:

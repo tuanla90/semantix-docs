@@ -52,21 +52,7 @@ Nếu một metric dính cả ba dấu hiệu, gần như chắc chắn nó là 
 Hãy nhìn vào điểm khác biệt giữa *số tuyệt đối* (con số tổng cộng dồn, ví dụ "tổng 18 nghìn lượt xem") và *tỉ lệ* (con số chia ra trên một nền nào đó, ví dụ "2% người xem đặt đơn"). Đây là cốt lõi của cả bài.
 
 <div class="viz">
-<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <text x="8" y="24" fill="#475569" font-size="15" font-weight="700">Cùng một shop, sáu tháng — hai cách nhìn</text>
-  <line x1="48" y1="240" x2="650" y2="240" stroke="#334155" stroke-width="1.5"/>
-  <line x1="48" y1="60" x2="48" y2="240" stroke="#334155" stroke-width="1.5"/>
-  <polyline points="48,232 148,210 248,176 348,140 448,108 548,76 648,52" fill="none" stroke="#F59E0B" stroke-width="3"/>
-  <circle cx="648" cy="52" r="5" fill="#F59E0B"/>
-  <text x="560" y="44" fill="#F59E0B" font-size="13" font-weight="700">Tổng lượt xem</text>
-  <text x="560" y="60" fill="#92722A" font-size="11">chỉ đi lên</text>
-  <polyline points="48,150 148,138 248,168 348,120 448,196 548,210 648,224" fill="none" stroke="#22D3EE" stroke-width="3"/>
-  <circle cx="648" cy="224" r="5" fill="#22D3EE"/>
-  <text x="500" y="216" fill="#22D3EE" font-size="13" font-weight="700">Tỉ lệ chốt đơn</text>
-  <text x="540" y="232" fill="#2F6B5E" font-size="11">đang tụt thật</text>
-  <text x="20" y="64" fill="#64748B" font-size="11">cao</text>
-  <text x="20" y="238" fill="#64748B" font-size="11">thấp</text>
-</svg>
+<div class="viz-chart" data-chart="line" data-chart-data='{"xLabels":["T1","T2","T3","T4","T5","T6","T7"],"series":[{"name":"Tổng lượt xem","values":[10,30,62,98,130,162,188],"color":"#f59e0b"},{"name":"Tỉ lệ chốt đơn","values":[88,100,72,118,44,30,16],"color":"#22d3ee"}]}'></div>
 <div class="viz-caption">Đường vàng (số tổng) chỉ leo dốc, lúc nào nhìn cũng thấy "đang phát triển". Đường xanh (tỉ lệ thật) dao động và đang đi xuống — kể câu chuyện ngược hẳn lại.</div>
 </div>
 

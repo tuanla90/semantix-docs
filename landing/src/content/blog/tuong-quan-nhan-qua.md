@@ -63,15 +63,7 @@ Ba khả năng này không loại trừ nhau, nhưng có một điều chắc ch
 Để thấy tương quan có thể vô nghĩa đến mức nào, hãy nhìn vài cặp số kinh điển hay được lôi ra làm trò:
 
 <div class="viz">
-<svg viewBox="0 0 680 230" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <text x="8" y="24" fill="#475569" font-size="13" font-weight="700">Hai đường khớp nhau gần như hoàn hảo — nhưng vô nghĩa</text>
-  <polyline points="40,170 130,150 220,160 310,120 400,130 490,90 580,70 640,60" fill="none" stroke="#818CF8" stroke-width="3"/>
-  <polyline points="40,178 130,158 220,166 310,128 400,134 490,98 580,80 640,66" fill="none" stroke="#F59E0B" stroke-width="3" stroke-dasharray="6 4"/>
-  <circle cx="640" cy="60" r="4" fill="#818CF8"/>
-  <circle cx="640" cy="66" r="4" fill="#F59E0B"/>
-  <text x="8" y="210" fill="#818CF8" font-size="13">— Lượng kem bán ra</text>
-  <text x="260" y="210" fill="#F59E0B" font-size="13">- - Số vụ chết đuối</text>
-</svg>
+<div class="viz-chart" data-chart="line" data-chart-data='{"xLabels":["T1","T2","T3","T4","T5","T6","T7","T8"],"series":[{"name":"Lượng kem bán ra","values":[12,32,22,62,52,92,112,124],"color":"#818cf8"},{"name":"Số vụ chết đuối","values":[6,26,16,56,46,84,104,116],"color":"#f59e0b","dashed":true}]}'></div>
 <div class="viz-caption">Ví dụ minh họa: kem và đuối nước cùng tăng — nhưng kem không dìm ai cả. Confounder ở đây là <strong>trời nóng</strong>: nóng làm người ta vừa ăn kem nhiều hơn, vừa đi bơi nhiều hơn.</div>
 </div>
 

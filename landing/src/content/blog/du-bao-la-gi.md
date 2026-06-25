@@ -70,34 +70,7 @@ Khi bạn nói "tháng sau 850 triệu", bạn đang giấu đi điều bạn th
 Cái khoảng đó chính là **sai số dự báo** (forecast error — độ lệch giữa giá trị dự báo và giá trị thực tế) được nói ra một cách trung thực. Nó không phải dấu hiệu bạn yếu kém — nó là dấu hiệu bạn *thành thật*. Sếp đặt hàng nhập kho dựa trên một con số đơn lẻ sẽ luôn thừa hoặc thiếu. Sếp đặt hàng dựa trên một khoảng sẽ biết chừa biên an toàn.
 
 <div class="viz">
-<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <!-- axes -->
-  <line x1="60" y1="40" x2="60" y2="300" stroke="#94A3B8" stroke-width="2"/>
-  <line x1="60" y1="300" x2="640" y2="300" stroke="#94A3B8" stroke-width="2"/>
-  <text x="14" y="48" fill="#64748B" font-size="12">Doanh thu</text>
-  <text x="556" y="324" fill="#64748B" font-size="12">tháng →</text>
-  <!-- vertical "hôm nay" divider -->
-  <line x1="360" y1="40" x2="360" y2="300" stroke="#475569" stroke-width="1" stroke-dasharray="4 4"/>
-  <text x="300" y="56" fill="#64748B" font-size="12" font-weight="600">hôm nay</text>
-  <!-- error band: widening cone -->
-  <path d="M360,150 L470,128 L560,108 L640,86 L640,184 L560,176 L470,166 L360,150 Z" fill="#22D3EE" opacity="0.16"/>
-  <!-- actual line (past) -->
-  <polyline points="80,210 150,196 220,182 290,170 360,150" fill="none" stroke="#94A3B8" stroke-width="2.5"/>
-  <circle cx="80" cy="210" r="4" fill="#94A3B8"/>
-  <circle cx="150" cy="196" r="4" fill="#94A3B8"/>
-  <circle cx="220" cy="182" r="4" fill="#94A3B8"/>
-  <circle cx="290" cy="170" r="4" fill="#94A3B8"/>
-  <circle cx="360" cy="150" r="5" fill="#E2E8F0"/>
-  <!-- forecast line (future, dashed) -->
-  <polyline points="360,150 470,140 560,132 640,124" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-dasharray="7 5"/>
-  <circle cx="470" cy="140" r="4" fill="#22D3EE"/>
-  <circle cx="560" cy="132" r="4" fill="#22D3EE"/>
-  <circle cx="640" cy="124" r="4" fill="#22D3EE"/>
-  <!-- labels -->
-  <text x="120" y="236" fill="#94A3B8" font-size="13" font-weight="600">thực tế</text>
-  <text x="468" y="116" fill="#22D3EE" font-size="13" font-weight="700">dự báo</text>
-  <text x="470" y="206" fill="#64748B" font-size="12">dải sai số loe rộng dần</text>
-</svg>
+<div class="viz-chart" data-chart="line" data-chart-data='{"xLabels":["T1","T2","T3","T4","nay","T6","T7","T8"],"series":[{"name":"Thực tế","values":[90,104,118,130,150,null,null,null],"color":"#94a3b8"},{"name":"Dự báo","values":[null,null,null,null,150,160,168,176],"color":"#22d3ee","dashed":true}],"band":{"lower":[90,104,118,130,150,144,138,130],"upper":[90,104,118,130,150,176,196,214],"color":"#22d3ee"}}'></div>
 <div class="viz-caption">Đường xám là doanh thu đã xảy ra. Từ "hôm nay" trở đi là dự báo (nét đứt) — luôn kèm một dải sai số, và dải này loe rộng dần: càng nhìn xa, càng mù mờ.</div>
 </div>
 

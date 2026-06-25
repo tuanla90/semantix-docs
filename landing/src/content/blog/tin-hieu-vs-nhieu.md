@@ -53,38 +53,7 @@ Con số "giảm 8% tuần này" tự nó *không có ý nghĩa gì cả*. Nó c
 Hãy hình dung một dải dao động bao quanh đường trung bình. Nếu lịch sử cho thấy doanh thu tuần của bạn thường nhấp nhô trong khoảng *±10%* quanh mức trung bình, thì một tuần giảm 8% nằm gọn *bên trong* dải — đó là nhiễu. Bạn không cần làm gì cả. Nhưng một tuần giảm *18%*, vượt hẳn ra ngoài dải, mới là lúc đáng ngẩng đầu lên.
 
 <div class="viz">
-<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
-  <!-- normal band -->
-  <rect x="60" y="120" width="570" height="110" fill="#1E293B" opacity="0.5"/>
-  <line x1="60" y1="120" x2="630" y2="120" stroke="#475569" stroke-width="1" stroke-dasharray="5 4"/>
-  <line x1="60" y1="230" x2="630" y2="230" stroke="#475569" stroke-width="1" stroke-dasharray="5 4"/>
-  <!-- mean line -->
-  <line x1="60" y1="175" x2="630" y2="175" stroke="#22D3EE" stroke-width="2"/>
-  <text x="636" y="179" fill="#22D3EE" font-size="12" font-weight="700">TB</text>
-  <text x="636" y="124" fill="#64748B" font-size="11">+dải</text>
-  <text x="636" y="234" fill="#64748B" font-size="11">-dải</text>
-  <!-- axes -->
-  <line x1="60" y1="40" x2="60" y2="300" stroke="#94A3B8" stroke-width="2"/>
-  <line x1="60" y1="300" x2="630" y2="300" stroke="#94A3B8" stroke-width="2"/>
-  <text x="14" y="48" fill="#64748B" font-size="12">Doanh thu</text>
-  <text x="470" y="324" fill="#64748B" font-size="12">tuần →</text>
-  <!-- noise line: jagged but inside band -->
-  <polyline points="80,168 130,200 180,150 230,210 280,160 330,205 380,158 430,195 480,150 530,215" fill="none" stroke="#94A3B8" stroke-width="2.5"/>
-  <circle cx="80" cy="168" r="4" fill="#94A3B8"/>
-  <circle cx="130" cy="200" r="4" fill="#94A3B8"/>
-  <circle cx="180" cy="150" r="4" fill="#94A3B8"/>
-  <circle cx="230" cy="210" r="4" fill="#94A3B8"/>
-  <circle cx="280" cy="160" r="4" fill="#94A3B8"/>
-  <circle cx="330" cy="205" r="4" fill="#94A3B8"/>
-  <circle cx="380" cy="158" r="4" fill="#94A3B8"/>
-  <circle cx="430" cy="195" r="4" fill="#94A3B8"/>
-  <circle cx="480" cy="150" r="4" fill="#94A3B8"/>
-  <!-- the signal point: breaks below the band -->
-  <line x1="530" y1="215" x2="580" y2="282" stroke="#F87171" stroke-width="2.5"/>
-  <circle cx="580" cy="282" r="7" fill="#F87171"/>
-  <text x="476" y="278" fill="#F87171" font-size="13" font-weight="700">TÍN HIỆU</text>
-  <text x="170" y="100" fill="#94A3B8" font-size="13" font-weight="600">nhiễu — dao động trong dải bình thường</text>
-</svg>
+<div class="viz-chart" data-chart="line" data-chart-data='{"xLabels":["T1","T2","T3","T4","T5","T6","T7","T8","T9","T10","T11"],"series":[{"name":"Doanh thu tuần","values":[120,90,132,82,128,86,130,96,134,80,30],"color":"#94a3b8"}],"markLine":[{"y":100,"label":"Trung bình","color":"#22d3ee","dashed":false}],"markArea":[{"from":60,"to":140,"color":"rgba(100,116,139,0.16)"}]}'></div>
 <div class="viz-caption">Đường xám nhấp nhô quanh mức trung bình, luôn nằm trong dải bình thường — đó là nhiễu, không cần phản ứng. Chỉ khi một điểm vượt hẳn ra ngoài dải (điểm đỏ) thì mới có tín hiệu đáng hành động.</div>
 </div>
 

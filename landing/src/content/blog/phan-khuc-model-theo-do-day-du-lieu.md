@@ -2,7 +2,7 @@
 title: "Chia mô hình theo độ đầy của dữ liệu: vì sao một model bị 'kéo xuống' bởi nhóm thiếu data"
 code: "pt-029"
 description: "Bạn gom hết khách vào một model dự đoán. Accuracy 74%, không nhúc nhích. Tách theo độ đầy hồ sơ — vọt lên 88% và 91%. Một model cho tất cả thường tệ hơn nhiều model nhỏ."
-pubDate: 2027-01-26
+pubDate: 2025-10-09
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"

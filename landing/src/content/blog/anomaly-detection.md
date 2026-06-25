@@ -2,7 +2,7 @@
 title: "Anomaly detection: tự phát hiện bất thường doanh thu trước khi quá muộn"
 code: "pt-009"
 description: "Chờ tới cuối tháng xem báo cáo thì sự cố đã xảy ra cả tuần. Anomaly detection lật ngược thứ tự: máy canh số, bạn chỉ ra tay khi có bất thường thật."
-pubDate: 2027-09-21
+pubDate: 2025-08-28
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

@@ -2,7 +2,7 @@
 title: "Chủ shop đa kênh: thứ bạn cần không phải một người biết SQL — mà là câu trả lời lúc 11h đêm"
 code: "uc-001"
 description: "Chị Hà định thuê 1-2 nhân sự data để dựng dashboard cho shop 3 sàn. Rồi chị nhận ra mình không thiếu người — chị thiếu câu trả lời đúng lúc. Câu chuyện một chủ shop đa kênh để AI thay đội data."
-pubDate: 2025-10-21
+pubDate: 2026-03-26
 category: "Câu Chuyện & Use Case"
 readTime: 10
 author: "Lê Thị Hương"

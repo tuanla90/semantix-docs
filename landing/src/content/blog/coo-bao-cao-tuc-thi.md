@@ -2,7 +2,7 @@
 title: "COO và 5 bản báo cáo mỗi tuần: vì sao càng nhiều báo cáo, quyết định lại càng đến chậm — và cách gỡ nút thắt"
 code: "uc-002"
 description: "Anh Dũng có 5 báo cáo mỗi tuần. Vẫn ra quyết định trễ một nhịp. Vì báo cáo càng nhiều, nó đến càng muộn để còn kịp là một quyết định."
-pubDate: 2026-09-01
+pubDate: 2026-01-08
 category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Lê Thị Hương"

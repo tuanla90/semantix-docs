@@ -2,7 +2,7 @@
 title: "Metric, Dimension, KPI: ba từ ai cũng nói — và vì sao dùng lẫn lộn khiến mọi báo cáo cãi nhau"
 code: "kt-006"
 description: "Sales nói doanh thu tháng này 4,2 tỷ. Kế toán nói 3,8 tỷ. Sếp gõ bàn hỏi ai sai. Không ai sai cả — ba người đang gọi ba thứ khác nhau bằng cùng một từ."
-pubDate: 2026-10-20
+pubDate: 2026-01-26
 category: "Kiến Thức Nền Tảng"
 readTime: 10
 author: "Lê Thị Hương"

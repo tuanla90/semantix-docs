@@ -4,7 +4,7 @@ code: "kt-032"
 series: "thong-ke-mo-ta"
 seriesOrder: 5
 description: "Kênh A chốt 2%, kênh B chốt 10%. Báo cáo ghi trung bình 6%. Nhưng con số thật là 2,08% — không kênh nào đạt. Khi lấy bình quân hai tỷ lệ là một cái bẫy."
-pubDate: 2027-11-23
+pubDate: 2025-02-08
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Trần Minh Khoa"

@@ -2,7 +2,7 @@
 title: "Tối ưu token: hoá đơn AI phình to không phải vì bạn hỏi nhiều — mà vì mỗi câu hỏi vác theo cả tấn ngữ cảnh thừa"
 code: "ai-004"
 description: "Hoá đơn token tháng này gấp 3, dù số câu hỏi gần như không đổi. Tiền không chảy vào câu trả lời — nó chảy vào ngữ cảnh thừa. Cách cắt 40–60% chi phí AI mà không giảm chất lượng."
-pubDate: 2026-08-11
+pubDate: 2026-06-11
 category: "AI & Công Nghệ"
 readTime: 9
 author: "Lê Anh Tuấn"

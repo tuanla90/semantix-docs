@@ -2,7 +2,7 @@
 title: "NocoBase + Semantix: vì sao bạn chỉ định nghĩa dữ liệu một lần — và không bao giờ khai báo lại"
 code: "hd-015"
 description: "Phần tốn thời gian nhất khi lên BI không phải lúc hỏi — mà là lúc ngồi khai lại từng tên cột cho công cụ hiểu. Với NocoBase, Semantix đọc sẵn hết."
-pubDate: 2026-12-09
+pubDate: 2026-04-22
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Anh Tuấn"

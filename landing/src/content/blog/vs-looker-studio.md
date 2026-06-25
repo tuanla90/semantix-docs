@@ -2,7 +2,7 @@
 title: "Semantix vs Looker Studio (Google Data Studio): miễn phí, nhưng bạn trả bằng gì?"
 code: "ss-012"
 description: "Looker Studio 0đ, cắm thẳng Google Ads, dựng dashboard trong một buổi. Nhưng cái giá không biến mất — nó dời sang chỗ khác."
-pubDate: 2027-05-04
+pubDate: 2026-07-03
 category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"

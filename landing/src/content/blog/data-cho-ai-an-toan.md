@@ -2,7 +2,7 @@
 title: "Đưa dữ liệu cho AI có an toàn không? Câu hỏi đúng không phải 'có' hay 'không' — mà là 'ai giữ chìa khoá'"
 code: "kt-012"
 description: "Chủ DN sợ 'đưa số liệu cho AI lỡ rò ra ngoài thì sao'. Nhưng 'AI có an toàn không' là câu hỏi sai. Rủi ro nằm ở kiến trúc triển khai, không ở bản thân model."
-pubDate: 2026-11-24
+pubDate: 2026-03-30
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

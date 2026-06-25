@@ -4,7 +4,7 @@ code: "kt-018"
 series: "tu-duy-du-lieu"
 seriesOrder: 1
 description: "Ai cũng nói 'theo dữ liệu', nhưng phần lớn quyết bằng cảm giác rồi mượn số biện minh. Data-driven thật sự là khi bạn dám để một con số đổi ý mình."
-pubDate: 2026-12-23
+pubDate: 2024-11-28
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Trần Minh Khoa"

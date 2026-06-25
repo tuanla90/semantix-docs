@@ -2,7 +2,7 @@
 title: "Data Lake vs Data Warehouse: SME cần cái nào, và khi nào?"
 code: "kt-027"
 description: "Đổ hết dữ liệu vào một cái hồ không làm bạn trả lời được câu nào. Chứa được mọi thứ khác hỏi được mọi thứ. SME cần lake hay warehouse?"
-pubDate: 2027-09-14
+pubDate: 2025-05-13
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

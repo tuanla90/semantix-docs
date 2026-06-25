@@ -4,7 +4,7 @@ code: "kt-031"
 series: "thong-ke-mo-ta"
 seriesOrder: 4
 description: "Tỷ lệ chuyển đổi nhích từ 10% lên 12%. Đó là tăng 2% hay tăng 20%? Cả hai đều có thể đúng — và chính chỗ lập lờ đó đang khiến bạn đọc sai báo cáo."
-pubDate: 2027-11-16
+pubDate: 2025-02-04
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Thị Hương"

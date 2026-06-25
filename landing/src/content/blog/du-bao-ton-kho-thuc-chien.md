@@ -4,7 +4,7 @@ code: "pt-036"
 series: "du-bao"
 seriesOrder: 3
 description: "Vừa cháy hàng vừa ế kho cùng một tháng. Vì đặt theo cảm giác. Phần cuối của series: ghép xu hướng + mùa vụ thành điểm đặt hàng."
-pubDate: 2027-07-13
+pubDate: 2025-07-03
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

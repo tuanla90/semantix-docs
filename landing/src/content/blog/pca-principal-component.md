@@ -2,7 +2,7 @@
 title: "PCA: khi bạn có 15 cột chỉ số khách — và mắt không thấy nhóm nào với nhóm nào"
 code: "pt-048"
 description: "Dashboard 15 cột về khách. Số đơn, tần suất, giá trị, số kênh, số lần trả hàng… nhìn mãi không ra nhóm. PCA nén còn 2 trục để phân khúc tự lộ ra."
-pubDate: 2027-04-07
+pubDate: 2025-02-25
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

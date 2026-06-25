@@ -2,7 +2,7 @@
 title: "Star schema vs Snowflake schema: cái \"đúng sách\" hơn lại khiến bạn hỏi chậm hơn"
 code: "kt-033"
 description: "Cùng một đống dữ liệu, hai cách sắp bảng. Một cái hỏi nhanh và dễ đọc. Một cái gọn hơn, đúng chuẩn hơn — nhưng join mệt hơn. Chọn cái nào?"
-pubDate: 2027-07-24
+pubDate: 2025-03-05
 category: "Kiến Thức Nền Tảng"
 series: "thiet-ke-kho-du-lieu"
 seriesOrder: 2

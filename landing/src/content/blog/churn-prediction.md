@@ -2,7 +2,7 @@
 title: "Churn prediction: nhận ra khách sắp rời đi trước khi họ rời"
 code: "pt-012"
 description: "Lúc bạn biết một khách đã rời, thì đã quá muộn để giữ. Churn prediction là cách nhìn ra dấu hiệu sớm — và hành động khi vẫn còn kịp."
-pubDate: 2027-10-05
+pubDate: 2025-09-07
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

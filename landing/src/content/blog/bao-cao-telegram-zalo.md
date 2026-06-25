@@ -2,7 +2,7 @@
 title: "Báo cáo tự động qua Telegram/Zalo: dashboard đẹp mấy cũng vô dụng — nếu sáng nào bạn cũng quên mở nó ra"
 code: "hd-004"
 description: "Sáng mở app xem số, chiều bận quên, ba ngày sau mới biết một SKU đã âm kho. Báo cáo tốt không nằm chờ bạn — nó tự nhắn vào Telegram/Zalo đúng giờ. Đây là cách làm."
-pubDate: 2025-07-15
+pubDate: 2025-08-31
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Thị Hương"

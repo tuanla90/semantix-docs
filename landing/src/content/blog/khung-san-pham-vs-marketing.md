@@ -2,7 +2,7 @@
 title: "Khung sản phẩm vs marketing: AARRR và AIDA đang mô tả cùng một khách — bằng hai ngôn ngữ không ai dịch cho ai"
 code: "pt-046"
 description: "Marketing đo AIDA, 5A. Product đo AARRR, HEART. Cùng một khách, hai bản đồ rời — khúc giữa không ai nhận. Cách nối lại làm một."
-pubDate: 2027-03-24
+pubDate: 2025-12-29
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

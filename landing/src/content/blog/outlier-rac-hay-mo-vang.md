@@ -2,7 +2,7 @@
 title: "Outlier: khi nào là rác cần bỏ, khi nào là mỏ vàng cần giữ"
 code: "pt-030"
 description: "Một đơn 200 triệu kéo doanh thu trung bình vọt lên. Phản xạ là xoá cho đẹp số. Nhưng xoá outlier trước khi hiểu = xoá luôn insight đắt nhất."
-pubDate: 2027-02-02
+pubDate: 2025-02-20
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

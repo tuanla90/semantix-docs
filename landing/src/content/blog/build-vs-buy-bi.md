@@ -2,7 +2,7 @@
 title: "Tự dựng BI in-house hay mua sẵn? Bài toán build-vs-buy cho SME"
 code: "ss-011"
 description: "Tự dựng nghe vừa rẻ vừa chủ động. Nhưng hoá đơn thật không nằm trên báo giá — nó đến sau, bằng lương người và thời gian. Đây là cách quyết cho đúng."
-pubDate: 2027-05-18
+pubDate: 2026-03-18
 category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"

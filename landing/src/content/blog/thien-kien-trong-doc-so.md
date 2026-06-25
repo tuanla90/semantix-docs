@@ -4,7 +4,7 @@ code: "pt-033"
 series: "tu-duy-du-lieu"
 seriesOrder: 3
 description: "Số liệu không cứu bạn nếu bạn chỉ đọc cái mình muốn thấy. Ba thiên kiến kinh điển âm thầm bẻ cong mọi quyết định dựa trên dữ liệu — và cách tự phản biện."
-pubDate: 2027-01-06
+pubDate: 2024-12-06
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

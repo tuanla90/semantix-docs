@@ -4,7 +4,7 @@ code: "pt-024"
 series: "tu-duy-du-lieu"
 seriesOrder: 5
 description: "Báo cáo nói trung bình mỗi khách chi 500k. Bạn nhập hàng theo đó. Nhưng phần lớn khách chỉ chi 150k — vài ông sỉ kéo lệch con số. Khi số 'đúng' vẫn đánh lừa."
-pubDate: 2027-01-20
+pubDate: 2024-12-16
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

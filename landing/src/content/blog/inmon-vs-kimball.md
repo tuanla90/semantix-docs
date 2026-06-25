@@ -2,7 +2,7 @@
 title: "Inmon vs Kimball: xây kho dữ liệu từ trên xuống, hay từ dưới lên?"
 code: "kt-045"
 description: "Kimball dựng nhanh từng phòng ban rồi ghép lại. Inmon dựng một kho chuẩn hoá cho cả công ty trước, rồi mới chia. Hai triết lý trái ngược — chọn sai có thể tốn hàng năm."
-pubDate: 2027-07-31
+pubDate: 2025-03-12
 category: "Kiến Thức Nền Tảng"
 series: "thiet-ke-kho-du-lieu"
 seriesOrder: 4

@@ -2,7 +2,7 @@
 title: "SCD — Slowly Changing Dimension: khi khách đổi địa chỉ, đơn cũ của chị về tỉnh nào?"
 code: "kt-035"
 description: "Chị Hà chuyển từ Hà Nội vào TP.HCM. Đơn cũ của chị giờ tính về tỉnh nào? Câu trả lời quyết định cả báo cáo doanh thu theo vùng đúng hay sai."
-pubDate: 2027-08-04
+pubDate: 2025-03-17
 category: "Kiến Thức Nền Tảng"
 series: "thiet-ke-kho-du-lieu"
 seriesOrder: 5

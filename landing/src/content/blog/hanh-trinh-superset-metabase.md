@@ -4,7 +4,7 @@ code: "uc-010"
 series: "tu-excel-den-semantix"
 seriesOrder: 3
 description: "Tôi mê mã nguồn mở: license 0đ, tự host, làm chủ dữ liệu. Rồi cái giá ẩn lộ ra — nó không biến mất, chỉ dời chỗ. Phần 3 của series: tự chủ và cái giá của tự do."
-pubDate: 2027-04-20
+pubDate: 2025-04-14
 category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Lê Anh Tuấn"

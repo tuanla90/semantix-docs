@@ -4,7 +4,7 @@ code: "hd-007"
 series: "truc-quan-hoa"
 seriesOrder: 3
 description: "Dashboard đầy số mà mở ra chẳng ai biết phải làm gì. Lỗi ở thiết kế, không ở dữ liệu. Phần 3 của series: dựng dashboard hành động được."
-pubDate: 2027-06-15
+pubDate: 2025-08-15
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Thị Hương"

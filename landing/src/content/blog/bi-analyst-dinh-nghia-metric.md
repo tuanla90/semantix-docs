@@ -2,7 +2,7 @@
 title: "BI analyst thời AI: vì sao công việc thật của bạn không phải viết SQL — mà là định nghĩa sự thật một lần cho cả công ty"
 code: "uc-003"
 description: "Chị Linh mở LinkedIn, thấy tin 'AI viết SQL trong 3 giây'. Tim hụt một nhịp. Rồi chị nhận ra: thứ AI làm được không phải việc khó nhất của chị."
-pubDate: 2026-09-08
+pubDate: 2026-03-15
 category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Lê Anh Tuấn"

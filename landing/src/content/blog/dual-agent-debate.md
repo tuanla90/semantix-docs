@@ -2,7 +2,7 @@
 title: "Dual-Agent Debate: vì sao hai AI cãi nhau cho ra báo cáo đáng tin hơn một AI gật đầu"
 code: "ai-003"
 description: "Một AI tự tin luôn trả lời trơn tru — và đó đúng là lúc nó sai mà không ai biết. Vì sao hai AI tranh luận, một bên đề xuất một bên phản biện, lại đáng tin hơn?"
-pubDate: 2026-08-04
+pubDate: 2026-04-02
 category: "AI & Công Nghệ"
 readTime: 10
 author: "Lê Anh Tuấn"

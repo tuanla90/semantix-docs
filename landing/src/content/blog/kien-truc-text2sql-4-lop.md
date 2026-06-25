@@ -2,7 +2,7 @@
 code: "ai-002"
 title: "Kiến trúc Text2SQL 4 lớp: biến câu hỏi tiếng Việt thành SQL không phải một-bước — mà là dây chuyền lọc"
 description: "Biến câu hỏi tiếng Việt thành SQL không phải phép thuật 'ném vào LLM'. Đó là kiến trúc Text2SQL 4 lớp lọc — lớp ai cũng bỏ qua mới quyết định số đúng hay sai."
-pubDate: 2026-07-28
+pubDate: 2026-04-11
 category: "AI & Công Nghệ"
 readTime: 11
 author: "Lê Anh Tuấn"

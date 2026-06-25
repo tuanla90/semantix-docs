@@ -2,7 +2,7 @@
 title: "Customer Lifetime Value: con số quyết định bạn được phép chi bao nhiêu để có một khách — chứ không phải một chỉ số đẹp để báo cáo"
 code: "pt-052"
 description: "Đốt tiền ads kéo khách mà không biết một khách đáng bao nhiêu? Đó là lái xe bịt mắt. CLV đặt trần cho ngân sách thu hút — và lộ ra phân khúc đáng giữ."
-pubDate: 2027-05-05
+pubDate: 2025-09-11
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"
@@ -72,11 +72,11 @@ Khi đã có CLV theo phân khúc, ngân sách marketing thôi là "chia đều 
 
 Đây là lý do nhiều doanh nghiệp biết rõ lý thuyết trên mà vẫn xài CLV trung bình toàn tệp: dữ liệu nằm rải rác. Doanh thu ở KiotViet, chi phí ads ở Facebook và TikTok, giá vốn trong một file Excel của kế toán, định nghĩa "khách VIP" thì mỗi phòng hiểu một kiểu. Ghép chúng lại để tính CLV cho từng phân khúc là một dự án, không phải một câu hỏi.
 
-Semantix không phải là thêm một dashboard CLV để bạn ngắm. Nó là nơi bạn **định nghĩa CLV đúng một lần** trong [Semantic Layer](/blog/semantic-layer/) — chốt rõ AOV, tần suất, retention và margin được tính thế nào, "phân khúc VIP" nghĩa là gì — rồi sau đó hỏi bằng tiếng Việt và cắt con số đó theo bất kỳ lát nào:
+Semantix không phải là thêm một dashboard CLV để bạn ngắm. Nó có sẵn **CLV như một template phân tích nâng cao**: bạn chỉ cần trỏ ba thứ — cột khách hàng, cột ngày mua, chỉ số doanh thu — đặt **biên lợi nhuận (%)** và **tuổi thọ kỳ vọng (năm)** làm tham số (không cần cột giá vốn), rồi hỏi bằng tiếng Việt. Template trả về cho **từng khách**: số đơn, doanh thu, AOV, số đơn/năm, **CLV lịch sử**, **CLV dự đoán**, và cột **trần CAC** (= CLV dự đoán ÷ 3 — luật 3×CAC nhúng sẵn). Thêm một chiều phân khúc là cắt ngay con số đó theo nhóm:
 
-> **"CLV trung bình theo phân khúc khách quý này, và so trần CAC từng nhóm với chi phí thu hút thực tế theo kênh"**
+> **"CLV theo phân khúc khách năm nay, kèm trần CAC từng nhóm"**
 
-Một định nghĩa, dùng mãi. Không còn cảnh ba phòng ban cãi nhau "VIP" là ai và CLV tính thế nào.
+AOV, tần suất, margin được chốt một lần trong [Semantic Layer](/blog/semantic-layer/) — không còn cảnh ba phòng ban cãi nhau "VIP" là ai và CLV tính thế nào. Và vì nó cắt theo phân khúc chứ không gộp, cái bẫy "CLV trung bình toàn tệp" ở trên tự động biến mất.
 
 ## Tóm lại
 

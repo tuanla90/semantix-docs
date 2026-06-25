@@ -2,7 +2,7 @@
 title: "\"Dimension table\" vs \"dimension\": cùng một từ — một người chỉ cái bảng, một người chỉ góc cắt"
 code: "kt-039"
 description: "Hai người họp cãi nhau cả buổi vì chữ \"dimension\". Hóa ra một người đang nói cái BẢNG, người kia nói GÓC CẮT. Không ai sai — chỉ là một từ gánh hai nghĩa."
-pubDate: 2027-07-21
+pubDate: 2025-03-01
 category: "Kiến Thức Nền Tảng"
 series: "thiet-ke-kho-du-lieu"
 seriesOrder: 1

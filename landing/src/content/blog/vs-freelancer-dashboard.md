@@ -2,7 +2,7 @@
 title: "AI BI vs thuê freelancer dựng dashboard: chi phí thật sau 1 năm"
 code: "ss-007"
 description: "Dashboard freelancer dựng đẹp, rẻ, xong trong tuần. Rồi câu hỏi mới bật ra. Bạn lại nhắn tin freelancer. Lần này anh ấy đã bận dự án khác."
-pubDate: 2026-12-08
+pubDate: 2026-06-25
 category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Thị Hương"

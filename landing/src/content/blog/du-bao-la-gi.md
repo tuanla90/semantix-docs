@@ -4,7 +4,7 @@ code: "pt-034"
 series: "du-bao"
 seriesOrder: 1
 description: "Dự báo nào rồi cũng lệch so với thực tế. Nhưng không dự báo còn tệ hơn nhiều. Phần 1 của series: vì sao mục tiêu là giảm bất định, không phải đoán đúng."
-pubDate: 2027-06-29
+pubDate: 2025-06-24
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

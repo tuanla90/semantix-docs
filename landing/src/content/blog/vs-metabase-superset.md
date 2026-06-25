@@ -2,7 +2,7 @@
 title: "Semantix vs Metabase & Superset: vì sao 'miễn phí' lại là lựa chọn đắt nhất"
 code: "ss-003"
 description: "License $0 nghe rất hấp dẫn cho SME tiết kiệm. Nhưng hoá đơn không biến mất — nó chỉ chuyển từ ngân sách phần mềm sang lịch của đội kỹ sư. So sánh thẳng thắn BI mã nguồn mở với Semantix."
-pubDate: 2026-02-13
+pubDate: 2026-07-13
 category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"

@@ -4,7 +4,7 @@ code: "hd-008"
 series: "truc-quan-hoa"
 seriesOrder: 4
 description: "Bạn dựng 20 slide đầy số liệu. Sếp xem xong vẫn hỏi: vậy nên làm gì? Phần cuối của series: cách trình bày số để ra quyết định, không phải để khoe đã làm."
-pubDate: 2027-06-22
+pubDate: 2025-08-20
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Thị Hương"

@@ -4,7 +4,7 @@ code: "kt-019"
 series: "tu-duy-du-lieu"
 seriesOrder: 2
 description: "Mua công cụ BI, kết nối data, rồi ngồi nhìn màn hình trống — giờ hỏi gì? Câu hỏi quyết định dữ liệu cần, không phải ngược lại."
-pubDate: 2026-12-30
+pubDate: 2024-12-01
 category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Lê Thị Hương"

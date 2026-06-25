@@ -2,7 +2,7 @@
 title: "RAG là gì: vì sao AI thông minh hơn không bớt bịa — mà AI biết tra cứu mới bớt"
 code: "kt-005"
 description: "Bạn hỏi AI doanh thu quý trước, nó trả lời trơn tru, tự tin, có cả con số lẻ. Chỉ có điều con số đó sai. Nó không tra cứu gì cả — nó trả lời từ trí nhớ."
-pubDate: 2026-10-13
+pubDate: 2026-04-29
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

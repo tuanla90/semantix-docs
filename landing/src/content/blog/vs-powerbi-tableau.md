@@ -2,7 +2,7 @@
 title: "Semantix vs BI dashboard truyền thống (Power BI, Tableau, Looker...): vì sao công cụ mạnh hơn lại trả lời được ít câu hỏi hơn"
 code: "ss-001"
 description: "Bạn mua Tableau, dashboard đẹp lung linh. Nhưng mỗi câu hỏi mới vẫn phải chờ analyst 1–3 ngày. So sánh thẳng thắn cả nhóm BI dashboard truyền thống với AI hỏi-đáp — kèm bài toán chi phí theo người dùng."
-pubDate: 2026-02-11
+pubDate: 2026-07-17
 category: "So Sánh & Lựa Chọn"
 readTime: 11
 author: "Lê Anh Tuấn"

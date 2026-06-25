@@ -2,7 +2,7 @@
 title: "Pareto 80/20: vì sao cắt bỏ 80% sản phẩm 'kém' có thể giết luôn 20% ngôi sao"
 code: "pt-007"
 description: "Ai cũng biết 20% sản phẩm tạo 80% doanh thu. Ít ai biết cắt 80% còn lại thường làm sụp luôn nhóm ngôi sao. Cách đọc Pareto cho đúng — và bốn cái bẫy của nó."
-pubDate: 2026-05-06
+pubDate: 2025-10-06
 category: "Phân Tích Dữ Liệu"
 readTime: 12
 author: "Trần Minh Khoa"

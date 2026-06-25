@@ -2,7 +2,7 @@
 title: "Xuất báo cáo PowerPoint 1-click: vì sao chiều thứ Sáu nào bạn cũng đang làm lại một việc máy nên làm"
 code: "hd-019"
 description: "Chiều thứ Sáu chụp biểu đồ dán vào slide cho họp — mà số vẫn lệch dashboard. Xuất PowerPoint 1-click bỏ hẳn khâu này."
-pubDate: 2027-07-07
+pubDate: 2025-11-18
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
 author: "Lê Thị Hương"

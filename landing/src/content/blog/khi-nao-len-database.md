@@ -2,7 +2,7 @@
 title: "Khi nào nên rời Google Sheets lên database: 5 dấu hiệu cuốn bảng tính của bạn đã quá tải — và đường lên nhẹ nhất"
 code: "hd-014"
 description: "Hai người sửa một ô cùng lúc, sáng ra số lệch không ai biết vì sao. Google Sheets không yếu — nó chỉ đang gánh việc của một hệ thống. 5 dấu hiệu nó hết gánh."
-pubDate: 2026-12-02
+pubDate: 2025-05-28
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Thị Hương"

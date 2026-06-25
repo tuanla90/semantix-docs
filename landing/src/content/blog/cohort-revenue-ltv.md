@@ -4,7 +4,7 @@ code: "pt-004"
 series: "cohort"
 seriesOrder: 4
 description: "Một sản phẩm có thể giữ chân khách rất tốt mà vẫn lỗ. Phần cuối của series: revenue cohort, điểm hoà vốn CAC, LTV, và cách áp dụng cho ecom/SaaS/F&B."
-pubDate: 2024-12-24
+pubDate: 2025-06-19
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

@@ -2,7 +2,7 @@
 title: "6 cách người ta né số liệu bất tiện: vì sao có data rõ ràng mà quyết định vẫn không đổi"
 code: "pt-055"
 description: "Bạn đưa ra một con số không thể chối cãi — cả phòng họp vẫn làm ngơ. Vấn đề không phải dữ liệu sai, mà là con người không muốn nghe. 6 chiêu né & cách chống."
-pubDate: 2027-09-22
+pubDate: 2025-12-16
 category: "Phân Tích Dữ Liệu"
 series: "hieu-chi-so"
 seriesOrder: 6

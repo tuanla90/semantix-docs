@@ -4,7 +4,7 @@ code: "kt-023"
 series: "tu-duy-du-lieu"
 seriesOrder: 9
 description: "Bạn đợi đủ số mới quyết. Nhưng chờ dữ liệu hoàn hảo cũng là một quyết định — thường là quyết định tệ nhất. Phần cuối của series: quyết khi mới có 70%."
-pubDate: 2027-03-30
+pubDate: 2025-01-03
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Thị Hương"

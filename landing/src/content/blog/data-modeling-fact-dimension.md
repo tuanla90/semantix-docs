@@ -2,7 +2,7 @@
 title: "Data modeling: Fact & Dimension — cách sắp bảng quyết định câu hỏi bạn hỏi được"
 code: "kt-014"
 description: "Có đủ dữ liệu mà hỏi mãi không ra số. Không thiếu số — bảng sắp sai. Sắp đúng fact và dimension, câu hỏi tự bật ra."
-pubDate: 2027-09-07
+pubDate: 2025-05-17
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

@@ -2,7 +2,7 @@
 title: "HEART framework: khách qua hết các bước trong phễu — mà vẫn ghét dùng sản phẩm của bạn"
 code: "pt-045"
 description: "Phễu AARRR báo xanh: khách đăng ký, mua, quay lại. Nhưng có một con số phễu không bao giờ thấy — trải nghiệm. Khách qua bước không có nghĩa là họ hài lòng."
-pubDate: 2027-03-17
+pubDate: 2025-12-24
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Thị Hương"

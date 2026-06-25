@@ -2,7 +2,7 @@
 title: "Snapshot table & 3 loại fact table — vì sao cộng dồn giao dịch để ra tồn kho cuối ngày là cách làm sai"
 code: "kt-036"
 description: "Muốn biết tồn kho cuối mỗi ngày 30 ngày qua? Bảng giao dịch cộng dồn mỗi lần một mệt và chậm. Có một loại bảng khác sinh ra cho đúng câu này."
-pubDate: 2027-08-07
+pubDate: 2025-03-22
 category: "Kiến Thức Nền Tảng"
 series: "thiet-ke-kho-du-lieu"
 seriesOrder: 6

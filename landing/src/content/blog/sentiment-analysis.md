@@ -2,7 +2,7 @@
 title: "Sentiment Analysis: kho review tiếng Việt của bạn là dữ liệu lớn nhất chưa ai đo — và nó cảnh báo sớm trước cả doanh thu"
 code: "pt-049"
 description: "Có 300 review mà sếp vẫn phải đoán 'tháng này khách thấy thế nào'. Cảm xúc khách là dữ liệu — chỉ là chưa ai biến nó thành một con số theo dõi được."
-pubDate: 2027-04-14
+pubDate: 2025-10-29
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

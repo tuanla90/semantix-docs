@@ -2,7 +2,7 @@
 title: "Phân tích chuỗi thời gian: vì sao đường doanh thu đẹp nhất lại nói dối bạn nhiều nhất"
 code: "pt-043"
 description: "Doanh thu tháng này tăng 12%. Mừng chưa? Có thể chỉ là Tết về. Trước khi kết luận, phải tách tín hiệu khỏi mùa vụ và nhiễu đã."
-pubDate: 2027-03-03
+pubDate: 2025-11-10
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

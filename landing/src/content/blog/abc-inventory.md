@@ -2,7 +2,7 @@
 title: "ABC inventory: 20% mã hàng giữ 80% vốn tồn — đừng quản như nhau"
 code: "pt-015"
 description: "Mỗi cuối tháng bạn đếm sạch cả nghìn mã hàng như nhau. Nhưng đa số chúng chỉ giữ vài phần trăm vốn. Bạn đang đổ công vào đúng chỗ ít quan trọng nhất."
-pubDate: 2027-10-12
+pubDate: 2025-08-23
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

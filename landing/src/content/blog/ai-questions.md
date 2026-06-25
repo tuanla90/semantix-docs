@@ -2,7 +2,7 @@
 title: "AI Analytics: nút thắt không phải là model, mà là câu hỏi bạn đặt ra"
 code: "hd-001"
 description: "Đổi từ GPT sang model xịn hơn không làm bạn hiểu doanh nghiệp hơn. Câu hỏi đúng mới làm. Đây là giải phẫu một câu hỏi tốt — và 5 câu hỏi cụ thể tạo ra quyết định ngay trong 48 giờ."
-pubDate: 2025-01-20
+pubDate: 2026-03-09
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
 author: "Lê Thị Hương"

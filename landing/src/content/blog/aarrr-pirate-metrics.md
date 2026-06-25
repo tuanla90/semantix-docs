@@ -4,7 +4,7 @@ code: "pt-044"
 description: "Chủ shop chỉ nhìn một con số doanh thu tổng. Nó đứng im, nhưng không ai biết khâu nào trong hành trình khách đang chảy máu. Năm chữ R của AARRR chỉ đúng chỗ cần sửa."
 series: "khung-do-luong"
 seriesOrder: 1
-pubDate: 2027-03-10
+pubDate: 2025-12-19
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Thị Hương"

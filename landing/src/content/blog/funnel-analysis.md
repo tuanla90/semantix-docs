@@ -2,7 +2,7 @@
 title: "Funnel Analysis: phễu của bạn chỉ rò một chỗ — bịt đúng nó lời gấp 5 lần vá khắp nơi"
 code: "pt-006"
 description: "Một shop đổ tiền chạy ads kéo traffic nhưng doanh thu đứng im. Vấn đề không nằm ở traffic — mà ở một bước checkout đang chảy máu. Cách đọc phễu bán hàng để tìm đúng chỗ rò."
-pubDate: 2025-04-08
+pubDate: 2025-09-21
 category: "Phân Tích Dữ Liệu"
 readTime: 8
 author: "Trần Minh Khoa"

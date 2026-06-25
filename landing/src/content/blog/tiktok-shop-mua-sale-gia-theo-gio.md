@@ -2,7 +2,7 @@
 title: "Nhà bán TikTok Shop mùa sale: vì sao quyết định giá theo ngày là đã muộn — và cách đọc số theo từng giờ"
 code: "uc-005"
 description: "23h đêm 9.9. Mã hot của Quân cháy hàng từ 21h, nhưng ngân sách ads vẫn đang đốt vào nó. Anh chỉ biết điều đó vào sáng hôm sau — khi báo cáo ngày chạy xong."
-pubDate: 2026-09-22
+pubDate: 2026-02-18
 category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Trần Minh Khoa"

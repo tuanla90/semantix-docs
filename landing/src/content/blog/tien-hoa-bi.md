@@ -2,7 +2,7 @@
 title: "Sự tiến hóa của BI: vì sao 'có dashboard' mới chỉ là nấc thấp nhất — và lợi thế thật nằm ở ba nấc trên"
 code: "kt-021"
 description: "Chị chủ chuỗi F&B tự hào có dashboard đủ màu trên mọi chi nhánh. Vẫn nhập sai hàng, vẫn phản ứng muộn. Vì dashboard chỉ kể chuyện đã rồi — và đó mới là nấc thấp nhất."
-pubDate: 2027-02-03
+pubDate: 2026-06-06
 category: "Kiến Thức Nền Tảng"
 readTime: 10
 author: "Lê Anh Tuấn"

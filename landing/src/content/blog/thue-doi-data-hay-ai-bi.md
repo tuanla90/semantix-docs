@@ -2,7 +2,7 @@
 title: "Thuê đội data hay dùng AI BI? Bài toán chi phí thật sau 12 tháng"
 code: "ss-005"
 description: "Bạn tuyển một analyst giỏi 28 triệu/tháng. Sáu tháng sau bạn nhận ra 80% thời gian của họ là bưng số thủ công. Và rồi họ nghỉ."
-pubDate: 2026-12-01
+pubDate: 2026-06-01
 category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Thị Hương"

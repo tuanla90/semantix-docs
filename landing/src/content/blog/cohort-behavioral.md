@@ -4,7 +4,7 @@ code: "pt-003"
 series: "cohort"
 seriesOrder: 3
 description: "Không phải khách nào cũng như nhau. Phần 3 của series: nhóm cohort theo kênh acquisition và theo hành vi để tìm ra khoảnh khắc kích hoạt — hành động sớm dự báo việc khách ở lại."
-pubDate: 2024-12-17
+pubDate: 2025-06-16
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

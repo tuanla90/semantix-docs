@@ -2,7 +2,7 @@
 title: "Checklist chọn công cụ BI cho SME: 7 câu hỏi trước khi trả tiền"
 code: "ss-010"
 description: "Đừng đi hỏi 'công cụ BI nào tốt nhất'. Đó là câu hỏi sai. Hỏi 7 câu này về chính công ty bạn trước — rồi câu trả lời tự lộ ra."
-pubDate: 2026-12-29
+pubDate: 2026-03-22
 category: "So Sánh & Lựa Chọn"
 readTime: 9
 author: "Lê Thị Hương"

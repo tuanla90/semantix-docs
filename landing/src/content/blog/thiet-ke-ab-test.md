@@ -4,7 +4,7 @@ code: "pt-038"
 series: "thu-nghiem"
 seriesOrder: 2
 description: "Test sai cách còn tệ hơn không test — vì cho bạn niềm tin giả. Cách dựng A/B test mà kết quả đáng tin. Phần 2 của series:"
-pubDate: 2027-07-27
+pubDate: 2025-07-27
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

@@ -2,7 +2,7 @@
 title: "Chuyện nghề Data Analyst: 80% công việc không ai khoe trên LinkedIn"
 code: "uc-007"
 description: "Ai cũng tưởng nghề DA là vẽ insight đẹp, làm model ngầu. Thật ra 80% là dọn dữ liệu bẩn và đi xin quyền truy cập. Tôi kể bạn nghe."
-pubDate: 2027-01-05
+pubDate: 2026-01-04
 category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Trần Minh Khoa"

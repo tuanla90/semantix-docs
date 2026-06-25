@@ -2,7 +2,7 @@
 title: "Market Basket: sản phẩm nào 'đi cùng nhau' — và cách bán kèm đúng"
 code: "pt-011"
 description: "Gợi ý mua kèm sai làm khách bực mình. Gợi ý đúng làm giỏ hàng to lên. Khác biệt nằm ở ba con số: support, confidence, lift."
-pubDate: 2027-12-07
+pubDate: 2025-10-01
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

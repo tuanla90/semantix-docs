@@ -4,7 +4,7 @@ code: "hd-006"
 series: "truc-quan-hoa"
 seriesOrder: 2
 description: "Càng trang trí biểu đồ càng khó đọc. 3D, gradient, lưới đậm — mỗi thứ là một lớp nhiễu. Phần 2 của series: bớt mực để tăng nghĩa."
-pubDate: 2027-06-08
+pubDate: 2025-08-11
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Trần Minh Khoa"

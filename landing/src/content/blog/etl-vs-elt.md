@@ -2,7 +2,7 @@
 title: "ETL vs ELT: vì sao đảo thứ tự hai chữ cái lại quyết định ai trong công ty được chạm vào dữ liệu"
 code: "kt-011"
 description: "Mỗi câu hỏi mới, sếp lại phải chờ kỹ sư dựng lại pipeline ba ngày. Vấn đề không nằm ở kỹ sư — nó nằm ở thứ tự hai chữ cái T và L. Đảo lại, dữ liệu về tay bạn."
-pubDate: 2026-11-17
+pubDate: 2025-05-25
 category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Trần Minh Khoa"

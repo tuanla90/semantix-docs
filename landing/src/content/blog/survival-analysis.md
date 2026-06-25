@@ -2,7 +2,7 @@
 title: "Survival Analysis: 'khách của bạn sống được bao lâu' — câu hỏi y học mà cohort đã trả lời từ lâu"
 code: "pt-042"
 description: "Phân tích sống sót nghe như chuyện bệnh viện. Nhưng đường cong sống sót của tập khách hàng chính là đường retention của cohort — và bạn dựng được nó hôm nay."
-pubDate: 2027-02-24
+pubDate: 2025-11-02
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

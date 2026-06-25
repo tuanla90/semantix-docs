@@ -2,7 +2,7 @@
 title: "Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi — mà vẫn trả về số sai"
 code: "kt-002"
 description: "AI viết SQL đúng cú pháp 95–99% số lần. Nghe yên tâm? Đó mới chính là chỗ nguy hiểm. Bài này giải thích Text-to-SQL thật sự hoạt động ra sao, và cái bẫy 'số sai mà trông như đúng'."
-pubDate: 2026-06-24
+pubDate: 2026-05-28
 category: "Kiến Thức Nền Tảng"
 readTime: 11
 author: "Lê Anh Tuấn"

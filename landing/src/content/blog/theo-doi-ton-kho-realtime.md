@@ -2,7 +2,7 @@
 title: "Theo dõi tồn kho realtime: cái bạn cần không phải con số tồn kho — mà là lời nhắn trước khi nó về 0"
 code: "hd-011"
 description: "Best-seller hết hàng đúng lúc khách hỏi mua: mất đơn, mất luôn uy tín. Mở app soi tồn mỗi ngày không cứu được bạn — một cảnh báo tự động đúng ngưỡng thì có. Đây là cách làm."
-pubDate: 2027-06-02
+pubDate: 2025-11-06
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Thị Hương"

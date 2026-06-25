@@ -2,7 +2,7 @@
 title: "Input vs output metrics: cả công ty nhìn doanh thu mỗi sáng — nhưng đó là nút bạn không bấm được"
 code: "pt-054"
 description: "Doanh thu là kết quả của những việc làm hôm qua, không phải cái bạn bấm nút thay đổi hôm nay. Muốn lái được kết quả, hãy ám ảnh với chỉ số đầu vào."
-pubDate: 2027-09-15
+pubDate: 2025-12-08
 category: "Phân Tích Dữ Liệu"
 series: "hieu-chi-so"
 seriesOrder: 4

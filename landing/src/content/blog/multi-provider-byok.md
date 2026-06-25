@@ -2,7 +2,7 @@
 title: "BYOK & đa nhà cung cấp AI: vì sao khoá chặt vào MỘT model là rủi ro bạn không thấy — cho tới ngày giá tăng gấp đôi"
 code: "ai-005"
 description: "Demo AI mượt mà. Nhưng key nằm trong tay ai, dữ liệu khách của bạn đi đâu? BYOK và đa nhà cung cấp là chủ quyền dữ liệu — thứ bạn chỉ tiếc khi đã muộn."
-pubDate: 2026-08-18
+pubDate: 2026-04-18
 category: "AI & Công Nghệ"
 readTime: 9
 author: "Lê Anh Tuấn"

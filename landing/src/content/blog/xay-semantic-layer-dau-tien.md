@@ -2,7 +2,7 @@
 title: "Xây Semantic Layer đầu tiên: định nghĩa 'doanh thu' chuẩn — bắt đầu bằng một metric, không phải cả vũ trụ"
 code: "hd-018"
 description: "Sales nói 4,2 tỷ, Finance nói 3,8 tỷ. Chưa định nghĩa 'doanh thu' thì mọi báo cáo cãi nhau. Hướng dẫn 4 bước dựng định nghĩa đầu tiên để cả công ty ra cùng một số."
-pubDate: 2027-06-30
+pubDate: 2026-07-31
 category: "Hướng Dẫn Thực Chiến"
 readTime: 10
 author: "Lê Anh Tuấn"

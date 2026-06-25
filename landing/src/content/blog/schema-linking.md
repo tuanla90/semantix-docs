@@ -2,7 +2,7 @@
 title: "Schema linking: bạn hỏi 'doanh thu', nhưng database có 40 bảng — làm sao AI biết lấy đúng cột?"
 code: "ai-007"
 description: "Bạn hỏi 'doanh thu tháng này'. Database có cột rev_amt, total, gmv ở ba bảng khác nhau. Làm sao AI biết lấy đúng cái nào? Đó là bài toán schema linking — bước AI đọc cấu trúc thô và nối từ với đúng bảng/cột."
-pubDate: 2027-05-12
+pubDate: 2026-05-04
 category: "AI & Công Nghệ"
 readTime: 10
 author: "Lê Anh Tuấn"

@@ -2,7 +2,7 @@
 title: "Semantix vs WrenAI & text-to-SQL thuần: vì sao vẫn cần Semantic Layer"
 code: "ss-008"
 description: "Gắn AI thẳng vào database nghe gọn — ra ngay SQL. Cái bẫy: nó đoán, không tra. Phân định không ở AI nào mạnh, mà ở Semantic Layer."
-pubDate: 2026-12-15
+pubDate: 2026-07-26
 category: "So Sánh & Lựa Chọn"
 readTime: 11
 author: "Lê Anh Tuấn"

@@ -2,7 +2,7 @@
 title: "Scenario Analysis: vì sao một con số dự báo đẹp đẽ lại là cách đặt cược nguy hiểm nhất"
 code: "pt-050"
 description: "Kế hoạch năm treo trên đúng một con số doanh thu. Nghe chắc chắn. Thật ra là cược cả công ty vào một mặt xúc xắc."
-pubDate: 2027-04-21
+pubDate: 2025-10-26
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

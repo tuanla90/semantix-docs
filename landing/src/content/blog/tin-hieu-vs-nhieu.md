@@ -4,7 +4,7 @@ code: "kt-020"
 series: "tu-duy-du-lieu"
 seriesOrder: 7
 description: "Doanh thu tuần này giảm 8% — hoảng hay bình thường? Phản ứng với mọi dao động là cách tiêu tiền nhanh nhất. Phần 7 của series: tách nhiễu khỏi tín hiệu."
-pubDate: 2027-03-09
+pubDate: 2024-12-24
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Trần Minh Khoa"

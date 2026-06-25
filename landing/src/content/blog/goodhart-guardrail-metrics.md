@@ -4,7 +4,7 @@ code: "kt-022"
 series: "tu-duy-du-lieu"
 seriesOrder: 8
 description: "Ép một con số lên, bạn thường vô tình phá một con số khác. Đó là định luật Goodhart. Phần 8 của series: cách dùng guardrail metric để không tự thắng mình."
-pubDate: 2027-03-23
+pubDate: 2024-12-29
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

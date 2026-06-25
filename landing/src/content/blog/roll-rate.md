@@ -2,7 +2,7 @@
 title: "Roll Rate Analysis: con số churn nói khách rời 8% — nhưng giấu mất họ đang trượt về đâu"
 code: "pt-040"
 description: "Churn quý này 8%, y hệt quý trước. Yên tâm? Chưa. Cùng một con số tổng có thể là khách đang leo lên — hoặc cả tệp đang lặng lẽ trượt xuống vực."
-pubDate: 2027-02-10
+pubDate: 2025-10-23
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

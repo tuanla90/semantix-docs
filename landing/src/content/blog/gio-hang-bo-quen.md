@@ -2,7 +2,7 @@
 title: "Giỏ hàng bỏ quên: tiền đang nằm ngay trước cửa checkout"
 code: "pt-013"
 description: "Khách đã thêm vào giỏ là nhóm gần mua nhất. Nghịch lý: chính họ lại là nhóm dễ bỏ nhất. Cách đọc và cứu giỏ hàng bỏ quên."
-pubDate: 2027-12-14
+pubDate: 2025-09-25
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

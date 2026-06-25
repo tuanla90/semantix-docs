@@ -2,7 +2,7 @@
 title: "Business Intelligence cho SME: vì sao 'chưa đủ lớn để làm BI' là hiểu lầm tốn tiền nhất — và BI thật ra không phải dashboard"
 code: "kt-003"
 description: "Chủ shop có Shopee, TikTok Shop, KiotViet, một file Excel 12 sheet. Đủ số liệu để chết đuối, không đủ để ra một quyết định. Đó mới là lúc cần BI — và BI không phải dashboard đẹp."
-pubDate: 2025-02-18
+pubDate: 2025-01-07
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

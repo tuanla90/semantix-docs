@@ -2,7 +2,7 @@
 title: "Bảng ảo: vì sao gộp dữ liệu ba kênh không cần copy về một chỗ — và dữ liệu luôn mới"
 code: "hd-016"
 description: "Cách quen thuộc để nhìn ba kênh cùng lúc là copy hết về một kho mỗi đêm. Bảng ảo lật ngược: gộp và làm sạch ngay lúc bạn hỏi, không nhân bản, dữ liệu luôn mới."
-pubDate: 2026-12-16
+pubDate: 2026-03-12
 category: "Hướng Dẫn Thực Chiến"
 readTime: 10
 author: "Lê Anh Tuấn"

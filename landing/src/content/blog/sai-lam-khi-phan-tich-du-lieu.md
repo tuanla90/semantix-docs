@@ -2,7 +2,7 @@
 title: "5 sai lầm kinh điển khi phân tích dữ liệu (và cách tránh)"
 code: "pt-028"
 description: "Con số không nói dối. Nhưng người đọc số thì có. Năm cái bẫy khiến bạn ra quyết định sai trên dữ liệu hoàn toàn đúng."
-pubDate: 2027-01-19
+pubDate: 2026-02-05
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

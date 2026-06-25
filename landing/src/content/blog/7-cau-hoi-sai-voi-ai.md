@@ -2,7 +2,7 @@
 code: "hd-012"
 title: "7 câu hỏi sai khiến AI trả lời lệch — và cách hỏi lại cho đúng"
 description: "AI trả số sai không phải vì nó dốt, mà vì câu hỏi mơ hồ. 7 lỗi câu hỏi hay gặp nhất — kèm bộ trước/sau để bạn sửa ngay trong một phút."
-pubDate: 2027-06-09
+pubDate: 2026-03-02
 category: "Hướng Dẫn Thực Chiến"
 readTime: 10
 author: "Lê Thị Hương"

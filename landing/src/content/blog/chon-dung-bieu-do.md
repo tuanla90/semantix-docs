@@ -4,7 +4,7 @@ code: "hd-005"
 series: "truc-quan-hoa"
 seriesOrder: 1
 description: "Một con số đúng vẫn kể sai câu chuyện nếu bạn vẽ nhầm loại biểu đồ. Mắt người đọc góc kém — pie nói dối êm ru. Phần 1 của series: chọn chart theo câu hỏi."
-pubDate: 2027-06-01
+pubDate: 2025-08-06
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Trần Minh Khoa"

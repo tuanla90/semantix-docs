@@ -4,7 +4,7 @@ code: "pt-039"
 series: "thu-nghiem"
 seriesOrder: 3
 description: "B thắng A 5%. Ăn mừng hay chỉ là may rủi? Cùng một con số có thể là tín hiệu thật, hoặc một trò đùa của xác suất. Phần cuối của series: đọc kết quả test cho đúng."
-pubDate: 2027-08-03
+pubDate: 2025-08-01
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

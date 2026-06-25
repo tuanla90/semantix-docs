@@ -2,7 +2,7 @@
 title: "Data warehouse: vì sao câu trả lời 'đúng về kỹ thuật' lại là khoản chi sai của phần lớn SME"
 code: "kt-008"
 description: "Một tư vấn nói 'phải xây data warehouse mới nghiêm túc'. Sáu tháng sau: một kho rỗng, một hóa đơn — câu hỏi cũ vẫn chưa trả lời được."
-pubDate: 2026-11-03
+pubDate: 2025-05-20
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Trần Minh Khoa"

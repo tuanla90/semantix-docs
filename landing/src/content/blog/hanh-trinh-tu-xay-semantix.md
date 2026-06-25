@@ -4,7 +4,7 @@ code: "uc-011"
 series: "tu-excel-den-semantix"
 seriesOrder: 4
 description: "Tôi đã thử mọi engine. Vẫn còn khoảng trống không cái nào lấp cho SME Việt. Phần cuối của series: vì sao tôi tự xây Semantix."
-pubDate: 2027-04-27
+pubDate: 2025-04-19
 category: "Câu Chuyện & Use Case"
 readTime: 10
 author: "Lê Anh Tuấn"

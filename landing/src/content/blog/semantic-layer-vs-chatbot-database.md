@@ -2,7 +2,7 @@
 code: "ai-009"
 title: "Semantic Layer vs chatbot cắm thẳng database: bỏ bớt một lớp nghe gọn hơn — và đó là lý do nó trả số sai"
 description: "Cắm AI thẳng vào database nghe gọn nhẹ và thông minh — và đó chính là lý do nó trả số sai một cách tự tin. Khác biệt nằm ở một lớp ai cũng muốn bỏ."
-pubDate: 2026-07-14
+pubDate: 2026-05-17
 category: "AI & Công Nghệ"
 readTime: 10
 author: "Lê Anh Tuấn"

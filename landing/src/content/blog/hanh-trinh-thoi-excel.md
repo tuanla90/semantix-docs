@@ -4,7 +4,7 @@ code: "uc-008"
 series: "tu-excel-den-semantix"
 seriesOrder: 1
 description: "Tôi từng làm mọi báo cáo bằng Excel. Nó tự do, ai cũng dùng được. Rồi một ngày file treo máy, ba người ba số. Phần 1 của series: lúc Excel hết gánh nổi."
-pubDate: 2027-04-06
+pubDate: 2025-04-06
 category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Lê Anh Tuấn"

@@ -2,7 +2,7 @@
 title: "Chuỗi F&B 8 chi nhánh: vì sao tám file Excel mỗi sáng là tám phiên bản sự thật — và cách gộp về một màn hình"
 code: "uc-004"
 description: "Anh Tâm có 8 quán, mỗi sáng nhận 8 file Excel. Anh tưởng mình quản một chuỗi. Thật ra anh đang quản tám định nghĩa 'doanh thu' khác nhau."
-pubDate: 2026-09-15
+pubDate: 2026-01-01
 category: "Câu Chuyện & Use Case"
 readTime: 10
 author: "Lê Thị Hương"

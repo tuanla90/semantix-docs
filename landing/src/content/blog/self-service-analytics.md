@@ -2,7 +2,7 @@
 title: "Self-service analytics: vì sao trả quyền hỏi data về tay business — chứ không phải mua thêm một dashboard"
 code: "kt-007"
 description: "Sếp hỏi kênh nào lời nhất lúc 9 giờ sáng. Đội data trả lời chiều thứ Sáu. Quyết định thì phải chốt từ thứ Ba — nên chốt bằng cảm giác. Nút thắt nằm ở đó."
-pubDate: 2026-10-27
+pubDate: 2026-05-08
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Thị Hương"

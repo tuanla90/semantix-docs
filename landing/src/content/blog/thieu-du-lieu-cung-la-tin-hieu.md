@@ -2,7 +2,7 @@
 title: "Ô trống cũng biết nói: khi 'thiếu dữ liệu' chính là một tín hiệu"
 code: "pt-032"
 description: "Cột nguồn khách hàng để trống, bạn điền đại số 0. Vừa xong, bạn đã xoá mất một thông tin quý: việc nó trống tự nó là một tín hiệu."
-pubDate: 2027-02-16
+pubDate: 2026-02-14
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"

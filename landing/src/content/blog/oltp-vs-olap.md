@@ -2,7 +2,7 @@
 title: "OLTP vs OLAP: vì sao đừng chạy báo cáo nặng thẳng trên database bán hàng"
 code: "kt-013"
 description: "Bạn chạy báo cáo doanh thu đúng lúc cao điểm sale — và cả app bán hàng treo theo. Không phải vì báo cáo sai, mà vì bạn hỏi nhầm chỗ."
-pubDate: 2027-10-19
+pubDate: 2025-06-02
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

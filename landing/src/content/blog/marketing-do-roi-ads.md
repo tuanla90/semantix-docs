@@ -2,7 +2,7 @@
 title: "Phòng Marketing đo ROI quảng cáo: vì sao mỗi nền tảng đều báo bạn lãi — và cả ba không thể cùng đúng"
 code: "uc-006"
 description: "Facebook báo ROAS 4,2. TikTok báo 3,8. Google báo 5,1. Cộng lại vượt cả doanh thu thật. Chuyện trưởng phòng marketing đi tìm MỘT con số ROI đúng."
-pubDate: 2026-09-29
+pubDate: 2026-01-23
 category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Trần Minh Khoa"

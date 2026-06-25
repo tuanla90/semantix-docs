@@ -2,7 +2,7 @@
 title: "Semantix vs dashboard có sẵn trong Shopee, TikTok Shop, KiotViet…: vì sao 'báo cáo sẵn' không đủ"
 code: "ss-013"
 description: "Mỗi nền tảng tặng bạn một dashboard miễn phí. Nhưng không nơi nào cho bạn bức tranh tổng. Vì sao báo cáo sẵn rất tiện — mà vẫn không đủ để quyết định."
-pubDate: 2027-05-11
+pubDate: 2026-06-20
 category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Thị Hương"

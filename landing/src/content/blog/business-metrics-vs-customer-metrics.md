@@ -2,7 +2,7 @@
 title: "Chỉ số doanh nghiệp vs chỉ số khách hàng: dashboard xanh mướt — và lý do khách đã âm thầm bỏ đi từ ba tháng trước"
 code: "kt-043"
 description: "Doanh thu xanh, lợi nhuận xanh, số đơn xanh. Nhưng khách có hài lòng không, có quay lại không thì không ai đo. Đến khi doanh thu rớt, khách đã đi từ lâu."
-pubDate: 2027-10-06
+pubDate: 2025-12-13
 category: "Kiến Thức Nền Tảng"
 series: "hieu-chi-so"
 seriesOrder: 5

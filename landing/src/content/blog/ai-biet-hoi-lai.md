@@ -2,7 +2,7 @@
 code: "ai-006"
 title: "Vòng lặp làm rõ: AI tốt không phải AI trả lời ngay — mà là AI biết hỏi lại"
 description: "AI trả lời ngay mọi câu hỏi — thật ra nó đang đoán. AI tốt biết hỏi lại bạn một câu để làm rõ chỗ mơ hồ rồi mới trả số."
-pubDate: 2026-08-25
+pubDate: 2026-03-05
 category: "AI & Công Nghệ"
 readTime: 8
 author: "Lê Anh Tuấn"

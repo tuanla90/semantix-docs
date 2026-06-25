@@ -2,7 +2,7 @@
 title: "Embedding & Vector Search: vì sao AI hiểu câu gần nghĩa — nền tảng dưới RAG"
 code: "kt-017"
 description: "Máy tính không hiểu chữ. Nó chỉ hiểu toạ độ của chữ. Vậy mà bạn gõ 'khách sộp', nó vẫn lôi đúng nhóm 'khách VIP' ra. Bài này giải thích vì sao."
-pubDate: 2027-08-31
+pubDate: 2026-04-06
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

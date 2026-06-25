@@ -2,7 +2,7 @@
 title: "'Một nguồn sự thật' nghĩa là gì — và vì sao công ty bạn đang âm thầm có năm nguồn"
 code: "kt-009"
 description: "Sales nói 4,2 tỷ. Finance nói 3,8 tỷ. Marketing nói 4,5 tỷ. Cả ba mở đúng file của mình. 'Một nguồn sự thật' là một định nghĩa chung, không phải một database."
-pubDate: 2026-11-10
+pubDate: 2026-01-31
 category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Lê Anh Tuấn"

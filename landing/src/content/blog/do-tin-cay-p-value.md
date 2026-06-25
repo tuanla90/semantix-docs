@@ -4,7 +4,7 @@ code: "kt-025"
 series: "thong-ke-kinh-doanh"
 seriesOrder: 2
 description: "p-value 0,03 — vậy 97% là bạn đúng? Sai. Đó là một trong những hiểu lầm tốn tiền nhất phòng họp. Phần 2 của series: đọc đúng độ tin cậy."
-pubDate: 2027-08-17
+pubDate: 2025-01-17
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

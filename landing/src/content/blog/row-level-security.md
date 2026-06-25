@@ -2,7 +2,7 @@
 title: "Row-Level Security: vì sao muốn chia sẻ dữ liệu rộng hơn, bạn lại phải khoá nó chặt hơn"
 code: "kt-004"
 description: "Sếp muốn cả công ty tự xem số. Bạn sợ chi nhánh này thấy doanh thu chi nhánh kia. Nên bạn khoá data lại — và không ai dùng được gì. RLS phá đúng cái thế kẹt đó."
-pubDate: 2026-10-06
+pubDate: 2025-06-05
 category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Lê Anh Tuấn"

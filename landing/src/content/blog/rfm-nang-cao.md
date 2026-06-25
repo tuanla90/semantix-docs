@@ -2,7 +2,7 @@
 title: "RFM nâng cao: vì sao mô hình 5 nhóm 'chuẩn sách giáo khoa' sẽ sụp khi gặp dữ liệu thật của bạn"
 code: "pt-016"
 description: "Bạn chấm điểm RFM theo quintile như sách dạy. Nhưng 60% khách chỉ mua đúng một lần — và 'năm nhóm bằng nhau' của bạn là một lời nói dối. Cách làm RFM cho dữ liệu thật."
-pubDate: 2026-03-18
+pubDate: 2025-10-14
 category: "Phân Tích Dữ Liệu"
 readTime: 13
 author: "Trần Minh Khoa"

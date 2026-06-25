@@ -2,7 +2,7 @@
 title: "Data governance cho SME: ai sở hữu con số & ai chịu trách nhiệm khi nó sai"
 code: "kt-015"
 description: "Cả công ty dùng chung một con số mỗi sáng. Nhưng hỏi 'số sai thì ai sửa?' — không ai giơ tay. Ai cũng dùng, không ai sở hữu."
-pubDate: 2027-12-28
+pubDate: 2025-05-08
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

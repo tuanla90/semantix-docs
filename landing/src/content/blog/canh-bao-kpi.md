@@ -2,7 +2,7 @@
 title: "Thiết lập cảnh báo KPI: con số sống còn của bạn đã tụt 40% từ thứ Sáu — nhưng tới buổi họp thứ Hai bạn mới biết"
 code: "hd-020"
 description: "Doanh thu ngày rớt 40% từ thứ Sáu, nhưng phải đợi họp đầu tuần mới phát hiện. Mất một tuần để biết là mất một tuần để sửa. Đây là cách đặt cảnh báo KPI theo ngưỡng."
-pubDate: 2027-07-14
+pubDate: 2025-09-04
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
 author: "Lê Thị Hương"

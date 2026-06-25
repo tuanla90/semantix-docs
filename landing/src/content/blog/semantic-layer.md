@@ -2,7 +2,7 @@
 title: "Semantic Layer: vì sao công ty bạn có ba con số doanh thu — và không số nào sai"
 code: "kt-001"
 description: "Phòng Sales nói 4,2 tỷ. Finance nói 3,8 tỷ. Data Team nói 4,05 tỷ. Cả ba đều đúng. Đây là lỗ hổng mà Semantic Layer sinh ra để bịt — và vì sao nó là thứ phải có trước cả AI."
-pubDate: 2024-11-15
+pubDate: 2026-05-12
 category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Lê Anh Tuấn"

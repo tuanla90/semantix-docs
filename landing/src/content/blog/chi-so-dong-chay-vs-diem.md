@@ -2,7 +2,7 @@
 title: "Chỉ số dòng chảy vs chỉ số điểm: vì sao cộng doanh thu các tháng thì đúng, mà cộng tồn kho các tháng thì sai"
 code: "kt-040"
 description: "Cộng doanh thu 12 tháng ra doanh thu cả năm — đúng. Cộng tồn kho cuối mỗi tháng ra tồn kho cả năm — sai bét. Cùng phép cộng, một cái đúng một cái vô nghĩa. Vì sao?"
-pubDate: 2027-09-01
+pubDate: 2025-11-28
 category: "Kiến Thức Nền Tảng"
 series: "hieu-chi-so"
 seriesOrder: 2

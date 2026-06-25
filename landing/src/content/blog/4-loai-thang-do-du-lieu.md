@@ -2,7 +2,7 @@
 title: "4 loại thang đo dữ liệu: vì sao 'mã sản phẩm trung bình' là một con số vô nghĩa — dù máy vẫn tính ra"
 code: "kt-041"
 description: "Excel tính ra 'mức hài lòng trung bình 3,4 sao' và 'mã đơn trung bình 10.847'. Cả hai đều ra số. Cả hai đều vô nghĩa. Vì loại dữ liệu không cho phép phép tính đó."
-pubDate: 2027-09-08
+pubDate: 2025-11-23
 category: "Kiến Thức Nền Tảng"
 series: "hieu-chi-so"
 seriesOrder: 1

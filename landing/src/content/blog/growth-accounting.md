@@ -4,7 +4,7 @@ code: "pt-018"
 series: "growth-accounting"
 seriesOrder: 1
 description: "Hai shop cùng khoe tháng này tăng 12%. Một đang khỏe, một đang chảy máu. Growth accounting tách con số tăng ròng để bạn nhìn thấy chỗ con số tổng giấu kín."
-pubDate: 2026-06-10
+pubDate: 2025-07-08
 category: "Phân Tích Dữ Liệu"
 readTime: 12
 author: "Trần Minh Khoa"

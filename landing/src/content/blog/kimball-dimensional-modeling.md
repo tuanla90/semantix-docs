@@ -2,7 +2,7 @@
 title: "Kimball & mô hình hóa chiều: vì sao một thiết kế database 'sai chuẩn' lại là thiết kế đúng cho phân tích"
 code: "kt-034"
 description: "Database vận hành của bạn chuẩn hoá đẹp tới mức hỏi 'doanh thu theo tỉnh theo tháng' phải join 8 bảng. Kimball lật ngược: thiết kế lấy câu hỏi làm trung tâm."
-pubDate: 2027-07-28
+pubDate: 2025-03-09
 category: "Kiến Thức Nền Tảng"
 series: "thiet-ke-kho-du-lieu"
 seriesOrder: 3

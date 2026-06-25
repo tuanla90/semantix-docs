@@ -2,7 +2,7 @@
 title: "\"Miễn phí\" thường đắt nhất: tổng chi phí sở hữu (TCO) của một công cụ BI"
 code: "ss-009"
 description: "License 0đ trông như món hời. Nhưng hoá đơn không biến mất — nó chỉ chuyển từ phần mềm sang người và thời gian. Đây là cách tính đủ TCO trước khi chọn."
-pubDate: 2026-12-22
+pubDate: 2026-05-24
 category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"

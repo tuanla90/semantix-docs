@@ -4,7 +4,7 @@ code: "pt-021"
 series: "growth-accounting"
 seriesOrder: 4
 description: "Ba phần lý thuyết đã xong. Giờ là lúc dựng bảng growth accounting cho doanh nghiệp thật — từ một bảng giao dịch, không cần data warehouse, không cần SQL."
-pubDate: 2026-06-22
+pubDate: 2025-07-21
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

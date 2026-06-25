@@ -2,7 +2,7 @@
 title: "RFM Segmentation: khách chi nhiều nhất — chưa chắc là khách tốt nhất"
 code: "pt-005"
 description: "Một đại gia mua một lần 50 triệu rồi biến mất. Một người mua đều 2 triệu mỗi tháng. Bạn nên giữ ai? RFM phân khúc khách hàng để bạn bán đúng người."
-pubDate: 2025-03-11
+pubDate: 2025-10-18
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

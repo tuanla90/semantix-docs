@@ -2,7 +2,7 @@
 title: "Semantix vs Power BI cho SME Việt: vì sao công cụ BI phổ biến nhất lại đứng im — và lỗi không nằm ở Power BI"
 code: "ss-002"
 description: "Power BI mạnh, rẻ trên giấy, đi kèm Microsoft 365. Nhưng SME Việt vấp ở DAX, license Pro, gateway và Q&A không hiểu tiếng Việt. Vì sao — và khi nào vẫn nên chọn nó."
-pubDate: 2025-12-09
+pubDate: 2026-05-20
 category: "So Sánh & Lựa Chọn"
 readTime: 13
 author: "Lê Anh Tuấn"

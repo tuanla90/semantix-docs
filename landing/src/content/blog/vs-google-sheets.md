@@ -2,7 +2,7 @@
 title: "Semantix vs Google Sheets: đối thủ thật của BI không phải Power BI — mà là file bảng tính chỉ trả lời được câu của người làm ra nó"
 code: "ss-006"
 description: "Họp sáng thứ Hai, ba người đọc ba con số doanh thu từ cùng một file. Khi nào bảng tính Excel/Google Sheets hết gánh nổi — và câu hỏi tiếp theo bạn chưa kịp hỏi."
-pubDate: 2026-06-20
+pubDate: 2026-06-29
 category: "So Sánh & Lựa Chọn"
 readTime: 13
 author: "Lê Anh Tuấn"

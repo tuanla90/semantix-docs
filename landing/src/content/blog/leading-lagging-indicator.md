@@ -4,7 +4,7 @@ code: "pt-026"
 series: "tu-duy-du-lieu"
 seriesOrder: 6
 description: "Doanh thu quý tụt là tin đã cũ — nó là hệ quả của những việc xảy ra ba tháng trước. Muốn lái được công ty, hãy đo chỉ số báo trước, không phải cái đã rồi."
-pubDate: 2027-01-27
+pubDate: 2024-12-21
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Thị Hương"

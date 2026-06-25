@@ -2,7 +2,7 @@
 title: "Dữ liệu bẩn giết mô hình: đừng vội đổi model, hãy dọn data"
 code: "pt-027"
 description: "Đổi sang model xịn hơn, tinh chỉnh đủ kiểu — số vẫn sai. Vấn đề không ở model. Nó nằm ở data bẩn bạn đút vào."
-pubDate: 2027-01-12
+pubDate: 2025-02-17
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

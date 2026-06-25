@@ -2,7 +2,7 @@
 title: "Vintage analysis: đọc chất lượng theo 'lứa' — từ khoản vay tới lứa khách hàng"
 code: "pt-010"
 description: "Lứa khách tháng này trả góp đúng hạn hơn lứa năm ngoái. Vậy mà nhìn tổng nợ xấu lại tưởng đang tệ đi. Vintage analysis gỡ đúng nghịch lý đó."
-pubDate: 2027-09-28
+pubDate: 2025-11-14
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"

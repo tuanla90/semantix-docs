@@ -2,7 +2,7 @@
 title: "OLAP cube: cùng một con số doanh thu, sếp xoay được năm cách — mà không phải năm báo cáo"
 code: "kt-037"
 description: "Sếp hỏi doanh thu theo tháng. Rồi theo vùng. Rồi vùng-trong-tháng. Rồi bóc xuống chi nhánh. Đó không phải năm báo cáo — là năm cách xoay cùng một khối."
-pubDate: 2027-08-11
+pubDate: 2025-03-27
 category: "Kiến Thức Nền Tảng"
 series: "thiet-ke-kho-du-lieu"
 seriesOrder: 7

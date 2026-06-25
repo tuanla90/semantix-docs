@@ -2,7 +2,7 @@
 title: "Data mart là gì: vì sao mở kho dữ liệu công ty ra, phòng nào cũng lạc lối — và cách cắt ra một cái quầy riêng"
 code: "kt-044"
 description: "Phòng Marketing mở kho dữ liệu công ty ra, thấy 200 bảng, không biết bảng nào của mình. Kho chung quá lớn khiến mỗi phòng lạc lối. Data mart sinh ra để cứu."
-pubDate: 2027-10-13
+pubDate: 2025-04-02
 category: "Kiến Thức Nền Tảng"
 series: "thiet-ke-kho-du-lieu"
 seriesOrder: 9

@@ -4,7 +4,7 @@ code: "kt-028"
 series: "thong-ke-mo-ta"
 seriesOrder: 1
 description: "Hai shop cùng doanh thu trung bình một tháng. Một shop ổn định đều đặn, một shop nay đỉnh mai đáy. Cùng một con số, hai số phận khác hẳn."
-pubDate: 2027-10-26
+pubDate: 2025-01-25
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Trần Minh Khoa"

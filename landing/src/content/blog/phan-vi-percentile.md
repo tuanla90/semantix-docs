@@ -4,7 +4,7 @@ code: "kt-029"
 series: "thong-ke-mo-ta"
 seriesOrder: 2
 description: "Giao hàng trung bình 30 phút, nghe rất ổn. Nhưng cứ 10 khách thì 1 người đợi gần 2 tiếng. Trung bình đẹp che mất trải nghiệm tệ của thiểu số."
-pubDate: 2027-11-02
+pubDate: 2025-01-29
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Trần Minh Khoa"

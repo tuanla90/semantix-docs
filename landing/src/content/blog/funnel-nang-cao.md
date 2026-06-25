@@ -2,7 +2,7 @@
 title: "Funnel nâng cao: vì sao cái phễu là một lời nói dối tiện lợi — và khi nào nó khiến bạn sửa nhầm chỗ"
 code: "pt-020"
 description: "Phễu giả định khách đi một đường thẳng. Khách thật thì vòng lại, bỏ qua, quay lại tuần sau. Bốn cách cái phễu đánh lừa bạn — và cách đọc nó cho đúng."
-pubDate: 2026-04-15
+pubDate: 2026-01-15
 category: "Phân Tích Dữ Liệu"
 readTime: 13
 author: "Trần Minh Khoa"

@@ -4,7 +4,7 @@ code: "pt-023"
 series: "tu-duy-du-lieu"
 seriesOrder: 4
 description: "Tháng nào chi ads nhiều thì doanh thu cao — nên ads tạo ra doanh thu? Có thể cả hai cùng bị một yếu tố thứ ba kéo theo, và bạn vừa đốt tiền mùa ế."
-pubDate: 2027-01-13
+pubDate: 2024-12-11
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

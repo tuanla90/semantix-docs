@@ -2,7 +2,7 @@
 title: "On-premise vs Cloud cho AI BI: chạy AI phân tích khi dữ liệu không được phép rời máy chủ"
 code: "ai-008"
 description: "Ngân hàng, bệnh viện muốn dùng AI phân tích nhưng 'data không được ra khỏi máy chủ'. Tưởng phải bỏ AI — thật ra chỉ cần đổi chỗ AI chạy."
-pubDate: 2027-05-19
+pubDate: 2026-04-25
 category: "AI & Công Nghệ"
 readTime: 10
 author: "Lê Anh Tuấn"

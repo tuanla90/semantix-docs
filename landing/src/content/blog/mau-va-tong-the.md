@@ -4,7 +4,7 @@ code: "kt-024"
 series: "thong-ke-kinh-doanh"
 seriesOrder: 1
 description: "Ba khách khen không có nghĩa sản phẩm tốt. Năm đơn hoàn không có nghĩa chất lượng tệ. Vài người nói không phải cả thị trường. Phần 1 của series: hiểu mẫu & tổng thể."
-pubDate: 2027-08-10
+pubDate: 2025-01-14
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Trần Minh Khoa"

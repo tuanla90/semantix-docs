@@ -2,7 +2,7 @@
 code: "hd-017"
 title: "Viết câu hỏi cho AI: cùng một ý hỏi khác đi một chút — ra số khác hẳn"
 description: "Không phải AI dốt, là câu hỏi mơ hồ. Checklist 5 thành phần để viết MỘT câu hỏi tốt — kèm bộ trước/sau bạn áp được ngay khi gõ Enter."
-pubDate: 2027-06-23
+pubDate: 2026-06-16
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
 author: "Lê Thị Hương"

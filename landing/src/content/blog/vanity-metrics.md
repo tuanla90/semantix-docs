@@ -2,7 +2,7 @@
 title: "Vanity metrics: những con số đẹp nhất thường dẫn tới quyết định tệ nhất"
 code: "pt-025"
 description: "Lượt xem livestream tăng gấp đôi. Followers cũng tăng. Còn doanh thu thì không nhúc nhích. Vì sao con số đẹp lại lừa bạn?"
-pubDate: 2027-12-21
+pubDate: 2026-02-22
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Thị Hương"

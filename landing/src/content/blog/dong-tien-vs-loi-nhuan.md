@@ -2,7 +2,7 @@
 title: "Dòng tiền vs lợi nhuận: vì sao báo cáo lãi 200 triệu mà tài khoản không đủ trả lương — và con số nào mới cứu được SME"
 code: "pt-053"
 description: "Cuối tháng kế toán báo lãi 200 triệu. Đến ngày trả lương, tài khoản không đủ. Lãi mà sao hết tiền? Vì lợi nhuận là ý kiến, dòng tiền mới là sự thật."
-pubDate: 2027-08-25
+pubDate: 2025-12-03
 category: "Phân Tích Dữ Liệu"
 series: "hieu-chi-so"
 seriesOrder: 3

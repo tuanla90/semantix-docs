@@ -2,7 +2,7 @@
 title: "Data catalog: cuốn từ điển cho chính dữ liệu của bạn — và vì sao nó nằm trong đầu một người"
 code: "kt-042"
 description: "Cột rev_amt nghĩa là gì? dim_cust_v2 khác dim_cust chỗ nào? Chỉ một người biết, và hôm nay người đó nghỉ. Kiến thức dữ liệu không nên sống trong một cái đầu."
-pubDate: 2027-09-29
+pubDate: 2025-05-03
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

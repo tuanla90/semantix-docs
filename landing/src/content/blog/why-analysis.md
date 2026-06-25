@@ -2,7 +2,7 @@
 title: "WHY Analysis: vì sao 'doanh thu giảm 15%' là câu trả lời vô dụng — cho tới khi bạn bóc nó ra"
 code: "pt-051"
 description: "Sếp hỏi vì sao doanh thu giảm 15%. 'Do thị trường' không phải câu trả lời. Cách bóc một con số thay đổi thành các yếu tố đóng góp — để biết sửa ở đâu."
-pubDate: 2027-04-28
+pubDate: 2026-02-25
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

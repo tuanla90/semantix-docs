@@ -2,7 +2,7 @@
 title: "Dashboard doanh thu cho chuỗi F&B nhiều chi nhánh: vì sao quán doanh thu cao nhất — lại có thể là quán lỗ nặng nhất"
 code: "hd-010"
 description: "Mỗi sáng nhắn 8 quản lý xin số, tới trưa ghép xong thì số đã cũ. Đây là 4 bước dựng một dashboard chuỗi F&B trả lời được câu hỏi quan trọng nhất: quán nào lãi thật."
-pubDate: 2027-05-26
+pubDate: 2025-09-14
 category: "Hướng Dẫn Thực Chiến"
 readTime: 10
 author: "Lê Thị Hương"

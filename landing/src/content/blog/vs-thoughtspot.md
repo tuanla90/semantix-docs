@@ -2,7 +2,7 @@
 title: "Semantix vs ThoughtSpot: cùng triết lý AI, khác nhau ở giá và chủ quyền dữ liệu"
 code: "ss-004"
 description: "ThoughtSpot khai sinh ra phân tích kiểu tìm-kiếm bằng AI và làm rất tinh. Nhưng với SME Việt Nam, hai bức tường hiện ra nhanh: giá ($5k–20k+/tháng) và mô hình cloud-first, một-AI, tiếng-Anh-trước."
-pubDate: 2026-02-15
+pubDate: 2026-07-21
 category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"

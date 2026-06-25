@@ -4,7 +4,7 @@ code: "pt-035"
 series: "du-bao"
 seriesOrder: 2
 description: "Doanh thu tháng Tết gấp ba tháng thường. So với tháng trước thì 'bùng nổ', so với sau Tết thì 'sụp đổ'. Cả hai đều là tự lừa mình. Phần 2 của series: đọc seasonality cho đúng."
-pubDate: 2027-07-06
+pubDate: 2025-06-29
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

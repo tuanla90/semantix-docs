@@ -2,7 +2,7 @@
 title: "Tương quan & hồi quy: 'có liên quan không' là câu hỏi sai — câu đúng là 'mạnh cỡ nào, và đổi A thì B nhúc nhích bao nhiêu'"
 code: "pt-047"
 description: "Thấy chi ads tăng thì doanh thu tăng — bạn đã biết. Câu tiếp theo không phải 'có liên quan không' mà 'liên quan chặt cỡ nào, và thêm một triệu ads thì doanh thu thêm mấy triệu'."
-pubDate: 2027-03-31
+pubDate: 2025-02-13
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

@@ -2,7 +2,7 @@
 title: "Metric tính toán: vì sao lợi nhuận gộp nên định nghĩa một lần — chứ không gõ lại trong từng file Excel"
 code: "hd-013"
 description: "Mỗi báo cáo lại gõ lại 'lợi nhuận gộp = doanh thu − giá vốn'. Mỗi người một kiểu, sai một ô là lệch cả bảng. Có cách định nghĩa một lần, dùng mãi."
-pubDate: 2027-06-16
+pubDate: 2026-02-09
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Anh Tuấn"

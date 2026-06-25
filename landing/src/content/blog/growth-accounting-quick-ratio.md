@@ -4,7 +4,7 @@ code: "pt-017"
 series: "growth-accounting"
 seriesOrder: 2
 description: "Founder nào cũng muốn MỘT con số để biết tăng trưởng có thật khỏe không. Quick Ratio là nhịp tim đó: mỗi 1 user mất đi, bạn thêm được mấy. Nhưng nó cũng biết nói dối."
-pubDate: 2026-06-14
+pubDate: 2025-07-12
 category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Trần Minh Khoa"

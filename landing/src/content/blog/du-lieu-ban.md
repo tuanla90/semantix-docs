@@ -2,7 +2,7 @@
 code: "kt-010"
 title: "Dữ liệu bẩn: vì sao 80% thời gian 'phân tích' của bạn thật ra là dọn rác — chứ không phải phân tích"
 description: "File Excel 12 sheet, mỗi nơi gọi 'doanh thu' một kiểu. Bạn tưởng mình thiếu AI thông minh. Thật ra là dữ liệu bẩn — phải dọn trước khi phân tích."
-pubDate: 2026-06-30
+pubDate: 2025-01-11
 category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Lê Anh Tuấn"

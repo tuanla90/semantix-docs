@@ -2,7 +2,7 @@
 title: "Từ Google Sheets đến dashboard trong 15 phút: bạn không cần data warehouse — chỉ cần một sheet đủ sạch"
 code: "hd-003"
 description: "Chủ shop nào cũng nghĩ làm dashboard là dự án vài tuần, thuê người, dựng kho dữ liệu. Sai. Cái bạn đang có — một Google Sheet đơn hàng — đã là điểm khởi đầu hoàn hảo. Đây là 4 bước."
-pubDate: 2025-06-10
+pubDate: 2025-09-28
 category: "Hướng Dẫn Thực Chiến"
 readTime: 7
 author: "Lê Thị Hương"

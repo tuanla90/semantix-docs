@@ -4,7 +4,7 @@ code: "kt-026"
 series: "thong-ke-kinh-doanh"
 seriesOrder: 3
 description: "Mô hình báo gian lận chính xác 95%, nó kêu một đơn là gian lận. Nhưng xác suất đơn đó gian lận thật chỉ khoảng 16%. Vì sao? Bạn quên hỏi tỉ lệ nền. Phần cuối của series."
-pubDate: 2027-08-24
+pubDate: 2025-01-21
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"

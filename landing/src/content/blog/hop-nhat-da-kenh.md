@@ -2,7 +2,7 @@
 title: "Hợp nhất đa kênh: vấn đề của bạn không phải thiếu dữ liệu — mà là có quá nhiều"
 code: "hd-002"
 description: "Shopee, TikTok Shop, KiotViet mỗi nơi một file Excel, mỗi nơi gọi 'doanh thu' một kiểu. Đây là cách hợp nhất dữ liệu đa kênh về một nguồn sự thật — và 3 cái bẫy khi gộp tay."
-pubDate: 2025-05-13
+pubDate: 2026-01-20
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
 author: "Lê Thị Hương"

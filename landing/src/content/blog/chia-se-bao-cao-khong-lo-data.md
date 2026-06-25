@@ -2,7 +2,7 @@
 code: "hd-009"
 title: "Phân quyền theo hàng: muốn giữ bí mật lương, đừng giấu báo cáo — hãy cắt đúng phần mỗi người được thấy"
 description: "Bạn không dám gửi dashboard cho quản lý chi nhánh vì sợ họ thấy lương cả công ty. Nên mỗi tuần lại ngồi cắt Excel tay cho từng người. Có cách khác."
-pubDate: 2026-07-07
+pubDate: 2025-04-29
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
 author: "Lê Thị Hương"

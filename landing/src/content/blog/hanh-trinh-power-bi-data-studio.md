@@ -4,7 +4,7 @@ code: "uc-009"
 series: "tu-excel-den-semantix"
 seriesOrder: 2
 description: "Lần đầu tôi thấy số của mình thành dashboard tự refresh. Tôi tưởng xong. Rồi sếp hỏi một câu mới — và tắc. Phần 2 của series: dashboard đẹp, nhưng cứng."
-pubDate: 2027-04-13
+pubDate: 2025-04-09
 category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Lê Anh Tuấn"

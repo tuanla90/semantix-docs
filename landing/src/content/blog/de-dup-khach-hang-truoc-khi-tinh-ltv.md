@@ -2,7 +2,7 @@
 title: "Một khách, năm hồ sơ: vì sao chưa gộp trùng thì LTV và cohort đều sai"
 code: "pt-031"
 description: "Số khách tăng đều mỗi tháng, nghe như tin vui. Nhưng một nửa 'khách mới' chỉ là người cũ đổi SĐT. Chưa gộp trùng, mọi con số đều dối bạn."
-pubDate: 2027-02-09
+pubDate: 2025-09-18
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

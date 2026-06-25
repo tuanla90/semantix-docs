@@ -2,7 +2,7 @@
 title: "Đọc tăng trưởng đúng cách: MoM, YoY và những cái bẫy số liệu"
 code: "pt-008"
 description: "Tháng này bạn khoe tăng 30% so tháng trước. Nhưng so cùng kỳ năm ngoái, bạn đang tụt. Cùng một dữ liệu, hai con số ngược nhau — đọc sao cho đúng?"
-pubDate: 2027-11-30
+pubDate: 2026-01-12
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Trần Minh Khoa"

@@ -2,7 +2,7 @@
 code: "kt-038"
 title: "Data quality là gì: vì sao một bảng 'ổn' vẫn có thể đầy đủ nhưng sai — hoặc đúng nhưng trễ ba ngày"
 description: "'Dữ liệu của em ổn mà.' Ổn theo chiều nào? Chất lượng dữ liệu không phải một thứ — là 6 chiều đo được, và hỏng chiều nào sẽ kéo theo một quyết định sai khác nhau."
-pubDate: 2027-08-14
+pubDate: 2025-03-30
 category: "Kiến Thức Nền Tảng"
 series: "thiet-ke-kho-du-lieu"
 seriesOrder: 8

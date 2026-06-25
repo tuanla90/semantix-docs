@@ -2,7 +2,7 @@
 title: "Bảo vệ dữ liệu cá nhân (Nghị định 13/2023): SME thu data khách cần biết gì"
 code: "kt-016"
 description: "Bạn lưu số điện thoại, tên, đơn hàng của khách. Đó không phải 'data nội bộ' — đó là dữ liệu cá nhân, và đã có luật. Cần biết gì để không vướng?"
-pubDate: 2028-01-04
+pubDate: 2025-04-24
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Thị Hương"

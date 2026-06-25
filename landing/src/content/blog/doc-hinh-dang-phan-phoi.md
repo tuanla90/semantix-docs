@@ -4,7 +4,7 @@ code: "kt-030"
 series: "thong-ke-mo-ta"
 seriesOrder: 3
 description: "Một con số trung bình giấu sạch hình dạng thật của dữ liệu. Cùng một mean, bốn câu chuyện kinh doanh khác hẳn nhau. Vẽ histogram trước khi tin."
-pubDate: 2027-11-09
+pubDate: 2025-02-01
 category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Trần Minh Khoa"

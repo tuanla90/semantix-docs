@@ -2,7 +2,7 @@
 title: "Ảo giác AI: vì sao LLM tự tin 'bịa' ra SQL gọi tới cột không hề tồn tại — và cơ chế nào chặn"
 code: "ai-001"
 description: "AI viết một câu SQL gọi tới cột `customer_lifetime_value` trơn tru. Vấn đề: cột đó không tồn tại trong database của bạn. Vì sao LLM bịa, và 5 tuyến phòng thủ chặn nó."
-pubDate: 2025-09-02
+pubDate: 2026-04-15
 category: "AI & Công Nghệ"
 readTime: 13
 author: "Lê Anh Tuấn"

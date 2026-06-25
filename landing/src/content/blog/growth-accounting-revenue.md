@@ -4,7 +4,7 @@ code: "pt-019"
 series: "growth-accounting"
 seriesOrder: 3
 description: "SaaS này mất 8% khách trong tháng. Doanh thu vẫn tăng 5%. Không nghịch lý: đó là negative churn. Net dollar retention và hai dòng tiền bản đếm-đầu-người không thấy."
-pubDate: 2026-06-18
+pubDate: 2025-07-16
 category: "Phân Tích Dữ Liệu"
 readTime: 12
 author: "Trần Minh Khoa"

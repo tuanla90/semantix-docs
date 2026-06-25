@@ -4,7 +4,7 @@ code: "pt-037"
 series: "thu-nghiem"
 seriesOrder: 1
 description: "Trong phòng họp, người lương cao nhất quyết — không phải dữ liệu. Sếp sai thì cả công ty đi theo. Phần 1 của series: vì sao 'ta thử' hơn 'tôi nghĩ'."
-pubDate: 2027-07-20
+pubDate: 2025-07-24
 category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"

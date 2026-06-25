@@ -2,7 +2,7 @@
 title: "Looker Studio Pro vs Semantix: trả tiền cho Pro được thêm gì — và Semantix có sẵn không?"
 code: "ss-014"
 description: "Nâng lên Pro để có quản trị, lịch gửi và hỗ trợ. Bạn nhận đúng những thứ đó. Nhưng nó vẫn là dashboard cũ — không hỏi tự do được."
-pubDate: 2027-05-25
+pubDate: 2026-07-08
 category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Thị Hương"

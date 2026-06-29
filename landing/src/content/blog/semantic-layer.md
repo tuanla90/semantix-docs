@@ -40,7 +40,7 @@ Từ đó trở đi, bất kỳ ai trong tổ chức — dù hỏi bằng SQL, b
 
 Đây không phải khái niệm bên lề. Phong trào "metrics layer" / "semantic layer" (dbt, Cube, LookML...) ra đời đúng để giải bài toán này. Nếu semantic layer là từ điển *nghiệp vụ*, thì người anh em của nó — [data catalog, cuốn từ điển cho chính dữ liệu của bạn](/blog/data-catalog-tu-dien-du-lieu/) — lo phần ghi rõ mỗi bảng, mỗi cột thực sự chứa gì. Và như sẽ thấy ở dưới, semantic layer còn quan trọng gấp đôi trong thời đại AI.
 
-Tôi nói cái này từ chỗ đang thấm đòn. Ở một ngân hàng tôi đang làm, nghiệp vụ phức tạp hơn e-commerce nhiều lần — một "số dư", một "khách hàng hoạt động" có thể hiểu theo dăm bảy kiểu tùy phòng ban, tùy sản phẩm. Càng làm BI ở đây tôi càng thấy rõ: thiếu một tầng định nghĩa dùng chung thì mọi dashboard đẹp đến mấy cũng chỉ là ba con số cãi nhau ở phiên bản cao cấp hơn. Vì thế tôi đang POC semantic layer để đưa nó thành dự án trọng điểm của trung tâm chuyển đổi số. Bản chất nó là cách bắt cả tổ chức cùng đọc [một nguồn sự thật](/blog/mot-nguon-su-that/) thay vì mỗi người tự dịch dữ liệu thô theo ý mình.
+Mình nói cái này từ chỗ đang thấm đòn. Ở một ngân hàng mình đang làm, nghiệp vụ phức tạp hơn e-commerce nhiều lần — một "số dư", một "khách hàng hoạt động" có thể hiểu theo dăm bảy kiểu tùy phòng ban, tùy sản phẩm. Càng làm BI ở đây mình càng thấy rõ: thiếu một tầng định nghĩa dùng chung thì mọi dashboard đẹp đến mấy cũng chỉ là ba con số cãi nhau ở phiên bản cao cấp hơn. Vì thế mình đang POC semantic layer để đưa nó thành dự án trọng điểm của trung tâm chuyển đổi số. Bản chất nó là cách bắt cả tổ chức cùng đọc [một nguồn sự thật](/blog/mot-nguon-su-that/) thay vì mỗi người tự dịch dữ liệu thô theo ý mình.
 
 ## Vì sao Semantic Layer quan trọng hơn bao giờ hết
 
@@ -48,7 +48,9 @@ Tôi nói cái này từ chỗ đang thấm đòn. Ở một ngân hàng tôi đ
 
 Khi bạn hỏi AI "doanh thu tháng trước là bao nhiêu?", bản thân AI không biết `doanh_thu` của công ty bạn là cột nào, trừ những gì. Nếu không có Semantic Layer, nó **đoán** — và mỗi lần hỏi lại đoán một kiểu.
 
-Đây là chỗ chí mạng: lỗi đáng sợ nhất của AI không phải viết SQL hỏng (loại đó database tự chặn). Mà là viết một câu SQL chạy ngon lành, trả về một con số tròn trịa — và **sai**, không một dòng cảnh báo. Semantic Layer là thứ duy nhất khử được loại lỗi "số sai trông như đúng" này. *(Chúng tôi mổ xẻ kỹ cái bẫy này trong bài [Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi mà vẫn trả về số sai](/blog/text-to-sql/).)*
+> 🎬 **Mình kể chuyện này bằng giọng trong video** *"AI viết SQL giỏi hơn mình — nghề Data Analyst còn cửa không?"*: AI viết được câu query, nhưng nó không tự biết "doanh thu" công ty bạn tính kiểu gì. Cái ngữ cảnh đó chỉ người hiểu nghề mới cấp được — và đó chính là việc của semantic layer. Tìm **"Tuấn LA Lab"** trên YouTube.
+
+Đây là chỗ chí mạng: lỗi đáng sợ nhất của AI không phải viết SQL hỏng (loại đó database tự chặn). Mà là viết một câu SQL chạy ngon lành, trả về một con số tròn trịa — và **sai**, không một dòng cảnh báo. Semantic Layer là thứ duy nhất khử được loại lỗi "số sai trông như đúng" này. *(Mình mổ xẻ kỹ cái bẫy này trong bài [Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi mà vẫn trả về số sai](/blog/text-to-sql/).)*
 
 Không phải ngẫu nhiên mà những hệ AI hỏi-đáp dữ liệu mạnh nhất thế giới — WrenAI, hay SuperSonic của Tencent — đều được xây *quanh* một semantic layer, chứ không phải gắn AI thẳng vào database.
 
@@ -79,7 +81,7 @@ Semantix được xây từ đầu xoay quanh Semantic Layer. Thay vì hỏi AI 
 | SQL mới cho mỗi câu hỏi mới | Logic tái sử dụng, trả lời tức thì |
 | Bảo mật phụ thuộc từng truy vấn | Row-Level Security (RLS — phân quyền theo hàng, mỗi người chỉ thấy đúng dòng được phép) tập trung |
 
-Nếu bạn đang cân nhắc triển khai AI Analytics, câu hỏi đầu tiên không phải "AI nào tốt nhất?" — mà là **"Công ty mình đã có một định nghĩa thống nhất cho 'doanh thu' chưa?"** Trả lời được câu đó, bạn đã đi trước phần lớn doanh nghiệp. Và nếu muốn bắt tay dựng định nghĩa đầu tiên ngay hôm nay, tôi có hướng dẫn từng bước trong [Xây Semantic Layer đầu tiên](/blog/xay-semantic-layer-dau-tien/) — bắt đầu bằng đúng một metric, không phải cả vũ trụ.
+Nếu bạn đang cân nhắc triển khai AI Analytics, câu hỏi đầu tiên không phải "AI nào tốt nhất?" — mà là **"Công ty mình đã có một định nghĩa thống nhất cho 'doanh thu' chưa?"** Trả lời được câu đó, bạn đã đi trước phần lớn doanh nghiệp. Và nếu muốn bắt tay dựng định nghĩa đầu tiên ngay hôm nay, mình có hướng dẫn từng bước trong [Xây Semantic Layer đầu tiên](/blog/xay-semantic-layer-dau-tien/) — bắt đầu bằng đúng một metric, không phải cả vũ trụ.
 
 ---
 

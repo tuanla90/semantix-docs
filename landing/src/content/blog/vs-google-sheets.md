@@ -27,7 +27,9 @@ Nhưng đây là nghịch lý: **cái khiến bảng tính tiện hôm nay chín
 
 Bảng tính không thua vì nó *yếu*. Nó thua vì nó **quá vạn năng** — cái gì cũng làm được, nên không cái gì có một nguồn sự thật. Dưới đây là những chỗ nó bắt đầu hụt hơi — không phải vì Sheets dở, mà vì nó sinh ra để làm việc khác.
 
-Tôi nói cái này từ kinh nghiệm tự tay xây. Làm tư vấn chuyển đổi số ngoài giờ, hành trình công cụ của tôi đi đúng đường cong đó: bắt đầu bằng Google Sheets, lớn lên thì chuyển sang AppSheet, giờ là Nocobase. Tôi từng dựng cơ sở dữ liệu cho khách đủ ngành — bán hàng, kho, xuất nhập khẩu, may mặc in ấn, cả phòng khám y tế — và lần nào cũng tới một điểm: Sheets không gãy vì thiếu công thức, nó gãy vì *không ai ép được một định nghĩa đứng yên khi nhiều người cùng sửa*. Đó cũng là lúc tôi học SQL hồi còn làm vận hành, chỉ để "đọc số tìm lỗi" mà bảng tính giấu đi — chuyện tôi kể kỹ trong [hành trình thời Excel](/blog/hanh-trinh-thoi-excel/).
+Mình nói cái này từ kinh nghiệm tự tay xây. Làm tư vấn chuyển đổi số ngoài giờ, hành trình công cụ của mình đi đúng đường cong đó: bắt đầu bằng Google Sheets, lớn lên thì chuyển sang AppSheet, giờ là Nocobase. Mình từng dựng cơ sở dữ liệu cho khách đủ ngành — bán hàng, kho, xuất nhập khẩu, may mặc in ấn, cả phòng khám y tế — và lần nào cũng tới một điểm: Sheets không gãy vì thiếu công thức, nó gãy vì *không ai ép được một định nghĩa đứng yên khi nhiều người cùng sửa*. Đó cũng là lúc mình học SQL hồi còn làm vận hành, chỉ để "đọc số tìm lỗi" mà bảng tính giấu đi — chuyện mình kể kỹ trong [hành trình thời Excel](/blog/hanh-trinh-thoi-excel/).
+
+> 🎬 **Mình vừa làm hẳn một video về chuyện này:** *"Google Sheets làm báo cáo: tuyệt — cho tới 4 cái trần này"* — kể bằng cảnh nửa đêm cuối tháng copy-paste cho kịp báo cáo, rồi gỡ ra 4 cái trần (thủ công · trễ · ba người ba số · một người gánh). Tìm trên kênh **Tuấn LA Lab** trên YouTube nhé.
 
 ## 1. Một khái niệm, ba định nghĩa — vì sao ba người ra ba số
 
@@ -58,7 +60,7 @@ Cả một lớp phân tích mà bảng tính gần như bó tay, vì chúng đ�
 - **Funnel drop-off** — đo khách rơi rụng ở đâu giữa xem → thêm giỏ → thanh toán.
 - **Market basket & dấu hiệu churn** — sản phẩm nào hay đi cùng nhau, khách nào đang phát tín hiệu sắp rời đi.
 
-Mỗi cái trong số này, trong một bảng tính, là một dự án nửa ngày với rủi ro sai cao. Vì sao những phân tích này đáng giá đến thế, tôi đã mổ xẻ trong [hành vi khách hàng nói gì qua dữ liệu bán](/blog/du-lieu-ban/). *(Đây là năng lực định hướng; con số cụ thể tùy dữ liệu của bạn.)*
+Mỗi cái trong số này, trong một bảng tính, là một dự án nửa ngày với rủi ro sai cao. Vì sao những phân tích này đáng giá đến thế, mình đã mổ xẻ trong [hành vi khách hàng nói gì qua dữ liệu bán](/blog/du-lieu-ban/). *(Đây là năng lực định hướng; con số cụ thể tùy dữ liệu của bạn.)*
 
 ## 4. Hợp nhất đa kênh bằng copy-paste — vỡ thầm lặng khi đổi định dạng
 
@@ -82,7 +84,7 @@ Bạn muốn cho quản lý chi nhánh A xem doanh số của riêng chi nhánh 
 
 ## … những điều đó trong Semantix
 
-Định vị Semantix dễ nhất bằng **phủ định**: nó **không bắt bạn bỏ Google Sheets**, không bắt dựng data warehouse (kho dữ liệu tập trung cho phân tích), không bắt học SQL. Semantix dựng **ngay trên chính Google Sheets bạn đang dùng** — sheet là *cánh cửa vào, không phải cái trần*.
+Thứ mình đang xây — gọi là Semantix — định vị dễ nhất bằng **phủ định**: nó **không bắt bạn bỏ Google Sheets**, không bắt dựng data warehouse (kho dữ liệu tập trung cho phân tích), không bắt học SQL. Nó dựng **ngay trên chính Google Sheets bạn đang dùng** — sheet là *cánh cửa vào, không phải cái trần*.
 
 Khác biệt cốt lõi nằm ở một thứ bảng tính không có: **"doanh thu" được định nghĩa đúng một lần** — gọi là [Semantic Layer](/blog/semantic-layer/). Bạn, kế toán và sếp hỏi cùng một câu sẽ ra **cùng một số**, vì cả ba đang hỏi cùng một định nghĩa, không phải ba pivot mỗi người kéo một kiểu. Một lần định nghĩa, dùng mãi mãi. Quy trình gọn lại còn ba bước:
 
@@ -107,7 +109,7 @@ Phân quyền theo dòng, gộp đa kênh bằng bảng ảo ngay lúc hỏi (kh
 
 **Khi nào nên ở lại với Google Sheets?** Nếu bạn quy mô nhỏ, dữ liệu một nguồn duy nhất, một hai người dùng, và hỏi đi hỏi lại cùng khoảng **10 câu cố định không bao giờ đổi** — thì một dashboard Sheets dựng tốt là **đủ, và miễn phí.** Đừng vẽ rắn thêm chân. Bảng tính không phải kẻ thù; nó là điểm khởi đầu hoàn hảo, và là con dao đa năng bạn vẫn nên giữ trong túi.
 
-Câu hỏi đúng không phải "bảng tính hay Semantix tốt hơn?" — mà là **"file của tôi đã có quá nhiều người, quá nhiều kênh, và quá nhiều câu hỏi mới chưa?"** Nếu rồi, bạn không cần một con dao to hơn. Một dashboard bảng tính trả lời được những câu của hôm qua; câu quyết định nhất của bạn luôn là câu của *tối nay* — câu bật ra khi thấy con số lạ, câu chưa ai kịp dựng nút bấm. *(Nếu bạn đang cân nhắc nhảy thẳng lên BI truyền thống, đọc trước [Semantix vs Power BI & Tableau](/blog/vs-powerbi-tableau/) — vì sao công cụ mạnh hơn lại trả lời được ít câu hỏi hơn.)*
+Câu hỏi đúng không phải "bảng tính hay Semantix tốt hơn?" — mà là **"file của mình đã có quá nhiều người, quá nhiều kênh, và quá nhiều câu hỏi mới chưa?"** Nếu rồi, bạn không cần một con dao to hơn. Một dashboard bảng tính trả lời được những câu của hôm qua; câu quyết định nhất của bạn luôn là câu của *tối nay* — câu bật ra khi thấy con số lạ, câu chưa ai kịp dựng nút bấm. *(Nếu bạn đang cân nhắc nhảy thẳng lên BI truyền thống, đọc trước [Semantix vs Power BI & Tableau](/blog/vs-powerbi-tableau/) — vì sao công cụ mạnh hơn lại trả lời được ít câu hỏi hơn.)*
 
 ---
 

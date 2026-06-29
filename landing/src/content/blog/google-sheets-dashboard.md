@@ -13,11 +13,13 @@ coverAlt: "Một bảng tính Google Sheets biến đổi thành mini-dashboard 
 
 *Muốn tự tay làm thử ngay khi đọc xong? [Dùng thử miễn phí với Google Sheets — kết nối và hỏi câu đầu trong dưới 15 phút.](/docs/vi/free-trial/)*
 
-Một chủ shop thời trang ở Gò Vấp từng nói với tôi: "Em muốn có cái dashboard (bảng số trực quan) xem doanh thu, nhưng nghe nói phải thuê người dựng *data warehouse* (kho dữ liệu tập trung cho phân tích), chắc vài tuần với chục triệu, thôi để sau." Câu này tôi nghe đi nghe lại đến mức thuộc lòng.
+Một chủ shop thời trang ở Gò Vấp từng nói với mình: "Em muốn có cái dashboard (bảng số trực quan) xem doanh thu, nhưng nghe nói phải thuê người dựng *data warehouse* (kho dữ liệu tập trung cho phân tích), chắc vài tuần với chục triệu, thôi để sau." Câu này mình nghe đi nghe lại đến mức thuộc lòng.
 
-Và mỗi lần, tôi đều hỏi ngược: "Chị đang ghi đơn hàng ở đâu?" — Câu trả lời gần như luôn giống nhau: một file Google Sheets.
+Và mỗi lần, mình đều hỏi ngược: "Chị đang ghi đơn hàng ở đâu?" — Câu trả lời gần như luôn giống nhau: một file Google Sheets.
 
 Đó chính là chỗ ngược đời ít người chịu tin: **bạn không cần kho dữ liệu hay đội kỹ thuật để bắt đầu.** Cái bạn đang gõ tay mỗi ngày — một Google Sheet đơn hàng đủ sạch — đã là điểm khởi đầu hoàn hảo. Phần còn lại chỉ là 15 phút.
+
+> 🎬 **Xem thêm video:** *"Google Sheets làm báo cáo: tuyệt — cho tới 4 cái trần này"* trên kênh **Tuấn LA Lab** (YouTube). Sheets là điểm khởi đầu đúng — bài này chỉ cho bạn cách dùng nó cho gọn; còn video kể 4 lúc bạn sẽ thấy nó đụng trần (thủ công · trễ · ba người ba số · một người gánh), và lúc đó cái thiếu là *cách tư duy về dữ liệu*, không phải công thức xịn hơn.
 
 ## Vì sao Google Sheets là điểm khởi đầu đúng (chứ không phải bước đệm tạm bợ)
 
@@ -64,7 +66,7 @@ Một phút, và cái "kho hàng" của bạn vừa có thủ kho.
 
 AI đọc câu hỏi, hiểu "doanh thu" là cột nào, "kênh" là cột nào, "tháng này" là khoảng ngày nào, rồi trả về con số kèm biểu đồ trong vài giây.
 
-Mẹo từ kinh nghiệm: **đừng hỏi một con số — hãy hỏi một quyết định.** "Tổng doanh thu tháng này?" thì biết rồi để làm gì. Hỏi *"Kênh nào doanh thu cao nhất nhưng số lượng đơn lại thấp?"* — đó mới là câu dẫn tới hành động. Cách viết câu hỏi cho ra đúng kết quả, tôi đã mổ xẻ kỹ trong [5 câu hỏi nên hỏi AI hôm nay](/blog/ai-questions/).
+Mẹo từ kinh nghiệm: **đừng hỏi một con số — hãy hỏi một quyết định.** "Tổng doanh thu tháng này?" thì biết rồi để làm gì. Hỏi *"Kênh nào doanh thu cao nhất nhưng số lượng đơn lại thấp?"* — đó mới là câu dẫn tới hành động. Cách viết câu hỏi cho ra đúng kết quả, mình đã mổ xẻ kỹ trong [5 câu hỏi nên hỏi AI hôm nay](/blog/ai-questions/).
 
 ## Bước 4: Ghim thành dashboard & chia sẻ
 
@@ -83,9 +85,9 @@ Sau vài phút, bạn có một dashboard sống — mỗi sáng mở ra là s�
 
 Bạn có thể nói: "Pivot table trong Sheets cũng làm được mà." Đúng một phần. Nhưng có ba khác biệt quyết định.
 
-Pivot là **bạn ra lệnh cho máy**: kéo trường này vào hàng, trường kia vào cột, chọn hàm tính. Mỗi câu hỏi mới là một lần dựng lại. Semantix là **bạn hỏi, máy hiểu**: đổi câu hỏi chỉ là gõ một câu khác, không dựng lại gì.
+Pivot là **bạn ra lệnh cho máy**: kéo trường này vào hàng, trường kia vào cột, chọn hàm tính. Mỗi câu hỏi mới là một lần dựng lại. Thứ mình đang xây — Semantix — đi theo hướng **bạn hỏi, máy hiểu**: đổi câu hỏi chỉ là gõ một câu khác, không dựng lại gì.
 
-Quan trọng hơn, Semantix định nghĩa "doanh thu" *một lần* — gọi là [Semantic Layer](/blog/semantic-layer/) (tầng định nghĩa nghiệp vụ dùng chung) — nên bạn, cộng sự, và sếp hỏi cùng một câu sẽ ra cùng một số. Pivot thì mỗi người kéo mỗi kiểu, ba người ra ba con số.
+Quan trọng hơn, ý tưởng cốt lõi là định nghĩa "doanh thu" *một lần* — gọi là [Semantic Layer](/blog/semantic-layer/) (tầng định nghĩa nghiệp vụ dùng chung) — nên bạn, cộng sự, và sếp hỏi cùng một câu sẽ ra cùng một số. Pivot thì mỗi người kéo mỗi kiểu, ba người ra ba con số.
 
 Và khi shop bạn lớn lên — thêm Shopee, thêm TikTok Shop, thêm KiotViet — bạn không bị kẹt ở Sheets. Cùng cách hỏi đó áp được lên nhiều nguồn được [gộp bằng bảng ảo](/blog/bang-ao-gop-du-lieu/) ngay lúc hỏi — dữ liệu ở lại nguồn, không phải chép về một kho. Google Sheets là cánh cửa vào, không phải cái trần.
 

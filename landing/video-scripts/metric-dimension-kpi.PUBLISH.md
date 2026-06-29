@@ -9,7 +9,7 @@ Giọng: Vbee **giọng cá nhân** `n_hanoi_male_tuanla2_education_vc` · tốc
 Metric, Dimension, KPI: 3 từ ai cũng nói sai — và vì sao báo cáo cứ cãi nhau
 
 **Mô tả:**
-> Phòng Sales nói 4,2 tỷ. Kế toán nói 3,8 tỷ. Sếp gõ bàn hỏi ai sai. Không ai sai cả — ba người đang gọi ba thứ khác nhau bằng cùng một từ.
+> Sáng thứ 2, sếp đập bàn: "Thế cuối cùng Sales hay Kế toán tính sai?". Cùng một công ty, cùng một tháng, nhưng doanh thu lại vênh nhau gần nửa tỷ. Cú twist ở đây là: Chẳng có file Excel nào lỗi, cũng chẳng ai tính sai cả! 90% các cuộc cãi vã đập bàn trong phòng họp đến từ việc đội ngũ đang hiểu sai 3 từ vựng nền tảng này...
 >
 > 3 từ vựng nền tảng gỡ được 90% các cuộc cãi nhau quanh con số: Metric (cái bạn đo), Dimension (lát cắt để nhìn), KPI (metric gắn mục tiêu). Hiểu đúng trong 3 phút.
 >

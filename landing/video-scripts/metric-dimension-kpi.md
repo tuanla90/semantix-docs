@@ -16,12 +16,10 @@ author: "Lê Thị Hương"   # persona hướng dẫn gần gũi (khớp bài g
 ### BEAT 00 — Cold open: ba con số một cái tên  ·  KINETIC  ·  ⏱️ ~35s  ·  ✂️ SHORT-ABLE (clip #1 mạnh nhất)
 
 **🎙️ Voiceover (đọc đúng từng chữ qua Vbee):**
-> Sáng thứ Hai. Phòng họp. Sếp hỏi đúng một câu: "Doanh thu tháng này bao nhiêu?"
-> Anh Sales đứng lên: bốn phẩy hai tỷ.
-> Chị Kế toán liếc file của mình: ba phẩy tám tỷ.
-> Cùng một công ty. Cùng một tháng. Hai con số.
-> Sếp gõ bàn hỏi: ai sai?
-> ... Câu trả lời ngược đời: không ai sai cả.
+> Sáng thứ Hai, phòng họp căng như dây đàn. Sếp gõ tay xuống bàn, hỏi đúng một câu: "Chốt lại, doanh thu tháng này bao nhiêu?"
+> Anh trưởng phòng Sales tự tin: "Dạ, bốn phẩy hai tỷ." Chị Kế toán trưởng nhíu mày, vội nhìn lại file: "Đâu sếp, có ba phẩy tám tỷ thôi."
+> Cùng một công ty. Cùng một tháng. Mà lòi ra hai con số lệch nhau gần nửa tỷ. Sếp cáu: "Thế tóm lại đứa nào tính sai?"
+> ... Câu trả lời sẽ làm bạn bất ngờ: sự thật là... chẳng ai sai cả.
 
 **🅰️ On-screen (chữ kinetic — nhấn từ khoá):**
 - "Doanh thu tháng này?" (hiện như câu hỏi gõ ra)
@@ -65,17 +63,11 @@ author: "Lê Thị Hương"   # persona hướng dẫn gần gũi (khớp bài g
 ### BEAT 02 — METRIC: con số mang một cái tên mơ hồ  ·  KINETIC  ·  ⏱️ ~55s  ·  ✂️ SHORT-ABLE
 
 **🎙️ Voiceover:**
-> Metric là một đại lượng đo được, gói trong một con số.
-> Doanh thu. Số đơn. Số khách mới. Giá trị đơn trung bình.
-> Hỏi "bao nhiêu" là trả lời được bằng một con số.
-> Nghe đơn giản. Nhưng cái bẫy nằm ngay đây.
-> Một metric chỉ rõ ràng khi định nghĩa của nó rõ ràng.
-> "Doanh thu" — thử hỏi năm người trong công ty:
-> Tính theo đơn đã chốt, hay đơn đã thu tiền? Có trừ đơn hoàn không? Có gồm phí ship không?
-> Mỗi câu trả lời khác nhau... cho ra một con số khác nhau.
-> Doanh thu của anh Sales: đã chốt, gồm ship, chưa trừ hoàn — bốn phẩy hai tỷ.
-> Doanh thu của chị Kế toán: đã thu, trừ hoàn, không ship — ba phẩy tám tỷ.
-> Không phải sai số. Là hai metric khác nhau... đeo chung một cái tên.
+> Metric, hiểu đơn giản, là cái thứ bạn đong đếm được thành số. Doanh thu, số đơn hàng, lượng khách mới. Hỏi "bao nhiêu" là phải ốp ngay được một con số.
+> Nghe thì dễ, đúng không? Nhưng cái bẫy chết người nằm ngay chỗ này. Thử ra vỗ vai năm người trong công ty, hỏi "doanh thu" tính thế nào mà xem. Mỗi người một phách!
+> Người bảo: "Đơn chốt xong là tính!". Người cãi: "Phải thu được tiền về tài khoản mới tính chứ!". Rồi có trừ đơn hoàn không? Có cộng tiền ship không?
+> Doanh thu của anh Sales là tiền chốt đơn, cộng cả ship, chưa trừ hoàn — nên nó to, ra bốn phẩy hai tỷ. Còn của chị Kế toán là tiền thực tế ting ting về tài khoản — ba phẩy tám tỷ.
+> Chẳng có file nào sai cả. Chỉ là hai người đang đo hai thứ khác nhau... mà gọi chung một cái tên.
 
 **🅰️ On-screen:**
 - **METRIC = một con số đo được**
@@ -95,17 +87,10 @@ author: "Lê Thị Hương"   # persona hướng dẫn gần gũi (khớp bài g
 ### BEAT 03 — DIMENSION: lát cắt biến con số thành câu chuyện  ·  KINETIC  ·  ⏱️ ~50s  ·  ✂️ SHORT-ABLE
 
 **🎙️ Voiceover:**
-> Nếu metric là con số, thì dimension là lát cắt — góc bạn xoay để nhìn.
-> Bản thân dimension không phải con số. Nó là cách chia nhỏ.
-> Vẫn metric "doanh thu", nhưng cắt theo các góc khác nhau.
-> Theo kênh: Shopee, TikTok Shop, KiotViet.
-> Theo thời gian: tháng này so tháng trước.
-> Theo sản phẩm. Theo khu vực.
-> Một con số tổng — "doanh thu ba phẩy tám tỷ" — gần như vô dụng để ra quyết định.
-> Cũng con số đó, cắt theo kênh, lập tức kể một câu chuyện:
-> Shopee một phẩy chín tỷ. TikTok Shop một phẩy tư tỷ. KiotViet năm trăm triệu.
-> Giờ bạn mới biết nên dồn ngân sách vào đâu.
-> Cùng một metric, nhiều dimension — đó là toàn bộ nghệ thuật xoay khối Rubik.
+> Giờ giả sử hai người cãi xong, chốt được con số ba phẩy tám tỷ. Sếp nhìn con số đấy... rồi cũng chịu, chẳng biết tháng sau làm gì tiếp. Nó quá chung chung!
+> Đó là lúc cần đến Dimension — tức là "lát cắt". Bản thân nó không phải số, nó là con dao để bạn băm nhỏ con số tổng kia ra.
+> Cầm ba phẩy tám tỷ, dùng lát cắt theo kênh bán: Shopee một phẩy chín tỷ, TikTok Shop một phẩy tư, còn cửa hàng offline lẹt đẹt năm trăm triệu.
+> Á à! Nhìn vào lát cắt, câu chuyện bỗng sáng bừng lên. Bạn biết ngay tháng sau đổ tiền marketing vào đâu, chấn chỉnh team nào.
 
 **🅰️ On-screen:**
 - **DIMENSION = lát cắt, không phải con số**
@@ -124,15 +109,11 @@ author: "Lê Thị Hương"   # persona hướng dẫn gần gũi (khớp bài g
 ### BEAT 04 — KPI: metric có một cái thước  ·  KINETIC  ·  ⏱️ ~50s  ·  ✂️ SHORT-ABLE
 
 **🎙️ Voiceover:**
-> Đây là chỗ nhiều người nhầm nhất, nên nói thẳng:
-> Không phải metric nào cũng là KPI.
-> KPI là một metric được chọn ra vì nó quan trọng... và được gắn thêm một mục tiêu.
-> "Doanh thu tháng này ba phẩy tám tỷ" — đó là một metric. Một con số trần trụi.
-> "Doanh thu tháng này phải đạt bốn tỷ, hiện ba phẩy tám — đạt chín lăm phần trăm" — đó mới là KPI.
-> Con số ấy giờ có một cái thước để biết tốt hay chưa.
-> Một công ty đo hàng trăm metric. Nhưng chỉ nên chọn năm tới mười KPI thật sự.
-> Cái bẫy phổ biến: nhồi ba mươi con số lên dashboard rồi gọi tất cả là KPI.
-> Khi mọi thứ đều then chốt... thì không gì là then chốt cả.
+> Cuối cùng là KPI. Chỗ này nhiều công ty hay tự lừa mình lắm nhé. Cứ nghĩ số nào đo được cũng là KPI. Không phải!
+> "Doanh thu ba phẩy tám tỷ" chỉ là một metric trần trụi, khô khốc. Nó chỉ thành KPI khi bạn gắn cho nó một cái đích để vươn tới.
+> Kiểu như: "Mục tiêu tháng này bốn tỷ, giờ được ba phẩy tám, tức là đạt chín lăm phần trăm rồi, cố lên anh em!" — đó mới là KPI. Con số giờ có thước để biết mình đang tốt hay tệ.
+> Thấy các sếp cứ nhồi ba bốn chục số xanh đỏ lên màn hình rồi gọi tất cả là KPI. Khổ thân nhân viên nhìn vào tẩu hỏa nhập ma!
+> Nhớ nhé: khi cái gì cũng then chốt... thì rốt cuộc chẳng có gì là then chốt cả.
 
 **🅰️ On-screen:**
 - **KPI = Metric + Mục tiêu + Mốc thời gian**

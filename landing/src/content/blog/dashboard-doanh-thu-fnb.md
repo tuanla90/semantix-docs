@@ -5,7 +5,7 @@ description: "Mỗi sáng nhắn 8 quản lý xin số, tới trưa ghép xong t
 pubDate: 2025-09-14
 category: "Hướng Dẫn Thực Chiến"
 readTime: 10
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/dashboard-doanh-thu-fnb.svg"
 coverAlt: "Dashboard doanh thu chuỗi F&B với cột doanh thu từng chi nhánh và thẻ KPI"

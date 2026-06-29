@@ -5,7 +5,7 @@ description: "Bạn lưu số điện thoại, tên, đơn hàng của khách. �
 pubDate: 2025-04-24
 category: "Kiến Thức Nền Tảng"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/bao-ve-du-lieu-ca-nhan-nghi-dinh-13.svg"
 coverAlt: "Hồ sơ khách hàng gồm số điện thoại và tên được khoá bảo vệ, kèm dấu tích thể hiện sự đồng ý"

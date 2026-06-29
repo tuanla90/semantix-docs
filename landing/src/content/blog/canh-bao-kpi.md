@@ -5,7 +5,7 @@ description: "Doanh thu ngày rớt 40% từ thứ Sáu, nhưng phải đợi h�
 pubDate: 2025-09-04
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: true
 cover: "/blog/covers/canh-bao-kpi.svg"
 coverAlt: "Đường KPI tụt dần chạm vạch ngưỡng đỏ và bật ra một chuông cảnh báo"

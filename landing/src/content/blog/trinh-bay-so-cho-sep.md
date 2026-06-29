@@ -7,7 +7,7 @@ description: "Bạn dựng 20 slide đầy số liệu. Sếp xem xong vẫn h�
 pubDate: 2025-08-20
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/trinh-bay-so-cho-sep.svg"
 coverAlt: "Một slide với một thông điệp duy nhất, mũi tên dẫn thẳng tới một hành động"

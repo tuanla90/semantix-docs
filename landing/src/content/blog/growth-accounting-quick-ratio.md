@@ -7,7 +7,7 @@ description: "Founder nào cũng muốn MỘT con số để biết tăng trư�
 pubDate: 2025-07-12
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/growth-accounting-quick-ratio.svg"
 coverAlt: "Đường Quick Ratio dạng nhịp tim cắt qua lằn ngang 1,0 với vùng trên xanh và vùng dưới đỏ"

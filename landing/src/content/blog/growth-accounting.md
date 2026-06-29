@@ -7,7 +7,7 @@ description: "Hai shop cùng khoe tháng này tăng 12%. Một đang khỏe, m�
 pubDate: 2025-07-08
 category: "Phân Tích Dữ Liệu"
 readTime: 12
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/growth-accounting.svg"
 coverAlt: "Biểu đồ cột chồng growth accounting: new, resurrected, retained dương và churned âm dưới trục 0"

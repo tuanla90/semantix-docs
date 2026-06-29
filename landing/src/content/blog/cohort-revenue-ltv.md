@@ -7,7 +7,7 @@ description: "Một sản phẩm có thể giữ chân khách rất tốt mà v�
 pubDate: 2025-06-19
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/cohort-revenue-ltv.svg"
 coverAlt: "Doanh thu tích luỹ theo cohort vượt qua đường chi phí thu hút khách"

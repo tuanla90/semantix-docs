@@ -5,7 +5,7 @@ description: "Anh Dũng có 5 báo cáo mỗi tuần. Vẫn ra quyết định t
 pubDate: 2026-01-08
 category: "Câu Chuyện & Use Case"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/coo-bao-cao-tuc-thi.svg"
 coverAlt: "Chồng báo cáo và lịch tuần dày đặc thu lại thành một màn hình trả lời tức thì"

@@ -7,7 +7,7 @@ description: "Dự báo nào rồi cũng lệch so với thực tế. Nhưng kh�
 pubDate: 2025-06-24
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/du-bao-la-gi.svg"
 coverAlt: "Đường doanh thu thực tế nối sang đường dự báo nét đứt, kèm dải sai số loe rộng dần về tương lai"

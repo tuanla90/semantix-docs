@@ -5,7 +5,7 @@ description: "Nâng lên Pro để có quản trị, lịch gửi và hỗ trợ
 pubDate: 2026-07-08
 category: "So Sánh & Lựa Chọn"
 readTime: 10
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/vs-looker-studio-pro.svg"
 coverAlt: "Huy hiệu PRO và bảng giá đối chiếu per-user của Looker Studio Pro với giá phẳng theo workspace của Semantix"

@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 series: "hieu-chi-so"
 seriesOrder: 3
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: true
 cover: "/blog/covers/dong-tien-vs-loi-nhuan.svg"
 coverAlt: "Đường lợi nhuận sổ sách đi lên trong khi đường tiền mặt thực tụt xuống dưới 0"

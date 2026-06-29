@@ -5,7 +5,7 @@ description: "Anh Tâm có 8 quán, mỗi sáng nhận 8 file Excel. Anh tưởn
 pubDate: 2026-01-01
 category: "Câu Chuyện & Use Case"
 readTime: 10
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/chuoi-fnb-8-chi-nhanh.svg"
 coverAlt: "Tám file Excel từ tám chi nhánh F&B hội tụ về một màn hình báo cáo duy nhất"

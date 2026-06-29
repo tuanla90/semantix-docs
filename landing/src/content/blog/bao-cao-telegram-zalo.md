@@ -5,7 +5,7 @@ description: "Sáng mở app xem số, chiều bận quên, ba ngày sau mới b
 pubDate: 2025-08-31
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: true
 cover: "/blog/covers/bao-cao-telegram-zalo.svg"
 coverAlt: "Một tin nhắn báo cáo doanh thu kèm biểu đồ mini tự gửi vào điện thoại đúng giờ sáng"

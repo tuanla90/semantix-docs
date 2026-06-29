@@ -5,7 +5,7 @@ description: "Dashboard 15 cột về khách. Số đơn, tần suất, giá tr�
 pubDate: 2025-02-25
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/pca-principal-component.svg"
 coverAlt: "PCA giảm chiều: nhiều mũi tên chỉ số nén còn hai trục, các cụm điểm tự tách ra"

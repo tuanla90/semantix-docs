@@ -7,7 +7,7 @@ description: "Giao hàng trung bình 30 phút, nghe rất ổn. Nhưng cứ 10 k
 pubDate: 2025-01-29
 category: "Kiến Thức Nền Tảng"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/phan-vi-percentile.svg"
 coverAlt: "Phân phối thời gian với các vạch P50, P90, P99 và đuôi phải tô đỏ"

@@ -7,7 +7,7 @@ description: "Một con số tổng tăng đẹp có thể che giấu một doan
 pubDate: 2025-06-08
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/cohort-analysis.svg"
 coverAlt: "Bảng heatmap cohort giữ chân khách hàng theo tháng"

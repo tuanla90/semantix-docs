@@ -5,7 +5,7 @@ description: "Đổi từ GPT sang model xịn hơn không làm bạn hiểu doa
 pubDate: 2026-03-09
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/ai-questions.svg"
 coverAlt: "Câu hỏi dữ liệu tốt: có đối chiếu và gắn với quyết định"

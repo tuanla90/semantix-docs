@@ -5,7 +5,7 @@ description: "Một đại gia mua một lần 50 triệu rồi biến mất. M�
 pubDate: 2025-10-18
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/rfm-segmentation.svg"
 coverAlt: "Lưới phân khúc khách hàng RFM: Champions, At-Risk, Lost"

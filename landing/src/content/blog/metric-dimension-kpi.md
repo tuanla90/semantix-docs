@@ -5,7 +5,7 @@ description: "Sales nói doanh thu tháng này 4,2 tỷ. Kế toán nói 3,8 t�
 pubDate: 2026-01-26
 category: "Kiến Thức Nền Tảng"
 readTime: 10
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/metric-dimension-kpi.svg"
 coverAlt: "Một con số được cắt theo nhiều lát cắt và gắn một vạch mục tiêu phía trên"

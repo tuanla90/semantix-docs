@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+// Mỗi bước = 1 màn hình app. `img` khớp tên file do script chụp sinh ra (public/tutorial/<img>.png).
+const steps = [
+  { img: '01-dang-nhap', title: 'Đăng nhập', desc: 'Đăng nhập vào Semantix bằng tài khoản của bạn để bắt đầu phân tích dữ liệu.' },
+  { img: '02-hoi-dap-ai', title: 'Hỏi dữ liệu bằng tiếng Việt', desc: 'Gõ câu hỏi bằng tiếng Việt tự nhiên. Semantix tự sinh SQL, chạy truy vấn và trả về bảng/biểu đồ trong vài giây — bạn không cần biết SQL.' },
+  { img: '03-dashboard', title: 'Xem & lưu dashboard', desc: 'Kết quả gom thành dashboard tương tác: lọc chéo giữa các biểu đồ, xuất ra PNG, Excel hoặc PowerPoint.' },
+  { img: '04-ai-dung-dashboard', title: 'Để AI tự dựng dashboard', desc: 'Trả lời vài câu hỏi gợi ý, AI tự đề xuất và dựng nguyên một dashboard KPI hoàn chỉnh cho bạn.' },
+  { img: '05-ket-noi-nguon', title: 'Kết nối nguồn dữ liệu', desc: 'Kết nối PostgreSQL, MySQL, BigQuery, Google Sheets… và hợp nhất bằng bảng ảo — truy vấn real-time, không sao chép dữ liệu.' },
+  { img: '06-semantic-layer', title: 'Mô hình & semantic layer', desc: 'Định nghĩa metric một lần trong semantic layer để mọi báo cáo dùng chung một “nguồn sự thật”.' },
+  { img: '07-ngu-canh-context', title: 'Ngữ cảnh & phân quyền', desc: 'Thêm metric, mô tả ngữ nghĩa và phân quyền theo dòng (RLS) cho từng nhân sự.' },
+  { img: '08-bao-cao-dinh-ky', title: 'Báo cáo định kỳ', desc: 'Lên lịch gửi báo cáo tự động qua email, Zalo hoặc Telegram.' },
+];
+
+const has = (name: string) => existsSync(join(process.cwd(), 'public', 'tutorial', `${name}.png`));
+---
+<BaseLayout
+  title="Hướng dẫn sử dụng Semantix — Hỏi dữ liệu bằng tiếng Việt"
+  description="Hướng dẫn từng bước dùng Semantix: kết nối dữ liệu, hỏi bằng tiếng Việt, dựng dashboard và gửi báo cáo tự động."
+>
+  <section class="tut-hero">
+    <div class="tut-hero-inner">
+      <div class="tut-kicker">Hướng dẫn</div>
+      <h1>Dùng Semantix trong vài phút</h1>
+      <p>Từ kết nối dữ liệu tới câu hỏi đầu tiên bằng tiếng Việt — đi qua từng màn hình của sản phẩm.</p>
+      <a href="/pricing" class="btn btn-primary">Dùng thử miễn phí</a>
+    </div>
+  </section>
+
+  <div class="tut-steps">
+    {steps.map((s, i) => (
+      <section class="tut-step">
+        <div class="tut-text">
+          <div class="tut-num">{String(i + 1).padStart(2, '0')}</div>
+          <h2>{s.title}</h2>
+          <p>{s.desc}</p>
+        </div>
+        <div class="tut-shot">
+          {has(s.img)
+            ? <img src={`/tutorial/${s.img}.png`} alt={`${s.title} — Semantix`} loading="lazy" />
+            : <div class="tut-ph"><span>Ảnh “{s.title}”</span><small>sẽ hiển thị sau khi chạy script chụp ({s.img}.png)</small></div>}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <section class="tut-cta">
+    <h2>Sẵn sàng hỏi dữ liệu của bạn?</h2>
+    <a href="/pricing" class="btn btn-primary">Bắt đầu miễn phí</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .tut-hero { padding: 96px 24px 64px; background: linear-gradient(160deg,#0F172A 0%,#1E1B4B 60%,#0F172A 100%); text-align: center; }
+  .tut-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tut-kicker { font-size: 12px; font-weight: 700; color: #818CF8; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+  .tut-hero h1 { font-size: clamp(28px,4.5vw,46px); font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1.15; margin-bottom: 16px; }
+  .tut-hero p { font-size: 18px; color: #CBD5E1; line-height: 1.7; margin-bottom: 28px; }
+
+  .tut-steps { max-width: 1000px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 72px; }
+  .tut-step { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .tut-step:nth-child(even) .tut-text { order: 2; }
+  .tut-num { font-size: 14px; font-weight: 800; color: var(--primary); letter-spacing: 2px; margin-bottom: 12px; }
+  .tut-text h2 { font-size: clamp(22px,2.6vw,30px); font-weight: 800; color: var(--dark); letter-spacing: -0.5px; line-height: 1.25; margin-bottom: 14px; }
+  .tut-text p { font-size: 16px; color: var(--muted); line-height: 1.75; }
+
+  .tut-shot img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--border); box-shadow: var(--shadow); display: block; }
+  .tut-ph {
+    aspect-ratio: 16 / 10; border-radius: 14px; border: 1px dashed var(--border);
+    background: var(--surface); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 24px;
+  }
+  .tut-ph span { font-size: 15px; font-weight: 700; color: var(--dark); }
+  .tut-ph small { font-size: 12.5px; color: var(--muted-light); }
+
+  .tut-cta { text-align: center; padding: 24px 24px 96px; }
+  .tut-cta h2 { font-size: clamp(22px,3vw,32px); font-weight: 800; color: var(--dark); margin-bottom: 24px; }
+
+  @media (max-width: 760px) {
+    .tut-step { grid-template-columns: 1fr; gap: 20px; }
+    .tut-step:nth-child(even) .tut-text { order: 0; }
+  }
+</style>

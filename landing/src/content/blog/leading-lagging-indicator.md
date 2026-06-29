@@ -7,7 +7,7 @@ description: "Doanh thu quý tụt là tin đã cũ — nó là hệ quả của
 pubDate: 2024-12-21
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/leading-lagging-indicator.svg"
 coverAlt: "Gương chiếu hậu hiện doanh thu quý đã qua, kính chắn gió hiện tín hiệu báo trước phía trước"

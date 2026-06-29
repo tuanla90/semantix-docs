@@ -5,7 +5,7 @@ description: "Thấy chi ads tăng thì doanh thu tăng — bạn đã biết. C
 pubDate: 2025-02-13
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/correlation-regression.svg"
 coverAlt: "Đám điểm scatter chi quảng cáo và doanh thu, một đường khớp nét đứt xuyên qua giữa đám điểm"

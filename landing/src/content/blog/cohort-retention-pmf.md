@@ -7,7 +7,7 @@ description: "Hình dạng đường cong giữ chân nói lên product-market f
 pubDate: 2025-06-11
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/cohort-retention-pmf.svg"
 coverAlt: "Ba đường cong giữ chân: churn về 0, phẳng ở mức PMF, và đi lên (negative churn)"

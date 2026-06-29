@@ -5,7 +5,7 @@ description: "Một đơn 200 triệu kéo doanh thu trung bình vọt lên. Ph�
 pubDate: 2025-02-20
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/outlier-rac-hay-mo-vang.svg"
 coverAlt: "Đám điểm dữ liệu bình thường và một điểm ngoại lệ nổi bật: rác hay mỏ vàng?"

@@ -5,7 +5,7 @@ description: "Best-seller hết hàng đúng lúc khách hỏi mua: mất đơn,
 pubDate: 2025-11-06
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/theo-doi-ton-kho-realtime.svg"
 coverAlt: "Đường tồn kho giảm dần chạm vạch ngưỡng đỏ, kèm một chuông cảnh báo bật sáng"

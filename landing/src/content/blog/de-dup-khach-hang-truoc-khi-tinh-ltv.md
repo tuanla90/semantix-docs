@@ -5,7 +5,7 @@ description: "Số khách tăng đều mỗi tháng, nghe như tin vui. Nhưng m
 pubDate: 2025-09-18
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/de-dup-khach-hang-truoc-khi-tinh-ltv.svg"
 coverAlt: "Năm thẻ hồ sơ khách hàng trùng nhau được gộp lại thành một khách duy nhất"

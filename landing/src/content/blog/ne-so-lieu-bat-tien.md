@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 series: "hieu-chi-so"
 seriesOrder: 6
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/ne-so-lieu-bat-tien.svg"
 coverAlt: "Một con số bất tiện trên biểu đồ bị nhiều bàn tay xua đi và những gương mặt quay đi nơi khác"

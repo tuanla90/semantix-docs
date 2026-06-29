@@ -1,0 +1,13 @@
+# Semantix
+
+> Nền tảng AI phân tích dữ liệu cho doanh nghiệp Việt Nam: kết nối database, hỏi bằng tiếng Việt, nhận biểu đồ và insight tức thì — không cần SQL. Lõi gồm semantic layer (ngữ cảnh ngữ nghĩa) định nghĩa metric một lần, và bảng ảo (virtual table) hợp nhất + làm sạch dữ liệu tại thời điểm truy vấn, real-time, không sao chép.
+
+## Tài nguyên chính
+- [Blog](https://semantix.vn/blog): kiến thức BI, phân tích dữ liệu, semantic layer, text-to-SQL, cohort/RFM/funnel — tiếng Việt, kèm số liệu và biểu đồ.
+- [Từ điển thuật ngữ](https://semantix.vn/blog/tu-dien-thuat-ngu/): định nghĩa A–Z các thuật ngữ dữ liệu/BI.
+- [Giải pháp](https://semantix.vn/solutions): theo ngành (bán lẻ, tài chính, F&B, logistics).
+- [Bảng giá](https://semantix.vn/pricing)
+- [Tài liệu](https://semantix.vn/docs/vi/getting-started/)
+
+## Liên hệ
+- Email: hello@semantix.vn

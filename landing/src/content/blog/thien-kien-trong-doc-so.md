@@ -7,7 +7,7 @@ description: "Số liệu không cứu bạn nếu bạn chỉ đọc cái mình
 pubDate: 2024-12-06
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/thien-kien-trong-doc-so.svg"
 coverAlt: "Kính lúp soi vào phần dữ liệu hợp ý, bỏ qua phần còn lại mờ đi"

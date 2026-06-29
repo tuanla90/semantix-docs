@@ -5,7 +5,7 @@ description: "Con số không nói dối. Nhưng người đọc số thì có. 
 pubDate: 2026-02-05
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/sai-lam-khi-phan-tich-du-lieu.svg"
 coverAlt: "Một biểu đồ bị đọc sai và cái bẫy ẩn sau con số trung bình"

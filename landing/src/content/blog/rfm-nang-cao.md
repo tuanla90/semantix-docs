@@ -5,7 +5,7 @@ description: "Bạn chấm điểm RFM theo quintile như sách dạy. Nhưng 60
 pubDate: 2025-10-14
 category: "Phân Tích Dữ Liệu"
 readTime: 13
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/rfm-nang-cao.svg"
 coverAlt: "Lưới RFM 5×5 đầy đủ với 11 nhóm khách và ma trận dịch chuyển"

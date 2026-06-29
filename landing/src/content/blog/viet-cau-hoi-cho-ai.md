@@ -5,7 +5,7 @@ description: "Không phải AI dốt, là câu hỏi mơ hồ. Checklist 5 thàn
 pubDate: 2026-06-16
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/viet-cau-hoi-cho-ai.svg"
 coverAlt: "Câu hỏi mơ hồ mờ nhòe chuyển thành câu hỏi rõ nét rồi ra kết quả đúng"

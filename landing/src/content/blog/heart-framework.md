@@ -5,7 +5,7 @@ description: "Phễu AARRR báo xanh: khách đăng ký, mua, quay lại. Nhưng
 pubDate: 2025-12-24
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/heart-framework.svg"
 coverAlt: "Ngũ giác radar 5 trục đo năm chiều trải nghiệm, hai vòng so sánh quý này với quý trước"

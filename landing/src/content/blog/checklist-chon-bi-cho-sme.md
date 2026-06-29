@@ -5,7 +5,7 @@ description: "Đừng đi hỏi 'công cụ BI nào tốt nhất'. Đó là câu
 pubDate: 2026-03-22
 category: "So Sánh & Lựa Chọn"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/checklist-chon-bi-cho-sme.svg"
 coverAlt: "Checklist 7 ô tick — 7 câu hỏi một chủ SME phải tự trả lời trước khi chọn công cụ BI"

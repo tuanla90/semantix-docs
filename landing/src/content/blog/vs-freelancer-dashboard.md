@@ -5,7 +5,7 @@ description: "Dashboard freelancer dựng đẹp, rẻ, xong trong tuần. Rồi
 pubDate: 2026-06-25
 category: "So Sánh & Lựa Chọn"
 readTime: 10
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/vs-freelancer-dashboard.svg"
 coverAlt: "Một dashboard tĩnh bị đóng băng như ảnh chụp quá khứ, đặt cạnh một luồng hỏi-đáp động bằng tiếng Việt"

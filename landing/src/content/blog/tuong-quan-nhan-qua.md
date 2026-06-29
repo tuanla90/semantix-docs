@@ -7,7 +7,7 @@ description: "Tháng nào chi ads nhiều thì doanh thu cao — nên ads tạo 
 pubDate: 2024-12-11
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/tuong-quan-nhan-qua.svg"
 coverAlt: "Hai đường cùng đi lên, dấu khác nhau giữa tương quan và nhân quả, một yếu tố thứ ba ẩn phía sau"

@@ -7,7 +7,7 @@ description: "Mua công cụ BI, kết nối data, rồi ngồi nhìn màn hình
 pubDate: 2024-12-01
 category: "Kiến Thức Nền Tảng"
 readTime: 8
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/bat-dau-tu-cau-hoi.svg"
 coverAlt: "Một dấu hỏi đứng trước dẫn tới dữ liệu và biểu đồ — câu hỏi đến trước"

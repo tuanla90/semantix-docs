@@ -1,3 +1,6 @@
 node_modules/
 dist/
 .astro/
+
+# Screenshot tool — chứa thông tin đăng nhập, không commit
+scripts/screenshots/screens.config.mjs

@@ -7,7 +7,7 @@ description: "Dashboard đầy số mà mở ra chẳng ai biết phải làm g�
 pubDate: 2025-08-15
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/dashboard-hanh-dong-duoc.svg"
 coverAlt: "Một dashboard với số kèm mũi tên so sánh và ô đỏ đánh dấu vượt ngưỡng"

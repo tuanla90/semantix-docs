@@ -5,7 +5,7 @@ description: "Đổi sang model xịn hơn, tinh chỉnh đủ kiểu — số v
 pubDate: 2025-02-17
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/du-lieu-ban-giet-model.svg"
 coverAlt: "Dữ liệu bẩn đưa vào model cho ra số sai, đối lại dữ liệu sạch giúp accuracy tăng"

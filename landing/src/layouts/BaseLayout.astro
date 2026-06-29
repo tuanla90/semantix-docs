@@ -1,13 +1,41 @@
 ---
+import { SITE_NAME, ORG, DEFAULT_OG_IMAGE, DOCS_URL } from '../consts';
+
 export interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  jsonLd?: Record<string, any>[];
 }
 const {
   title = 'Semantix — Hỏi Dữ Liệu Bằng Tiếng Việt, Nhận Kết Quả Ngay Lập Tức',
   description = 'Semantix là nền tảng AI phân tích dữ liệu cho doanh nghiệp Việt Nam. Kết nối database, hỏi bằng ngôn ngữ tự nhiên, nhận biểu đồ và insight tức thì — không cần SQL.',
+  image = DEFAULT_OG_IMAGE,
+  type = 'website',
+  jsonLd = [],
 } = Astro.props;
 const path = Astro.url.pathname;
+
+// SEO: canonical + OG image cần origin tuyệt đối (đặt `site` trong astro.config.mjs).
+const site = Astro.site ?? new URL('https://semantix.vn');
+const canonical = new URL(path, site).href;
+const ogImage = new URL(image, site).href;
+
+// JSON-LD nền cho mọi trang. Trang con truyền thêm (Article/Breadcrumb…) qua prop `jsonLd`.
+const allLd: Record<string, any>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: ORG.name,
+    url: site.href,
+    logo: new URL(ORG.logo, site).href,
+    email: ORG.email,
+    ...(ORG.sameAs.length ? { sameAs: ORG.sameAs } : {}),
+  },
+  { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE_NAME, url: site.href, inLanguage: 'vi-VN' },
+  ...jsonLd,
+];
 ---
 <!DOCTYPE html>
 <html lang="vi">
@@ -16,10 +44,32 @@ const path = Astro.url.pathname;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content={type} />
+  <meta property="og:site_name" content={SITE_NAME} />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/global.css" />
+
+  {allLd.map((obj) => (
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(obj)} />
+  ))}
 </head>
 <body>
 
@@ -40,7 +90,7 @@ const path = Astro.url.pathname;
       <li><a href="/pricing"   class={path.startsWith('/pricing')   ? 'nav-active' : ''}>Bảng Giá</a></li>
       <li><a href="/blog"      class={path.startsWith('/blog')      ? 'nav-active' : ''}>Blog</a></li>
       <li><a href="/about"     class={path.startsWith('/about')     ? 'nav-active' : ''}>Về Chúng Tôi</a></li>
-      <li><a href="/docs">Tài Liệu</a></li>
+      <li><a href={DOCS_URL} target="_blank" rel="noopener">Tài Liệu</a></li>
     </ul>
     <div class="nav-cta">
       <a href="/" class="btn btn-ghost" style="font-size:13px">Demo</a>
@@ -85,8 +135,8 @@ const path = Astro.url.pathname;
       <h4>Tài Nguyên</h4>
       <ul>
         <li><a href="/blog">Blog</a></li>
-        <li><a href="/docs/vi/getting-started/">Tài Liệu</a></li>
-        <li><a href="/docs/vi/support/faqs.html">FAQ</a></li>
+        <li><a href={DOCS_URL} target="_blank" rel="noopener">Tài Liệu</a></li>
+        <li><a href={DOCS_URL} target="_blank" rel="noopener">FAQ</a></li>
         <li><a href="mailto:hello@semantix.vn">Liên Hệ</a></li>
       </ul>
     </div>

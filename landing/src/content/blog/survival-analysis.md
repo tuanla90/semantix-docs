@@ -5,7 +5,7 @@ description: "Phân tích sống sót nghe như chuyện bệnh viện. Nhưng �
 pubDate: 2025-11-02
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/survival-analysis.svg"
 coverAlt: "Ba đường cong sống sót giảm dần: một phẳng ra ở mức cao, một rơi gần như thẳng đứng"

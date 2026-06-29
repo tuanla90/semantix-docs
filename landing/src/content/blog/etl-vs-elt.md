@@ -5,7 +5,7 @@ description: "Mỗi câu hỏi mới, sếp lại phải chờ kỹ sư dựng l
 pubDate: 2025-05-25
 category: "Kiến Thức Nền Tảng"
 readTime: 8
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/etl-vs-elt.svg"
 coverAlt: "Hai luồng xử lý dữ liệu E-T-L và E-L-T với thứ tự khối Transform và Load hoán đổi"

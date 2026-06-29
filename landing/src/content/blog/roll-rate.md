@@ -5,7 +5,7 @@ description: "Churn quý này 8%, y hệt quý trước. Yên tâm? Chưa. Cùng
 pubDate: 2025-10-23
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/roll-rate.svg"
 coverAlt: "Ma trận roll rate: lưới ô tô đậm dần theo đường chéo với mũi tên trượt xuống"

@@ -7,7 +7,7 @@ description: "Hai shop cùng doanh thu trung bình một tháng. Một shop ổn
 pubDate: 2025-01-25
 category: "Kiến Thức Nền Tảng"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/do-lech-chuan.svg"
 coverAlt: "Hai đường chuông cùng đỉnh trung bình: một đường hẹp gọn, một đường rộng bè"

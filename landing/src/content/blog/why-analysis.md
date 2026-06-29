@@ -5,7 +5,7 @@ description: "Sếp hỏi vì sao doanh thu giảm 15%. 'Do thị trường' kh�
 pubDate: 2026-02-25
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/why-analysis.svg"
 coverAlt: "Một con số doanh thu lớn tách thành các cột đóng góp waterfall: giá, lượng khách, đơn trung bình"

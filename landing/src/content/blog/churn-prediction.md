@@ -5,7 +5,7 @@ description: "Lúc bạn biết một khách đã rời, thì đã quá muộn �
 pubDate: 2025-09-07
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/churn-prediction.svg"
 coverAlt: "Khoảng cách giữa các lần mua giãn dần và cờ đỏ cảnh báo nguy cơ khách rời"

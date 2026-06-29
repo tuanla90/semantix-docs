@@ -5,7 +5,7 @@ description: "Sếp hỏi kênh nào lời nhất lúc 9 giờ sáng. Đội dat
 pubDate: 2026-05-08
 category: "Kiến Thức Nền Tảng"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/self-service-analytics.svg"
 coverAlt: "Người làm kinh doanh tự gõ câu hỏi tiếng Việt và nhận biểu đồ ngay, không qua trung gian đội data"

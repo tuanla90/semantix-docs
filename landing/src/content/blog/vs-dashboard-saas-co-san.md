@@ -5,7 +5,7 @@ description: "Mỗi nền tảng tặng bạn một dashboard miễn phí. Nhưn
 pubDate: 2026-06-20
 category: "So Sánh & Lựa Chọn"
 readTime: 10
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/vs-dashboard-saas-co-san.svg"
 coverAlt: "Nhiều dashboard rời rạc Shopee, TikTok Shop, KiotViet so với một màn hình gộp hỏi-đáp"

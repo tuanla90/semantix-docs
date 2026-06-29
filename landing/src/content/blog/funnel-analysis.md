@@ -5,7 +5,7 @@ description: "Một shop đổ tiền chạy ads kéo traffic nhưng doanh thu �
 pubDate: 2025-09-21
 category: "Phân Tích Dữ Liệu"
 readTime: 8
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/funnel-analysis.svg"
 coverAlt: "Phễu chuyển đổi thu hẹp dần qua 4 bước với một điểm rò rỉ chính được đánh dấu"

@@ -5,7 +5,7 @@ description: "Kế hoạch năm treo trên đúng một con số doanh thu. Nghe
 pubDate: 2025-10-26
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/scenario-analysis.svg"
 coverAlt: "Một điểm xuất phát toả ra ba đường phân kỳ — xanh đi lên, lam đi ngang, đỏ đi xuống — minh hoạ ba kịch bản doanh thu"

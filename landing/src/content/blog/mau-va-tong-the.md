@@ -7,7 +7,7 @@ description: "Ba khách khen không có nghĩa sản phẩm tốt. Năm đơn ho
 pubDate: 2025-01-14
 category: "Kiến Thức Nền Tảng"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/mau-va-tong-the.svg"
 coverAlt: "Vài chấm sáng tượng trưng cho mẫu nhỏ đặt cạnh một đám đông dày đặc tượng trưng cho tổng thể"

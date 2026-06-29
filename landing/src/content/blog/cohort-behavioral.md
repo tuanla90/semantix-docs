@@ -7,7 +7,7 @@ description: "Không phải khách nào cũng như nhau. Phần 3 của series: 
 pubDate: 2025-06-16
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/cohort-behavioral.svg"
 coverAlt: "Phễu hành vi từ truy cập đến activation và giữ chân"

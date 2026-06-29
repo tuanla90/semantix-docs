@@ -1,0 +1,35 @@
+# Mọi search bot được index toàn site
+User-agent: *
+Allow: /
+
+# AI crawler — CHO PHÉP để nội dung được trích dẫn trong ChatGPT/Perplexity/Google AI/Copilot (GEO).
+# Chặn các bot này = mất cửa được AI trích dẫn.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Đổi domain nếu khác:
+Sitemap: https://semantix.vn/sitemap.xml

@@ -5,7 +5,7 @@ description: "Chủ shop nào cũng nghĩ làm dashboard là dự án vài tuầ
 pubDate: 2025-09-28
 category: "Hướng Dẫn Thực Chiến"
 readTime: 7
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/google-sheets-dashboard.svg"
 coverAlt: "Một bảng tính Google Sheets biến đổi thành mini-dashboard qua mũi tên"

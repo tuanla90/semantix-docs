@@ -5,7 +5,7 @@ description: "Shopee, TikTok Shop, KiotViet mỗi nơi một file Excel, mỗi n
 pubDate: 2026-01-20
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/hop-nhat-da-kenh.svg"
 coverAlt: "Ba nguồn Shopee, TikTok Shop, KiotViet hội tụ về một nguồn sự thật chuẩn hóa"

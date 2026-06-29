@@ -7,7 +7,7 @@ description: "Kênh A chốt 2%, kênh B chốt 10%. Báo cáo ghi trung bình 6
 pubDate: 2025-02-08
 category: "Kiến Thức Nền Tảng"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/trung-binh-co-trong-so.svg"
 coverAlt: "Cái cân lệch giữa một nhóm to và một nhóm nhỏ, trung bình thật nghiêng hẳn về nhóm to"

@@ -25,20 +25,17 @@ const values = [
 ];
 
 const milestones = [
-  { year: '2023', text: 'Nhận ra vấn đề: hàng chục doanh nghiệp Việt chúng tôi tư vấn đều đang mắc kẹt trong vòng lặp "hỏi data team → chờ → nhận báo cáo cũ".' },
-  { year: 'Q1 2024', text: 'Ra mắt phiên bản alpha với 5 khách hàng đầu tiên. Proof of concept: một manager sales tự hỏi được doanh thu theo khu vực mà không cần nhờ ai.' },
-  { year: 'Q3 2024', text: 'Mở rộng ra 30+ khách hàng. Xây dựng Semantic Layer engine và tích hợp đa AI Provider (GPT-4o, Claude, Gemini, DeepSeek).' },
-  { year: '2025', text: 'Ra mắt chính thức. Hỗ trợ 10+ nguồn dữ liệu, Cohort/RFM/Funnel tích hợp, Row-Level Security, và Self-hosted deployment.' },
+  { year: '2024', text: 'Sau nhiều năm tư vấn BI cho doanh nghiệp vừa và nhỏ, tôi thấy rõ một khoảng trống: người chủ không tự hỏi được dữ liệu của chính mình nếu không có người biết SQL ngồi giữa — và không công cụ nào tôi từng dùng lấp được nó.' },
+  { year: '2025', text: 'Quyết định tự xây Semantix. Đứng trên vai những engine tôi đã đi qua — Excel, Power BI, Superset — giữ lại điểm mạnh của từng cái, rồi đặt Semantic Layer làm lõi ngay từ dòng code đầu tiên.' },
+  { year: '2026', text: 'Những khách hàng đầu tiên dùng thử với dữ liệu thật: hỏi bằng tiếng Việt, self-host trên hạ tầng của họ, đa nhà cung cấp AI (BYOK).' },
+  { year: 'Hôm nay', text: 'Semantix còn trẻ. Tôi học từ mỗi người dùng mỗi tuần và hoàn thiện dần — hướng tới đúng một điều: để người chủ tự trả lời được câu hỏi của mình, không cần ai hỏi hộ.' },
 ];
 
-const team = [
-  { name: 'Lê Anh Tuấn', role: 'Co-founder & CEO', avatar: 'T', color: '#EEF2FF', textColor: '#4F46E5', bio: '10 năm trong lĩnh vực data analytics tại các công ty tech Việt Nam và khu vực.' },
-  { name: 'Trần Minh Khoa', role: 'Co-founder & CTO', avatar: 'K', color: '#ECFDF5', textColor: '#059669', bio: 'Cựu tech lead tại 2 unicorn Đông Nam Á. Chuyên gia về distributed systems và AI infrastructure.' },
-  { name: 'Lê Thị Hương', role: 'Head of Product', avatar: 'H', color: '#FDF2F8', textColor: '#BE185D', bio: 'Product manager với 7 năm xây dựng SaaS B2B cho thị trường doanh nghiệp vừa và nhỏ.' },
-  { name: 'Phạm Đức Long', role: 'Head of Engineering', avatar: 'L', color: '#FFF7ED', textColor: '#D97706', bio: 'Full-stack engineer. Kiến trúc hệ thống Semantic Layer và query optimization engine của Semantix.' },
-];
-
-const clients = ['Công ty ABC', 'Tập đoàn XYZ', 'Startup Fintech DEF', 'Chuỗi F&B GHI', 'Logistics JKL', 'Retail MNO'];
+const founder = {
+  name: 'Lê Anh Tuấn',
+  role: 'Người sáng lập Semantix',
+  avatar: 'T',
+};
 ---
 <BaseLayout title="Về Chúng Tôi — Semantix" description="Semantix được xây dựng bởi người Việt, cho doanh nghiệp Việt. Sứ mệnh: đưa sức mạnh dữ liệu đến tay mọi người trong tổ chức.">
 
@@ -77,40 +74,42 @@ const clients = ['Công ty ABC', 'Tập đoàn XYZ', 'Startup Fintech DEF', 'Chu
 
   /* Timeline */
   .timeline-section { padding: 96px 24px; background: var(--white); }
-  .timeline { max-width: 700px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 0; }
-  .tl-item { display: grid; grid-template-columns: 100px 1fr; gap: 24px; padding-bottom: 32px; position: relative; }
+  .timeline { max-width: 640px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 0; }
+  .tl-item { display: grid; grid-template-columns: 64px 1fr; column-gap: 36px; padding-bottom: 36px; position: relative; }
+  .tl-item:last-child { padding-bottom: 0; }
   .tl-item:not(:last-child)::before {
-    content: ''; position: absolute; left: 46px; top: 28px; bottom: 0;
+    content: ''; position: absolute; left: 81px; top: 11px; bottom: -2px;
     width: 2px; background: var(--border);
   }
-  .tl-year { font-size: 13px; font-weight: 800; color: var(--primary); padding-top: 4px; text-align: right; }
+  .tl-year { font-size: 13px; font-weight: 800; color: var(--primary); padding-top: 3px; text-align: right; white-space: nowrap; }
   .tl-dot {
     width: 12px; height: 12px; border-radius: 50%; background: var(--primary);
-    border: 2px solid white; box-shadow: 0 0 0 2px var(--primary);
-    position: absolute; left: 41px; top: 5px;
+    border: 2px solid var(--white); box-shadow: 0 0 0 2px var(--primary);
+    position: absolute; left: 76px; top: 4px;
   }
-  .tl-text { font-size: 15px; color: var(--dark-2); line-height: 1.7; }
+  .tl-text { font-size: 15px; color: var(--dark-2); line-height: 1.72; padding-top: 1px; }
 
-  /* Team */
-  .team-section { padding: 96px 24px; background: var(--surface); }
-  .team-grid { max-width: 1000px; margin: 48px auto 0; display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 24px; }
-  .team-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 28px; text-align: center; }
-  .team-avatar {
-    width: 72px; height: 72px; border-radius: 50%;
-    font-size: 26px; font-weight: 800;
+  /* Founder */
+  .founder-section { padding: 96px 24px; background: var(--surface); }
+  .founder-card {
+    max-width: 640px; margin: 48px auto 0;
+    background: var(--white); border: 1px solid var(--border); border-radius: 20px;
+    padding: 36px; display: flex; gap: 28px; align-items: flex-start;
+  }
+  @media(max-width:560px){
+    .founder-card { flex-direction: column; align-items: center; text-align: center; gap: 20px; padding: 28px; }
+  }
+  .founder-avatar {
+    flex-shrink: 0; width: 80px; height: 80px; border-radius: 50%;
+    background: #EEF2FF; color: #4F46E5; font-size: 30px; font-weight: 800;
     display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 16px;
   }
-  .team-name { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
-  .team-role { font-size: 13px; color: var(--primary); font-weight: 600; margin-bottom: 12px; }
-  .team-bio  { font-size: 13px; color: var(--muted); line-height: 1.6; }
-
-  /* Clients */
-  .clients-section { padding: 64px 24px; background: var(--white); border-top: 1px solid var(--border); }
-  .clients-inner { max-width: 900px; margin: 0 auto; text-align: center; }
-  .clients-label { font-size: 13px; font-weight: 600; color: var(--muted-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 32px; }
-  .clients-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-  .client-chip { background: var(--surface); border: 1px solid var(--border); border-radius: 100px; padding: 8px 20px; font-size: 14px; font-weight: 600; color: var(--dark-3); }
+  .founder-name { font-size: 20px; font-weight: 800; color: var(--dark); letter-spacing: -0.4px; }
+  .founder-role { font-size: 14px; color: var(--primary); font-weight: 600; margin: 4px 0 14px; }
+  .founder-bio  { font-size: 14.5px; color: var(--muted); line-height: 1.7; }
+  .founder-bio + .founder-bio { margin-top: 12px; }
+  .founder-bio a { color: var(--primary); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--border); }
+  .founder-bio a:hover { border-bottom-color: var(--primary); }
 
   /* CTA */
   .about-cta { padding: 80px 24px; background: linear-gradient(135deg, var(--primary-dark), #1E1B4B); text-align: center; }
@@ -135,9 +134,9 @@ const clients = ['Công ty ABC', 'Tập đoàn XYZ', 'Startup Fintech DEF', 'Chu
       </div>
     </div>
     <div class="mission-body">
-      <p>Năm 2023, chúng tôi quan sát hàng chục doanh nghiệp Việt đang mắc kẹt trong cùng một vòng lặp: <strong>câu hỏi của manager → ticket cho data team → chờ 2–3 ngày → nhận báo cáo cũ</strong>. Trong khi đó, quyết định kinh doanh không thể chờ.</p>
+      <p>Suốt nhiều năm tư vấn dữ liệu cho doanh nghiệp Việt, tôi thấy đi thấy lại cùng một vòng lặp: <strong>câu hỏi của người chủ → nhờ người biết SQL → chờ → nhận lại con số đã cũ</strong>. Trong khi đó, quyết định kinh doanh không thể chờ.</p>
       <p>Vấn đề không phải thiếu dữ liệu. Vấn đề là AI không thể hiểu "doanh thu" của từng công ty có nghĩa khác nhau — và không có công cụ nào giúp định nghĩa điều đó một lần, dùng mãi.</p>
-      <p>Semantix được xây dựng để giải quyết chính xác vấn đề đó. Chúng tôi gọi đó là <strong>Semantic Layer</strong>.</p>
+      <p>Semantix được xây dựng để giải quyết chính xác vấn đề đó — bằng một tầng định nghĩa nghiệp vụ gọi là <strong>Semantic Layer</strong>.</p>
     </div>
   </div>
 </section>
@@ -145,9 +144,9 @@ const clients = ['Công ty ABC', 'Tập đoàn XYZ', 'Startup Fintech DEF', 'Chu
 <!-- Stats bar -->
 <div class="stats-bar">
   <div class="stats-bar-inner">
-    <div class="stat-bar-item"><div class="stat-bar-num">30+</div><div class="stat-bar-label">doanh nghiệp đang dùng</div></div>
-    <div class="stat-bar-item"><div class="stat-bar-num">10+</div><div class="stat-bar-label">nguồn dữ liệu hỗ trợ</div></div>
     <div class="stat-bar-item"><div class="stat-bar-num">5s</div><div class="stat-bar-label">từ câu hỏi đến kết quả</div></div>
+    <div class="stat-bar-item"><div class="stat-bar-num">10+</div><div class="stat-bar-label">nguồn dữ liệu kết nối</div></div>
+    <div class="stat-bar-item"><div class="stat-bar-num">4+</div><div class="stat-bar-label">nhà cung cấp AI · BYOK</div></div>
     <div class="stat-bar-item"><div class="stat-bar-num">0</div><div class="stat-bar-label">byte dữ liệu lưu ngoài</div></div>
   </div>
 </div>
@@ -175,37 +174,26 @@ const clients = ['Công ty ABC', 'Tập đoàn XYZ', 'Startup Fintech DEF', 'Chu
     {milestones.map(m => (
       <div class="tl-item">
         <div class="tl-year">{m.year}</div>
-        <div style="position:relative">
-          <div class="tl-dot"></div>
-          <div class="tl-text" style="padding-left:24px">{m.text}</div>
-        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-text">{m.text}</div>
       </div>
     ))}
   </div>
 </section>
 
-<!-- Team -->
-<section class="team-section">
-  <div class="section-label">Đội Ngũ</div>
-  <h2 class="section-title">Những người xây dựng Semantix</h2>
-  <div class="team-grid">
-    {team.map(t => (
-      <div class="team-card">
-        <div class="team-avatar" style={`background:${t.color};color:${t.textColor}`}>{t.avatar}</div>
-        <div class="team-name">{t.name}</div>
-        <div class="team-role">{t.role}</div>
-        <div class="team-bio">{t.bio}</div>
-      </div>
-    ))}
-  </div>
-</section>
-
-<!-- Clients -->
-<section class="clients-section">
-  <div class="clients-inner">
-    <div class="clients-label">Tin tưởng bởi các doanh nghiệp</div>
-    <div class="clients-list">
-      {clients.map(c => <div class="client-chip">{c}</div>)}
+<!-- Founder -->
+<section class="founder-section">
+  <div class="section-label">Người Sáng Lập</div>
+  <h2 class="section-title">Người xây Semantix</h2>
+  <div class="founder-card">
+    <div class="founder-avatar">{founder.avatar}</div>
+    <div>
+      <div class="founder-name">{founder.name}</div>
+      <div class="founder-role">{founder.role}</div>
+      <p class="founder-bio">
+        10+ năm làm dữ liệu — từ analyst tại một tập đoàn viễn thông đầu ngành, trưởng nhóm Data Analyst tại một công ty công nghệ trong hệ sinh thái e-commerce, đến trưởng nhóm BI tại một ngân hàng. Giảng viên các khoá GA4, BI &amp; ứng dụng AI tại <a href="https://vietmoz.edu.vn/ga4-advanced/" target="_blank" rel="noopener">Vietmoz</a>, <a href="https://www.mcivietnam.com/course-detail/khoa-hoc-business-intelligence-with-google-workspace-advanced-track/" target="_blank" rel="noopener">MCI Vietnam</a> và <a href="https://gitiho.com/khoa-hoc/tao-app-quan-ly-chi-tieu-chuyen-nghiep-tich-hop-ai-chatbot" target="_blank" rel="noopener">Gitiho</a>.
+      </p>
+      <p class="founder-bio">Tôi xây Semantix một mình — để giải đúng cái bài toán tôi gặp mỗi ngày: giúp người chủ tự hỏi được dữ liệu của chính mình, không cần ai đứng giữa.</p>
     </div>
   </div>
 </section>

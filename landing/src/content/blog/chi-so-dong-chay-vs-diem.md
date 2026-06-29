@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 series: "hieu-chi-so"
 seriesOrder: 2
 readTime: 8
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/chi-so-dong-chay-vs-diem.svg"
 coverAlt: "Một dòng nước chảy đo lưu lượng theo khoảng đặt cạnh một thước đo mực nước tại một thời điểm"

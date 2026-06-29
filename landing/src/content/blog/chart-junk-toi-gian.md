@@ -7,7 +7,7 @@ description: "Càng trang trí biểu đồ càng khó đọc. 3D, gradient, lư
 pubDate: 2025-08-11
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/chart-junk-toi-gian.svg"
 coverAlt: "Một biểu đồ 3D loè loẹt rối mắt biến thành biểu đồ phẳng sạch dễ đọc"

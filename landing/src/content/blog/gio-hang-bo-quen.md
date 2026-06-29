@@ -5,7 +5,7 @@ description: "Khách đã thêm vào giỏ là nhóm gần mua nhất. Nghịch 
 pubDate: 2025-09-25
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/gio-hang-bo-quen.svg"
 coverAlt: "Một giỏ hàng đầy ắp bị bỏ lại ngay trước nút thanh toán, khách quay lưng đi"

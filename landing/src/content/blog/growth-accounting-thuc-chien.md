@@ -7,7 +7,7 @@ description: "Ba phần lý thuyết đã xong. Giờ là lúc dựng bảng gro
 pubDate: 2025-07-21
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/growth-accounting-thuc-chien.svg"
 coverAlt: "Một bảng growth accounting đã dựng xong: các tháng nhân với dòng new/retained/resurrected/churned và một ô Quick Ratio"

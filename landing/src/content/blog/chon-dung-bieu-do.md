@@ -7,7 +7,7 @@ description: "Một con số đúng vẫn kể sai câu chuyện nếu bạn v�
 pubDate: 2025-08-06
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/chon-dung-bieu-do.svg"
 coverAlt: "Vài loại biểu đồ cột, đường, tròn kèm dấu tick và dấu x cho loại nên và không nên dùng"

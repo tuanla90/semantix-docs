@@ -5,7 +5,7 @@ description: "Chờ tới cuối tháng xem báo cáo thì sự cố đã xảy 
 pubDate: 2025-08-28
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/anomaly-detection.svg"
 coverAlt: "Đường doanh thu ổn định trong dải bình thường với một đỉnh đỏ vọt ra ngoài ngưỡng kèm chuông cảnh báo"

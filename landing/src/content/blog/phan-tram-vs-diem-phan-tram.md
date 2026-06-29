@@ -7,7 +7,7 @@ description: "Tỷ lệ chuyển đổi nhích từ 10% lên 12%. Đó là tăng
 pubDate: 2025-02-04
 category: "Kiến Thức Nền Tảng"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: true
 cover: "/blog/covers/phan-tram-vs-diem-phan-tram.svg"
 coverAlt: "Minh hoạ tỷ lệ chuyển đổi từ 10% lên 12%: +2 điểm phần trăm so với +20% tăng tương đối"

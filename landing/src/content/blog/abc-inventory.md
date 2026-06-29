@@ -5,7 +5,7 @@ description: "Mỗi cuối tháng bạn đếm sạch cả nghìn mã hàng như
 pubDate: 2025-08-23
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/abc-inventory.svg"
 coverAlt: "Đường tích luỹ Pareto chia kho hàng thành ba vùng A, B, C theo giá trị vốn tồn"

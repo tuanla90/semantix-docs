@@ -5,7 +5,7 @@ description: "Doanh thu tháng này tăng 12%. Mừng chưa? Có thể chỉ là
 pubDate: 2025-11-10
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/time-series-forecast.svg"
 coverAlt: "Đường doanh thu thực tế nối sang đoạn dự báo nét đứt, kèm dải tin cậy loe rộng dần về tương lai"

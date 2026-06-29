@@ -5,7 +5,7 @@ description: "Gợi ý mua kèm sai làm khách bực mình. Gợi ý đúng là
 pubDate: 2025-10-01
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/market-basket-ban-kem.svg"
 coverAlt: "Giỏ hàng và các sản phẩm nối nhau bằng đường, minh hoạ phân tích Market Basket"

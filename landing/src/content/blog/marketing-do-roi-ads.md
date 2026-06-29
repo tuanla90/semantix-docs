@@ -5,7 +5,7 @@ description: "Facebook báo ROAS 4,2. TikTok báo 3,8. Google báo 5,1. Cộng l
 pubDate: 2026-01-23
 category: "Câu Chuyện & Use Case"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/marketing-do-roi-ads.svg"
 coverAlt: "Ba kênh ads Facebook, TikTok, Google mỗi kênh tự nhận công, hội tụ về một con số ROI thật ở giữa"

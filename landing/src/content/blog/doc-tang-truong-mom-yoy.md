@@ -5,7 +5,7 @@ description: "Tháng này bạn khoe tăng 30% so tháng trước. Nhưng so cù
 pubDate: 2026-01-12
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/doc-tang-truong-mom-yoy.svg"
 coverAlt: "Hai mũi tên tăng trưởng: MoM đi lên ảo, YoY đi xuống thật, trên cùng một bộ dữ liệu mùa vụ"

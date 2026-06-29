@@ -7,7 +7,7 @@ description: "Test sai cách còn tệ hơn không test — vì cho bạn niềm
 pubDate: 2025-07-27
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/thiet-ke-ab-test.svg"
 coverAlt: "Luồng người dùng được chia ngẫu nhiên thành phiên bản A và B, rồi đo metric chính để chọn người thắng"

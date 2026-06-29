@@ -5,7 +5,7 @@ description: "23h đêm 9.9. Mã hot của Quân cháy hàng từ 21h, nhưng ng
 pubDate: 2026-02-18
 category: "Câu Chuyện & Use Case"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/tiktok-shop-mua-sale-gia-theo-gio.svg"
 coverAlt: "Đường line doanh số tăng vọt theo từng giờ trong đêm sale TikTok Shop, đồng hồ chỉ khung giờ vàng"

@@ -7,7 +7,7 @@ description: "Doanh thu tuần này giảm 8% — hoảng hay bình thường? P
 pubDate: 2024-12-24
 category: "Kiến Thức Nền Tảng"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/tin-hieu-vs-nhieu.svg"
 coverAlt: "Đường doanh thu dao động quanh mức trung bình với dải bình thường, một điểm vượt dải nổi bật là tín hiệu thật"

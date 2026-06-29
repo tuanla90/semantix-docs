@@ -7,7 +7,7 @@ description: "Doanh thu tháng Tết gấp ba tháng thường. So với tháng 
 pubDate: 2025-06-29
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/mua-vu-tet-seasonality.svg"
 coverAlt: "Đường doanh thu theo tháng với các đỉnh Tết lặp lại qua nhiều năm"

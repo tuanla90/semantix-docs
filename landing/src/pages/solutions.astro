@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { DOCS_URL } from '../consts';
 
 const industries = [
   {
@@ -85,10 +86,10 @@ const industries = [
 ];
 
 const roles = [
-  { icon: '📊', title: 'Data Analyst / BI Engineer', desc: 'Xây Semantic Layer một lần, toàn tổ chức dùng mãi. Không còn viết lại SQL cho cùng một câu hỏi.', href: '/docs/vi/getting-started/' },
-  { icon: '💼', title: 'Sales & Business Manager', desc: 'Tự hỏi số liệu bằng tiếng Việt, nhận kết quả tức thì. Không cần chờ team data, không cần học SQL.', href: '/docs/vi/getting-started/' },
-  { icon: '⚙️', title: 'Data Engineer / DevOps', desc: 'Quản lý connections, pipelines, SSO, caching. Tích hợp với hạ tầng hiện tại trong vài giờ.', href: '/docs/vi/getting-started/' },
-  { icon: '🔌', title: 'Developer / Product Team', desc: 'Nhúng Dashboard vào ứng dụng qua Embed Token. Query dữ liệu qua REST API. Không cần xây BI từ đầu.', href: '/docs/vi/api-reference/' },
+  { icon: '📊', title: 'Data Analyst / BI Engineer', desc: 'Xây Semantic Layer một lần, toàn tổ chức dùng mãi. Không còn viết lại SQL cho cùng một câu hỏi.', href: DOCS_URL },
+  { icon: '💼', title: 'Sales & Business Manager', desc: 'Tự hỏi số liệu bằng tiếng Việt, nhận kết quả tức thì. Không cần chờ team data, không cần học SQL.', href: DOCS_URL },
+  { icon: '⚙️', title: 'Data Engineer / DevOps', desc: 'Quản lý connections, pipelines, SSO, caching. Tích hợp với hạ tầng hiện tại trong vài giờ.', href: DOCS_URL },
+  { icon: '🔌', title: 'Developer / Product Team', desc: 'Nhúng Dashboard vào ứng dụng qua Embed Token. Query dữ liệu qua REST API. Không cần xây BI từ đầu.', href: DOCS_URL },
 ];
 ---
 <BaseLayout title="Giải Pháp — Semantix" description="Semantix cho Retail, Fintech, F&B, Logistics — AI phân tích dữ liệu theo từng ngành, từng vai trò.">
@@ -219,7 +220,7 @@ const roles = [
         <div class="role-icon">{role.icon}</div>
         <div class="role-title">{role.title}</div>
         <div class="role-desc">{role.desc}</div>
-        <a href={role.href} class="role-link">Xem hướng dẫn →</a>
+        <a href={role.href} target="_blank" rel="noopener" class="role-link">Xem hướng dẫn →</a>
       </div>
     ))}
   </div>

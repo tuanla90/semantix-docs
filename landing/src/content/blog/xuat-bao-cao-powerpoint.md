@@ -5,7 +5,7 @@ description: "Chiều thứ Sáu chụp biểu đồ dán vào slide cho họp �
 pubDate: 2025-11-18
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/xuat-bao-cao-powerpoint.svg"
 coverAlt: "Một dashboard biến thành bộ slide PowerPoint chỉ với một cú nhấp"

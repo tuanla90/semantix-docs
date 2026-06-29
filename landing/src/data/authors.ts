@@ -1,6 +1,6 @@
 // Author registry — hồ sơ tác giả dùng cho khối bio cuối mỗi bài.
-// Chỉ "Lê Anh Tuấn" là tác giả THẬT (có bio + credential công khai); các bút danh
-// khác là persona biên tập, giữ card đơn giản (title lấy từ frontmatter authorTitle).
+// Toàn bộ blog do một tác giả thật: "Lê Anh Tuấn" (bio + credential công khai).
+// Giữ fallback authorTitle phòng khi có byline chưa khai báo ở đây.
 
 export interface AuthorLink {
   label: string;

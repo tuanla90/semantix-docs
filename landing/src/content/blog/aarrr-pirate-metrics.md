@@ -7,7 +7,7 @@ seriesOrder: 1
 pubDate: 2025-12-19
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/aarrr-pirate-metrics.svg"
 coverAlt: "Phễu AARRR năm tầng, mỗi tầng một màu: Acquisition, Activation, Retention, Referral, Revenue"

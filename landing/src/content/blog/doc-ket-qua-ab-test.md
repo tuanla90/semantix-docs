@@ -7,7 +7,7 @@ description: "B thắng A 5%. Ăn mừng hay chỉ là may rủi? Cùng một co
 pubDate: 2025-08-01
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/doc-ket-qua-ab-test.svg"
 coverAlt: "Hai cột A/B với dải sai số chồng lấn nhau — chưa chắc đã khác biệt thật"

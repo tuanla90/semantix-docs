@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 series: "hieu-chi-so"
 seriesOrder: 5
 readTime: 8
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/business-metrics-vs-customer-metrics.svg"
 coverAlt: "Một đồng xu hai mặt — một mặt là doanh thu của doanh nghiệp, mặt kia là trái tim hài lòng của khách hàng"

@@ -5,7 +5,7 @@ description: "Đốt tiền ads kéo khách mà không biết một khách đán
 pubDate: 2025-09-11
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/clv-framework.svg"
 coverAlt: "Các cột CLV theo phân khúc cao thấp khác nhau dưới một đường trần ngân sách CAC"

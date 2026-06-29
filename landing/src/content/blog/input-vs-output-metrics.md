@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 series: "hieu-chi-so"
 seriesOrder: 4
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/input-vs-output-metrics.svg"
 coverAlt: "Các nút bấm input lái được nối bằng mũi tên tới một đồng hồ output đo doanh thu"

@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 series: "hieu-chi-so"
 seriesOrder: 1
 readTime: 8
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/4-loai-thang-do-du-lieu.svg"
 coverAlt: "Bốn nấc thang đo dữ liệu từ định danh đến tỉ lệ, mức phép tính được phép tăng dần"

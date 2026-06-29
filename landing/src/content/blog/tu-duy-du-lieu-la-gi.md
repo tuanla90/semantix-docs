@@ -7,7 +7,7 @@ description: "Ai cũng nói 'theo dữ liệu', nhưng phần lớn quyết bằ
 pubDate: 2024-11-28
 category: "Kiến Thức Nền Tảng"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/tu-duy-du-lieu-la-gi.svg"
 coverAlt: "Bộ não cảm tính và một con số làm đổi hướng mũi tên quyết định"

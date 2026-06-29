@@ -5,7 +5,7 @@ description: "Hai người sửa một ô cùng lúc, sáng ra số lệch khôn
 pubDate: 2025-05-28
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/khi-nao-len-database.svg"
 coverAlt: "Một bảng tính Google Sheets quá tải với mũi tên đi lên một database gọn gàng"

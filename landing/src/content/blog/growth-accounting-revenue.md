@@ -7,7 +7,7 @@ description: "SaaS này mất 8% khách trong tháng. Doanh thu vẫn tăng 5%. 
 pubDate: 2025-07-16
 category: "Phân Tích Dữ Liệu"
 readTime: 12
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/growth-accounting-revenue.svg"
 coverAlt: "Biểu đồ waterfall doanh thu: new, expansion, resurrected cộng vào, contraction và churned trừ đi, với nhãn NRR lớn hơn 100%"

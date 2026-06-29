@@ -7,7 +7,7 @@ description: "Báo cáo nói trung bình mỗi khách chi 500k. Bạn nhập hà
 pubDate: 2024-12-16
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/trung-binh-noi-doi.svg"
 coverAlt: "Biểu đồ phân phối lệch với đường trung bình bị kéo lệch khỏi trung vị"

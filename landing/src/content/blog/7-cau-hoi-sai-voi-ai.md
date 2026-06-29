@@ -5,7 +5,7 @@ description: "AI trả số sai không phải vì nó dốt, mà vì câu hỏi 
 pubDate: 2026-03-02
 category: "Hướng Dẫn Thực Chiến"
 readTime: 10
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/7-cau-hoi-sai-voi-ai.svg"
 coverAlt: "Bong bóng câu hỏi mơ hồ gạch đỏ chuyển thành câu hỏi rõ ràng tick xanh"

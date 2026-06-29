@@ -5,7 +5,7 @@ description: "Một tư vấn nói 'phải xây data warehouse mới nghiêm tú
 pubDate: 2025-05-20
 category: "Kiến Thức Nền Tảng"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/data-warehouse-sme.svg"
 coverAlt: "Một nhà kho dữ liệu khổng lồ với dấu hỏi 'có cần?' đặt cạnh một chiếc hộp gọn vừa đủ cho SME"

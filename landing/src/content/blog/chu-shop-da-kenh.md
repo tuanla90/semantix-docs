@@ -5,7 +5,7 @@ description: "Chị Hà định thuê 1-2 nhân sự data để dựng dashboard
 pubDate: 2026-03-26
 category: "Câu Chuyện & Use Case"
 readTime: 10
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/chu-shop-da-kenh.svg"
 coverAlt: "Chủ shop đa kênh hỏi tiếng Việt, AI trả lời bằng biểu đồ từ ba sàn hội tụ"

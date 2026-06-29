@@ -5,7 +5,7 @@ description: "Lượt xem livestream tăng gấp đôi. Followers cũng tăng. C
 pubDate: 2026-02-22
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: true
 cover: "/blog/covers/vanity-metrics.svg"
 coverAlt: "Số to lấp lánh của lượt xem đặt cạnh con số nhỏ nhưng thật của lợi nhuận"

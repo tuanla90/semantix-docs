@@ -5,7 +5,7 @@ description: "Ai cũng tưởng nghề DA là vẽ insight đẹp, làm model ng
 pubDate: 2026-01-04
 category: "Câu Chuyện & Use Case"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/chuyen-nghe-data-analyst.svg"
 coverAlt: "Kỳ vọng nghề Data Analyst là biểu đồ đẹp, thực tế là đống dữ liệu bẩn và công việc lặp lại"

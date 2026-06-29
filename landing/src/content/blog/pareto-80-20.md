@@ -5,7 +5,7 @@ description: "Ai cũng biết 20% sản phẩm tạo 80% doanh thu. Ít ai biế
 pubDate: 2025-10-06
 category: "Phân Tích Dữ Liệu"
 readTime: 12
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/pareto-80-20.svg"
 coverAlt: "Biểu đồ Pareto: ít sản phẩm đầu tạo phần lớn doanh thu, đường tích luỹ chạm 80%"

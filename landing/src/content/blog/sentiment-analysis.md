@@ -5,7 +5,7 @@ description: "Có 300 review mà sếp vẫn phải đoán 'tháng này khách t
 pubDate: 2025-10-29
 category: "Phân Tích Dữ Liệu"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/sentiment-analysis.svg"
 coverAlt: "Các bong bóng review được phân loại tích cực, trung tính, tiêu cực rồi xếp thành cột chồng theo thời gian"

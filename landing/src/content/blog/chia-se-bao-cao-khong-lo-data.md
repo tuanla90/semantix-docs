@@ -5,7 +5,7 @@ description: "Bạn không dám gửi dashboard cho quản lý chi nhánh vì s�
 pubDate: 2025-04-29
 category: "Hướng Dẫn Thực Chiến"
 readTime: 8
-author: "Lê Thị Hương"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/chia-se-bao-cao-khong-lo-data.svg"
 coverAlt: "Một báo cáo được chia tới nhiều người, mỗi người chỉ thấy lát cắt dữ liệu của mình, phần còn lại bị che mờ"

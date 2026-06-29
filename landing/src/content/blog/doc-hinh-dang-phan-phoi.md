@@ -7,7 +7,7 @@ description: "Một con số trung bình giấu sạch hình dạng thật của
 pubDate: 2025-02-01
 category: "Kiến Thức Nền Tảng"
 readTime: 9
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 cover: "/blog/covers/doc-hinh-dang-phan-phoi.svg"
 coverAlt: "Bốn dạng histogram: phân phối chuẩn, lệch phải, đuôi dài và hai đỉnh"

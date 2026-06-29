@@ -5,7 +5,7 @@ description: "Marketing đo AIDA, 5A. Product đo AARRR, HEART. Cùng một khá
 pubDate: 2025-12-29
 category: "Phân Tích Dữ Liệu"
 readTime: 10
-author: "Trần Minh Khoa"
+author: "Lê Anh Tuấn"
 featured: false
 series: "khung-do-luong"
 seriesOrder: 3

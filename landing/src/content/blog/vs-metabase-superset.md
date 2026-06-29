@@ -1,7 +1,7 @@
 ---
 title: "Semantix vs Metabase & Superset: vì sao 'miễn phí' lại là lựa chọn đắt nhất"
 code: "ss-003"
-description: "License $0 nghe rất hấp dẫn cho SME tiết kiệm. Nhưng hoá đơn không biến mất — nó chỉ chuyển từ ngân sách phần mềm sang lịch của đội kỹ sư. So sánh thẳng thắn BI mã nguồn mở với Semantix."
+description: "License $0 nghe rất hấp dẫn cho SME tiết kiệm. Nhưng hoá đơn không biến mất - nó chỉ chuyển từ ngân sách phần mềm sang lịch của đội kỹ sư. So sánh thẳng thắn BI mã nguồn mở với Semantix."
 pubDate: 2026-07-13
 category: "So Sánh & Lựa Chọn"
 readTime: 10
@@ -11,24 +11,24 @@ cover: "/blog/covers/vs-metabase-superset.svg"
 coverAlt: "License $0 nhưng chi phí ẩn ở vận hành, kỹ sư và tự xây AI"
 ---
 
-Khi một chủ doanh nghiệp tiết kiệm nhìn thấy chữ "open-source (mã nguồn mở), miễn phí", phản xạ rất tự nhiên là: *"chọn cái này, đỡ một khoản."* Metabase và Superset là hai cái tên sáng giá nhất ở đây — mạnh, linh hoạt, và license (giấy phép sử dụng phần mềm) đúng là $0.
+Khi một chủ doanh nghiệp tiết kiệm nhìn thấy chữ "open-source (mã nguồn mở), miễn phí", phản xạ rất tự nhiên là: *"chọn cái này, đỡ một khoản."* Metabase và Superset là hai cái tên sáng giá nhất ở đây - mạnh, linh hoạt, và license (giấy phép sử dụng phần mềm) đúng là $0.
 
-Nhưng đây là sự thật ít người tính tới: **license miễn phí không làm chi phí biến mất — nó chỉ chuyển chỗ.** Từ ngân sách phần mềm sang lịch làm việc của đội kỹ sư. Và có một thứ mà không số tiền engineering nào mua được rẻ: một AI thật sự hiểu nghiệp vụ của bạn.
+Nhưng đây là sự thật ít người tính tới: **license miễn phí không làm chi phí biến mất - nó chỉ chuyển chỗ.** Từ ngân sách phần mềm sang lịch làm việc của đội kỹ sư. Và có một thứ mà không số tiền engineering nào mua được rẻ: một AI thật sự hiểu nghiệp vụ của bạn.
 
 ## Trước hết, hãy công bằng: mã nguồn mở mạnh thật
 
 Sẽ không trung thực nếu chê Metabase và Superset. Chúng xứng đáng được yêu:
 
 - **License $0**, tự host, không khoá nhà cung cấp.
-- **Linh hoạt gần như vô hạn** — toàn quyền tùy biến, SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu) editor mạnh, Superset có thư viện chart (biểu đồ) phong phú.
+- **Linh hoạt gần như vô hạn** - toàn quyền tùy biến, SQL (Structured Query Language - ngôn ngữ truy vấn cơ sở dữ liệu) editor mạnh, Superset có thư viện chart (biểu đồ) phong phú.
 - **Cộng đồng lớn**, tài liệu dày, hàng nghìn doanh nghiệp đã chạy production (môi trường vận hành thật).
 - Với đội kỹ thuật giỏi, đây là nền tảng tuyệt vời để **kiểm soát hoàn toàn**.
 
-Nếu bạn có đội data engineer (kỹ sư dữ liệu) và muốn tự chủ từng chi tiết, đừng đọc tiếp — cứ chọn chúng. Phần còn lại của bài này dành cho người mà "đội kỹ sư" là một điều xa xỉ.
+Nếu bạn có đội data engineer (kỹ sư dữ liệu) và muốn tự chủ từng chi tiết, đừng đọc tiếp - cứ chọn chúng. Phần còn lại của bài này dành cho người mà "đội kỹ sư" là một điều xa xỉ.
 
 ## "Miễn phí" thật sự tốn gì
 
-Tổng chi phí sở hữu (TCO — Total Cost of Ownership, toàn bộ chi phí thật khi sở hữu một công cụ) không chỉ là tiền license. Nó là **tiền + thời gian**. Và với BI (Business Intelligence — biến dữ liệu thành quyết định) mã nguồn mở, phần lớn chi phí nằm ở phần bạn không nhìn thấy trên báo giá:
+Tổng chi phí sở hữu (TCO - Total Cost of Ownership, toàn bộ chi phí thật khi sở hữu một công cụ) không chỉ là tiền license. Nó là **tiền + thời gian**. Và với BI (Business Intelligence - biến dữ liệu thành quyết định) mã nguồn mở, phần lớn chi phí nằm ở phần bạn không nhìn thấy trên báo giá:
 
 <div class="viz">
 <svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
@@ -55,12 +55,12 @@ Tổng chi phí sở hữu (TCO — Total Cost of Ownership, toàn bộ chi phí
   <rect x="560" y="210" width="14" height="14" fill="#22C55E"/><text x="580" y="222" fill="#94A3B8" font-size="13">Thuê bao</text>
   <rect x="560" y="240" width="14" height="14" fill="#4ADE80"/><text x="580" y="252" fill="#94A3B8" font-size="13">License</text>
 </svg>
-<div class="viz-caption">License $0 chỉ là lát mỏng dưới cùng. Phần lớn chi phí mã nguồn mở nằm ở vận hành, tự xây semantic layer và tự ghép AI — trả bằng thời gian kỹ sư.</div>
+<div class="viz-caption">License $0 chỉ là lát mỏng dưới cùng. Phần lớn chi phí mã nguồn mở nằm ở vận hành, tự xây semantic layer và tự ghép AI - trả bằng thời gian kỹ sư.</div>
 </div>
 
 Ba khoản ẩn lớn nhất:
 
-1. **Hạ tầng & vận hành.** Cài đặt, nâng cấp, sao lưu, bảo mật, xử lý sự cố — mỗi thứ ngốn thời gian của người biết việc. "Miễn phí" cho tới khi server sập lúc 11 giờ đêm trước ngày báo cáo.
+1. **Hạ tầng & vận hành.** Cài đặt, nâng cấp, sao lưu, bảo mật, xử lý sự cố - mỗi thứ ngốn thời gian của người biết việc. "Miễn phí" cho tới khi server sập lúc 11 giờ đêm trước ngày báo cáo.
 2. **Tự xây semantic layer (tầng định nghĩa nghiệp vụ dùng chung).** Metabase/Superset cho bạn công cụ truy vấn, nhưng định nghĩa "doanh thu" chuẩn cho cả công ty là việc bạn phải tự làm và tự bảo trì. (Vì sao điều này quan trọng: đọc [Semantic Layer là gì](/blog/semantic-layer/).)
 3. **Tự ghép AI.** Đây là khoảng trống lớn nhất.
 
@@ -68,11 +68,11 @@ Ba khoản ẩn lớn nhất:
 
 Metabase và Superset sinh ra trong kỷ nguyên dashboard (bảng số trực quan). Cốt lõi của chúng là **trực quan hóa và SQL**, không phải hỏi-đáp ngôn ngữ tự nhiên. Gần đây có thêm vài tính năng AI hỗ trợ, nhưng một hệ AI thật sự đáng tin cần nhiều hơn một ô chat:
 
-- **RAG (Retrieval-Augmented Generation — cho AI tra đúng tài liệu trước khi trả lời) trên schema (cấu trúc bảng/cột của cơ sở dữ liệu)** để tìm đúng bảng/cột trong hàng trăm cột.
+- **RAG (Retrieval-Augmented Generation - cho AI tra đúng tài liệu trước khi trả lời) trên schema (cấu trúc bảng/cột của cơ sở dữ liệu)** để tìm đúng bảng/cột trong hàng trăm cột.
 - **Sinh SQL neo vào semantic layer** để không trả số sai (xem [Text-to-SQL (AI biến câu hỏi tiếng Việt thành câu lệnh SQL)](/blog/text-to-sql/)).
 - **Tối ưu tiếng Việt**, bộ nhớ hội thoại, chống ảo giác, đa nhà cung cấp AI.
 
-Bạn *có thể* tự lắp ráp tất cả những mảnh này lên Metabase — nếu bạn có đội ML (Machine Learning — học máy, nhánh AI dạy máy học từ dữ liệu). Với Semantix, đó là sản phẩm bạn mua, không phải dự án bạn xây.
+Bạn *có thể* tự lắp ráp tất cả những mảnh này lên Metabase - nếu bạn có đội ML (Machine Learning - học máy, nhánh AI dạy máy học từ dữ liệu). Với Semantix, đó là sản phẩm bạn mua, không phải dự án bạn xây.
 
 ## So sánh thẳng
 
@@ -83,15 +83,15 @@ Bạn *có thể* tự lắp ráp tất cả những mảnh này lên Metabase �
 | SQL editor & tùy biến | **Rất mạnh, linh hoạt** | Có, nhưng hướng tới người không SQL |
 | AI hỏi-đáp tiếng Việt | Không phải cốt lõi / phải tự ghép | Cốt lõi, RAG + semantic layer |
 | Semantic layer | Tự xây & bảo trì | Tích hợp sẵn |
-| Phân tích nâng cao (Cohort — nhóm khách theo thời điểm bắt đầu, RFM — phân khúc khách theo lần mua gần/tần suất/giá trị, Funnel — phễu chuyển đổi...) | Tự dựng bằng SQL | Có sẵn, hỏi bằng tiếng Việt |
+| Phân tích nâng cao (Cohort - nhóm khách theo thời điểm bắt đầu, RFM - phân khúc khách theo lần mua gần/tần suất/giá trị, Funnel - phễu chuyển đổi...) | Tự dựng bằng SQL | Có sẵn, hỏi bằng tiếng Việt |
 | Cộng đồng & hệ sinh thái | **Lớn, lâu đời** | Trẻ hơn |
 | Phù hợp với | Đội có kỹ sư, cần kiểm soát toàn bộ | SME không có đội data |
 
 ## Tôi đã từng ngồi đúng ghế người đi chọn
 
-Tôi nói những điều trên không phải từ lý thuyết. Có lần tôi được giao phân tích xem cả công ty nên đứng trên nền BI nào, và tôi dựng hẳn một bảng tiêu chí chấm điểm để quyết cho khách quan. Bài học đầu tiên đến *trước* cả kết quả: **trọng số của tôi và trọng số của sếp không giống nhau** — tôi coi trọng khả năng tùy biến, sếp coi trọng chi phí — nên tôi phải làm lại bảng chấm từ đầu. Đây đúng là lý do một con số (kể cả "điểm" của một công cụ) cần [được định nghĩa và đồng thuận một lần](/blog/mot-nguon-su-that/): thiếu nó, đến tiêu chí chọn công cụ cũng mỗi người một kiểu.
+Tôi nói những điều trên không phải từ lý thuyết. Có lần tôi được giao phân tích xem cả công ty nên đứng trên nền BI nào, và tôi dựng hẳn một bảng tiêu chí chấm điểm để quyết cho khách quan. Bài học đầu tiên đến *trước* cả kết quả: **trọng số của tôi và trọng số của sếp không giống nhau** - tôi coi trọng khả năng tùy biến, sếp coi trọng chi phí - nên tôi phải làm lại bảng chấm từ đầu. Đây đúng là lý do một con số (kể cả "điểm" của một công cụ) cần [được định nghĩa và đồng thuận một lần](/blog/mot-nguon-su-that/): thiếu nó, đến tiêu chí chọn công cụ cũng mỗi người một kiểu.
 
-Khi chấm xong, Metabase rớt vì **quá khó tùy biến** theo nghiệp vụ của chúng tôi; một lựa chọn thương mại khác thì vướng phí *và* dữ liệu vẫn phải rời hạ tầng; Superset thắng. Nhưng — và đây đúng là điểm của cả bài này — *"thắng" không có nghĩa là "miễn phí".* Superset về với chúng tôi kèm nguyên cái hoá đơn thời gian kỹ sư: cài, vận hành, rồi tự ghép từng mảnh thông minh lên trên. Tôi đã chọn mã nguồn mở, và tôi đã tự tay trả cái giá mà bài này đang nói tới — một phiên bản khác của [bài toán tự dựng hay mua sẵn](/blog/build-vs-buy-bi/).
+Khi chấm xong, Metabase rớt vì **quá khó tùy biến** theo nghiệp vụ của chúng tôi; một lựa chọn thương mại khác thì vướng phí *và* dữ liệu vẫn phải rời hạ tầng; Superset thắng. Nhưng - và đây đúng là điểm của cả bài này - *"thắng" không có nghĩa là "miễn phí".* Superset về với chúng tôi kèm nguyên cái hoá đơn thời gian kỹ sư: cài, vận hành, rồi tự ghép từng mảnh thông minh lên trên. Tôi đã chọn mã nguồn mở, và tôi đã tự tay trả cái giá mà bài này đang nói tới - một phiên bản khác của [bài toán tự dựng hay mua sẵn](/blog/build-vs-buy-bi/).
 
 ## Khi nào bạn *nên* chọn Metabase hoặc Superset
 
@@ -102,9 +102,9 @@ Khi chấm xong, Metabase rớt vì **quá khó tùy biến** theo nghiệp vụ
 
 ## Mental model (khung tư duy) để quyết định
 
-> Mã nguồn mở không miễn phí — nó **chuyển hóa đơn từ tiền sang thời gian kỹ sư.** Nếu thời gian kỹ sư của bạn rẻ và dư, đó là món hời. Nếu bạn *không có* đội kỹ sư — thứ trông "miễn phí" lại là thứ đắt nhất, vì cái giá thật là những câu hỏi không bao giờ được trả lời.
+> Mã nguồn mở không miễn phí - nó **chuyển hóa đơn từ tiền sang thời gian kỹ sư.** Nếu thời gian kỹ sư của bạn rẻ và dư, đó là món hời. Nếu bạn *không có* đội kỹ sư - thứ trông "miễn phí" lại là thứ đắt nhất, vì cái giá thật là những câu hỏi không bao giờ được trả lời.
 
-Với một SME không có đội data, phép tính thường nghiêng về việc trả một khoản thuê bao biết trước, để có ngay thứ chạy được — thay vì trả $0 cho một thứ phải tự dựng mãi không xong.
+Với một SME không có đội data, phép tính thường nghiêng về việc trả một khoản thuê bao biết trước, để có ngay thứ chạy được - thay vì trả $0 cho một thứ phải tự dựng mãi không xong.
 
 ---
 

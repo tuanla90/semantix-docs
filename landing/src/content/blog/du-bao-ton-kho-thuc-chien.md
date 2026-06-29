@@ -1,5 +1,5 @@
 ---
-title: "Dự báo cho doanh nghiệp (Phần 3): dự báo nhu cầu tồn kho — từ xu hướng + mùa vụ tới đơn đặt hàng"
+title: "Dự báo cho doanh nghiệp (Phần 3): dự báo nhu cầu tồn kho - từ xu hướng + mùa vụ tới đơn đặt hàng"
 code: "pt-036"
 series: "du-bao"
 seriesOrder: 3
@@ -16,21 +16,21 @@ coverAlt: "Đường dự báo nhu cầu kèm khoảng sai số, mức tồn an 
 <div class="series-nav">
   <div class="series-nav-title">🔮 Series Dự báo cho doanh nghiệp · 3 phần</div>
   <ol>
-    <li><a href="/blog/du-bao-la-gi/">Phần 1 — Mọi dự báo đều sai (nhưng vẫn hữu ích)</a></li>
-    <li><a href="/blog/mua-vu-tet-seasonality/">Phần 2 — Mùa vụ &amp; Tết</a></li>
-    <li class="current">Phần 3 — Dự báo tồn kho thực chiến</li>
+    <li><a href="/blog/du-bao-la-gi/">Phần 1 - Mọi dự báo đều sai (nhưng vẫn hữu ích)</a></li>
+    <li><a href="/blog/mua-vu-tet-seasonality/">Phần 2 - Mùa vụ &amp; Tết</a></li>
+    <li class="current">Phần 3 - Dự báo tồn kho thực chiến</li>
   </ol>
 </div>
 
-Tháng 12, một shop thời trang ở TP.HCM nhìn lại kho và thấy điều vô lý: họ vừa **cháy hàng** mã áo khoác bán chạy nhất — khách hỏi mà không có để bán — *vừa* ôm một núi quần kaki ế, chất đầy gác. Cùng một tháng. Cùng một người đặt hàng. Một bên thiếu, một bên thừa. Nghe như hai vấn đề ngược nhau, nhưng chúng có chung đúng một gốc rễ.
+Tháng 12, một shop thời trang ở TP.HCM nhìn lại kho và thấy điều vô lý: họ vừa **cháy hàng** mã áo khoác bán chạy nhất - khách hỏi mà không có để bán - *vừa* ôm một núi quần kaki ế, chất đầy gác. Cùng một tháng. Cùng một người đặt hàng. Một bên thiếu, một bên thừa. Nghe như hai vấn đề ngược nhau, nhưng chúng có chung đúng một gốc rễ.
 
-Gốc rễ đó là: **đơn đặt hàng được quyết bằng cảm giác.** "Tháng trước bán hết áo khoác nhanh quá, đặt gấp đôi cho chắc" — và cảm giác thì vừa hoảng quá tay ở mã này, vừa quên béng mã kia. Đặt theo cảm giác gần như luôn tạo ra cả hai lỗi cùng lúc: vừa cháy vừa ế.
+Gốc rễ đó là: **đơn đặt hàng được quyết bằng cảm giác.** "Tháng trước bán hết áo khoác nhanh quá, đặt gấp đôi cho chắc" - và cảm giác thì vừa hoảng quá tay ở mã này, vừa quên béng mã kia. Đặt theo cảm giác gần như luôn tạo ra cả hai lỗi cùng lúc: vừa cháy vừa ế.
 
-Hai phần trước, bạn đã có hai mảnh ghép. Phần 1 dạy cách tách **xu hướng** — hàng này đang lên hay đang xuống đều đặn. Phần 2 dạy cách đọc **mùa vụ** — Tết, back-to-school, các đỉnh lặp lại hằng năm. Phần cuối này ghép hai mảnh đó thành thứ duy nhất thật sự cứu kho của bạn: **một con số đặt hàng có cơ sở**, thay cho một cú đoán.
+Hai phần trước, bạn đã có hai mảnh ghép. Phần 1 dạy cách tách **xu hướng** - hàng này đang lên hay đang xuống đều đặn. Phần 2 dạy cách đọc **mùa vụ** - Tết, back-to-school, các đỉnh lặp lại hằng năm. Phần cuối này ghép hai mảnh đó thành thứ duy nhất thật sự cứu kho của bạn: **một con số đặt hàng có cơ sở**, thay cho một cú đoán.
 
 ## Đặt theo cảm giác vs đặt theo dự báo
 
-Trước khi vào quy trình, hãy nhìn thẳng vào sự khác biệt — vì nó giải thích vì sao "đặt cho chắc" lại là thủ phạm.
+Trước khi vào quy trình, hãy nhìn thẳng vào sự khác biệt - vì nó giải thích vì sao "đặt cho chắc" lại là thủ phạm.
 
 | | Đặt theo cảm giác | Đặt theo dự báo |
 |---|---|---|
@@ -54,17 +54,17 @@ Cảm giác không sai vì nó "thiếu kinh nghiệm". Nó sai vì nó **không
 | 4 | Khi nào phải đặt, đặt bao nhiêu? | Cộng **lead time** + **tồn an toàn** → **điểm đặt hàng** |
 | 5 | Mã nào cần kỹ, mã nào làm gọn? | **Phân tầng ABC** |
 
-### Bước 1 — Lịch sử bán theo SKU (và làm sạch nó)
+### Bước 1 - Lịch sử bán theo SKU (và làm sạch nó)
 
-Mọi dự báo bắt đầu từ lịch sử bán của từng **SKU** (Stock Keeping Unit — mã hàng tồn kho, tức từng biến thể cụ thể: áo khoác xanh size M là một SKU, size L là một SKU khác). Đừng dự báo gộp cả "áo khoác" — bạn đặt hàng theo size, theo màu, nên phải dự báo ở mức đó.
+Mọi dự báo bắt đầu từ lịch sử bán của từng **SKU** (Stock Keeping Unit - mã hàng tồn kho, tức từng biến thể cụ thể: áo khoác xanh size M là một SKU, size L là một SKU khác). Đừng dự báo gộp cả "áo khoác" - bạn đặt hàng theo size, theo màu, nên phải dự báo ở mức đó.
 
-Nhưng đây là cái bẫy ít ai để ý, và nó âm thầm phá mọi con số phía sau: **số bán không phải số nhu cầu.** Khi một SKU **hết hàng** giữa tháng, hệ thống ghi nhận "bán = 0" những ngày sau đó — nhưng nhu cầu thật không phải 0, chỉ là bạn không có hàng để bán. Nếu bạn dự báo dựa trên con số 0 giả này, bạn sẽ đặt *ít hơn* cho kỳ sau, rồi lại cháy hàng. Vòng lặp tự nuôi chính nó.
+Nhưng đây là cái bẫy ít ai để ý, và nó âm thầm phá mọi con số phía sau: **số bán không phải số nhu cầu.** Khi một SKU **hết hàng** giữa tháng, hệ thống ghi nhận "bán = 0" những ngày sau đó - nhưng nhu cầu thật không phải 0, chỉ là bạn không có hàng để bán. Nếu bạn dự báo dựa trên con số 0 giả này, bạn sẽ đặt *ít hơn* cho kỳ sau, rồi lại cháy hàng. Vòng lặp tự nuôi chính nó.
 
 > Quy tắc vàng: trước khi dự báo, hỏi "những ngày bán = 0 này là vì không ai mua, hay vì mình hết hàng?". Đánh dấu các giai đoạn cháy hàng và đừng để chúng kéo dự báo xuống.
 
-### Bước 2 — Tách xu hướng + mùa vụ
+### Bước 2 - Tách xu hướng + mùa vụ
 
-Đây là chỗ hai phần trước hội tụ. Lấy chuỗi bán đã làm sạch của một SKU và tách nó làm hai phần: **xu hướng** (đường nền đang đi lên/xuống/đi ngang) và **mùa vụ** (cái nhịp lặp lại — tháng Chạp tăng vọt, tháng Giêng nguội). Một mã áo khoác có thể đang *đi ngang* về xu hướng nhưng *tăng 3 lần* vào mùa lạnh — bạn cần biết cả hai, vì một con số trung bình cả năm sẽ vừa làm bạn cháy hàng mùa cao điểm vừa ế hàng mùa thấp.
+Đây là chỗ hai phần trước hội tụ. Lấy chuỗi bán đã làm sạch của một SKU và tách nó làm hai phần: **xu hướng** (đường nền đang đi lên/xuống/đi ngang) và **mùa vụ** (cái nhịp lặp lại - tháng Chạp tăng vọt, tháng Giêng nguội). Một mã áo khoác có thể đang *đi ngang* về xu hướng nhưng *tăng 3 lần* vào mùa lạnh - bạn cần biết cả hai, vì một con số trung bình cả năm sẽ vừa làm bạn cháy hàng mùa cao điểm vừa ế hàng mùa thấp.
 
 <div class="viz">
 <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
@@ -96,52 +96,52 @@ Nhưng đây là cái bẫy ít ai để ý, và nó âm thầm phá mọi con s
 <div class="viz-caption">Xu hướng + mùa vụ cho ra đường dự báo (xanh, nét đứt) kèm khoảng sai số. Khi tồn dự kiến chạm mức cần để kịp hàng về, đó là điểm đặt hàng (mũi tên đỏ); mức tồn an toàn (cam) là đệm cuối cùng. *(số liệu minh họa)*</div>
 </div>
 
-### Bước 3 — Ước nhu cầu kỳ tới + khoảng sai số
+### Bước 3 - Ước nhu cầu kỳ tới + khoảng sai số
 
-Ghép xu hướng và mùa vụ lại, bạn có **dự báo nhu cầu** cho kỳ tới: *"tháng 12 SKU áo khoác xanh size M dự kiến bán khoảng 180 cái."* Nhưng — như Phần 1 đã nói — **mọi dự báo đều sai**. Con số 180 vô dụng nếu bạn không kèm một **khoảng sai số**: "180, dao động 150–210". Khoảng này chính là thứ quyết định bạn cần đệm bao nhiêu ở bước sau. Dự báo càng dao động mạnh (hàng thời trang, hàng theo trend), khoảng càng rộng, đệm càng phải dày.
+Ghép xu hướng và mùa vụ lại, bạn có **dự báo nhu cầu** cho kỳ tới: *"tháng 12 SKU áo khoác xanh size M dự kiến bán khoảng 180 cái."* Nhưng - như Phần 1 đã nói - **mọi dự báo đều sai**. Con số 180 vô dụng nếu bạn không kèm một **khoảng sai số**: "180, dao động 150–210". Khoảng này chính là thứ quyết định bạn cần đệm bao nhiêu ở bước sau. Dự báo càng dao động mạnh (hàng thời trang, hàng theo trend), khoảng càng rộng, đệm càng phải dày.
 
-### Bước 4 — Cộng lead time + tồn an toàn → điểm đặt hàng
+### Bước 4 - Cộng lead time + tồn an toàn → điểm đặt hàng
 
 Đây là bước biến dự báo thành hành động. Hai khái niệm:
 
-- **Lead time** (thời gian hàng về — từ lúc bạn bấm đặt tới lúc hàng nằm trên kệ bán được). Đặt nhà cung cấp trong nước: 5 ngày. Nhập từ Trung Quốc: 3 tuần. Bạn không đặt hàng cho *ngày mai* — bạn đặt cho khoảng nhu cầu xảy ra *trong suốt lead time*.
-- **Safety stock** (tồn an toàn — lượng hàng đệm để phòng khi bán nhanh hơn dự báo hoặc hàng về trễ). Đây là nơi khoảng sai số ở Bước 3 trả tiền: dao động càng rộng, tồn an toàn càng dày.
+- **Lead time** (thời gian hàng về - từ lúc bạn bấm đặt tới lúc hàng nằm trên kệ bán được). Đặt nhà cung cấp trong nước: 5 ngày. Nhập từ Trung Quốc: 3 tuần. Bạn không đặt hàng cho *ngày mai* - bạn đặt cho khoảng nhu cầu xảy ra *trong suốt lead time*.
+- **Safety stock** (tồn an toàn - lượng hàng đệm để phòng khi bán nhanh hơn dự báo hoặc hàng về trễ). Đây là nơi khoảng sai số ở Bước 3 trả tiền: dao động càng rộng, tồn an toàn càng dày.
 
-Ghép lại thành **điểm đặt hàng** (reorder point — mức tồn mà khi chạm tới, bạn phải đặt ngay):
+Ghép lại thành **điểm đặt hàng** (reorder point - mức tồn mà khi chạm tới, bạn phải đặt ngay):
 
 ```text
 Điểm đặt hàng = (nhu cầu trung bình mỗi ngày × lead time) + tồn an toàn
 ```
 
-Ví dụ: SKU bán ~6 cái/ngày, lead time 5 ngày, tồn an toàn 15 cái → điểm đặt hàng = 6×5 + 15 = **45 cái**. Khi tồn còn 45, bạn đặt — vừa kịp để hàng về trước khi hết, kể cả khi mùa vụ đẩy nhu cầu lên. *Không* canh kệ trống mới chạy đi đặt; lúc đó đã muộn đúng bằng một lead time. *(số liệu minh họa)*
+Ví dụ: SKU bán ~6 cái/ngày, lead time 5 ngày, tồn an toàn 15 cái → điểm đặt hàng = 6×5 + 15 = **45 cái**. Khi tồn còn 45, bạn đặt - vừa kịp để hàng về trước khi hết, kể cả khi mùa vụ đẩy nhu cầu lên. *Không* canh kệ trống mới chạy đi đặt; lúc đó đã muộn đúng bằng một lead time. *(số liệu minh họa)*
 
-### Bước 5 — Phân tầng ABC: đừng dự báo mọi mã như nhau
+### Bước 5 - Phân tầng ABC: đừng dự báo mọi mã như nhau
 
-Một shop có 800 SKU. Bạn không thể — và không nên — dự báo kỹ từng mã. Đây là lúc gọi lại tư duy [Pareto 80/20](/blog/pareto-80-20/): một nhúm nhỏ SKU gánh phần lớn doanh thu. **Phân tầng ABC** (cách chia hàng làm ba hạng A/B/C theo mức đóng góp) cho bạn nơi dồn công sức:
+Một shop có 800 SKU. Bạn không thể - và không nên - dự báo kỹ từng mã. Đây là lúc gọi lại tư duy [Pareto 80/20](/blog/pareto-80-20/): một nhúm nhỏ SKU gánh phần lớn doanh thu. **Phân tầng ABC** (cách chia hàng làm ba hạng A/B/C theo mức đóng góp) cho bạn nơi dồn công sức:
 
-- **Nhóm A** — số ít mã gánh ~80% doanh thu/lợi nhuận: dự báo kỹ từng SKU, theo dõi tồn an toàn sát sao. Cháy một mã A là mất tiền thật.
-- **Nhóm B** — tầm giữa: dự báo vừa phải, rà định kỳ.
-- **Nhóm C** — cái đuôi dài, nhiều mã doanh thu nhỏ: **đơn giản hoá**. Dùng quy tắc gọn ("còn 20 thì đặt thêm 50"), đừng đổ giờ phân tích vào đây.
+- **Nhóm A** - số ít mã gánh ~80% doanh thu/lợi nhuận: dự báo kỹ từng SKU, theo dõi tồn an toàn sát sao. Cháy một mã A là mất tiền thật.
+- **Nhóm B** - tầm giữa: dự báo vừa phải, rà định kỳ.
+- **Nhóm C** - cái đuôi dài, nhiều mã doanh thu nhỏ: **đơn giản hoá**. Dùng quy tắc gọn ("còn 20 thì đặt thêm 50"), đừng đổ giờ phân tích vào đây.
 
-Nhưng nhớ bài học từ Pareto: nhóm C nhỏ về doanh thu *không* có nghĩa bỏ được — cái đuôi thường kéo khách và hoàn thiện giỏ hàng. ABC giúp bạn *phân bổ công sức dự báo*, không phải danh sách hàng để khai tử.
+Nhưng nhớ bài học từ Pareto: nhóm C nhỏ về doanh thu *không* có nghĩa bỏ được - cái đuôi thường kéo khách và hoàn thiện giỏ hàng. ABC giúp bạn *phân bổ công sức dự báo*, không phải danh sách hàng để khai tử.
 
 ## Cái bẫy lớn nhất: hàng mới không có lịch sử
 
-Toàn bộ quy trình trên đứng trên một giả định: **có lịch sử bán để học.** Với một SKU mới toanh — mẫu áo vừa nhập lần đầu, sản phẩm chưa từng bán — bạn *không có gì để tách xu hướng hay mùa vụ*. Dự báo cho hàng mới là một bài toán khác hẳn: bạn phải mượn dữ liệu của **mã tương tự** (cùng dòng, cùng phân khúc giá), đặt một lô thăm dò nhỏ, rồi học nhanh từ vài tuần đầu thay vì cam kết một đơn lớn dựa trên con số tưởng tượng. Đừng áp công thức điểm đặt hàng lên một SKU chưa có dù chỉ một tháng dữ liệu — nó sẽ cho ra số đẹp mà vô căn cứ.
+Toàn bộ quy trình trên đứng trên một giả định: **có lịch sử bán để học.** Với một SKU mới toanh - mẫu áo vừa nhập lần đầu, sản phẩm chưa từng bán - bạn *không có gì để tách xu hướng hay mùa vụ*. Dự báo cho hàng mới là một bài toán khác hẳn: bạn phải mượn dữ liệu của **mã tương tự** (cùng dòng, cùng phân khúc giá), đặt một lô thăm dò nhỏ, rồi học nhanh từ vài tuần đầu thay vì cam kết một đơn lớn dựa trên con số tưởng tượng. Đừng áp công thức điểm đặt hàng lên một SKU chưa có dù chỉ một tháng dữ liệu - nó sẽ cho ra số đẹp mà vô căn cứ.
 
 ## Dự báo tồn kho với Semantix
 
-Tự tay chạy năm bước này cho 800 SKU — làm sạch giai đoạn cháy hàng, tách xu hướng và mùa vụ, tính điểm đặt hàng theo lead time từng nhà cung cấp, rồi phân tầng ABC và lặp lại mỗi tháng — là nhiều buổi loay hoay với bảng tính và công thức gãy.
+Tự tay chạy năm bước này cho 800 SKU - làm sạch giai đoạn cháy hàng, tách xu hướng và mùa vụ, tính điểm đặt hàng theo lead time từng nhà cung cấp, rồi phân tầng ABC và lặp lại mỗi tháng - là nhiều buổi loay hoay với bảng tính và công thức gãy.
 
-Semantix không phải một chatbot đoán mò trên kho hàng của bạn. Bạn định nghĩa "doanh thu", "lợi nhuận gộp", "nhóm hàng" *một lần* trong tầng định nghĩa chung — chính là [một nguồn sự thật](/blog/mot-nguon-su-that/) mà cả công ty dùng chung — rồi hỏi bằng tiếng Việt:
+Semantix không phải một chatbot đoán mò trên kho hàng của bạn. Bạn định nghĩa "doanh thu", "lợi nhuận gộp", "nhóm hàng" *một lần* trong tầng định nghĩa chung - chính là [một nguồn sự thật](/blog/mot-nguon-su-that/) mà cả công ty dùng chung - rồi hỏi bằng tiếng Việt:
 
 > **"Dự báo nhu cầu tháng 12 cho từng SKU áo khoác, tính cả mùa vụ Tết, và cho biết mã nào sắp chạm điểm đặt hàng với lead time 2 tuần."**
 
-Semantix hiểu "nhu cầu", "mùa vụ", "điểm đặt hàng" trong ngữ cảnh dữ liệu của bạn, tách xu hướng và mùa vụ, kèm khoảng sai số — để đơn đặt hàng của bạn dựa trên một con số có cơ sở, không phải một cú hoảng.
+Semantix hiểu "nhu cầu", "mùa vụ", "điểm đặt hàng" trong ngữ cảnh dữ liệu của bạn, tách xu hướng và mùa vụ, kèm khoảng sai số - để đơn đặt hàng của bạn dựa trên một con số có cơ sở, không phải một cú hoảng.
 
-## Tóm lại — và khép lại series
+## Tóm lại - và khép lại series
 
-Ba phần, một thông điệp: **dự báo không phải để biết tương lai, mà để ra quyết định hôm nay đỡ sai hơn.** Bạn đã đi từ "mọi dự báo đều sai nhưng vẫn hữu ích" (Phần 1), qua đọc nhịp mùa vụ và Tết (Phần 2), tới quy trình biến cả hai thành đơn đặt hàng (Phần 3). Cái đích chưa bao giờ là một con số hoàn hảo — nó là một kho hàng vừa hết cháy, vừa hết ế, và một dòng vốn không bị chôn trên gác.
+Ba phần, một thông điệp: **dự báo không phải để biết tương lai, mà để ra quyết định hôm nay đỡ sai hơn.** Bạn đã đi từ "mọi dự báo đều sai nhưng vẫn hữu ích" (Phần 1), qua đọc nhịp mùa vụ và Tết (Phần 2), tới quy trình biến cả hai thành đơn đặt hàng (Phần 3). Cái đích chưa bao giờ là một con số hoàn hảo - nó là một kho hàng vừa hết cháy, vừa hết ế, và một dòng vốn không bị chôn trên gác.
 
 | Đặt theo cảm giác | Đặt theo quy trình 5 bước |
 |---|---|
@@ -151,8 +151,8 @@ Ba phần, một thông điệp: **dự báo không phải để biết tương 
 | Hàng mới đặt lớn theo cảm tính | Lô thăm dò, học nhanh, mượn mã tương tự |
 | Vừa cháy vừa ế | Ít cháy, ít ế |
 
-> Mental model để mang theo: **đừng dự báo doanh số — hãy dự báo thời điểm và lượng phải đặt.** Dự báo chỉ có giá trị khi nó kết thúc bằng một đơn đặt hàng. Mọi thứ trước đó chỉ là số liệu đẹp.
+> Mental model để mang theo: **đừng dự báo doanh số - hãy dự báo thời điểm và lượng phải đặt.** Dự báo chỉ có giá trị khi nó kết thúc bằng một đơn đặt hàng. Mọi thứ trước đó chỉ là số liệu đẹp.
 
 ---
 
-*Muốn đơn đặt hàng dựa trên dự báo thay vì cảm giác? [Dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Hoặc quay lại đầu series: [Phần 1 — Mọi dự báo đều sai (nhưng vẫn hữu ích)](/blog/du-bao-la-gi/).*
+*Muốn đơn đặt hàng dựa trên dự báo thay vì cảm giác? [Dùng thử miễn phí với Google Sheets.](/docs/vi/free-trial/) Hoặc quay lại đầu series: [Phần 1 - Mọi dự báo đều sai (nhưng vẫn hữu ích)](/blog/du-bao-la-gi/).*

@@ -15,15 +15,15 @@ Tháng này livestream của bạn lập kỷ lục: 18 nghìn lượt xem, gấ
 
 Bạn không làm gì sai, số liệu cũng không sai. Vấn đề là bạn đang ăn mừng nhầm con số.
 
-Đây là nghịch lý gần như ai bán hàng online cũng từng dính: **những con số trông oai nhất thường ít liên quan nhất tới việc bạn sống hay chết.** Chúng có tên — *vanity metric* (chỉ số đẹp mã — con số trông hoành tráng nhưng không dẫn tới một quyết định hay hành động nào). Bài này giúp bạn nhận ra chúng trong ba giây, và đổi sang loại số thật sự lái được doanh nghiệp.
+Đây là nghịch lý gần như ai bán hàng online cũng từng dính: **những con số trông oai nhất thường ít liên quan nhất tới việc bạn sống hay chết.** Chúng có tên - *vanity metric* (chỉ số đẹp mã - con số trông hoành tráng nhưng không dẫn tới một quyết định hay hành động nào). Bài này giúp bạn nhận ra chúng trong ba giây, và đổi sang loại số thật sự lái được doanh nghiệp.
 
 ## Vanity metric vs actionable metric: khác nhau ở chỗ nào
 
 Hãy bắt đầu bằng hai từ.
 
-*Vanity metric* là con số khiến bạn thấy ngầu khi nhìn vào, nhưng nhìn xong bạn không biết phải làm gì khác. Tổng lượt xem, số followers, tổng lượt tải app, tổng đăng ký từ trước tới nay. Nhìn rất đã. Nhưng thử hỏi: "số này tăng thì tôi đổi việc gì trong tuần tới?" — và bạn ú ớ.
+*Vanity metric* là con số khiến bạn thấy ngầu khi nhìn vào, nhưng nhìn xong bạn không biết phải làm gì khác. Tổng lượt xem, số followers, tổng lượt tải app, tổng đăng ký từ trước tới nay. Nhìn rất đã. Nhưng thử hỏi: "số này tăng thì tôi đổi việc gì trong tuần tới?" - và bạn ú ớ.
 
-*Actionable metric* (chỉ số hành động được — con số mà khi nó thay đổi, bạn biết ngay nên làm gì) thì ngược lại. Tỉ lệ chuyển đổi, doanh thu trên mỗi khách, *retention* (tỉ lệ giữ chân — bao nhiêu khách kỳ trước còn quay lại kỳ này), lợi nhuận. Mỗi con số này gắn thẳng với một cái cần gạt bạn nắm trong tay.
+*Actionable metric* (chỉ số hành động được - con số mà khi nó thay đổi, bạn biết ngay nên làm gì) thì ngược lại. Tỉ lệ chuyển đổi, doanh thu trên mỗi khách, *retention* (tỉ lệ giữ chân - bao nhiêu khách kỳ trước còn quay lại kỳ này), lợi nhuận. Mỗi con số này gắn thẳng với một cái cần gạt bạn nắm trong tay.
 
 | Vanity metric (đẹp mã) | Actionable metric (hành động được) |
 |---|---|
@@ -33,19 +33,19 @@ Hãy bắt đầu bằng hai từ.
 | Tổng lượt tải app | Tỉ lệ người tải rồi còn mở app sau 7 ngày (retention) |
 | Tổng đăng ký nhận tin | Tỉ lệ mở mail và tỉ lệ bấm mua từ mail |
 
-Để ý cột phải có một điểm chung: chúng đều là **tỉ lệ, hoặc số trên mỗi khách** — chứ không phải số tổng. Đó không phải tình cờ, và ta sẽ thấy ngay vì sao.
+Để ý cột phải có một điểm chung: chúng đều là **tỉ lệ, hoặc số trên mỗi khách** - chứ không phải số tổng. Đó không phải tình cờ, và ta sẽ thấy ngay vì sao.
 
 ## Ba dấu hiệu nhận ra một con số là vanity
 
 Bạn không cần thuộc lòng danh sách. Chỉ cần soi mỗi con số trên dashboard qua ba câu hỏi.
 
-**Dấu hiệu 1 — Nó chỉ tăng, không bao giờ giảm.** Mọi con số "tổng tích luỹ" đều thế: tổng followers, tổng lượt xem, tổng đơn từ ngày khai trương. Nó chỉ đi lên hoặc đứng yên, không bao giờ tụt. Nghe sướng, nhưng một con số không bao giờ báo tin xấu thì cũng chẳng bao giờ cảnh báo được gì. Nó là đồng hồ đo quãng đường đã đi, không phải đồng hồ tốc độ.
+**Dấu hiệu 1 - Nó chỉ tăng, không bao giờ giảm.** Mọi con số "tổng tích luỹ" đều thế: tổng followers, tổng lượt xem, tổng đơn từ ngày khai trương. Nó chỉ đi lên hoặc đứng yên, không bao giờ tụt. Nghe sướng, nhưng một con số không bao giờ báo tin xấu thì cũng chẳng bao giờ cảnh báo được gì. Nó là đồng hồ đo quãng đường đã đi, không phải đồng hồ tốc độ.
 
-**Dấu hiệu 2 — Nó không gắn với một hành động cụ thể.** Bài kiểm tra cốt lõi: *"nếu số này tăng gấp đôi ngày mai, tôi sẽ làm gì khác đi?"* Followers gấp đôi — bạn làm gì khác? Thường là không gì cả. Nhưng tỉ lệ chốt đơn gấp đôi — bạn biết ngay kịch bản bán đang chạy tốt và nên nhân rộng. Trả lời được, con số là thật; đáp lại bằng một nụ cười tự hào và không gì khác, đó là vanity.
+**Dấu hiệu 2 - Nó không gắn với một hành động cụ thể.** Bài kiểm tra cốt lõi: *"nếu số này tăng gấp đôi ngày mai, tôi sẽ làm gì khác đi?"* Followers gấp đôi - bạn làm gì khác? Thường là không gì cả. Nhưng tỉ lệ chốt đơn gấp đôi - bạn biết ngay kịch bản bán đang chạy tốt và nên nhân rộng. Trả lời được, con số là thật; đáp lại bằng một nụ cười tự hào và không gì khác, đó là vanity.
 
-**Dấu hiệu 3 — Nó không có bối cảnh để so.** "5 triệu lượt xem" là nhiều hay ít? Bạn không biết, vì không có gì để đối chiếu — so với tháng trước, với chi phí bỏ ra, hay với số người thật sự mua? Một con số trần trụi đứng một mình luôn trông to, và cái "trông to" đó chính là bẫy.
+**Dấu hiệu 3 - Nó không có bối cảnh để so.** "5 triệu lượt xem" là nhiều hay ít? Bạn không biết, vì không có gì để đối chiếu - so với tháng trước, với chi phí bỏ ra, hay với số người thật sự mua? Một con số trần trụi đứng một mình luôn trông to, và cái "trông to" đó chính là bẫy.
 
-Nếu một metric dính cả ba dấu hiệu, gần như chắc chắn nó là vanity. Đây cũng là một biến thể của [cái bẫy mê con số đẹp mà vô dụng](/blog/sai-lam-khi-phan-tich-du-lieu/) — chỉ khác là lần này ta mổ nó kỹ tới tận cách chữa.
+Nếu một metric dính cả ba dấu hiệu, gần như chắc chắn nó là vanity. Đây cũng là một biến thể của [cái bẫy mê con số đẹp mà vô dụng](/blog/sai-lam-khi-phan-tich-du-lieu/) - chỉ khác là lần này ta mổ nó kỹ tới tận cách chữa.
 
 ## Vì sao số tổng lừa bạn, còn tỉ lệ thì không
 
@@ -53,7 +53,7 @@ Hãy nhìn vào điểm khác biệt giữa *số tuyệt đối* (con số tổ
 
 <div class="viz">
 <div class="viz-chart" data-chart="line" data-chart-data='{"xLabels":["T1","T2","T3","T4","T5","T6","T7"],"series":[{"name":"Tổng lượt xem","values":[10,30,62,98,130,162,188],"color":"#f59e0b"},{"name":"Tỉ lệ chốt đơn","values":[88,100,72,118,44,30,16],"color":"#22d3ee"}]}'></div>
-<div class="viz-caption">Đường vàng (số tổng) chỉ leo dốc, lúc nào nhìn cũng thấy "đang phát triển". Đường xanh (tỉ lệ thật) dao động và đang đi xuống — kể câu chuyện ngược hẳn lại.</div>
+<div class="viz-caption">Đường vàng (số tổng) chỉ leo dốc, lúc nào nhìn cũng thấy "đang phát triển". Đường xanh (tỉ lệ thật) dao động và đang đi xuống - kể câu chuyện ngược hẳn lại.</div>
 </div>
 
 Hai đường này là cùng một doanh nghiệp. Đường vàng khiến bạn ngủ ngon; đường xanh khiến bạn tỉnh dậy và sửa kịch bản bán. Số tổng che giấu sự thật vì nó cộng dồn mãi mãi; tỉ lệ phơi bày sự thật vì luôn chia lại trên nền hiện tại. Đó là vì sao actionable metric tốt gần như luôn là một tỉ lệ hoặc một con số trên mỗi khách.
@@ -62,25 +62,25 @@ Hai đường này là cùng một doanh nghiệp. Đường vàng khiến bạn
 
 Tin tốt: bạn không phải vứt bỏ con số đẹp, chỉ cần biến đổi nó. Có ba bước.
 
-**Bước 1 — Với mỗi con số, hỏi câu thần chú.** *"Nếu số này đổi, tôi sẽ làm gì khác đi?"* Không trả lời được thì gỡ nó khỏi báo cáo điều hành. Đừng để nó chiếm chỗ và ru ngủ bạn.
+**Bước 1 - Với mỗi con số, hỏi câu thần chú.** *"Nếu số này đổi, tôi sẽ làm gì khác đi?"* Không trả lời được thì gỡ nó khỏi báo cáo điều hành. Đừng để nó chiếm chỗ và ru ngủ bạn.
 
-**Bước 2 — Đổi từ số tổng sang tỉ lệ hoặc đơn vị trên mỗi khách.** "18 nghìn lượt xem livestream" → "tỉ lệ người xem để lại số điện thoại" và "doanh thu trên mỗi 1.000 lượt xem". "Tổng 50 nghìn followers" → "số đơn đến từ followers tháng này / tổng followers". Cùng dữ liệu gốc, nhưng giờ con số biết nói.
+**Bước 2 - Đổi từ số tổng sang tỉ lệ hoặc đơn vị trên mỗi khách.** "18 nghìn lượt xem livestream" → "tỉ lệ người xem để lại số điện thoại" và "doanh thu trên mỗi 1.000 lượt xem". "Tổng 50 nghìn followers" → "số đơn đến từ followers tháng này / tổng followers". Cùng dữ liệu gốc, nhưng giờ con số biết nói.
 
-**Bước 3 — Gắn nó với tiền hoặc một quyết định.** Con số nào quy được ra "tăng giảm bao nhiêu đồng" hoặc "nên dồn ngân sách vào đâu" thì giữ. Đây cũng là cầu nối tới chuyện [chỉ số báo trước vs báo sau](/blog/leading-lagging-indicator/): một vanity metric mà không lái được thì còn tệ hơn cả một lagging indicator, vì nó vừa trễ vừa vô dụng.
+**Bước 3 - Gắn nó với tiền hoặc một quyết định.** Con số nào quy được ra "tăng giảm bao nhiêu đồng" hoặc "nên dồn ngân sách vào đâu" thì giữ. Đây cũng là cầu nối tới chuyện [chỉ số báo trước vs báo sau](/blog/leading-lagging-indicator/): một vanity metric mà không lái được thì còn tệ hơn cả một lagging indicator, vì nó vừa trễ vừa vô dụng.
 
-Và đừng để vanity metric leo vào báo cáo. Một dashboard 30 ô toàn followers, lượt xem, lượt thích trông rất "data-driven" nhưng thực chất là tự khen. Hãy chốt ra dăm con số then chốt thật sự — chính là tinh thần phân biệt [metric, dimension và KPI](/blog/metric-dimension-kpi/): không phải con số nào cũng xứng đáng là KPI.
+Và đừng để vanity metric leo vào báo cáo. Một dashboard 30 ô toàn followers, lượt xem, lượt thích trông rất "data-driven" nhưng thực chất là tự khen. Hãy chốt ra dăm con số then chốt thật sự - chính là tinh thần phân biệt [metric, dimension và KPI](/blog/metric-dimension-kpi/): không phải con số nào cũng xứng đáng là KPI.
 
-## Vanity metric không hề vô dụng — chỉ là đừng lái xe bằng nó
+## Vanity metric không hề vô dụng - chỉ là đừng lái xe bằng nó
 
-Cần công bằng một chút. Số followers, tổng lượt xem *không* vô giá trị. Chúng đo **độ phủ** — bạn đang chạm tới bao nhiêu người, thương hiệu lan rộng cỡ nào. Đó là thông tin thật. Một shop mới mở có 200 followers và một shop 200 nghìn followers rõ ràng ở hai vị thế khác nhau.
+Cần công bằng một chút. Số followers, tổng lượt xem *không* vô giá trị. Chúng đo **độ phủ** - bạn đang chạm tới bao nhiêu người, thương hiệu lan rộng cỡ nào. Đó là thông tin thật. Một shop mới mở có 200 followers và một shop 200 nghìn followers rõ ràng ở hai vị thế khác nhau.
 
-Vấn đề không phải bản thân con số, mà là **dùng nó để lái doanh nghiệp**. Xem độ phủ như tín hiệu nền thì ổn — nhưng khi quyết định chi tiền, cắt sản phẩm, đổi kịch bản bán, bạn phải nhìn actionable metric. Lái công ty bằng vanity là tự đâm vào tường trong khi đồng hồ vẫn báo "ổn".
+Vấn đề không phải bản thân con số, mà là **dùng nó để lái doanh nghiệp**. Xem độ phủ như tín hiệu nền thì ổn - nhưng khi quyết định chi tiền, cắt sản phẩm, đổi kịch bản bán, bạn phải nhìn actionable metric. Lái công ty bằng vanity là tự đâm vào tường trong khi đồng hồ vẫn báo "ổn".
 
-Và cảnh giác một cái bẫy rất hay mắc: người ta thích khoe vanity metric **chính vì** nó luôn đẹp. Khi ai gửi báo cáo toàn "tổng lượt xem tăng, followers tăng" mà tránh nói tới tỉ lệ chốt hay lợi nhuận, hãy hỏi lại — không phải vì họ gian dối, mà vì con số tổng tự nó dễ trưng ra mặt đẹp. Người đọc số tỉnh táo luôn hỏi: "thế còn tỉ lệ thì sao?"
+Và cảnh giác một cái bẫy rất hay mắc: người ta thích khoe vanity metric **chính vì** nó luôn đẹp. Khi ai gửi báo cáo toàn "tổng lượt xem tăng, followers tăng" mà tránh nói tới tỉ lệ chốt hay lợi nhuận, hãy hỏi lại - không phải vì họ gian dối, mà vì con số tổng tự nó dễ trưng ra mặt đẹp. Người đọc số tỉnh táo luôn hỏi: "thế còn tỉ lệ thì sao?"
 
 ## Vanity metric trong Semantix
 
-Semantix không bày thêm cho bạn một dashboard lấp lánh để bạn tự ru mình. Ý tưởng ngược lại: bạn **định nghĩa sẵn các chỉ số lái được** — tỉ lệ người xem đặt đơn, doanh thu trên mỗi nghìn lượt — trong tầng ngữ nghĩa, rồi hỏi thẳng chúng thay vì chỉ tổng lượt xem. Con số bạn nhận về là loại lái được, vì đó là chỉ số bạn đã chọn để theo dõi — không nhầm độ phủ với kết quả.
+Semantix không bày thêm cho bạn một dashboard lấp lánh để bạn tự ru mình. Ý tưởng ngược lại: bạn **định nghĩa sẵn các chỉ số lái được** - tỉ lệ người xem đặt đơn, doanh thu trên mỗi nghìn lượt - trong tầng ngữ nghĩa, rồi hỏi thẳng chúng thay vì chỉ tổng lượt xem. Con số bạn nhận về là loại lái được, vì đó là chỉ số bạn đã chọn để theo dõi - không nhầm độ phủ với kết quả.
 
 Bạn định nghĩa "doanh thu trên mỗi khách" hay "tỉ lệ chốt đơn" **một lần** trong tầng ngữ nghĩa, rồi hỏi lại mỗi sáng bằng tiếng Việt: *"Tỉ lệ chốt đơn TikTok tuần này so với trung bình bốn tuần thế nào?"*. Con số trả về luôn là loại lái được, không phải loại để khoe.
 
@@ -93,7 +93,7 @@ Bạn định nghĩa "doanh thu trên mỗi khách" hay "tỉ lệ chốt đơn"
 | "Tổng đơn từ trước tới nay?" | "Tỉ lệ khách quay lại mua lần hai là bao nhiêu?" |
 | "App được tải bao nhiêu lượt?" | "Bao nhiêu người tải rồi còn mở sau 7 ngày?" |
 
-Mẫu số chung của mọi vanity metric: chúng to, chúng đẹp, chúng chỉ đi lên — và chúng không bảo bạn phải làm gì. Mỗi lần một con số khiến bạn thấy tự hào mà không thấy việc cần làm, hãy dừng lại và nghi ngờ nó.
+Mẫu số chung của mọi vanity metric: chúng to, chúng đẹp, chúng chỉ đi lên - và chúng không bảo bạn phải làm gì. Mỗi lần một con số khiến bạn thấy tự hào mà không thấy việc cần làm, hãy dừng lại và nghi ngờ nó.
 
 > Mental model: vanity metric là tiếng vỗ tay; actionable metric là tấm gương. Tiếng vỗ tay làm bạn thấy ngầu nhưng không cho bạn biết phải sửa gì. Tấm gương đôi khi khó nhìn, nhưng nó là thứ duy nhất giúp bạn sửa được mình.
 

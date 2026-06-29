@@ -11,13 +11,13 @@ cover: "/blog/covers/anomaly-detection.svg"
 coverAlt: "Đường doanh thu ổn định trong dải bình thường với một đỉnh đỏ vọt ra ngoài ngưỡng kèm chuông cảnh báo"
 ---
 
-Cuối tháng, bạn ngồi xuống mở báo cáo. Mọi thứ gọn gàng, đẹp đẽ — trừ một dòng: doanh thu kênh TikTok Shop **tụt 35%** so với tháng trước. Bạn dò lại thì phát hiện cái pixel theo dõi đơn hàng đã hỏng từ *ngày mùng 6*. Tức là suốt **ba tuần**, mỗi đồng quảng cáo bạn đổ vào đó đã chảy xuống cống mà không ai hay. Báo cáo cuối tháng không sai. Nó chỉ đến muộn ba tuần.
+Cuối tháng, bạn ngồi xuống mở báo cáo. Mọi thứ gọn gàng, đẹp đẽ - trừ một dòng: doanh thu kênh TikTok Shop **tụt 35%** so với tháng trước. Bạn dò lại thì phát hiện cái pixel theo dõi đơn hàng đã hỏng từ *ngày mùng 6*. Tức là suốt **ba tuần**, mỗi đồng quảng cáo bạn đổ vào đó đã chảy xuống cống mà không ai hay. Báo cáo cuối tháng không sai. Nó chỉ đến muộn ba tuần.
 
-Đây là nghịch lý mà gần như mọi chủ SME đều dính ít nhất một lần: **báo cáo định kỳ luôn kể cho bạn nghe một câu chuyện đã kết thúc.** Bạn không cần biết "tháng vừa rồi có gì bất thường" — bạn cần biết *ngay hôm sự cố bắt đầu*. Và đó chính là việc của **anomaly detection** (phát hiện bất thường — kỹ thuật tự động nhận ra điểm số liệu lệch hẳn so với thường lệ).
+Đây là nghịch lý mà gần như mọi chủ SME đều dính ít nhất một lần: **báo cáo định kỳ luôn kể cho bạn nghe một câu chuyện đã kết thúc.** Bạn không cần biết "tháng vừa rồi có gì bất thường" - bạn cần biết *ngay hôm sự cố bắt đầu*. Và đó chính là việc của **anomaly detection** (phát hiện bất thường - kỹ thuật tự động nhận ra điểm số liệu lệch hẳn so với thường lệ).
 
 ## Vì sao mắt người luôn thua trong cuộc canh số
 
-Chủ shop nào cũng nghĩ mình "để mắt tới số" mỗi ngày. Nhưng hãy thành thật: bạn có *bao nhiêu* con số phải canh? Doanh thu từng kênh, số đơn, tỷ lệ hoàn, tồn kho từng SKU (Stock Keeping Unit — mã định danh từng loại hàng), chi phí ads từng chiến dịch... Cộng lại có khi hàng trăm con số nhảy mỗi ngày. Mắt người không thể quét hết — và càng không thể nhớ "hôm qua con số này ở mức nào để hôm nay biết nó có lệch không".
+Chủ shop nào cũng nghĩ mình "để mắt tới số" mỗi ngày. Nhưng hãy thành thật: bạn có *bao nhiêu* con số phải canh? Doanh thu từng kênh, số đơn, tỷ lệ hoàn, tồn kho từng SKU (Stock Keeping Unit - mã định danh từng loại hàng), chi phí ads từng chiến dịch... Cộng lại có khi hàng trăm con số nhảy mỗi ngày. Mắt người không thể quét hết - và càng không thể nhớ "hôm qua con số này ở mức nào để hôm nay biết nó có lệch không".
 
 **Phát hiện bất thường** lật ngược thế trận. Thay vì bạn ngồi soi từng cột, máy soi *liên tục* cả trăm con số cùng lúc, và **chỉ gọi bạn khi có cái gì đó thật sự lệch khỏi thường lệ**. Bạn chuyển từ vai *người gác đêm phải thức trắng* sang vai *người được đánh thức khi có trộm*.
 
@@ -27,9 +27,9 @@ Chủ shop nào cũng nghĩ mình "để mắt tới số" mỗi ngày. Nhưng h
 
 Bạn không thể biết cái gì là *bất thường* nếu chưa định nghĩa cái gì là *bình thường*. Đây là bước ai cũng bỏ qua, rồi than "cảnh báo loạn xạ".
 
-Hãy nhìn lại 8–12 tuần gần nhất của một chỉ số. Bạn sẽ thấy nó không đứng yên — nó nhấp nhô lên xuống. Khoảng nhấp nhô quen thuộc đó gọi là **dải bình thường** (vùng dao động mà chỉ số vẫn thường xuyên rơi vào). Đường giữa dải là mức nền trung bình; mép trên và mép dưới là **ngưỡng** (lằn ranh: vượt qua thì coi là đáng chú ý).
+Hãy nhìn lại 8–12 tuần gần nhất của một chỉ số. Bạn sẽ thấy nó không đứng yên - nó nhấp nhô lên xuống. Khoảng nhấp nhô quen thuộc đó gọi là **dải bình thường** (vùng dao động mà chỉ số vẫn thường xuyên rơi vào). Đường giữa dải là mức nền trung bình; mép trên và mép dưới là **ngưỡng** (lằn ranh: vượt qua thì coi là đáng chú ý).
 
-Đây chính là nơi [tín hiệu vs nhiễu](/blog/tin-hieu-vs-nhieu/) gặp anomaly detection. Phần lớn dao động hằng ngày chỉ là **nhiễu** — số nhúc nhích vì hàng trăm chuyện vặt ngẫu nhiên, *không mang thông tin gì*. Một con số rơi 8% nhưng vẫn nằm gọn trong dải thì không phải bất thường, đó là cơ thể đang thở bình thường. Bất thường thật là khi con số **vọt hẳn ra ngoài dải** — đó mới là tín hiệu.
+Đây chính là nơi [tín hiệu vs nhiễu](/blog/tin-hieu-vs-nhieu/) gặp anomaly detection. Phần lớn dao động hằng ngày chỉ là **nhiễu** - số nhúc nhích vì hàng trăm chuyện vặt ngẫu nhiên, *không mang thông tin gì*. Một con số rơi 8% nhưng vẫn nằm gọn trong dải thì không phải bất thường, đó là cơ thể đang thở bình thường. Bất thường thật là khi con số **vọt hẳn ra ngoài dải** - đó mới là tín hiệu.
 
 <div class="viz">
 <svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
@@ -60,12 +60,12 @@ Hãy nhìn lại 8–12 tuần gần nhất của một chỉ số. Bạn sẽ t
   <text x="470" y="296" fill="#F87171" font-size="13" font-weight="700">BẤT THƯỜNG</text>
   <text x="150" y="100" fill="#94A3B8" font-size="13" font-weight="600">dao động trong dải bình thường = nhiễu</text>
 </svg>
-<div class="viz-caption">Ví dụ minh họa. Đường xám nhấp nhô trong dải bình thường mỗi ngày — đó là nhiễu, không cần báo. Chỉ điểm đỏ vọt qua ngưỡng dưới mới là bất thường thật, đáng để gọi bạn dậy.</div>
+<div class="viz-caption">Ví dụ minh họa. Đường xám nhấp nhô trong dải bình thường mỗi ngày - đó là nhiễu, không cần báo. Chỉ điểm đỏ vọt qua ngưỡng dưới mới là bất thường thật, đáng để gọi bạn dậy.</div>
 </div>
 
 ## Bước 2: phân biệt bất thường THẬT với báo động giả
 
-Đây là chỗ phần lớn người làm anomaly detection *thất bại*. Nếu bạn đặt ngưỡng quá nhạy — cứ lệch 5% là báo — thì mỗi ngày bạn nhận chục cái cảnh báo về những dao động vô nghĩa. Đó là **báo động giả** (false positive — cảnh báo nổ ra trong khi thực ra mọi thứ vẫn bình thường). Chỉ sau ba ngày, bạn sẽ tắt thông báo. Và thế là cái lần cháy hàng thật, bạn cũng không nhận được tin.
+Đây là chỗ phần lớn người làm anomaly detection *thất bại*. Nếu bạn đặt ngưỡng quá nhạy - cứ lệch 5% là báo - thì mỗi ngày bạn nhận chục cái cảnh báo về những dao động vô nghĩa. Đó là **báo động giả** (false positive - cảnh báo nổ ra trong khi thực ra mọi thứ vẫn bình thường). Chỉ sau ba ngày, bạn sẽ tắt thông báo. Và thế là cái lần cháy hàng thật, bạn cũng không nhận được tin.
 
 Ngược lại, ngưỡng quá lỏng thì bỏ sót bất thường thật. Nghệ thuật nằm ở chỗ chỉnh ngưỡng tới mức: *"nếu cái này nổ ra, tôi thật sự phải xử lý ngay hôm nay."*
 
@@ -76,31 +76,31 @@ Ngược lại, ngưỡng quá lỏng thì bỏ sót bất thường thật. Ngh
 | Một SKU | Bán nhỉnh hơn vài cái | Cháy sạch kho trong 2 giờ giữa đợt sale |
 | Chi phí ads | Nhích lên 8% theo đấu giá | Nhảy gấp 3 lần qua một đêm |
 
-Mẹo thực dụng: đừng so con số hôm nay với *hôm qua* (dễ dính nhiễu cuối tuần). Hãy so với **cùng thứ trong tuần trước** hoặc cùng kỳ — để các dao động lặp lại tự triệt tiêu nhau.
+Mẹo thực dụng: đừng so con số hôm nay với *hôm qua* (dễ dính nhiễu cuối tuần). Hãy so với **cùng thứ trong tuần trước** hoặc cùng kỳ - để các dao động lặp lại tự triệt tiêu nhau.
 
-## Bước 3: cẩn thận với mùa vụ — kẻo bắt nhầm "bất thường" giả
+## Bước 3: cẩn thận với mùa vụ - kẻo bắt nhầm "bất thường" giả
 
-Có một loại bất thường *trông như thật mà không phải thật*: mùa vụ. Doanh thu cuối tuần luôn cao hơn giữa tuần. Ngày đôi (9/9, 10/10, 11/11) trên sàn luôn vọt. Và **Tết** thì bóp méo mọi con số — cao điểm trước Tết, tụt sâu trong Tết, hồi phục chậm sau Tết.
+Có một loại bất thường *trông như thật mà không phải thật*: mùa vụ. Doanh thu cuối tuần luôn cao hơn giữa tuần. Ngày đôi (9/9, 10/10, 11/11) trên sàn luôn vọt. Và **Tết** thì bóp méo mọi con số - cao điểm trước Tết, tụt sâu trong Tết, hồi phục chậm sau Tết.
 
-Nếu hệ thống của bạn ngây thơ so "tuần trong Tết" với "tuần cận Tết", nó sẽ la làng rằng công ty đang sụp — trong khi đó chỉ là nhịp Tết bình thường năm nào cũng có. Một bộ phát hiện bất thường tử tế phải **học được mùa vụ**: nó biết thứ Bảy thường cao, biết ngày đôi thường vọt, nên không coi đó là sự kiện lạ. Cách đơn giản nhất để né bẫy này: luôn đối chiếu theo *cùng kỳ năm ngoái* hoặc cùng vị trí trong chu kỳ, thay vì so với điểm liền trước.
+Nếu hệ thống của bạn ngây thơ so "tuần trong Tết" với "tuần cận Tết", nó sẽ la làng rằng công ty đang sụp - trong khi đó chỉ là nhịp Tết bình thường năm nào cũng có. Một bộ phát hiện bất thường tử tế phải **học được mùa vụ**: nó biết thứ Bảy thường cao, biết ngày đôi thường vọt, nên không coi đó là sự kiện lạ. Cách đơn giản nhất để né bẫy này: luôn đối chiếu theo *cùng kỳ năm ngoái* hoặc cùng vị trí trong chu kỳ, thay vì so với điểm liền trước.
 
-## Bước 4: biến phát hiện thành hành động — cảnh báo realtime
+## Bước 4: biến phát hiện thành hành động - cảnh báo realtime
 
-Phát hiện được bất thường mà thông tin nằm im trong dashboard thì cũng vô dụng — vì sự cố không chọn ngày bạn rảnh để mở app. Mảnh ghép cuối cùng là **đẩy cảnh báo thẳng vào tay bạn**, ngay lúc nó xảy ra.
+Phát hiện được bất thường mà thông tin nằm im trong dashboard thì cũng vô dụng - vì sự cố không chọn ngày bạn rảnh để mở app. Mảnh ghép cuối cùng là **đẩy cảnh báo thẳng vào tay bạn**, ngay lúc nó xảy ra.
 
-Đây là lúc anomaly detection bắt tay với [báo cáo tự động qua Telegram/Zalo](/blog/bao-cao-telegram-zalo/). Khác biệt cốt lõi: báo cáo định kỳ là tiếng tích tắc đều đặn — gửi mỗi sáng *dù có chuyện hay không*. Cảnh báo bất thường là tiếng chuông báo cháy — **hiếm khi kêu, nên mỗi lần kêu bạn phải bật dậy**. Một tin nhắn realtime kiểu *"⚠️ Doanh thu TikTok Shop đến 11h sáng nay mới bằng 28% cùng kỳ tuần trước — kiểm tra ngay pixel theo dõi đơn"* đáng giá hơn cả một báo cáo cuối tháng dài 10 trang.
+Đây là lúc anomaly detection bắt tay với [báo cáo tự động qua Telegram/Zalo](/blog/bao-cao-telegram-zalo/). Khác biệt cốt lõi: báo cáo định kỳ là tiếng tích tắc đều đặn - gửi mỗi sáng *dù có chuyện hay không*. Cảnh báo bất thường là tiếng chuông báo cháy - **hiếm khi kêu, nên mỗi lần kêu bạn phải bật dậy**. Một tin nhắn realtime kiểu *"⚠️ Doanh thu TikTok Shop đến 11h sáng nay mới bằng 28% cùng kỳ tuần trước - kiểm tra ngay pixel theo dõi đơn"* đáng giá hơn cả một báo cáo cuối tháng dài 10 trang.
 
-> Quy tắc vàng: giá trị của một cảnh báo tỷ lệ nghịch với tần suất nó kêu. Đừng để cái chuông báo cháy reo mỗi giờ — nếu không bạn sẽ tự tay tháo pin nó ra, đúng vào hôm có cháy thật.
+> Quy tắc vàng: giá trị của một cảnh báo tỷ lệ nghịch với tần suất nó kêu. Đừng để cái chuông báo cháy reo mỗi giờ - nếu không bạn sẽ tự tay tháo pin nó ra, đúng vào hôm có cháy thật.
 
 ## Phát hiện bất thường trong Semantix
 
-Bạn không cần dựng biểu đồ kiểm soát thủ công hay viết công thức thống kê. Trong Semantix, bạn mô tả mong muốn bằng tiếng Việt — quy trình ba bước:
+Bạn không cần dựng biểu đồ kiểm soát thủ công hay viết công thức thống kê. Trong Semantix, bạn mô tả mong muốn bằng tiếng Việt - quy trình ba bước:
 
 1. **Chỉ ra con số cần canh:** "Theo dõi doanh thu từng kênh và tỷ lệ hoàn hàng mỗi ngày." Semantix tự dựng dải bình thường từ lịch sử của bạn, có tính tới mùa vụ và ngày đôi.
-2. **Đặt mức nhạy:** chọn "chỉ báo khi lệch hẳn ra ngoài dải" thay vì báo mọi dao động — để né báo động giả.
+2. **Đặt mức nhạy:** chọn "chỉ báo khi lệch hẳn ra ngoài dải" thay vì báo mọi dao động - để né báo động giả.
 3. **Chọn nơi nhận:** dán kênh Telegram hoặc nhóm Zalo. Từ đó, máy canh thay bạn 24/7.
 
-Điểm khác biệt: đây không phải một con bot kêu mỗi khi số nhúc nhích. Nó chạy trên cùng định nghĩa nghiệp vụ với mọi câu hỏi khác của bạn — nên "doanh thu" trong cảnh báo đúng bằng "doanh thu" trên dashboard, và nó chỉ làm phiền bạn khi *thật sự đáng phiền*.
+Điểm khác biệt: đây không phải một con bot kêu mỗi khi số nhúc nhích. Nó chạy trên cùng định nghĩa nghiệp vụ với mọi câu hỏi khác của bạn - nên "doanh thu" trong cảnh báo đúng bằng "doanh thu" trên dashboard, và nó chỉ làm phiền bạn khi *thật sự đáng phiền*.
 
 ## Tóm lại
 
@@ -111,7 +111,7 @@ Bạn không cần dựng biểu đồ kiểm soát thủ công hay viết công
 | Báo mọi dao động → spam → tắt thông báo | Chỉ báo khi vượt ngưỡng → mỗi lần đều đáng |
 | Nhầm nhịp Tết thành "công ty sụp" | Học mùa vụ, không báo động giả |
 
-> **Mental model:** anomaly detection là người bảo vệ giỏi nhất không phải người tuần tra liên tục, mà là người ngồi yên trong phòng camera — thuộc lòng cảnh "bình thường" tới mức chỉ cần một khung hình lệch là bật dậy. Việc của bạn không phải nhìn mọi con số, mà là dạy cho hệ thống biết thế nào là bình thường, rồi để nó gọi bạn khi có bất thường thật.
+> **Mental model:** anomaly detection là người bảo vệ giỏi nhất không phải người tuần tra liên tục, mà là người ngồi yên trong phòng camera - thuộc lòng cảnh "bình thường" tới mức chỉ cần một khung hình lệch là bật dậy. Việc của bạn không phải nhìn mọi con số, mà là dạy cho hệ thống biết thế nào là bình thường, rồi để nó gọi bạn khi có bất thường thật.
 
 ---
 

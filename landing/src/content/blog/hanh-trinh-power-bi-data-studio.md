@@ -1,9 +1,9 @@
 ---
-title: "Từ Excel đến Semantix (Phần 2): lên Power BI & Data Studio — dashboard đẹp, nhưng cứng"
+title: "Từ Excel đến Semantix (Phần 2): lên Power BI & Data Studio - dashboard đẹp, nhưng cứng"
 code: "uc-009"
 series: "tu-excel-den-semantix"
 seriesOrder: 2
-description: "Lần đầu mình thấy số của mình thành dashboard tự refresh. Mình tưởng xong. Rồi sếp hỏi một câu mới — và tắc. Phần 2 của series: dashboard đẹp, nhưng cứng."
+description: "Lần đầu mình thấy số của mình thành dashboard tự refresh. Mình tưởng xong. Rồi sếp hỏi một câu mới - và tắc. Phần 2 của series: dashboard đẹp, nhưng cứng."
 pubDate: 2025-04-09
 category: "Câu Chuyện & Use Case"
 readTime: 9
@@ -17,24 +17,24 @@ coverAlt: "Dashboard đẹp với biểu đồ tương tác, nhưng một câu h
 <div class="series-nav">
   <div class="series-nav-title">🧭 Series Từ Excel đến Semantix · 4 phần</div>
   <ol>
-    <li><a href="/blog/hanh-trinh-thoi-excel/">Phần 1 — Những năm bảng tính</a></li>
-    <li class="current">Phần 2 — Lên Power BI &amp; Data Studio</li>
-    <li><a href="/blog/hanh-trinh-superset-metabase/">Phần 3 — Sang Superset &amp; Metabase</a></li>
-    <li><a href="/blog/hanh-trinh-tu-xay-semantix/">Phần 4 — Tự xây Semantix &amp; hấp thụ điểm mạnh</a></li>
+    <li><a href="/blog/hanh-trinh-thoi-excel/">Phần 1 - Những năm bảng tính</a></li>
+    <li class="current">Phần 2 - Lên Power BI &amp; Data Studio</li>
+    <li><a href="/blog/hanh-trinh-superset-metabase/">Phần 3 - Sang Superset &amp; Metabase</a></li>
+    <li><a href="/blog/hanh-trinh-tu-xay-semantix/">Phần 4 - Tự xây Semantix &amp; hấp thụ điểm mạnh</a></li>
   </ol>
 </div>
 
 *Đây là hành trình của chính mình, kể lại theo trí nhớ. Tên công cụ là thật; vài con số là ví dụ để bạn hình dung, không phải số liệu kế toán của ai.*
 
-> 🎬 Mình vừa kể lại trọn hành trình 10 năm đi qua từng công cụ này thành một video — xem trên kênh **Tuấn LA Lab**.
+> 🎬 Mình vừa kể lại trọn hành trình 10 năm đi qua từng công cụ này thành một video - xem trên kênh **Tuấn LA Lab**.
 
-Mình vẫn nhớ buổi chiều mở Power BI lần đầu. Mình kéo cái file Excel doanh thu — cái file mà ở [Phần 1](/blog/hanh-trinh-thoi-excel/) mình đã copy-paste đến phát ốm — thả vào, chọn vài cột, và *bụp*: một biểu đồ cột hiện ra, có thể bấm vào lọc theo tháng, theo chi nhánh, theo nhóm hàng. Mình bấm thử một ô. Cả màn hình đổi theo. Mình ngồi nghịch nửa tiếng như đứa trẻ có đồ chơi mới.
+Mình vẫn nhớ buổi chiều mở Power BI lần đầu. Mình kéo cái file Excel doanh thu - cái file mà ở [Phần 1](/blog/hanh-trinh-thoi-excel/) mình đã copy-paste đến phát ốm - thả vào, chọn vài cột, và *bụp*: một biểu đồ cột hiện ra, có thể bấm vào lọc theo tháng, theo chi nhánh, theo nhóm hàng. Mình bấm thử một ô. Cả màn hình đổi theo. Mình ngồi nghịch nửa tiếng như đứa trẻ có đồ chơi mới.
 
-Hôm đó mình đã thật lòng tin mình vừa giải xong bài toán dữ liệu của công ty. **Mình đã nhầm — nhưng phải mất gần một năm mình mới hiểu mình nhầm ở đâu.**
+Hôm đó mình đã thật lòng tin mình vừa giải xong bài toán dữ liệu của công ty. **Mình đã nhầm - nhưng phải mất gần một năm mình mới hiểu mình nhầm ở đâu.**
 
 ## Cú "wow" đầu tiên: số của mình cuối cùng cũng trông chuyên nghiệp
 
-Phải công bằng: bước lên BI dashboard (Business Intelligence — bảng số trực quan, tương tác) là một nâng cấp *thật*, không phải ảo giác. Sau nhiều năm sống trong bảng tính tĩnh, lần đầu tiên mình có:
+Phải công bằng: bước lên BI dashboard (Business Intelligence - bảng số trực quan, tương tác) là một nâng cấp *thật*, không phải ảo giác. Sau nhiều năm sống trong bảng tính tĩnh, lần đầu tiên mình có:
 
 - **Biểu đồ tương tác.** Không còn ảnh chụp chết cứng dán vào slide. Sếp bấm vào "Quý 2" là cả dashboard lọc theo, không cần mình dựng lại.
 - **Tự refresh.** Mình nối Power BI vào file trên SharePoint, đặt lịch làm mới. Sáng ra số đã mới, mình không phải mở file ra copy lúc 7 giờ.
@@ -42,13 +42,13 @@ Phải công bằng: bước lên BI dashboard (Business Intelligence — bảng
 
 Và càng dùng, mình càng thấy nó mạnh hơn vẻ ngoài. Đây là chỗ mình muốn nói rõ, vì sau này mình đi tự xây nền tảng của riêng mình, chính những điểm mạnh này là thứ mình cố giữ lại chứ không vứt đi.
 
-## Những điểm mạnh thật mà mình học được — và còn nể tới giờ
+## Những điểm mạnh thật mà mình học được - và còn nể tới giờ
 
-Thứ làm mình đổi cách nghĩ là **data model** (mô hình hoá dữ liệu — cách định nghĩa các bảng dữ liệu liên kết với nhau ra sao). Trước đó mình gộp mọi thứ vào một sheet phẳng khổng lồ. Power BI dạy mình tách bảng bán hàng, bảng sản phẩm, bảng chi nhánh ra rồi *nối* chúng bằng khóa chung. Tự nhiên một con số có thể nhìn từ chục góc mà không phải nhân bản dữ liệu. Đó là một bài học kiến trúc mình mang theo mãi.
+Thứ làm mình đổi cách nghĩ là **data model** (mô hình hoá dữ liệu - cách định nghĩa các bảng dữ liệu liên kết với nhau ra sao). Trước đó mình gộp mọi thứ vào một sheet phẳng khổng lồ. Power BI dạy mình tách bảng bán hàng, bảng sản phẩm, bảng chi nhánh ra rồi *nối* chúng bằng khóa chung. Tự nhiên một con số có thể nhìn từ chục góc mà không phải nhân bản dữ liệu. Đó là một bài học kiến trúc mình mang theo mãi.
 
-Rồi tới **measure** (đo lường — một chỉ số được tính bằng công thức, ví dụ "tỷ lệ tăng trưởng so với cùng kỳ") viết bằng **DAX** (ngôn ngữ công thức riêng của Power BI để tạo measure). Lần đầu viết được một measure tính "doanh thu lũy kế từ đầu năm" rồi thả vào biểu đồ nào cũng đúng, mình thấy phục thật sự. Định nghĩa *một lần*, dùng *khắp nơi* — đó là một ý tưởng đẹp.
+Rồi tới **measure** (đo lường - một chỉ số được tính bằng công thức, ví dụ "tỷ lệ tăng trưởng so với cùng kỳ") viết bằng **DAX** (ngôn ngữ công thức riêng của Power BI để tạo measure). Lần đầu viết được một measure tính "doanh thu lũy kế từ đầu năm" rồi thả vào biểu đồ nào cũng đúng, mình thấy phục thật sự. Định nghĩa *một lần*, dùng *khắp nơi* - đó là một ý tưởng đẹp.
 
-Chưa kể khả năng **kết nối nhiều nguồn**: kéo dữ liệu từ SQL, từ Excel, từ Google Sheets về cùng một chỗ; và một thư viện biểu đồ phong phú, tùy biến tới từng pixel. Về khoản trực quan hoá thuần túy, mình vẫn xếp Power BI và Tableau ở chiếu trên — mình đã viết kỹ chỗ này trong bài [Semantix vs BI dashboard truyền thống](/blog/vs-powerbi-tableau/), nên ở đây mình không lặp lại.
+Chưa kể khả năng **kết nối nhiều nguồn**: kéo dữ liệu từ SQL, từ Excel, từ Google Sheets về cùng một chỗ; và một thư viện biểu đồ phong phú, tùy biến tới từng pixel. Về khoản trực quan hoá thuần túy, mình vẫn xếp Power BI và Tableau ở chiếu trên - mình đã viết kỹ chỗ này trong bài [Semantix vs BI dashboard truyền thống](/blog/vs-powerbi-tableau/), nên ở đây mình không lặp lại.
 
 > Mình không kể chuyện này để dìm Power BI. Power BI là một công cụ tuyệt vời cho đúng việc nó sinh ra: dựng báo cáo chuẩn hoá, đẹp, sâu, cho người biết dùng nó. Vấn đề của mình không phải nó *yếu*. Vấn đề là nó *không hợp với cách công ty mình thực sự hỏi*.
 
@@ -56,28 +56,28 @@ Chưa kể khả năng **kết nối nhiều nguồn**: kéo dữ liệu từ SQ
 
 Bức tường không đổ sập. Nó lộ ra từ từ, qua những buổi họp giống hệt nhau.
 
-Mình dựng một dashboard doanh thu rất ngon: theo tháng, theo chi nhánh, theo nhóm hàng. Họp tháng, anh giám đốc nhìn một lúc rồi hỏi: *"Cái đợt sụt ở chi nhánh Đà Nẵng tháng trước — là do ít khách tới, hay khách tới mà mua ít hơn?"*
+Mình dựng một dashboard doanh thu rất ngon: theo tháng, theo chi nhánh, theo nhóm hàng. Họp tháng, anh giám đốc nhìn một lúc rồi hỏi: *"Cái đợt sụt ở chi nhánh Đà Nẵng tháng trước - là do ít khách tới, hay khách tới mà mua ít hơn?"*
 
-Trên dashboard không có câu trả lời đó. Mình chưa dựng lát cắt "số hóa đơn" với "giá trị trung bình mỗi hóa đơn". Câu của anh ấy hoàn toàn hợp lý — chỉ là *mới*. Và một dashboard, dù đẹp đến mấy, **chỉ trả lời được những câu hỏi đã được dựng sẵn từ trước.** Mỗi câu nằm ngoài khung đều đẩy quả bóng về lại sân của mình.
+Trên dashboard không có câu trả lời đó. Mình chưa dựng lát cắt "số hóa đơn" với "giá trị trung bình mỗi hóa đơn". Câu của anh ấy hoàn toàn hợp lý - chỉ là *mới*. Và một dashboard, dù đẹp đến mấy, **chỉ trả lời được những câu hỏi đã được dựng sẵn từ trước.** Mỗi câu nằm ngoài khung đều đẩy quả bóng về lại sân của mình.
 
-Mình nói: "Để em về dựng thêm." Về, mình mở Power BI, thêm bảng, viết thêm measure DAX, sửa data model, canh lại layout. Mất nửa ngày. Họp sau, anh ấy hài lòng — rồi hỏi câu *tiếp theo*, cũng hợp lý, cũng mới, cũng nằm ngoài. Và vòng lặp bắt đầu lại.
+Mình nói: "Để em về dựng thêm." Về, mình mở Power BI, thêm bảng, viết thêm measure DAX, sửa data model, canh lại layout. Mất nửa ngày. Họp sau, anh ấy hài lòng - rồi hỏi câu *tiếp theo*, cũng hợp lý, cũng mới, cũng nằm ngoài. Và vòng lặp bắt đầu lại.
 
 ## Mình nhận ra mình vừa trở thành nút cổ chai mới
 
-Đây là chỗ làm mình lạnh người khi nhìn lại. Ở thời Excel, nút cổ chai là *cái file* — chậm, dễ sai. Mình tưởng lên BI là gỡ được nút đó. Hóa ra mình chỉ **dời nút cổ chai từ cái file sang chính mình.**
+Đây là chỗ làm mình lạnh người khi nhìn lại. Ở thời Excel, nút cổ chai là *cái file* - chậm, dễ sai. Mình tưởng lên BI là gỡ được nút đó. Hóa ra mình chỉ **dời nút cổ chai từ cái file sang chính mình.**
 
-Mọi câu hỏi mới của cả công ty đều phải đi qua người biết dựng dashboard — và người đó là mình (hoặc một bạn analyst nếu công ty đủ lớn để thuê). Sếp không tự hỏi được. Bạn nghiệp vụ ở kho, ở phòng bán hàng, muốn biết một con số là phải nhắn cho mình rồi *chờ*. DAX và mô hình hoá thì dốc — mình học được vì mình mê, nhưng không thể bắt anh trưởng phòng kinh doanh đi học DAX để tự hỏi doanh thu của chính phòng anh ấy.
+Mọi câu hỏi mới của cả công ty đều phải đi qua người biết dựng dashboard - và người đó là mình (hoặc một bạn analyst nếu công ty đủ lớn để thuê). Sếp không tự hỏi được. Bạn nghiệp vụ ở kho, ở phòng bán hàng, muốn biết một con số là phải nhắn cho mình rồi *chờ*. DAX và mô hình hoá thì dốc - mình học được vì mình mê, nhưng không thể bắt anh trưởng phòng kinh doanh đi học DAX để tự hỏi doanh thu của chính phòng anh ấy.
 
-Mình đã đọc đâu đó cụm "self-service analytics" (phân tích dữ liệu tự phục vụ — người cần số tự lấy được số mà không phải nhờ ai) và thấy nó mô tả đúng thứ mình *thiếu*. Dashboard được quảng cáo là self-service, nhưng cái "self" đó chỉ đúng tới mức *lọc và bấm trong khung đã dựng*. Hễ bước ra ngoài khung là hết tự phục vụ — lại phải nhờ người. Mình viết hẳn một bài riêng về khoảng cách này: [self-service analytics thật sự nghĩa là gì](/blog/self-service-analytics/).
+Mình đã đọc đâu đó cụm "self-service analytics" (phân tích dữ liệu tự phục vụ - người cần số tự lấy được số mà không phải nhờ ai) và thấy nó mô tả đúng thứ mình *thiếu*. Dashboard được quảng cáo là self-service, nhưng cái "self" đó chỉ đúng tới mức *lọc và bấm trong khung đã dựng*. Hễ bước ra ngoài khung là hết tự phục vụ - lại phải nhờ người. Mình viết hẳn một bài riêng về khoảng cách này: [self-service analytics thật sự nghĩa là gì](/blog/self-service-analytics/).
 
 Đây là bảng mình tự tổng kết lại sau chặng đó:
 
 | | Lên BI dashboard được thêm gì | Nhưng vẫn vướng gì |
 |---|---|---|
 | **Hình thức** | Biểu đồ tương tác, tự refresh, link chia sẻ | Chỉ đẹp với câu hỏi *đã* dựng sẵn |
-| **Câu hỏi mới** | — | Phải nhờ người dựng dashboard, chờ nửa ngày đến vài ngày |
+| **Câu hỏi mới** | - | Phải nhờ người dựng dashboard, chờ nửa ngày đến vài ngày |
 | **Người nghiệp vụ / sếp** | Bấm lọc trong khung có sẵn | Không tự hỏi câu ngoài khung được |
-| **Kỹ năng cần** | DAX, mô hình hoá dữ liệu — dốc | Không thể bắt cả công ty đi học |
+| **Kỹ năng cần** | DAX, mô hình hoá dữ liệu - dốc | Không thể bắt cả công ty đi học |
 | **Phụ thuộc con người** | Dời từ "cái file" sang "một-hai người dựng dashboard" | Vẫn là một nút cổ chai |
 | **Chi phí** | Per-user license (trả phí theo từng người dùng) | Càng nhiều người xem càng đắt |
 
@@ -85,20 +85,20 @@ Mình đã đọc đâu đó cụm "self-service analytics" (phân tích dữ li
 
 Hai chuyện cụ thể khiến mình bắt đầu nghĩ phải có đường khác.
 
-Thứ nhất là **per-user license** (mô hình tính tiền theo từng người dùng). Power BI Pro tính tiền theo đầu người mỗi tháng. Mình muốn cho cả 20 người trong công ty đều xem được số — nhưng mỗi cái đầu thêm vào là thêm một khoản phí cố định hằng tháng. Nghịch lý: mình *càng muốn dân chủ hóa dữ liệu*, hóa đơn càng phạt mình. Cuối cùng mình cấp quyền nhỏ giọt cho vài người, và thế là dữ liệu lại quay về nằm trong tay số ít.
+Thứ nhất là **per-user license** (mô hình tính tiền theo từng người dùng). Power BI Pro tính tiền theo đầu người mỗi tháng. Mình muốn cho cả 20 người trong công ty đều xem được số - nhưng mỗi cái đầu thêm vào là thêm một khoản phí cố định hằng tháng. Nghịch lý: mình *càng muốn dân chủ hóa dữ liệu*, hóa đơn càng phạt mình. Cuối cùng mình cấp quyền nhỏ giọt cho vài người, và thế là dữ liệu lại quay về nằm trong tay số ít.
 
-Thứ hai là **Data Studio khi data lớn dần**. Báo cáo miễn phí, link đẹp, ai cũng xem được — tuyệt cho lúc đầu. Nhưng khi mình nối nhiều nguồn và dữ liệu phình lên, nó bắt đầu chậm, hay lỗi quá hạn (timeout), và những phép tính phức tạp thì đụng trần. Cái miễn phí có cái giá của nó, chỉ là cái giá đó trả bằng thời gian chờ và sự bực mình.
+Thứ hai là **Data Studio khi data lớn dần**. Báo cáo miễn phí, link đẹp, ai cũng xem được - tuyệt cho lúc đầu. Nhưng khi mình nối nhiều nguồn và dữ liệu phình lên, nó bắt đầu chậm, hay lỗi quá hạn (timeout), và những phép tính phức tạp thì đụng trần. Cái miễn phí có cái giá của nó, chỉ là cái giá đó trả bằng thời gian chờ và sự bực mình.
 
 ## Điều mình cuối cùng cũng hiểu ra
 
-Ngồi lại sau gần một năm, mình gọi tên được thứ làm mình day dứt. Công cụ trong tay mình đã **mạnh hơn hẳn** thời Excel — model tốt hơn, biểu đồ đẹp hơn, tự động hơn. Vậy mà cảm giác bất lực thì *y hệt*: người cần câu trả lời vẫn không tự lấy được câu trả lời.
+Ngồi lại sau gần một năm, mình gọi tên được thứ làm mình day dứt. Công cụ trong tay mình đã **mạnh hơn hẳn** thời Excel - model tốt hơn, biểu đồ đẹp hơn, tự động hơn. Vậy mà cảm giác bất lực thì *y hệt*: người cần câu trả lời vẫn không tự lấy được câu trả lời.
 
-> Bài học của chặng này: nâng cấp công cụ không tự động trả "quyền hỏi" về tay người cần. Một dashboard đẹp vẫn là một cái khung — và mọi câu hỏi đáng giá nhất của doanh nghiệp đều có thói quen rơi ra *ngoài* khung.
+> Bài học của chặng này: nâng cấp công cụ không tự động trả "quyền hỏi" về tay người cần. Một dashboard đẹp vẫn là một cái khung - và mọi câu hỏi đáng giá nhất của doanh nghiệp đều có thói quen rơi ra *ngoài* khung.
 
-Mình không cần một dashboard đẹp hơn. Mình cần một thứ cho phép anh trưởng phòng tự gõ câu hỏi của anh ấy — bằng tiếng Việt, ngay lúc câu hỏi nảy ra — mà không phải xếp hàng sau mình, và không phải đi học DAX. Lúc đó mình chưa biết thứ đó tên là gì. Mình chỉ biết mình phải đi tìm sự **tự chủ**.
+Mình không cần một dashboard đẹp hơn. Mình cần một thứ cho phép anh trưởng phòng tự gõ câu hỏi của anh ấy - bằng tiếng Việt, ngay lúc câu hỏi nảy ra - mà không phải xếp hàng sau mình, và không phải đi học DAX. Lúc đó mình chưa biết thứ đó tên là gì. Mình chỉ biết mình phải đi tìm sự **tự chủ**.
 
-Và bước đầu tiên của hành trình tìm tự chủ ấy đưa mình tới thế giới mã nguồn mở — Superset, Metabase. Đó là [Phần 3](/blog/hanh-trinh-superset-metabase/): nơi mình giành lại quyền kiểm soát, nhưng phải đánh đổi bằng những thứ mình không ngờ tới.
+Và bước đầu tiên của hành trình tìm tự chủ ấy đưa mình tới thế giới mã nguồn mở - Superset, Metabase. Đó là [Phần 3](/blog/hanh-trinh-superset-metabase/): nơi mình giành lại quyền kiểm soát, nhưng phải đánh đổi bằng những thứ mình không ngờ tới.
 
 ---
 
-*Bạn cũng đang kẹt ở chỗ "dashboard đẹp nhưng mỗi câu hỏi mới lại phải nhờ người"? Hãy để người cần số tự hỏi bằng tiếng Việt — [Dùng thử Semantix miễn phí.](/docs/vi/free-trial/) Rồi đọc tiếp [Phần 3 — Sang Superset &amp; Metabase](/blog/hanh-trinh-superset-metabase/) để xem chặng đường tìm tự chủ của mình.*
+*Bạn cũng đang kẹt ở chỗ "dashboard đẹp nhưng mỗi câu hỏi mới lại phải nhờ người"? Hãy để người cần số tự hỏi bằng tiếng Việt - [Dùng thử Semantix miễn phí.](/docs/vi/free-trial/) Rồi đọc tiếp [Phần 3 - Sang Superset &amp; Metabase](/blog/hanh-trinh-superset-metabase/) để xem chặng đường tìm tự chủ của mình.*

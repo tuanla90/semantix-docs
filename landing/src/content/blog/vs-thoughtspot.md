@@ -11,19 +11,19 @@ cover: "/blog/covers/vs-thoughtspot.svg"
 coverAlt: "Bản đồ định vị: Semantix ở góc AI cao và hợp túi tiền SME"
 ---
 
-Trong cả bài so sánh này, ThoughtSpot là đối thủ tôi tôn trọng nhất — vì chúng tôi tin vào cùng một điều: **tương lai của BI (Business Intelligence — biến dữ liệu thành quyết định) là hỏi bằng ngôn ngữ tự nhiên, không phải kéo-thả dashboard (bảng số trực quan).** ThoughtSpot tiên phong ý tưởng "tìm kiếm dữ liệu như tìm Google" từ rất sớm, và sản phẩm của họ tinh xảo, trưởng thành, có vô số khách hàng enterprise (doanh nghiệp lớn) lớn.
+Trong cả bài so sánh này, ThoughtSpot là đối thủ tôi tôn trọng nhất - vì chúng tôi tin vào cùng một điều: **tương lai của BI (Business Intelligence - biến dữ liệu thành quyết định) là hỏi bằng ngôn ngữ tự nhiên, không phải kéo-thả dashboard (bảng số trực quan).** ThoughtSpot tiên phong ý tưởng "tìm kiếm dữ liệu như tìm Google" từ rất sớm, và sản phẩm của họ tinh xảo, trưởng thành, có vô số khách hàng enterprise (doanh nghiệp lớn) lớn.
 
 Nên đây không phải bài "vì sao chúng tôi tốt hơn". Đây là bài về **bạn là ai**. Vì với một doanh nghiệp Việt Nam vừa và nhỏ, hai bức tường hiện ra rất nhanh: cái giá, và mô hình triển khai.
 
 ## Điểm chung: cả hai đặt cược vào AI hỏi-đáp
 
-Khác với Power BI hay Metabase (sinh ra trong kỷ nguyên dashboard rồi gắn AI sau), cả ThoughtSpot và Semantix đều **AI-native từ gốc** (thiết kế lấy AI làm lõi ngay từ đầu): bạn hỏi, hệ thống hiểu ý định, sinh truy vấn, trả lời kèm insight (phát hiện đáng chú ý). Cả hai đều có semantic layer (tầng định nghĩa nghiệp vụ dùng chung) để neo AI vào nghĩa nghiệp vụ, đều chống ảo giác, đều hướng tới người dùng không biết SQL (Structured Query Language — ngôn ngữ truy vấn cơ sở dữ liệu).
+Khác với Power BI hay Metabase (sinh ra trong kỷ nguyên dashboard rồi gắn AI sau), cả ThoughtSpot và Semantix đều **AI-native từ gốc** (thiết kế lấy AI làm lõi ngay từ đầu): bạn hỏi, hệ thống hiểu ý định, sinh truy vấn, trả lời kèm insight (phát hiện đáng chú ý). Cả hai đều có semantic layer (tầng định nghĩa nghiệp vụ dùng chung) để neo AI vào nghĩa nghiệp vụ, đều chống ảo giác, đều hướng tới người dùng không biết SQL (Structured Query Language - ngôn ngữ truy vấn cơ sở dữ liệu).
 
 Cần nói thẳng: ở độ chín và độ bóng bẩy của trải nghiệm, ThoughtSpot có lợi thế của người đi trước nhiều năm và hệ sinh thái tích hợp enterprise rộng. Đó là sự thật.
 
 ## Bức tường thứ nhất: cái giá
 
-Đây là nơi con đường rẽ đôi. ThoughtSpot định giá theo chuẩn enterprise — ước tính **$5.000–20.000+/tháng**. Với một tập đoàn Mỹ, đó là khoản nhỏ. Với một SME Việt Nam, đó là khoản khiến cuộc trò chuyện kết thúc trước khi bắt đầu.
+Đây là nơi con đường rẽ đôi. ThoughtSpot định giá theo chuẩn enterprise - ước tính **$5.000–20.000+/tháng**. Với một tập đoàn Mỹ, đó là khoản nhỏ. Với một SME Việt Nam, đó là khoản khiến cuộc trò chuyện kết thúc trước khi bắt đầu.
 
 <div class="viz">
 <svg viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
@@ -47,20 +47,20 @@ Cần nói thẳng: ở độ chín và độ bóng bẩy của trải nghiệm,
   <circle cx="500" cy="130" r="26" fill="none" stroke="#4ADE80" stroke-width="2" opacity="0.5"/>
   <text x="500" y="108" fill="#86EFAC" font-size="15" font-weight="800" text-anchor="middle">Semantix</text>
 </svg>
-<div class="viz-caption">Bản đồ định vị BI. Góc trên-phải — AI-native cao mà vẫn hợp túi tiền SME — gần như bỏ trống. Đó là chỗ Semantix đứng.</div>
+<div class="viz-caption">Bản đồ định vị BI. Góc trên-phải - AI-native cao mà vẫn hợp túi tiền SME - gần như bỏ trống. Đó là chỗ Semantix đứng.</div>
 </div>
 
-Semantix tính theo instance (mỗi bản cài đặt riêng, không per-user — không tính theo từng người dùng) với chi phí AI biến đổi — rẻ hơn nhiều lần. Cùng triết lý AI, nhưng đặt ở một mức giá mà một cửa hàng đa kênh hay một công ty 50 người thực sự với tới.
+Semantix tính theo instance (mỗi bản cài đặt riêng, không per-user - không tính theo từng người dùng) với chi phí AI biến đổi - rẻ hơn nhiều lần. Cùng triết lý AI, nhưng đặt ở một mức giá mà một cửa hàng đa kênh hay một công ty 50 người thực sự với tới.
 
 ## Bức tường thứ hai: mô hình triển khai
 
 Ngoài giá, ba khác biệt về *cách vận hành* quan trọng với doanh nghiệp Việt:
 
-1. **Đa nhà cung cấp AI & BYOK (Bring Your Own Key — tự mang khóa AI của riêng mình).** ThoughtSpot gắn với engine (cỗ máy lõi) AI của họ. Semantix cho bạn chọn GPT-4o, Claude, Gemini, DeepSeek — hoặc mang khóa API (khóa truy cập dịch vụ AI) của riêng bạn (BYOK), tránh khóa nhà cung cấp và tối ưu chi phí (chuyển sang Gemini Flash tiết kiệm phần lớn).
-2. **Self-hosted (tự chạy trên hạ tầng của mình) & chủ quyền dữ liệu.** Semantix có thể chạy trên hạ tầng của bạn, dữ liệu không rời server — quan trọng với ngành nhạy cảm (tài chính, y tế) và yêu cầu tuân thủ nội địa.
-3. **Tối ưu tiếng Việt.** Hiểu "quý vừa rồi", "đầu năm đến giờ", ngữ cảnh kinh doanh Việt — thay vì một sản phẩm tiếng-Anh-trước.
+1. **Đa nhà cung cấp AI & BYOK (Bring Your Own Key - tự mang khóa AI của riêng mình).** ThoughtSpot gắn với engine (cỗ máy lõi) AI của họ. Semantix cho bạn chọn GPT-4o, Claude, Gemini, DeepSeek - hoặc mang khóa API (khóa truy cập dịch vụ AI) của riêng bạn (BYOK), tránh khóa nhà cung cấp và tối ưu chi phí (chuyển sang Gemini Flash tiết kiệm phần lớn).
+2. **Self-hosted (tự chạy trên hạ tầng của mình) & chủ quyền dữ liệu.** Semantix có thể chạy trên hạ tầng của bạn, dữ liệu không rời server - quan trọng với ngành nhạy cảm (tài chính, y tế) và yêu cầu tuân thủ nội địa.
+3. **Tối ưu tiếng Việt.** Hiểu "quý vừa rồi", "đầu năm đến giờ", ngữ cảnh kinh doanh Việt - thay vì một sản phẩm tiếng-Anh-trước.
 
-> Điểm thứ ba này tôi thấm hơn cả. Ở một ngân hàng tôi đang làm, lúc POC semantic layer tôi từng tự tay dựng một lớp [text-to-sql](/blog/text-to-sql/) cho người dùng nghiệp vụ hỏi dữ liệu bằng tiếng Việt. Vướng mắc lớn nhất không phải sinh SQL, mà là tiếng Việt: "quý vừa rồi", "đầu kỳ", "dư nợ nhóm 2" — mỗi cụm là một quy ước nghiệp vụ phải gắn vào semantic layer, không phải dịch từng chữ. Một sản phẩm tiếng-Anh-trước sẽ hiểu cú pháp nhưng trượt ngữ cảnh. Với nghiệp vụ banking vốn đã phức tạp, cái khoảng trượt đó đủ để một con số đúng cú pháp nói dối.
+> Điểm thứ ba này tôi thấm hơn cả. Ở một ngân hàng tôi đang làm, lúc POC semantic layer tôi từng tự tay dựng một lớp [text-to-sql](/blog/text-to-sql/) cho người dùng nghiệp vụ hỏi dữ liệu bằng tiếng Việt. Vướng mắc lớn nhất không phải sinh SQL, mà là tiếng Việt: "quý vừa rồi", "đầu kỳ", "dư nợ nhóm 2" - mỗi cụm là một quy ước nghiệp vụ phải gắn vào semantic layer, không phải dịch từng chữ. Một sản phẩm tiếng-Anh-trước sẽ hiểu cú pháp nhưng trượt ngữ cảnh. Với nghiệp vụ banking vốn đã phức tạp, cái khoảng trượt đó đủ để một con số đúng cú pháp nói dối.
 
 ## So sánh thẳng
 
@@ -71,7 +71,7 @@ Ngoài giá, ba khác biệt về *cách vận hành* quan trọng với doanh n
 | Tích hợp enterprise | **Rộng, lâu đời** | Đang mở rộng |
 | Giá (ước tính) | $5.000–20.000+/tháng | Thấp hơn nhiều lần, theo instance |
 | Nhà cung cấp AI | Engine riêng | Đa nhà cung cấp + BYOK |
-| Self-hosted / chủ quyền dữ liệu | Hạn chế (cloud-first — ưu tiên chạy trên cloud nhà cung cấp) | Có |
+| Self-hosted / chủ quyền dữ liệu | Hạn chế (cloud-first - ưu tiên chạy trên cloud nhà cung cấp) | Có |
 | Tối ưu tiếng Việt | Không | Có |
 | Đối tượng | Enterprise lớn, toàn cầu | SME & doanh nghiệp Việt |
 
@@ -84,7 +84,7 @@ Ngoài giá, ba khác biệt về *cách vận hành* quan trọng với doanh n
 
 ## Mental model (khung tư duy) để quyết định
 
-> Với BI truyền thống, câu hỏi là "dashboard hay AI?". Với ThoughtSpot, cả hai đã cùng chọn AI — nên câu hỏi rút gọn lại thành: **"sản phẩm AI này được định giá và triển khai cho ai?"** ThoughtSpot được thiết kế cho enterprise toàn cầu. Semantix được thiết kế cho doanh nghiệp Việt vừa và nhỏ — cùng một niềm tin vào AI, ở một mức giá và một mô hình mà bạn dùng được hôm nay.
+> Với BI truyền thống, câu hỏi là "dashboard hay AI?". Với ThoughtSpot, cả hai đã cùng chọn AI - nên câu hỏi rút gọn lại thành: **"sản phẩm AI này được định giá và triển khai cho ai?"** ThoughtSpot được thiết kế cho enterprise toàn cầu. Semantix được thiết kế cho doanh nghiệp Việt vừa và nhỏ - cùng một niềm tin vào AI, ở một mức giá và một mô hình mà bạn dùng được hôm nay.
 
 ---
 

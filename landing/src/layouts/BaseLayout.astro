@@ -9,8 +9,8 @@ export interface Props {
   jsonLd?: Record<string, any>[];
 }
 const {
-  title = 'Semantix — Hỏi Dữ Liệu Bằng Tiếng Việt, Nhận Kết Quả Ngay Lập Tức',
-  description = 'Semantix là nền tảng AI phân tích dữ liệu cho doanh nghiệp Việt Nam. Kết nối database, hỏi bằng ngôn ngữ tự nhiên, nhận biểu đồ và insight tức thì — không cần SQL.',
+  title = 'Tuấn LA Lab — Data & AI cho người Việt',
+  description = 'Tuấn LA Lab — nơi Lê Anh Tuấn gỡ từng khái niệm data cho dân công sở Việt bằng chuyện thật, và xây Semantix để biến tư duy đó thành công cụ.',
   image = DEFAULT_OG_IMAGE,
   type = 'website',
   jsonLd = [],
@@ -46,6 +46,7 @@ const allLd: Record<string, any>[] = [
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
   <meta name="robots" content="index,follow" />
+  <link rel="alternate" type="application/rss+xml" title="Tuấn LA Lab — Blog" href="/rss.xml" />
 
   <!-- Open Graph -->
   <meta property="og:type" content={type} />
@@ -141,6 +142,7 @@ const allLd: Record<string, any>[] = [
       <h4>Kết Nối</h4>
       <ul>
         <li><a href="https://www.youtube.com/@mastergoogletools" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="/rss.xml" target="_blank" rel="noopener">RSS</a></li>
         <li><a href="mailto:hello@semantix.vn">hello@semantix.vn</a></li>
         <li><a href="#">Zalo OA</a></li>
         <li><a href="/about">Về mình</a></li>

@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
 // Sitemap tĩnh sinh lúc build (output:'static'). Trang tĩnh + mọi bài blog.
-const STATIC_PATHS = ['/', '/solutions/', '/pricing/', '/about/', '/blog/', '/blog/tu-dien-thuat-ngu/'];
+const STATIC_PATHS = ['/', '/semantix/', '/video/', '/solutions/', '/pricing/', '/about/', '/blog/', '/blog/tu-dien-thuat-ngu/'];
 
 export const GET: APIRoute = async ({ site }) => {
   const base = site ?? new URL('https://semantix.vn');

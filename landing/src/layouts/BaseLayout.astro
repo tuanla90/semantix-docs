@@ -85,17 +85,22 @@ const allLd: Record<string, any>[] = [
       </div>
       <span class="logo-text">Tuấn <span style="color:var(--primary)">LA</span> Lab</span>
     </a>
-    <ul class="nav-links">
-      <li><a href="/blog"      class={path.startsWith('/blog')      ? 'nav-active' : ''}>Blog</a></li>
-      <li><a href="/video"     class={path.startsWith('/video')     ? 'nav-active' : ''}>Video</a></li>
-      <li><a href="/semantix"  class={path.startsWith('/semantix') || path.startsWith('/solutions') || path.startsWith('/pricing') ? 'nav-active' : ''}>Semantix</a></li>
-      <li><a href="/huong-dan" class={path.startsWith('/huong-dan') ? 'nav-active' : ''}>Hướng Dẫn</a></li>
-      <li><a href="/about"     class={path.startsWith('/about')     ? 'nav-active' : ''}>Về Mình</a></li>
-      <li><a href={DOCS_URL} target="_blank" rel="noopener">Tài Liệu</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="/video" class="btn btn-ghost" style="font-size:13px">Xem Video</a>
-      <a href="/semantix" class="btn btn-primary">Dùng Thử Semantix</a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="nav-menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+      <ul class="nav-links">
+        <li><a href="/blog"      class={path.startsWith('/blog')      ? 'nav-active' : ''}>Blog</a></li>
+        <li><a href="/video"     class={path.startsWith('/video')     ? 'nav-active' : ''}>Video</a></li>
+        <li><a href="/semantix"  class={path.startsWith('/semantix') || path.startsWith('/solutions') || path.startsWith('/pricing') ? 'nav-active' : ''}>Semantix</a></li>
+        <li><a href="/huong-dan" class={path.startsWith('/huong-dan') ? 'nav-active' : ''}>Hướng Dẫn</a></li>
+        <li><a href="/about"     class={path.startsWith('/about')     ? 'nav-active' : ''}>Về Mình</a></li>
+        <li><a href={DOCS_URL} target="_blank" rel="noopener">Tài Liệu</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/video" class="btn btn-ghost" style="font-size:13px">Xem Video</a>
+        <a href="/semantix" class="btn btn-primary">Dùng Thử Semantix</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -201,6 +206,21 @@ const allLd: Record<string, any>[] = [
     el.style.transition = 'opacity .5s ease, transform .5s ease';
     fadeObs.observe(el);
   });
+
+  // Mobile menu (hamburger) toggle
+  const navEl = document.querySelector('nav');
+  const navToggle = document.getElementById('nav-toggle');
+  const closeMenu = () => {
+    navEl?.classList.remove('open');
+    navToggle?.setAttribute('aria-expanded', 'false');
+  };
+  navToggle?.addEventListener('click', () => {
+    const open = navEl?.classList.toggle('open') ?? false;
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.querySelectorAll('#nav-menu a').forEach(a => a.addEventListener('click', closeMenu));
+  window.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); });
 </script>
 
 </body>

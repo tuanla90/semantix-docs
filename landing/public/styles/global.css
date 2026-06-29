@@ -95,6 +95,15 @@ nav {
   align-items: center;
   gap: 10px;
 }
+.nav-menu { display: contents; }
+.nav-toggle {
+  display: none;
+  align-items: center; justify-content: center;
+  width: 40px; height: 40px; margin: -8px -8px -8px 0;
+  background: none; border: none; cursor: pointer;
+  color: var(--dark); border-radius: 8px;
+}
+.nav-toggle:hover { background: var(--surface); }
 .btn { display: inline-flex; align-items: center; gap: 8px; border-radius: 10px; font-weight: 600; font-size: 15px; cursor: pointer; text-decoration: none; transition: all .2s; border: none; }
 .btn-ghost { background: transparent; color: var(--dark); padding: 8px 16px; }
 .btn-ghost:hover { background: var(--surface); }
@@ -589,7 +598,20 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+  .nav-toggle { display: inline-flex; }
+  .nav-menu {
+    display: none;
+    position: fixed; top: 64px; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 6px;
+    background: var(--white); border-bottom: 1px solid var(--border);
+    padding: 14px 16px 20px; box-shadow: 0 14px 36px rgba(15,23,42,.12);
+    max-height: calc(100vh - 64px); overflow-y: auto;
+  }
+  nav.open .nav-menu { display: flex; }
+  .nav-links { flex-direction: column; align-items: stretch; gap: 2px; width: 100%; }
+  .nav-links a { padding: 12px 14px; font-size: 15px; }
+  .nav-cta { flex-direction: column; align-items: stretch; gap: 8px; width: 100%; margin-top: 10px; }
+  .nav-cta .btn { justify-content: center; width: 100%; }
   .hero { padding: 120px 20px 80px; }
   .stat-divider { display: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; }

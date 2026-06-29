@@ -67,6 +67,7 @@ nav {
   justify-content: center;
 }
 .logo-icon svg { width: 18px; height: 18px; }
+.logo-mono { font-size: 14px; font-weight: 900; color: #fff; letter-spacing: -0.5px; line-height: 1; }
 .logo-text {
   font-size: 18px;
   font-weight: 700;

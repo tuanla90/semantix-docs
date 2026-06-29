@@ -15,5 +15,35 @@ import CtaBanner from '../components/CtaBanner.astro';
   <Features />
   <HowItWorks />
   <Comparison />
+
+  <section class="sx-more">
+    <div class="sx-more-inner">
+      <a href="/solutions" class="sx-more-card">
+        <span class="sx-more-emoji">🏭</span>
+        <span class="sx-more-title">Giải pháp theo ngành</span>
+        <span class="sx-more-desc">Bài toán &amp; câu hỏi mẫu cho Retail, Tài chính, F&amp;B, Logistics.</span>
+        <span class="sx-more-go">Xem giải pháp →</span>
+      </a>
+      <a href="/pricing" class="sx-more-card">
+        <span class="sx-more-emoji">💳</span>
+        <span class="sx-more-title">Bảng giá</span>
+        <span class="sx-more-desc">Gói theo workspace, có gói Free và 14 ngày dùng thử đầy đủ tính năng.</span>
+        <span class="sx-more-go">Xem bảng giá →</span>
+      </a>
+    </div>
+  </section>
+
   <CtaBanner />
 </BaseLayout>
+
+<style>
+  .sx-more { padding: 64px 24px; background: var(--surface); }
+  .sx-more-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 640px) { .sx-more-inner { grid-template-columns: 1fr; } }
+  .sx-more-card { display: flex; flex-direction: column; gap: 8px; padding: 28px; border-radius: 16px; background: var(--white); border: 1px solid var(--border); text-decoration: none; transition: box-shadow .2s, transform .2s; }
+  .sx-more-card:hover { box-shadow: 0 12px 32px rgba(120,58,191,.12); transform: translateY(-3px); }
+  .sx-more-emoji { font-size: 26px; }
+  .sx-more-title { font-size: 18px; font-weight: 800; color: var(--dark); }
+  .sx-more-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .sx-more-go { font-size: 14px; font-weight: 600; color: var(--primary); margin-top: 4px; }
+</style>

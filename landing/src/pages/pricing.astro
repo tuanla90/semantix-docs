@@ -25,11 +25,11 @@ const plans = [
     name: 'SME Standard',
     price: '1.290.000đ',
     period: '/ workspace / tháng',
-    desc: 'Chưa tới 90.000đ/người/tháng cho team 15 người. Báo cáo tự động 24/7.',
+    desc: 'Chưa tới 90.000đ/người/tháng cho team 15 người. Báo cáo tự động theo lịch.',
     cta: 'Dùng Thử 14 Ngày',
     ctaHref: '#contact',
     highlight: true,
-    badge: 'Bán Chạy Nhất',
+    badge: 'Được Đề Xuất',
     features: [
       { label: 'Google Sheets + 3 database', ok: true },
       { label: 'Nối & gộp dữ liệu đa nguồn (mapping + union)', ok: true },
@@ -62,7 +62,7 @@ const plans = [
       { label: 'Data Portal & Pipelines tự động', ok: true },
       { label: 'Thông báo Zalo / Telegram / Slack / Teams', ok: true },
       { label: 'Báo cáo định kỳ tự động qua email', ok: true },
-      { label: 'Hỗ trợ ưu tiên qua email (24h)', ok: true },
+      { label: 'Hỗ trợ ưu tiên qua email', ok: true },
     ],
   },
   {
@@ -81,7 +81,7 @@ const plans = [
       { label: 'Triển khai tự lưu trữ (On-premise / Docker)', ok: true },
       { label: 'AI Provider riêng (Ollama / Azure OpenAI)', ok: true },
       { label: 'Tuỳ chỉnh AI Model & Guardrails', ok: true },
-      { label: 'SLA 99.9% uptime có cam kết', ok: true },
+      { label: 'SLA theo thoả thuận', ok: true },
       { label: 'Onboarding & dedicated support', ok: true },
     ],
   },
@@ -105,14 +105,14 @@ const compRows = [
   { label: 'Đăng nhập một lần (SSO / SAML)', free: '—', std: '—', pro: '—', ent: '✓' },
   { label: 'Tự lưu trữ (On-premise / Docker)', free: '—', std: '—', pro: '—', ent: '✓' },
   { label: 'AI Provider riêng (Ollama / Azure OAI)', free: '—', std: '—', pro: '—', ent: '✓' },
-  { label: 'SLA uptime', free: '—', std: '99%', pro: '99%', ent: '99.9% cam kết' },
-  { label: 'Hỗ trợ', free: 'Community', std: 'Email', pro: 'Email ưu tiên 24h', ent: 'Dedicated + onboarding' },
+  { label: 'SLA uptime', free: '—', std: 'Best-effort', pro: 'Best-effort', ent: 'Theo thoả thuận' },
+  { label: 'Hỗ trợ', free: 'Community', std: 'Email', pro: 'Email ưu tiên', ent: 'Dedicated + onboarding' },
 ];
 
 const faqs = [
   {
     q: 'Tôi có thể dùng thử trước khi mua không?',
-    a: 'Có. Gói Free Trial cho phép kết nối Google Sheets và sử dụng AI Chat hoàn toàn miễn phí, không giới hạn thời gian, không cần thẻ tín dụng. Nâng cấp lên Pro bất kỳ lúc nào.',
+    a: 'Có — theo hai cách. Gói Free cho kết nối Google Sheets và dùng AI Chat miễn phí, không giới hạn thời gian, không cần thẻ tín dụng. Ngoài ra các gói trả phí đều có 14 ngày dùng thử đầy đủ tính năng. Nâng cấp bất kỳ lúc nào.',
   },
   {
     q: 'Một "workspace" là gì?',

@@ -19,7 +19,7 @@ const industries = [
       'Phân tích ABC inventory, sell-through rate tự động',
       'Cohort khách hàng, RFM — phát hiện churn sớm',
     ],
-    metric: { num: '2→0', label: 'ngày chờ báo cáo', note: 'từ 2 ngày xuống tức thì' },
+    metric: { num: '0', label: 'ngày chờ báo cáo', note: 'tự hỏi — có số ngay, không chờ data team' },
     color: '#4F46E5',
     bg: '#EEF2FF',
   },
@@ -39,7 +39,7 @@ const industries = [
       'Dashboard tài chính cập nhật real-time, tự động gửi báo cáo định kỳ',
       'CFO tự hỏi và nhận số liệu chính xác — không cần chờ',
     ],
-    metric: { num: '95%', label: 'báo cáo định kỳ tự động', note: 'thay vì làm thủ công' },
+    metric: { num: '1 lần', label: 'định nghĩa metric, dùng mãi', note: 'P&L, EBITDA — cả nhà một con số' },
     color: '#059669',
     bg: '#ECFDF5',
   },
@@ -59,7 +59,7 @@ const industries = [
       'Hỏi "top 10 món có margin cao nhất tháng này" — nhận kết quả ngay',
       'Cảnh báo Telegram khi doanh thu outlet giảm dưới ngưỡng',
     ],
-    metric: { num: '18%', label: 'tăng gross margin', note: 'nhờ tối ưu menu đúng dữ liệu' },
+    metric: { num: 'Tức thì', label: 'doanh thu theo ca & món', note: 'manager tự xem, không cần hỏi' },
     color: '#D97706',
     bg: '#FFF7ED',
   },
@@ -79,7 +79,7 @@ const industries = [
       'Funnel giao hàng: từ đơn → pickup → transit → delivered → trả hàng',
       'Cảnh báo tự động khi tỷ lệ giao trễ vượt ngưỡng SLA',
     ],
-    metric: { num: '12%', label: 'giảm chi phí vận hành', note: 'nhờ phát hiện tuyến không hiệu quả' },
+    metric: { num: 'Mỗi tuyến', label: 'biết lãi hay lỗ thật', note: 'sau khi trừ đủ chi phí' },
     color: '#7C3AED',
     bg: '#F5F3FF',
   },
@@ -92,7 +92,7 @@ const roles = [
   { icon: '🔌', title: 'Developer / Product Team', desc: 'Nhúng Dashboard vào ứng dụng qua Embed Token. Query dữ liệu qua REST API. Không cần xây BI từ đầu.', href: DOCS_URL },
 ];
 ---
-<BaseLayout title="Giải Pháp — Semantix" description="Semantix cho Retail, Fintech, F&B, Logistics — AI phân tích dữ liệu theo từng ngành, từng vai trò.">
+<BaseLayout title="Giải Pháp — Semantix" description="Semantix cho Retail, Tài chính, F&B, Logistics — AI phân tích dữ liệu theo từng ngành, từng vai trò.">
 
 <style>
   .page-hero { padding: 120px 24px 72px; background: linear-gradient(160deg,#0F172A 0%,#1E1B4B 60%,#0F172A 100%); text-align: center; }
@@ -125,7 +125,7 @@ const roles = [
     display: flex; align-items: baseline; gap: 10px; margin-bottom: 24px;
     padding-bottom: 24px; border-bottom: 1px solid var(--border);
   }
-  .metric-num { font-size: 48px; font-weight: 900; letter-spacing: -2px; line-height: 1; }
+  .metric-num { font-size: 38px; font-weight: 900; letter-spacing: -1px; line-height: 1.05; }
   .metric-text { display: flex; flex-direction: column; }
   .metric-label { font-size: 14px; font-weight: 700; color: var(--dark); }
   .metric-note  { font-size: 12px; color: var(--muted); margin-top: 2px; }

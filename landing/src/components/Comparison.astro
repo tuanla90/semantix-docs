@@ -36,7 +36,7 @@ const iconWarn = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" st
         <div class="comp-us comp-body">
           <div class="comp-item"><Fragment set:html={iconCheck}/><span>Dữ liệu live từ database, không cần export thủ công</span></div>
           <div class="comp-item"><Fragment set:html={iconCheck}/><span>AI trả lời mọi câu hỏi mới trong vài giây</span></div>
-          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Xử lý hàng chục triệu dòng dữ liệu không chậm</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Truy vấn chạy thẳng trên database — không nghẽn như bảng tính khi dữ liệu lớn</span></div>
           <div class="comp-item"><Fragment set:html={iconCheck}/><span>Một nguồn sự thật duy nhất, mọi người cùng nhìn chung</span></div>
         </div>
       </div>
@@ -51,11 +51,11 @@ const iconWarn = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" st
         <div class="comp-them comp-body">
           <div class="comp-row">
             <div class="comp-row-label">Những giới hạn thường gặp</div>
-            <div class="comp-item"><Fragment set:html={iconX}/><span>Chỉ trả lời câu hỏi đã được xây dựng trong dashboard</span></div>
-            <div class="comp-item"><Fragment set:html={iconX}/><span>Câu hỏi mới → phải nhờ analyst xây report → chờ 1–3 ngày</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Mạnh ở dashboard dựng sẵn; hỏi ngoài phạm vi đó thường phải dựng thêm</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Câu hỏi mới thường phải nhờ analyst dựng report — mất thời gian</span></div>
             <div class="comp-item"><Fragment set:html={iconX}/><span>Cần kỹ năng DAX/LookML để tự tạo metric mới</span></div>
-            <div class="comp-item"><Fragment set:html={iconWarn}/><span>Không có AI tự nhiên — chỉ lọc theo filter có sẵn</span></div>
-            <div class="comp-item"><Fragment set:html={iconX}/><span>Chi phí license cao, đặc biệt với Power BI Premium</span></div>
+            <div class="comp-item"><Fragment set:html={iconWarn}/><span>Hỏi tự nhiên bằng tiếng Việt còn hạn chế, thường phải dựng sẵn</span></div>
+            <div class="comp-item"><Fragment set:html={iconX}/><span>Một số tính năng nâng cao cần license trả phí (Power BI Premium)</span></div>
           </div>
         </div>
         <div class="comp-divider" style="padding: 0 28px">
@@ -66,7 +66,7 @@ const iconWarn = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" st
         <div class="comp-us comp-body">
           <div class="comp-item"><Fragment set:html={iconCheck}/><span><strong>Bất kỳ câu hỏi nào</strong> — không giới hạn bởi dashboard đã xây</span></div>
           <div class="comp-item"><Fragment set:html={iconCheck}/><span>Quản lý tự hỏi và nhận câu trả lời — không cần chờ analyst</span></div>
-          <div class="comp-item"><Fragment set:html={iconCheck}/><span>AI phân tích bất thường, đề xuất insight chủ động</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Hỏi sâu để tìm nguyên nhân bất thường ngay trong hội thoại</span></div>
           <div class="comp-item"><Fragment set:html={iconCheck}/><span>Hỗ trợ đa AI Provider: GPT-4o, Claude, Gemini, DeepSeek</span></div>
         </div>
       </div>
@@ -95,7 +95,7 @@ const iconWarn = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" st
         </div>
         <div class="comp-us comp-body">
           <div class="comp-item"><Fragment set:html={iconCheck}/><span><strong>Kết nối trực tiếp</strong> database — số liệu 100% từ dữ liệu thực</span></div>
-          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Không hallucination — SQL chạy trên database, kết quả có thể audit</span></div>
+          <div class="comp-item"><Fragment set:html={iconCheck}/><span>Không bịa số — SQL chạy trên database, kết quả kiểm chứng được</span></div>
           <div class="comp-item"><Fragment set:html={iconCheck}/><span>Phân quyền người dùng — ai được xem gì, hỏi gì</span></div>
           <div class="comp-item"><Fragment set:html={iconCheck}/><span>Dữ liệu không rời server — có thể dùng AI self-hosted (Ollama)</span></div>
         </div>

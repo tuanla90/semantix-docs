@@ -266,14 +266,28 @@ function searchKey(p: typeof all[number]) {
     <h3>Nhận bài viết mới qua email</h3>
     <p>Mỗi tuần một bài — thực chiến, không spam.</p>
     <div class="newsletter-form">
-      <input type="email" class="newsletter-input" placeholder="email@company.com" />
-      <button class="btn btn-primary" style="padding:12px 24px">Đăng Ký</button>
+      <input type="email" id="nl-email" class="newsletter-input" placeholder="email@company.com" />
+      <button type="button" id="nl-submit" class="btn btn-primary" style="padding:12px 24px">Đăng Ký</button>
     </div>
+    <p id="nl-msg" style="display:none;font-size:13px;color:var(--primary);margin-top:10px"></p>
   </div>
 
 </div>
 
 <script>
+  /* ---- Newsletter: chưa có backend → mở email đăng ký qua mailto ---- */
+  const nlEmail = document.getElementById('nl-email') as HTMLInputElement | null;
+  const nlSubmit = document.getElementById('nl-submit');
+  const nlMsg = document.getElementById('nl-msg') as HTMLElement | null;
+  nlSubmit?.addEventListener('click', () => {
+    const v = nlEmail?.value.trim() ?? '';
+    if (!v || !v.includes('@')) { nlEmail?.focus(); return; }
+    const subject = encodeURIComponent('Đăng ký nhận bài viết Semantix');
+    const body = encodeURIComponent('Cho mình đăng ký nhận bài mới qua email: ' + v);
+    window.location.href = `mailto:hello@semantix.vn?subject=${subject}&body=${body}`;
+    if (nlMsg) { nlMsg.textContent = 'Đang mở email để gửi đăng ký — gửi giúp mình nhé!'; nlMsg.style.display = 'block'; }
+  });
+
   /* ---- Filter: category chips + search box (combined) ---- */
   const chips = document.querySelectorAll<HTMLButtonElement>('.cat-chip');
   const featuredSection = document.querySelector<HTMLElement>('.featured-section');

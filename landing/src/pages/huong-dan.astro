@@ -12,7 +12,7 @@ const steps = [
   { img: '05-ket-noi-nguon', title: 'Kết nối nguồn dữ liệu', desc: 'Kết nối PostgreSQL, MySQL, BigQuery, Google Sheets… và hợp nhất bằng bảng ảo — truy vấn real-time, không sao chép dữ liệu.' },
   { img: '06-semantic-layer', title: 'Mô hình & semantic layer', desc: 'Định nghĩa metric một lần trong semantic layer để mọi báo cáo dùng chung một “nguồn sự thật”.' },
   { img: '07-ngu-canh-context', title: 'Ngữ cảnh & phân quyền', desc: 'Thêm metric, mô tả ngữ nghĩa và phân quyền theo dòng (RLS) cho từng nhân sự.' },
-  { img: '08-bao-cao-dinh-ky', title: 'Báo cáo định kỳ', desc: 'Lên lịch gửi báo cáo tự động qua email, Zalo hoặc Telegram.' },
+  { img: '08-bao-cao-dinh-ky', title: 'Báo cáo & cảnh báo tự động', desc: 'Lên lịch gửi báo cáo định kỳ qua email; và đặt cảnh báo tức thì qua Zalo/Telegram khi một chỉ số vượt ngưỡng.' },
 ];
 
 const has = (name: string) => existsSync(join(process.cwd(), 'public', 'tutorial', `${name}.png`));
@@ -31,20 +31,23 @@ const has = (name: string) => existsSync(join(process.cwd(), 'public', 'tutorial
   </section>
 
   <div class="tut-steps">
-    {steps.map((s, i) => (
-      <section class="tut-step">
-        <div class="tut-text">
-          <div class="tut-num">{String(i + 1).padStart(2, '0')}</div>
-          <h2>{s.title}</h2>
-          <p>{s.desc}</p>
-        </div>
-        <div class="tut-shot">
-          {has(s.img)
-            ? <img src={`/tutorial/${s.img}.png`} alt={`${s.title} — Semantix`} loading="lazy" />
-            : <div class="tut-ph"><span>Ảnh “{s.title}”</span><small>sẽ hiển thị sau khi chạy script chụp ({s.img}.png)</small></div>}
-        </div>
-      </section>
-    ))}
+    {steps.map((s, i) => {
+      const hasImg = has(s.img);
+      return (
+        <section class={`tut-step${hasImg ? '' : ' tut-step--noimg'}`}>
+          <div class="tut-text">
+            <div class="tut-num">{String(i + 1).padStart(2, '0')}</div>
+            <h2>{s.title}</h2>
+            <p>{s.desc}</p>
+          </div>
+          {hasImg && (
+            <div class="tut-shot">
+              <img src={`/tutorial/${s.img}.png`} alt={`${s.title} — Semantix`} loading="lazy" />
+            </div>
+          )}
+        </section>
+      );
+    })}
   </div>
 
   <section class="tut-cta">
@@ -62,6 +65,7 @@ const has = (name: string) => existsSync(join(process.cwd(), 'public', 'tutorial
 
   .tut-steps { max-width: 1000px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 72px; }
   .tut-step { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .tut-step--noimg { display: block; max-width: 720px; margin: 0 auto; }
   .tut-step:nth-child(even) .tut-text { order: 2; }
   .tut-num { font-size: 14px; font-weight: 800; color: var(--primary); letter-spacing: 2px; margin-bottom: 12px; }
   .tut-text h2 { font-size: clamp(22px,2.6vw,30px); font-weight: 800; color: var(--dark); letter-spacing: -0.5px; line-height: 1.25; margin-bottom: 14px; }

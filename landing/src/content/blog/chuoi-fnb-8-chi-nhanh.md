@@ -23,7 +23,7 @@ Anh Tâm không thiếu dữ liệu. Mỗi sáng anh ngập trong nó. Vấn đ�
 
 - **Tám nguồn.** Tám quán, tám máy POS (Point of Sale - máy bán hàng tại quầy), tám người xuất file vào tám thời điểm khác nhau. Có quán dùng KiotViet, có quán dùng phần mềm khác, có quán vẫn gõ tay vào Google Sheets.
 - **Tám định nghĩa.** Quán A tính "doanh thu" gồm cả tiền tip và phí ship. Quán B trừ tip ra. Quán C ghi doanh thu theo đơn đặt, quán D theo đơn đã thanh toán. Cùng một từ, tám nghĩa.
-- **Hợp nhất bằng tay mỗi sáng.** Anh `copy-paste` tám file vào một sheet tổng, sửa cột cho khớp, dò lỗi công thức. Mỗi sáng mất 60–90 phút *(ví dụ minh họa)*.
+- **Hợp nhất bằng tay mỗi sáng.** Anh `copy-paste` tám file vào một sheet tổng, sửa cột cho khớp, dò lỗi công thức. Mỗi sáng mất 60-90 phút *(ví dụ minh họa)*.
 - **Số ra muộn.** Tới lúc anh ghép xong và nhìn được toàn cảnh thì đã gần trưa - và đó là bức tranh của *hôm qua*, không phải hôm nay.
 
 Đây không phải bài toán "thiếu công cụ Excel xịn hơn". Đây là bài toán **mỗi chi nhánh đang nói một ngôn ngữ khác nhau**, và anh Tâm là người phiên dịch thủ công mỗi sáng. (Bài toán gộp nhiều nguồn về một chỗ, chúng tôi mổ xẻ riêng trong [Hợp nhất Shopee + TikTok Shop + KiotViet về một chỗ](/blog/hop-nhat-da-kenh/) - nguyên lý y hệt, chỉ khác là ở đây "nguồn" là tám chi nhánh.)
@@ -76,7 +76,7 @@ Sau khi kết nối, buổi sáng của anh Tâm không bắt đầu bằng tám
 |---|---|---|
 | **Số nguồn** | 8 file rời, 8 người xuất | 8 nguồn gộp ngay lúc hỏi, không copy về kho |
 | **Định nghĩa "doanh thu"** | 8 kiểu khác nhau | 1 định nghĩa chung cho cả chuỗi |
-| **Hợp nhất** | Tay, 60–90 phút mỗi sáng | Bảng ảo gộp lúc truy vấn, số luôn mới |
+| **Hợp nhất** | Tay, 60-90 phút mỗi sáng | Bảng ảo gộp lúc truy vấn, số luôn mới |
 | **Khi nào có số** | Gần trưa, là số hôm qua | Vài giây, bất cứ lúc nào |
 | **So sánh chi nhánh** | Sai vì mỗi quán đo một kiểu | Công bằng vì cùng một thước đo |
 | **Phân quyền** | Gửi file qua Zalo, ai cũng thấy | Mỗi quản lý chỉ thấy quán mình |

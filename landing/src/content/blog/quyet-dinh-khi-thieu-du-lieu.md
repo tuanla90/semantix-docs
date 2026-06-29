@@ -59,7 +59,7 @@ Quy tắc rút ra: **với cửa hai chiều, tốc độ quan trọng hơn sự
 
 ## Quy tắc 70%: đủ để quyết, chưa cần để chắc
 
-Vậy "vừa đủ dữ liệu" là bao nhiêu? Một quy tắc ngón tay cái đáng tin: **quyết khi bạn nắm được khoảng 70% thông tin mình *muốn* có.** Dưới ngưỡng đó, bạn đang quyết bừa. Nhưng cố chờ tới 90–100% thì gần như luôn quá muộn - vì hai lý do.
+Vậy "vừa đủ dữ liệu" là bao nhiêu? Một quy tắc ngón tay cái đáng tin: **quyết khi bạn nắm được khoảng 70% thông tin mình *muốn* có.** Dưới ngưỡng đó, bạn đang quyết bừa. Nhưng cố chờ tới 90-100% thì gần như luôn quá muộn - vì hai lý do.
 
 Thứ nhất, 30% thông tin cuối cùng tốn nhiều thời gian *nhất* nhưng thay đổi quyết định *ít nhất* - nó thường chỉ xác nhận điều bạn đã biết ở mốc 70% (đây chính là lúc *thiên kiến xác nhận* ở [Phần 3](/blog/thien-kien-trong-doc-so/) rình rập). Thứ hai, trong lúc bạn đợi, thị trường không đứng yên: khách đổi ý, đối thủ ra tay, mặt bằng có người khác hỏi.
 

@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { computeUsage, shortLabel } from '../../lib/glossary-usage';
 
-// Từ điển thuật ngữ Data / BI / AI - sắp xếp A–Z.
+// Từ điển thuật ngữ Data / BI / AI - sắp xếp A-Z.
 // Mỗi mục: t = thuật ngữ, ab = dạng đầy đủ (viết tắt), vi = nghĩa tiếng Việt,
 // slug = bài định nghĩa chính (tùy chọn), match = các cụm cần tìm (cả tiếng Việt;
 // bỏ trống → mặc định [t, ab]). "Xuất hiện trong" được tính tự động từ nội dung blog.
@@ -23,7 +23,7 @@ const terms: Term[] = [
   { t: 'BYOK', ab: 'Bring Your Own Key', vi: 'Tự mang khóa API của mình: doanh nghiệp dùng tài khoản AI riêng để giữ quyền kiểm soát dữ liệu và chi phí.', slug: 'multi-provider-byok' },
   { t: 'Bus-factor', vi: 'Rủi ro khi kiến thức dồn vào một người: người đó nghỉ là cả mảng nghiệp vụ (cách tính số, logic ẩn) biến mất theo.', slug: 'thue-doi-data-hay-ai-bi' },
   { t: 'CAC', ab: 'Customer Acquisition Cost', vi: 'Chi phí trung bình để có được một khách hàng mới.' },
-  { t: 'Calculated metric', match: ['calculated metric', 'metric tính toán', 'chỉ số tính toán'], vi: 'Metric tính toán - con số dẫn xuất từ các cột hoặc metric gốc bằng một công thức (vd lợi nhuận gộp = doanh thu − giá vốn), định nghĩa một lần ở tầng dữ liệu để mọi báo cáo dùng chung.', slug: 'tao-metric-tinh-toan' },
+  { t: 'Calculated metric', match: ['calculated metric', 'metric tính toán', 'chỉ số tính toán'], vi: 'Metric tính toán - con số dẫn xuất từ các cột hoặc metric gốc bằng một công thức (vd lợi nhuận gộp = doanh thu - giá vốn), định nghĩa một lần ở tầng dữ liệu để mọi báo cáo dùng chung.', slug: 'tao-metric-tinh-toan' },
   { t: 'CLV:CAC ratio', match: ['clv:cac', 'clv/cac', 'clv > 3', 'clv ≥ 3', 'tỷ số clv:cac'], vi: 'Tỷ số giữa giá trị trọn đời của khách và chi phí thu hút khách đó; ngưỡng lành mạnh thường là CLV ≥ 3×CAC - chi để có khách phải dưới một phần ba giá trị họ đem lại.', slug: 'clv-framework' },
   { t: 'Churn', vi: 'Khách rời bỏ: người dùng hoạt động kỳ trước nhưng kỳ này thì không. Churn rate là tỷ lệ rời bỏ trong kỳ.', slug: 'cohort-retention-pmf' },
   { t: 'Churn prediction', slug: 'churn-prediction', vi: 'Dự đoán khách sắp rời đi dựa trên hành vi, để giữ chân trước khi họ rời.' },
@@ -32,7 +32,7 @@ const terms: Term[] = [
   { t: 'Conversion rate', vi: 'Tỷ lệ chuyển đổi giữa hai bước trong phễu (vd số người thanh toán / số người thêm giỏ).', slug: 'funnel-analysis' },
   { t: 'Confidence band', match: ['confidence band', 'dải tin cậy', 'dải sai số', 'khoảng tin cậy'], vi: 'Dải tin cậy - vùng giá trị mà kết quả dự báo nhiều khả năng rơi vào; loe rộng dần về tương lai vì càng xa càng bất định.', slug: 'time-series-forecast' },
   { t: 'Dashboard', vi: 'Bảng số trực quan tổng hợp nhiều biểu đồ/chỉ số trên một màn hình. Là cái hiển thị, không phải bản chất của BI.' },
-  { t: 'Data analyst', vi: 'Chuyên viên phân tích dữ liệu - người biến dữ liệu thô thành insight và báo cáo. Ở VN lương ~18–35 triệu/tháng, khó tuyển và dễ nhảy việc.', slug: 'thue-doi-data-hay-ai-bi' },
+  { t: 'Data analyst', vi: 'Chuyên viên phân tích dữ liệu - người biến dữ liệu thô thành insight và báo cáo. Ở VN lương ~18-35 triệu/tháng, khó tuyển và dễ nhảy việc.', slug: 'thue-doi-data-hay-ai-bi' },
   { t: 'Data engineer', vi: 'Kỹ sư dữ liệu - người dựng và vận hành đường ống dẫn dữ liệu (pipeline) để dữ liệu sẵn sàng cho phân tích.', slug: 'thue-doi-data-hay-ai-bi' },
   { t: 'Data governance', match: ['data governance', 'quản trị dữ liệu', 'governance'], vi: 'Quản trị dữ liệu: quy định ai sở hữu con số, ai chịu trách nhiệm khi nó sai, ai được xem gì.', slug: 'data-governance'},
   { t: 'Data lake', match: ['data lake', 'hồ dữ liệu'], vi: 'Hồ dữ liệu - kho lưu dữ liệu thô ở mọi định dạng, biến đổi sau khi cần.' },
@@ -57,7 +57,7 @@ const terms: Term[] = [
   { t: 'Fine-tune', vi: 'Huấn luyện thêm một mô hình AI trên dữ liệu riêng để nó hợp ngữ cảnh hơn (khác với RAG là cho tra cứu).' },
   { t: 'Funnel', vi: 'Phễu chuyển đổi - chuỗi bước khách đi qua (xem → thêm giỏ → thanh toán); phân tích để tìm chỗ rò rỉ.', slug: 'funnel-analysis' },
   { t: 'Growth Accounting', vi: 'Kế toán tăng trưởng - "báo cáo lãi/lỗ" cho người dùng: tách thay đổi mỗi kỳ thành mới / quay lại / giữ chân / rời đi.', slug: 'growth-accounting' },
-  { t: 'Gross margin', match: ['gross margin', 'lợi nhuận gộp', 'biên gộp', 'biên lợi nhuận gộp'], vi: 'Lợi nhuận gộp = doanh thu − giá vốn hàng bán; biên gộp (%) = lợi nhuận gộp chia doanh thu - phần còn lại sau khi trừ chi phí trực tiếp làm ra sản phẩm.', slug: 'tao-metric-tinh-toan' },
+  { t: 'Gross margin', match: ['gross margin', 'lợi nhuận gộp', 'biên gộp', 'biên lợi nhuận gộp'], vi: 'Lợi nhuận gộp = doanh thu - giá vốn hàng bán; biên gộp (%) = lợi nhuận gộp chia doanh thu - phần còn lại sau khi trừ chi phí trực tiếp làm ra sản phẩm.', slug: 'tao-metric-tinh-toan' },
   { t: 'Hallucination', vi: 'Ảo giác AI - mô hình tự tin "bịa" ra thông tin nghe hợp lý nhưng sai.', slug: 'llm-bia-sql' },
   { t: 'Historic CLV', match: ['historic clv', 'clv lịch sử'], vi: 'CLV lịch sử - cộng lợi nhuận một khách đã thực sự đem lại tính đến nay; chắc chắn nhưng nhìn qua gương chiếu hậu, không nói gì về tương lai.', slug: 'clv-framework' },
   { t: 'Holt-Winters', match: ['holt-winters', 'holt winters', 'holt'], vi: 'Phương pháp dự báo (họ ETS) bắt được cả xu hướng lẫn mùa vụ cùng lúc - lựa chọn hợp với hầu hết số liệu kinh doanh có nhịp Tết/cuối tuần.', slug: 'time-series-forecast' },
@@ -72,7 +72,7 @@ const terms: Term[] = [
   { t: 'Metric', vi: 'Con số đo được (doanh thu, số đơn, số khách) - khác với dimension là lát cắt.', slug: 'metric-dimension-kpi' },
   { t: 'Moving average', match: ['moving average', 'trung bình trượt'], vi: 'Trung bình trượt - lấy trung bình một cửa sổ vài kỳ liền nhau để san phẳng dao động ngắn hạn, giúp xu hướng nổi lên khỏi nhiễu.', slug: 'time-series-forecast' },
   { t: 'NDR', ab: 'Net Dollar Retention', vi: 'Tỷ lệ giữ doanh thu từ tập khách cũ sau khi cộng phần mở rộng và trừ phần rời bỏ - vượt 100% là khách cũ tự lớn lên.', slug: 'growth-accounting-revenue' },
-  { t: 'Net New MAU', vi: 'Tăng ròng người dùng hoạt động trong kỳ = mới + quay lại − rời đi. Chính là con số "+x%" mà dashboard hay khoe.', slug: 'growth-accounting' },
+  { t: 'Net New MAU', vi: 'Tăng ròng người dùng hoạt động trong kỳ = mới + quay lại - rời đi. Chính là con số "+x%" mà dashboard hay khoe.', slug: 'growth-accounting' },
   { t: 'Noise', match: ['noise', 'nhiễu'], vi: 'Nhiễu - dao động ngẫu nhiên còn sót lại trong chuỗi số, không lặp lại và không mang ý nghĩa; cố giải thích từng cú nhiễu là tự lừa mình.', slug: 'time-series-forecast' },
   { t: 'OLAP', ab: 'Online Analytical Processing', slug: 'oltp-vs-olap', vi: 'Hệ thống tối ưu cho phân tích - tổng hợp, cắt lát số liệu nhiều chiều phục vụ báo cáo.' },
   { t: 'OLTP', ab: 'Online Transaction Processing', slug: 'oltp-vs-olap', vi: 'Hệ thống xử lý giao dịch vận hành (bán hàng, đặt đơn) - không nên chạy báo cáo nặng thẳng lên đây.' },
@@ -80,7 +80,7 @@ const terms: Term[] = [
   { t: 'On-premise', vi: 'Triển khai phần mềm trên hạ tầng tự quản của doanh nghiệp, thay vì trên cloud của nhà cung cấp.' },
   { t: 'P&L', ab: 'Profit & Loss', vi: 'Báo cáo lãi/lỗ - tách doanh thu khỏi chi phí để thấy tiền đến từ đâu, đi đâu.' },
   { t: 'Pareto (80/20)', match: ['pareto', '80/20'], vi: 'Quy luật 80/20 - khoảng 20% nguyên nhân thường tạo ra 80% kết quả (vd 20% sản phẩm nuôi 80% lợi nhuận).', slug: 'pareto-80-20' },
-  { t: 'PMF', ab: 'Product–Market Fit', vi: 'Mức độ sản phẩm khớp nhu cầu thị trường - thường thấy qua đường cong giữ chân phẳng ra thay vì rơi về 0.', slug: 'cohort-retention-pmf' },
+  { t: 'PMF', ab: 'Product-Market Fit', vi: 'Mức độ sản phẩm khớp nhu cầu thị trường - thường thấy qua đường cong giữ chân phẳng ra thay vì rơi về 0.', slug: 'cohort-retention-pmf' },
   { t: 'Quick Ratio', vi: 'Tỉ lệ "tăng trên hao" = (khách mới + quay lại) / khách rời đi. Trên 1 là đang lớn, dưới 1 là đang teo.', slug: 'growth-accounting-quick-ratio' },
   { t: 'R²', ab: 'R-squared', match: ['r²', 'r-squared', 'r bình phương', 'hệ số xác định'], vi: 'Hệ số xác định: tỷ lệ % biến động của biến phụ thuộc mà đường khớp hồi quy giải thích được; 0 = vô dụng, 1 = giải thích trọn vẹn.', slug: 'correlation-regression' },
   { t: 'RAG', ab: 'Retrieval-Augmented Generation', vi: 'Sinh có truy hồi - cho AI tra đúng tài liệu/ngữ cảnh trước khi trả lời, để bớt bịa.', slug: 'rag-la-gi' },
@@ -112,12 +112,12 @@ const terms: Term[] = [
   { t: 'Offset', match: ['offset', 'tuổi đời', 'tháng tuổi'], vi: 'Tuổi đời: số kỳ đã trôi qua kể từ khi đối tượng hình thành (offset 0 = kỳ vừa ra đời). So các lứa ở cùng offset là cách so "táo với táo".', slug: 'vintage-analysis' },
   { t: 'WAU', ab: 'Weekly Active User', match: ['wau'], slug: 'growth-accounting', vi: 'Số người dùng hoạt động trong một tuần.' },
   { t: 'Anchoring', vi: 'Mỏ neo: xu hướng bám vào con số đầu tiên nghe được rồi điều chỉnh quanh nó thay vì đánh giá độc lập.', slug: 'thien-kien-trong-doc-so' },
-  { t: 'Causation', vi: 'Nhân quả: quan hệ nguyên nhân–kết quả, khi thay đổi A thì B đổi theo. Khác với tương quan.', slug: 'tuong-quan-nhan-qua' },
+  { t: 'Causation', vi: 'Nhân quả: quan hệ nguyên nhân-kết quả, khi thay đổi A thì B đổi theo. Khác với tương quan.', slug: 'tuong-quan-nhan-qua' },
   { t: 'Cognitive bias', vi: 'Thành kiến nhận thức: lối tư duy lệch một cách có hệ thống do não xử lý tắt.', slug: 'thien-kien-trong-doc-so' },
   { t: 'Confirmation bias', vi: 'Thiên kiến xác nhận: chỉ tìm và tin bằng chứng ủng hộ điều mình đã tin, làm ngơ bằng chứng ngược.', slug: 'thien-kien-trong-doc-so' },
   { t: 'Confounder', vi: 'Yếu tố gây nhiễu: một biến thứ ba đứng sau đẩy cả A lẫn B cùng lên, khiến chúng trông như liên quan nhân quả.', slug: 'tuong-quan-nhan-qua' },
   { t: 'Correlation', vi: 'Tương quan: mức độ hai con số cùng lên/xuống với nhau; KHÔNG hàm ý cái này gây ra cái kia.', slug: 'tuong-quan-nhan-qua' },
-  { t: 'Correlation coefficient', match: ['correlation coefficient', 'hệ số tương quan'], vi: 'Hệ số tương quan (r): con số từ −1 đến +1 đo độ chặt và chiều của quan hệ tuyến tính; gần ±1 là rất chặt, gần 0 là yếu hoặc gần như không có.', slug: 'correlation-regression' },
+  { t: 'Correlation coefficient', match: ['correlation coefficient', 'hệ số tương quan'], vi: 'Hệ số tương quan (r): con số từ -1 đến +1 đo độ chặt và chiều của quan hệ tuyến tính; gần ±1 là rất chặt, gần 0 là yếu hoặc gần như không có.', slug: 'correlation-regression' },
   { t: 'Extrapolation', match: ['extrapolation', 'ngoại suy'], vi: 'Ngoại suy: dùng đường khớp để đoán ra ngoài vùng dữ liệu đã có; rủi ro vì quan hệ có thể đã cong ở vùng chưa từng quan sát.', slug: 'correlation-regression' },
   { t: 'Linear regression', match: ['linear regression', 'hồi quy tuyến tính'], vi: 'Hồi quy tuyến tính: khớp một đường thẳng (y = a + b·x) qua đám điểm - dạng hồi quy đơn giản và phổ biến nhất.', slug: 'correlation-regression' },
   { t: 'Data-driven', vi: 'Để dữ liệu lái quyết định: bám theo con số và dám đổi quyết định khi số trái với linh cảm.', slug: 'tu-duy-du-lieu-la-gi' },
@@ -203,7 +203,7 @@ const terms: Term[] = [
   { t: 'Standard deviation', ab: 'SD / σ', match: ['độ lệch chuẩn', 'standard deviation'], vi: 'Độ lệch chuẩn: đo độ phân tán của dữ liệu quanh trung bình; cùng đơn vị với dữ liệu nên dễ đọc. Mean phải đi kèm nó mới đủ nghĩa.', slug: 'do-lech-chuan' },
   { t: 'Variance', match: ['phương sai', 'variance'], vi: 'Phương sai: trung bình bình phương khoảng cách tới mean; căn bậc hai của nó là độ lệch chuẩn.', slug: 'do-lech-chuan' },
   { t: 'Percentile', match: ['phân vị', 'percentile', 'p90', 'p99'], vi: 'Phân vị: mốc mà một tỉ lệ phần trăm dữ liệu nằm dưới (P90 = 90% trường hợp tốt/nhỏ hơn mức này). Đo thời gian giao/phản hồi nên nhìn P90/P99 thay vì trung bình.', slug: 'phan-vi-percentile' },
-  { t: 'Quartile', match: ['tứ phân vị', 'quartile'], vi: 'Tứ phân vị: chia dữ liệu thành 4 phần bằng nhau (Q1=P25, Q2=P50=median, Q3=P75); khoảng giữa Q1–Q3 là IQR.', slug: 'phan-vi-percentile' },
+  { t: 'Quartile', match: ['tứ phân vị', 'quartile'], vi: 'Tứ phân vị: chia dữ liệu thành 4 phần bằng nhau (Q1=P25, Q2=P50=median, Q3=P75); khoảng giữa Q1-Q3 là IQR.', slug: 'phan-vi-percentile' },
   { t: 'Box plot', match: ['box plot', 'biểu đồ hộp'], vi: 'Biểu đồ hộp: tóm tắt phân phối qua median, tứ phân vị và ngoại lai trên một hình nhỏ gọn.', slug: 'phan-vi-percentile' },
   { t: 'Normal distribution', match: ['phân phối chuẩn', 'normal distribution'], vi: 'Phân phối chuẩn: hình chuông đối xứng quanh mean; khi dữ liệu gần chuẩn thì mean và độ lệch chuẩn mới đáng tin.', slug: 'doc-hinh-dang-phan-phoi' },
   { t: 'Skewness', match: ['skew', 'phân phối lệch', 'lệch phải', 'lệch trái'], vi: 'Độ lệch: phân phối nghiêng về một phía (lệch phải/trái) do vài giá trị lớn kéo đuôi - khi đó mean khác median, nên dùng median.', slug: 'doc-hinh-dang-phan-phoi' },
@@ -240,7 +240,7 @@ const terms: Term[] = [
   { t: 'Bayes (xác suất ngược)', match: ['bayes', 'xác suất ngược'], vi: 'Tư duy Bayes: cập nhật niềm tin theo bằng chứng mới, có tính tới tỉ lệ nền - giải thích vì sao "test dương tính" chưa chắc đúng.', slug: 'base-rate-xac-suat-nguoc' },
   { t: 'Data leakage', match: ['data leakage', 'rò rỉ dữ liệu'], vi: 'Rò rỉ dữ liệu: thông tin tương lai/đáp án lọt vào lúc huấn luyện, làm độ chính xác ảo cao rồi sập khi chạy thật.', slug: 'du-lieu-ban-giet-model' },
   { t: 'Overfit', match: ['overfit', 'quá khớp'], vi: 'Quá khớp: mô hình "học thuộc" dữ liệu cũ (cả nhiễu) nên đúng lúc train nhưng sai khi gặp dữ liệu mới.', slug: 'du-lieu-ban-giet-model' },
-  { t: 'IQR', ab: 'Interquartile Range', match: ['iqr', 'tứ phân vị'], vi: 'Khoảng tứ phân vị: khoảng giữa của dữ liệu (phân vị 25%–75%), dùng phát hiện ngoại lai mà không bị giá trị cực đoan kéo lệch.', slug: 'outlier-rac-hay-mo-vang' },
+  { t: 'IQR', ab: 'Interquartile Range', match: ['iqr', 'tứ phân vị'], vi: 'Khoảng tứ phân vị: khoảng giữa của dữ liệu (phân vị 25%-75%), dùng phát hiện ngoại lai mà không bị giá trị cực đoan kéo lệch.', slug: 'outlier-rac-hay-mo-vang' },
   { t: 'Imputation', match: ['điền khuyết', 'impute', 'imputation'], vi: 'Điền khuyết: thay giá trị thiếu bằng ước lượng (trung vị, theo nhóm...) thay vì xoá dòng - nhưng đôi khi "thiếu" lại là tín hiệu.', slug: 'thieu-du-lieu-cung-la-tin-hieu' },
   { t: 'Missing value', match: ['giá trị khuyết', 'missing value', 'ô trống'], vi: 'Giá trị khuyết: ô trống trong dữ liệu; việc một trường bị trống nhiều khi tự nó mang thông tin.', slug: 'thieu-du-lieu-cung-la-tin-hieu' },
   { t: 'Missing indicator', match: ['missing indicator', 'cột cờ', 'đã trống'], vi: 'Cột cờ "đã thiếu": thêm một cột đánh dấu ô nào bị trống, biến chính sự thiếu vắng thành một đặc trưng cho mô hình.', slug: 'thieu-du-lieu-cung-la-tin-hieu' },
@@ -259,16 +259,16 @@ const terms: Term[] = [
   { t: 'Survival analysis', match: ['survival analysis', 'phân tích sống sót'], vi: 'Phân tích sống sót: đo thời gian đến một sự kiện (khách rời bỏ, thiết bị hỏng) và vẽ đường cong giảm dần theo tuổi đời. Với SME, nó chính là đường retention của cohort.', slug: 'survival-analysis' },
   { t: 'Survival curve', match: ['survival curve', 'đường cong sống sót'], vi: 'Đường cong sống sót: trục dọc là % còn "sống" (còn hoạt động), trục ngang là tuổi đời từ lúc bắt đầu; xuất phát 100% và chỉ đi xuống. Đồng nhất với đường retention của cohort.', slug: 'survival-analysis' },
   { t: 'Censoring', match: ['censoring', 'cắt cụt', 'dữ liệu cắt cụt'], vi: 'Dữ liệu cắt cụt: khách chưa rời tính tới thời điểm quan sát - ta chỉ biết họ sống ít nhất tới hôm nay, chưa biết tổng tuổi thọ. "Chưa rời" không phải "sẽ ở mãi".', slug: 'survival-analysis' },
-  { t: 'Kaplan–Meier', match: ['kaplan', 'kaplan-meier', 'kaplan–meier'], vi: 'Cách dựng đường cong sống sót xử lý đúng phần dữ liệu cắt cụt (censoring). Phương pháp gốc y sinh; Semantix không có module này nhưng dựng được đường cong thực dụng qua cohort.', slug: 'survival-analysis' },
+  { t: 'Kaplan-Meier', match: ['kaplan', 'kaplan-meier', 'kaplan-meier'], vi: 'Cách dựng đường cong sống sót xử lý đúng phần dữ liệu cắt cụt (censoring). Phương pháp gốc y sinh; Semantix không có module này nhưng dựng được đường cong thực dụng qua cohort.', slug: 'survival-analysis' },
   { t: 'Hazard rate', match: ['hazard rate', 'hazard', 'tỷ lệ rủi ro'], vi: 'Tỷ lệ rủi ro rời bỏ ngay tại một mốc tuổi, với điều kiện đã sống tới đó. Chỗ đường cong dốc nhất là nơi hazard cao nhất - thời điểm nên can thiệp giữ chân.', slug: 'survival-analysis' },
   { t: 'HEART framework', match: ['heart framework', 'khung heart', 'heart'], vi: 'Khung đo trải nghiệm người dùng của Google gồm 5 chiều - Happiness, Engagement, Adoption, Retention, Task success - bù chỗ mù của phễu AARRR: phễu đo số lượng, HEART đo chất lượng trải nghiệm.', slug: 'heart-framework' },
   { t: 'Happiness', match: ['happiness'], vi: 'Chiều "hài lòng" trong HEART: cảm nhận chủ quan của khách về sản phẩm (thích/bực, tin/ngờ), đo qua NPS, đánh giá sao, tỷ lệ phàn nàn.', slug: 'heart-framework' },
   { t: 'Engagement', match: ['engagement', 'gắn kết'], vi: 'Chiều "gắn kết" trong HEART: khách dùng sản phẩm sâu và thường xuyên tới đâu (số phiên/tuần, thời lượng) - coi chừng ép lên bằng thông báo dồn dập làm hỏng Happiness.', slug: 'heart-framework' },
   { t: 'Adoption', match: ['adoption', 'tiếp nhận'], vi: 'Chiều "tiếp nhận" trong HEART: tỷ lệ khách mới bắt đầu dùng một tính năng (vd % kích hoạt trong tuần đầu).', slug: 'heart-framework' },
   { t: 'Task success', match: ['task success', 'hoàn thành tác vụ'], vi: 'Chiều "hoàn thành tác vụ" trong HEART: khách làm xong việc họ định làm trơn tru tới đâu - tỷ lệ thành công, thời gian, số lỗi.', slug: 'heart-framework' },
-  { t: 'Goals–Signals–Metrics', match: ['goals-signals-metrics', 'goals–signals–metrics', 'goals signals metrics', 'mục tiêu – tín hiệu – thước đo'], vi: 'Quy trình 3 bước của Google đi kèm HEART: từ Mục tiêu (thành công là gì) → Tín hiệu (hành vi quan sát được) → Thước đo (con số theo dõi); đi từ mục tiêu xuống số, không ngược lại.', slug: 'heart-framework' },
+  { t: 'Goals-Signals-Metrics', match: ['goals-signals-metrics', 'goals-signals-metrics', 'goals signals metrics', 'mục tiêu - tín hiệu - thước đo'], vi: 'Quy trình 3 bước của Google đi kèm HEART: từ Mục tiêu (thành công là gì) → Tín hiệu (hành vi quan sát được) → Thước đo (con số theo dõi); đi từ mục tiêu xuống số, không ngược lại.', slug: 'heart-framework' },
   { t: 'AARRR', ab: 'Acquisition, Activation, Retention, Referral, Revenue', match: ['aarrr', 'phễu hải tặc', 'pirate metrics'], vi: 'Khung "phễu hải tặc" 5 bước đo hành trình khách: thu hút → kích hoạt → giữ chân → giới thiệu → doanh thu. Đo số lượng dọc phễu; cặp với HEART để thấy cả chất lượng.', slug: 'aarrr-pirate-metrics' },
-  { t: 'NPS', ab: 'Net Promoter Score', match: ['nps'], vi: 'Chỉ số đo mức khách sẵn lòng giới thiệu sản phẩm cho người khác (thang −100 đến 100) - một thước đo thường dùng cho chiều Happiness của HEART.', slug: 'heart-framework' },
+  { t: 'NPS', ab: 'Net Promoter Score', match: ['nps'], vi: 'Chỉ số đo mức khách sẵn lòng giới thiệu sản phẩm cho người khác (thang -100 đến 100) - một thước đo thường dùng cho chiều Happiness của HEART.', slug: 'heart-framework' },
   { t: 'PCA', ab: 'Principal Component Analysis', match: ['pca', 'phân tích thành phần chính'], vi: 'Phân tích thành phần chính: kỹ thuật giảm chiều gộp nhiều chỉ số tương quan thành vài trục mới (thành phần chính) giữ phần lớn thông tin - để nhìn ra cụm/phân khúc ẩn và vẽ được trên 2D.', slug: 'pca-principal-component' },
   { t: 'Dimensionality reduction', match: ['dimensionality reduction', 'giảm chiều'], vi: 'Giảm chiều: rút dữ liệu từ nhiều cột/chiều xuống vài chiều mà mất ít thông tin nhất, để vẽ được và nhìn ra cấu trúc ẩn.', slug: 'pca-principal-component' },
   { t: 'Principal component', match: ['principal component', 'thành phần chính', 'pc1', 'pc2'], vi: 'Thành phần chính: một trục mới do PCA tạo ra, chạy dọc hướng dữ liệu biến thiên nhiều nhất; là tổ hợp của nhiều cột gốc nên khó gọi tên bằng lời.', slug: 'pca-principal-component' },
@@ -281,9 +281,9 @@ const terms: Term[] = [
   { t: 'Root cause analysis', match: ['root cause analysis', 'root cause', 'phân tích nguyên nhân gốc', 'nguyên nhân gốc'], vi: 'Phân tích nguyên nhân gốc: truy ngược một kết quả (vd doanh thu giảm) về nguồn thật sự sinh ra nó, thay vì dừng ở triệu chứng bề mặt như "do thị trường".', slug: 'why-analysis' },
   { t: '5 Whys', match: ['5 whys', '5 lần hỏi vì sao', 'năm lần hỏi'], vi: '5 lần hỏi "vì sao": hỏi vì sao liên tiếp, mỗi câu trả lời lại thành câu hỏi tiếp theo, cho tới khi chạm nguyên nhân gốc có thể hành động được.', slug: 'why-analysis' },
   { t: 'Driver', match: ['driver', 'yếu tố tác động'], vi: 'Yếu tố tác động: đại lượng mà khi thay đổi sẽ làm con số tổng đổi theo (giá, lượng khách, cơ cấu sản phẩm) - đơn vị để phân rã khi truy "vì sao".', slug: 'why-analysis' },
-  { t: 'Price–volume–mix', match: ['price-volume-mix', 'price–volume–mix', 'price volume mix', 'giá–lượng–cơ cấu', 'giá-lượng-cơ cấu'], vi: 'Giá – lượng – cơ cấu: khung phân rã thay đổi doanh thu thành ba driver - bán đắt/rẻ hơn (price), nhiều/ít hơn (volume), và tỷ trọng giữa các sản phẩm/kênh đổi (mix).', slug: 'why-analysis' },
+  { t: 'Price-volume-mix', match: ['price-volume-mix', 'price-volume-mix', 'price volume mix', 'giá-lượng-cơ cấu', 'giá-lượng-cơ cấu'], vi: 'Giá - lượng - cơ cấu: khung phân rã thay đổi doanh thu thành ba driver - bán đắt/rẻ hơn (price), nhiều/ít hơn (volume), và tỷ trọng giữa các sản phẩm/kênh đổi (mix).', slug: 'why-analysis' },
   { t: 'Scenario analysis', match: ['scenario analysis', 'scenario', 'phân tích kịch bản', 'kịch bản'], vi: 'Phân tích kịch bản: thay vì một con số dự báo duy nhất, dựng vài tương lai khả dĩ (lạc quan / cơ sở / thận trọng) bằng cách đổi các giả định kinh doanh then chốt - để chuẩn bị cho cả dải khả năng thay vì cược vào một điểm.', slug: 'scenario-analysis' },
-  { t: 'What-if', match: ['what-if', 'what if'], vi: 'Phân tích "nếu–thì": thử đổi một giả định (giá, lượng khách, chi phí...) rồi xem kết quả rẽ nhánh ra sao - cơ chế cốt lõi của scenario analysis.', slug: 'scenario-analysis' },
+  { t: 'What-if', match: ['what-if', 'what if'], vi: 'Phân tích "nếu-thì": thử đổi một giả định (giá, lượng khách, chi phí...) rồi xem kết quả rẽ nhánh ra sao - cơ chế cốt lõi của scenario analysis.', slug: 'scenario-analysis' },
   { t: 'Sensitivity analysis', match: ['sensitivity analysis', 'phân tích độ nhạy', 'độ nhạy'], vi: 'Phân tích độ nhạy: nhúc nhích một biến (±10%) rồi đo kết quả lắc bao nhiêu, để biết biến nào lắc kết quả mạnh nhất và đáng đưa vào kịch bản.', slug: 'scenario-analysis' },
   { t: 'Base case', match: ['base case', 'best case', 'worst case', 'kịch bản cơ sở', 'kịch bản tốt nhất', 'kịch bản xấu nhất'], vi: 'Bộ ba kịch bản kinh điển: base case (cơ sở - mọi thứ như dự kiến), best case (tốt nhất - lạc quan) và worst case (xấu nhất - thận trọng), mỗi cái ứng với một câu chuyện giả định khác nhau.', slug: 'scenario-analysis' },
   { t: 'Assumption', match: ['assumption', 'giả định'], vi: 'Giả định: điều ngầm cho là đúng làm nền cho một dự báo/kế hoạch (vd "sức mua giữ nguyên"). Giả định viết ra thì tranh luận được; giả định ẩn thì âm thầm làm hỏng kế hoạch.', slug: 'scenario-analysis' },
@@ -310,7 +310,7 @@ const terms: Term[] = [
   { t: 'Cảnh báo ngưỡng', ab: 'Threshold alert', match: ['threshold alert', 'cảnh báo ngưỡng', 'alert fatigue', 'cảnh báo kpi'], vi: 'Nhắn ngay khi một KPI vượt lằn ranh đặt trước, thay vì đợi báo cáo định kỳ. Đặt quá nhạy thì dính "alert fatigue" - reo nhiều tới mức người ta tắt sạch.', slug: 'canh-bao-kpi' },
 ];
 
-// Sắp xếp A–Z theo thuật ngữ (không phân biệt hoa thường, bỏ ký tự đầu không phải chữ).
+// Sắp xếp A-Z theo thuật ngữ (không phân biệt hoa thường, bỏ ký tự đầu không phải chữ).
 const collator = new Intl.Collator('vi', { sensitivity: 'base' });
 terms.sort((a, b) => collator.compare(a.t, b.t));
 
@@ -336,7 +336,7 @@ const posts = (await getCollection('blog')).sort(
 );
 const usage = computeUsage(terms, posts);
 ---
-<BaseLayout title="Từ điển thuật ngữ - Semantix Blog" description="Giải nghĩa tiếng Việt các thuật ngữ Data, BI và AI thường gặp: MAU, churn, cohort, RAG, ETL, semantic layer... Sắp xếp theo A–Z.">
+<BaseLayout title="Từ điển thuật ngữ - Semantix Blog" description="Giải nghĩa tiếng Việt các thuật ngữ Data, BI và AI thường gặp: MAU, churn, cohort, RAG, ETL, semantic layer... Sắp xếp theo A-Z.">
 
 <style>
   .glo-hero { padding: 110px 24px 56px; background: linear-gradient(160deg,#0F172A 0%,#2D1B4E 60%,#0F172A 100%); text-align: center; }

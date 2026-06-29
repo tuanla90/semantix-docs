@@ -1,7 +1,7 @@
 ---
 title: "Semantix vs BI dashboard truyền thống (Power BI, Tableau, Looker...): vì sao công cụ mạnh hơn lại trả lời được ít câu hỏi hơn"
 code: "ss-001"
-description: "Bạn mua Tableau, dashboard đẹp lung linh. Nhưng mỗi câu hỏi mới vẫn phải chờ analyst 1–3 ngày. So sánh thẳng thắn cả nhóm BI dashboard truyền thống với AI hỏi-đáp - kèm bài toán chi phí theo người dùng."
+description: "Bạn mua Tableau, dashboard đẹp lung linh. Nhưng mỗi câu hỏi mới vẫn phải chờ analyst 1-3 ngày. So sánh thẳng thắn cả nhóm BI dashboard truyền thống với AI hỏi-đáp - kèm bài toán chi phí theo người dùng."
 pubDate: 2026-07-17
 category: "So Sánh & Lựa Chọn"
 readTime: 11
@@ -56,8 +56,8 @@ Con số tham khảo (giá công khai, ước tính theo quy mô):
 
 | Giải pháp | Mô hình giá | ~50 người dùng |
 |---|---|---|
-| Tableau Cloud | ~$70/user/tháng | $420–2.100/tháng |
-| Power BI Pro | ~$10/user + Premium capacity | $600–3.000/tháng |
+| Tableau Cloud | ~$70/user/tháng | $420-2.100/tháng |
+| Power BI Pro | ~$10/user + Premium capacity | $600-3.000/tháng |
 | **Semantix** | **Theo instance, không theo user** | **Gần như phẳng bất kể số user** |
 
 Với Semantix, bạn còn trả AI theo mức dùng thật (chỉ tốn khi có người hỏi) và có thể chuyển sang model (mô hình AI) rẻ như Gemini Flash để tiết kiệm phần lớn chi phí suy luận.
@@ -66,7 +66,7 @@ Với Semantix, bạn còn trả AI theo mức dùng thật (chỉ tốn khi có
 
 | Tiêu chí | Power BI / Tableau | Semantix |
 |---|---|---|
-| Hỏi câu mới ngoài dashboard | Cần analyst dựng (1–3 ngày) | Hỏi tiếng Việt, trả lời tức thì |
+| Hỏi câu mới ngoài dashboard | Cần analyst dựng (1-3 ngày) | Hỏi tiếng Việt, trả lời tức thì |
 | Người dùng không kỹ thuật | Tiêu thụ dashboard có sẵn | Tự hỏi, tự nhận câu trả lời |
 | AI hỏi-đáp ngôn ngữ tự nhiên | Hạn chế / cần add-on | Cốt lõi, đa nhà cung cấp |
 | Tạo metric (chỉ số đo được) mới | Cần DAX / LookML (ngôn ngữ công thức riêng của Power BI / Looker) | Định nghĩa trong Semantic Layer (tầng định nghĩa nghiệp vụ dùng chung), hỏi bằng tiếng Việt |

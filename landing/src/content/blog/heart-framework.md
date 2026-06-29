@@ -46,7 +46,7 @@ Một khách hoàn tất thanh toán sau khi bấm nhầm ba lần, chửi thầ
 
 Cái bẫy lớn nhất với HEART là tưởng phải đo **cả năm chiều** cho mọi sản phẩm. Không. Một quán phở online ép mình đo "Engagement" theo kiểu mạng xã hội là tự hành mình - khách ăn phở xong là đóng app, gắn kết sâu *không phải* mục tiêu. Đo cả năm chiều một cách máy móc cho ra một dashboard đầy số mà không số nào thúc được hành động.
 
-Google đi kèm HEART một quy trình ba bước để **chọn đúng chiều**, gọi là **Goals–Signals–Metrics** *(Mục tiêu – Tín hiệu – Thước đo)*:
+Google đi kèm HEART một quy trình ba bước để **chọn đúng chiều**, gọi là **Goals-Signals-Metrics** *(Mục tiêu - Tín hiệu - Thước đo)*:
 
 1. **Goals (Mục tiêu):** với *chiều này*, thành công nghĩa là gì? Viết bằng câu nói thường, không phải con số. Vd cho Task success: *"Khách đặt được đơn mà không phải hỏi tổng đài."*
 2. **Signals (Tín hiệu):** **hành vi nào** quan sát được sẽ cho thấy đang tiến gần hay rời xa mục tiêu? Vd: *khách bấm nút quay lại nhiều lần*, *bỏ giỏ ở bước thanh toán*, *gọi hỗ trợ*.
@@ -75,7 +75,7 @@ Vậy đo HEART bằng gì? Đây là chỗ Semantix định vị bằng phủ �
 
 Cách tiếp cận đi vào đúng đó:
 
-1. **Định nghĩa từng Signal–Metric một lần** trong [Semantic Layer](/blog/metric-dimension-kpi/): "phiên hoạt động", "đặt đơn thành công", "khách quay lại" được chốt nghĩa dùng chung - để cả công ty nói cùng một con số, không cãi nhau "Engagement của em khác Engagement của anh".
+1. **Định nghĩa từng Signal-Metric một lần** trong [Semantic Layer](/blog/metric-dimension-kpi/): "phiên hoạt động", "đặt đơn thành công", "khách quay lại" được chốt nghĩa dùng chung - để cả công ty nói cùng một con số, không cãi nhau "Engagement của em khác Engagement của anh".
 2. **Gộp năm nguồn ngay lúc hỏi** bằng Bảng ảo - khảo sát, log, đơn hàng nối về cùng một câu hỏi mà không phải bê dữ liệu đi đâu.
 3. **Hỏi bằng tiếng Việt:** *"Task success quý này so quý trước, cắt theo kênh?"* - ra số, ra biểu đồ, không chờ đội data.
 
@@ -88,7 +88,7 @@ Một lần định nghĩa. Cả năm chiều nói cùng ngôn ngữ. Bạn nhì
 | **Happiness** - hài lòng | Cảm nhận chủ quan về sản phẩm | Điểm NPS, đánh giá sao, tỷ lệ phàn nàn |
 | **Engagement** - gắn kết | Mức dùng sâu & thường xuyên | Số phiên/tuần, thời lượng dùng |
 | **Adoption** - tiếp nhận | Khách mới bắt đầu dùng tính năng | % kích hoạt tính năng tuần đầu |
-| **Retention** - giữ chân | Khách còn quay lại theo thời gian | % còn hoạt động sau 1–3 tháng |
+| **Retention** - giữ chân | Khách còn quay lại theo thời gian | % còn hoạt động sau 1-3 tháng |
 | **Task success** - hoàn thành tác vụ | Làm xong việc trơn tru | Tỷ lệ thành công, thời gian, số lỗi |
 
 > Quy tắc vàng: AARRR cho biết khách **có** đi qua phễu không; HEART cho biết họ đi qua trong **sung sướng hay cắn răng**. Đo cả hai - nhưng đừng đo cả năm chiều HEART, hãy để Goals chọn chiều cho bạn, và nhớ rằng phút bạn ép một chiều lên là phút nó thôi nói thật.

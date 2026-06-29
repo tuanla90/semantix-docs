@@ -31,7 +31,7 @@ Nhưng đây là chỗ ít người chịu tin: **một nhịp tim đẹp vẫn 
 
 ## Quick Ratio là gì: gộp growth và churn vào một số
 
-Ở [Phần 1](/blog/growth-accounting/) chúng ta đã lập phương trình tăng trưởng: MAU (Monthly Active User - số khách hoạt động hàng tháng) tháng này = MAU tháng trước **+ người dùng mới + người dùng quay lại − người dùng rời bỏ**. Mỗi tháng có người bước vào và người bước ra. Growth Accounting (kế toán tăng trưởng - tách thay đổi mỗi kỳ thành mới / quay lại / giữ chân / rời đi) tách rạch ròi bốn dòng chảy đó.
+Ở [Phần 1](/blog/growth-accounting/) chúng ta đã lập phương trình tăng trưởng: MAU (Monthly Active User - số khách hoạt động hàng tháng) tháng này = MAU tháng trước **+ người dùng mới + người dùng quay lại - người dùng rời bỏ**. Mỗi tháng có người bước vào và người bước ra. Growth Accounting (kế toán tăng trưởng - tách thay đổi mỗi kỳ thành mới / quay lại / giữ chân / rời đi) tách rạch ròi bốn dòng chảy đó.
 
 Quick Ratio lấy đúng những dòng chảy ấy và ép chúng thành một tỷ số:
 
@@ -44,7 +44,7 @@ Tử số là tất cả những gì làm MAU lớn lên - người dùng mới 
 
 Cách đọc trực giác nhất, và cũng là cách tôi luôn nói với founder: **với mỗi 1 user mất đi, bạn thêm được bao nhiêu user?** Quick Ratio = 1,8 nghĩa là cứ mất 1 người, bạn bù vào 1,8 người - lời ra 0,8. Quick Ratio = 0,7 nghĩa là cứ mất 1 người, bạn chỉ kéo về được 0,7 - lỗ 0,3 mỗi vòng. Cái xô của bạn đang đầy lên hay đang cạn, tất cả nằm gọn trong một con số.
 
-## Đọc Quick Ratio: 1 là lằn ranh sống–chết
+## Đọc Quick Ratio: 1 là lằn ranh sống-chết
 
 Vì là một tỷ số quanh mẫu số "user mất đi", Quick Ratio có một lằn ranh tự nhiên - và nó nằm ở đúng **1,0**:
 
@@ -54,7 +54,7 @@ Vì là một tỷ số quanh mẫu số "user mất đi", Quick Ratio có một
 
 <div class="viz">
 <div class="viz-chart" data-chart="line" data-chart-data='{"xLabels":["T1","T2","T3","T4","T5","T6","T7"],"series":[{"name":"Quick Ratio","values":[1.6,1.4,1.2,0.8,0.9,1.3,1.5],"color":"#0d9488","endLabel":true}],"markLine":[{"y":1,"label":"Ngưỡng 1,0","color":"#f59e0b"}],"markArea":[{"from":1,"to":2,"color":"rgba(22,163,74,.10)"},{"from":0,"to":1,"color":"rgba(220,38,38,.10)"}]}'></div>
-<div class="viz-caption">Quick Ratio theo tháng. Mọi điểm trên lằn 1,0 (vùng xanh) là MAU đang lớn; rơi xuống dưới (vùng đỏ, T4–T5) là đang co lại. Lằn 1,0 là vạch tim ngừng đập. *(số liệu minh họa)*</div>
+<div class="viz-caption">Quick Ratio theo tháng. Mọi điểm trên lằn 1,0 (vùng xanh) là MAU đang lớn; rơi xuống dưới (vùng đỏ, T4-T5) là đang co lại. Lằn 1,0 là vạch tim ngừng đập. *(số liệu minh họa)*</div>
 </div>
 
 Vẽ Quick Ratio theo tháng cho bạn thứ mà một con số đơn lẻ không có: **xu hướng**. Một tháng QR = 1,2 không nói nhiều. Nhưng một đường đi từ 1,6 → 1,3 → 1,0 → 0,8 thì hét lên rằng động cơ tăng trưởng đang nguội dần - dù MAU tổng vẫn có thể tăng thêm vài tháng nữa nhờ quán tính, đúng như cái bẫy "con số tổng" mà cả series này xoay quanh.
@@ -63,7 +63,7 @@ Vẽ Quick Ratio theo tháng cho bạn thứ mà một con số đơn lẻ khôn
 
 Đây là lúc phải cẩn thận với con số. Ai cũng muốn nghe "Quick Ratio trên X là đạt". Sự thật khó chịu hơn: **ngưỡng "tốt" phụ thuộc vào mô hình kinh doanh của bạn**, và những con số dưới đây là *ngưỡng tham chiếu ngành* để bạn định hướng, không phải đích để gán cứng cho doanh nghiệp mình.
 
-Với **app tiêu dùng điển hình** (consumer app - mạng xã hội, ứng dụng mua sắm, công cụ free), một sự thật khiến nhiều founder bất ngờ: Quick Ratio thường chỉ **nhỉnh hơn 1 một chút**. Phân tích kinh điển của Amplitude trên một ứng dụng thực cho thấy QR dao động quanh **1–1,5** suốt nhiều tháng - *kể cả những tháng họ ra tính năng mới*. Lý do? Consumer app có churn (tỷ lệ khách rời bỏ) rất cao: bạn kéo về một đống người dùng mỗi tháng, và cũng mất gần một đống. Phần "lời" mỏng manh thường đến từ resurrection - những người quay lại. QR rớt **dưới 1,0** là tín hiệu MAU sắp teo.
+Với **app tiêu dùng điển hình** (consumer app - mạng xã hội, ứng dụng mua sắm, công cụ free), một sự thật khiến nhiều founder bất ngờ: Quick Ratio thường chỉ **nhỉnh hơn 1 một chút**. Phân tích kinh điển của Amplitude trên một ứng dụng thực cho thấy QR dao động quanh **1-1,5** suốt nhiều tháng - *kể cả những tháng họ ra tính năng mới*. Lý do? Consumer app có churn (tỷ lệ khách rời bỏ) rất cao: bạn kéo về một đống người dùng mỗi tháng, và cũng mất gần một đống. Phần "lời" mỏng manh thường đến từ resurrection - những người quay lại. QR rớt **dưới 1,0** là tín hiệu MAU sắp teo.
 
 Nói cách khác, với app tiêu dùng, đừng mơ Quick Ratio = 5. Giữ được nó ổn định trên 1 đã là một cuộc chiến.
 

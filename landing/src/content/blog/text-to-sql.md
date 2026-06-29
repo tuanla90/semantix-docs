@@ -1,7 +1,7 @@
 ---
 title: "Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi - mà vẫn trả về số sai"
 code: "kt-002"
-description: "AI viết SQL đúng cú pháp 95–99% số lần. Nghe yên tâm? Đó mới chính là chỗ nguy hiểm. Bài này giải thích Text-to-SQL thật sự hoạt động ra sao, và cái bẫy 'số sai mà trông như đúng'."
+description: "AI viết SQL đúng cú pháp 95-99% số lần. Nghe yên tâm? Đó mới chính là chỗ nguy hiểm. Bài này giải thích Text-to-SQL thật sự hoạt động ra sao, và cái bẫy 'số sai mà trông như đúng'."
 pubDate: 2026-05-28
 category: "Kiến Thức Nền Tảng"
 readTime: 11
@@ -11,7 +11,7 @@ cover: "/blog/covers/text-to-sql.svg"
 coverAlt: "Câu hỏi tiếng Việt được chuyển thành câu lệnh SQL đúng định nghĩa"
 ---
 
-Hãy bắt đầu bằng một con số làm nhiều người ngạc nhiên: các nghiên cứu năm 2025 cho thấy mô hình ngôn ngữ lớn (LLM - Large Language Model) viết ra câu SQL (Structured Query Language - ngôn ngữ truy vấn cơ sở dữ liệu) **đúng cú pháp tới 95–99% số lần**. Gần như không bao giờ lỗi cú pháp.
+Hãy bắt đầu bằng một con số làm nhiều người ngạc nhiên: các nghiên cứu năm 2025 cho thấy mô hình ngôn ngữ lớn (LLM - Large Language Model) viết ra câu SQL (Structured Query Language - ngôn ngữ truy vấn cơ sở dữ liệu) **đúng cú pháp tới 95-99% số lần**. Gần như không bao giờ lỗi cú pháp.
 
 Phản xạ đầu tiên của bạn có thể là: "Vậy thì yên tâm rồi." Nhưng đây mới đúng là chỗ nguy hiểm nhất của Text-to-SQL (AI biến câu hỏi tiếng Việt thành câu lệnh SQL) - và là lý do tại sao "gắn ChatGPT vào database" nghe thì hấp dẫn mà triển khai thật lại vỡ trận.
 
@@ -56,7 +56,7 @@ WHERE created_at >= '2026-06-01'
   AND status = 'completed' AND refund_amount = 0;
 ```
 
-Cả hai **đều chạy. Đều ra số. Đều "đúng cú pháp".** Nhưng chênh nhau có thể 15–20%. Nếu công ty bạn định nghĩa doanh thu theo cách B mà AI đoán theo cách A, bạn vừa báo cáo sai cho sếp - một cách rất tự tin.
+Cả hai **đều chạy. Đều ra số. Đều "đúng cú pháp".** Nhưng chênh nhau có thể 15-20%. Nếu công ty bạn định nghĩa doanh thu theo cách B mà AI đoán theo cách A, bạn vừa báo cáo sai cho sếp - một cách rất tự tin.
 
 Đây chính là lý do bài toán Text-to-SQL khó hơn nó tưởng: phần "viết được SQL" gần như đã giải xong nhờ LLM hiện đại. Phần chưa giải là **viết đúng SQL theo nghĩa của riêng doanh nghiệp bạn.** Và phần đó không phải bài toán ngôn ngữ - nó là bài toán kiến trúc.
 
@@ -74,7 +74,7 @@ Nghe đơn giản nhưng riêng tiếng Việt đã đủ làm công cụ nướ
 
 Một doanh nghiệp có thể có hàng trăm bảng, hàng nghìn cột. Đưa hết cho AI vừa đắt vừa làm nó nhiễu. Thay vào đó, hệ thống dùng **tìm kiếm ngữ nghĩa (RAG - Retrieval-Augmented Generation: cho AI tra đúng tài liệu trước khi trả lời)** để chỉ rút ra đúng bảng/cột liên quan đến câu hỏi này - bước gọi là *schema linking*, và nó là một trong những yếu tố quyết định độ chính xác cao nhất.
 
-Đi kèm là **Golden SQL**: kho các cặp câu-hỏi–SQL đã được duyệt trước. Khi bạn hỏi câu mới, hệ thống tìm vài câu tương tự trong quá khứ đưa cho AI làm mẫu (*few-shot*). Nói cách khác, AI không phải nhớ cả database - nó được đưa đúng trang sách cần đọc, kèm vài lời giải mẫu.
+Đi kèm là **Golden SQL**: kho các cặp câu-hỏi-SQL đã được duyệt trước. Khi bạn hỏi câu mới, hệ thống tìm vài câu tương tự trong quá khứ đưa cho AI làm mẫu (*few-shot*). Nói cách khác, AI không phải nhớ cả database - nó được đưa đúng trang sách cần đọc, kèm vài lời giải mẫu.
 
 ### Lớp 3 - Sinh SQL trên nền Semantic Layer (lớp chống sai số quan trọng nhất)
 
@@ -100,7 +100,7 @@ Nhìn toàn cảnh thị trường Text-to-SQL, các hệ thống chia thành ha
 
 **Trường phái 2 - "Để AI tự suy, rồi sửa".** Dựa nhiều vào khả năng suy luận của LLM, bù lại bằng RAG phong phú và các vòng tự sửa lỗi. Triển khai nhanh, linh hoạt hơn - nhưng trần độ chính xác thấp hơn và chi phí cao hơn.
 
-Điều thú vị: các hệ trưởng thành đang **hội tụ về giữa** - dùng AI để linh hoạt, nhưng neo vào một semantic layer để khỏi đoán mò. Một mẹo tối ưu phổ biến: phân loại độ khó câu hỏi, để **40–60% câu đơn giản** (đếm, tổng, trung bình) chạy bằng luật rẻ và tất định, chỉ đẩy câu phức tạp cho LLM - tiết kiệm 30–50% chi phí AI mà không giảm chất lượng.
+Điều thú vị: các hệ trưởng thành đang **hội tụ về giữa** - dùng AI để linh hoạt, nhưng neo vào một semantic layer để khỏi đoán mò. Một mẹo tối ưu phổ biến: phân loại độ khó câu hỏi, để **40-60% câu đơn giản** (đếm, tổng, trung bình) chạy bằng luật rẻ và tất định, chỉ đẩy câu phức tạp cho LLM - tiết kiệm 30-50% chi phí AI mà không giảm chất lượng.
 
 Vậy khi chọn (hoặc tự xây) một công cụ Text-to-SQL, đừng hỏi "AI nào xịn nhất?". Hãy hỏi bốn câu sắc hơn:
 

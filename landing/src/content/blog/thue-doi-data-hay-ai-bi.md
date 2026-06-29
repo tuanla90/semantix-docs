@@ -17,30 +17,30 @@ Phản xạ đầu tiên của bạn là nghĩ: *"Vậy thì tuyển người kh
 
 ## Cái giá trên bảng lương - và cái giá không có trên bảng lương
 
-Hãy bắt đầu bằng phần dễ thấy nhất: lương. Ở Việt Nam (2026, *ước tính minh hoạ*), một data analyst dao động **18–35 triệu/tháng** tùy kinh nghiệm; một bạn chạm được vào data engineer (kỹ sư dữ liệu - người dựng đường ống dẫn dữ liệu) thì **30–50 triệu**. Cộng BHXH, thưởng, chỗ ngồi, license công cụ, gọi tròn một analyst tốn công ty **~25–30 triệu/tháng thực chi**.
+Hãy bắt đầu bằng phần dễ thấy nhất: lương. Ở Việt Nam (2026, *ước tính minh hoạ*), một data analyst dao động **18-35 triệu/tháng** tùy kinh nghiệm; một bạn chạm được vào data engineer (kỹ sư dữ liệu - người dựng đường ống dẫn dữ liệu) thì **30-50 triệu**. Cộng BHXH, thưởng, chỗ ngồi, license công cụ, gọi tròn một analyst tốn công ty **~25-30 triệu/tháng thực chi**.
 
 Nhưng lương chỉ là phần nổi. Bốn chi phí ẩn dưới đây mới là phần làm vỡ ngân sách - và không dòng nào hiện trên bảng lương:
 
-- **Tuyển dụng & giữ người.** Analyst giỏi ở VN khó tuyển và *dễ nhảy việc* - trung bình 1,5–2 năm là chuyện thường. Mỗi lần thay người là phí tuyển (1–2 tháng lương qua headhunter), 2–3 tháng để người mới hiểu nghiệp vụ, và một khoảng trống không ai trả lời được câu hỏi nào.
+- **Tuyển dụng & giữ người.** Analyst giỏi ở VN khó tuyển và *dễ nhảy việc* - trung bình 1,5-2 năm là chuyện thường. Mỗi lần thay người là phí tuyển (1-2 tháng lương qua headhunter), 2-3 tháng để người mới hiểu nghiệp vụ, và một khoảng trống không ai trả lời được câu hỏi nào.
 - **Thời gian chờ.** Mỗi câu hỏi của sếp, của marketing, của vận hành đều phải **xếp hàng qua một người**. "Cho chị số doanh thu TikTok theo giờ tuần này" - nằm trong queue (hàng đợi) đến chiều mai. Quyết định chậm một ngày, đôi khi đáng giá hơn cả tháng lương.
 - **Bus-factor** (rủi ro khi một người nghỉ là cả mảng kiến thức biến mất). Analyst nghỉ → cách tính "đơn hợp lệ", logic loại đơn hoàn, các công thức ẩn trong file... đi theo họ. Bạn không chỉ mất một nhân sự, bạn mất *trí nhớ nghiệp vụ* của công ty.
-- **Tỷ lệ bưng-số.** Đây là chi phí âm thầm lớn nhất: khảo sát ngành nhiều năm cho thấy người làm data dành **60–80% thời gian** cho việc gom, làm sạch, ghép, định dạng - chứ không phải phân tích. Bạn trả lương cho bộ óc phân tích, nhưng nhận về phần lớn là công việc tay chân.
+- **Tỷ lệ bưng-số.** Đây là chi phí âm thầm lớn nhất: khảo sát ngành nhiều năm cho thấy người làm data dành **60-80% thời gian** cho việc gom, làm sạch, ghép, định dạng - chứ không phải phân tích. Bạn trả lương cho bộ óc phân tích, nhưng nhận về phần lớn là công việc tay chân.
 
 > Thuê một analyst để bưng số thủ công giống như thuê một đầu bếp giỏi rồi bắt họ đứng rửa bát cả ngày. Họ vẫn làm được, nhưng bạn đang đốt đúng cái phần đắt nhất của họ vào việc rẻ tiền nhất.
 
 ## Bảng toán chi phí 12 tháng
 
-Hãy đặt hai con đường cạnh nhau cho một SME (doanh nghiệp vừa và nhỏ) 50–200 người, *con số là ước tính minh hoạ để so sánh độ lớn, không phải báo giá*:
+Hãy đặt hai con đường cạnh nhau cho một SME (doanh nghiệp vừa và nhỏ) 50-200 người, *con số là ước tính minh hoạ để so sánh độ lớn, không phải báo giá*:
 
 | Khoản mục (12 tháng) | Thuê đội data nội bộ | Dùng AI BI (Semantix) |
 |---|---|---|
-| Lương cứng | 1 analyst ~25–30 triệu/tháng → **~300–360 triệu/năm** | 0 |
-| Tuyển dụng & onboarding | Phí headhunter + 2–3 tháng làm quen | Không có |
+| Lương cứng | 1 analyst ~25-30 triệu/tháng → **~300-360 triệu/năm** | 0 |
+| Tuyển dụng & onboarding | Phí headhunter + 2-3 tháng làm quen | Không có |
 | Nền tảng / license | Power BI, kho dữ liệu, ETL nhỏ | Theo instance - **thấp hơn nhiều lần** |
 | Thời gian ra một câu trả lời | Vài giờ đến vài ngày (xếp hàng) | **Vài giây**, người hỏi tự hỏi |
 | Rủi ro mất người | Cao - kiến thức đi theo | Định nghĩa nằm trong hệ thống |
-| % thời gian bưng-số | **60–80%** | Gần như được tự động hoá |
-| Phân tích sâu thực sự nhận được | 20–40% công suất của 1 người | 1 analyst rảnh tay làm việc của 3 |
+| % thời gian bưng-số | **60-80%** | Gần như được tự động hoá |
+| Phân tích sâu thực sự nhận được | 20-40% công suất của 1 người | 1 analyst rảnh tay làm việc của 3 |
 
 Con số cụ thể sẽ khác theo từng công ty. Nhưng *hình dạng* của bảng này thì gần như luôn đúng: với đội data nhỏ, bạn trả tiền chủ yếu cho phần bưng-số lặp lại và cho rủi ro phụ thuộc một người - chứ không cho phần phân tích tạo ra giá trị.
 
@@ -63,7 +63,7 @@ Con số cụ thể sẽ khác theo từng công ty. Nhưng *hình dạng* của
   <!-- caption note -->
   <text x="40" y="272" fill="#475569" font-size="12">Cùng một con người - khác nhau ở chỗ thời gian được dồn vào đâu. *Tỷ lệ minh hoạ.*</text>
 </svg>
-<div class="viz-caption">AI BI không thay analyst - nó lấy lại 60–80% thời gian đang bị nuốt bởi việc bưng số thủ công.</div>
+<div class="viz-caption">AI BI không thay analyst - nó lấy lại 60-80% thời gian đang bị nuốt bởi việc bưng số thủ công.</div>
 </div>
 
 ## Sự thật ngược đời: thuê thêm người không giải được bài toán tốc độ
@@ -108,7 +108,7 @@ Khi câu trả lời không còn bị khoá sau lưng một người, việc [ch
 
 | Thuê đội data (một mình) | AI BI + (tuỳ chọn) analyst |
 |---|---|
-| Trả lương cho 60–80% thời gian bưng số | Bưng số được tự động hoá |
+| Trả lương cho 60-80% thời gian bưng số | Bưng số được tự động hoá |
 | Mỗi câu hỏi xếp hàng qua một người | Ai cần biết tự hỏi, trả lời tức thì |
 | Analyst nghỉ → mất trí nhớ nghiệp vụ | Định nghĩa nằm trong hệ thống |
 | Khó tuyển, dễ mất người | Không phụ thuộc một cá nhân |

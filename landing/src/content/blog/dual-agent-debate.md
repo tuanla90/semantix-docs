@@ -42,7 +42,7 @@ Hai agent này **tranh luận** qua một hoặc vài vòng. Agent B nêu điể
 
 Hãy hình dung như **hai kiểm toán viên soát chéo nhau.** Một người lập sổ, người kia cầm bút đỏ rà từng dòng và hỏi *"số này ở đâu ra?"*. Không phải vì người lập sổ kém - mà vì một cặp mắt thứ hai, *được trả công để hoài nghi*, bắt được thứ mà người trong cuộc không bao giờ tự thấy. Hoặc như phiên tòa: bên công tố và bên bào chữa cùng đẩy lập luận tới giới hạn, và sự thật lộ ra ở chỗ va chạm - chứ không phải ở lời độc thoại của một bên.
 
-Đây không phải mẹo vặt. Nó tựa trên một dòng nghiên cứu rõ ràng những năm 2024–2025: **multi-agent debate**, **self-consistency** (lấy nhiều lời giải độc lập rồi đối chiếu thay vì tin một lời giải duy nhất), và **LLM-as-judge** (dùng một mô hình đóng vai trọng tài đánh giá đầu ra của mô hình khác). Điểm chung của cả ba: **độ tin cậy không đến từ một mô hình giỏi hơn, mà từ việc bắt nhiều góc nhìn va vào nhau.**
+Đây không phải mẹo vặt. Nó tựa trên một dòng nghiên cứu rõ ràng những năm 2024-2025: **multi-agent debate**, **self-consistency** (lấy nhiều lời giải độc lập rồi đối chiếu thay vì tin một lời giải duy nhất), và **LLM-as-judge** (dùng một mô hình đóng vai trọng tài đánh giá đầu ra của mô hình khác). Điểm chung của cả ba: **độ tin cậy không đến từ một mô hình giỏi hơn, mà từ việc bắt nhiều góc nhìn va vào nhau.**
 
 ## Khi "cãi nhau" bắt được lỗi mà "gật đầu" bỏ qua
 

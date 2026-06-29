@@ -27,7 +27,7 @@ Chủ shop nào cũng nghĩ mình "để mắt tới số" mỗi ngày. Nhưng h
 
 Bạn không thể biết cái gì là *bất thường* nếu chưa định nghĩa cái gì là *bình thường*. Đây là bước ai cũng bỏ qua, rồi than "cảnh báo loạn xạ".
 
-Hãy nhìn lại 8–12 tuần gần nhất của một chỉ số. Bạn sẽ thấy nó không đứng yên - nó nhấp nhô lên xuống. Khoảng nhấp nhô quen thuộc đó gọi là **dải bình thường** (vùng dao động mà chỉ số vẫn thường xuyên rơi vào). Đường giữa dải là mức nền trung bình; mép trên và mép dưới là **ngưỡng** (lằn ranh: vượt qua thì coi là đáng chú ý).
+Hãy nhìn lại 8-12 tuần gần nhất của một chỉ số. Bạn sẽ thấy nó không đứng yên - nó nhấp nhô lên xuống. Khoảng nhấp nhô quen thuộc đó gọi là **dải bình thường** (vùng dao động mà chỉ số vẫn thường xuyên rơi vào). Đường giữa dải là mức nền trung bình; mép trên và mép dưới là **ngưỡng** (lằn ranh: vượt qua thì coi là đáng chú ý).
 
 Đây chính là nơi [tín hiệu vs nhiễu](/blog/tin-hieu-vs-nhieu/) gặp anomaly detection. Phần lớn dao động hằng ngày chỉ là **nhiễu** - số nhúc nhích vì hàng trăm chuyện vặt ngẫu nhiên, *không mang thông tin gì*. Một con số rơi 8% nhưng vẫn nằm gọn trong dải thì không phải bất thường, đó là cơ thể đang thở bình thường. Bất thường thật là khi con số **vọt hẳn ra ngoài dải** - đó mới là tín hiệu.
 

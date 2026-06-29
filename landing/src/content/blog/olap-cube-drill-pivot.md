@@ -72,7 +72,7 @@ Cái khối ví dụ ở đây có ba chiều: **Sản phẩm × Thời gian × 
 
 ## Vì sao tư duy "khối" mạnh hơn "bảng phẳng"
 
-Với bảng phẳng, mỗi câu hỏi mới là một lần dựng lại từ đầu: lọc, nhóm, cộng, xuất file. Năm câu của sếp = năm lần làm tay = một buổi chiều mất trắng. Tệ hơn, năm file đó rồi *lệch nhau* - file này tính cả VAT, file kia chưa, và bạn lại có năm con số doanh thu (chuyện này đáng đọc riêng trong [Metric – Dimension – KPI](/blog/metric-dimension-kpi/)).
+Với bảng phẳng, mỗi câu hỏi mới là một lần dựng lại từ đầu: lọc, nhóm, cộng, xuất file. Năm câu của sếp = năm lần làm tay = một buổi chiều mất trắng. Tệ hơn, năm file đó rồi *lệch nhau* - file này tính cả VAT, file kia chưa, và bạn lại có năm con số doanh thu (chuyện này đáng đọc riêng trong [Metric - Dimension - KPI](/blog/metric-dimension-kpi/)).
 
 Với tư duy khối, năm câu của sếp là **năm động tác trên một nguồn duy nhất**: drill, pivot, slice - vài giây mỗi cái, và con số *luôn nhất quán* vì chúng đến từ cùng một khối. Bạn không trả lời từng câu hỏi rời; bạn cho sếp một thứ *xoay được*, để sếp tự hỏi tới đâu xoay tới đó. Cái khối tổ chức ra sao quyết định bạn xoay được những chiều nào - nền của nó chính là [data modeling fact &amp; dimension](/blog/data-modeling-fact-dimension/), và nó thuộc về thế giới phân tích chứ không phải hệ vận hành ([OLTP vs OLAP](/blog/oltp-vs-olap/) giải thích vì sao đừng nhầm hai thứ).
 

@@ -55,7 +55,7 @@ Mọi thông tin này **đã từng tồn tại** - ngay lúc bạn thiết kế
 
 Nói cách khác: với NocoBase, **bạn định nghĩa dữ liệu đúng một lần - ngay lúc dựng database - và phần định nghĩa đó được lưu lại tử tế**, không bốc hơi. Đây là khác biệt nền tảng, không phải tính năng phụ.
 
-Tôi nói cái này với tư cách người đã đi cả hành trình đó bằng tay. Mảng tư vấn chuyển đổi số ngoài giờ của tôi đi từ Google Sheets, qua AppSheet, rồi dừng lại ở NocoBase - và tôi tự dựng database cho đủ ngành: bán hàng, kho, xuất nhập khẩu, một xưởng in may mặc, một phòng khám. Cái khiến tôi chốt NocoBase chính là chỗ này: lúc dựng bảng cho phòng khám, tôi đã đặt nhãn "Trạng thái lịch hẹn", khai sẵn các giá trị, nối quan hệ bệnh nhân–lịch hẹn. Trước đây phần định nghĩa nghiệp vụ ấy nằm trong đầu tôi rồi bốc hơi; giờ nó nằm trong metadata, để công cụ phía sau đọc lại - thay vì bắt tôi khai lần hai từ trí nhớ.
+Tôi nói cái này với tư cách người đã đi cả hành trình đó bằng tay. Mảng tư vấn chuyển đổi số ngoài giờ của tôi đi từ Google Sheets, qua AppSheet, rồi dừng lại ở NocoBase - và tôi tự dựng database cho đủ ngành: bán hàng, kho, xuất nhập khẩu, một xưởng in may mặc, một phòng khám. Cái khiến tôi chốt NocoBase chính là chỗ này: lúc dựng bảng cho phòng khám, tôi đã đặt nhãn "Trạng thái lịch hẹn", khai sẵn các giá trị, nối quan hệ bệnh nhân-lịch hẹn. Trước đây phần định nghĩa nghiệp vụ ấy nằm trong đầu tôi rồi bốc hơi; giờ nó nằm trong metadata, để công cụ phía sau đọc lại - thay vì bắt tôi khai lần hai từ trí nhớ.
 
 ## Kết nối `nocobase`: Semantix đọc thẳng metadata đó
 
@@ -93,7 +93,7 @@ Mà là: **đọc lại đúng những định nghĩa bạn đã khai sẵn tron
 
 Nếu bạn còn nhớ cảm giác ngồi gõ lại từng tên cột ở đầu bài - thì đây là toàn bộ điểm của bài này: với NocoBase, bạn không bao giờ phải làm việc đó lần thứ hai. Bạn định nghĩa dữ liệu một lần khi dựng nó. Semantix đọc hết phần còn lại.
 
-Muốn hiểu sâu hơn *vì sao* tầng định nghĩa này quan trọng đến vậy - kể cả với AI - đọc tiếp [Semantic Layer là gì](/blog/semantic-layer/), và nếu bạn đang nghĩ về cách diễn đạt số liệu, [Metric – Dimension – KPI: vỡ lòng từ vựng dữ liệu](/blog/metric-dimension-kpi/) là chỗ bắt đầu tốt.
+Muốn hiểu sâu hơn *vì sao* tầng định nghĩa này quan trọng đến vậy - kể cả với AI - đọc tiếp [Semantic Layer là gì](/blog/semantic-layer/), và nếu bạn đang nghĩ về cách diễn đạt số liệu, [Metric - Dimension - KPI: vỡ lòng từ vựng dữ liệu](/blog/metric-dimension-kpi/) là chỗ bắt đầu tốt.
 
 ---
 

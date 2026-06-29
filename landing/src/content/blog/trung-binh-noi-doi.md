@@ -28,9 +28,9 @@ coverAlt: "Biểu đồ phân phối lệch với đường trung bình bị ké
   </ol>
 </div>
 
-Một chủ shop mỹ phẩm ở TP.HCM mở báo cáo cuối tháng, thấy một dòng làm chị mừng: **AOV (Average Order Value - giá trị đơn hàng trung bình) = 500k**. Chị suy ra ngay: "Khách mình sộp, mỗi đơn nửa triệu." Thế là chị nhập về một lô combo cao cấp tầm 450k–600k, gom hết tiền hàng vào đó.
+Một chủ shop mỹ phẩm ở TP.HCM mở báo cáo cuối tháng, thấy một dòng làm chị mừng: **AOV (Average Order Value - giá trị đơn hàng trung bình) = 500k**. Chị suy ra ngay: "Khách mình sộp, mỗi đơn nửa triệu." Thế là chị nhập về một lô combo cao cấp tầm 450k-600k, gom hết tiền hàng vào đó.
 
-Một tháng sau, lô combo nằm đắp chiếu. Khi chị bóc dữ liệu ra xem từng đơn, sự thật hiện nguyên hình: **phần lớn khách chỉ chi quanh 150k**. Con số 500k đến từ đâu? Từ vài đơn sỉ - mấy chị bán lại ôm 5–10 triệu một lần - kéo lệch cả mặt bằng. Cái "trung bình 500k" ấy là một con số mà **gần như không khách lẻ nào thật sự chi**.
+Một tháng sau, lô combo nằm đắp chiếu. Khi chị bóc dữ liệu ra xem từng đơn, sự thật hiện nguyên hình: **phần lớn khách chỉ chi quanh 150k**. Con số 500k đến từ đâu? Từ vài đơn sỉ - mấy chị bán lại ôm 5-10 triệu một lần - kéo lệch cả mặt bằng. Cái "trung bình 500k" ấy là một con số mà **gần như không khách lẻ nào thật sự chi**.
 
 Phản xạ của bạn có thể là: "Số liệu sai à?" Không. Con số 500k **đúng tuyệt đối** về mặt số học. Đây mới là chỗ cay nghiệt: nó đúng, và nó vẫn đánh lừa. Đây là phần nguy hiểm nhất của tư duy dựa trên dữ liệu - không phải con số sai, mà là con số đúng bị đọc nhầm.
 
@@ -69,7 +69,7 @@ Cái la bàn còn lại tỉnh táo hơn: **median (trung vị - con số nằm 
 <div class="viz-caption">Cùng một tập dữ liệu: median (trung vị) bám sát đám đông; mean (trung bình cộng) bị một đơn sỉ kéo vọt lên gấp gần 7 lần.</div>
 </div>
 
-Mean = 1.040k. Median = 155k. Chị chủ shop tin vào mean và nhập hàng cho một tệp khách *không tồn tại*. Nếu chị nhìn median, chị đã nhập đúng dòng hàng 150k–200k mà chín trên mười khách thật sự mua.
+Mean = 1.040k. Median = 155k. Chị chủ shop tin vào mean và nhập hàng cho một tệp khách *không tồn tại*. Nếu chị nhìn median, chị đã nhập đúng dòng hàng 150k-200k mà chín trên mười khách thật sự mua.
 
 ## Khi nào median trung thực hơn mean?
 

@@ -50,7 +50,7 @@ Doanh thu quý có một sức hút chết người - nó tròn trịa, đã ch�
 
 Hãy ghép từng lagging indicator quan trọng với cái báo trước nó:
 
-- **Doanh thu tháng tới** ← số khách dùng thử và tỷ lệ giữ chân *tuần này*. Khách hôm nay là doanh thu của 4–8 tuần nữa.
+- **Doanh thu tháng tới** ← số khách dùng thử và tỷ lệ giữ chân *tuần này*. Khách hôm nay là doanh thu của 4-8 tuần nữa.
 - **Churn** *(khách rời bỏ - người dùng kỳ trước nhưng kỳ này thì không)* **của quý** ← tín hiệu giảm tương tác sớm: khách mở app ít hơn, bỏ qua tin nhắn, giãn khoảng cách giữa hai lần mua. Một khách "im lặng" hôm nay thường là một khách mất sau 60 ngày.
 - **Lợi nhuận năm** ← biên đơn hàng và chi phí thu hút khách *từng tháng*.
 
@@ -99,7 +99,7 @@ Semantix không phải một con bot đọc thuộc lòng doanh thu hôm qua. N�
 
 > Quy tắc vàng: đừng quản lý công ty bằng những con số bạn không còn lái được. Mỗi chỉ số đáng theo dõi phải trả lời được câu *"hôm nay tôi làm gì khác đi?"*.
 
-Đây là chỗ cả chuỗi hội tụ: tư duy dựa trên dữ liệu không phải là gom thật nhiều số. Nó là một mạch - bắt đầu từ [một câu hỏi đúng](/blog/bat-dau-tu-cau-hoi/) (Phần 2), tránh những thiên kiến bóp méo cách ta đọc (Phần 3), không để tương quan giả và trung bình lừa mình (Phần 4–5), và quy về đúng nơi nó phải tới: **một hành động cụ thể, làm hôm nay, khi vẫn còn kịp**. Số nào không dẫn tới đó thì chỉ là số.
+Đây là chỗ cả chuỗi hội tụ: tư duy dựa trên dữ liệu không phải là gom thật nhiều số. Nó là một mạch - bắt đầu từ [một câu hỏi đúng](/blog/bat-dau-tu-cau-hoi/) (Phần 2), tránh những thiên kiến bóp méo cách ta đọc (Phần 3), không để tương quan giả và trung bình lừa mình (Phần 4-5), và quy về đúng nơi nó phải tới: **một hành động cụ thể, làm hôm nay, khi vẫn còn kịp**. Số nào không dẫn tới đó thì chỉ là số.
 
 ---
 

@@ -25,7 +25,7 @@ Cơ chế của kiểu này đơn giản đến mức dễ tin là đủ. Hệ t
 
 Hãy hình dung bạn thuê **một phiên dịch viên giỏi ngữ pháp tuyệt đối, nhưng chưa từng làm trong ngành của bạn.** Bạn đưa cho họ một cuốn sổ kế toán đầy thuật ngữ nội bộ và bảo "dịch giúp tôi câu này". Họ dịch trơn tru, ngữ pháp không một lỗi. Chỉ là khi gặp chữ "doanh thu thuần" trong sổ của bạn, họ phải *tự đoán* nó nghĩa là gì - vì không ai đưa cho họ cuốn từ điển nội bộ của công ty. Đoán đúng hay sai, họ vẫn nói ra với giọng tự tin y hệt.
 
-Đó chính xác là chatbot cắm thẳng DB. SQL nó viết gần như không bao giờ lỗi cú pháp - nghiên cứu 2025 cho thấy LLM viết đúng cú pháp tới 95–99% số lần. Nhưng **đúng cú pháp không có nghĩa là đúng số.** Phần khó của bài toán không nằm ở việc viết SQL; nó nằm ở việc viết SQL đúng *theo nghĩa của riêng doanh nghiệp bạn*. Và phần đó, AI không tự đoán ra được. *(Vì sao "viết SQL không lỗi" lại là chỗ nguy hiểm nhất, xem [Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi mà vẫn trả về số sai](/blog/text-to-sql/).)*
+Đó chính xác là chatbot cắm thẳng DB. SQL nó viết gần như không bao giờ lỗi cú pháp - nghiên cứu 2025 cho thấy LLM viết đúng cú pháp tới 95-99% số lần. Nhưng **đúng cú pháp không có nghĩa là đúng số.** Phần khó của bài toán không nằm ở việc viết SQL; nó nằm ở việc viết SQL đúng *theo nghĩa của riêng doanh nghiệp bạn*. Và phần đó, AI không tự đoán ra được. *(Vì sao "viết SQL không lỗi" lại là chỗ nguy hiểm nhất, xem [Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi mà vẫn trả về số sai](/blog/text-to-sql/).)*
 
 Dưới đây là năm khía cạnh mà khoảng cách giữa hai cách tiếp cận lộ ra rõ nhất.
 
@@ -48,7 +48,7 @@ WHERE created_at >= '2026-07-01'
   AND status = 'completed' AND refund_amount = 0;
 ```
 
-Hai con số chênh nhau 15–20%. Cả hai "đúng cú pháp". Và bạn không có cách nào biết lần nào theo đúng định nghĩa thật của mình.
+Hai con số chênh nhau 15-20%. Cả hai "đúng cú pháp". Và bạn không có cách nào biết lần nào theo đúng định nghĩa thật của mình.
 
 Trong một **Semantic Layer** (tầng định nghĩa nghiệp vụ dùng chung), "doanh thu" được khai báo *đúng một lần* - kèm trừ gì, lọc gì, ở trạng thái nào - và AI buộc phải dùng định nghĩa đó. Khoảng trống để đoán biến mất, vì câu trả lời đã được viết sẵn trong cuốn từ điển.
 
@@ -66,7 +66,7 @@ JOIN order_items oi ON oi.order_id   = o.id   -- ← mỗi đơn lặp n lần
 GROUP BY c.name;
 ```
 
-`SUM(o.total_amount)` giờ cộng giá trị mỗi đơn *nhiều lần*. Một khách mua 3 món trong một đơn có doanh thu gấp ba. Câu lệnh chạy ngon, ra bảng đẹp, sai 15–200% tuỳ dữ liệu.
+`SUM(o.total_amount)` giờ cộng giá trị mỗi đơn *nhiều lần*. Một khách mua 3 món trong một đơn có doanh thu gấp ba. Câu lệnh chạy ngon, ra bảng đẹp, sai 15-200% tuỳ dữ liệu.
 
 Khi quan hệ `orders : order_items` là 1-nhiều được khai báo *một lần* ở tầng ngữ nghĩa - kèm cách gộp đúng - AI không phải đoán khoá nối nữa. Nó lắp theo bản đồ có sẵn. Bịa quan hệ trở thành chuyện bất khả thi, vì đường đi đã được vẽ trước.
 

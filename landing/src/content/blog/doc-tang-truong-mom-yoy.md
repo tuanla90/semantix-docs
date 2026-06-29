@@ -50,7 +50,7 @@ Hãy hình dung một shop bánh kẹo ở TP.HCM. Doanh thu của họ không p
   <text x="480" y="250" fill="#94A3B8" font-size="12" text-anchor="middle">T3</text>
   <text x="480" y="147" fill="#22D3EE" font-size="12" text-anchor="middle" font-weight="700">585</text>
   <!-- MoM annotations -->
-  <text x="240" y="285" fill="#F87171" font-size="13" font-weight="700" text-anchor="middle">T2 so T1: MoM −65% (hoảng loạn?)</text>
+  <text x="240" y="285" fill="#F87171" font-size="13" font-weight="700" text-anchor="middle">T2 so T1: MoM -65% (hoảng loạn?)</text>
   <text x="480" y="285" fill="#22D3EE" font-size="13" font-weight="700" text-anchor="middle">T3 so T2: MoM +30% (bùng nổ?)</text>
   <text x="340" y="310" fill="#64748B" font-size="12" text-anchor="middle">Cả hai đều là mùa vụ - không phải xu hướng. Cần YoY để biết thật.</text>
 </svg>
@@ -75,7 +75,7 @@ Cái bẫy này nguy nhất với **sản phẩm mới hoặc kênh mới** - đ
 
 Tỷ lệ chuyển đổi của bạn YoY đi từ 10% lên 12%. Bạn viết "tăng 2%". Người đọc hiểu là "nhích tí xíu, gần như không đổi". Nhưng thật ra tỷ lệ đã to lên một phần năm.
 
-Khi bạn so sánh hai *tỷ lệ phần trăm* qua thời gian, đừng nói tắt. Trừ thẳng hai tỷ lệ (12% − 10%) cho ra **+2 điểm phần trăm**; còn so phần tăng thêm với nền (2 ÷ 10) cho ra **+20%**. Đây là chỗ MoM/YoY hay vấp nhất, vì các chỉ số kiểu tỷ lệ chốt, tỷ lệ hoàn, biên lợi nhuận đều là phần trăm. Lẫn lộn "điểm" với "phần trăm" là đủ để cả phòng họp hiểu sai mức độ. Chuyện này đủ rắc rối để có hẳn một bài riêng: [phần trăm vs điểm phần trăm](/blog/phan-tram-vs-diem-phan-tram/).
+Khi bạn so sánh hai *tỷ lệ phần trăm* qua thời gian, đừng nói tắt. Trừ thẳng hai tỷ lệ (12% - 10%) cho ra **+2 điểm phần trăm**; còn so phần tăng thêm với nền (2 ÷ 10) cho ra **+20%**. Đây là chỗ MoM/YoY hay vấp nhất, vì các chỉ số kiểu tỷ lệ chốt, tỷ lệ hoàn, biên lợi nhuận đều là phần trăm. Lẫn lộn "điểm" với "phần trăm" là đủ để cả phòng họp hiểu sai mức độ. Chuyện này đủ rắc rối để có hẳn một bài riêng: [phần trăm vs điểm phần trăm](/blog/phan-tram-vs-diem-phan-tram/).
 
 ## Bẫy 4: tăng trưởng kép - 10% mỗi tháng KHÔNG phải 120% một năm
 

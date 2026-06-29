@@ -15,7 +15,7 @@ Cuộc họp đầu tháng. Sếp chỉ vào màn hình: "Doanh thu tháng này 
 
 Đó là câu trả lời tệ nhất có thể đưa ra - không phải vì nó sai, mà vì nó **vô dụng**. "Do thị trường" không cho bạn một việc nào để làm vào sáng mai. Nó là cách lịch sự để nói "tôi không biết".
 
-Con số "−15%" không phải một khối đặc. Nó là **tổng của nhiều thứ đang kéo nhau theo hai hướng**: có yếu tố kéo doanh thu xuống, có yếu tố kéo lên, và cái bạn nhìn thấy chỉ là phần còn lại sau khi chúng triệt tiêu nhau. Nhiệm vụ của bạn không phải đoán nguyên nhân - mà là **bóc** con số đó ra cho tới khi mỗi mảnh chỉ thẳng vào một việc cần sửa. Đó là WHY analysis.
+Con số "-15%" không phải một khối đặc. Nó là **tổng của nhiều thứ đang kéo nhau theo hai hướng**: có yếu tố kéo doanh thu xuống, có yếu tố kéo lên, và cái bạn nhìn thấy chỉ là phần còn lại sau khi chúng triệt tiêu nhau. Nhiệm vụ của bạn không phải đoán nguyên nhân - mà là **bóc** con số đó ra cho tới khi mỗi mảnh chỉ thẳng vào một việc cần sửa. Đó là WHY analysis.
 
 ## WHY analysis là gì: phân rã thay đổi theo driver
 
@@ -28,7 +28,7 @@ Doanh thu = Số khách × Đơn trung bình
           = Số khách × Số đơn/khách × Giá trị mỗi đơn
 ```
 
-Khi doanh thu đổi, nó đổi vì **một (hoặc nhiều) trong các thừa số này** đổi. Khung kinh điển nhất là **price–volume–mix** (giá – lượng – cơ cấu):
+Khi doanh thu đổi, nó đổi vì **một (hoặc nhiều) trong các thừa số này** đổi. Khung kinh điển nhất là **price-volume-mix** (giá - lượng - cơ cấu):
 
 - **Price (giá):** bạn bán đắt hơn hay rẻ hơn? Khuyến mãi sâu kéo giá trung bình xuống.
 - **Volume (lượng):** bạn bán được nhiều món/nhiều khách hơn hay ít hơn?
@@ -49,15 +49,15 @@ Phân rã cho bạn biết *yếu tố nào* đổi. Nhưng yếu tố đó vẫ
 Tầng 1 ("lượng khách giảm") là thứ phân rã chỉ ra. Tầng 5 ("đổi đơn vị vận chuyển") mới là thứ bạn **sửa được vào sáng mai**. "Do thị trường" thậm chí không qua nổi câu hỏi thứ nhất.
 
 <div class="viz">
-<div class="viz-chart" data-chart="waterfall" data-chart-data='{"unit":" tỷ","items":[{"label":"DT tháng trước","value":10,"type":"total"},{"label":"− Giá bán giảm","value":-1.2},{"label":"− Lượng khách","value":-0.8},{"label":"+ Đơn TB tăng","value":0.5},{"label":"DT tháng này","value":8.5,"type":"total"}]}'></div>
-<div class="viz-caption">Phân rã vì sao doanh thu đổi (số minh họa): con số "−15%" được bóc thành các yếu tố đóng góp - giá giảm và mất khách kéo xuống, đơn trung bình tăng kéo lên. Giờ bạn biết sửa ở đâu.</div>
+<div class="viz-chart" data-chart="waterfall" data-chart-data='{"unit":" tỷ","items":[{"label":"DT tháng trước","value":10,"type":"total"},{"label":"- Giá bán giảm","value":-1.2},{"label":"- Lượng khách","value":-0.8},{"label":"+ Đơn TB tăng","value":0.5},{"label":"DT tháng này","value":8.5,"type":"total"}]}'></div>
+<div class="viz-caption">Phân rã vì sao doanh thu đổi (số minh họa): con số "-15%" được bóc thành các yếu tố đóng góp - giá giảm và mất khách kéo xuống, đơn trung bình tăng kéo lên. Giờ bạn biết sửa ở đâu.</div>
 </div>
 
-Nhìn biểu đồ waterfall (bắc cầu) trên: nó kể đúng một câu chuyện mà "−15%" giấu kín. Hóa ra **giá giảm** (−1,2 tỷ) là thủ phạm lớn nhất, không phải mất khách (−0,8 tỷ). Và có một tin tốt bị che hẳn: **đơn trung bình đang tăng** (+0,5 tỷ), kéo ngược lên. Nếu bạn dừng ở con số tổng, bạn không bao giờ thấy cái lò xo đang đẩy lên này - và có thể vô tình bóp chết nó khi "chữa cháy" doanh thu bằng cách giảm giá thêm.
+Nhìn biểu đồ waterfall (bắc cầu) trên: nó kể đúng một câu chuyện mà "-15%" giấu kín. Hóa ra **giá giảm** (-1,2 tỷ) là thủ phạm lớn nhất, không phải mất khách (-0,8 tỷ). Và có một tin tốt bị che hẳn: **đơn trung bình đang tăng** (+0,5 tỷ), kéo ngược lên. Nếu bạn dừng ở con số tổng, bạn không bao giờ thấy cái lò xo đang đẩy lên này - và có thể vô tình bóp chết nó khi "chữa cháy" doanh thu bằng cách giảm giá thêm.
 
 ## Vì sao "một con số tổng" giấu hết nguyên nhân
 
-Một con số tổng là kết quả của **phép cộng những lực ngược chiều**. −15% có thể là "−15% đều khắp" (cả thị trường yếu thật), hoặc là "−40% ở một kênh + 25% ở kênh khác" - hai tình huống đòi hai hành động hoàn toàn khác nhau, mà con số tổng nhìn y hệt.
+Một con số tổng là kết quả của **phép cộng những lực ngược chiều**. -15% có thể là "-15% đều khắp" (cả thị trường yếu thật), hoặc là "-40% ở một kênh + 25% ở kênh khác" - hai tình huống đòi hai hành động hoàn toàn khác nhau, mà con số tổng nhìn y hệt.
 
 Cách thoát ra là **cắt theo nhiều chiều** (dimension - lát cắt để xoay nhìn con số: theo kênh, khu vực, sản phẩm, nhóm khách) để **khoanh vùng**:
 
@@ -73,7 +73,7 @@ WHY analysis cũng chính là nấc thứ hai trên [thang trưởng thành phâ
 
 ## ... trong Semantix
 
-Tự tay làm việc này tử tế - bóc doanh thu theo price–volume–mix, rồi cắt chéo theo kênh × khu vực × sản phẩm để khoanh vùng, rồi chạy 5 Whys - là cả buổi viết SQL cho một analyst. Và lần sau con số đổi, bạn lại làm lại từ đầu.
+Tự tay làm việc này tử tế - bóc doanh thu theo price-volume-mix, rồi cắt chéo theo kênh × khu vực × sản phẩm để khoanh vùng, rồi chạy 5 Whys - là cả buổi viết SQL cho một analyst. Và lần sau con số đổi, bạn lại làm lại từ đầu.
 
 Semantix không phải chatbot cắm vào database rồi đoán mò "chắc do thị trường". Semantix **có sẵn tính năng phân tích "vì sao"**: khi một con số đổi, nó tự **bóc thay đổi đó theo từng chiều** để chỉ ra đâu là yếu tố đóng góp lớn nhất - thay vì bắt bạn tự dò. Bạn định nghĩa "doanh thu", "kênh", "sản phẩm" một lần trong [Semantic Layer](/blog/semantic-layer/), rồi hỏi bằng tiếng Việt:
 
@@ -85,7 +85,7 @@ Semantix tự dựng phân rã và biểu đồ waterfall, chỉ thẳng vào dr
 
 | Một con số tổng | Phân rã theo driver |
 |---|---|
-| "Doanh thu giảm 15%" | "−15% = giá −12% + khách −8% + đơn TB +5%" |
+| "Doanh thu giảm 15%" | "-15% = giá -12% + khách -8% + đơn TB +5%" |
 | "Do thị trường" | "Do giá ở kênh Shopee, sau đợt khuyến mãi" |
 | Đoán nguyên nhân | Bóc tách đóng góp, rồi 5 Whys tới gốc |
 | Nhìn tổng, tưởng giảm đều | Cắt theo chiều, thấy cú giảm dồn vào một chỗ |

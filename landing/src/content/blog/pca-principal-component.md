@@ -29,7 +29,7 @@ Một ẩn dụ: khi bạn mô tả một người, bạn không đọc ra chi�
 
 ## Đọc biểu đồ hai thành phần chính: cụm tách ra là phân khúc tự lộ
 
-Khi đã nén 15 cột còn 2 trục, bạn vẽ được mỗi khách thành một điểm trên mặt phẳng PC1–PC2. Và đây là phần "à há": **những khách hành vi giống nhau sẽ tụ thành cụm.** Không phải vì bạn dán nhãn cho họ - mà vì khoảng cách trên biểu đồ phản ánh khoảng cách thật trong cả 15 chiều.
+Khi đã nén 15 cột còn 2 trục, bạn vẽ được mỗi khách thành một điểm trên mặt phẳng PC1-PC2. Và đây là phần "à há": **những khách hành vi giống nhau sẽ tụ thành cụm.** Không phải vì bạn dán nhãn cho họ - mà vì khoảng cách trên biểu đồ phản ánh khoảng cách thật trong cả 15 chiều.
 
 <div class="viz">
 <div class="viz-chart" data-chart="scatter" data-chart-data='{"xName":"Thành phần chính 1 (PC1)","yName":"Thành phần chính 2 (PC2)","showAxisValue":true,"hideLabels":true,"points":[{"x":-3,"y":2,"color":"#10b981"},{"x":-2.6,"y":2.6,"color":"#10b981"},{"x":-3.2,"y":1.4,"color":"#10b981"},{"x":-2.2,"y":2.1,"color":"#10b981"},{"x":3,"y":2.2,"color":"#6366f1"},{"x":2.6,"y":1.6,"color":"#6366f1"},{"x":3.4,"y":2.8,"color":"#6366f1"},{"x":2.9,"y":1.2,"color":"#6366f1"},{"x":0.2,"y":-2.6,"color":"#f59e0b"},{"x":-0.4,"y":-3,"color":"#f59e0b"},{"x":0.6,"y":-2.2,"color":"#f59e0b"},{"x":-0.1,"y":-3.3,"color":"#f59e0b"}]}'></div>
@@ -44,14 +44,14 @@ Lưu ý một điều thành thật: hai trục PC1, PC2 **khó gọi tên bằn
 
 PCA nghe sang, nhưng đa số shop **chưa cần đến nó**. Nó chỉ trả công khi đúng ba điều kiện:
 
-- **Bạn có *nhiều* chỉ số - chục cột trở lên - và nhiều cột tương quan.** Nếu bạn chỉ theo dõi 3–4 chỉ số khách, bạn không có chiều để mà giảm. Lúc đó [RFM](/blog/rfm-segmentation/) hoặc phân khúc bằng tay đã quá đủ: ba con số Recency–Frequency–Monetary phân khúc khách gọn gàng mà không cần một dòng toán ma trận nào.
+- **Bạn có *nhiều* chỉ số - chục cột trở lên - và nhiều cột tương quan.** Nếu bạn chỉ theo dõi 3-4 chỉ số khách, bạn không có chiều để mà giảm. Lúc đó [RFM](/blog/rfm-segmentation/) hoặc phân khúc bằng tay đã quá đủ: ba con số Recency-Frequency-Monetary phân khúc khách gọn gàng mà không cần một dòng toán ma trận nào.
 - **Bạn muốn *nhìn thấy* cấu trúc ẩn, không chỉ tính một con số.** PCA mạnh nhất khi mục tiêu là khám phá - "tệp khách của tôi thật ra chia thành mấy nhóm tự nhiên?" - chứ không phải khi bạn đã biết câu hỏi.
 - **Bạn muốn gọn một dashboard quá tải.** Đôi khi PC1 và PC2 đủ tóm tắt một bảng 15 cột thành hai cột để theo dõi xu hướng, thay vì rải mắt khắp 15 đường.
 
 Còn đây là lúc **đừng** đụng tới PCA:
 
 - **Ít chỉ số.** Bốn năm cột thì RFM, Pareto, hay một cái filter trong bảng tính là đủ. Dùng PCA ở đây là lấy búa tạ đập hạt dẻ.
-- **Bạn cần giải thích con số cho sếp.** Vì trục PCA khó diễn giải bằng lời, nó tệ cho báo cáo "vì sao". Một phân khúc RFM nói "đây là khách At-Risk giá trị cao" thì sếp gật ngay; một biểu đồ PC1–PC2 thì phải giải thích nửa buổi.
+- **Bạn cần giải thích con số cho sếp.** Vì trục PCA khó diễn giải bằng lời, nó tệ cho báo cáo "vì sao". Một phân khúc RFM nói "đây là khách At-Risk giá trị cao" thì sếp gật ngay; một biểu đồ PC1-PC2 thì phải giải thích nửa buổi.
 
 > Quy tắc vàng: **PCA là kính lúp để *khám phá*, không phải thước để *báo cáo*.** Dùng nó để tìm ra cụm, rồi mô tả cụm bằng ngôn ngữ nghiệp vụ quen thuộc.
 
@@ -73,7 +73,7 @@ Nói cách khác: Semantix lo phần **dữ liệu sạch trước** và phần 
 | Nhìn 15 cột chỉ số rời | Nén còn 2 trục bằng PCA |
 |---|---|
 | Mắt không thấy nhóm nào với nhóm nào | Cụm khách tự tách ra trên một biểu đồ |
-| 105 cặp biểu đồ, không cái nào kể hết | Một biểu đồ PC1–PC2 giữ phần lớn thông tin |
+| 105 cặp biểu đồ, không cái nào kể hết | Một biểu đồ PC1-PC2 giữ phần lớn thông tin |
 | Tưởng mỗi cột là một thông tin riêng | Thấy nhiều cột thật ra đo cùng một thứ |
 | Phân khúc bằng cảm giác | Phân khúc bằng cấu trúc thật của dữ liệu |
 

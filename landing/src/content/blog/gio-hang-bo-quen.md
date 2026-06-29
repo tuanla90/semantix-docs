@@ -29,9 +29,9 @@ Lý do nó đáng giá nằm ở **ý định mua**. Một khách mới toanh th
 
 Trước khi cứu, phải đo. **Tỉ lệ bỏ giỏ** (cart abandonment rate - phần trăm giỏ hàng được tạo ra nhưng không dẫn tới đơn thành công) là chỉ số gốc:
 
-> Tỉ lệ bỏ giỏ = 1 − (số đơn hoàn tất ÷ số giỏ hàng được tạo)
+> Tỉ lệ bỏ giỏ = 1 - (số đơn hoàn tất ÷ số giỏ hàng được tạo)
 
-Mặt bằng chung ngành ecom toàn cầu quanh **68–70%** - nghĩa là cứ 10 giỏ thì khoảng 7 cái bị bỏ lại. Con số đó nghe khủng khiếp, nhưng đừng hoảng nếu bạn đang ở đó: đó là mặt bằng. Đáng báo động là khi bạn vọt lên **85%**, hoặc khi tháng này tệ hẳn so với tháng trước.
+Mặt bằng chung ngành ecom toàn cầu quanh **68-70%** - nghĩa là cứ 10 giỏ thì khoảng 7 cái bị bỏ lại. Con số đó nghe khủng khiếp, nhưng đừng hoảng nếu bạn đang ở đó: đó là mặt bằng. Đáng báo động là khi bạn vọt lên **85%**, hoặc khi tháng này tệ hẳn so với tháng trước.
 
 Quan trọng hơn con số tổng: **phóng to bước checkout** thành một phễu nhỏ, đúng tinh thần phễu vi mô trong [Funnel Analysis](/blog/funnel-analysis/). Đừng dừng ở "khách bỏ giỏ" chung chung - hãy hỏi *bỏ ở ô nào*:
 
@@ -58,7 +58,7 @@ Quan trọng hơn con số tổng: **phóng to bước checkout** thành một p
 <div class="viz-caption">Phễu vi mô của bước checkout. Chỗ rò lớn nhất rơi đúng lúc phí ship hiện ra ở phút chót - chỉ giữ 45%. Đó là nơi tiền chảy ra nhiều nhất. *(số liệu minh họa)*</div>
 </div>
 
-Nhìn vào tỉ lệ giữa các ô, không nhìn số tuyệt đối: ô "thấy phí ship" tụt còn 45% trong khi các ô khác giữ 60–83%. Đó là chữ ký của thủ phạm. Giờ bạn không chỉ biết "khách bỏ giỏ" - bạn biết *bỏ vì cái gì*.
+Nhìn vào tỉ lệ giữa các ô, không nhìn số tuyệt đối: ô "thấy phí ship" tụt còn 45% trong khi các ô khác giữ 60-83%. Đó là chữ ký của thủ phạm. Giờ bạn không chỉ biết "khách bỏ giỏ" - bạn biết *bỏ vì cái gì*.
 
 ## Tìm lý do bỏ giỏ - và cách cứu từng lý do
 

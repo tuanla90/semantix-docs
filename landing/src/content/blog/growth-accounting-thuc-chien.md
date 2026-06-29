@@ -23,7 +23,7 @@ coverAlt: "Một bảng growth accounting đã dựng xong: các tháng nhân v�
   </ol>
 </div>
 
-Ba phần vừa rồi, chúng ta đã đi qua lý thuyết: [phương trình tăng trưởng](/blog/growth-accounting/) (MAU (Monthly Active User - số khách hoạt động hàng tháng) kỳ này = kỳ trước + new + resurrected − churned), [Quick Ratio](/blog/growth-accounting-quick-ratio/) (tỉ lệ "tăng trên hao" = (khách mới + quay lại) / khách rời đi) như nhịp tim, và [Net Dollar Retention](/blog/growth-accounting-revenue/) (NDR - tỷ lệ giữ doanh thu từ khách cũ) khi đếm tiền thay vì đếm người. Đẹp trên giấy. Nhưng giấy không trả lương.
+Ba phần vừa rồi, chúng ta đã đi qua lý thuyết: [phương trình tăng trưởng](/blog/growth-accounting/) (MAU (Monthly Active User - số khách hoạt động hàng tháng) kỳ này = kỳ trước + new + resurrected - churned), [Quick Ratio](/blog/growth-accounting-quick-ratio/) (tỉ lệ "tăng trên hao" = (khách mới + quay lại) / khách rời đi) như nhịp tim, và [Net Dollar Retention](/blog/growth-accounting-revenue/) (NDR - tỷ lệ giữ doanh thu từ khách cũ) khi đếm tiền thay vì đếm người. Đẹp trên giấy. Nhưng giấy không trả lương.
 
 Giờ là phần khác hẳn: bắt tay dựng một bảng growth accounting (kế toán tăng trưởng) **thật** cho shop hoặc SaaS (Software as a Service - phần mềm cho thuê theo thuê bao) của bạn. Và đây là chỗ tôi phải cảnh báo trước cho thẳng thắn: **dựng bảng này bằng tay trong Excel là một cơn ác mộng.** Không phải vì toán khó - phép tính chỉ là cộng trừ. Mà vì để biết mỗi khách kỳ này thuộc loại nào, bạn phải so trạng thái của họ với *kỳ trước*, kỳ trước nữa, kéo qua từng tháng. Đó là một chuỗi JOIN và công thức lồng nhau dài đến chóng mặt - và làm lại từ đầu mỗi tháng.
 
@@ -80,7 +80,7 @@ Có một vấn đề khi nhìn bảng tháng này qua tháng kia: **biến đ�
 Cách chữa là **CMGR** - Compound Monthly Growth Rate, tốc độ tăng trưởng kép theo tháng:
 
 ```
-CMGR = (giá_trị(kỳ cuối) / giá_trị(kỳ đầu))^(1/n) − 1
+CMGR = (giá_trị(kỳ cuối) / giá_trị(kỳ đầu))^(1/n) - 1
 ```
 
 với `n` là số tháng giữa hai mốc. Thay vì hỏi "tháng này tăng bao nhiêu so với tháng trước", CMGR hỏi "trung bình mỗi tháng tôi tăng đều bao nhiêu, nếu san phẳng các cú giật". Theo dõi **CMGR3** (trượt 3 tháng) và **CMGR6** (trượt 6 tháng) là cách làm mượt nhiễu: CMGR3 nhạy hơn với thay đổi gần đây, CMGR6 cho thấy xu hướng nền bền hơn. Khi cả hai cùng dương và CMGR3 cao hơn CMGR6, bạn đang *tăng tốc*. Ngược lại là dấu hiệu đuối - dù tháng riêng lẻ vẫn trông ổn.

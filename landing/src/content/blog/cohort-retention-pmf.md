@@ -42,9 +42,9 @@ Nếu mọi cohort cuối cùng đều về gần 0%, sản phẩm của bạn k
 
 ### ② Phẳng ra - đã có product-market fit
 
-Khi đường cong **chững lại** ở một mức dương thay vì rơi về 0, bạn có một nhóm người thật sự cần sản phẩm. *Mức* nó chững lại cho biết độ mạnh của PMF (Product–Market Fit - mức độ sản phẩm khớp nhu cầu thị trường):
+Khi đường cong **chững lại** ở một mức dương thay vì rơi về 0, bạn có một nhóm người thật sự cần sản phẩm. *Mức* nó chững lại cho biết độ mạnh của PMF (Product-Market Fit - mức độ sản phẩm khớp nhu cầu thị trường):
 
-- Phẳng ở **15–20%**: có PMF với một segment nhỏ. Hãy tìm xem segment đó là ai và mở rộng đúng nhóm đó.
+- Phẳng ở **15-20%**: có PMF với một segment nhỏ. Hãy tìm xem segment đó là ai và mở rộng đúng nhóm đó.
 - Phẳng ở **40%+**: PMF mạnh. *Đây* mới là lúc đổ tiền vào acquisition, vì cái xô đã kín đáy.
 
 ### ③ Đi lên - negative churn (thánh địa)
@@ -59,7 +59,7 @@ Sai lầm kinh điển: ăn mừng vì giữ chân tháng 1 cao. Một sản ph�
 
 Đây là siêu năng lực ít người tận dụng. Bạn tung một feature mới (hoặc đổi onboarding) vào tháng 4. Câu hỏi: nó có thật sự cải thiện gì không, hay tăng trưởng chỉ do mùa vụ?
 
-So đường cong giữ chân của cohort **trước** thay đổi (tháng 3) với cohort **sau** (tháng 4–5), *tại cùng tuổi đời*. Nếu các cohort sau nằm ngang cao hơn một cách nhất quán, feature của bạn thật sự tạo impact. Đây gần như một thí nghiệm A/B miễn phí, lấy từ dữ liệu bạn đã có - loại bỏ được nhiễu mùa vụ và tăng trưởng tự nhiên.
+So đường cong giữ chân của cohort **trước** thay đổi (tháng 3) với cohort **sau** (tháng 4-5), *tại cùng tuổi đời*. Nếu các cohort sau nằm ngang cao hơn một cách nhất quán, feature của bạn thật sự tạo impact. Đây gần như một thí nghiệm A/B miễn phí, lấy từ dữ liệu bạn đã có - loại bỏ được nhiễu mùa vụ và tăng trưởng tự nhiên.
 
 ## Một lưu ý về benchmark
 

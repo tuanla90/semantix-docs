@@ -24,7 +24,7 @@ Khi bạn mở bảng `orders`, bạn thấy hàng trăm cột: `order_id`, `cre
 - Trừ thêm `refund_amount` cho đơn hoàn hàng?
 - Và `status = 'completed'` hay tính tất cả trạng thái?
 
-Bốn lựa chọn trên cho ra bốn con số lệch nhau tới 15–20%. Mỗi phòng ban, mỗi analyst lặng lẽ chọn một cách khác nhau trong câu SQL (Structured Query Language - ngôn ngữ truy vấn cơ sở dữ liệu) của họ - và không ai thấy mình sai, vì câu nào cũng chạy ra số. Đó là nguồn gốc của ba con số trong phòng họp.
+Bốn lựa chọn trên cho ra bốn con số lệch nhau tới 15-20%. Mỗi phòng ban, mỗi analyst lặng lẽ chọn một cách khác nhau trong câu SQL (Structured Query Language - ngôn ngữ truy vấn cơ sở dữ liệu) của họ - và không ai thấy mình sai, vì câu nào cũng chạy ra số. Đó là nguồn gốc của ba con số trong phòng họp.
 
 ## Semantic Layer: một cuốn từ điển nghiệp vụ cho cả công ty
 

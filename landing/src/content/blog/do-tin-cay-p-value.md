@@ -115,7 +115,7 @@ Cách phòng: **định trước bạn sẽ đo cái gì** trước khi nhìn d�
 Đây là phần đáng nhớ nhất bài. Đừng bao giờ dừng ở câu "có ý nghĩa hay không". Trước mỗi quyết định trên một con số so sánh, hãy nhìn đủ ba thứ:
 
 1. **Độ lớn hiệu ứng** (effect size - chênh lệch *lớn cỡ nào* trên thực tế, đo bằng đơn vị bạn quan tâm: %, đồng, đơn hàng). Bản mới hơn 0,2% hay hơn 8%? Một cái chẳng bõ công đổi, cái kia đổi đời.
-2. **Khoảng tin cậy** quanh độ lớn đó. "Bản mới hơn 3%, khoảng tin cậy +1% đến +5%" thì cả dải đều dương - yên tâm triển. Còn "hơn 3%, khoảng tin cậy −2% đến +8%" thì dải vắt qua số 0: rất có thể bản mới *tệ hơn*, đừng vội.
+2. **Khoảng tin cậy** quanh độ lớn đó. "Bản mới hơn 3%, khoảng tin cậy +1% đến +5%" thì cả dải đều dương - yên tâm triển. Còn "hơn 3%, khoảng tin cậy -2% đến +8%" thì dải vắt qua số 0: rất có thể bản mới *tệ hơn*, đừng vội.
 3. **p-value** chỉ là chốt cuối: chênh lệch này có khó là do may rủi không.
 
 *Ví dụ minh hoạ:* shop ở TP.HCM đổi quy trình chốt đơn, tỉ lệ chốt nhích từ 18% lên 18,4% với p = 0,04. "Có ý nghĩa!" - nhưng độ lớn hiệu ứng chỉ 0,4%, và đổi quy trình tốn cả tháng đào tạo nhân viên. Đáng tiền không? Gần như chắc chắn không. p-value đẹp không cứu được một hiệu ứng bé tí.

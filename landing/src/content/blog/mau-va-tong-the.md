@@ -42,7 +42,7 @@ Sự thật phũ phàng: *bạn gần như không bao giờ thấy được tổ
 
 Hãy hình dung một hộp 1.000 viên bi, 600 đỏ và 400 xanh - đó là tổng thể, với tỷ lệ thật 60% đỏ. Bạn nhắm mắt bốc.
 
-Bốc **3 viên**: rất dễ ra 3 đỏ (kết luận "100% đỏ!") hoặc 3 xanh ("toàn xanh!"). Bốc **10 viên**: thường ra 5–7 đỏ, đã gần đúng hơn. Bốc **200 viên**: gần như chắc chắn rơi vào khoảng 56–64% đỏ - sát tỷ lệ thật.
+Bốc **3 viên**: rất dễ ra 3 đỏ (kết luận "100% đỏ!") hoặc 3 xanh ("toàn xanh!"). Bốc **10 viên**: thường ra 5-7 đỏ, đã gần đúng hơn. Bốc **200 viên**: gần như chắc chắn rơi vào khoảng 56-64% đỏ - sát tỷ lệ thật.
 
 <div class="viz">
 <svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
@@ -98,7 +98,7 @@ Dịch sang tiếng người: muốn ước lượng *chính xác gấp đôi*, 
 
 > Quy tắc vàng: nhảy từ 10 lên 100 phản hồi cải thiện độ tin cậy khủng khiếp. Nhảy từ 1.000 lên 2.000 thì gần như chẳng thêm gì đáng kể. Những mẫu đầu tiên là vàng; những mẫu cuối cùng là lãng phí.
 
-Đây cũng là tin vui cho SME: bạn *không* cần dữ liệu khổng lồ kiểu tập đoàn. Một khảo sát 150–300 khách chọn tử tế đã đủ để ra quyết định chắc tay hơn 99% đối thủ vẫn đang "hỏi vài người quen".
+Đây cũng là tin vui cho SME: bạn *không* cần dữ liệu khổng lồ kiểu tập đoàn. Một khảo sát 150-300 khách chọn tử tế đã đủ để ra quyết định chắc tay hơn 99% đối thủ vẫn đang "hỏi vài người quen".
 
 ## Mẫu lớn vẫn vô dụng nếu chọn sai người
 
@@ -121,7 +121,7 @@ Giờ trả lời câu hỏi tiêu đề. Không có con số thần thánh "30 
 1. **Độ chắc bạn cần.** Quyết định "đổi màu nút bấm" thì 50 lượt thử là thoải mái. Quyết định "rót 2 tỷ mở chi nhánh" thì bạn cần chắc hơn nhiều - và cần mẫu lớn hơn.
 2. **Mức biến động của thứ bạn đo.** Nếu khách rất đồng nhất (ai cũng phản ứng giống nhau), một mẫu nhỏ đã đủ. Nếu khách rất khác nhau (người mê người ghét chia đôi), bạn cần mẫu lớn hơn nhiều mới thấy được bức tranh thật.
 
-Vài mốc thực dụng cho SME Việt: một **A/B test** nhỏ (so hai phiên bản, mỗi bên vài chục lượt) chỉ đáng tin khi chênh lệch *rõ rệt* - chênh 2% với 40 lượt mỗi bên là nhiễu, không phải tín hiệu. Một khảo sát định hướng: nhắm 150–300 phản hồi *chọn ngẫu nhiên*. Đọc review để bắt vấn đề lặp lại: một lời chê xuất hiện *một lần* là cá biệt, xuất hiện ở *15% review* là tín hiệu. Việc tách tín hiệu thật khỏi dao động ngẫu nhiên này chính là chủ đề của [tín hiệu vs nhiễu](/blog/tin-hieu-vs-nhieu/) - bạn nên đọc song song.
+Vài mốc thực dụng cho SME Việt: một **A/B test** nhỏ (so hai phiên bản, mỗi bên vài chục lượt) chỉ đáng tin khi chênh lệch *rõ rệt* - chênh 2% với 40 lượt mỗi bên là nhiễu, không phải tín hiệu. Một khảo sát định hướng: nhắm 150-300 phản hồi *chọn ngẫu nhiên*. Đọc review để bắt vấn đề lặp lại: một lời chê xuất hiện *một lần* là cá biệt, xuất hiện ở *15% review* là tín hiệu. Việc tách tín hiệu thật khỏi dao động ngẫu nhiên này chính là chủ đề của [tín hiệu vs nhiễu](/blog/tin-hieu-vs-nhieu/) - bạn nên đọc song song.
 
 ## Tóm lại
 

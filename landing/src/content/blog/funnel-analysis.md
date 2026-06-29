@@ -15,7 +15,7 @@ Một shop thời trang trên Shopee tháng vừa rồi tăng gấp đôi ngân 
 
 Phản xạ đầu tiên của họ là kết luận "ads kém hiệu quả, đổi agency thôi". Nhưng đó là chẩn đoán sai bệnh. Khi mổ xẻ phễu, sự thật lộ ra: **67% khách thêm hàng vào giỏ rồi biến mất ở đúng một bước - nhập địa chỉ giao hàng.** *(ví dụ minh họa)* Traffic chưa bao giờ là vấn đề. Họ đang bơm thêm nước vào một cái xô mà lỗ thủng nằm gần đáy. Bơm càng mạnh, nước chảy ra càng nhiều.
 
-Đây là nghịch lý ít người chịu tin: **mọi phễu bán hàng đều có MỘT điểm chảy máu chính. Bịt đúng điểm đó tạo impact gấp 3–5 lần so với tối ưu lặt vặt mọi bước.** Và bạn sẽ không thấy nó nếu chỉ nhìn doanh thu tổng. Chỉ **Funnel Analysis** (phân tích phễu chuyển đổi - chuỗi bước khách đi qua từ xem đến mua) kể được.
+Đây là nghịch lý ít người chịu tin: **mọi phễu bán hàng đều có MỘT điểm chảy máu chính. Bịt đúng điểm đó tạo impact gấp 3-5 lần so với tối ưu lặt vặt mọi bước.** Và bạn sẽ không thấy nó nếu chỉ nhìn doanh thu tổng. Chỉ **Funnel Analysis** (phân tích phễu chuyển đổi - chuỗi bước khách đi qua từ xem đến mua) kể được.
 
 ## Funnel Analysis là gì?
 
@@ -72,7 +72,7 @@ Câu hỏi đúng không phải "bước này rớt bao nhiêu phần trăm?" m�
 Ba cách tìm ngưỡng "bình thường" để so:
 
 1. **So với chính bạn trong quá khứ.** Tháng này bước checkout (thanh toán) rớt 67%, ba tháng trước rớt 48% - vậy có gì đó vừa hỏng (đổi giao diện? thêm bước? phí ship tăng?).
-2. **So với benchmark ngành.** Tỷ lệ bỏ giỏ hàng (cart abandonment) trung bình ngành ecom toàn cầu quanh **68–70%** theo nhiều khảo sát. Nếu bạn ở mức đó, đừng hoảng - đó là mặt bằng chung. Nếu bạn ở **85%**, mới đáng báo động.
+2. **So với benchmark ngành.** Tỷ lệ bỏ giỏ hàng (cart abandonment) trung bình ngành ecom toàn cầu quanh **68-70%** theo nhiều khảo sát. Nếu bạn ở mức đó, đừng hoảng - đó là mặt bằng chung. Nếu bạn ở **85%**, mới đáng báo động.
 3. **So sánh giữa các segment (phân khúc khách).** Cùng một bước, khách trên mobile (điện thoại) rớt 80% còn desktop (máy tính) rớt 50% - vấn đề nằm ở trải nghiệm mobile, không phải ở bản thân cái bước đó.
 
 Không có con số "rớt bao nhiêu là xấu" tuyệt đối. Chỉ có *rớt nhiều hơn cái nên rớt* - và muốn biết, bạn phải có thứ để đối chiếu. (Đây cũng chính là tinh thần của một [câu hỏi dữ liệu tốt: luôn có đối chiếu](/blog/ai-questions/).)
@@ -81,7 +81,7 @@ Không có con số "rớt bao nhiêu là xấu" tuyệt đối. Chỉ có *rớ
 
 Đây là chỗ phần lớn shop đốt tiền oan. Họ thấy bước "Xem → Giỏ" rớt 56% - con số tuyệt đối lớn nhất - nên dồn toàn lực vào đó: đổi ảnh sản phẩm, viết lại mô tả, chạy thêm khuyến mãi. Giả sử nỗ lực anh hùng đó kéo tỷ lệ từ 44% lên 48%.
 
-Hãy tính xem nó đáng giá bao nhiêu. Cải thiện 4 điểm phần trăm ở *đỉnh phễu* lan xuống tới đáy sẽ bị bào mòn qua từng tầng - cuối cùng chỉ nhích doanh thu vài phần trăm. Trong khi đó, nếu bịt bước checkout đang rò (kéo 33% lên 50% bằng cách cho thanh toán khách vãng lai + lưu địa chỉ sẵn), số đơn cuối cùng có thể nhảy 40–50%. *(ví dụ minh họa)*
+Hãy tính xem nó đáng giá bao nhiêu. Cải thiện 4 điểm phần trăm ở *đỉnh phễu* lan xuống tới đáy sẽ bị bào mòn qua từng tầng - cuối cùng chỉ nhích doanh thu vài phần trăm. Trong khi đó, nếu bịt bước checkout đang rò (kéo 33% lên 50% bằng cách cho thanh toán khách vãng lai + lưu địa chỉ sẵn), số đơn cuối cùng có thể nhảy 40-50%. *(ví dụ minh họa)*
 
 > Nguyên tắc đòn bẩy: **một điểm phần trăm cứu được ở bước đang rò có giá trị gấp nhiều lần một điểm phần trăm ở bước vốn đã khỏe.** Đừng tô lại bức tường đẹp khi mái đang dột.
 
@@ -118,7 +118,7 @@ Phễu cũng không sống một mình. Sau khi tìm ra khách rớt ở đâu, 
 | **Nhìn vào** | Số tuyệt đối mỗi tầng | Tỷ lệ rớt giữa hai tầng |
 | **Chuẩn so sánh** | "Rớt nhiều quá!" (cảm tính) | So quá khứ / benchmark / segment |
 | **Ưu tiên sửa** | Bước có số rơi lớn nhất | Bước rớt *bất thường* nhất |
-| **Kết quả** | Tối ưu khắp nơi, nhích vài % | Bịt một chỗ, nhảy 40–50% |
+| **Kết quả** | Tối ưu khắp nơi, nhích vài % | Bịt một chỗ, nhảy 40-50% |
 
 Mọi phễu đều rò. Câu hỏi không phải "làm sao chặn hết rò" - bất khả thi và lãng phí. Câu hỏi là: *chỗ nào đang chảy máu nhiều nhất, và tôi bịt nó trước.* Tìm đúng một chỗ đó, bạn đi trước phần lớn shop vẫn đang miệt mài sơn lại đoạn ống không nứt.
 

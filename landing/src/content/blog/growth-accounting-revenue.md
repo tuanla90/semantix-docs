@@ -46,7 +46,7 @@ Khi bạn chỉ đếm khách, mỗi khách hoặc "có" hoặc "không". Một 
 
 ```
 Revenue(t)   = retained + new + resurrected + expansion
-Revenue(t−1) = retained + churned          + contraction
+Revenue(t-1) = retained + churned          + contraction
 ```
 
 Năm dòng *thay đổi* giữa hai kỳ:
@@ -54,25 +54,25 @@ Năm dòng *thay đổi* giữa hai kỳ:
 - **new** - doanh thu từ khách hoàn toàn mới (+)
 - **expansion** - khách cũ chi thêm: upsell, mua kèm, giỏ to hơn (+)
 - **resurrected** - khách từng rời, nay quay lại chi tiền (+)
-- **contraction** - khách cũ chi ít đi nhưng chưa rời (−)
-- **churned** - khách rời hẳn, ngừng chi (−)
+- **contraction** - khách cũ chi ít đi nhưng chưa rời (-)
+- **churned** - khách rời hẳn, ngừng chi (-)
 
 Hình dung nó như một dòng nước: doanh thu kỳ trước đổ vào, ba vòi cộng thêm, hai lỗ rút bớt, còn lại là doanh thu kỳ này.
 
 <div class="viz">
-<div class="viz-chart" data-chart="waterfall" data-chart-data='{"items":[{"label":"Rev(t−1)","value":100,"type":"total"},{"label":"+ new","value":10},{"label":"+ expansion","value":12},{"label":"+ resurrected","value":3},{"label":"− contraction","value":-7},{"label":"− churned","value":-9},{"label":"Rev(t)","value":109,"type":"total"}],"unit":""}'></div>
-<div class="viz-caption">Doanh thu kỳ này = kỳ trước + new + expansion + resurrected − contraction − churned. Ba vòi cộng, hai lỗ trừ. Mất 9 vì churn, nhưng expansion (+12) gánh ngược lại. Số minh họa.</div>
+<div class="viz-chart" data-chart="waterfall" data-chart-data='{"items":[{"label":"Rev(t-1)","value":100,"type":"total"},{"label":"+ new","value":10},{"label":"+ expansion","value":12},{"label":"+ resurrected","value":3},{"label":"- contraction","value":-7},{"label":"- churned","value":-9},{"label":"Rev(t)","value":109,"type":"total"}],"unit":""}'></div>
+<div class="viz-caption">Doanh thu kỳ này = kỳ trước + new + expansion + resurrected - contraction - churned. Ba vòi cộng, hai lỗ trừ. Mất 9 vì churn, nhưng expansion (+12) gánh ngược lại. Số minh họa.</div>
 </div>
 
-Để ý cột waterfall ở trên: khoản **churned −9** rất thật, khách thật sự rời. Nhưng riêng **expansion +12** đã lớn hơn cả churn. Đó là cơ chế của nghịch lý đầu bài - mất khách, doanh thu vẫn lên. Từ phương trình này, tốc độ tăng trưởng doanh thu (so % kỳ trước) chính là:
+Để ý cột waterfall ở trên: khoản **churned -9** rất thật, khách thật sự rời. Nhưng riêng **expansion +12** đã lớn hơn cả churn. Đó là cơ chế của nghịch lý đầu bài - mất khách, doanh thu vẫn lên. Từ phương trình này, tốc độ tăng trưởng doanh thu (so % kỳ trước) chính là:
 
-> **growth_rate ≈ new + resurrected + expansion − contraction − churn**
+> **growth_rate ≈ new + resurrected + expansion - contraction - churn**
 
 ## Negative churn: chén thánh - lớn lên mà không cần một khách mới nào
 
 Bây giờ tách riêng phần khách **hiện có**. Bỏ "new" ra ngoài, chỉ nhìn tập khách cũ: họ vừa rời đi (churned), vừa co lại (contraction), nhưng cũng vừa quay lại (resurrected) và chi thêm (expansion). Gộp lại thành một chỉ số:
 
-> **Net churn = (churned + contraction − resurrected − expansion) / Revenue(t−1)**
+> **Net churn = (churned + contraction - resurrected - expansion) / Revenue(t-1)**
 
 Bình thường net churn **dương**: tập khách cũ hao mòn dần, mỗi tháng mất đi một ít doanh thu. Phải kéo khách mới về để bù. Đó là cái xô thủng đáy quen thuộc.
 

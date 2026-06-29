@@ -76,7 +76,7 @@ Năm thành phần trên rút lại thành một bảng bạn ghim cạnh màn h
 
 | Câu mơ hồ | Câu rõ |
 |---|---|
-| "Doanh thu tháng này?" | "Doanh thu 1–23/6/2025, theo ngày giao?" |
+| "Doanh thu tháng này?" | "Doanh thu 1-23/6/2025, theo ngày giao?" |
 | "Sản phẩm nào bán chạy?" | "Trên Shopee, bán chạy nhất T6, chỉ khách mới?" |
 | "Khách tốt là ai?" | "Khách mua ≥3 lần / 6 tháng, chi >5 triệu là ai?" |
 | "Bán chạy, bỏ giỏ, so tháng trước?" | Tách thành ba câu hỏi riêng |

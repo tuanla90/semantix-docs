@@ -27,7 +27,7 @@ Vấn đề không nằm ở chất lượng. Vấn đề nằm ở chỗ con s�
 
 ## Bóc chi phí ẩn 12 tháng
 
-Phần đáng giá nhất của bài này là tách bạch hai loại chi phí: cái **thấy được** và cái **ẩn**. Dưới đây là một kịch bản minh hoạ cho một nhà bán đa kênh cỡ vừa trong một năm. *(Con số là ví dụ minh hoạ theo mặt bằng giá freelancer/agency Việt Nam - dựng dashboard cơ bản tầm 5–30 triệu, mỗi lần sửa/thêm chart 1–3 triệu; số thật tuỳ phạm vi của bạn.)*
+Phần đáng giá nhất của bài này là tách bạch hai loại chi phí: cái **thấy được** và cái **ẩn**. Dưới đây là một kịch bản minh hoạ cho một nhà bán đa kênh cỡ vừa trong một năm. *(Con số là ví dụ minh hoạ theo mặt bằng giá freelancer/agency Việt Nam - dựng dashboard cơ bản tầm 5-30 triệu, mỗi lần sửa/thêm chart 1-3 triệu; số thật tuỳ phạm vi của bạn.)*
 
 **Chi phí thấy được** - phí dựng ban đầu: bạn trả một lần, ví dụ **8 triệu**, nhận 12 biểu đồ. Rõ ràng, dễ duyệt ngân sách. Đây là con số duy nhất xuất hiện trong đầu bạn lúc quyết định.
 
@@ -37,9 +37,9 @@ Phần đáng giá nhất của bài này là tách bạch hai loại chi phí: 
 - **Dashboard "chết" khi nguồn dữ liệu đổi.** Shopee đổi tên cột `Ngày đặt` thành `Thời gian đặt hàng`, hoặc bạn thêm một sheet kênh mới. Liên kết gãy, số nhảy về 0 hoặc nhân đôi - và **không có dòng báo lỗi nào**. Một lần sửa lớn như vậy, ví dụ, **3 triệu** và vài ngày chờ.
 - **Không ai bảo trì.** Giữa các lần sửa, dashboard không có người trông. Nó hỏng âm thầm, và bạn chỉ phát hiện khi con số trông quá lạ - nếu may.
 - **Kiến thức nằm trong đầu người đã rời đi.** Cách "doanh thu" được tính, cái `=SUMIFS` lồng ba tầng, logic ghép ba sàn - tất cả ở trong đầu freelancer. Anh ấy nghỉ, đổi nghề, hoặc đơn giản là bận. Bạn thừa kế một file mà **không ai trong công ty đọc nổi**. Muốn đổi người? Người mới phải bóc tách lại từ đầu - tính thêm tiền.
-- **Độ trễ chờ-sửa.** Đây là chi phí vô hình nhưng đắt nhất. Câu hỏi kinh doanh nóng nhất luôn là câu của *tối nay* - lúc bạn thấy con số lạ và cần quyết ngay sáng mai. Chờ freelancer rep tin nhắn, báo giá, rồi dựng trong 2–3 ngày, nghĩa là **quyết định bị hoãn tới khi nó không còn kịp.**
+- **Độ trễ chờ-sửa.** Đây là chi phí vô hình nhưng đắt nhất. Câu hỏi kinh doanh nóng nhất luôn là câu của *tối nay* - lúc bạn thấy con số lạ và cần quyết ngay sáng mai. Chờ freelancer rep tin nhắn, báo giá, rồi dựng trong 2-3 ngày, nghĩa là **quyết định bị hoãn tới khi nó không còn kịp.**
 
-Cộng lại, phí dựng "rẻ" 8 triệu của bạn dễ dàng thành **20–25 triệu sau một năm** - và đó là chưa tính những quyết định bạn lỡ vì phải chờ.
+Cộng lại, phí dựng "rẻ" 8 triệu của bạn dễ dàng thành **20-25 triệu sau một năm** - và đó là chưa tính những quyết định bạn lỡ vì phải chờ.
 
 <div class="viz">
 <svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
@@ -82,12 +82,12 @@ Một nền tảng AI BI (Business Intelligence - biến dữ liệu thành quy�
 
 | Tiêu chí | Dashboard freelancer | Nền tảng AI BI |
 |---|---|---|
-| Phí ban đầu | **Thấp, thấy rõ** (5–30tr một lần) | Theo gói, đều đặn |
-| Câu hỏi mới phát sinh | Thuê tiếp, 1–3tr/lần | Hỏi thêm, không tốn thêm |
+| Phí ban đầu | **Thấp, thấy rõ** (5-30tr một lần) | Theo gói, đều đặn |
+| Câu hỏi mới phát sinh | Thuê tiếp, 1-3tr/lần | Hỏi thêm, không tốn thêm |
 | Khi nguồn dữ liệu đổi | Dashboard gãy, phải thuê sửa | Cập nhật ánh xạ ở một chỗ (semantic layer), không dò sửa từng biểu đồ |
 | Bảo trì giữa các lần sửa | **Không ai trông** | Nền tảng tự lo |
 | Phụ thuộc người ngoài | Cao - kiến thức trong đầu freelancer | Không - bạn tự hỏi |
-| Thời gian chờ một câu mới | 2–3 ngày (nếu họ rảnh) | Vài giây |
+| Thời gian chờ một câu mới | 2-3 ngày (nếu họ rảnh) | Vài giây |
 | Trả lời câu chưa từng nghĩ tới | Không | Có |
 | Tổng chi phí thật năm 1 | **Cao hơn nhiều con số ban đầu** | Dễ dự đoán |
 
@@ -96,7 +96,7 @@ Một nền tảng AI BI (Business Intelligence - biến dữ liệu thành quy�
 Đừng vẽ rắn thêm chân. Thuê freelancer dựng dashboard là lựa chọn **đúng** khi:
 
 - Bạn cần một **bộ báo cáo cố định, một lần** - ví dụ một dashboard trình hội đồng quản trị mỗi quý, với đúng các chỉ số đã thống nhất và **gần như không bao giờ đổi**.
-- Câu hỏi của bạn **ổn định** - bạn hỏi đi hỏi lại cùng khoảng 10–15 câu, và bạn biết chắc chúng sẽ không phát sinh thêm.
+- Câu hỏi của bạn **ổn định** - bạn hỏi đi hỏi lại cùng khoảng 10-15 câu, và bạn biết chắc chúng sẽ không phát sinh thêm.
 - Bạn cần một **thiết kế trình bày đẹp, được chăm chút thủ công** cho một sự kiện cụ thể (gọi vốn, ra mắt) - nơi tính thẩm mỹ quan trọng hơn tính tương tác.
 - Dữ liệu của bạn **ít thay đổi cấu trúc** - một nguồn, định dạng cố định, không thêm kênh mới liên tục.
 

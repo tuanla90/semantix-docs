@@ -41,7 +41,7 @@ Sự lẫn lộn này có tên: **xác suất ngược** (định lý Bayes - c�
 Cách chắc nhất để gỡ nghịch lý này: **bỏ phần trăm, đếm người thật.** Lấy 1.000 đơn hàng làm ví dụ minh hoạ.
 
 - Tỉ lệ nền gian lận 1% → trong 1.000 đơn, có **10 đơn gian lận thật**, 990 đơn sạch.
-- Mô hình bắt được 95% đơn gian lận thật → nó tóm đúng **9–10 đơn** (làm tròn: 10) trong số 10 đơn xấu.
+- Mô hình bắt được 95% đơn gian lận thật → nó tóm đúng **9-10 đơn** (làm tròn: 10) trong số 10 đơn xấu.
 - Nhưng "chính xác 95%" cũng có nghĩa nó *báo nhầm* khoảng 5% đơn sạch. 5% của 990 đơn sạch = **~50 đơn bị báo oan**.
 
 Giờ nhìn vào tất cả các cảnh báo "dương tính" (positive - đơn bị mô hình gắn cờ nghi gian lận):

@@ -49,7 +49,7 @@ Tiền "lãi mà vẫn hết" đi đâu? Ba chỗ kinh điển:
 
 - **Ôm hàng tồn.** Bạn nhập 500 triệu tiền hàng. Trên sổ, đó vẫn là *tài sản* - chưa phải chi phí, nên không làm giảm lợi nhuận. Nhưng 500 triệu tiền mặt đã rời két, nằm im trong kho. Lãi trên giấy vẫn đẹp, mà tiền thì kẹt cứng trong từng thùng hàng chưa bán.
 - **Cho công nợ.** Bạn bán sỉ 300 triệu cho một đại lý, cho gối đầu 60 ngày. Kế toán ghi nhận đủ 300 triệu doanh thu *ngay hôm nay* - lợi nhuận tăng. Nhưng tiền chưa về. Bạn đang lãi trên một khoản tiền *chưa hề cầm được*.
-- **Mùa Tết nhập sỉ.** Tháng 11–12, bạn dồn tiền nhập hàng Tết gấp ba bình thường. Tiền mặt rỗng nhanh chóng để chất đầy kho - đặt cược rằng tháng 1 sẽ bán hết. Nếu mùa vụ lệch dự đoán, lãi kế hoạch trên giấy không cứu được khoản vay đến hạn giữa tháng 12.
+- **Mùa Tết nhập sỉ.** Tháng 11-12, bạn dồn tiền nhập hàng Tết gấp ba bình thường. Tiền mặt rỗng nhanh chóng để chất đầy kho - đặt cược rằng tháng 1 sẽ bán hết. Nếu mùa vụ lệch dự đoán, lãi kế hoạch trên giấy không cứu được khoản vay đến hạn giữa tháng 12.
 
 Thấy mẫu chung chưa? Cả ba đều khiến **lợi nhuận và dòng tiền tách rời nhau**. Lợi nhuận leo lên, tiền mặt tụt xuống - cùng lúc. Và con số bạn nhìn mỗi cuối tháng (lợi nhuận) lại đúng là con số *không* cảnh báo bạn về cái sắp giết bạn (cạn tiền).
 

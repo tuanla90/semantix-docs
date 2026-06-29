@@ -57,7 +57,7 @@ Nhìn cùng một dữ liệu qua nhiều năm, mẫu mùa vụ hiện ra rõ nh
 <div class="viz-caption">Doanh thu theo tháng, hai năm chồng lên nhau. Đỉnh Tết (T2) và đỉnh sale cuối năm (T11) lặp lại y hệt - đó là seasonality. Năm 2025 nằm cao hơn 2024 ở mọi tháng - đó mới là trend thật.</div>
 </div>
 
-Đọc biểu đồ này có hai tầng. Tầng một: **hình dạng** của hai đường giống hệt nhau - đỉnh tháng 2, đáy tháng 3–7, nhô lên tháng 8 (tựu trường), bùng tháng 11 (11.11 và 12.12). Đó là dấu vân tay mùa vụ của ngành bạn. Tầng hai: đường 2025 nằm *cao hơn đều* đường 2024 ở mọi điểm. Khoảng cách dọc đó - không phải độ dốc lên xuống - mới là tăng trưởng thật. Đó là con số bạn nên dùng để ra quyết định.
+Đọc biểu đồ này có hai tầng. Tầng một: **hình dạng** của hai đường giống hệt nhau - đỉnh tháng 2, đáy tháng 3-7, nhô lên tháng 8 (tựu trường), bùng tháng 11 (11.11 và 12.12). Đó là dấu vân tay mùa vụ của ngành bạn. Tầng hai: đường 2025 nằm *cao hơn đều* đường 2024 ở mọi điểm. Khoảng cách dọc đó - không phải độ dốc lên xuống - mới là tăng trưởng thật. Đó là con số bạn nên dùng để ra quyết định.
 
 Cùng logic này, ở một nhịp thời gian khác, là cách [đọc số theo từng giờ trong đêm sale TikTok Shop](/blog/tiktok-shop-mua-sale-gia-theo-gio/): vấn đề không phải thiếu dữ liệu, mà là so sai đơn vị thời gian.
 

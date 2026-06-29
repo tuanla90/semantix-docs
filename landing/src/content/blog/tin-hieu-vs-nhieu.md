@@ -57,7 +57,7 @@ Hãy hình dung một dải dao động bao quanh đường trung bình. Nếu l
 <div class="viz-caption">Đường xám nhấp nhô quanh mức trung bình, luôn nằm trong dải bình thường - đó là nhiễu, không cần phản ứng. Chỉ khi một điểm vượt hẳn ra ngoài dải (điểm đỏ) thì mới có tín hiệu đáng hành động.</div>
 </div>
 
-Dải bình thường này, dân kỹ thuật gọi là **ngưỡng kiểm soát** (control limit - biên trên/dưới của vùng dao động được coi là bình thường). Nghe hàn lâm, nhưng ý tưởng đời thường lắm: bạn không cần học thống kê để áp dụng. Chỉ cần nhìn lại 8–12 tuần gần nhất, ước lượng "tuần tệ nhất giảm bao nhiêu, tuần đỉnh tăng bao nhiêu", và lấy đó làm dải. Bất cứ con số nào *vẫn nằm trong dải đã từng xảy ra* thì gần như chắc chắn là nhiễu.
+Dải bình thường này, dân kỹ thuật gọi là **ngưỡng kiểm soát** (control limit - biên trên/dưới của vùng dao động được coi là bình thường). Nghe hàn lâm, nhưng ý tưởng đời thường lắm: bạn không cần học thống kê để áp dụng. Chỉ cần nhìn lại 8-12 tuần gần nhất, ước lượng "tuần tệ nhất giảm bao nhiêu, tuần đỉnh tăng bao nhiêu", và lấy đó làm dải. Bất cứ con số nào *vẫn nằm trong dải đã từng xảy ra* thì gần như chắc chắn là nhiễu.
 
 ## Tín hiệu thật không la hét trong một tuần - nó kéo dài nhiều tuần
 

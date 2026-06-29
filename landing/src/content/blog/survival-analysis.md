@@ -25,7 +25,7 @@ Giờ nhớ lại [đường cong giữ chân của cohort](/blog/cohort-retenti
 
 Đó là **cùng một đường cong**. Survival curve và retention curve là hai cái tên cho một thứ. Giới y sinh gọi là "sống sót" vì sự kiện của họ là cái chết; người làm SME (Small and Medium Enterprise - doanh nghiệp vừa và nhỏ) gọi là "giữ chân" vì sự kiện là khách rời đi. Bản chất phép đo không đổi.
 
-Survival analysis có thêm một mánh kỹ thuật đáng nhắc: **censoring (dữ liệu cắt cụt)**. Một khách mua lần đầu tháng trước và *vẫn đang hoạt động* thì chưa "qua đời" - bạn chỉ biết họ sống *ít nhất* tới hôm nay, chứ chưa biết tổng tuổi thọ. Bỏ họ ra khỏi phép tính thì sai, mà coi như họ đã rời cũng sai. Các phương pháp như **Kaplan–Meier** (cách dựng đường cong sống sót xử lý đúng phần dữ liệu cắt cụt) hay **hazard rate** (tỷ lệ rủi ro rời bỏ *ngay tại* một mốc tuổi, với điều kiện đã sống tới đó) ra đời chính để xử lý chuyện này một cách chặt chẽ. Bạn không cần thuộc công thức - chỉ cần nhớ: *"khách chưa rời" không phải là "khách sẽ ở mãi".*
+Survival analysis có thêm một mánh kỹ thuật đáng nhắc: **censoring (dữ liệu cắt cụt)**. Một khách mua lần đầu tháng trước và *vẫn đang hoạt động* thì chưa "qua đời" - bạn chỉ biết họ sống *ít nhất* tới hôm nay, chứ chưa biết tổng tuổi thọ. Bỏ họ ra khỏi phép tính thì sai, mà coi như họ đã rời cũng sai. Các phương pháp như **Kaplan-Meier** (cách dựng đường cong sống sót xử lý đúng phần dữ liệu cắt cụt) hay **hazard rate** (tỷ lệ rủi ro rời bỏ *ngay tại* một mốc tuổi, với điều kiện đã sống tới đó) ra đời chính để xử lý chuyện này một cách chặt chẽ. Bạn không cần thuộc công thức - chỉ cần nhớ: *"khách chưa rời" không phải là "khách sẽ ở mãi".*
 
 ## Đọc một đường cong sống sót: nhìn độ dốc, không nhìn điểm xuất phát
 
@@ -66,7 +66,7 @@ Một con số tổng - "tỷ lệ giữ chân trung bình 30%" - sẽ trộn c�
 
 ## ... trong Semantix
 
-Nói thẳng cho rõ ràng: **Semantix không có một module Kaplan–Meier hay hazard rate học thuật.** Nếu bạn là nhà nghiên cứu cần ước lượng đường cong sống sót với censoring chuẩn thống kê, khoảng tin cậy và kiểm định log-rank, đó là việc của R hay Python, không phải của Semantix. Chúng tôi không giả vờ ngược lại.
+Nói thẳng cho rõ ràng: **Semantix không có một module Kaplan-Meier hay hazard rate học thuật.** Nếu bạn là nhà nghiên cứu cần ước lượng đường cong sống sót với censoring chuẩn thống kê, khoảng tin cậy và kiểm định log-rank, đó là việc của R hay Python, không phải của Semantix. Chúng tôi không giả vờ ngược lại.
 
 Nhưng với người làm SME, *"đường cong sống sót thực dụng" của tập khách hàng chính là đường retention của cohort* - và **cái đó thì Semantix dựng được**, không cần một dòng code. Bạn hỏi thẳng bằng tiếng Việt:
 
@@ -82,7 +82,7 @@ Semantix gom khách theo cohort, tính tỷ lệ còn hoạt động theo tuổi
 | "Bệnh nhân qua đời" | Khách rời bỏ (churn) |
 | Tuổi thọ trung bình | Diện tích dưới đường → vòng đời khách → LTV |
 | Hazard rate cao | Đoạn đường cong dốc nhất → thời điểm can thiệp |
-| Kaplan–Meier, censoring | Cohort xử lý khách "chưa rời" theo tuổi đời |
+| Kaplan-Meier, censoring | Cohort xử lý khách "chưa rời" theo tuổi đời |
 | Cần R / Python | Hỏi bằng tiếng Việt trong Semantix |
 
 Survival analysis không phải một kỹ thuật mới phải học. Nó là một *lăng kính* - một cách hỏi "khách sống được bao lâu" - và lăng kính đó soi vào đúng đường cong cohort mà bạn đã có sẵn.

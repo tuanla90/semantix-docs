@@ -21,7 +21,7 @@ Phản xạ tiếp theo của hầu hết mọi người: *"Chắc cần thêm d
 
 Hãy nhìn vào dữ liệu khách hàng thật của một SME đa kênh. Một số khách có hồ sơ **đầy đủ**: email, số điện thoại, nguồn đến (Shopee/TikTok Shop), lịch sử 12 đơn, ngày sinh, địa chỉ. Một số khác chỉ có *đúng một dòng*: số điện thoại, và một đơn hàng duy nhất.
 
-Mỗi cột có giá trị là một **feature** (cột đặc trưng - một mẩu thông tin model dùng để đoán). Khách đầy đủ cho model 8–10 feature để học. Khách tối thiểu chỉ cho 1–2. Đây không phải "cùng một bài toán với ít dữ liệu hơn" - nó là **hai bài toán khác nhau**, vì hai nhóm này *hành xử* khác nhau và *được mô tả* khác nhau.
+Mỗi cột có giá trị là một **feature** (cột đặc trưng - một mẩu thông tin model dùng để đoán). Khách đầy đủ cho model 8-10 feature để học. Khách tối thiểu chỉ cho 1-2. Đây không phải "cùng một bài toán với ít dữ liệu hơn" - nó là **hai bài toán khác nhau**, vì hai nhóm này *hành xử* khác nhau và *được mô tả* khác nhau.
 
 Khi ép cả hai vào một model, bạn buộc phải làm một việc tai hại: **impute** (điền khuyết - đoán giá trị cho những ô trống). Khách không có lịch sử mua? Điền bằng giá trị trung bình. Không có nguồn đến? Gán "unknown". Mỗi lần impute là một lần bạn **bịa ra dữ liệu không có thật** và đưa nó cho model như thể là sự thật.
 
@@ -36,10 +36,10 @@ Lời giải không phải là một thuật toán phức tạp hơn. Nó là m�
 Ví dụ chia thành ba nhóm:
 
 - **Hồ sơ đầy đủ** (≥ 7/10 cột có data): có lịch sử mua, nguồn, email, hành vi → train model giàu feature.
-- **Hồ sơ trung bình** (3–6 cột): đủ để dự đoán có ý nghĩa, nhưng cần model gọn hơn.
-- **Hồ sơ tối thiểu** (1–2 cột): gần như chỉ có SĐT + 1 đơn → ở đây model phức tạp là vô ích; một **luật** (rule - quy tắc if-then đơn giản) thường tốt hơn cả.
+- **Hồ sơ trung bình** (3-6 cột): đủ để dự đoán có ý nghĩa, nhưng cần model gọn hơn.
+- **Hồ sơ tối thiểu** (1-2 cột): gần như chỉ có SĐT + 1 đơn → ở đây model phức tạp là vô ích; một **luật** (rule - quy tắc if-then đơn giản) thường tốt hơn cả.
 
-Điều kỳ diệu xảy ra vì mỗi model giờ chỉ phải giải *một* bài toán đồng nhất. Model "đầy đủ" không còn phải impute lung tung - nó được dùng trọn vẹn 8–10 feature thật. Model "tối thiểu" không còn bị ảo tưởng rằng nó có lịch sử mua; nó biết rõ mình chỉ có 2 mẩu thông tin và tối ưu đúng trong giới hạn đó.
+Điều kỳ diệu xảy ra vì mỗi model giờ chỉ phải giải *một* bài toán đồng nhất. Model "đầy đủ" không còn phải impute lung tung - nó được dùng trọn vẹn 8-10 feature thật. Model "tối thiểu" không còn bị ảo tưởng rằng nó có lịch sử mua; nó biết rõ mình chỉ có 2 mẩu thông tin và tối ưu đúng trong giới hạn đó.
 
 <div class="viz">
 <svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
@@ -67,13 +67,13 @@ Ví dụ chia thành ba nhóm:
   <text x="528" y="92" fill="#4ade80" font-size="15" font-weight="700">91%</text>
   <rect x="364" y="138" width="150" height="84" rx="10" fill="#0f172a" stroke="#164e45" stroke-width="1.5"/>
   <text x="376" y="162" fill="#cbd5e1" font-size="12">Hồ sơ trung bình</text>
-  <text x="376" y="182" fill="#64748b" font-size="11">3–6 cột · model gọn</text>
+  <text x="376" y="182" fill="#64748b" font-size="11">3-6 cột · model gọn</text>
   <rect x="376" y="194" width="100" height="14" rx="4" fill="#1e293b"/>
   <rect x="376" y="194" width="88" height="14" rx="4" fill="#22c55e"/>
   <text x="528" y="186" fill="#4ade80" font-size="15" font-weight="700">88%</text>
   <rect x="364" y="232" width="150" height="84" rx="10" fill="#0f172a" stroke="#164e45" stroke-width="1.5"/>
   <text x="376" y="256" fill="#cbd5e1" font-size="12">Hồ sơ tối thiểu</text>
-  <text x="376" y="276" fill="#64748b" font-size="11">1–2 cột · dùng luật</text>
+  <text x="376" y="276" fill="#64748b" font-size="11">1-2 cột · dùng luật</text>
   <rect x="376" y="288" width="100" height="14" rx="4" fill="#1e293b"/>
   <rect x="376" y="288" width="79" height="14" rx="4" fill="#34d399"/>
   <text x="528" y="280" fill="#4ade80" font-size="15" font-weight="700">79%</text>
@@ -111,8 +111,8 @@ Tách nhóm là con dao hai lưỡi. **Chia càng nhiều, mỗi nhóm càng ít
 Vài nguyên tắc quyết định ngưỡng chia:
 
 - **Đủ mẫu trước đã.** Một nhóm nên có ít nhất vài trăm bản ghi (lý tưởng là 500+) thì model mới đáng tin. Nhóm quá nhỏ thì *gộp lại* hoặc thay model bằng luật.
-- **Chia theo ngưỡng có ý nghĩa nghiệp vụ, không theo từng cột.** "Đầy đủ / trung bình / tối thiểu" tốt hơn "có-email × có-nguồn × có-lịch-sử" (8 combo). Tìm 2–3 ngưỡng nơi *hành vi thật sự đổi*, không phải mọi tổ hợp toán học.
-- **Nhìn vào biểu đồ phân bố độ đầy.** Thường có một vài "cụm" tự nhiên - đa số khách rơi vào 2–3 mức độ đầy. Cắt ngay tại các khe trũng giữa các cụm đó.
+- **Chia theo ngưỡng có ý nghĩa nghiệp vụ, không theo từng cột.** "Đầy đủ / trung bình / tối thiểu" tốt hơn "có-email × có-nguồn × có-lịch-sử" (8 combo). Tìm 2-3 ngưỡng nơi *hành vi thật sự đổi*, không phải mọi tổ hợp toán học.
+- **Nhìn vào biểu đồ phân bố độ đầy.** Thường có một vài "cụm" tự nhiên - đa số khách rơi vào 2-3 mức độ đầy. Cắt ngay tại các khe trũng giữa các cụm đó.
 - **Kiểm chứng bằng accuracy từng nhóm.** Nếu tách thêm một nhóm mà accuracy của nó *thấp hơn* khi gộp, thì đừng tách - bạn đang chia quá mịn.
 
 > Quy tắc vàng: tách đến khi mỗi nhóm vẫn còn đủ mẫu để tự đứng vững - không tách thêm một bước nào nữa.

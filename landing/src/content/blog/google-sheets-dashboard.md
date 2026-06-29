@@ -70,7 +70,7 @@ Mẹo từ kinh nghiệm: **đừng hỏi một con số - hãy hỏi một quy�
 
 ## Bước 4: Ghim thành dashboard & chia sẻ
 
-Khi một câu trả lời hữu ích hiện ra, đừng để nó trôi đi. Bấm **Ghim vào dashboard**. Lặp lại với 4–5 câu bạn hay phải xem: doanh thu theo ngày, top sản phẩm, tỷ lệ theo kênh, đơn hoàn...
+Khi một câu trả lời hữu ích hiện ra, đừng để nó trôi đi. Bấm **Ghim vào dashboard**. Lặp lại với 4-5 câu bạn hay phải xem: doanh thu theo ngày, top sản phẩm, tỷ lệ theo kênh, đơn hoàn...
 
 Sau vài phút, bạn có một dashboard sống - mỗi sáng mở ra là số tự cập nhật theo sheet mới nhất. Chia sẻ link cho cộng sự, hoặc đặt nó tự gửi về mỗi sáng. Bạn vừa biến một file tĩnh thành một bảng điều khiển.
 

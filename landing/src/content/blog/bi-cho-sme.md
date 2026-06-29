@@ -59,7 +59,7 @@ Quên các chỉ số hào nhoáng đi. Một SME đa kênh ở Việt Nam, nế
 | Khách mua lần đầu có quay lại không, sau bao lâu? | Đầu tư giữ khách thay vì chỉ chạy ads kéo khách mới |
 | Mẫu/món nào nuôi lợi nhuận, mẫu nào chỉ tạo doanh thu ảo? | Nhập đúng hàng, đặc biệt trước mùa vụ Tết |
 
-*Ví dụ kết quả:* một shop chạy đủ ba kênh tưởng TikTok Shop là "con gà đẻ trứng vàng" vì doanh thu cao nhất. Tính kỹ phí sàn cộng chi phí quảng cáo, biên lợi nhuận thực chỉ còn 8–10%, trong khi KiotViet tại cửa hàng lời 22–25%. Con số doanh thu *to* đã che mất con số lợi nhuận *thật*. Đó là khác biệt giữa nhìn dashboard và làm BI - và nó có thể là khác biệt giữa một mùa Tết lãi và một mùa Tết ôm hàng tồn.
+*Ví dụ kết quả:* một shop chạy đủ ba kênh tưởng TikTok Shop là "con gà đẻ trứng vàng" vì doanh thu cao nhất. Tính kỹ phí sàn cộng chi phí quảng cáo, biên lợi nhuận thực chỉ còn 8-10%, trong khi KiotViet tại cửa hàng lời 22-25%. Con số doanh thu *to* đã che mất con số lợi nhuận *thật*. Đó là khác biệt giữa nhìn dashboard và làm BI - và nó có thể là khác biệt giữa một mùa Tết lãi và một mùa Tết ôm hàng tồn.
 
 ## Self-service: trả quyền hỏi data về tay người làm kinh doanh
 

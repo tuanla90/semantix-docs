@@ -80,7 +80,7 @@ Một dashboard Looker Studio, dù đẹp đến đâu, **chỉ trả lời đư
 
 Đây là cái giá tinh vi nhất, vì nó làm **lệch số** mà không ai biết.
 
-Looker Studio không có **semantic layer** (tầng định nghĩa nghiệp vụ dùng chung - nơi "doanh thu", "đơn hợp lệ" được định nghĩa đúng một lần cho cả công ty). Mỗi báo cáo bạn dựng tự định nghĩa lại các chỉ số của riêng nó. Report của bạn marketing tính "doanh thu" theo đơn đã đặt. Report của bạn kế toán tính theo đơn đã thu tiền, trừ đơn hoàn. Cả hai cùng cắm vào một nguồn, cùng hiển thị chữ "Doanh thu", và ra **hai con số lệch nhau 10–15%.**
+Looker Studio không có **semantic layer** (tầng định nghĩa nghiệp vụ dùng chung - nơi "doanh thu", "đơn hợp lệ" được định nghĩa đúng một lần cho cả công ty). Mỗi báo cáo bạn dựng tự định nghĩa lại các chỉ số của riêng nó. Report của bạn marketing tính "doanh thu" theo đơn đã đặt. Report của bạn kế toán tính theo đơn đã thu tiền, trừ đơn hoàn. Cả hai cùng cắm vào một nguồn, cùng hiển thị chữ "Doanh thu", và ra **hai con số lệch nhau 10-15%.**
 
 Họp sáng thứ Hai, ba người mở ba dashboard, đọc ba con số. Không ai sai cả - vấn đề là "doanh thu" chưa bao giờ được định nghĩa **một lần ở một chỗ.** Khi công ty bạn có năm report, bạn có nguy cơ năm định nghĩa. *Vì sao tầng định nghĩa này quan trọng đến thế, tôi đã mổ xẻ trong [Semantic Layer là gì](/blog/semantic-layer/).*
 

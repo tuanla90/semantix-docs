@@ -93,7 +93,7 @@ Histogram trả lời một câu mà mean không bao giờ trả lời được:
 
 Phân phối chuẩn là hình chuông: một cục dày ở giữa, hai bên thưa dần và **đối xứng**. Khi dữ liệu của bạn trông như vậy, mọi thứ Phần 1 và Phần 2 dạy đều "ngoan": mean nằm đúng giữa, median sát ngay đó, và độ lệch chuẩn nói lên điều gì đó thật về độ tản. *"Khách điển hình chi quanh 250k, cộng trừ 40k"* - câu đó chỉ có nghĩa khi phân phối gần chuẩn.
 
-*Ví dụ minh họa:* tuổi của khách một quán cà phê gần trường đại học - phần lớn 19–24, vài người trẻ hơn, vài người lớn hơn, đối xứng đẹp. Ở đây bạn yên tâm dùng mean để mô tả, lập kế hoạch theo "khách trung bình". Đây là trường hợp **dễ nhất và hiếm nhất**. Phần lớn dữ liệu kinh doanh không ngoan như thế.
+*Ví dụ minh họa:* tuổi của khách một quán cà phê gần trường đại học - phần lớn 19-24, vài người trẻ hơn, vài người lớn hơn, đối xứng đẹp. Ở đây bạn yên tâm dùng mean để mô tả, lập kế hoạch theo "khách trung bình". Đây là trường hợp **dễ nhất và hiếm nhất**. Phần lớn dữ liệu kinh doanh không ngoan như thế.
 
 > Quy tắc vàng: **độ lệch chuẩn (Phần 1) chỉ có ý nghĩa khi phân phối gần chuẩn.** Đem nó áp lên dữ liệu lệch là tự lừa mình bằng một con số nghe có vẻ chính xác.
 

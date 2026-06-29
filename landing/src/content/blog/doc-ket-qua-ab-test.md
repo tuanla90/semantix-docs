@@ -40,7 +40,7 @@ Vậy làm sao biết chênh lệch là thật hay là may? Đây là lúc cần
 
 | Tín hiệu thật | May rủi (nhiễu) |
 |---|---|
-| Chênh lệch lớn, rõ rệt (vd B hơn A 30–40%) | Chênh lệch tí hon (vài %) |
+| Chênh lệch lớn, rõ rệt (vd B hơn A 30-40%) | Chênh lệch tí hon (vài %) |
 | Đo trên **nhiều nghìn** lượt | Đo trên vài chục lượt |
 | Khoảng cách hai phiên bản **không chồng lấn** | Dải sai số hai phiên bản chồng lên nhau |
 | Lặp lại vẫn giữ được hướng đó | Mỗi lần xem lại nhảy lung tung |

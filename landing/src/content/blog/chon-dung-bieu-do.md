@@ -51,13 +51,13 @@ Chú giải nhanh các từ trong bảng: **trục** (axis - đường gốc nga
 
 ## Cột - khi bạn muốn so sánh hạng mục
 
-Đây là loại chart "ngựa thồ" của mọi dashboard. Bạn có 5–6 kênh bán (Shopee, TikTok Shop, KiotViet, website, cửa hàng) và muốn biết kênh nào dẫn đầu - cột trả lời tức thì. Mắt người so *chiều cao* cực giỏi, nên chênh lệch 18% và 24% hiện rõ mồn một.
+Đây là loại chart "ngựa thồ" của mọi dashboard. Bạn có 5-6 kênh bán (Shopee, TikTok Shop, KiotViet, website, cửa hàng) và muốn biết kênh nào dẫn đầu - cột trả lời tức thì. Mắt người so *chiều cao* cực giỏi, nên chênh lệch 18% và 24% hiện rõ mồn một.
 
 Mẹo: **luôn sắp cột theo thứ tự giá trị** (cao xuống thấp), trừ khi trục có thứ tự tự nhiên như tháng. Một dãy cột xếp lộn xộn bắt người xem phải tự tìm cái cao nhất - bạn vừa giao việc cho mắt họ một cách vô ích.
 
 ## Thanh ngang - khi nhãn dài hoặc nhiều hạng mục
 
-Cùng là "so sánh", nhưng khi tên hạng mục dài - "Áo thun cotton form rộng", "Combo quà Tết cao cấp" - hoặc khi bạn có 12–15 hạng mục, hãy *xoay cột nằm xuống* thành thanh ngang. Lý do thuần thực dụng: nhãn nằm ngang đọc thẳng, không phải nghiêng đầu; và danh sách dài cuộn dọc tự nhiên hơn cột chen chúc theo chiều ngang.
+Cùng là "so sánh", nhưng khi tên hạng mục dài - "Áo thun cotton form rộng", "Combo quà Tết cao cấp" - hoặc khi bạn có 12-15 hạng mục, hãy *xoay cột nằm xuống* thành thanh ngang. Lý do thuần thực dụng: nhãn nằm ngang đọc thẳng, không phải nghiêng đầu; và danh sách dài cuộn dọc tự nhiên hơn cột chen chúc theo chiều ngang.
 
 Quy tắc bỏ túi: **5 hạng mục trở xuống, nhãn ngắn → cột; nhiều hơn hoặc nhãn dài → thanh ngang.**
 
@@ -108,10 +108,10 @@ Scatter là công cụ để **kiểm tra một giả định**, không phải �
 Giờ đến lý do bài này tồn tại. Biểu đồ tròn (pie chart) không phải lúc nào cũng sai - nhưng nó bị lạm dụng nhiều nhất, và đây là cơ chế:
 
 - **Mắt người đọc góc và diện tích rất kém.** Bạn so chiều cao hai cột chính xác đến vài phần trăm, nhưng so hai lát bánh 22% với 27% thì gần như chịu. Cái khác biệt quan trọng nhất - *ai hơn ai bao nhiêu* - chính là cái pie giấu đi.
-- **Quá 3–4 lát là rối loạn.** Một cái bánh 7 lát với 7 màu buộc người xem liên tục liếc xuống chú thích để dịch màu ra tên. Họ đọc *bảng màu*, không đọc *dữ liệu*.
+- **Quá 3-4 lát là rối loạn.** Một cái bánh 7 lát với 7 màu buộc người xem liên tục liếc xuống chú thích để dịch màu ra tên. Họ đọc *bảng màu*, không đọc *dữ liệu*.
 - **Không so được hai thời điểm.** Hai cái bánh cạnh nhau (tháng này / tháng trước) gần như không thể đối chiếu bằng mắt.
 
-> Quy tắc vàng: pie chỉ ổn khi có **2–3 lát** và bạn chỉ muốn nói "phần này chiếm *đa số*". Còn lại - muốn so sánh, muốn xếp hạng, muốn thấy chênh lệch - hãy thay bằng **cột hoặc thanh ngang.** Cùng câu chuyện cơ cấu sản phẩm, một dãy thanh ngang xếp từ cao xuống thấp luôn dễ đọc hơn một cái bánh nhiều lát.
+> Quy tắc vàng: pie chỉ ổn khi có **2-3 lát** và bạn chỉ muốn nói "phần này chiếm *đa số*". Còn lại - muốn so sánh, muốn xếp hạng, muốn thấy chênh lệch - hãy thay bằng **cột hoặc thanh ngang.** Cùng câu chuyện cơ cấu sản phẩm, một dãy thanh ngang xếp từ cao xuống thấp luôn dễ đọc hơn một cái bánh nhiều lát.
 
 Ví dụ thật hay gặp: "cơ cấu doanh thu theo 8 nhóm sản phẩm". Phản xạ là vẽ pie. Nhưng 8 lát thì người xem chẳng đọc ra nhóm nào hạng 3, hạng 4. Đổi thành 8 thanh ngang xếp theo giá trị - thứ hạng hiện ra tức thì, và bạn còn ghi được con số ở cuối mỗi thanh.
 
@@ -133,7 +133,7 @@ Bạn không phải nhớ bảng tra này mỗi lần. Khi bạn hỏi bằng ti
 |---|---|
 | Chọn chart "cho đẹp" | Chọn chart theo *câu hỏi* cần trả lời |
 | Nhồi mọi thứ vào một biểu đồ | Một biểu đồ = một câu hỏi |
-| Pie cho mọi thứ "có cơ cấu" | Pie chỉ 2–3 lát; còn lại dùng cột/thanh |
+| Pie cho mọi thứ "có cơ cấu" | Pie chỉ 2-3 lát; còn lại dùng cột/thanh |
 | Đường cho mọi danh sách | Đường chỉ khi trục ngang là thời gian |
 | Chart để khoe con số chính xác | Cần số chính xác → dùng bảng |
 

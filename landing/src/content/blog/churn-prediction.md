@@ -81,7 +81,7 @@ Ví dụ: khách thường mua mỗi 30 ngày mà đã 60 ngày chưa quay lại
 | Mức nguy cơ | Luật (so với nhịp mua quen của khách) | Tín hiệu kèm theo |
 |---|---|---|
 | Xanh - ổn | Mua đúng nhịp, hoặc trễ dưới 1,3 lần | Đơn ổn định, vẫn mở app |
-| Vàng - chớm trượt | Trễ 1,3–2 lần nhịp quen | Đơn nhỏ lại hoặc ngừng đọc tin |
+| Vàng - chớm trượt | Trễ 1,3-2 lần nhịp quen | Đơn nhỏ lại hoặc ngừng đọc tin |
 | Đỏ - nguy cơ cao | Trễ trên 2 lần nhịp quen | Đơn teo + im ắng mọi kênh |
 
 Cái hay của bảng này: mỗi mức tương đối với *chính khách đó*. "60 ngày im lặng" là báo động đỏ với quán cà phê khách ghé mỗi sáng, nhưng hoàn toàn bình thường với cửa hàng nội thất khách mua vài năm một lần. Đừng mượn ngưỡng của ngành khác - để dữ liệu của bạn tự định nhịp.
@@ -92,7 +92,7 @@ Bạn không phải xây churn prediction từ con số không. Hai công cụ q
 
 **RFM** (Recency, Frequency, Monetary - phân khúc khách theo lần mua gần nhất, tần suất và số tiền chi) chính là cỗ máy bật cờ nguy cơ. Chiều **Recency** rớt điểm là tín hiệu sớm số một; chiều **Frequency** đi xuống là số hai. Nhóm **At-Risk** (khách từng giá trị cao đang trượt đi) trong RFM về bản chất *là* danh sách khách nguy cơ cao - chỉ cần đặt tên khác. Nếu bạn đã đọc [bài về RFM](/blog/rfm-segmentation/), bạn đã nắm 70% của churn prediction mà không hay.
 
-**Cohort** trả lời câu bổ sung: khách thường rời vào *giai đoạn nào* của vòng đời? Đường cong giữ chân trong [bài cohort retention](/blog/cohort-retention-pmf/) cho thấy "khúc rơi" tập trung ở tháng 2–3 chẳng hạn - vậy thì hãy bật cờ sớm cho mọi khách *sắp* chạm mốc đó, thay vì chờ từng người trượt rồi mới biết. Cohort cho bạn biết *khi nào* nên cảnh giác; RFM cho bạn biết *ai* đang trượt.
+**Cohort** trả lời câu bổ sung: khách thường rời vào *giai đoạn nào* của vòng đời? Đường cong giữ chân trong [bài cohort retention](/blog/cohort-retention-pmf/) cho thấy "khúc rơi" tập trung ở tháng 2-3 chẳng hạn - vậy thì hãy bật cờ sớm cho mọi khách *sắp* chạm mốc đó, thay vì chờ từng người trượt rồi mới biết. Cohort cho bạn biết *khi nào* nên cảnh giác; RFM cho bạn biết *ai* đang trượt.
 
 ## Hành động: cờ đỏ vô dụng nếu không ai làm gì
 

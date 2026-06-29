@@ -36,8 +36,8 @@ Tin tốt: phân biệt được hai khái niệm là kỹ năng học trong mư
 
 Trước hết, gọi tên cho rạch ròi. Một **phần trăm** (percent - một phần của một trăm, ký hiệu %) là một *tỷ lệ*: 10% nghĩa là 10 trên 100. Khi tỷ lệ này thay đổi từ 10% lên 12%, có hai cách đo độ thay đổi, và chúng cho ra hai con số hoàn toàn khác:
 
-- **Chênh lệch tuyệt đối** = 12% − 10% = **2 điểm phần trăm**. **Điểm phần trăm** (percentage point - đơn vị đo khoảng cách giữa hai tỷ lệ) là cách nói đúng cho phép trừ này. Bạn lấy tỷ lệ mới trừ tỷ lệ cũ, đơn vị còn lại là "điểm %", không phải "%".
-- **Thay đổi tương đối** = (12% − 10%) ÷ 10% = **20%**. Đây là phép so phần tăng thêm với cái **nền** (base - con số gốc bạn lấy làm mốc để so), tức tăng *bao nhiêu phần* so với chính nó.
+- **Chênh lệch tuyệt đối** = 12% - 10% = **2 điểm phần trăm**. **Điểm phần trăm** (percentage point - đơn vị đo khoảng cách giữa hai tỷ lệ) là cách nói đúng cho phép trừ này. Bạn lấy tỷ lệ mới trừ tỷ lệ cũ, đơn vị còn lại là "điểm %", không phải "%".
+- **Thay đổi tương đối** = (12% - 10%) ÷ 10% = **20%**. Đây là phép so phần tăng thêm với cái **nền** (base - con số gốc bạn lấy làm mốc để so), tức tăng *bao nhiêu phần* so với chính nó.
 
 Cùng một cú nhích, hai con số: **+2 điểm phần trăm** và **+20%**. Cả hai đều đúng. Vấn đề nảy sinh khi bạn nói "tăng 2%" - vì "2%" trong tiếng Việt đời thường nghe như một thay đổi tương đối, trong khi ý bạn là 2 *điểm*. Người đọc tự động hiểu là "tăng nhẹ tí xíu", còn sự thật là tỷ lệ chốt đã to lên một phần năm.
 
@@ -60,7 +60,7 @@ Cùng một cú nhích, hai con số: **+2 điểm phần trăm** và **+20%**. 
   <!-- absolute label -->
   <line x1="330" y1="118" x2="384" y2="118" stroke="#22D3EE" stroke-width="2"/>
   <text x="357" y="175" fill="#22D3EE" font-size="13" font-weight="700" text-anchor="middle">+2 ĐIỂM phần trăm</text>
-  <text x="357" y="194" fill="#64748B" font-size="11" text-anchor="middle">chênh lệch tuyệt đối: 12 − 10</text>
+  <text x="357" y="194" fill="#64748B" font-size="11" text-anchor="middle">chênh lệch tuyệt đối: 12 - 10</text>
   <!-- relative label -->
   <text x="180" y="240" fill="#F59E0B" font-size="13" font-weight="700" text-anchor="middle">+20% (tăng tương đối)</text>
   <text x="180" y="259" fill="#64748B" font-size="11" text-anchor="middle">phần tăng thêm so với nền 10%: 2 ÷ 10</text>
@@ -120,7 +120,7 @@ Cùng một sự thật, năm cách viết, ba mức độ rủi ro. Cách an to
 
 Bạn không cần học thuộc công thức. Bạn chỉ cần một thói quen ngôn ngữ:
 
-- Khi **trừ hai tỷ lệ**, luôn viết **"điểm phần trăm"** (hoặc "điểm %"). 12% − 10% = 2 *điểm %*.
+- Khi **trừ hai tỷ lệ**, luôn viết **"điểm phần trăm"** (hoặc "điểm %"). 12% - 10% = 2 *điểm %*.
 - Khi nói **một tỷ lệ tăng bao nhiêu phần so với chính nó**, dùng **"%"** và nói rõ là thay đổi tương đối. Từ 10% lên 12% là +20% *tương đối*.
 - Khi nghi ngờ, **đưa luôn hai con số gốc**: "từ 10% lên 12%". Đây là liều vắc-xin chống mọi hiểu lầm.
 

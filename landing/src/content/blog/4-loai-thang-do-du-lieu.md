@@ -49,7 +49,7 @@ Với dữ liệu định danh, bạn chỉ được phép làm hai việc: **đ
 
 Lên một nấc: **ordinal (thứ bậc - có *thứ tự* nhưng khoảng cách giữa các bậc không bằng nhau)**. Đây chính là chỗ "3,4 sao" bị lật tẩy.
 
-Mức hài lòng 1–5 sao, hạng thành viên (Đồng → Bạc → Vàng → Kim cương), trình độ học vấn, mức độ ưu tiên "thấp / vừa / cao" - tất cả đều có thứ tự rõ ràng: 5 sao tốt hơn 4 sao. Nhưng - và đây là cái twist - **khoảng cách giữa các bậc không bằng nhau.** Khoảng từ "rất ghét" (1) lên "ghét" (2) trong đầu khách hàng *không* bằng khoảng từ "hài lòng" (4) lên "rất hài lòng" (5). Mấy con số 1-2-3-4-5 chỉ là nhãn xếp hàng, không phải đại lượng đo bằng thước.
+Mức hài lòng 1-5 sao, hạng thành viên (Đồng → Bạc → Vàng → Kim cương), trình độ học vấn, mức độ ưu tiên "thấp / vừa / cao" - tất cả đều có thứ tự rõ ràng: 5 sao tốt hơn 4 sao. Nhưng - và đây là cái twist - **khoảng cách giữa các bậc không bằng nhau.** Khoảng từ "rất ghét" (1) lên "ghét" (2) trong đầu khách hàng *không* bằng khoảng từ "hài lòng" (4) lên "rất hài lòng" (5). Mấy con số 1-2-3-4-5 chỉ là nhãn xếp hàng, không phải đại lượng đo bằng thước.
 
 Vì khoảng cách không đều, **cộng chúng lại rồi chia là sai về bản chất** - bạn đang cộng những bước nhảy dài ngắn khác nhau như thể chúng bằng nhau. "Trung bình 3,4 sao" giả vờ rằng khoảng cách 1→2 bằng 4→5. Nó không bằng.
 
@@ -91,7 +91,7 @@ Một hệ quả thực dụng: thang đo quyết định cả việc bạn đư
 | Thang đo | Ví dụ Việt | Phép tính hợp lệ |
 |---|---|---|
 | **Định danh** (nominal) | Mã SP, kênh bán, giới tính, mã tỉnh | Đếm, mode - **không** trung bình |
-| **Thứ bậc** (ordinal) | Sao hài lòng 1–5, hạng thành viên | Xếp hạng, **median** - không mean |
+| **Thứ bậc** (ordinal) | Sao hài lòng 1-5, hạng thành viên | Xếp hạng, **median** - không mean |
 | **Khoảng** (interval) | Nhiệt độ, năm dương lịch | Cộng/trừ, mean - **không** tỉ số/"gấp đôi" |
 | **Tỉ lệ** (ratio) | Doanh thu, số đơn, tuổi, tồn kho | **Mọi** phép tính, kể cả tỉ số |
 

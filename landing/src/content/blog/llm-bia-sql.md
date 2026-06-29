@@ -63,7 +63,7 @@ JOIN order_items oi ON oi.order_id   = o.id   -- ← làm mỗi đơn lặp lạ
 GROUP BY c.name;
 ```
 
-`SUM(o.total_amount)` giờ cộng giá trị mỗi đơn *nhiều lần* - đúng bằng số dòng sản phẩm. Một khách mua 3 mặt hàng trong một đơn sẽ có doanh thu gấp ba. Câu lệnh chạy ngon, ra một bảng đẹp, và sai 15–200% tùy dữ liệu.
+`SUM(o.total_amount)` giờ cộng giá trị mỗi đơn *nhiều lần* - đúng bằng số dòng sản phẩm. Một khách mua 3 mặt hàng trong một đơn sẽ có doanh thu gấp ba. Câu lệnh chạy ngon, ra một bảng đẹp, và sai 15-200% tùy dữ liệu.
 
 **Tuyến phòng thủ: quan hệ được khai báo sẵn trong Semantic Layer (tầng định nghĩa nghiệp vụ dùng chung).** Khi quan hệ `orders : order_items` là 1-nhiều đã được mô tả *một lần* ở tầng định nghĩa - kèm cách gộp đúng (ví dụ tính doanh thu ở cấp đơn, không cấp dòng) - AI không còn phải đoán khóa nối hay tự nghĩ ra cách tránh nhân bản. Nó chỉ lắp ghép theo bản đồ quan hệ có sẵn. Bịa quan hệ trở thành chuyện bất khả thi, vì đường đi đã được vẽ trước.
 
@@ -73,13 +73,13 @@ Có những phép tính **đúng cú pháp nhưng vô nghĩa về nghiệp vụ*
 
 AI sa vào những phép này vì nó thấy mẫu "AVG(cột số)" rất phổ biến và áp dụng máy móc - nó không *hiểu* rằng `order_id` là một cái nhãn chứ không phải một đại lượng đo được.
 
-**Tuyến phòng thủ: luật "forbidden combinations" (kết hợp bị cấm).** Hệ thống khai báo trước những cặp metric (con số đo được) – dimension (lát cắt để nhìn metric) hoặc phép gộp **không bao giờ được phép**: không `AVG`/`SUM` trên cột định danh, không cộng dồn tỷ lệ, không gộp một metric đã-là-trung-bình thêm lần nữa. Khi AI vô tình sinh ra một tổ hợp nằm trong danh sách cấm, hệ thống chặn và buộc viết lại. Đây là hàng rào dành riêng cho loại lỗi mà cú pháp không bao giờ bắt được, vì bản thân câu lệnh chẳng có gì "hỏng".
+**Tuyến phòng thủ: luật "forbidden combinations" (kết hợp bị cấm).** Hệ thống khai báo trước những cặp metric (con số đo được) - dimension (lát cắt để nhìn metric) hoặc phép gộp **không bao giờ được phép**: không `AVG`/`SUM` trên cột định danh, không cộng dồn tỷ lệ, không gộp một metric đã-là-trung-bình thêm lần nữa. Khi AI vô tình sinh ra một tổ hợp nằm trong danh sách cấm, hệ thống chặn và buộc viết lại. Đây là hàng rào dành riêng cho loại lỗi mà cú pháp không bao giờ bắt được, vì bản thân câu lệnh chẳng có gì "hỏng".
 
 ## Kiểu 4 - Đoán định nghĩa nghiệp vụ
 
 Đây là kiểu ảo giác **đắt giá nhất**, vì nó chạm thẳng vào con số đưa lên bàn họp. Bạn hỏi "doanh thu tháng này". Trong bảng có `gross_amount`, `discount_amount`, `refund_amount`, `tax`. "Doanh thu" của *công ty bạn* trừ chiết khấu chưa? Có loại đơn hoàn không? Chỉ tính đơn đã hoàn tất?
 
-AI không biết - và nó **đoán**. Mỗi lần hỏi có thể đoán một kiểu. Một lần nó lấy `gross_amount`, lần sau trừ chiết khấu. Hai con số chênh nhau 15–20%, cả hai đều "đúng cú pháp", và bạn không cách nào biết lần nào theo định nghĩa thật của mình. Đây chính xác là cái bẫy "số sai trông như đúng".
+AI không biết - và nó **đoán**. Mỗi lần hỏi có thể đoán một kiểu. Một lần nó lấy `gross_amount`, lần sau trừ chiết khấu. Hai con số chênh nhau 15-20%, cả hai đều "đúng cú pháp", và bạn không cách nào biết lần nào theo định nghĩa thật của mình. Đây chính xác là cái bẫy "số sai trông như đúng".
 
 Mình gặp đúng cái bẫy này mỗi ngày ở một ngân hàng mình đang làm. Nghiệp vụ banking phức tạp tới mức "doanh thu" không có một nghĩa - nó tách ra theo sản phẩm, theo thời điểm ghi nhận, theo đơn đã/chưa tất toán. Một LLM gắn thẳng vào kho dữ liệu mà không có lớp neo nghiệp vụ sẽ đoán bừa một nhánh và trả về con số trông rất dứt khoát. Đây chính là lý do mình đang đẩy POC semantic layer thành dự án trọng điểm của trung tâm chuyển đổi số: không phải để AI thông minh hơn, mà để mỗi định nghĩa chỉ còn đúng một nghĩa, hết chỗ cho nó tự diễn giải.
 
@@ -119,7 +119,7 @@ Nhân viên mới quá tự tin ở đầu bài không trở nên đáng tin hơ
 |---|---|
 | Bịa bảng/cột không tồn tại | Nạp schema thực + validate tên trước khi chạy |
 | Join sai quan hệ / nhân bản dòng | Quan hệ khai báo sẵn trong Semantic Layer |
-| Kết hợp metric–dimension vô lý | Luật "forbidden combinations" |
+| Kết hợp metric-dimension vô lý | Luật "forbidden combinations" |
 | Đoán định nghĩa nghiệp vụ | Semantic Layer - một định nghĩa chuẩn |
 | Tự tin khi nên hỏi lại | Vòng làm rõ / nói rõ giả định trước khi trả lời |
 

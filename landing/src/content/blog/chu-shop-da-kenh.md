@@ -86,7 +86,7 @@ Sau khi kết nối, chị Hà không viết một dòng SQL, không nhớ trừ
 
 | | Thuê người / thuê ngoài dựng dashboard | AI BI tự phục vụ |
 |---|---|---|
-| **Chi phí** | 18–25 triệu/tháng + 1–2 tháng onboard *(ví dụ minh họa)* | Phí nền tảng cố định, không lương tháng |
+| **Chi phí** | 18-25 triệu/tháng + 1-2 tháng onboard *(ví dụ minh họa)* | Phí nền tảng cố định, không lương tháng |
 | **Tốc độ trả lời** | Nửa tiếng đến sáng hôm sau, tùy người rảnh | Vài giây, bất kể giờ giấc |
 | **Độ phủ câu hỏi** | Giới hạn bởi sức một người | Hỏi bao nhiêu cũng được, càng hỏi càng rẻ |
 | **Lúc 11h đêm** | Không có ai trực | Vẫn trả lời ngay |

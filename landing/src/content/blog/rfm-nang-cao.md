@@ -11,7 +11,7 @@ cover: "/blog/covers/rfm-nang-cao.svg"
 coverAlt: "Lưới RFM 5×5 đầy đủ với 11 nhóm khách và ma trận dịch chuyển"
 ---
 
-Một analyst làm RFM (Recency, Frequency, Monetary - phân khúc khách theo lần mua gần nhất, tần suất mua và số tiền chi) đúng theo sách: chia khách thành năm nhóm bằng nhau (quintile - chia tệp khách thành 5 phần bằng nhau) trên cả ba chiều R, F, M, gán điểm 1–5, dựng bảng đẹp đẽ. Trình bày xong, sếp gật gù.
+Một analyst làm RFM (Recency, Frequency, Monetary - phân khúc khách theo lần mua gần nhất, tần suất mua và số tiền chi) đúng theo sách: chia khách thành năm nhóm bằng nhau (quintile - chia tệp khách thành 5 phần bằng nhau) trên cả ba chiều R, F, M, gán điểm 1-5, dựng bảng đẹp đẽ. Trình bày xong, sếp gật gù.
 
 Rồi ai đó mở phân phối điểm Frequency ra xem. **62% khách có điểm F = 1** - vì họ mua đúng một lần. Một con số khác chiếm 18% nữa: khách mua đúng hai lần. Cái gọi là "năm nhóm bằng nhau" thật ra là hai cục u khổng lồ và ba ô gần như rỗng.
 
@@ -24,7 +24,7 @@ Recency và Monetary thường trải khá mượt - bạn chia quintile đượ
 Cách làm đúng:
 
 - **Tách "một lần" khỏi "mua lại" trước tiên.** Ranh giới giữa khách đơn-1 và khách đơn-2-trở-lên thường quan trọng hơn cả thang điểm F. Hãy coi nó là một lát cắt cứng.
-- **Dùng ngưỡng thủ công cho F**, không ép quintile: ví dụ 1 / 2 / 3–5 / 6–10 / 10+ đơn - phản ánh đúng thực tế ngành bạn.
+- **Dùng ngưỡng thủ công cho F**, không ép quintile: ví dụ 1 / 2 / 3-5 / 6-10 / 10+ đơn - phản ánh đúng thực tế ngành bạn.
 - **Giữ quintile cho R và M** nếu chúng trải đều, nhưng luôn nhìn histogram (biểu đồ phân phối - cho thấy giá trị tụ ở đâu) trước khi tin vào điểm số.
 
 > Quy tắc vàng: **đừng ép một phân phối lệch vào năm ô bằng nhau.** Histogram của F phải được nhìn tận mắt trước khi bạn chấm một điểm nào.

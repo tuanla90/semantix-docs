@@ -60,7 +60,7 @@ Phễu cơ bản đếm theo kiểu "trong một phiên". Khách thêm vào gi�
 
 Điều này có nghĩa: **một phần "tỷ lệ bỏ giỏ" của bạn là ảo, do cửa sổ thời gian quá ngắn tạo ra.** Sửa đúng:
 
-- Đặt **cửa sổ chuyển đổi (conversion window)** khớp với chu kỳ mua thật: ecom thời trang vài ngày là đủ; đồ nội thất hay xe có thể cần 30–60 ngày.
+- Đặt **cửa sổ chuyển đổi (conversion window)** khớp với chu kỳ mua thật: ecom thời trang vài ngày là đủ; đồ nội thất hay xe có thể cần 30-60 ngày.
 - Phân biệt **"chưa mua"** với **"sẽ không mua"**. Một khách trong cửa sổ vẫn còn cơ hội - đừng vội xếp họ vào "đã mất".
 
 > Quy tắc vàng: trước khi hỏi "bao nhiêu phần trăm rớt?", hãy hỏi **"rớt trong bao lâu?"** Không có cửa sổ thời gian, mọi con số drop-off (tỷ lệ rớt khỏi một bước trong phễu) đều vô nghĩa.

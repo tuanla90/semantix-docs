@@ -54,7 +54,7 @@ Cách trình bày kinh điển là **biểu đồ Pareto**: cột xếp giảm d
   <circle cx="100" cy="167" r="4" fill="#4ade80"/><circle cx="155" cy="102" r="4" fill="#4ade80"/><circle cx="210" cy="79" r="4" fill="#4ade80"/>
   <!-- region label -->
   <line x1="230" y1="40" x2="230" y2="270" stroke="#475569" stroke-width="1" stroke-dasharray="3 3"/>
-  <text x="150" y="300" fill="#6366F1" font-size="12.5" font-weight="700" text-anchor="middle">~20–30% sản phẩm</text>
+  <text x="150" y="300" fill="#6366F1" font-size="12.5" font-weight="700" text-anchor="middle">~20-30% sản phẩm</text>
   <text x="430" y="300" fill="#64748B" font-size="12.5" text-anchor="middle">...cái đuôi dài còn lại</text>
 </svg>
 <div class="viz-caption">Biểu đồ Pareto: cột xếp giảm dần theo doanh thu, đường xanh là phần trăm tích luỹ. Vài sản phẩm đầu đẩy đường tích luỹ chạm 80% rất nhanh. *(số liệu minh họa)*</div>
@@ -66,7 +66,7 @@ Cách trình bày kinh điển là **biểu đồ Pareto**: cột xếp giảm d
 
 ## Sự thật 2: Pareto tự nhân lên - quy tắc 64/4
 
-Áp Pareto **hai lần** và điều kỳ lạ xảy ra: nếu 20% tạo 80%, thì 20% của nhóm 20% đó (tức **4%**) tạo 80% của 80% (tức **64%**). Quy tắc 64/4. Trong nhiều shop, một nhúm rất nhỏ - 4–5% sản phẩm, hoặc một dúm khách - gánh hơn nửa doanh thu.
+Áp Pareto **hai lần** và điều kỳ lạ xảy ra: nếu 20% tạo 80%, thì 20% của nhóm 20% đó (tức **4%**) tạo 80% của 80% (tức **64%**). Quy tắc 64/4. Trong nhiều shop, một nhúm rất nhỏ - 4-5% sản phẩm, hoặc một dúm khách - gánh hơn nửa doanh thu.
 
 Hệ quả hành động: nhóm "vital few" (thiểu số sống còn - số ít tạo phần lớn kết quả) của bạn thường **nhỏ hơn bạn tưởng**, và xứng đáng được chăm ở mức gần như cá nhân hoá - đừng để nó chìm trong một danh sách "top 20%" dài dằng dặc.
 

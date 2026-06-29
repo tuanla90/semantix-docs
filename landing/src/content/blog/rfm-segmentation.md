@@ -13,7 +13,7 @@ coverAlt: "Lưới phân khúc khách hàng RFM: Champions, At-Risk, Lost"
 
 Một chủ shop thời trang ở TP.HCM mở báo cáo cuối quý, lọc top 50 khách chi tiêu nhiều nhất, rồi dồn toàn bộ ngân sách ưu đãi Tết cho nhóm đó: voucher VIP, quà tặng, tin nhắn chăm sóc riêng. Hợp lý, đúng không? Khách chi nhiều thì chăm kỹ.
 
-Ba tháng sau, doanh thu vẫn tụt. Lý do: gần một nửa nhóm "top chi tiêu" ấy là những người mua **một lần duy nhất** - một đám cưới, một lần sắm đồ công sở - rồi không bao giờ quay lại. Còn nhóm khách mua đều đặn 2–3 triệu mỗi tháng, những người thật sự nuôi cửa hàng, thì đang lặng lẽ rời đi vì chẳng ai để ý tới họ.
+Ba tháng sau, doanh thu vẫn tụt. Lý do: gần một nửa nhóm "top chi tiêu" ấy là những người mua **một lần duy nhất** - một đám cưới, một lần sắm đồ công sở - rồi không bao giờ quay lại. Còn nhóm khách mua đều đặn 2-3 triệu mỗi tháng, những người thật sự nuôi cửa hàng, thì đang lặng lẽ rời đi vì chẳng ai để ý tới họ.
 
 Đây là nghịch lý ít người chịu tin: **khách chi nhiều nhất chưa chắc là khách tốt nhất.** Một đại gia mua một lần 50 triệu rồi biến mất kém giá trị hơn một người mua đều đặn 2 triệu mỗi tháng suốt hai năm. Và bạn sẽ không bao giờ phân biệt được hai loại khách này nếu chỉ nhìn vào một con số tổng chi tiêu. Bạn cần **RFM** (Recency, Frequency, Monetary - phân khúc khách theo lần mua gần nhất, tần suất mua và số tiền chi).
 
@@ -79,7 +79,7 @@ Khi đã có điểm R, F, M, người ta gộp khách thành các nhóm kinh đ
   <rect x="248" y="162" width="180" height="110" rx="8" fill="#fbbf24"/>
   <text x="338" y="210" fill="#3b2606" font-size="17" font-weight="800" text-anchor="middle">Hibernating</text>
   <text x="338" y="236" fill="#3b2606" font-size="12" text-anchor="middle">Im ắng đã lâu,</text>
-  <text x="338" y="254" fill="#3b2606" font-size="12" text-anchor="middle">giá trị thấp–vừa</text>
+  <text x="338" y="254" fill="#3b2606" font-size="12" text-anchor="middle">giá trị thấp-vừa</text>
   <rect x="436" y="162" width="184" height="110" rx="8" fill="#9ca3af"/>
   <text x="528" y="210" fill="#1f2937" font-size="17" font-weight="800" text-anchor="middle">Lost</text>
   <text x="528" y="236" fill="#1f2937" font-size="12" text-anchor="middle">Mất hẳn,</text>
@@ -101,7 +101,7 @@ Bạn để ý chứ: cùng một con số tổng chi tiêu có thể nằm ở 
 Hai sai lầm giết chết một phân tích RFM:
 
 1. **Gộp tất cả vào một rổ.** Gửi cùng một chiến dịch cho toàn bộ tệp khách là phủ nhận luôn lý do tồn tại của RFM. Voucher giảm giá đẩy Champions xuống (dạy họ chờ sale), trong khi At-Risk thì lại cần đúng cú hích đó. Một thông điệp cho tất cả = sai với gần như tất cả.
-2. **Bỏ qua cỡ mẫu và ngưỡng thời gian.** RFM cần một khoảng thời gian đủ dài để "Frequency" có nghĩa. Chấm RFM trên dữ liệu hai tuần thì gần như mọi khách đều "mua gần đây" - vô nghĩa. Với bán lẻ, cửa sổ 6–12 tháng là hợp lý; với ngành mua thưa (nội thất, xe), có thể cần 24 tháng. Và một phân khúc chỉ vài chục khách thì đừng vội ra quyết định lớn - một vài người đổi ý là cả tỷ lệ nhảy.
+2. **Bỏ qua cỡ mẫu và ngưỡng thời gian.** RFM cần một khoảng thời gian đủ dài để "Frequency" có nghĩa. Chấm RFM trên dữ liệu hai tuần thì gần như mọi khách đều "mua gần đây" - vô nghĩa. Với bán lẻ, cửa sổ 6-12 tháng là hợp lý; với ngành mua thưa (nội thất, xe), có thể cần 24 tháng. Và một phân khúc chỉ vài chục khách thì đừng vội ra quyết định lớn - một vài người đổi ý là cả tỷ lệ nhảy.
 
 > Quy tắc vàng: **RFM không phải để dán nhãn, mà để chọn hành động.** Nếu một phân khúc không dẫn tới một việc cụ thể bạn sẽ làm khác đi, thì việc chia nhỏ nó chỉ là trang trí.
 

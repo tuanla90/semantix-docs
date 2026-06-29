@@ -64,7 +64,7 @@ Bức tường không đến trong một ngày. Nó đến từng viên gạch m
   <text x="170" y="62" fill="#16A34A" font-size="17" font-weight="800" text-anchor="middle">Excel cho mình gì (lúc đầu)</text>
   <text x="44" y="100" fill="#166534" font-size="14">✓ Ai cũng dùng được, không cần IT</text>
   <text x="44" y="130" fill="#166534" font-size="14">✓ Tự do: ô nào cũng gõ gì cũng được</text>
-  <text x="44" y="160" fill="#166534" font-size="14">✓ Nhập – sửa – hỏi tức thì</text>
+  <text x="44" y="160" fill="#166534" font-size="14">✓ Nhập - sửa - hỏi tức thì</text>
   <text x="44" y="190" fill="#166534" font-size="14">✓ Miễn phí, mở lên là chạy</text>
   <text x="44" y="220" fill="#166534" font-size="14">✓ Nơi mình học tư duy dữ liệu</text>
   <text x="44" y="250" fill="#166534" font-size="14">✓ Hoàn hảo ở quy mô nhỏ</text>

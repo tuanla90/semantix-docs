@@ -21,7 +21,7 @@ Trả lời câu thứ nhất là việc của **tương quan**. Trả lời câ
 
 ## Correlation: đo độ mạnh và chiều của quan hệ
 
-**Tương quan** (correlation - mức độ hai con số cùng lên cùng xuống) không chỉ là "có hay không". Nó được đo bằng một con số duy nhất: **hệ số tương quan** (correlation coefficient - con số từ −1 đến +1 đo độ chặt của quan hệ tuyến tính), thường ký hiệu là *r*.
+**Tương quan** (correlation - mức độ hai con số cùng lên cùng xuống) không chỉ là "có hay không". Nó được đo bằng một con số duy nhất: **hệ số tương quan** (correlation coefficient - con số từ -1 đến +1 đo độ chặt của quan hệ tuyến tính), thường ký hiệu là *r*.
 
 Cách đọc *r* dễ đến bất ngờ:
 
@@ -73,7 +73,7 @@ R² thấp không có nghĩa là sai - nó là một lời thú thật lương t
 
 Đây là cái bẫy đắt nhất, và nó xứng đáng được in đậm: **một đường dốc lên với R² cao vẫn KHÔNG chứng minh rằng chi ads *tạo ra* doanh thu.** Hồi quy chỉ mô tả *hình dạng quan hệ* trong dữ liệu - nó không biết mũi tên nhân quả chỉ về phía nào, và nó hoàn toàn mù trước [yếu tố thứ ba (confounder) đứng sau đẩy cả hai số cùng lên](/blog/tuong-quan-nhan-qua/). Mùa Tết làm bạn vừa tăng chi ads vừa kéo khách về; hồi quy sẽ vui vẻ gán toàn bộ công lao cho ads, và bạn rót thêm tiền vào mùa ế để rồi lỗ. Đường khớp đẹp đến mấy cũng không cứu được bạn khỏi câu hỏi *"cái gì thật sự kéo cái gì"* - câu đó vẫn phải trả lời bằng A/B test hoặc nhóm đối chứng.
 
-Cái bẫy thứ hai là **ngoại suy** (extrapolation - dùng đường khớp để đoán ra ngoài vùng dữ liệu đã có). Đường khớp của bạn được học từ những tháng chi ads **10–30 triệu**. Cắm vào đó con số **100 triệu** rồi tin lời nó tiên tri là tự lừa mình: bạn không có một điểm dữ liệu nào ở vùng đó, và quan hệ rất có thể đã cong (bão hòa, kiệt sức kênh) từ lâu. Đường khớp chỉ đáng tin **trong khoảng dữ liệu nó từng thấy.**
+Cái bẫy thứ hai là **ngoại suy** (extrapolation - dùng đường khớp để đoán ra ngoài vùng dữ liệu đã có). Đường khớp của bạn được học từ những tháng chi ads **10-30 triệu**. Cắm vào đó con số **100 triệu** rồi tin lời nó tiên tri là tự lừa mình: bạn không có một điểm dữ liệu nào ở vùng đó, và quan hệ rất có thể đã cong (bão hòa, kiệt sức kênh) từ lâu. Đường khớp chỉ đáng tin **trong khoảng dữ liệu nó từng thấy.**
 
 ## Dựng scatter và xu hướng trong Semantix
 
@@ -93,7 +93,7 @@ Semantix tự sinh truy vấn khớp [cách bạn đã định nghĩa "doanh thu
 | "Chi ads ảnh hưởng doanh thu." | "Thêm 1 triệu ads đi kèm thêm ~1,8 triệu doanh thu (độ dốc `b`)." |
 | Tin đường khớp vì nó dốc lên. | Đọc R²: đường khớp giải thích bao nhiêu % biến động. |
 | Đường dốc lên → "ads tạo ra doanh thu". | Đường dốc lên chỉ là quan hệ - nhân quả phải kiểm chứng riêng. |
-| Cắm 100 triệu vào công thức học từ vùng 10–30 triệu. | Chỉ tin đường khớp trong vùng dữ liệu nó từng thấy. |
+| Cắm 100 triệu vào công thức học từ vùng 10-30 triệu. | Chỉ tin đường khớp trong vùng dữ liệu nó từng thấy. |
 
 Thấy hai con số đi cùng nhau chưa bao giờ là điểm dừng. Nó là điểm xuất phát của ba câu hỏi sắc hơn: *chặt cỡ nào, đổi một đơn vị thì đổi bao nhiêu, và đường khớp đáng tin tới đâu.* Trả lời được ba câu đó - và nhớ rằng không câu nào trong số đó chứng minh nhân quả - bạn đã biến một quan sát mơ hồ thành một con số dùng được.
 

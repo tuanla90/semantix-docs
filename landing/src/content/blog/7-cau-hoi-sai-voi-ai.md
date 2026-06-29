@@ -51,7 +51,7 @@ Câu đầu hỏi **nhân quả** (gửi email *làm* khách mua), nhưng dữ l
 
 **Trước:** *"Lợi nhuận đơn này bao nhiêu?"* → **Sau:** *"Lợi nhuận đơn này sau khi trừ phí sàn, phí ship và voucher shop gánh?"*
 
-Bán trên Shopee, TikTok Shop, Lazada thì con số khách trả **không phải** con số về túi bạn. "Đã trừ phí chưa? Trừ những phí nào?" là chỗ làm lệch 15–25%. **Nói rõ đơn vị và bộ lọc** - đã trừ gì, tính theo cái gì - để AI khỏi đoán.
+Bán trên Shopee, TikTok Shop, Lazada thì con số khách trả **không phải** con số về túi bạn. "Đã trừ phí chưa? Trừ những phí nào?" là chỗ làm lệch 15-25%. **Nói rõ đơn vị và bộ lọc** - đã trừ gì, tính theo cái gì - để AI khỏi đoán.
 
 ## Lỗi 7 - Hỏi mở quá
 

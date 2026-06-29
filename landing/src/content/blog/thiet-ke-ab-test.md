@@ -119,7 +119,7 @@ Khi số lượng còn nhỏ, con số nhảy múa dữ dội chỉ vì may rủ
 
 Hai quy tắc thực dụng cho SME:
 
-- **Định trước thời gian chạy** - thường tối thiểu 1–2 tuần trọn, để phủ hết chu kỳ trong tuần (cuối tuần khác ngày thường). Quyết định ngày dừng *trước khi chạy*, rồi khóa lại.
+- **Định trước thời gian chạy** - thường tối thiểu 1-2 tuần trọn, để phủ hết chu kỳ trong tuần (cuối tuần khác ngày thường). Quyết định ngày dừng *trước khi chạy*, rồi khóa lại.
 - **Đừng liếc kết quả mỗi giờ rồi dừng ngay khi thấy thắng.** Đây là cái bẫy tên là *peeking* (nhìn lén) - nếu bạn kiểm tra liên tục và dừng đúng lúc B tình cờ dẫn, bạn gần như chắc chắn sẽ "thấy thắng" kể cả khi A và B thật ra y hệt nhau. Phần 3 sẽ mổ kỹ cái bẫy này.
 
 Không cần học công thức thống kê. Chỉ cần một kỷ luật: *chọn ngày dừng từ đầu, và tôn trọng nó.*

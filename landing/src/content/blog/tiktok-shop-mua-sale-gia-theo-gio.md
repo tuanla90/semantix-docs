@@ -31,7 +31,7 @@ Câu hỏi mỗi nhà bán đều phải trả lời trong đêm sale: **mã nà
 
 Khóa của quyết định này là **tốc độ bán theo giờ** (sell-through), không phải tổng số bán cả ngày. Một mã bán được 200 cái nghe có vẻ tốt - cho đến khi bạn thấy 180 cái trong số đó rơi vào hai giờ đầu rồi đứng hình. Tốc độ đang giảm: đó là tín hiệu xả. Một mã khác chỉ bán 50 cái nhưng đều tăng tốc giờ sau cao hơn giờ trước, và kho còn mỏng: đó là tín hiệu ghìm giá, thậm chí nhích giá.
 
-*Ví dụ minh họa một lần chốt:* lúc 22h, tốc độ bán của một mã túi giảm còn một phần ba so với khung 19h–20h, trong khi kho vẫn còn quá nửa. Thay vì chờ "báo cáo ngày" sáng mai mới biết mã này ế, Quân hạ thêm một bậc giá và đẩy nó vào khung livestream 23h - bán nốt phần lớn tồn trước khi đồng hồ sale điểm 0 giờ. Quyết định đó sống được vì anh đọc được tốc độ *ngay trong lúc nó đang đổi*, chứ không phải sau khi nó đã chết.
+*Ví dụ minh họa một lần chốt:* lúc 22h, tốc độ bán của một mã túi giảm còn một phần ba so với khung 19h-20h, trong khi kho vẫn còn quá nửa. Thay vì chờ "báo cáo ngày" sáng mai mới biết mã này ế, Quân hạ thêm một bậc giá và đẩy nó vào khung livestream 23h - bán nốt phần lớn tồn trước khi đồng hồ sale điểm 0 giờ. Quyết định đó sống được vì anh đọc được tốc độ *ngay trong lúc nó đang đổi*, chứ không phải sau khi nó đã chết.
 
 ## Phát hiện mã sắp cháy hàng để ghìm ads, đừng đốt tiền vào kho rỗng
 
@@ -45,7 +45,7 @@ Tín hiệu cần theo không phải doanh số - mà là **kho còn lại đố
 
 Cuối đêm sale, ai cũng nhìn vào khung giờ "doanh số cao nhất" rồi kết luận đó là khung vàng. Nhưng doanh số gộp là một con số biết nói dối. Khung 20h có thể lên đơn ầm ầm nhờ một mã giảm sâu - gộp thì đẹp, nhưng sau giá vốn, phí sàn và hoa hồng affiliate thì **margin thật mỏng dính**, thậm chí âm. Trong khi một khung khuya hơn, ít đơn hơn, lại toàn mã giữ giá: lợi nhuận thực cao hơn hẳn.
 
-Nếu bạn xếp lịch livestream và phân bổ KOC (Key Opinion Consumer - người tiêu dùng có sức ảnh hưởng, review sản phẩm) cho mùa sale sau dựa trên doanh số gộp theo ngày, bạn đang nhân rộng đúng khung giờ làm bạn lỗ. Câu hỏi đúng phải là khung giờ nào cho **lợi nhuận thực sau mọi loại phí** - và nó chỉ trả lời được khi bạn bóc số theo từng giờ, từng mã, đã trừ phí. *Ví dụ minh họa:* số bóc theo giờ cho thấy khung 23h–24h doanh số chỉ bằng 60% khung 20h, nhưng margin thực lại cao hơn 40% vì toàn mã giữ giá. Mùa sale sau, Quân dồn KOC mạnh nhất vào đúng khung khuya đó.
+Nếu bạn xếp lịch livestream và phân bổ KOC (Key Opinion Consumer - người tiêu dùng có sức ảnh hưởng, review sản phẩm) cho mùa sale sau dựa trên doanh số gộp theo ngày, bạn đang nhân rộng đúng khung giờ làm bạn lỗ. Câu hỏi đúng phải là khung giờ nào cho **lợi nhuận thực sau mọi loại phí** - và nó chỉ trả lời được khi bạn bóc số theo từng giờ, từng mã, đã trừ phí. *Ví dụ minh họa:* số bóc theo giờ cho thấy khung 23h-24h doanh số chỉ bằng 60% khung 20h, nhưng margin thực lại cao hơn 40% vì toàn mã giữ giá. Mùa sale sau, Quân dồn KOC mạnh nhất vào đúng khung khuya đó.
 
 (Logic "doanh số to chưa chắc lời" này không chỉ đúng cho từng giờ - nó là cùng một cái bẫy ở cấp toàn shop, mà chúng tôi mổ xẻ trong [Chủ shop đa kênh: thứ bạn cần không phải một người biết SQL](/blog/chu-shop-da-kenh/). Và nếu bạn muốn truy nguồn rò rỉ đơn theo từng bước phễu, đọc thêm [Funnel Analysis](/blog/funnel-analysis/).)
 

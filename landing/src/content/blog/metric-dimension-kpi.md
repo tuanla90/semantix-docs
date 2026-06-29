@@ -60,7 +60,7 @@ Phần lớn dimension chỉ chia nhỏ một con số đã có - cắt kiểu n
 - Kế toán tính theo **ngày thanh toán** → cũng đơn đó, sang tháng 6.
 - Vận hành tính theo **ngày giao thành công** → lại nhảy sang tháng 7.
 
-Cùng một định nghĩa "doanh thu", cùng một đơn - nhưng "doanh thu tháng 6" ra ba con số khác nhau, **chỉ vì ba cột ngày**. Đây là chỗ khiến nhiều người ngỡ ngàng: họ tưởng cứ chốt xong định nghĩa là hết cãi, hóa ra chưa. *Ví dụ minh họa:* một nhà bán hàng mùa cao điểm thấy chênh 10–15% giữa "doanh thu" của Sales và Finance, truy mãi mới ra - không phải do định nghĩa, mà do một bên chốt theo ngày đặt, một bên theo ngày thu tiền.
+Cùng một định nghĩa "doanh thu", cùng một đơn - nhưng "doanh thu tháng 6" ra ba con số khác nhau, **chỉ vì ba cột ngày**. Đây là chỗ khiến nhiều người ngỡ ngàng: họ tưởng cứ chốt xong định nghĩa là hết cãi, hóa ra chưa. *Ví dụ minh họa:* một nhà bán hàng mùa cao điểm thấy chênh 10-15% giữa "doanh thu" của Sales và Finance, truy mãi mới ra - không phải do định nghĩa, mà do một bên chốt theo ngày đặt, một bên theo ngày thu tiền.
 
 > Quy tắc vàng: trước khi cãi nhau "ai tính sai", hỏi đúng một câu - *"tháng này tính theo cột ngày nào?"* Chốt định nghĩa thôi chưa đủ; phải chốt cả cột ngày thì con số mới chịu đứng yên.
 
@@ -77,7 +77,7 @@ Sự khác biệt nằm gọn ở chữ "mục tiêu":
 - "Doanh thu tháng này 3,8 tỷ" - đó là một **metric**. Một con số trần trụi.
 - "Doanh thu tháng này phải đạt **4 tỷ**, hiện ở 3,8 tỷ - **đạt 95%**" - đó là một **KPI**. Con số ấy giờ có một cái thước để biết tốt hay chưa.
 
-Nói cách khác, KPI = metric + mục tiêu + ngữ cảnh đánh giá. Mọi KPI đều là metric, nhưng phần lớn metric chỉ là số đo bình thường, không phải KPI. Một công ty đo *hàng trăm* metric, nhưng chỉ nên chọn ra **5–10 KPI** thật sự phản ánh sức khỏe kinh doanh - nhiều hơn thì không ai nhìn nổi, mà nhìn không nổi thì coi như không có.
+Nói cách khác, KPI = metric + mục tiêu + ngữ cảnh đánh giá. Mọi KPI đều là metric, nhưng phần lớn metric chỉ là số đo bình thường, không phải KPI. Một công ty đo *hàng trăm* metric, nhưng chỉ nên chọn ra **5-10 KPI** thật sự phản ánh sức khỏe kinh doanh - nhiều hơn thì không ai nhìn nổi, mà nhìn không nổi thì coi như không có.
 
 Cái bẫy phổ biến: nhồi 30 con số lên một dashboard (bảng số trực quan tổng hợp nhiều biểu đồ trên một màn hình) rồi gọi tất cả là "KPI". Khi mọi thứ đều là chỉ số then chốt thì **không gì là then chốt cả** - mắt người ta lướt qua hết, chẳng con số nào thúc được một hành động.
 

@@ -87,7 +87,7 @@ Sau khi kết nối, bạn không cần viết SQL (Structured Query Language - 
 
 | Gộp Excel tay mỗi sáng | Hợp nhất ở tầng dữ liệu |
 |---|---|
-| Đăng nhập 3–4 nền tảng, xuất 3 file lệch cấu trúc | Kết nối một lần, Bảng ảo gộp ngay lúc hỏi (không copy về kho) |
+| Đăng nhập 3-4 nền tảng, xuất 3 file lệch cấu trúc | Kết nối một lần, Bảng ảo gộp ngay lúc hỏi (không copy về kho) |
 | Mã SP không khớp → sản phẩm vỡ thành 3 dòng | Ánh xạ về một mã chung, đếm đúng một SKU |
 | So doanh thu gộp (trước phí) → dồn tiền sai kênh | So doanh thu thực sau phí → biết kênh nào lời thật |
 | Mỗi sàn một định nghĩa "đơn", "doanh thu" | Một định nghĩa chuẩn cho cả ba kênh |

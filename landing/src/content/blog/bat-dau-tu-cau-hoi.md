@@ -68,8 +68,8 @@ Nếu cả hai trường hợp bạn vẫn làm y như cũ, thì biểu đồ đ
 
 Biết mình đang hỏi *loại* gì giúp bạn không kỳ vọng nhầm - và không trách công cụ vì đã không trả lời một câu mà bạn chưa từng hỏi.
 
-- **Câu hỏi mô tả (descriptive - chuyện gì đã xảy ra):** *"Tháng trước khung giờ 14–16h bán được bao nhiêu?"* Đây là loại dễ nhất, và là loại mọi dashboard mặc định trả lời. Nó cho bạn *bức ảnh*.
-- **Câu hỏi chẩn đoán (diagnostic - vì sao nó xảy ra):** *"Vì sao khung 14–16h tụt 30% so với quý trước?"* Loại này cần bạn cắt lát sâu hơn - theo món, theo nhân viên trực, theo thời tiết. Dashboard tổng không tự trả lời; bạn phải biết *hỏi tiếp*.
+- **Câu hỏi mô tả (descriptive - chuyện gì đã xảy ra):** *"Tháng trước khung giờ 14-16h bán được bao nhiêu?"* Đây là loại dễ nhất, và là loại mọi dashboard mặc định trả lời. Nó cho bạn *bức ảnh*.
+- **Câu hỏi chẩn đoán (diagnostic - vì sao nó xảy ra):** *"Vì sao khung 14-16h tụt 30% so với quý trước?"* Loại này cần bạn cắt lát sâu hơn - theo món, theo nhân viên trực, theo thời tiết. Dashboard tổng không tự trả lời; bạn phải biết *hỏi tiếp*.
 - **Câu hỏi dự đoán (predictive - sắp tới sẽ ra sao):** *"Nếu cắt ca sáng, tôi mất ước chừng bao nhiêu khách quen?"* Loại này khó nhất và nhiều bất định nhất.
 
 Sai lầm phổ biến: mua công cụ với kỳ vọng nó "tự bảo tôi phải làm gì" (dự đoán/đề xuất), trong khi tất cả những gì bạn từng nhập vào nó chỉ đủ trả lời câu mô tả. Câu hỏi quyết định cả dữ liệu cần *lẫn* mức độ khó của câu trả lời. Phần [bốn tầng phân tích](/blog/tu-duy-du-lieu-la-gi/) ở Phần 1 của series đi sâu hơn vào nấc thang này.

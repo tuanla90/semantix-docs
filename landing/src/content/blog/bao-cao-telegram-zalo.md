@@ -33,7 +33,7 @@ Và với chủ shop Việt - vừa chạy sàn Shopee, vừa livestream TikTok 
 
 Sai lầm phổ biến nhất khi mới làm báo cáo tự động: tham. Nhồi tất cả những gì đo được vào một tin nhắn - doanh thu, lợi nhuận, số đơn, tỷ lệ hoàn, lượt xem, tồn kho từng mã, CTR (Click-Through Rate - tỷ lệ nhấp vào quảng cáo) ads... Kết quả là một bức tường số dài dằng dặc mà đọc xong bạn không rút ra được gì.
 
-Một tin nhắn sáng tốt giống một tiêu đề báo, không phải cả tờ báo. Nó trả lời đúng một câu: **"Hôm qua ổn không, có gì cần để mắt không?"** Quy tắc của tôi: chọn 4–6 con số, mỗi con số phải dẫn tới một hành động hoặc một sự an tâm.
+Một tin nhắn sáng tốt giống một tiêu đề báo, không phải cả tờ báo. Nó trả lời đúng một câu: **"Hôm qua ổn không, có gì cần để mắt không?"** Quy tắc của tôi: chọn 4-6 con số, mỗi con số phải dẫn tới một hành động hoặc một sự an tâm.
 
 > *Ví dụ minh họa* - một tin nhắn báo cáo sáng đủ và gọn:
 
@@ -95,10 +95,10 @@ Trong Semantix, báo cáo tự động không phải một module tách rời b�
 |---|---|
 | Bạn phải nhớ mở app | Tin nhắn tự đến đúng giờ |
 | Sự cố phát hiện trễ vài ngày | Cảnh báo ngưỡng nhắn ngay |
-| Nhồi 20 chỉ số, đọc xong quên | 4–6 số, mỗi số một hành động |
+| Nhồi 20 chỉ số, đọc xong quên | 4-6 số, mỗi số một hành động |
 | Đẹp nhưng vô dụng hôm bạn bận | Vẫn chạy kể cả khi bạn vắng |
 
-Checklist thiết lập của bạn: ✅ chọn 4–6 con số dẫn tới hành động → ✅ đặt lịch đúng giờ vàng (sáng 7–8h) → ✅ thêm 1–2 cảnh báo ngưỡng thật sự khẩn → ✅ gửi vào nhóm Telegram/Zalo đúng đội. Dashboard đẹp là để bạn ngồi xuống phân tích sâu. Nhưng việc canh chừng mỗi ngày - hãy để nó tự tìm đến bạn.
+Checklist thiết lập của bạn: ✅ chọn 4-6 con số dẫn tới hành động → ✅ đặt lịch đúng giờ vàng (sáng 7-8h) → ✅ thêm 1-2 cảnh báo ngưỡng thật sự khẩn → ✅ gửi vào nhóm Telegram/Zalo đúng đội. Dashboard đẹp là để bạn ngồi xuống phân tích sâu. Nhưng việc canh chừng mỗi ngày - hãy để nó tự tìm đến bạn.
 
 ---
 

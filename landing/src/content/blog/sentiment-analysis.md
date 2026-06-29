@@ -60,7 +60,7 @@ Biết "tiêu cực đang tăng" mới là nửa câu chuyện. Nửa còn lại
 - **Sắc thái và teencode.** "Tạm ổn", "cũng được", " vẫn hơi cấn" - ranh giới trung tính/tiêu cực rất mờ. Viết tắt, biến âm, emoji càng làm máy bối rối.
 - **Văn cảnh ngành.** "Cay" trong review đồ ăn là khen; trong review khác lại là chê. Không model nào đúng 100%.
 
-Hệ quả thực dụng: **đừng dùng sentiment như một con số tuyệt đối, hãy dùng nó như một đường xu hướng.** "Tháng này tiêu cực 18%" - con số 18 đó có thể sai vài điểm phần trăm. Nhưng "tiêu cực tăng từ 13% lên 18% so với tháng trước, cùng một cách đo" thì *chiều của tín hiệu* đáng tin hơn nhiều, vì sai số có xu hướng triệt tiêu khi bạn so hai kỳ đo cùng một thước. Và luôn **kiểm mẫu**: mỗi tháng đọc tay 20–30 review mà máy gán "tiêu cực" để xem nó gán có hợp lý không - cái này canh đúng cây thước trước khi tin số nó đo.
+Hệ quả thực dụng: **đừng dùng sentiment như một con số tuyệt đối, hãy dùng nó như một đường xu hướng.** "Tháng này tiêu cực 18%" - con số 18 đó có thể sai vài điểm phần trăm. Nhưng "tiêu cực tăng từ 13% lên 18% so với tháng trước, cùng một cách đo" thì *chiều của tín hiệu* đáng tin hơn nhiều, vì sai số có xu hướng triệt tiêu khi bạn so hai kỳ đo cùng một thước. Và luôn **kiểm mẫu**: mỗi tháng đọc tay 20-30 review mà máy gán "tiêu cực" để xem nó gán có hợp lý không - cái này canh đúng cây thước trước khi tin số nó đo.
 
 > Quy tắc vàng: sentiment cho bạn biết *chiều* gió đang đổi, không cho bạn con số chính xác đến từng phần trăm. Theo dõi xu hướng, đừng cá cược vào con số tuyệt đối.
 

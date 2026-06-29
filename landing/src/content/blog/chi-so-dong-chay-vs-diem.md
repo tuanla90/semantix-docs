@@ -29,7 +29,7 @@ Bạn có một bảng số liệu. Cột doanh thu mỗi tháng: tháng 1 là 1
 
 Ngay cột bên cạnh là tồn kho cuối mỗi tháng: cuối tháng 1 còn 5.000 sản phẩm, cuối tháng 2 còn 4.600, cứ thế. Theo phản xạ, bạn lại kéo chuột, lại gõ `SUM`. Con số nhảy ra: 58.000. "Tồn kho cả năm 58.000 sản phẩm."
 
-Dừng lại. Con số đó **vô nghĩa**. Kho của bạn chưa bao giờ chứa 58.000 sản phẩm - nó chỉ luôn quanh quẩn 4.000–5.000. Bạn vừa cộng đi cộng lại cùng một lô hàng nằm trong kho suốt mười hai tháng. Cùng một phép cộng, cùng một cú kéo chuột - với doanh thu thì đúng, với tồn kho thì ra một con số chẳng tương ứng với điều gì có thật.
+Dừng lại. Con số đó **vô nghĩa**. Kho của bạn chưa bao giờ chứa 58.000 sản phẩm - nó chỉ luôn quanh quẩn 4.000-5.000. Bạn vừa cộng đi cộng lại cùng một lô hàng nằm trong kho suốt mười hai tháng. Cùng một phép cộng, cùng một cú kéo chuột - với doanh thu thì đúng, với tồn kho thì ra một con số chẳng tương ứng với điều gì có thật.
 
 Phản xạ đầu tiên là nghĩ "chắc mình kéo nhầm dòng". Không. Lỗi sâu hơn thế nhiều, và nó âm thầm hơn: **hai cột số đó là hai *loại* chỉ số khác hẳn nhau về bản chất** - và một loại thì cộng được qua thời gian, loại kia thì không. Hiểu được ranh giới này, bạn tránh được cả một họ lỗi báo cáo mà phần lớn người làm số chưa bao giờ gọi đúng tên.
 

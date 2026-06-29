@@ -34,11 +34,11 @@ Cách hữu ích nhất để nghĩ về BI không phải "có hay không có", 
 
 > Quy tắc vàng: nấc của bạn không đo bằng số biểu đồ trên màn hình, mà bằng *thì* của câu hỏi bạn trả lời được - quá khứ, hiện tại hay tương lai.
 
-## Bạn đang ở nấc nào - và vì sao hầu hết SME kẹt ở nấc 1–2
+## Bạn đang ở nấc nào - và vì sao hầu hết SME kẹt ở nấc 1-2
 
 Hãy thành thật: nếu mọi cuộc họp của bạn xoay quanh "tuần rồi bán được bao nhiêu, kênh nào nhiều nhất", bạn đang ở nấc 1, có khi chạm nửa nấc 2. Không sao cả - đó là chỗ phần lớn doanh nghiệp Việt đang đứng. Nhưng đáng nói là *vì sao* họ kẹt.
 
-Lý do thứ nhất là **con người**. Leo lên nấc 3–4 theo cách truyền thống đòi hỏi một đội data: người dựng pipeline, người làm mô hình dự báo, người biết SQL (Structured Query Language - ngôn ngữ truy vấn cơ sở dữ liệu). Một SME 15 người không thể nuôi đội đó, nên mặc định dừng ở mức "có báo cáo là tốt rồi".
+Lý do thứ nhất là **con người**. Leo lên nấc 3-4 theo cách truyền thống đòi hỏi một đội data: người dựng pipeline, người làm mô hình dự báo, người biết SQL (Structured Query Language - ngôn ngữ truy vấn cơ sở dữ liệu). Một SME 15 người không thể nuôi đội đó, nên mặc định dừng ở mức "có báo cáo là tốt rồi".
 
 Lý do thứ hai là **mỗi câu hỏi phải xếp hàng**. Ngay cả ở nấc 2, khi sếp hỏi "vì sao chi nhánh A tụt", câu trả lời thường là "để em dựng lại số, vài hôm nữa". Lúc có số thì cơ hội đã trôi. Đây chính là bài toán mà [self-service analytics - tự phục vụ phân tích](/blog/self-service-analytics/) sinh ra để gỡ: trả quyền hỏi về tay người *có câu hỏi*. Nhưng tự phục vụ chỉ an toàn khi bên dưới có một định nghĩa nghiệp vụ chung - bằng không, mỗi người tự khoan ra một con số "doanh thu" khác nhau.
 
@@ -48,7 +48,7 @@ Tôi xin lấy chính hành trình nghề mình ra làm bằng chứng cho chuy�
 
 ## Leo nấc trong Semantix - không phải bằng cách dựng cả đội data
 
-Semantix không định vị mình là "thêm một dashboard nữa" để bạn đứng lâu hơn ở nấc 1. Ngược lại: ý tưởng là **rút ngắn con đường lên nấc 2–3** mà không bắt SME phải tuyển nguyên một đội data trước.
+Semantix không định vị mình là "thêm một dashboard nữa" để bạn đứng lâu hơn ở nấc 1. Ngược lại: ý tưởng là **rút ngắn con đường lên nấc 2-3** mà không bắt SME phải tuyển nguyên một đội data trước.
 
 Cụ thể, đường leo nấc đi qua ba điểm tựa:
 

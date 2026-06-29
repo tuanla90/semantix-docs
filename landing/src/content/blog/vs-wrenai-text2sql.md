@@ -63,7 +63,7 @@ Semantic Layer là **cuốn từ điển nghiệp vụ** đặt giữa dữ li�
   <rect x="240" y="210" width="120" height="70" rx="10" fill="#0F2A24" stroke="#34D399" stroke-width="2"/>
   <text x="300" y="234" fill="#6EE7B7" font-size="13" font-weight="800" text-anchor="middle">Semantic Layer</text>
   <text x="300" y="253" fill="#86EFAC" font-size="10" text-anchor="middle">doanh_thu =</text>
-  <text x="300" y="268" fill="#86EFAC" font-size="10" text-anchor="middle">SUM(gross−ck)</text>
+  <text x="300" y="268" fill="#86EFAC" font-size="10" text-anchor="middle">SUM(gross-ck)</text>
   <line x1="360" y1="245" x2="432" y2="245" stroke="#64748B" stroke-width="2"/>
   <path d="M426 239 L438 245 L426 251 Z" fill="#64748B"/>
   <rect x="440" y="218" width="120" height="54" rx="10" fill="#1E293B" stroke="#334155"/>

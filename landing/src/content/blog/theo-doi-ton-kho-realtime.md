@@ -58,7 +58,7 @@ Hình dung tồn kho của một mã như mực nước trong bể đang rút. V
 <div class="viz-caption">Tồn kho giảm dần theo ngày (số minh họa): khi đường tồn chạm "ngưỡng đặt thêm" (đỏ) là lúc hệ thống tự nhắn cảnh báo - đặt hàng vừa kịp, không cháy hàng cũng không ôm tồn.</div>
 </div>
 
-Nhìn biểu đồ, mã A chạm ngưỡng 150 khoảng ngày 18–19. Đặt hàng đúng lúc đó là chuẩn: hàng mới về trước khi đường tồn chạm đáy. Đó là phía thứ nhất - **né stockout**.
+Nhìn biểu đồ, mã A chạm ngưỡng 150 khoảng ngày 18-19. Đặt hàng đúng lúc đó là chuẩn: hàng mới về trước khi đường tồn chạm đáy. Đó là phía thứ nhất - **né stockout**.
 
 Nhưng còn phía thứ hai, âm thầm hơn và tốn kém không kém: **tồn chết**. Có những mã đường tồn gần như nằm ngang - bán nhỏ giọt, tháng này qua tháng khác vẫn còn nguyên. Vốn của bạn đang ngủ trong những mã đó. Theo dõi tồn kho đúng nghĩa là vừa canh mã chạy nhanh (sợ cháy), vừa soi mã chạy chậm (sợ chết) - và đối xử với hai nhóm khác hẳn nhau.
 

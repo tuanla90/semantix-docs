@@ -62,7 +62,7 @@ Nhìn vào biểu đồ, "khách trung bình 5,76 triệu" tan biến. Bạn kh�
 
 Khi đã có CLV theo phân khúc, ngân sách marketing thôi là "chia đều cho công bằng" mà trở thành một phép tính:
 
-- **Giữ chân nhóm VIP bằng mọi giá hợp lý.** Một khách VIP đáng 24 triệu thì việc chi 2–3 triệu/năm để chăm sóc (ưu đãi riêng, hỗ trợ ưu tiên, quà Tết) là một khoản đầu tư lời, không phải chi phí. Mất một khách VIP = mất giá trị của hơn mười ba khách Thường.
+- **Giữ chân nhóm VIP bằng mọi giá hợp lý.** Một khách VIP đáng 24 triệu thì việc chi 2-3 triệu/năm để chăm sóc (ưu đãi riêng, hỗ trợ ưu tiên, quà Tết) là một khoản đầu tư lời, không phải chi phí. Mất một khách VIP = mất giá trị của hơn mười ba khách Thường.
 - **Đặt trần CAC riêng cho từng nhóm.** Kéo một khách có hồ sơ giống nhóm Trung thành (CLV 11 triệu) cho phép bạn chi tới ~3,6 triệu; kéo khách giống nhóm Thường thì trần chỉ ~1,5 triệu. Cùng một chiến dịch, hai mức giá thầu khác nhau.
 - **Buông nhóm không kinh tế.** Nếu một kênh chỉ kéo về khách nhóm Mới với CLV 1,8 triệu mà CAC ở đó đã 2 triệu, đó không phải kênh cần "tối ưu thêm" - đó là kênh cần *tắt*.
 

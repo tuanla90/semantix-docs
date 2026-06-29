@@ -65,7 +65,7 @@ Việc tách nhiễu khỏi phần có ý nghĩa chính là chủ đề của [t
 
 Đây là điểm quan trọng nhất của cả bài, hãy đọc chậm: **đừng bao giờ tin một con số dự báo đơn lẻ.**
 
-Khi bạn nói "tháng sau 850 triệu", bạn đang giấu đi điều bạn thật sự biết: rằng con số đó *có thể* là 800, *có thể* là 900. Một dự báo tử tế không phải một con số - nó là một **khoảng tin cậy** (confidence interval - vùng giá trị mà kết quả thực tế nhiều khả năng rơi vào, kèm mức xác suất). Thay vì "850 triệu", hãy nói: *"khoảng 820–880 triệu, nhiều khả năng quanh 850."*
+Khi bạn nói "tháng sau 850 triệu", bạn đang giấu đi điều bạn thật sự biết: rằng con số đó *có thể* là 800, *có thể* là 900. Một dự báo tử tế không phải một con số - nó là một **khoảng tin cậy** (confidence interval - vùng giá trị mà kết quả thực tế nhiều khả năng rơi vào, kèm mức xác suất). Thay vì "850 triệu", hãy nói: *"khoảng 820-880 triệu, nhiều khả năng quanh 850."*
 
 Cái khoảng đó chính là **sai số dự báo** (forecast error - độ lệch giữa giá trị dự báo và giá trị thực tế) được nói ra một cách trung thực. Nó không phải dấu hiệu bạn yếu kém - nó là dấu hiệu bạn *thành thật*. Sếp đặt hàng nhập kho dựa trên một con số đơn lẻ sẽ luôn thừa hoặc thiếu. Sếp đặt hàng dựa trên một khoảng sẽ biết chừa biên an toàn.
 
@@ -102,7 +102,7 @@ Semantix dựng đường lịch sử, tách xu hướng khỏi nhiễu, vẽ d�
 
 | Phản xạ cũ | Cách nghĩ mới |
 |---|---|
-| "Tháng sau bán 850 triệu" | "Khoảng 820–880, nhiều khả năng quanh 850" |
+| "Tháng sau bán 850 triệu" | "Khoảng 820-880, nhiều khả năng quanh 850" |
 | Mục tiêu là đoán đúng | Mục tiêu là quyết định bớt rủi ro |
 | Tin con số dự báo đơn lẻ | Luôn đọc kèm khoảng tin cậy |
 | Dự báo xa cũng chắc như gần | Càng xa càng mờ - chỉ để định hướng |

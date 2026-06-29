@@ -47,11 +47,11 @@ Có mô hình rồi, đừng vội nhồi 20 biểu đồ. Một dashboard tốt
 
 Hàng trên cùng là **các thẻ số lớn** (KPI card) - thứ bạn liếc một cái là biết tình hình:
 
-- **Doanh thu hôm nay** (và so với hôm qua bằng một chip `+8%` / `−5%`).
-- **Lợi nhuận gộp ước tính** = doanh thu − giá vốn. Đây là con số quan trọng hơn doanh thu, nên đặt ngay cạnh nó.
+- **Doanh thu hôm nay** (và so với hôm qua bằng một chip `+8%` / `-5%`).
+- **Lợi nhuận gộp ước tính** = doanh thu - giá vốn. Đây là con số quan trọng hơn doanh thu, nên đặt ngay cạnh nó.
 - **Số đơn / AOV** (Average Order Value - giá trị đơn trung bình).
 
-Đừng để dashboard chỉ có doanh thu. Doanh thu một mình là con số dễ gây ảo tưởng nhất: nó lên thì ai cũng vui, mà không nói gì về việc bạn có đang lời không. Luôn đặt **lợi nhuận gộp ngay cạnh doanh thu** - để mắt không bao giờ nhìn một mà quên cái kia. (Phân biệt metric, dimension và KPI cho rõ, xem [Metric – Dimension – KPI: vỡ lòng từ vựng dữ liệu](/blog/metric-dimension-kpi/).)
+Đừng để dashboard chỉ có doanh thu. Doanh thu một mình là con số dễ gây ảo tưởng nhất: nó lên thì ai cũng vui, mà không nói gì về việc bạn có đang lời không. Luôn đặt **lợi nhuận gộp ngay cạnh doanh thu** - để mắt không bao giờ nhìn một mà quên cái kia. (Phân biệt metric, dimension và KPI cho rõ, xem [Metric - Dimension - KPI: vỡ lòng từ vựng dữ liệu](/blog/metric-dimension-kpi/).)
 
 > Quy tắc vàng: doanh thu trả lời "bán được bao nhiêu", lợi nhuận trả lời "giữ lại được bao nhiêu". Một dashboard chỉ khoe doanh thu là cái bảng đồng hồ tốc độ không có đồng hồ xăng - bạn biết mình đang chạy nhanh, nhưng không biết sắp hết nhiên liệu.
 

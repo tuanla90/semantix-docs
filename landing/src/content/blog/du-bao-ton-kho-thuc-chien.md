@@ -98,7 +98,7 @@ Nhưng đây là cái bẫy ít ai để ý, và nó âm thầm phá mọi con s
 
 ### Bước 3 - Ước nhu cầu kỳ tới + khoảng sai số
 
-Ghép xu hướng và mùa vụ lại, bạn có **dự báo nhu cầu** cho kỳ tới: *"tháng 12 SKU áo khoác xanh size M dự kiến bán khoảng 180 cái."* Nhưng - như Phần 1 đã nói - **mọi dự báo đều sai**. Con số 180 vô dụng nếu bạn không kèm một **khoảng sai số**: "180, dao động 150–210". Khoảng này chính là thứ quyết định bạn cần đệm bao nhiêu ở bước sau. Dự báo càng dao động mạnh (hàng thời trang, hàng theo trend), khoảng càng rộng, đệm càng phải dày.
+Ghép xu hướng và mùa vụ lại, bạn có **dự báo nhu cầu** cho kỳ tới: *"tháng 12 SKU áo khoác xanh size M dự kiến bán khoảng 180 cái."* Nhưng - như Phần 1 đã nói - **mọi dự báo đều sai**. Con số 180 vô dụng nếu bạn không kèm một **khoảng sai số**: "180, dao động 150-210". Khoảng này chính là thứ quyết định bạn cần đệm bao nhiêu ở bước sau. Dự báo càng dao động mạnh (hàng thời trang, hàng theo trend), khoảng càng rộng, đệm càng phải dày.
 
 ### Bước 4 - Cộng lead time + tồn an toàn → điểm đặt hàng
 

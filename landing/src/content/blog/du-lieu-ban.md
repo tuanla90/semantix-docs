@@ -41,7 +41,7 @@ Tên khách hàng, tên sản phẩm, tên tỉnh thành - chỗ nào con ngư�
 
 Định dạng sai là loại bẩn nguy hiểm vì nó không báo lỗi. Số vẫn ra, bảng vẫn đẹp, chỉ là sai.
 
-*Ví dụ minh hoạ:* file của bạn trộn hai kiểu ngày - kiểu Việt `03/04/2026` (3 tháng 4) và kiểu Mỹ mà một công cụ nước ngoài tự hiểu là `April 3` hay `March 4` tùy lúc. Khi lọc "doanh thu quý 2", một phần đơn tháng 4 bị xếp nhầm sang tháng 3, một phần biến mất. Con số quý 2 lệch **15–20%** so với thực tế - và không có một dòng cảnh báo nào.
+*Ví dụ minh hoạ:* file của bạn trộn hai kiểu ngày - kiểu Việt `03/04/2026` (3 tháng 4) và kiểu Mỹ mà một công cụ nước ngoài tự hiểu là `April 3` hay `March 4` tùy lúc. Khi lọc "doanh thu quý 2", một phần đơn tháng 4 bị xếp nhầm sang tháng 3, một phần biến mất. Con số quý 2 lệch **15-20%** so với thực tế - và không có một dòng cảnh báo nào.
 
 Tiền tệ còn tinh vi hơn. *Ví dụ minh hoạ:* cột doanh thu trộn `4,2 tỷ` (dấu phẩy kiểu Việt là phần thập phân), `4.200.000.000`, và vài dòng nhập nhầm đơn vị nghìn đồng. Khi máy cộng dồn, một dòng đáng lẽ 4,2 tỷ bị đọc thành 42, vài dòng nghìn đồng bị nhân lên triệu lần. Tổng cuối cùng vô nghĩa - nhưng vẫn là một con số tròn trịa, đủ để mang vào phòng họp.
 

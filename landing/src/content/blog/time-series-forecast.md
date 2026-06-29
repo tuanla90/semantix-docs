@@ -43,7 +43,7 @@ Cách tách quen thuộc nhất là so **cùng kỳ năm ngoái** (year-over-yea
 
 Khi đã hiểu cấu trúc của chuỗi, ta mới nói tới **dự báo** (forecast - chiếu giá trị tương lai dựa trên quy luật của quá khứ). Dự báo không phải bói toán; nó là phép kéo dài cái xu hướng và cái nhịp mùa vụ đã học được, ra phía trước vài kỳ.
 
-Nhưng đây là điểm quan trọng nhất, đọc chậm: **một con số dự báo đơn lẻ là một lời nói dối lịch sự.** Khi ai đó nói "tháng sau 7 tỷ", họ đang giấu đi điều họ thật sự biết - rằng con số đó *có thể* là 6,5, *có thể* là 7,6. Một dự báo tử tế không phải một con số, nó là một **dải tin cậy** (confidence band - vùng giá trị mà thực tế nhiều khả năng rơi vào). Thay vì "7 tỷ", phải nói: *"khoảng 6,9–7,6 tỷ, nhiều khả năng quanh 7,3."*
+Nhưng đây là điểm quan trọng nhất, đọc chậm: **một con số dự báo đơn lẻ là một lời nói dối lịch sự.** Khi ai đó nói "tháng sau 7 tỷ", họ đang giấu đi điều họ thật sự biết - rằng con số đó *có thể* là 6,5, *có thể* là 7,6. Một dự báo tử tế không phải một con số, nó là một **dải tin cậy** (confidence band - vùng giá trị mà thực tế nhiều khả năng rơi vào). Thay vì "7 tỷ", phải nói: *"khoảng 6,9-7,6 tỷ, nhiều khả năng quanh 7,3."*
 
 Và dải đó **loe rộng dần** về tương lai - không phải lỗi vẽ, mà là quy luật: càng nhìn xa, càng nhiều thứ kịp thay đổi, bất định *nhân* lên chứ không cộng. (Vì sao mọi dự báo đều sai mà vẫn nên làm, xem kỹ ở [Dự báo cho doanh nghiệp - Phần 1](/blog/du-bao-la-gi/).)
 
@@ -80,7 +80,7 @@ Semantix dựng đường lịch sử, dò mùa vụ, vẽ dự báo *kèm dải
 |---|---|
 | "Tháng này tăng 12% - mừng!" | "Trừ mùa vụ Tết ra, xu hướng thật chỉ +2%" |
 | Phản ứng với từng cú nhấp nhô | Phản ứng với tín hiệu, bỏ qua nhiễu |
-| "Tháng sau 7 tỷ" (một con số trần) | "Khoảng 6,9–7,6 tỷ, quanh 7,3" (có dải tin cậy) |
+| "Tháng sau 7 tỷ" (một con số trần) | "Khoảng 6,9-7,6 tỷ, quanh 7,3" (có dải tin cậy) |
 | Một phương pháp cho mọi chuỗi | Chọn Linear / Holt / Holt-Winters theo hình dạng |
 | Dự báo xa cũng chắc như gần | Dải loe rộng dần - càng xa càng mờ |
 

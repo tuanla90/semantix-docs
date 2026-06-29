@@ -48,7 +48,7 @@ Với một công cụ BI (Business Intelligence - biến dữ liệu thành quy
 | Lớp | Gồm những gì | "Miễn phí" giấu nó ở đâu |
 |---|---|---|
 | **1. License** | Phí bản quyền phần mềm | Lớp duy nhất bằng 0đ. Cũng là lớp nhỏ nhất. |
-| **2. Triển khai** | Cài đặt, kết nối nguồn dữ liệu, dựng semantic layer (tầng định nghĩa nghiệp vụ dùng chung), build dashboard đầu tiên | Trả bằng **vài tuần–vài tháng** công sức ban đầu |
+| **2. Triển khai** | Cài đặt, kết nối nguồn dữ liệu, dựng semantic layer (tầng định nghĩa nghiệp vụ dùng chung), build dashboard đầu tiên | Trả bằng **vài tuần-vài tháng** công sức ban đầu |
 | **3. Vận hành & Người** | Server, nâng cấp, sao lưu, vá bảo mật; lương kỹ sư bảo trì; giờ analyst dựng &amp; sửa báo cáo; đào tạo người dùng | Trả **đều đặn mỗi tháng**, mãi mãi |
 | **4. Chi phí cơ hội** | Quyết định trễ vì số ra chậm; quyết định sai vì số sai/không ai tin số | Vô hình trên sổ sách, nhưng thường **đắt nhất** |
 
@@ -64,7 +64,7 @@ Một đợt triển khai BI mã nguồn mở nghiêm túc cho SME thường ng�
 
 Đây là lớp nuốt ngân sách lớn nhất, và là lớp bị bỏ sót nhiều nhất. Hãy thử một phép tính *minh hoạ* cho một SME 50 người:
 
-- **Kỹ sư bảo trì:** một dev/DevOps giỏi đủ để vận hành self-host an toàn ở Việt Nam có lương tham khảo **25–45 triệu/tháng**. Kể cả chỉ dùng 30% thời gian của họ cho BI, đó vẫn là ~**8–13 triệu/tháng** đổ vào "công cụ miễn phí".
+- **Kỹ sư bảo trì:** một dev/DevOps giỏi đủ để vận hành self-host an toàn ở Việt Nam có lương tham khảo **25-45 triệu/tháng**. Kể cả chỉ dùng 30% thời gian của họ cho BI, đó vẫn là ~**8-13 triệu/tháng** đổ vào "công cụ miễn phí".
 - **Giờ analyst:** mỗi báo cáo mới hay mỗi lần sửa định nghĩa metric là vài giờ của analyst. Nhân với số yêu cầu mỗi tuần, nó cộng dồn nhanh.
 - **Đào tạo người dùng:** công cụ càng cần SQL (Structured Query Language - ngôn ngữ truy vấn cơ sở dữ liệu), càng ít người trong công ty dùng được, càng dồn tải về một-hai người - tạo nút cổ chai.
 

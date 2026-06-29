@@ -33,7 +33,7 @@ Nhưng nếu bạn mở bảng **growth accounting** (tạm dịch: *kế toán 
 
 Khi bảng số (dashboard) báo "tháng này có thêm 100 người dùng hoạt động", phản xạ đầu tiên của bạn là gật đầu: tốt, đang lớn. Nhưng "+100" không phải một số đếm - nó là kết quả của một phép trừ.
 
-Có thể tháng này bạn kéo về **500 người mới và quay lại**, nhưng cũng **mất 400 người cũ** đi mất. 500 − 400 = +100. Cùng con số "+100" đó, một công ty khác có thể đạt được bằng cách kéo về **120 người mới** và chỉ **mất 20**. Cùng một dòng cuối, nhưng một bên đang chảy máu ồ ạt và băng bó bằng **acquisition** (thu hút khách mới), một bên gần như không rò rỉ.
+Có thể tháng này bạn kéo về **500 người mới và quay lại**, nhưng cũng **mất 400 người cũ** đi mất. 500 - 400 = +100. Cùng con số "+100" đó, một công ty khác có thể đạt được bằng cách kéo về **120 người mới** và chỉ **mất 20**. Cùng một dòng cuối, nhưng một bên đang chảy máu ồ ạt và băng bó bằng **acquisition** (thu hút khách mới), một bên gần như không rò rỉ.
 
 Con số tăng ròng - gọi đúng tên là **net new MAU** (*net* = ròng, tức đã bù trừ; *MAU* = Monthly Active User, số khách hàng hoạt động hàng tháng) - không cho bạn biết bạn thuộc loại nào. Nó là cái dòng cuối của một báo cáo mà phần thân đã bị xé mất. Để đọc lại phần thân ấy, bạn cần tách phép trừ ra thành các thành phần. Đó chính là việc growth accounting làm.
 
@@ -51,13 +51,13 @@ Hãy nghĩ về cách kế toán đọc một doanh nghiệp. Họ không nhìn 
 Xương sống của cả series là một phương trình đơn giản đến mức ai cũng kiểm chứng được bằng tay:
 
 ```
-MAU(t) = MAU(t−1) + new(t) + resurrected(t) − churned(t)
+MAU(t) = MAU(t-1) + new(t) + resurrected(t) - churned(t)
 ```
 
 Đọc thành lời: số người dùng tháng này = số tháng trước, cộng người mới, cộng người quay lại, trừ người rời đi. Còn cái con số "+100" mà dashboard khoe? Nó chính là:
 
 ```
-net new MAU = new + resurrected − churned
+net new MAU = new + resurrected - churned
 ```
 
 Ba dòng, một phép cộng-trừ. Khi tách ra như vậy, "+100" ngừng là một lời khen mơ hồ và trở thành một chẩn đoán: bạn biết chính xác bao nhiêu người vào, bao nhiêu quay lại, bao nhiêu bỏ đi. Và thường thì con số churned - con số bị giấu kỹ nhất - mới là thứ quyết định số phận.
@@ -114,7 +114,7 @@ Semantix hiểu đây là một bảng growth accounting, tự sinh SQL tự-joi
 
 | Nếu bạn chỉ nhìn... | Bạn sẽ tưởng... | Đọc growth accounting, bạn thấy... |
 |---|---|---|
-| MAU tổng tăng 12% | Đang khỏe, cứ thế đi tiếp | Có thể là 500 vào − 400 ra: một cái xô thủng |
+| MAU tổng tăng 12% | Đang khỏe, cứ thế đi tiếp | Có thể là 500 vào - 400 ra: một cái xô thủng |
 | Con số tăng ròng | Một phép cộng đơn giản | Một phép trừ giấu mất churned và new |
 | Hai app cùng +12% | Hai công ty giống nhau | Một xây trên đá, một xây trên cát |
 | Một dòng cuối đẹp | Bức tranh đã đủ | Bốn dòng new/resurrected/retained/churned mới đủ |

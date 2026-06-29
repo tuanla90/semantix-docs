@@ -1,7 +1,7 @@
 ---
 title: "Semantix vs ThoughtSpot: cùng triết lý AI, khác nhau ở giá và chủ quyền dữ liệu"
 code: "ss-004"
-description: "ThoughtSpot khai sinh ra phân tích kiểu tìm-kiếm bằng AI và làm rất tinh. Nhưng với SME Việt Nam, hai bức tường hiện ra nhanh: giá ($5k–20k+/tháng) và mô hình cloud-first, một-AI, tiếng-Anh-trước."
+description: "ThoughtSpot khai sinh ra phân tích kiểu tìm-kiếm bằng AI và làm rất tinh. Nhưng với SME Việt Nam, hai bức tường hiện ra nhanh: giá ($5k-20k+/tháng) và mô hình cloud-first, một-AI, tiếng-Anh-trước."
 pubDate: 2026-07-21
 category: "So Sánh & Lựa Chọn"
 readTime: 10
@@ -23,7 +23,7 @@ Cần nói thẳng: ở độ chín và độ bóng bẩy của trải nghiệm,
 
 ## Bức tường thứ nhất: cái giá
 
-Đây là nơi con đường rẽ đôi. ThoughtSpot định giá theo chuẩn enterprise - ước tính **$5.000–20.000+/tháng**. Với một tập đoàn Mỹ, đó là khoản nhỏ. Với một SME Việt Nam, đó là khoản khiến cuộc trò chuyện kết thúc trước khi bắt đầu.
+Đây là nơi con đường rẽ đôi. ThoughtSpot định giá theo chuẩn enterprise - ước tính **$5.000-20.000+/tháng**. Với một tập đoàn Mỹ, đó là khoản nhỏ. Với một SME Việt Nam, đó là khoản khiến cuộc trò chuyện kết thúc trước khi bắt đầu.
 
 <div class="viz">
 <svg viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
@@ -69,7 +69,7 @@ Ngoài giá, ba khác biệt về *cách vận hành* quan trọng với doanh n
 | Triết lý | **AI-native, search-driven (phân tích kiểu tìm-kiếm)** | AI-native, hỏi-đáp tiếng Việt |
 | Độ chín & độ bóng bẩy | **Trưởng thành, đi trước nhiều năm** | Trẻ hơn |
 | Tích hợp enterprise | **Rộng, lâu đời** | Đang mở rộng |
-| Giá (ước tính) | $5.000–20.000+/tháng | Thấp hơn nhiều lần, theo instance |
+| Giá (ước tính) | $5.000-20.000+/tháng | Thấp hơn nhiều lần, theo instance |
 | Nhà cung cấp AI | Engine riêng | Đa nhà cung cấp + BYOK |
 | Self-hosted / chủ quyền dữ liệu | Hạn chế (cloud-first - ưu tiên chạy trên cloud nhà cung cấp) | Có |
 | Tối ưu tiếng Việt | Không | Có |

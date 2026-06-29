@@ -26,7 +26,7 @@ coverAlt: "Hai đường chuông cùng đỉnh trung bình: một đường hẹ
 
 Hai cửa hàng cà phê mang đi ở cùng một con phố Đà Nẵng. Cuối tháng, cả hai báo cùng một con số: **doanh thu trung bình 5 triệu/ngày**. Trên giấy, hai shop y hệt nhau. Bạn sẽ định giá sang nhượng chúng bằng nhau, cho vay vốn như nhau, đánh giá quản lý ngang nhau.
 
-Nhưng bước vào thực tế: shop A ngày nào cũng quanh quẩn 4,7–5,3 triệu - đều như vắt chanh. Shop B thì nay 9 triệu, mai 1,5 triệu, mốt 6, hôm sau 2 - đu dây thường xuyên. Chủ shop B sống trong thấp thỏm: không biết tuần này có đủ tiền trả lương không, nhập hàng bao nhiêu là vừa, lúc nào nên thuê thêm người.
+Nhưng bước vào thực tế: shop A ngày nào cũng quanh quẩn 4,7-5,3 triệu - đều như vắt chanh. Shop B thì nay 9 triệu, mai 1,5 triệu, mốt 6, hôm sau 2 - đu dây thường xuyên. Chủ shop B sống trong thấp thỏm: không biết tuần này có đủ tiền trả lương không, nhập hàng bao nhiêu là vừa, lúc nào nên thuê thêm người.
 
 Phản xạ của bạn có thể là: "Trung bình bằng nhau thì hai shop tương đương." Đây đúng là cái bẫy. **Trung bình giống nhau không có nghĩa là hai thực tế giống nhau.** Con số trung bình cho bạn biết "tâm điểm", nhưng nó câm lặng tuyệt đối về một thứ sống còn: dữ liệu *trải rộng* quanh tâm điểm đó đến đâu. Thứ "trải rộng" ấy có tên - và đo được.
 
@@ -52,7 +52,7 @@ Cách sửa đơn giản đến bất ngờ: lấy **căn bậc hai** của phư
 
 Đây là lý do trong thực tế bạn nghe người ta nói **độ lệch chuẩn** chứ ít khi nói phương sai: nó *đọc được*. "Doanh thu trung bình 5 triệu, độ lệch chuẩn 0,3 triệu" nghĩa là dữ liệu thường nằm loanh quanh 5 triệu, lệch lên xuống cỡ 300 nghìn - một câu ai cũng hiểu ngay.
 
-Một quy tắc bỏ túi cực kỳ hữu dụng: với dữ liệu phân bố tương đối cân đối, **khoảng "mean ± 1 độ lệch chuẩn" ôm trọn phần lớn dữ liệu** (thường khoảng hai phần ba số ngày/đơn/khách). Nói cách khác, độ lệch chuẩn cho bạn một "khoảng sống thường ngày": shop A là 5 ± 0,3 triệu (sống trong vùng 4,7–5,3), shop B là 5 ± 2,4 triệu (vùng 2,6–7,4). Hai khoảng sống khác nhau một trời một vực - dù mean in trên báo cáo y hệt.
+Một quy tắc bỏ túi cực kỳ hữu dụng: với dữ liệu phân bố tương đối cân đối, **khoảng "mean ± 1 độ lệch chuẩn" ôm trọn phần lớn dữ liệu** (thường khoảng hai phần ba số ngày/đơn/khách). Nói cách khác, độ lệch chuẩn cho bạn một "khoảng sống thường ngày": shop A là 5 ± 0,3 triệu (sống trong vùng 4,7-5,3), shop B là 5 ± 2,4 triệu (vùng 2,6-7,4). Hai khoảng sống khác nhau một trời một vực - dù mean in trên báo cáo y hệt.
 
 <div class="viz">
 <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">

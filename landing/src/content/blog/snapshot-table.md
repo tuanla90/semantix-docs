@@ -50,8 +50,8 @@ Hỏi "một dòng là gì?" là biết mình đang cầm loại bảng nào. M�
 | Thời điểm | Mã SP | Loại | Số lượng |
 |---|---|---|---|
 | 01/06 08:15 | SP01 | Nhập | +200 |
-| 02/06 09:02 | SP01 | Xuất | −17 |
-| 02/06 14:40 | SP01 | Xuất | −9 |
+| 02/06 09:02 | SP01 | Xuất | -17 |
+| 02/06 14:40 | SP01 | Xuất | -9 |
 | 05/06 10:00 | SP01 | Nhập | +50 |
 
 Đây là loại bảng **chi tiết nhất** - không gì mịn hơn. Nó trả lời tuyệt vời mọi câu kiểu *"hôm 2/6 xuất bao nhiêu cái SP01"*, *"tổng nhập tháng 6"*, *"ai ký lệnh xuất lúc 14h40"*. Mỗi dòng là một bằng chứng độc lập, cộng lại ra mọi con số tổng.
@@ -82,9 +82,9 @@ Cuối mỗi ngày, hệ thống "chụp một tấm ảnh" tồn kho và lưu l
   <text x="30" y="40" fill="#94A3B8" font-size="15" font-weight="700" letter-spacing="1">TRANSACTION - mỗi sự kiện một dòng</text>
   <g transform="translate(30,60)" font-size="13" fill="#E2E8F0">
     <rect width="300" height="38" rx="8" fill="#0F172A" stroke="#1E293B"/>
-    <text x="16" y="24">02/06 09:02 · SP01 · xuất −17</text>
+    <text x="16" y="24">02/06 09:02 · SP01 · xuất -17</text>
     <rect y="46" width="300" height="38" rx="8" fill="#0F172A" stroke="#1E293B"/>
-    <text x="16" y="70">02/06 14:40 · SP01 · xuất −9</text>
+    <text x="16" y="70">02/06 14:40 · SP01 · xuất -9</text>
     <rect y="92" width="300" height="38" rx="8" fill="#0F172A" stroke="#1E293B"/>
     <text x="16" y="116">03/06 - không có biến động</text>
     <rect y="138" width="300" height="38" rx="8" fill="#0F172A" stroke="#1E293B"/>

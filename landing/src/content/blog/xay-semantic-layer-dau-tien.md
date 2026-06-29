@@ -81,13 +81,13 @@ Có một metric chuẩn rồi, bạn không dừng lại - nhưng cũng đừng
 - **Khách quay lại** - khách từng mua, nay mua lại sau một thời gian vắng. Phải chốt "vắng bao lâu thì tính là quay lại".
 - **Đơn hàng trung bình (AOV)** - `doanh_thu / số_đơn`, nhưng "số đơn" lại cần một định nghĩa con của riêng nó.
 
-Mỗi định nghĩa mới đều **đứng trên định nghĩa cũ**, nên cuốn từ điển càng lúc càng dày mà không bao giờ mâu thuẫn với chính nó. Đây cũng là lúc bạn thật sự đang có [một nguồn sự thật](/blog/mot-nguon-su-that/) - không phải vì gom data về một chỗ, mà vì mọi con số đều quy về cùng một bộ định nghĩa gốc. *(Muốn phân biệt rạch ròi metric, dimension và KPI để đặt tên cho đúng? Xem [Metric – Dimension – KPI](/blog/metric-dimension-kpi/).)*
+Mỗi định nghĩa mới đều **đứng trên định nghĩa cũ**, nên cuốn từ điển càng lúc càng dày mà không bao giờ mâu thuẫn với chính nó. Đây cũng là lúc bạn thật sự đang có [một nguồn sự thật](/blog/mot-nguon-su-that/) - không phải vì gom data về một chỗ, mà vì mọi con số đều quy về cùng một bộ định nghĩa gốc. *(Muốn phân biệt rạch ròi metric, dimension và KPI để đặt tên cho đúng? Xem [Metric - Dimension - KPI](/blog/metric-dimension-kpi/).)*
 
 ## ... làm việc này trong Semantix
 
 Bạn có thể làm bốn bước trên trên giấy và trong file SQL - nhưng vấn đề cũ quay lại: định nghĩa nằm trong một file thì vẫn là *một người giữ chìa khóa*, ai hỏi cũng phải qua người đó. Semantix không phải "một chatbot AI cắm thẳng vào database rồi mong nó đoán đúng". Nó đặt đúng bốn bước này vào **Ngữ cảnh ngữ nghĩa** - nơi định nghĩa sống tập trung:
 
-1. Bạn viết định nghĩa `doanh_thu` **một lần** (Bước 1–2) vào Ngữ cảnh ngữ nghĩa.
+1. Bạn viết định nghĩa `doanh_thu` **một lần** (Bước 1-2) vào Ngữ cảnh ngữ nghĩa.
 2. Từ đó, *bất kỳ ai* hỏi - gõ thẳng bằng **tiếng Việt**: *"doanh thu tháng 5 bao nhiêu?"* - đều được dịch về đúng định nghĩa gốc đó trước khi chạm vào dữ liệu.
 3. Sales, Finance, CEO hỏi cùng câu, *cùng lúc hay cách nhau cả tháng*, đều nhận **cùng một con số** - vì không ai phải tự gõ lại công thức.
 

@@ -23,7 +23,7 @@ Nếu bạn đã đọc [Pareto 80/20](/blog/pareto-80-20/), bạn sẽ thấy q
 
 **Phân loại ABC** chỉ là việc đặt tên cho ba khúc của cái đuôi đó:
 
-- **Nhóm A** - số ít **SKU** (Stock Keeping Unit - mã hàng tồn kho, từng biến thể cụ thể: sữa hộp 180ml là một SKU, 110ml là SKU khác) nhưng gánh ~70–80% **vốn tồn** (số tiền đang nằm chết trong hàng tồn).
+- **Nhóm A** - số ít **SKU** (Stock Keeping Unit - mã hàng tồn kho, từng biến thể cụ thể: sữa hộp 180ml là một SKU, 110ml là SKU khác) nhưng gánh ~70-80% **vốn tồn** (số tiền đang nằm chết trong hàng tồn).
 - **Nhóm B** - tầm giữa, vài chục phần trăm mã, giữ ~15% vốn.
 - **Nhóm C** - đông đảo nhất về số mã, nhưng cộng lại chỉ chừng 5% vốn.
 

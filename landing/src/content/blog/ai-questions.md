@@ -49,12 +49,12 @@ Quy tắc gọn: **đừng hỏi một con số - hãy hỏi một quyết đị
 
 ## 3. "Tôi đang mất khách ở đâu trong funnel?"
 
-**Vì sao quan trọng:** Mọi funnel (phễu chuyển đổi - chuỗi bước khách đi từ xem đến mua) đều có một điểm chảy máu chính. Bịt đúng điểm đó thường tạo impact gấp 3–5 lần so với tối ưu lặt vặt mọi bước.
+**Vì sao quan trọng:** Mọi funnel (phễu chuyển đổi - chuỗi bước khách đi từ xem đến mua) đều có một điểm chảy máu chính. Bịt đúng điểm đó thường tạo impact gấp 3-5 lần so với tối ưu lặt vặt mọi bước.
 
 > "Vẽ funnel từ lúc khách xem trang sản phẩm đến khi thanh toán thành công trong tháng 12. Bước nào drop-off cao nhất?"
 
 *Ví dụ kết quả:* 67% khách thêm vào giỏ nhưng không checkout; trong đó 40% rơi ở bước nhập địa chỉ giao hàng.
-**Quyết định ngay:** test "địa chỉ lưu sẵn" và "thanh toán khách vãng lai" - có thể nâng conversion (tỷ lệ chuyển đổi) 15–20%.
+**Quyết định ngay:** test "địa chỉ lưu sẵn" và "thanh toán khách vãng lai" - có thể nâng conversion (tỷ lệ chuyển đổi) 15-20%.
 
 ## 4. "Điều gì xảy ra ngay trước khi khách churn?"
 
@@ -71,12 +71,12 @@ Quy tắc gọn: **đừng hỏi một con số - hãy hỏi một quyết đị
 
 > "Dựa trên 2 năm qua, doanh thu và lượng đơn tháng 2 thường biến động thế nào so với tháng 1? Năm nay có gì khác?"
 
-*Ví dụ kết quả:* tháng 2 thường giảm 18–22% so với tháng 1 (sau Tết), nhưng category quà tặng tăng 35% trong 2 tuần trước Tết; năm nay Tết sớm hơn 2 tuần.
+*Ví dụ kết quả:* tháng 2 thường giảm 18-22% so với tháng 1 (sau Tết), nhưng category quà tặng tăng 35% trong 2 tuần trước Tết; năm nay Tết sớm hơn 2 tuần.
 **Quyết định ngay:** tăng tồn kho quà tặng từ đầu tháng 1, giảm chi marketing cho category thường trong tuần đầu tháng 2.
 
 ## Vì sao những câu này khó hỏi AI thông thường
 
-Bạn có để ý cả 5 câu đều: **nối nhiều bảng** (đơn + sản phẩm + khách + hành vi), **có đối chiếu**, và **dẫn tới một hành động trong 24–48 giờ**? Đó là tư duy *ra quyết định dựa trên dữ liệu* thật sự - không phải làm đẹp dashboard để báo cáo.
+Bạn có để ý cả 5 câu đều: **nối nhiều bảng** (đơn + sản phẩm + khách + hành vi), **có đối chiếu**, và **dẫn tới một hành động trong 24-48 giờ**? Đó là tư duy *ra quyết định dựa trên dữ liệu* thật sự - không phải làm đẹp dashboard để báo cáo.
 
 Và đây là lý do ChatGPT hay Gemini "trần" không làm được: chúng không biết cấu trúc database của bạn, không biết "khách active" trong ngữ cảnh của bạn nghĩa là gì, và không có quyền chạm vào dữ liệu thật. Semantix làm khác: bạn kết nối database một lần, định nghĩa các khái niệm nghiệp vụ (Semantic Layer - tầng định nghĩa nghiệp vụ dùng chung), và từ đó AI hiểu đúng câu hỏi - bạn không cần giải thích schema (cấu trúc bảng/cột của database) hay viết SQL (ngôn ngữ truy vấn cơ sở dữ liệu).
 

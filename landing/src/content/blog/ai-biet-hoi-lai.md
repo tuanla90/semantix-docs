@@ -13,7 +13,7 @@ coverAlt: "AI trả lại một câu hỏi làm rõ trong bong bóng hội tho�
 
 Bạn gõ vào ô chat: *"Doanh thu tháng này bao nhiêu?"*. Hai giây sau, AI trả về một con số gọn gàng - **1,84 tỷ**. Dứt khoát, tự tin, kèm cả một biểu đồ nhỏ. Bạn gật gù mang đi báo cáo.
 
-Nhưng khoan: đó là số của định nghĩa **nào**? Doanh thu của riêng kênh shop, hay gộp cả sàn? Có trừ đơn hoàn và huỷ chưa? Trước hay sau phí sàn? Tính theo ngày khách đặt hay ngày giao thành công? Bốn câu hỏi đó, mỗi câu đổi con số đi 10–30%. Và AI vừa trả lời **trước khi** biết câu trả lời cho bất kỳ câu nào trong số chúng.
+Nhưng khoan: đó là số của định nghĩa **nào**? Doanh thu của riêng kênh shop, hay gộp cả sàn? Có trừ đơn hoàn và huỷ chưa? Trước hay sau phí sàn? Tính theo ngày khách đặt hay ngày giao thành công? Bốn câu hỏi đó, mỗi câu đổi con số đi 10-30%. Và AI vừa trả lời **trước khi** biết câu trả lời cho bất kỳ câu nào trong số chúng.
 
 Đó là nghịch lý ít người chịu nhìn thẳng: **một AI trả lời ngay mọi câu hỏi không phải là AI thông minh - đó là AI đang đoán.**
 
@@ -45,7 +45,7 @@ AI tốt thấy chỗ này sẽ hỏi: *"Bạn muốn tính theo ngày đặt ha
 
 ## Mơ hồ kiểu 3 - Trước hay sau phí sàn
 
-Bán trên Shopee, Lazada, TikTok Shop thì con số khách trả **không phải** con số về túi bạn. Phí sàn, phí thanh toán, phí vận chuyển trợ giá, voucher do sàn gánh và do shop gánh - mỗi lớp bóc đi một phần. "Doanh thu" gross trước phí và "doanh thu thực" sau phí có thể chênh 15–25%.
+Bán trên Shopee, Lazada, TikTok Shop thì con số khách trả **không phải** con số về túi bạn. Phí sàn, phí thanh toán, phí vận chuyển trợ giá, voucher do sàn gánh và do shop gánh - mỗi lớp bóc đi một phần. "Doanh thu" gross trước phí và "doanh thu thực" sau phí có thể chênh 15-25%.
 
 *Ví dụ minh hoạ:* một đơn ghi 500.000đ trên TikTok Shop, sau phí sàn 8%, phí thanh toán và phần voucher shop gánh, về tài khoản chỉ còn 412.000đ. Nhân lên cả nghìn đơn, bạn đang nói về hai bức tranh tài chính khác hẳn nhau. AI tốt phải hỏi: *"Bạn muốn doanh thu khách trả, hay doanh thu thực nhận sau phí sàn?"*
 

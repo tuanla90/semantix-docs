@@ -13,7 +13,7 @@ coverAlt: "Đường KPI tụt dần chạm vạch ngưỡng đỏ và bật ra 
 
 *Muốn biết một con số sống còn vừa tụt khỏi ngưỡng ngay trong ngày, thay vì tới buổi họp đầu tuần? [Dùng thử miễn phí với Google Sheets - đặt cảnh báo KPI đầu tiên trong dưới 15 phút.](/docs/vi/free-trial/)*
 
-Chiều thứ Sáu, doanh thu ngày của một chuỗi 4 cửa hàng tụt xuống còn 150 triệu - bình thường ngày thường nó quanh 260–280 triệu. Một cú rớt 40%. Nhưng chủ chuỗi không biết. Cuối tuần ai cũng bận, không ai mở app. Đến sáng thứ Hai họp giao ban, mở báo cáo tuần ra, mọi người mới ồ lên: "Ủa sao thứ Sáu với cuối tuần tụt thế?"
+Chiều thứ Sáu, doanh thu ngày của một chuỗi 4 cửa hàng tụt xuống còn 150 triệu - bình thường ngày thường nó quanh 260-280 triệu. Một cú rớt 40%. Nhưng chủ chuỗi không biết. Cuối tuần ai cũng bận, không ai mở app. Đến sáng thứ Hai họp giao ban, mở báo cáo tuần ra, mọi người mới ồ lên: "Ủa sao thứ Sáu với cuối tuần tụt thế?"
 
 Lúc đó đã muộn ba ngày. Ba ngày để truy ra nguyên nhân - hóa ra một nhân viên set sai giá khuyến mãi trên sàn, khách bỏ giỏ hàng loạt. Một lỗi sửa trong năm phút, nhưng vì phát hiện trễ một tuần nên **mất nguyên một tuần doanh thu** mới sửa được.
 
@@ -27,11 +27,11 @@ Phản xạ đầu tiên là tự trách: "Tại cuối tuần không ai trực.
 
 Mục tiêu của cả bài này gói trong một câu: làm sao để một KPI (Key Performance Indicator - chỉ số hiệu suất then chốt, một metric được gắn mục tiêu) tụt khỏi vùng an toàn thì điện thoại bạn reo **trong ngày**, không phải trong tuần. Ba bước.
 
-## Bước 1 - Chọn 3–5 KPI sống còn, đừng cảnh báo mọi thứ
+## Bước 1 - Chọn 3-5 KPI sống còn, đừng cảnh báo mọi thứ
 
 Sai lầm đầu tiên ai cũng mắc: tham. Đặt cảnh báo cho mọi con số đo được - doanh thu, đơn, tồn từng mã, lượt xem, tỷ lệ hoàn, CTR ads... Kết quả là điện thoại reo cả ngày, và chỉ sau ba hôm bạn tắt hết thông báo. Lúc đó cái cảnh báo *thật sự quan trọng* cũng chết theo.
 
-Quy tắc của tôi: chọn **3–5 KPI mà nếu nó hỏng, ngày làm việc của bạn phải dừng lại để xử lý.** Không hơn. Cách lọc nhanh: với mỗi chỉ số, tự hỏi *"nếu cái này vượt ngưỡng lúc 3h chiều, tôi có bỏ việc đang làm để lao vào không?"* Nếu câu trả lời là "để mai tính" thì nó không xứng đáng có cảnh báo - nó thuộc về báo cáo định kỳ.
+Quy tắc của tôi: chọn **3-5 KPI mà nếu nó hỏng, ngày làm việc của bạn phải dừng lại để xử lý.** Không hơn. Cách lọc nhanh: với mỗi chỉ số, tự hỏi *"nếu cái này vượt ngưỡng lúc 3h chiều, tôi có bỏ việc đang làm để lao vào không?"* Nếu câu trả lời là "để mai tính" thì nó không xứng đáng có cảnh báo - nó thuộc về báo cáo định kỳ.
 
 Vài KPI thường xứng đáng với một shop Việt: doanh thu ngày (hoặc theo kênh), tỷ lệ hoàn/hủy đơn, tồn kho của vài mã chủ lực, tốc độ phản hồi tin nhắn khách giờ cao điểm. Lưu ý nên ưu tiên **chỉ số báo trước (leading indicator - dự báo kết quả tương lai và lái được, như lượt thêm giỏ tụt)** hơn **chỉ số báo sau (lagging indicator - phản ánh kết quả đã rồi, như doanh thu cả quý)**, vì báo trước cho bạn thời gian phản ứng còn báo sau thì chuyện đã xong.
 
@@ -82,7 +82,7 @@ Trong Semantix, cảnh báo KPI không phải một module rời bạn phải h�
 | Phát hiện sự cố trễ vài ngày | Biết trong ngày, sửa kịp trong ngày |
 | Phù hợp: nhìn xu hướng, ra quyết định | Phù hợp: chặn thiệt hại trước khi nó lớn |
 
-Checklist của bạn: ✅ chọn 3–5 KPI mà nếu hỏng thì phải dừng việc → ✅ đặt ngưỡng đúng kiểu (tuyệt đối / so cùng kỳ / lệch khỏi thường lệ), đủ hiếm để không nhờn → ✅ đẩy vào nhóm Telegram/Zalo/Slack đúng người hành động được. Báo cáo định kỳ để bạn ngồi xuống mỗi sáng nhìn bức tranh lớn. Nhưng việc canh chừng những cú rớt bất thường - hãy để cái chuông tự reo, kể cả lúc bạn đang nghỉ cuối tuần.
+Checklist của bạn: ✅ chọn 3-5 KPI mà nếu hỏng thì phải dừng việc → ✅ đặt ngưỡng đúng kiểu (tuyệt đối / so cùng kỳ / lệch khỏi thường lệ), đủ hiếm để không nhờn → ✅ đẩy vào nhóm Telegram/Zalo/Slack đúng người hành động được. Báo cáo định kỳ để bạn ngồi xuống mỗi sáng nhìn bức tranh lớn. Nhưng việc canh chừng những cú rớt bất thường - hãy để cái chuông tự reo, kể cả lúc bạn đang nghỉ cuối tuần.
 
 ---
 

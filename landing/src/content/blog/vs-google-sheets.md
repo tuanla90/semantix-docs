@@ -37,11 +37,11 @@ Họp sáng thứ Hai. Anh chủ chuỗi mở file quen thuộc - mười mấy 
 
 Phản xạ đầu tiên là nghĩ "chắc ai đó kéo nhầm". Không ai sai cả - vấn đề là **"doanh thu" trong file đó chưa bao giờ được định nghĩa một lần.**
 
-*Ví dụ minh hoạ:* sheet có cột `Tổng tiền` và cột `Đã thu`. Người A pivot trên `Tổng tiền`, người B trên `Đã thu`, người C lọc thêm "trạng thái = hoàn thành" rồi mới cộng. Ba người thành thật, ba con số lệch nhau **10–15%**, và không có cách nào biết ai "đúng" vì không có ai đúng làm chuẩn. Tệ hơn cả: những định nghĩa đó **nằm ẩn trong các ô** - một `=SUMIFS` lồng ba tầng ở ô `M2` mà bạn không bao giờ mở ra đọc. Nếu bạn mua một file template (mẫu dựng sẵn), bạn còn **thừa kế nguyên giả định nghiệp vụ** của người làm ra nó: họ tính doanh thu theo đơn đã đặt hay đã giao? Có trừ đơn hoàn, trừ phí sàn không? Bạn không biết - và đang ra quyết định dựa trên một định nghĩa chưa từng nhìn thấy.
+*Ví dụ minh hoạ:* sheet có cột `Tổng tiền` và cột `Đã thu`. Người A pivot trên `Tổng tiền`, người B trên `Đã thu`, người C lọc thêm "trạng thái = hoàn thành" rồi mới cộng. Ba người thành thật, ba con số lệch nhau **10-15%**, và không có cách nào biết ai "đúng" vì không có ai đúng làm chuẩn. Tệ hơn cả: những định nghĩa đó **nằm ẩn trong các ô** - một `=SUMIFS` lồng ba tầng ở ô `M2` mà bạn không bao giờ mở ra đọc. Nếu bạn mua một file template (mẫu dựng sẵn), bạn còn **thừa kế nguyên giả định nghiệp vụ** của người làm ra nó: họ tính doanh thu theo đơn đã đặt hay đã giao? Có trừ đơn hoàn, trừ phí sàn không? Bạn không biết - và đang ra quyết định dựa trên một định nghĩa chưa từng nhìn thấy.
 
 ## 2. Dashboard tĩnh trả câu đã đoán trước; phân tích thật là một CHUỖI drill-down (khoan sâu từng lớp dữ liệu)
 
-Một template bán sẵn thường có 10–15 biểu đồ dựng sẵn: doanh thu theo ngày, top sản phẩm, tỷ lệ theo kênh. Đẹp. Đủ cho cái nhìn tổng quan. Nhưng phân tích thực sự không sống ở cái nhìn tổng quan. Nó sống ở khoảnh khắc bạn thấy một con số *lệch* và buột miệng "ủa, vì sao?".
+Một template bán sẵn thường có 10-15 biểu đồ dựng sẵn: doanh thu theo ngày, top sản phẩm, tỷ lệ theo kênh. Đẹp. Đủ cho cái nhìn tổng quan. Nhưng phân tích thực sự không sống ở cái nhìn tổng quan. Nó sống ở khoảnh khắc bạn thấy một con số *lệch* và buột miệng "ủa, vì sao?".
 
 Cách một người giỏi đọc dữ liệu chưa bao giờ là "liếc một dashboard rồi xong". Nó là một chuỗi:
 

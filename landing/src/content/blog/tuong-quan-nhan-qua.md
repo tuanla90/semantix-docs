@@ -38,7 +38,7 @@ Phản xạ của anh sai ở đâu? Anh nhìn thấy hai con số cùng đi lê
 
 **Tương quan** (correlation - mức độ hai con số cùng lên cùng xuống) chỉ nói: *khi A cao thì B cũng có xu hướng cao.* Nó là một quan sát về hình dạng, không hơn. Hai đường đi song song trên biểu đồ - thế thôi.
 
-**Nhân quả** (causation - quan hệ nguyên nhân–kết quả) nói một điều mạnh hơn nhiều: *thay đổi A sẽ làm B thay đổi theo.* Đây mới là thứ bạn cần để ra quyết định, vì quyết định luôn là "tôi vặn A, thì B có nhúc nhích không?".
+**Nhân quả** (causation - quan hệ nguyên nhân-kết quả) nói một điều mạnh hơn nhiều: *thay đổi A sẽ làm B thay đổi theo.* Đây mới là thứ bạn cần để ra quyết định, vì quyết định luôn là "tôi vặn A, thì B có nhúc nhích không?".
 
 Vấn đề là biểu đồ **chỉ cho bạn thấy tương quan**. Nó không bao giờ tự nói cho bạn biết có nhân quả hay không. Đó là khoảng trống mà bộ não tự lấp đầy bằng câu chuyện hợp lý nhất - và câu chuyện hợp lý nhất thường sai.
 

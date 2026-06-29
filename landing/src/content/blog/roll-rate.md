@@ -52,7 +52,7 @@ Roll rate biến việc chấm điểm tĩnh ấy thành một **dòng chảy**.
 
 ## Ví dụ gốc tài chính: roll rate theo nhóm nợ (DPD)
 
-Roll rate không sinh ra từ thương mại điện tử - nó là công cụ kinh điển của ngành **cho vay và tài chính**. Ở đó, "nhóm" là các bậc nợ theo **DPD** (Days Past Due - số ngày quá hạn thanh toán). Một khoản vay "roll" từ Nhóm 1 (đúng hạn) sang Nhóm 2 (quá hạn 1–30 ngày), rồi Nhóm 3, rồi Nhóm 4... cho tới khi rơi vào nợ xấu.
+Roll rate không sinh ra từ thương mại điện tử - nó là công cụ kinh điển của ngành **cho vay và tài chính**. Ở đó, "nhóm" là các bậc nợ theo **DPD** (Days Past Due - số ngày quá hạn thanh toán). Một khoản vay "roll" từ Nhóm 1 (đúng hạn) sang Nhóm 2 (quá hạn 1-30 ngày), rồi Nhóm 3, rồi Nhóm 4... cho tới khi rơi vào nợ xấu.
 
 Với người làm tín dụng, ma trận roll rate là tín hiệu cảnh báo sớm quý giá nhất. Tỷ lệ "roll" từ Nhóm 1 → Nhóm 2 nhích từ 2% lên 3,5% trong vài kỳ liên tiếp nghĩa là chất lượng danh mục đang xấu đi *trước khi* nợ xấu thực sự bùng lên ở Nhóm 5 - vốn là con số mà mọi báo cáo cuối kỳ đều nhìn, nhưng nhìn thì đã muộn. Đường chéo dưới của ma trận nợ là hệ thống cảnh báo cháy; còn tỷ lệ nợ xấu cuối kỳ là lúc khói đã bốc lên trần.
 

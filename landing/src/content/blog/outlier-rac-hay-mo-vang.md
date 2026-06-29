@@ -46,7 +46,7 @@ Trước khi phán xét, bạn cần *phát hiện* outlier một cách khách q
 
 Đừng dùng *trung bình* (mean) để dò, vì chính outlier kéo trung bình lệch đi. Dùng **median (trung vị - giá trị nằm chính giữa khi sắp xếp dữ liệu)**: nó gần như miễn nhiễm với vài điểm cực đoan. Một đơn 200 triệu kéo trung bình vọt lên, nhưng median gần như không nhúc nhích - và khoảng cách giữa hai con số đó chính là lời mách: "có gì đó lệch ở đây".
 
-Công cụ kinh điển là **IQR (Interquartile Range - khoảng tứ phân vị, là khoảng chứa 50% dữ liệu ở giữa)**. Bạn sắp dữ liệu, lấy mốc 25% (Q1) và 75% (Q3); khoảng giữa chúng là IQR. Điểm nào nằm ngoài `Q1 − 1,5×IQR` hoặc `Q3 + 1,5×IQR` được *gắn cờ* là ứng viên outlier. Lưu ý từ "gắn cờ": IQR không bảo "xoá", nó bảo "nhìn kỹ điểm này".
+Công cụ kinh điển là **IQR (Interquartile Range - khoảng tứ phân vị, là khoảng chứa 50% dữ liệu ở giữa)**. Bạn sắp dữ liệu, lấy mốc 25% (Q1) và 75% (Q3); khoảng giữa chúng là IQR. Điểm nào nằm ngoài `Q1 - 1,5×IQR` hoặc `Q3 + 1,5×IQR` được *gắn cờ* là ứng viên outlier. Lưu ý từ "gắn cờ": IQR không bảo "xoá", nó bảo "nhìn kỹ điểm này".
 
 <div class="viz">
 <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">

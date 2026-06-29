@@ -1,7 +1,7 @@
 ---
 title: "Metric tính toán: vì sao lợi nhuận gộp nên định nghĩa một lần - chứ không gõ lại trong từng file Excel"
 code: "hd-013"
-description: "Mỗi báo cáo lại gõ lại 'lợi nhuận gộp = doanh thu − giá vốn'. Mỗi người một kiểu, sai một ô là lệch cả bảng. Có cách định nghĩa một lần, dùng mãi."
+description: "Mỗi báo cáo lại gõ lại 'lợi nhuận gộp = doanh thu - giá vốn'. Mỗi người một kiểu, sai một ô là lệch cả bảng. Có cách định nghĩa một lần, dùng mãi."
 pubDate: 2026-02-09
 category: "Hướng Dẫn Thực Chiến"
 readTime: 9
@@ -11,7 +11,7 @@ cover: "/blog/covers/tao-metric-tinh-toan.svg"
 coverAlt: "Hai cột gốc doanh thu và giá vốn đi qua một công thức trừ, cho ra metric lợi nhuận gộp dùng chung"
 ---
 
-Cuối tháng, bạn mở file báo cáo doanh số. Ở cột bên phải, bạn gõ lại cái công thức quen thuộc: `= doanh_thu − giá_vốn`. Lợi nhuận gộp hiện ra. Tuần sau, bạn dựng một bảng khác cho phòng marketing - lại gõ lại công thức ấy. Tháng sau, một bạn mới vào tự dựng dashboard của bạn ấy, cũng gõ lại - nhưng quên trừ phí sàn, nên "lợi nhuận gộp" của bạn ấy cao hơn của bạn 12%.
+Cuối tháng, bạn mở file báo cáo doanh số. Ở cột bên phải, bạn gõ lại cái công thức quen thuộc: `= doanh_thu - giá_vốn`. Lợi nhuận gộp hiện ra. Tuần sau, bạn dựng một bảng khác cho phòng marketing - lại gõ lại công thức ấy. Tháng sau, một bạn mới vào tự dựng dashboard của bạn ấy, cũng gõ lại - nhưng quên trừ phí sàn, nên "lợi nhuận gộp" của bạn ấy cao hơn của bạn 12%.
 
 Không ai gõ sai cú pháp cả. Cả ba công thức **đều chạy, đều ra số**. Vấn đề là cùng một khái niệm - "lợi nhuận gộp" - đang được **viết lại từ đầu ở mỗi file**, mỗi lần một kiểu. Và quy tắc nghiệt ngã của bảng tính vẫn thế: sai một ô là lệch cả bảng, mà chẳng có dòng cảnh báo nào.
 
@@ -23,7 +23,7 @@ Hãy chia metric của bạn làm hai loại.
 
 Loại thứ nhất là **metric đo trực tiếp**: con số đã nằm sẵn trong dữ liệu, bạn chỉ cộng/đếm lại. *Doanh thu* (cộng cột thành tiền). *Số đơn* (đếm dòng). *Giá vốn* (cộng cột giá nhập). Đây là nguyên liệu thô - máy đọc thẳng từ bảng ra.
 
-Loại thứ hai là **metric tính toán**: con số *không có sẵn*, phải dựng lên từ một công thức trên các metric gốc. *Lợi nhuận gộp = doanh thu − giá vốn.* *Biên gộp = lợi nhuận gộp ÷ doanh thu.* Không cột nào trong dữ liệu tên là "lợi nhuận gộp" cả - nó là kết quả của một phép tính bạn *định nghĩa*.
+Loại thứ hai là **metric tính toán**: con số *không có sẵn*, phải dựng lên từ một công thức trên các metric gốc. *Lợi nhuận gộp = doanh thu - giá vốn.* *Biên gộp = lợi nhuận gộp ÷ doanh thu.* Không cột nào trong dữ liệu tên là "lợi nhuận gộp" cả - nó là kết quả của một phép tính bạn *định nghĩa*.
 
 Ẩn dụ dễ hình dung: metric đo trực tiếp giống **nguyên liệu trong tủ lạnh** - trứng, bột, đường, có sẵn. Metric tính toán giống **công thức nấu ăn** - "đánh trứng với đường rồi trộn bột". Vấn đề của hầu hết các công ty là: công thức ấy không nằm trong một cuốn sổ chung. Nó nằm rải rác trong đầu từng người, và được chép lại - đôi khi sai - vào từng file Excel.
 
@@ -35,13 +35,13 @@ Loại thứ hai là **metric tính toán**: con số *không có sẵn*, phải
 
 | Metric tính toán | Công thức (trên metric gốc) | Trả lời câu hỏi |
 |---|---|---|
-| **Lợi nhuận gộp** | doanh thu − giá vốn hàng bán | Bán xong còn lại bao nhiêu trước chi phí vận hành? |
+| **Lợi nhuận gộp** | doanh thu - giá vốn hàng bán | Bán xong còn lại bao nhiêu trước chi phí vận hành? |
 | **Biên lợi nhuận gộp (%)** | lợi nhuận gộp ÷ doanh thu | Cứ 100đ bán ra giữ được mấy đồng? |
 | **AOV** *(Average Order Value - giá trị đơn trung bình)* | doanh thu ÷ số đơn | Mỗi đơn khách chi trung bình bao nhiêu? |
 | **Tỷ lệ chuyển đổi (%)** | số đơn ÷ số lượt truy cập | Trong 100 người ghé, mấy người mua? |
-| **Doanh thu thực sau phí** | doanh thu − phí sàn − phí ship − chiết khấu | Tiền *thật sự* về túi sau khi sàn cắt phần của họ? |
+| **Doanh thu thực sau phí** | doanh thu - phí sàn - phí ship - chiết khấu | Tiền *thật sự* về túi sau khi sàn cắt phần của họ? |
 
-Để ý cái bẫy lớn nhất nằm ở dòng cuối. *"Doanh thu"* thì ai cũng tính được. Nhưng **doanh thu thực sau phí** - con số quyết định bạn lời hay lỗ trên Shopee, TikTok Shop - lại là nơi mỗi người trừ một kiểu: người quên phí ship, người quên voucher, người tính cả đơn đã hoàn. *Ví dụ minh họa:* một nhà bán trên sàn thấy doanh thu 1,8 tỷ tháng sale, nhưng sau khi trừ đúng phí sàn 11–13% cộng phí vận chuyển và voucher, "doanh thu thực" chỉ còn quanh 1,5 tỷ - chênh tới 15–18% so với con số thô mà nhiều người vẫn báo lên sếp.
+Để ý cái bẫy lớn nhất nằm ở dòng cuối. *"Doanh thu"* thì ai cũng tính được. Nhưng **doanh thu thực sau phí** - con số quyết định bạn lời hay lỗ trên Shopee, TikTok Shop - lại là nơi mỗi người trừ một kiểu: người quên phí ship, người quên voucher, người tính cả đơn đã hoàn. *Ví dụ minh họa:* một nhà bán trên sàn thấy doanh thu 1,8 tỷ tháng sale, nhưng sau khi trừ đúng phí sàn 11-13% cộng phí vận chuyển và voucher, "doanh thu thực" chỉ còn quanh 1,5 tỷ - chênh tới 15-18% so với con số thô mà nhiều người vẫn báo lên sếp.
 
 Mỗi metric ở trên chỉ đáng tin khi **công thức của nó được chốt một lần**. Còn nếu mỗi báo cáo tự gõ lại, bạn không có năm cái metric - bạn có năm cuộc tranh cãi chờ nổ ra. *(Đây cũng đúng là gốc của chuyện ba phòng ban đọc ba con số doanh thu khác nhau, mổ kỹ trong bài [Metric, Dimension, KPI: ba từ ai cũng nói](/blog/metric-dimension-kpi/).)*
 
@@ -66,7 +66,7 @@ Tôi đã từng vấp đúng loại lỗi này, hồi còn làm sản phẩm �
 Semantix không giải bài này bằng cách cho bạn một ô Excel đẹp hơn để gõ lại công thức - vì gõ lại công thức ở đâu thì vẫn là gõ lại. Cách tiếp cận là dời công thức ra khỏi báo cáo, đặt vào tầng dữ liệu:
 
 1. **Khai báo các metric gốc một lần:** *doanh thu*, *giá vốn*, *phí sàn*, *số đơn* - đọc thẳng từ dữ liệu của bạn (kết nối Shopee, TikTok Shop, KiotViet, hay Google Sheets).
-2. **Định nghĩa metric tính toán bằng công thức trên các metric gốc đó:** *lợi nhuận gộp = doanh thu − giá vốn*, *biên gộp = lợi nhuận gộp ÷ doanh thu*. Định nghĩa **một lần** trong Semantic Layer.
+2. **Định nghĩa metric tính toán bằng công thức trên các metric gốc đó:** *lợi nhuận gộp = doanh thu - giá vốn*, *biên gộp = lợi nhuận gộp ÷ doanh thu*. Định nghĩa **một lần** trong Semantic Layer.
 3. **Mọi câu hỏi, mọi dashboard dùng chung con số đó** - và bạn hỏi *bằng tiếng Việt*: "biên lợi nhuận gộp tháng này theo kênh?" Không cần ô công thức, không cần một dòng SQL.
 
 Một lần định nghĩa. Cả công ty đọc cùng một con số. Đổi phí sàn thì sửa một chỗ - không phải mở mười file đi sửa tay. *(Muốn dựng định nghĩa đầu tiên này trong vài phút? Bắt đầu với [bản dùng thử miễn phí trên Google Sheets](/docs/vi/free-trial/).)*
@@ -80,7 +80,7 @@ Một lần định nghĩa. Cả công ty đọc cùng một con số. Đổi ph
 | Phí sàn đổi → sửa từng file, sót là sai mãi | Đổi công thức → sửa một chỗ, cập nhật khắp nơi |
 | Người dựng nghỉ việc → công thức đi theo | Công thức là tài sản chung, ai cũng dùng được |
 
-Lần tới khi bạn định gõ `= doanh_thu − giá_vốn` vào một ô Excel mới, dừng một giây và hỏi: *công thức này đã được định nghĩa ở đâu chưa, hay mình lại đang chép tay một phiên bản nữa?* Định nghĩa nó **một lần** ở chỗ ai cũng dùng - đó là khác biệt giữa một bảng số đẹp và một con số đáng tin.
+Lần tới khi bạn định gõ `= doanh_thu - giá_vốn` vào một ô Excel mới, dừng một giây và hỏi: *công thức này đã được định nghĩa ở đâu chưa, hay mình lại đang chép tay một phiên bản nữa?* Định nghĩa nó **một lần** ở chỗ ai cũng dùng - đó là khác biệt giữa một bảng số đẹp và một con số đáng tin.
 
 ---
 

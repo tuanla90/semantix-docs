@@ -26,7 +26,7 @@ coverAlt: "Phân phối thời gian với các vạch P50, P90, P99 và đuôi p
 
 Một quán bún bò ở Đà Nẵng tự hào với khách: "Bên em giao tận nơi, **trung bình 30 phút** là có đồ ăn." Nghe quá ổn. Chủ quán in luôn lên fanpage. Nhưng tháng đó có 6 review một sao, đều chung một câu: "Đợi gần 2 tiếng, nguội ngắt." Sao lại thế, khi trung bình chỉ 30 phút?
 
-Vì trung bình là kẻ rất giỏi che giấu. Phần lớn đơn giao trong 20–25 phút, kéo con số trung bình xuống đẹp. Nhưng cứ khoảng 10 đơn thì có 1 đơn rơi vào giờ cao điểm, kẹt xe, shipper ôm 4 đơn cùng lúc - và khách đó đợi 90–110 phút. **Trung bình mượt mà không hề biết tới những người đang chờ dài cổ.** Sáu người đó không sống trong "trung bình"; họ sống trong cái đuôi mà trung bình giấu đi.
+Vì trung bình là kẻ rất giỏi che giấu. Phần lớn đơn giao trong 20-25 phút, kéo con số trung bình xuống đẹp. Nhưng cứ khoảng 10 đơn thì có 1 đơn rơi vào giờ cao điểm, kẹt xe, shipper ôm 4 đơn cùng lúc - và khách đó đợi 90-110 phút. **Trung bình mượt mà không hề biết tới những người đang chờ dài cổ.** Sáu người đó không sống trong "trung bình"; họ sống trong cái đuôi mà trung bình giấu đi.
 
 Phản xạ của bạn có thể là: "Thì 6 trên cả nghìn đơn, đáng kể gì." Nhưng 6 người đó để lại 6 ngôi sao một, và họ kể lại cho bạn bè. Họ không phải nhiễu - họ là **trải nghiệm tệ nhất mà sản phẩm của bạn đang tạo ra đều đặn.** Và có một cách đo chỉ thẳng vào họ: phân vị.
 
@@ -86,7 +86,7 @@ Cách tính cũng bình dân, không cần công thức cao siêu: **xếp tất
   <text x="585" y="334" fill="#F87171" font-size="10" text-anchor="middle">outlier đuôi xa</text>
   <text x="120" y="408" fill="#475569" font-size="10">hộp = 50% dữ liệu giữa (IQR) · vạch giữa = P50 · chấm đỏ = đuôi xấu vượt ngưỡng</text>
 </svg>
-<div class="viz-caption">Cùng một tập dữ liệu, hai cách nhìn. Phân phối cho thấy đám đông tụ ở 20–25 phút nhưng có đuôi đỏ kéo dài; box plot tóm gọn thành hộp + ngưỡng. Số liệu là ví dụ minh hoạ.</div>
+<div class="viz-caption">Cùng một tập dữ liệu, hai cách nhìn. Phân phối cho thấy đám đông tụ ở 20-25 phút nhưng có đuôi đỏ kéo dài; box plot tóm gọn thành hộp + ngưỡng. Số liệu là ví dụ minh hoạ.</div>
 </div>
 
 ## Tứ phân vị và box plot - tóm cả phân tán trong một cái hộp
@@ -129,7 +129,7 @@ Semantix **không phải cái máy chỉ nhả ra mỗi con số trung bình** r
 | Đuôi xấu bị hòa tan | P99 chỉ thẳng vào khách xui nhất |
 | "Nhanh trung bình, yên tâm" | SLA: 95% đơn dưới 2 ngày |
 | Một số phẳng cho cả tệp | Box plot: hộp + đuôi + outlier |
-| Không biết ai đang chờ lâu | Biết chính xác 5–10% nào cần cứu |
+| Không biết ai đang chờ lâu | Biết chính xác 5-10% nào cần cứu |
 
 Trung bình không sai về số học - nó chỉ kể câu chuyện của người ở giữa, rồi im lặng về những người ở đuôi. Mà khách rời bỏ bạn, để lại review một sao, kể xấu với bạn bè - họ gần như luôn ở đuôi. Phân vị là cách bạn ngừng quay mặt đi khỏi họ.
 

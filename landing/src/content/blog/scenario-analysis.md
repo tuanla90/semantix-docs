@@ -31,16 +31,16 @@ Hãy phân biệt cho rõ, vì hai thứ này hay bị nhập làm một.
 
 Khác biệt cốt lõi nằm ở chỗ này: dải tin cậy của forecast nói *"tôi không chắc lắm"*. Còn các kịch bản nói *"đây là ba câu chuyện cụ thể có thể xảy ra, và đây là điều khác nhau ở mỗi câu chuyện"*. Một cái là độ nhiễu của số liệu. Cái kia là **cây quyết định** của bạn.
 
-## Cách dựng: tìm 2–3 biến nhạy cảm nhất, rồi đổi chúng
+## Cách dựng: tìm 2-3 biến nhạy cảm nhất, rồi đổi chúng
 
 Sai lầm phổ biến khi mới làm scenario là đổi *mọi thứ* cùng lúc - 30 dòng giả định, mỗi dòng nhân lên cao/thấp, ra 2^30 kịch bản không ai đọc nổi. Đó không phải phân tích, đó là hỗn loạn.
 
-Bí quyết: chỉ đụng vào **2–3 biến lắc kết quả mạnh nhất**. Với một nhà bán lẻ, đó thường là *giá bán trung bình*, *lượng khách*, và *giá vốn nhập hàng*. Với một công ty SaaS, đó là *số khách mới mỗi tháng*, *tỷ lệ rời bỏ* (churn) và *giá gói*. Những biến còn lại - tiền điện văn phòng, chi phí in ấn - có nhân đôi cũng chẳng làm xê dịch bức tranh, nên cứ giữ nguyên.
+Bí quyết: chỉ đụng vào **2-3 biến lắc kết quả mạnh nhất**. Với một nhà bán lẻ, đó thường là *giá bán trung bình*, *lượng khách*, và *giá vốn nhập hàng*. Với một công ty SaaS, đó là *số khách mới mỗi tháng*, *tỷ lệ rời bỏ* (churn) và *giá gói*. Những biến còn lại - tiền điện văn phòng, chi phí in ấn - có nhân đôi cũng chẳng làm xê dịch bức tranh, nên cứ giữ nguyên.
 
 Quy trình gọn trong ba bước:
 
 1. **Viết ra giả định.** Con số 72 tỷ ngầm giả định lượng khách +0%, giá giữ nguyên. Ghi rõ ra giấy. Một giả định *được viết ra* là một giả định *có thể tranh luận*; một giả định ẩn thì không.
-2. **Đổi 2–3 biến đó theo ba mức** - cao / vừa / thấp - dựa trên kinh nghiệm và lịch sử, không phải con số trên trời.
+2. **Đổi 2-3 biến đó theo ba mức** - cao / vừa / thấp - dựa trên kinh nghiệm và lịch sử, không phải con số trên trời.
 3. **Đọc ra ba con số đáy** ứng với ba câu chuyện. Giờ bạn không có một mục tiêu, bạn có một *dải*.
 
 <div class="viz">
@@ -64,7 +64,7 @@ Sensitivity cho bạn biết *đụng vào đâu*. Scenario cho bạn biết *n�
 
 Đây là phần nhiều người làm hụt. Dựng được ba đường rồi... để ngắm. Sai. Giá trị thật của scenario không nằm ở ba con số, mà ở **các ngưỡng quyết định bạn gắn vào chúng** *trước khi* chuyện xảy ra.
 
-Cách dùng đúng là biến mỗi kịch bản thành một câu *nếu–thì*:
+Cách dùng đúng là biến mỗi kịch bản thành một câu *nếu-thì*:
 
 - *Nếu* hết quý 1 mà doanh thu bám sát đường **thận trọng** (≤ 4,7 tỷ) → *thì* hoãn đợt tuyển 5 người, dừng nhập lô hàng mùa hè, giữ tiền mặt.
 - *Nếu* bám đường **lạc quan** (≥ 5,9 tỷ) → *thì* kích hoạt kế hoạch mở thêm điểm bán đã chuẩn bị sẵn.
@@ -88,7 +88,7 @@ Semantix dựng đường cơ sở từ dữ liệu thật kèm dải tin cậy 
 |---|---|
 | "Năm nay 72 tỷ" | "Từ 58 đến 84 tỷ, tuỳ ba giả định" |
 | Giả định ẩn, không ai tranh luận | Giả định viết ra, đem ra cãi được |
-| Đổi mọi biến cùng lúc → hỗn loạn | Chỉ đổi 2–3 biến nhạy nhất |
+| Đổi mọi biến cùng lúc → hỗn loạn | Chỉ đổi 2-3 biến nhạy nhất |
 | Số xấu xảy ra → họp khẩn, hoảng | Số xấu xảy ra → lật trang kế hoạch sẵn |
 | Đặt cược cả công ty vào một mặt xúc xắc | Chuẩn bị nước đi cho cả ba mặt |
 

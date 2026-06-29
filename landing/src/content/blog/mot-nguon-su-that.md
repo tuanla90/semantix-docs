@@ -49,7 +49,7 @@ Cùng một database. Cùng một bảng `don_hang`. Hai câu trả lời khác 
 
 Hãy xem nó xảy ra thế nào. Sales cần báo cáo gấp cho sếp, tự dựng một file tính doanh thu theo cách *hợp lý với họ* - đơn chốt là tính. Tháng sau Finance làm báo cáo thuế, cần con số *đã thu thật*, nên trừ đơn hoàn và đơn chưa thanh toán. Marketing đo hiệu quả ads, gán doanh thu theo *đơn cuối cùng khách bấm vào quảng cáo*. Kho lại tính theo *giá trị hàng đã xuất*. Phòng Kế hoạch dựng dự báo, gộp cả *đơn đặt trước chưa giao*. Mỗi định nghĩa đều **đúng cho mục đích của phòng đó** - và chính vì đều hợp lý nên không ai thấy cần phải bàn với nhau.
 
-Năm phòng, năm file, năm định nghĩa "doanh thu". Không có lỗi cú pháp. Không có cảnh báo. Chúng lệch nhau một cách hoàn toàn lặng lẽ, cho đến đúng cái buổi sáng thứ Hai mọi người ngồi chung một bàn và ba con số đập vào nhau. *Ví dụ minh họa:* một chuỗi bán lẻ phát hiện chênh lệch giữa "doanh thu" của Sales và Finance lên tới 12–15% mỗi tháng - toàn bộ đến từ cách xử lý đơn hoàn và đơn trả góp, không một đồng nào gọi là "gian lận" hay "nhập sai".
+Năm phòng, năm file, năm định nghĩa "doanh thu". Không có lỗi cú pháp. Không có cảnh báo. Chúng lệch nhau một cách hoàn toàn lặng lẽ, cho đến đúng cái buổi sáng thứ Hai mọi người ngồi chung một bàn và ba con số đập vào nhau. *Ví dụ minh họa:* một chuỗi bán lẻ phát hiện chênh lệch giữa "doanh thu" của Sales và Finance lên tới 12-15% mỗi tháng - toàn bộ đến từ cách xử lý đơn hoàn và đơn trả góp, không một đồng nào gọi là "gian lận" hay "nhập sai".
 
 Đây là cùng một căn bệnh mà mọi SME đa kênh mắc khi [làm BI mà thiếu một định nghĩa chung](/blog/bi-cho-sme/): càng nhiều người tự do làm báo cáo, càng nhiều phiên bản sự thật - trừ phi có một nơi giữ định nghĩa gốc.
 

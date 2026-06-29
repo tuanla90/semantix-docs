@@ -52,7 +52,7 @@ Mô hình Kimball chia mọi thứ làm hai loại bảng, và chỉ hai.
 
 **Bảng dimension** (dimension table - bảng chiều/bối cảnh) chứa *mô tả* để cắt lát con số trong fact: ai mua (khách hàng), mua gì (sản phẩm), khi nào (thời gian), ở đâu (địa điểm), qua kênh nào. Bảng dimension béo mà ngắn: nhiều cột mô tả, nhưng số dòng có hạn.
 
-Một mẹo phân biệt không bao giờ sai: nếu một cột là thứ bạn muốn *cộng / đếm / tính trung bình*, nó là fact (doanh thu, số lượng). Nếu là thứ bạn muốn *lọc theo / nhóm theo / cắt theo*, nó là dimension (tỉnh, loại hàng, tháng). Doanh thu là fact; "theo tỉnh nào" là dimension. *(Cặp fact–dimension này là nền của mọi báo cáo - chúng tôi mổ kỹ trong bài [Fact & Dimension: cách sắp bảng quyết định câu hỏi bạn hỏi được](/blog/data-modeling-fact-dimension/).)*
+Một mẹo phân biệt không bao giờ sai: nếu một cột là thứ bạn muốn *cộng / đếm / tính trung bình*, nó là fact (doanh thu, số lượng). Nếu là thứ bạn muốn *lọc theo / nhóm theo / cắt theo*, nó là dimension (tỉnh, loại hàng, tháng). Doanh thu là fact; "theo tỉnh nào" là dimension. *(Cặp fact-dimension này là nền của mọi báo cáo - chúng tôi mổ kỹ trong bài [Fact & Dimension: cách sắp bảng quyết định câu hỏi bạn hỏi được](/blog/data-modeling-fact-dimension/).)*
 
 Nói ngắn gọn: **fact là động từ** (đã bán, đã thu, bao nhiêu), **dimension là tính từ** (của ai, loại nào, ở đâu, khi nào). Mọi câu hỏi kinh doanh đều là một động từ ghép với vài tính từ.
 
@@ -165,4 +165,4 @@ Database vận hành của bạn không *sai* - nó đúng cho việc của nó.
 
 ---
 
-*Muốn xem tư duy fact–dimension áp vào một bảng cụ thể trông ra sao? Đọc tiếp [Fact & Dimension: cách sắp bảng quyết định câu hỏi bạn hỏi được](/blog/data-modeling-fact-dimension/), hoặc làm rõ ranh giới metric với dimension trong [Metric, Dimension, KPI](/blog/metric-dimension-kpi/).*
+*Muốn xem tư duy fact-dimension áp vào một bảng cụ thể trông ra sao? Đọc tiếp [Fact & Dimension: cách sắp bảng quyết định câu hỏi bạn hỏi được](/blog/data-modeling-fact-dimension/), hoặc làm rõ ranh giới metric với dimension trong [Metric, Dimension, KPI](/blog/metric-dimension-kpi/).*

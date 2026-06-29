@@ -59,11 +59,11 @@ WHERE created_at >= '2026-07-01'
   AND status = 'completed' AND refund_amount = 0;
 ```
 
-Cả hai **đều chạy. Đều ra số. Đều đúng cú pháp.** Nhưng chênh nhau 15–20%. Phiên bản trên là cái bạn nhận được từ một chatbot cắm thẳng DB; phiên bản dưới là cái bạn nhận được khi câu hỏi đi qua lớp 2. Không ngẫu nhiên mà những hệ Text2SQL mạnh nhất thế giới - WrenAI, hay SuperSonic của Tencent - đều xây *quanh* một semantic layer, đúng tinh thần của các metrics layer như dbt, Cube, LookML. (Sự khác biệt căn bản này là toàn bộ nội dung bài [Semantic Layer so với chatbot cắm thẳng database](/blog/semantic-layer-vs-chatbot-database/).)
+Cả hai **đều chạy. Đều ra số. Đều đúng cú pháp.** Nhưng chênh nhau 15-20%. Phiên bản trên là cái bạn nhận được từ một chatbot cắm thẳng DB; phiên bản dưới là cái bạn nhận được khi câu hỏi đi qua lớp 2. Không ngẫu nhiên mà những hệ Text2SQL mạnh nhất thế giới - WrenAI, hay SuperSonic của Tencent - đều xây *quanh* một semantic layer, đúng tinh thần của các metrics layer như dbt, Cube, LookML. (Sự khác biệt căn bản này là toàn bộ nội dung bài [Semantic Layer so với chatbot cắm thẳng database](/blog/semantic-layer-vs-chatbot-database/).)
 
 > Quy tắc vàng: AI chỉ được phép *lắp ghép* từ những định nghĩa đã có, không được *bịa* ra định nghĩa mới. Mỗi khái niệm nghiệp vụ phải neo vào một mục có thật trong Semantic Layer - nếu không, chặn.
 
-Tôi tin lớp này nhất vì đã trả giá để hiểu nó. Hồi làm trưởng nhóm BI ở một ngân hàng, tôi mới thấm: cùng chữ "doanh thu", marketing hiểu một kiểu, kế toán hiểu một kiểu, và mỗi báo cáo ngầm chọn một định nghĩa khác nhau mà không ai khai ra. Đúng cái gap mà hồi làm dữ liệu tracking ở một công ty công nghệ lõi của hệ sinh thái e-commerce tôi đã gặp: doanh thu chỉ tính theo ngày đặt, còn hoàn–huỷ về sau thì mù. Vì vậy giờ tôi đang biến semantic layer thành dự án trọng điểm: ghim mỗi khái niệm *một lần*. Bỏ lớp này, bạn không tăng tốc - bạn nhân bản sự nhập nhằng lên quy mô máy.
+Tôi tin lớp này nhất vì đã trả giá để hiểu nó. Hồi làm trưởng nhóm BI ở một ngân hàng, tôi mới thấm: cùng chữ "doanh thu", marketing hiểu một kiểu, kế toán hiểu một kiểu, và mỗi báo cáo ngầm chọn một định nghĩa khác nhau mà không ai khai ra. Đúng cái gap mà hồi làm dữ liệu tracking ở một công ty công nghệ lõi của hệ sinh thái e-commerce tôi đã gặp: doanh thu chỉ tính theo ngày đặt, còn hoàn-huỷ về sau thì mù. Vì vậy giờ tôi đang biến semantic layer thành dự án trọng điểm: ghim mỗi khái niệm *một lần*. Bỏ lớp này, bạn không tăng tốc - bạn nhân bản sự nhập nhằng lên quy mô máy.
 
 ## Lớp 3 - Sinh SQL có ràng buộc: viết từ bản đồ, không viết từ trí nhớ
 

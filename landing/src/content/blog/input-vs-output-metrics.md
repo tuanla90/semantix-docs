@@ -94,7 +94,7 @@ Lý thuyết đủ rồi. Đây là cách nó trông ra sao ở những việc k
 <div class="viz-caption">Mỗi output đều có một input lái được đứng trước nó - số minh hoạ.</div>
 </div>
 
-**Shop đa kênh trên Shopee/TikTok Shop.** Output là *số đơn*. Nhưng số đơn không có nút bấm. Input lái được: **số sản phẩm được lên kệ đúng giờ vàng** (19h–22h). Nhân viên đăng đủ 30 mã trước 19h hay lác đác 8 mã lúc 21h là việc bạn quyết được hôm nay - và nó kéo theo đơn của tối nay.
+**Shop đa kênh trên Shopee/TikTok Shop.** Output là *số đơn*. Nhưng số đơn không có nút bấm. Input lái được: **số sản phẩm được lên kệ đúng giờ vàng** (19h-22h). Nhân viên đăng đủ 30 mã trước 19h hay lác đác 8 mã lúc 21h là việc bạn quyết được hôm nay - và nó kéo theo đơn của tối nay.
 
 **Quán F&B.** Output là *khách quay lại* và doanh thu tháng. Input lái được: **thời gian chờ món**. Khách chờ 8 phút khác hẳn khách chờ 25 phút. Bạn bấm được vào nó - thêm người bếp giờ cao điểm, cắt bớt món phức tạp khỏi menu trưa - và nó dẫn tới tỷ lệ quay lại, rồi mới tới doanh thu.
 

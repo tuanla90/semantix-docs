@@ -31,6 +31,15 @@ const pillars = [
     desc: 'Hỏi dữ liệu bằng tiếng Việt, semantic layer làm lõi để AI hiểu đúng "doanh thu" của riêng công ty bạn.',
   },
 ];
+
+// Công cụ & khoá học khác của Lê Anh Tuấn — chỉ trưng + link, không bán tại đây.
+const MGT = 'https://honorable-cricket-5d2.notion.site/Master-Google-Tools-0ff6068ea26e48c59ac74a1f707a7ff4';
+const courses = [
+  { name: 'GA4 · Vietmoz', href: 'https://vietmoz.edu.vn/ga4-advanced/' },
+  { name: 'BI Google Workspace · MCI', href: 'https://www.mcivietnam.com/course-detail/khoa-hoc-business-intelligence-with-google-workspace-advanced-track/' },
+  { name: 'App AI · Gitiho', href: 'https://gitiho.com/khoa-hoc/tao-app-quan-ly-chi-tieu-chuyen-nghiep-tich-hop-ai-chatbot' },
+  { name: 'BigQuery · gpems', href: 'https://gpems.net/course/khoa-hoc-bigquery-thuc-chien-from-zero-to-hero-81' },
+];
 ---
 <BaseLayout
   title="Tuấn LA Lab — Data & AI cho người Việt"
@@ -91,6 +100,23 @@ const pillars = [
   .pcard-desc { font-size: 14px; color: var(--muted); line-height: 1.6; flex: 1; }
   .pcard-date { font-size: 12.5px; color: var(--muted-light); margin-top: 14px; }
   .home-blog-all { text-align: center; margin-top: 36px; }
+
+  /* ===== Công cụ & Khoá học ===== */
+  .tools { padding: 88px 24px; background: var(--white); }
+  .tools-sub { max-width: 640px; margin: 10px auto 0; text-align: center; font-size: 15.5px; color: var(--muted); line-height: 1.7; }
+  .tools-sub strong { color: var(--dark-2); }
+  .tools-grid { max-width: 880px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  @media(max-width:720px){ .tools-grid { grid-template-columns: 1fr; } }
+  .tool-card { display: block; text-decoration: none; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 28px; transition: transform .2s, box-shadow .2s; }
+  .tool-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+  .tool-tag { font-size: 11.5px; font-weight: 800; letter-spacing: 1.3px; color: var(--primary); }
+  .tool-title { font-size: 18px; font-weight: 800; color: var(--dark); letter-spacing: -.3px; margin: 10px 0 8px; }
+  .tool-desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
+  .tool-more { display: inline-block; margin-top: 14px; font-size: 13.5px; font-weight: 700; color: var(--primary); }
+  .courses-row { max-width: 880px; margin: 26px auto 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 14px; }
+  .courses-label { font-size: 13px; font-weight: 700; color: var(--dark-2); }
+  .courses-row a { font-size: 13.5px; font-weight: 600; color: var(--primary); text-decoration: none; padding: 5px 12px; border: 1px solid var(--border); border-radius: 100px; background: var(--surface); transition: border-color .15s; }
+  .courses-row a:hover { border-color: var(--primary); }
 
   /* ===== Teaser Semantix ===== */
   .stx { padding: 92px 24px; background: linear-gradient(135deg, var(--primary-dark), #2D1B4E); }
@@ -153,6 +179,31 @@ const pillars = [
     <div class="home-blog-all"><a href="/blog" class="btn btn-outline">Xem tất cả bài viết</a></div>
   </section>
 )}
+
+<!-- CÔNG CỤ & KHOÁ HỌC -->
+<section class="tools">
+  <div class="section-label">Công cụ &amp; Khoá học</div>
+  <h2 class="section-title">Ngoài Semantix, mình còn làm gì</h2>
+  <p class="tools-sub">Công cụ Google Sheets mình tự làm qua kênh <strong>Master Google Tools</strong>, và các khoá mình đứng lớp.</p>
+  <div class="tools-grid">
+    <a class="tool-card" href={MGT} target="_blank" rel="noopener">
+      <div class="tool-tag">GOOGLE SHEETS</div>
+      <div class="tool-title">Thư viện hàm Named Functions</div>
+      <div class="tool-desc">Bộ hàm tự đặt tên: tra cứu mở rộng, mail merge, gộp dữ liệu đa nguồn, đổi lịch âm/dương, tách họ tên… cho dân vận hành.</div>
+      <span class="tool-more">Xem ở Master Google Tools →</span>
+    </a>
+    <a class="tool-card" href={MGT} target="_blank" rel="noopener">
+      <div class="tool-tag">TEMPLATE</div>
+      <div class="tool-title">Template quản lý công việc</div>
+      <div class="tool-desc">Mẫu quản lý công việc &amp; tiến độ trên Google Sheets, thanh tiến độ tô màu theo trạng thái.</div>
+      <span class="tool-more">Xem ở Master Google Tools →</span>
+    </a>
+  </div>
+  <div class="courses-row">
+    <span class="courses-label">Khoá học mình dạy:</span>
+    {courses.map(c => <a href={c.href} target="_blank" rel="noopener">{c.name}</a>)}
+  </div>
+</section>
 
 <!-- LỜI NHẮN NGƯỜI SÁNG LẬP -->
 <FounderNote />

@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
-// RSS feed sinh lúc build — kênh "đất của mình": người đọc theo dõi qua trình
+// RSS feed sinh lúc build - kênh "đất của mình": người đọc theo dõi qua trình
 // đọc RSS, không phụ thuộc thuật toán nền tảng nào, không cần dịch vụ email.
 const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -34,10 +34,10 @@ export const GET: APIRoute = async ({ site }) => {
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n` +
     `  <channel>\n` +
-    `    <title>Tuấn LA Lab — Blog</title>\n` +
+    `    <title>Tuấn LA Lab - Blog</title>\n` +
     `    <link>${new URL('/blog/', base).href}</link>\n` +
     `    <atom:link href="${self}" rel="self" type="application/rss+xml" />\n` +
-    `    <description>Mỗi tuần một khái niệm data — gỡ gọn bằng chuyện công sở Việt. Bởi Lê Anh Tuấn.</description>\n` +
+    `    <description>Mỗi tuần một khái niệm data - gỡ gọn bằng chuyện công sở Việt. Bởi Lê Anh Tuấn.</description>\n` +
     `    <language>vi-VN</language>\n` +
     `    <lastBuildDate>${lastBuild}</lastBuildDate>\n` +
     items +

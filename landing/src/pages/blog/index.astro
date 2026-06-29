@@ -42,7 +42,7 @@ function searchKey(p: typeof all[number]) {
     .replace(/đ/g, 'd');
 }
 ---
-<BaseLayout title="Blog — Tuấn LA Lab" description="Blog của Lê Anh Tuấn: kiến thức thực chiến về data, AI và cách đưa dữ liệu vào quyết định — gỡ gọn bằng chuyện công sở Việt, mỗi tuần một khái niệm.">
+<BaseLayout title="Blog - Tuấn LA Lab" description="Blog của Lê Anh Tuấn: kiến thức thực chiến về data, AI và cách đưa dữ liệu vào quyết định - gỡ gọn bằng chuyện công sở Việt, mỗi tuần một khái niệm.">
 
 <style>
   .blog-hero { padding: 120px 24px 72px; background: linear-gradient(160deg,#0F172A 0%,#2D1B4E 60%,#0F172A 100%); text-align: center; }
@@ -176,7 +176,7 @@ function searchKey(p: typeof all[number]) {
 <div class="blog-hero">
   <div class="badge" style="margin-bottom:20px"><span class="badge-dot"></span>Kiến Thức Thực Chiến</div>
   <h1>Blog Semantix</h1>
-  <p>Data Analytics, AI, và cách đưa dữ liệu vào quyết định kinh doanh — viết cho người làm, không phải người nghiên cứu.</p>
+  <p>Data Analytics, AI, và cách đưa dữ liệu vào quyết định kinh doanh - viết cho người làm, không phải người nghiên cứu.</p>
   <a href="/blog/tu-dien-thuat-ngu/" class="glo-cta">📖 Từ điển thuật ngữ</a>
 </div>
 
@@ -185,7 +185,7 @@ function searchKey(p: typeof all[number]) {
   <!-- Search -->
   <div class="search-wrap">
     <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input id="blog-search" type="search" autocomplete="off" placeholder="Tìm bài viết theo tiêu đề, chủ đề… (gõ có dấu hay không đều được)" aria-label="Tìm bài viết" />
+    <input id="blog-search" type="search" autocomplete="off" placeholder="Tìm bài viết theo tiêu đề, chủ đề... (gõ có dấu hay không đều được)" aria-label="Tìm bài viết" />
     <button id="blog-search-clear" type="button" aria-label="Xoá tìm kiếm" hidden>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
@@ -264,7 +264,7 @@ function searchKey(p: typeof all[number]) {
   <!-- Newsletter -->
   <div class="newsletter">
     <h3>Nhận bài viết mới qua email</h3>
-    <p>Mỗi tuần một bài — thực chiến, không spam.</p>
+    <p>Mỗi tuần một bài - thực chiến, không spam.</p>
     <div class="newsletter-form">
       <input type="email" id="nl-email" class="newsletter-input" placeholder="email@company.com" />
       <button type="button" id="nl-submit" class="btn btn-primary" style="padding:12px 24px">Đăng Ký</button>
@@ -285,7 +285,7 @@ function searchKey(p: typeof all[number]) {
     const subject = encodeURIComponent('Đăng ký nhận bài viết Semantix');
     const body = encodeURIComponent('Cho mình đăng ký nhận bài mới qua email: ' + v);
     window.location.href = `mailto:hello@semantix.vn?subject=${subject}&body=${body}`;
-    if (nlMsg) { nlMsg.textContent = 'Đang mở email để gửi đăng ký — gửi giúp mình nhé!'; nlMsg.style.display = 'block'; }
+    if (nlMsg) { nlMsg.textContent = 'Đang mở email để gửi đăng ký - gửi giúp mình nhé!'; nlMsg.style.display = 'block'; }
   });
 
   /* ---- Filter: category chips + search box (combined) ---- */

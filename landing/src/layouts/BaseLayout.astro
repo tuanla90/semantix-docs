@@ -9,8 +9,8 @@ export interface Props {
   jsonLd?: Record<string, any>[];
 }
 const {
-  title = 'Tuấn LA Lab — Data & AI cho người Việt',
-  description = 'Tuấn LA Lab — nơi Lê Anh Tuấn gỡ từng khái niệm data cho dân công sở Việt bằng chuyện thật, và xây Semantix để biến tư duy đó thành công cụ.',
+  title = 'Tuấn LA Lab - Data & AI cho người Việt',
+  description = 'Tuấn LA Lab - nơi Lê Anh Tuấn gỡ từng khái niệm data cho dân công sở Việt bằng chuyện thật, và xây Semantix để biến tư duy đó thành công cụ.',
   image = DEFAULT_OG_IMAGE,
   type = 'website',
   jsonLd = [],
@@ -22,7 +22,7 @@ const site = Astro.site ?? new URL('https://semantix.vn');
 const canonical = new URL(path, site).href;
 const ogImage = new URL(image, site).href;
 
-// JSON-LD nền cho mọi trang. Trang con truyền thêm (Article/Breadcrumb…) qua prop `jsonLd`.
+// JSON-LD nền cho mọi trang. Trang con truyền thêm (Article/Breadcrumb...) qua prop `jsonLd`.
 const allLd: Record<string, any>[] = [
   {
     '@context': 'https://schema.org',
@@ -46,7 +46,7 @@ const allLd: Record<string, any>[] = [
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
   <meta name="robots" content="index,follow" />
-  <link rel="alternate" type="application/rss+xml" title="Tuấn LA Lab — Blog" href="/rss.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Tuấn LA Lab - Blog" href="/rss.xml" />
 
   <!-- Open Graph -->
   <meta property="og:type" content={type} />
@@ -119,7 +119,7 @@ const allLd: Record<string, any>[] = [
         <div class="logo-icon"><span class="logo-mono">LA</span></div>
         <span class="logo-text">Tuấn LA Lab</span>
       </a>
-      <div class="footer-tagline">Data &amp; AI cho người Việt. Mỗi tuần một khái niệm data — gỡ gọn bằng chuyện thật. Bởi Lê Anh Tuấn.</div>
+      <div class="footer-tagline">Data &amp; AI cho người Việt. Mỗi tuần một khái niệm data - gỡ gọn bằng chuyện thật. Bởi Lê Anh Tuấn.</div>
     </div>
     <div class="footer-col">
       <h4>Nội Dung</h4>

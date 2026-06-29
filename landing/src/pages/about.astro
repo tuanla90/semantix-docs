@@ -3,12 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const YT = 'https://www.youtube.com/@mastergoogletools';
 
-// Niềm tin nghề — rút từ chính cách mình làm việc, không phải tính năng sản phẩm.
+// Niềm tin nghề - rút từ chính cách mình làm việc, không phải tính năng sản phẩm.
 const beliefs = [
   {
     icon: '📐',
     title: 'Số nói dối khi quên ngữ cảnh',
-    desc: 'Con số trần trụi — bỏ quên trọng số, định nghĩa, chất lượng đầu vào — sẽ dẫn người đọc đi sai. Việc của người làm data là cấp lại ngữ cảnh đó.',
+    desc: 'Con số trần trụi - bỏ quên trọng số, định nghĩa, chất lượng đầu vào - sẽ dẫn người đọc đi sai. Việc của người làm data là cấp lại ngữ cảnh đó.',
   },
   {
     icon: '🧱',
@@ -18,7 +18,7 @@ const beliefs = [
   {
     icon: '🪜',
     title: 'Đứng trên vai công cụ đi trước',
-    desc: 'Excel, Power BI, Superset, Great Expectations… mỗi cái giỏi một việc. Mình giữ điểm mạnh của chúng thay vì phủ nhận — chỉ tự xây khi thật sự còn khoảng trống.',
+    desc: 'Excel, Power BI, Superset, Great Expectations... mỗi cái giỏi một việc. Mình giữ điểm mạnh của chúng thay vì phủ nhận - chỉ tự xây khi thật sự còn khoảng trống.',
   },
   {
     icon: '👐',
@@ -27,16 +27,16 @@ const beliefs = [
   },
 ];
 
-// Hành trình nghề — mốc & thành tích thật (đã được user đồng ý nêu tên công ty).
+// Hành trình nghề - mốc & thành tích thật (đã được user đồng ý nêu tên công ty).
 const milestones = [
-  { year: 'Khởi đầu', text: 'Dân sư phạm: dạy Vật lý lớp 12 (100% học sinh đỗ tốt nghiệp) và lập CLB Guitar ở ĐH Sư phạm Hà Nội. Mê chuyện "giải thích cho người khác hiểu" — thứ theo mình tới tận giờ.' },
+  { year: 'Khởi đầu', text: 'Dân sư phạm: dạy Vật lý lớp 12 (100% học sinh đỗ tốt nghiệp) và lập CLB Guitar ở ĐH Sư phạm Hà Nội. Mê chuyện "giải thích cho người khác hiểu" - thứ theo mình tới tận giờ.' },
   { year: 'BigSchool', text: 'Từ Business Analyst lên COO: quản team sản phẩm 30 người, dựng hạ tầng dữ liệu & báo cáo bằng Google Sheets + SQL, cải tiến quy trình +200%, tự động hoá báo cáo tiết kiệm 25 giờ/tháng. Đây cũng là gốc của kênh Master Google Tools.' },
-  { year: 'Viettel', text: 'Rẽ hẳn sang dữ liệu (Data Analyst / Data Science): xây Data Mining Platform, hệ AntiSpam và AI-targeted Marketing, fraud detection bằng ML; góp phần xây Viettel User Profile System — hàng nghìn đặc trưng cho 65 triệu người dùng; dựng hệ BI tự động cho Viettel Construction, tiết kiệm tối thiểu 1 triệu USD/năm. Đào tạo Scala/Spark & SQL/Metabase cho gần 100 nhân sự.' },
+  { year: 'Viettel', text: 'Rẽ hẳn sang dữ liệu (Data Analyst / Data Science): xây Data Mining Platform, hệ AntiSpam và AI-targeted Marketing, fraud detection bằng ML; góp phần xây Viettel User Profile System - hàng nghìn đặc trưng cho 65 triệu người dùng; dựng hệ BI tự động cho Viettel Construction, tiết kiệm tối thiểu 1 triệu USD/năm. Đào tạo Scala/Spark & SQL/Metabase cho gần 100 nhân sự.' },
   { year: 'Teko', text: 'Trưởng nhóm BI / Data Stewards trong hệ sinh thái VNLIFE–VNPAY: Project Owner hệ Tracking (kiểu Google Tag Manager), xây Customer Data Platform, Datamart cho VNPAY, hệ kiểm tra data quality, và tự động hoá ETL giúp dựng kho dữ liệu nhanh 30×. Báo cáo full-funnel bằng Growth Accounting, Cohort, RFM, HEART.' },
-  { year: 'Hôm nay', text: 'Trưởng nhóm BI ở một ngân hàng — đang POC semantic layer, đúng hạt giống của Semantix. Song song: kênh Master Google Tools, tư vấn chuyển đổi số cho SME (Google Sheets → AppSheet → Nocobase), và tự tay xây Semantix.' },
+  { year: 'Hôm nay', text: 'Trưởng nhóm BI ở một ngân hàng - đang POC semantic layer, đúng hạt giống của Semantix. Song song: kênh Master Google Tools, tư vấn chuyển đổi số cho SME (Google Sheets → AppSheet → Nocobase), và tự tay xây Semantix.' },
 ];
 
-// Đi dạy — hồ sơ công khai, nêu thẳng tên + link làm bảo chứng.
+// Đi dạy - hồ sơ công khai, nêu thẳng tên + link làm bảo chứng.
 const teaching = [
   { place: 'Vietmoz', course: 'GA4 Advanced', href: 'https://vietmoz.edu.vn/ga4-advanced/' },
   { place: 'MCI Vietnam', course: 'BI với Google Workspace', href: 'https://www.mcivietnam.com/course-detail/khoa-hoc-business-intelligence-with-google-workspace-advanced-track/' },
@@ -44,7 +44,7 @@ const teaching = [
   { place: 'gpems', course: 'BigQuery thực chiến: From Zero to Hero', href: 'https://gpems.net/course/khoa-hoc-bigquery-thuc-chien-from-zero-to-hero-81' },
 ];
 ---
-<BaseLayout title="Về mình — Lê Anh Tuấn · Tuấn LA Lab" description="Mình là Lê Anh Tuấn — gần 10 năm làm dữ liệu & tự động hoá tại BigSchool, Viettel, Teko; nay trưởng nhóm BI ngân hàng. Đây là hành trình nghề, niềm tin, và lý do mình xây Semantix.">
+<BaseLayout title="Về mình - Lê Anh Tuấn · Tuấn LA Lab" description="Mình là Lê Anh Tuấn - gần 10 năm làm dữ liệu & tự động hoá tại BigSchool, Viettel, Teko; nay trưởng nhóm BI ngân hàng. Đây là hành trình nghề, niềm tin, và lý do mình xây Semantix.">
 
 <style>
   .page-hero { padding: 120px 24px 72px; background: linear-gradient(160deg,#0F172A 0%,#2D1B4E 60%,#0F172A 100%); text-align: center; }
@@ -144,9 +144,9 @@ const teaching = [
       </div>
     </div>
     <div class="mission-body">
-      <p>Mình là <strong>Lê Anh Tuấn</strong> — gần 10 năm làm dữ liệu và tự động hoá, đi qua <strong>BigSchool</strong>, <strong>Viettel</strong> và <strong>Teko</strong>, giờ là trưởng nhóm BI ở một ngân hàng.</p>
-      <p>Mình cũng dựng kênh <a href={YT} target="_blank" rel="noopener" style="color:var(--primary);font-weight:600">Master Google Tools</a> để chia sẻ cách làm chủ hệ Google — Sheets, Apps Script, AppSheet, Looker Studio, BigQuery, GA4 — và đi dạy ở vài nơi.</p>
-      <p>Tất cả những năm đó dẫn mình tới một niềm tin nghề, và tới <strong>Semantix</strong> — công cụ mình đang tự xây. Trang này kể lại hành trình ấy.</p>
+      <p>Mình là <strong>Lê Anh Tuấn</strong> - gần 10 năm làm dữ liệu và tự động hoá, đi qua <strong>BigSchool</strong>, <strong>Viettel</strong> và <strong>Teko</strong>, giờ là trưởng nhóm BI ở một ngân hàng.</p>
+      <p>Mình cũng dựng kênh <a href={YT} target="_blank" rel="noopener" style="color:var(--primary);font-weight:600">Master Google Tools</a> để chia sẻ cách làm chủ hệ Google - Sheets, Apps Script, AppSheet, Looker Studio, BigQuery, GA4 - và đi dạy ở vài nơi.</p>
+      <p>Tất cả những năm đó dẫn mình tới một niềm tin nghề, và tới <strong>Semantix</strong> - công cụ mình đang tự xây. Trang này kể lại hành trình ấy.</p>
     </div>
   </div>
 </section>
@@ -194,7 +194,7 @@ const teaching = [
 <!-- Teaching -->
 <section class="teach-section">
   <div class="section-label">Dạy & Chia Sẻ</div>
-  <h2 class="section-title">Không chỉ làm — mình còn đi dạy</h2>
+  <h2 class="section-title">Không chỉ làm - mình còn đi dạy</h2>
   <p class="teach-sub">Kênh <a href={YT} target="_blank" rel="noopener">Master Google Tools</a> mỗi tuần một thủ thuật data, cùng các khoá mình đứng lớp:</p>
   <div class="teach-grid">
     {teaching.map(t => (
@@ -212,7 +212,7 @@ const teaching = [
   <div class="section-label">Sản Phẩm</div>
   <h2 class="section-title">Mình đang xây Semantix</h2>
   <div class="founder-card">
-    <p class="founder-bio">Sau khi dùng hết những công cụ tốt nhất, mình vẫn thấy một khoảng trống cho doanh nghiệp Việt: người chủ không tự hỏi được dữ liệu của chính mình nếu thiếu một người biết SQL ngồi giữa. <strong>Semantix</strong> là câu trả lời mình đang tự xây — hỏi dữ liệu bằng tiếng Việt, neo trên một <strong>semantic layer</strong> để AI hiểu đúng ngữ cảnh, chạy trên hạ tầng của bạn.</p>
+    <p class="founder-bio">Sau khi dùng hết những công cụ tốt nhất, mình vẫn thấy một khoảng trống cho doanh nghiệp Việt: người chủ không tự hỏi được dữ liệu của chính mình nếu thiếu một người biết SQL ngồi giữa. <strong>Semantix</strong> là câu trả lời mình đang tự xây - hỏi dữ liệu bằng tiếng Việt, neo trên một <strong>semantic layer</strong> để AI hiểu đúng ngữ cảnh, chạy trên hạ tầng của bạn.</p>
     <p class="founder-bio">Sản phẩm còn trẻ và mình hoàn thiện nó mỗi tuần. <a href="/semantix">Xem Semantix →</a></p>
   </div>
 </section>

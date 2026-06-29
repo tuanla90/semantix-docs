@@ -7,19 +7,19 @@ const industries = [
     id: 'retail',
     emoji: '🛒',
     tag: 'Thương Mại & Bán Lẻ',
-    headline: 'Từ doanh thu hàng ngày đến insight khách hàng — tất cả trong một câu hỏi',
+    headline: 'Từ doanh thu hàng ngày đến insight khách hàng - tất cả trong một câu hỏi',
     desc: 'Chuỗi bán lẻ và e-commerce phải xử lý hàng triệu giao dịch, hàng nghìn SKU, và khách hàng phân tán khắp nơi. Team kinh doanh không thể chờ 2–3 ngày để có một báo cáo.',
     pain: [
-      'Mỗi chi nhánh báo cáo theo cách riêng — số liệu không khớp',
+      'Mỗi chi nhánh báo cáo theo cách riêng - số liệu không khớp',
       'Phân tích tồn kho và doanh thu phải nhờ data team mỗi lần',
       'Không biết sản phẩm nào đang thực sự có lãi sau khi trừ chi phí',
     ],
     solution: [
       'Hỏi doanh thu theo chuỗi, chi nhánh, SKU trong vài giây',
       'Phân tích ABC inventory, sell-through rate tự động',
-      'Cohort khách hàng, RFM — phát hiện churn sớm',
+      'Cohort khách hàng, RFM - phát hiện churn sớm',
     ],
-    metric: { num: '0', label: 'ngày chờ báo cáo', note: 'tự hỏi — có số ngay, không chờ data team' },
+    metric: { num: '0', label: 'ngày chờ báo cáo', note: 'tự hỏi - có số ngay, không chờ data team' },
     color: '#783ABF',
     bg: '#F3EDFB',
   },
@@ -27,19 +27,19 @@ const industries = [
     id: 'finance',
     emoji: '🏦',
     tag: 'Tài Chính & Ngân Hàng',
-    headline: 'Báo cáo tuân thủ, phân tích rủi ro — không cần viết lại SQL mỗi quý',
+    headline: 'Báo cáo tuân thủ, phân tích rủi ro - không cần viết lại SQL mỗi quý',
     desc: 'Nhóm Finance và Risk phải tổng hợp dữ liệu từ nhiều hệ thống, đảm bảo số liệu nhất quán cho kiểm toán, và trả lời câu hỏi của Ban Lãnh đạo trong thời gian thực.',
     pain: [
-      'KPI tài chính mỗi người tính một kiểu — xảy ra tranh luận trong họp',
+      'KPI tài chính mỗi người tính một kiểu - xảy ra tranh luận trong họp',
       'Báo cáo định kỳ mất 1–2 ngày tổng hợp thủ công từ nhiều nguồn',
       'Câu hỏi ad-hoc từ CFO phải chờ team data xử lý',
     ],
     solution: [
-      'Định nghĩa P&L, EBITDA, NPL một lần — toàn bộ tổ chức dùng cùng công thức',
+      'Định nghĩa P&L, EBITDA, NPL một lần - toàn bộ tổ chức dùng cùng công thức',
       'Dashboard tài chính cập nhật real-time, tự động gửi báo cáo định kỳ',
-      'CFO tự hỏi và nhận số liệu chính xác — không cần chờ',
+      'CFO tự hỏi và nhận số liệu chính xác - không cần chờ',
     ],
-    metric: { num: '1 lần', label: 'định nghĩa metric, dùng mãi', note: 'P&L, EBITDA — cả nhà một con số' },
+    metric: { num: '1 lần', label: 'định nghĩa metric, dùng mãi', note: 'P&L, EBITDA - cả nhà một con số' },
     color: '#059669',
     bg: '#ECFDF5',
   },
@@ -47,16 +47,16 @@ const industries = [
     id: 'fnb',
     emoji: '🍜',
     tag: 'F&B & Chuỗi Nhà Hàng',
-    headline: 'Biết cửa hàng nào đang lỗ, món nào bán chạy — trước khi quá muộn',
-    desc: 'Chuỗi F&B cần theo dõi hiệu suất từng outlet, từng ca, từng món — trong thời gian thực. Mỗi quyết định menu hay nhân sự cần dữ liệu chứ không phải cảm tính.',
+    headline: 'Biết cửa hàng nào đang lỗ, món nào bán chạy - trước khi quá muộn',
+    desc: 'Chuỗi F&B cần theo dõi hiệu suất từng outlet, từng ca, từng món - trong thời gian thực. Mỗi quyết định menu hay nhân sự cần dữ liệu chứ không phải cảm tính.',
     pain: [
       'Manager cửa hàng không có công cụ tự theo dõi doanh thu ca của mình',
-      'Menu engineering — không biết món nào Star, Dog, Plow Horse, Puzzle',
+      'Menu engineering - không biết món nào Star, Dog, Plow Horse, Puzzle',
       'Food cost, waste không được theo dõi theo thời gian thực',
     ],
     solution: [
-      'Dashboard outlet theo ca, theo ngày — manager tự xem không cần hỏi',
-      'Hỏi "top 10 món có margin cao nhất tháng này" — nhận kết quả ngay',
+      'Dashboard outlet theo ca, theo ngày - manager tự xem không cần hỏi',
+      'Hỏi "top 10 món có margin cao nhất tháng này" - nhận kết quả ngay',
       'Cảnh báo Telegram khi doanh thu outlet giảm dưới ngưỡng',
     ],
     metric: { num: 'Tức thì', label: 'doanh thu theo ca & món', note: 'manager tự xem, không cần hỏi' },
@@ -70,12 +70,12 @@ const industries = [
     headline: 'Tối ưu chi phí vận chuyển khi mọi con số đều ẩn trong hàng triệu dòng log',
     desc: 'Công ty logistics xử lý hàng triệu shipment, hàng trăm tài xế, hàng nghìn tuyến đường. Phát hiện bottleneck và tối ưu chi phí đòi hỏi phân tích dữ liệu phức tạp mà không phải lúc nào cũng có data engineer rảnh.',
     pain: [
-      'On-time delivery rate không được theo dõi tập trung — mỗi đội báo cáo riêng',
+      'On-time delivery rate không được theo dõi tập trung - mỗi đội báo cáo riêng',
       'Không biết tài xế nào / tuyến nào đang lỗ sau khi tính đủ chi phí',
       'Claim khiếu nại khách hàng không có dữ liệu để đối chiếu nhanh',
     ],
     solution: [
-      'Hỏi "tuyến Hà Nội – Hải Phòng có margin bao nhiêu tháng này?" — ngay lập tức',
+      'Hỏi "tuyến Hà Nội – Hải Phòng có margin bao nhiêu tháng này?" - ngay lập tức',
       'Funnel giao hàng: từ đơn → pickup → transit → delivered → trả hàng',
       'Cảnh báo tự động khi tỷ lệ giao trễ vượt ngưỡng SLA',
     ],
@@ -92,7 +92,7 @@ const roles = [
   { icon: '🔌', title: 'Developer / Product Team', desc: 'Nhúng Dashboard vào ứng dụng qua Embed Token. Query dữ liệu qua REST API. Không cần xây BI từ đầu.', href: DOCS_URL },
 ];
 ---
-<BaseLayout title="Giải Pháp — Semantix" description="Semantix cho Retail, Tài chính, F&B, Logistics — AI phân tích dữ liệu theo từng ngành, từng vai trò.">
+<BaseLayout title="Giải Pháp - Semantix" description="Semantix cho Retail, Tài chính, F&B, Logistics - AI phân tích dữ liệu theo từng ngành, từng vai trò.">
 
 <style>
   .page-hero { padding: 120px 24px 72px; background: linear-gradient(160deg,#0F172A 0%,#2D1B4E 60%,#0F172A 100%); text-align: center; }
@@ -152,7 +152,7 @@ const roles = [
 <div class="page-hero">
   <div class="badge" style="margin-bottom:20px"><span class="badge-dot"></span>Từng ngành, từng vai trò</div>
   <h1>Semantix giải quyết<br/>bài toán dữ liệu của bạn</h1>
-  <p>Không phải tool chung chung. Semantix được cấu hình cho từng nghiệp vụ — từ Retail đến Finance, từ F&B đến Logistics.</p>
+  <p>Không phải tool chung chung. Semantix được cấu hình cho từng nghiệp vụ - từ Retail đến Finance, từ F&B đến Logistics.</p>
 </div>
 
 {industries.map((ind, idx) => (
@@ -229,7 +229,7 @@ const roles = [
 <!-- CTA -->
 <section class="solutions-cta">
   <h2>Ngành của bạn chưa thấy ở đây?</h2>
-  <p>Semantix được cấu hình hoàn toàn theo nghiệp vụ của bạn — liên hệ để được demo trực tiếp.</p>
+  <p>Semantix được cấu hình hoàn toàn theo nghiệp vụ của bạn - liên hệ để được demo trực tiếp.</p>
   <div class="cta-buttons">
     <a href="mailto:hello@semantix.vn" class="btn btn-primary btn-large">Đặt Lịch Demo</a>
     <a href="/docs/vi/free-trial/" class="btn btn-outline btn-large">Tự Dùng Thử Ngay</a>

@@ -1,4 +1,4 @@
-// Author registry — hồ sơ tác giả dùng cho khối bio cuối mỗi bài.
+// Author registry - hồ sơ tác giả dùng cho khối bio cuối mỗi bài.
 // Toàn bộ blog do một tác giả thật: "Lê Anh Tuấn" (bio + credential công khai).
 // Giữ fallback authorTitle phòng khi có byline chưa khai báo ở đây.
 
@@ -17,7 +17,7 @@ export const AUTHORS: Record<string, AuthorInfo> = {
   'Lê Anh Tuấn': {
     title: 'Trưởng nhóm BI · Giảng viên BI & GA4',
     bio:
-      'Hơn 10 năm trong nghề dữ liệu — từ Data Analyst tại một tập đoàn viễn thông ' +
+      'Hơn 10 năm trong nghề dữ liệu - từ Data Analyst tại một tập đoàn viễn thông ' +
       'đầu ngành, trưởng nhóm DA tại một công ty công nghệ lõi của hệ sinh thái ' +
       'e-commerce, đến trưởng nhóm BI tại một ngân hàng, nơi anh đang đưa semantic ' +
       'layer thành dự án trọng điểm. Anh giảng dạy GA4, BI trên Google Workspace và ' +

@@ -6,7 +6,7 @@ const plans = [
     name: 'Free Trial',
     price: '0đ',
     period: 'miễn phí',
-    desc: 'Trải nghiệm AI hỏi đáp dữ liệu với Google Sheets — không cần thẻ tín dụng.',
+    desc: 'Trải nghiệm AI hỏi đáp dữ liệu với Google Sheets - không cần thẻ tín dụng.',
     cta: 'Bắt Đầu Ngay',
     ctaHref: '/docs/vi/free-trial/',
     highlight: false,
@@ -15,7 +15,7 @@ const plans = [
       { label: '1 AI Assistant', ok: true },
       { label: '50 câu hỏi AI / tháng', ok: true },
       { label: 'Xem dashboard mẫu', ok: true },
-      { label: 'Database thực (PostgreSQL, MySQL…)', ok: false },
+      { label: 'Database thực (PostgreSQL, MySQL...)', ok: false },
       { label: 'Gộp dữ liệu đa nguồn (bảng ảo)', ok: false },
       { label: 'Cảnh báo Zalo / Telegram', ok: false },
       { label: 'Xuất báo cáo PowerPoint', ok: false },
@@ -89,34 +89,34 @@ const plans = [
 
 const compRows = [
   { label: 'Nguồn dữ liệu kết nối', free: 'Google Sheets', std: 'Sheets + 3 DB', pro: '10+ loại', ent: '10+ + tuỳ chỉnh' },
-  { label: 'Nối & gộp đa nguồn (mapping + union)', free: '—', std: '✓', pro: '✓', ent: '✓' },
+  { label: 'Nối & gộp đa nguồn (mapping + union)', free: '-', std: '✓', pro: '✓', ent: '✓' },
   { label: 'AI Assistants', free: '1', std: '3', pro: '5', ent: 'Không giới hạn' },
   { label: 'Câu hỏi AI / tháng', free: '50', std: '300', pro: 'Không giới hạn', ent: 'Không giới hạn' },
-  { label: 'Dashboard kéo thả', free: '—', std: '✓', pro: '✓', ent: '✓' },
-  { label: 'Cảnh báo Zalo / Telegram / Slack', free: '—', std: '✓', pro: '✓', ent: '✓' },
-  { label: 'Xuất PowerPoint 1-click', free: '—', std: '✓', pro: '✓', ent: '✓' },
-  { label: 'Báo cáo định kỳ tự động (email)', free: '—', std: '—', pro: '✓', ent: '✓' },
-  { label: 'Phân quyền vai trò (Admin / Viewer)', free: '—', std: '✓', pro: '✓', ent: '✓' },
-  { label: 'Từ điển Doanh nghiệp (Semantic Layer)', free: '—', std: '—', pro: '✓', ent: '✓' },
-  { label: 'Phân quyền dòng dữ liệu (RLS)', free: '—', std: '—', pro: '✓', ent: '✓' },
-  { label: 'Nhúng Dashboard vào app / web', free: '—', std: '—', pro: '✓', ent: '✓' },
-  { label: 'Data Portal & Pipelines tự động', free: '—', std: '—', pro: '✓', ent: '✓' },
-  { label: 'White-Label (logo & thương hiệu riêng)', free: '—', std: '—', pro: '—', ent: '✓' },
-  { label: 'Đăng nhập một lần (SSO / SAML)', free: '—', std: '—', pro: '—', ent: '✓' },
-  { label: 'Tự lưu trữ (On-premise / Docker)', free: '—', std: '—', pro: '—', ent: '✓' },
-  { label: 'AI Provider riêng (Ollama / Azure OAI)', free: '—', std: '—', pro: '—', ent: '✓' },
-  { label: 'SLA uptime', free: '—', std: 'Best-effort', pro: 'Best-effort', ent: 'Theo thoả thuận' },
+  { label: 'Dashboard kéo thả', free: '-', std: '✓', pro: '✓', ent: '✓' },
+  { label: 'Cảnh báo Zalo / Telegram / Slack', free: '-', std: '✓', pro: '✓', ent: '✓' },
+  { label: 'Xuất PowerPoint 1-click', free: '-', std: '✓', pro: '✓', ent: '✓' },
+  { label: 'Báo cáo định kỳ tự động (email)', free: '-', std: '-', pro: '✓', ent: '✓' },
+  { label: 'Phân quyền vai trò (Admin / Viewer)', free: '-', std: '✓', pro: '✓', ent: '✓' },
+  { label: 'Từ điển Doanh nghiệp (Semantic Layer)', free: '-', std: '-', pro: '✓', ent: '✓' },
+  { label: 'Phân quyền dòng dữ liệu (RLS)', free: '-', std: '-', pro: '✓', ent: '✓' },
+  { label: 'Nhúng Dashboard vào app / web', free: '-', std: '-', pro: '✓', ent: '✓' },
+  { label: 'Data Portal & Pipelines tự động', free: '-', std: '-', pro: '✓', ent: '✓' },
+  { label: 'White-Label (logo & thương hiệu riêng)', free: '-', std: '-', pro: '-', ent: '✓' },
+  { label: 'Đăng nhập một lần (SSO / SAML)', free: '-', std: '-', pro: '-', ent: '✓' },
+  { label: 'Tự lưu trữ (On-premise / Docker)', free: '-', std: '-', pro: '-', ent: '✓' },
+  { label: 'AI Provider riêng (Ollama / Azure OAI)', free: '-', std: '-', pro: '-', ent: '✓' },
+  { label: 'SLA uptime', free: '-', std: 'Best-effort', pro: 'Best-effort', ent: 'Theo thoả thuận' },
   { label: 'Hỗ trợ', free: 'Community', std: 'Email', pro: 'Email ưu tiên', ent: 'Dedicated + onboarding' },
 ];
 
 const faqs = [
   {
     q: 'Tôi có thể dùng thử trước khi mua không?',
-    a: 'Có — theo hai cách. Gói Free cho kết nối Google Sheets và dùng AI Chat miễn phí, không giới hạn thời gian, không cần thẻ tín dụng. Ngoài ra các gói trả phí đều có 14 ngày dùng thử đầy đủ tính năng. Nâng cấp bất kỳ lúc nào.',
+    a: 'Có - theo hai cách. Gói Free cho kết nối Google Sheets và dùng AI Chat miễn phí, không giới hạn thời gian, không cần thẻ tín dụng. Ngoài ra các gói trả phí đều có 14 ngày dùng thử đầy đủ tính năng. Nâng cấp bất kỳ lúc nào.',
   },
   {
     q: 'Một "workspace" là gì?',
-    a: 'Workspace là một không gian làm việc độc lập — có thể là một công ty, một phòng ban, hoặc một dự án. Mỗi workspace có connections, data models, và AI assistants riêng.',
+    a: 'Workspace là một không gian làm việc độc lập - có thể là một công ty, một phòng ban, hoặc một dự án. Mỗi workspace có connections, data models, và AI assistants riêng.',
   },
   {
     q: 'Dữ liệu của tôi có được lưu trên server của Semantix không?',
@@ -136,7 +136,7 @@ const faqs = [
   },
 ];
 ---
-<BaseLayout title="Bảng Giá — Semantix" description="Chọn gói phù hợp: Free Trial với Google Sheets, Pro cho team tăng trưởng, Enterprise cho doanh nghiệp lớn.">
+<BaseLayout title="Bảng Giá - Semantix" description="Chọn gói phù hợp: Free Trial với Google Sheets, Pro cho team tăng trưởng, Enterprise cho doanh nghiệp lớn.">
 
 <style>
   .page-hero {
@@ -225,7 +225,7 @@ const faqs = [
 <div class="page-hero">
   <div class="badge" style="margin-bottom:20px"><span class="badge-dot"></span>Miễn phí bắt đầu, nâng cấp khi cần</div>
   <h1>Giá đơn giản,<br/>không phí ẩn</h1>
-  <p>Từ miễn phí đến Enterprise — chọn đúng gói cho quy mô team của bạn. Không phí ẩn, không tính tiền theo đầu người.</p>
+  <p>Từ miễn phí đến Enterprise - chọn đúng gói cho quy mô team của bạn. Không phí ẩn, không tính tiền theo đầu người.</p>
 </div>
 
 <!-- Pricing cards -->
@@ -259,7 +259,7 @@ const faqs = [
     ))}
   </div>
   <p style="text-align:center;margin-top:32px;font-size:13px;color:var(--muted)">
-    Thanh toán theo năm — giảm thêm <strong>20%</strong>. Liên hệ <a href="mailto:hello@semantix.vn" style="color:var(--primary)">hello@semantix.vn</a>
+    Thanh toán theo năm - giảm thêm <strong>20%</strong>. Liên hệ <a href="mailto:hello@semantix.vn" style="color:var(--primary)">hello@semantix.vn</a>
   </p>
 </section>
 
@@ -319,7 +319,7 @@ const faqs = [
 <!-- Bottom CTA -->
 <section class="pricing-cta">
   <h2>Sẵn sàng bắt đầu?</h2>
-  <p>Kết nối dữ liệu đầu tiên trong 15 phút — hoàn toàn miễn phí.</p>
+  <p>Kết nối dữ liệu đầu tiên trong 15 phút - hoàn toàn miễn phí.</p>
   <div class="cta-buttons">
     <a href="/docs/vi/free-trial/" class="btn btn-white">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>

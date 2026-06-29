@@ -406,17 +406,20 @@ nav {
 .step-desc { font-size: 15px; color: var(--muted); line-height: 1.7; }
 .step-code {
   margin-top: 14px;
-  background: var(--dark);
+  background: #111A2E;
+  border: 1px solid #2A3650;
   border-radius: 10px;
-  padding: 14px 18px;
+  padding: 16px 18px;
   font-family: 'Courier New', monospace;
-  font-size: 13px;
-  color: #94A3B8;
-  line-height: 1.8;
+  font-size: 13.5px;
+  color: #DBE3EE;
+  line-height: 1.75;
 }
-.step-code .kw { color: #9460D4; }
-.step-code .str { color: #34D399; }
-.step-code .cmt { color: #475569; }
+.step-code .cl { display: block; }
+.step-code .cl + .cl { margin-top: 3px; }
+.step-code .kw  { color: #C4A5F0; }
+.step-code .str { color: #5EEAD4; }
+.step-code .cmt { color: #8B9AB3; }
 
 /* ── COMPARISON ── */
 .comparison-section { padding: 100px 24px; background: var(--white); }

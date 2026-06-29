@@ -5,22 +5,22 @@ const values = [
   {
     icon: '🎯',
     title: 'Dữ liệu cho mọi người',
-    desc: 'Không chỉ data team. Chúng tôi tin rằng mọi người trong tổ chức — từ manager đến nhân viên sales — đều có quyền tự truy cập dữ liệu mà không cần phụ thuộc vào ai.',
+    desc: 'Không chỉ data team. Tôi tin mọi người trong tổ chức — từ manager đến nhân viên sales — đều có quyền tự truy cập dữ liệu mà không phải phụ thuộc vào ai.',
   },
   {
     icon: '🔒',
     title: 'Dữ liệu không rời khỏi của bạn',
-    desc: 'Chúng tôi không lưu trữ dữ liệu kinh doanh của khách hàng. Truy vấn chạy trực tiếp trên database của bạn. Đây là nguyên tắc không thể thương lượng.',
+    desc: 'Semantix không lưu trữ dữ liệu kinh doanh của bạn. Truy vấn chạy trực tiếp trên database của bạn. Đây là nguyên tắc không thể thương lượng.',
   },
   {
     icon: '🌏',
     title: 'Xây cho thị trường Việt Nam',
-    desc: 'Ngôn ngữ, nghiệp vụ, văn hóa doanh nghiệp Việt Nam là trọng tâm của Semantix. Chúng tôi không phải một tool nước ngoài được Việt hóa bề ngoài.',
+    desc: 'Ngôn ngữ, nghiệp vụ, văn hóa doanh nghiệp Việt Nam là trọng tâm của Semantix — không phải một tool nước ngoài được Việt hóa bề ngoài.',
   },
   {
     icon: '⚡',
     title: 'Chất lượng qua tốc độ',
-    desc: 'Một câu hỏi phải có câu trả lời trong vòng 5 giây. Nếu AI trả lời sai, chúng tôi coi đó là lỗi cần sửa — không phải lý do để chấp nhận.',
+    desc: 'Một câu hỏi phải có câu trả lời trong vòng 5 giây. Nếu AI trả lời sai, tôi coi đó là lỗi cần sửa — không phải lý do để chấp nhận.',
   },
 ];
 
@@ -37,10 +37,10 @@ const founder = {
   avatar: 'T',
 };
 ---
-<BaseLayout title="Về Chúng Tôi — Semantix" description="Semantix được xây dựng bởi người Việt, cho doanh nghiệp Việt. Sứ mệnh: đưa sức mạnh dữ liệu đến tay mọi người trong tổ chức.">
+<BaseLayout title="Về mình — Lê Anh Tuấn · Tuấn LA Lab" description="Mình là Lê Anh Tuấn, hơn 10 năm làm data — từ analyst đến trưởng nhóm BI. Đây là hành trình, niềm tin nghề, và lý do mình xây Semantix.">
 
 <style>
-  .page-hero { padding: 120px 24px 72px; background: linear-gradient(160deg,#0F172A 0%,#1E1B4B 60%,#0F172A 100%); text-align: center; }
+  .page-hero { padding: 120px 24px 72px; background: linear-gradient(160deg,#0F172A 0%,#2D1B4E 60%,#0F172A 100%); text-align: center; }
   .page-hero h1 { font-size: clamp(32px,4.5vw,52px); font-weight: 900; color: #fff; letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 16px; }
   .page-hero p  { font-size: 18px; color: #94A3B8; max-width: 600px; margin: 0 auto; line-height: 1.65; }
 
@@ -101,7 +101,7 @@ const founder = {
   }
   .founder-avatar {
     flex-shrink: 0; width: 80px; height: 80px; border-radius: 50%;
-    background: #EEF2FF; color: #4F46E5; font-size: 30px; font-weight: 800;
+    background: #F3EDFB; color: #783ABF; font-size: 30px; font-weight: 800;
     display: flex; align-items: center; justify-content: center;
   }
   .founder-name { font-size: 20px; font-weight: 800; color: var(--dark); letter-spacing: -0.4px; }
@@ -112,16 +112,16 @@ const founder = {
   .founder-bio a:hover { border-bottom-color: var(--primary); }
 
   /* CTA */
-  .about-cta { padding: 80px 24px; background: linear-gradient(135deg, var(--primary-dark), #1E1B4B); text-align: center; }
+  .about-cta { padding: 80px 24px; background: linear-gradient(135deg, var(--primary-dark), #2D1B4E); text-align: center; }
   .about-cta h2 { font-size: clamp(26px,3.5vw,40px); font-weight: 800; color: var(--white); letter-spacing: -0.8px; margin-bottom: 14px; }
   .about-cta p  { font-size: 17px; color: #94A3B8; margin-bottom: 36px; }
 </style>
 
 <!-- Hero -->
 <div class="page-hero">
-  <div class="badge" style="margin-bottom:20px"><span class="badge-dot"></span>Made in Vietnam 🇻🇳</div>
-  <h1>Chúng tôi tin dữ liệu<br/>không nên là đặc quyền</h1>
-  <p>Semantix được xây dựng để mọi người trong tổ chức — không chỉ data team — có thể tự trả lời câu hỏi bằng dữ liệu thực, ngay lập tức.</p>
+  <div class="badge" style="margin-bottom:20px"><span class="badge-dot"></span>Lê Anh Tuấn · Tuấn LA Lab</div>
+  <h1>Hơn 10 năm mình đọc số<br/>để biết chỗ nào đang hỏng</h1>
+  <p>Từ analyst đến trưởng nhóm BI, mình tin một điều: con số trần trụi sẽ nói dối khi ta quên mất ngữ cảnh. Đây là hành trình, niềm tin nghề, và lý do mình xây Semantix.</p>
 </div>
 
 <!-- Mission -->
@@ -154,7 +154,7 @@ const founder = {
 <!-- Values -->
 <section class="values-section">
   <div class="section-label">Giá Trị Cốt Lõi</div>
-  <h2 class="section-title">Những điều chúng tôi không thỏa hiệp</h2>
+  <h2 class="section-title">Những điều tôi tin</h2>
   <div class="values-grid">
     {values.map(v => (
       <div class="value-card">
@@ -200,11 +200,11 @@ const founder = {
 
 <!-- CTA -->
 <section class="about-cta">
-  <h2>Cùng chúng tôi<br/>thay đổi cách doanh nghiệp Việt dùng dữ liệu</h2>
-  <p>Bắt đầu miễn phí hôm nay. Không cần setup phức tạp.</p>
+  <h2>Đi cùng mình nhé</h2>
+  <p>Mỗi tuần một khái niệm data. Đọc blog, xem video, hoặc thử công cụ mình đang xây.</p>
   <div class="cta-buttons">
-    <a href="/docs/vi/free-trial/" class="btn btn-white">Bắt Đầu Miễn Phí</a>
-    <a href="mailto:hello@semantix.vn" class="btn btn-ghost-white">Liên Hệ Chúng Tôi</a>
+    <a href="/blog" class="btn btn-white">Đọc blog</a>
+    <a href="https://www.youtube.com/@mastergoogletools" target="_blank" rel="noopener" class="btn btn-ghost-white">Theo dõi kênh</a>
   </div>
 </section>
 

@@ -83,19 +83,19 @@ const allLd: Record<string, any>[] = [
           <path d="M9 6L12 7.5V10.5L9 12L6 10.5V7.5L9 6Z" fill="white" fill-opacity="0.5"/>
         </svg>
       </div>
-      <span class="logo-text">Semantix</span>
+      <span class="logo-text">Tuấn <span style="color:var(--primary)">LA</span> Lab</span>
     </a>
     <ul class="nav-links">
-      <li><a href="/solutions" class={path.startsWith('/solutions') ? 'nav-active' : ''}>Giải Pháp</a></li>
-      <li><a href="/pricing"   class={path.startsWith('/pricing')   ? 'nav-active' : ''}>Bảng Giá</a></li>
       <li><a href="/blog"      class={path.startsWith('/blog')      ? 'nav-active' : ''}>Blog</a></li>
+      <li><a href="/video"     class={path.startsWith('/video')     ? 'nav-active' : ''}>Video</a></li>
+      <li><a href="/semantix"  class={path.startsWith('/semantix') || path.startsWith('/solutions') || path.startsWith('/pricing') ? 'nav-active' : ''}>Semantix</a></li>
       <li><a href="/huong-dan" class={path.startsWith('/huong-dan') ? 'nav-active' : ''}>Hướng Dẫn</a></li>
-      <li><a href="/about"     class={path.startsWith('/about')     ? 'nav-active' : ''}>Về Chúng Tôi</a></li>
+      <li><a href="/about"     class={path.startsWith('/about')     ? 'nav-active' : ''}>Về Mình</a></li>
       <li><a href={DOCS_URL} target="_blank" rel="noopener">Tài Liệu</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="/" class="btn btn-ghost" style="font-size:13px">Demo</a>
-      <a href="/pricing" class="btn btn-primary">Dùng Thử Miễn Phí</a>
+      <a href="/video" class="btn btn-ghost" style="font-size:13px">Xem Video</a>
+      <a href="/semantix" class="btn btn-primary">Dùng Thử Semantix</a>
     </div>
   </div>
 </nav>
@@ -103,7 +103,7 @@ const allLd: Record<string, any>[] = [
 <!-- BACK TO TOP -->
 <button id="back-to-top" title="Lên đầu trang"
   style="position:fixed;bottom:28px;right:28px;z-index:200;width:44px;height:44px;border-radius:50%;
-         background:var(--primary);color:white;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(79,70,229,.4);
+         background:var(--primary);color:white;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(120,58,191,.4);
          display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;
          transition:opacity .25s,transform .25s;transform:translateY(8px)">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
@@ -119,41 +119,40 @@ const allLd: Record<string, any>[] = [
         <div class="logo-icon">
           <svg viewBox="0 0 18 18" fill="none"><path d="M9 2L15 5.5V12.5L9 16L3 12.5V5.5L9 2Z" fill="white" fill-opacity="0.9"/><path d="M9 6L12 7.5V10.5L9 12L6 10.5V7.5L9 6Z" fill="white" fill-opacity="0.5"/></svg>
         </div>
-        <span class="logo-text">Semantix</span>
+        <span class="logo-text">Tuấn LA Lab</span>
       </a>
-      <div class="footer-tagline">Nền tảng AI phân tích dữ liệu cho doanh nghiệp Việt Nam. Hỏi bằng tiếng Việt — nhận kết quả ngay.</div>
+      <div class="footer-tagline">Data &amp; AI cho người Việt. Mỗi tuần một khái niệm data — gỡ gọn bằng chuyện thật. Bởi Lê Anh Tuấn.</div>
     </div>
     <div class="footer-col">
-      <h4>Sản Phẩm</h4>
+      <h4>Nội Dung</h4>
       <ul>
-        <li><a href="/solutions">Giải Pháp</a></li>
-        <li><a href="/pricing">Bảng Giá</a></li>
-        <li><a href="/about">Về Chúng Tôi</a></li>
-        <li><a href="/docs/vi/free-trial/">Dùng Thử Miễn Phí</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/video">Video</a></li>
+        <li><a href="/huong-dan">Hướng Dẫn</a></li>
+        <li><a href="/blog/tu-dien-thuat-ngu">Từ điển thuật ngữ</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Tài Nguyên</h4>
+      <h4>Semantix (sản phẩm)</h4>
       <ul>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/huong-dan">Hướng Dẫn</a></li>
+        <li><a href="/semantix">Giới thiệu</a></li>
+        <li><a href="/pricing">Bảng Giá</a></li>
         <li><a href={DOCS_URL} target="_blank" rel="noopener">Tài Liệu</a></li>
-        <li><a href={DOCS_URL} target="_blank" rel="noopener">FAQ</a></li>
-        <li><a href="mailto:hello@semantix.vn">Liên Hệ</a></li>
+        <li><a href="/docs/vi/free-trial/">Dùng Thử</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Kết Nối</h4>
       <ul>
+        <li><a href="https://www.youtube.com/@mastergoogletools" target="_blank" rel="noopener">YouTube</a></li>
         <li><a href="mailto:hello@semantix.vn">hello@semantix.vn</a></li>
         <li><a href="#">Zalo OA</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Chính sách bảo mật</a></li>
+        <li><a href="/about">Về mình</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Semantix. All rights reserved.</span>
+    <span>© 2026 Tuấn LA Lab · Lê Anh Tuấn.</span>
     <span>Made in Vietnam 🇻🇳</span>
   </div>
 </footer>

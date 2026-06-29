@@ -45,13 +45,13 @@ function searchKey(p: typeof all[number]) {
 <BaseLayout title="Blog — Semantix" description="Kiến thức thực chiến về Data Analytics, AI, và cách đưa dữ liệu vào quyết định kinh doanh cho doanh nghiệp Việt Nam.">
 
 <style>
-  .blog-hero { padding: 120px 24px 72px; background: linear-gradient(160deg,#0F172A 0%,#1E1B4B 60%,#0F172A 100%); text-align: center; }
+  .blog-hero { padding: 120px 24px 72px; background: linear-gradient(160deg,#0F172A 0%,#2D1B4E 60%,#0F172A 100%); text-align: center; }
   .blog-hero h1 { font-size: clamp(32px,4.5vw,52px); font-weight: 900; color: #fff; letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 16px; }
   .blog-hero p  { font-size: 18px; color: #94A3B8; max-width: 540px; margin: 0 auto; }
   .glo-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 22px; padding: 9px 18px;
-    border-radius: 100px; font-size: 14px; font-weight: 600; text-decoration: none; color: #C7D2FE;
-    background: rgba(99,102,241,.15); border: 1px solid rgba(99,102,241,.3); transition: background .15s, color .15s; }
-  .glo-cta:hover { background: rgba(99,102,241,.28); color: #fff; }
+    border-radius: 100px; font-size: 14px; font-weight: 600; text-decoration: none; color: #DDD0F0;
+    background: rgba(148,96,212,.15); border: 1px solid rgba(148,96,212,.3); transition: background .15s, color .15s; }
+  .glo-cta:hover { background: rgba(148,96,212,.28); color: #fff; }
 
   .blog-body { max-width: 1180px; margin: 0 auto; padding: 56px 24px 96px; }
 
@@ -84,7 +84,7 @@ function searchKey(p: typeof all[number]) {
     overflow: hidden; display: flex; flex-direction: column;
     text-decoration: none; transition: box-shadow .2s, transform .2s;
   }
-  .fslide:hover { box-shadow: 0 16px 48px rgba(79,70,229,.14); transform: translateY(-4px); }
+  .fslide:hover { box-shadow: 0 16px 48px rgba(120,58,191,.14); transform: translateY(-4px); }
   .fslide-cover { position: relative; height: 200px; background: var(--surface); }
   .fslide-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .fslide-body { padding: 22px 26px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
@@ -107,7 +107,7 @@ function searchKey(p: typeof all[number]) {
     overflow: hidden; display: flex; flex-direction: column;
     text-decoration: none; transition: box-shadow .2s, transform .2s, border-color .2s;
   }
-  .post-card:hover { box-shadow: 0 12px 36px rgba(15,23,42,.10); transform: translateY(-3px); border-color: #C7D2FE; }
+  .post-card:hover { box-shadow: 0 12px 36px rgba(15,23,42,.10); transform: translateY(-3px); border-color: #DDD0F0; }
   .pc-cover { position: relative; height: 150px; background: var(--surface); }
   .pc-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .pc-body { padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
@@ -130,7 +130,7 @@ function searchKey(p: typeof all[number]) {
     transition: border-color .15s, box-shadow .15s;
   }
   #blog-search::placeholder { color: var(--muted-light); }
-  #blog-search:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(79,70,229,.12); }
+  #blog-search:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(120,58,191,.12); }
   #blog-search::-webkit-search-cancel-button { display: none; }
   #blog-search-clear {
     position: absolute; right: 10px; top: 50%; transform: translateY(-50%);

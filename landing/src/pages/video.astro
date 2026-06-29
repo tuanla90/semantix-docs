@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { YOUTUBE_URL } from '../consts';
+
+// Định dạng nội dung kênh — mô tả thật, KHÔNG bịa số view/sub.
+const formats = [
+  { tag: 'KHÁI NIỆM', title: 'Mỗi tuần một khái niệm', desc: 'Metric vs Dimension, KPI, semantic layer… gỡ gọn trong vài phút bằng chuyện công sở Việt.' },
+  { tag: 'SHORT', title: 'Bản ngắn cho điện thoại', desc: 'Cùng kiến thức, cắt thành đoạn 30–60 giây để xem nhanh giữa giờ làm.' },
+  { tag: 'HẬU TRƯỜNG', title: 'Mình học & xây gì', desc: 'Ghi chú trên đường làm data ở ngân hàng, tư vấn doanh nghiệp, và xây Semantix.' },
+];
+---
+<BaseLayout
+  title="Video — Tuấn LA Lab"
+  description="Kênh YouTube Tuấn LA Lab: mỗi tuần một khái niệm data, gỡ gọn bằng chuyện công sở Việt. Của Lê Anh Tuấn.">
+
+<style>
+  .v-hero { padding: 130px 24px 64px; background: linear-gradient(160deg,#0F172A 0%,#2D1B4E 60%,#0F172A 100%); text-align: center; }
+  .v-hero .badge { margin-bottom: 20px; }
+  .v-hero h1 { font-size: clamp(32px,4.6vw,52px); font-weight: 900; color: #fff; letter-spacing: -1.2px; line-height: 1.12; margin-bottom: 16px; }
+  .v-hero p { font-size: 18px; color: #94A3B8; max-width: 600px; margin: 0 auto 30px; line-height: 1.65; }
+  .v-yt { display: inline-flex; align-items: center; gap: 9px; padding: 13px 26px; border-radius: 100px; font-size: 15px; font-weight: 700;
+    text-decoration: none; color: #fff; background: #FF0033; box-shadow: 0 6px 22px rgba(255,0,51,.35); transition: transform .15s, box-shadow .15s; }
+  .v-yt:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(255,0,51,.45); }
+
+  /* Câu chuyện quay lại */
+  .v-story { padding: 88px 24px; background: var(--white); }
+  .v-story-inner { max-width: 720px; margin: 0 auto; }
+  .v-story-inner p { font-size: 17px; color: var(--dark-2); line-height: 1.8; margin-bottom: 18px; }
+  .v-story-inner p:last-child { margin-bottom: 0; }
+  .v-story-inner strong { color: var(--primary); }
+
+  .v-fmt { padding: 88px 24px; background: var(--surface); }
+  .v-fmt-grid { max-width: 1000px; margin: 40px auto 0; display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  @media(max-width:820px){ .v-fmt-grid { grid-template-columns: 1fr; } }
+  .v-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 28px; }
+  .v-card-tag { font-size: 12px; font-weight: 800; letter-spacing: 1.3px; color: var(--primary); }
+  .v-card-title { font-size: 18px; font-weight: 800; color: var(--dark); margin: 10px 0 8px; letter-spacing: -.3px; }
+  .v-card-desc { font-size: 14.5px; color: var(--muted); line-height: 1.7; }
+
+  .v-cta { padding: 80px 24px; background: linear-gradient(135deg, var(--primary-dark), #2D1B4E); text-align: center; }
+  .v-cta h2 { font-size: clamp(24px,3.4vw,38px); font-weight: 800; color: #fff; letter-spacing: -.6px; margin-bottom: 14px; }
+  .v-cta p { font-size: 17px; color: #CBB9E8; margin-bottom: 32px; }
+</style>
+
+<!-- HERO -->
+<section class="v-hero">
+  <div class="badge"><span class="badge-dot"></span>Kênh YouTube · Tuấn LA Lab</div>
+  <h1>Mỗi tuần một khái niệm data,<br/>gỡ gọn trong vài phút.</h1>
+  <p>Cùng kiến thức trên blog, nhưng kể bằng hình ảnh động — cho ai thích xem hơn đọc.</p>
+  <a class="v-yt" href={YOUTUBE_URL} target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.5 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>
+    Theo dõi kênh trên YouTube
+  </a>
+</section>
+
+<!-- CÂU CHUYỆN QUAY LẠI -->
+<section class="v-story">
+  <div class="v-story-inner">
+    <div class="section-label" style="text-align:left">Mình đã quay lại</div>
+    <h2 class="section-title" style="text-align:left; margin-bottom: 28px">Vì sao mình vắng hơn một năm</h2>
+    <p>Kênh này từng im lặng hơn một năm. Không phải mình bỏ cuộc — mà vì <strong>đón em bé</strong>, vì <strong>AI đổi quá nhanh phải dành thời gian thử và tiêu hoá</strong>, và vì mình <strong>đi tìm lại chỗ đứng cho nghề data</strong> khi AI ngày càng viết SQL giỏi.</p>
+    <p>Câu trả lời mình tìm được gói trong một từ: <strong>ngữ cảnh</strong> — thứ AI không tự biết, chỉ người hiểu nghề mới cấp được. Đó cũng là lý do kênh đổi hướng: từ chia sẻ <strong>công cụ</strong>, sang chia sẻ <strong>cách tư duy</strong>.</p>
+    <p>Video kể đầy đủ ba lý do đang lên sóng. Theo dõi kênh để xem ngay khi ra nhé.</p>
+  </div>
+</section>
+
+<!-- ĐỊNH DẠNG -->
+<section class="v-fmt">
+  <div class="section-label">Sắp tới có gì</div>
+  <h2 class="section-title">Kênh sẽ làm gì đều đặn</h2>
+  <div class="v-fmt-grid">
+    {formats.map(f => (
+      <div class="v-card">
+        <div class="v-card-tag">{f.tag}</div>
+        <div class="v-card-title">{f.title}</div>
+        <div class="v-card-desc">{f.desc}</div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="v-cta">
+  <h2>Theo dõi để không bỏ lỡ</h2>
+  <p>Mỗi tuần một khái niệm data. Hẹn gặp bạn ở video mới.</p>
+  <a href={YOUTUBE_URL} target="_blank" rel="noopener" class="btn btn-white btn-xl">Mở kênh YouTube →</a>
+</section>
+
+</BaseLayout>

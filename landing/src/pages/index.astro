@@ -1,19 +1,174 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import DemoTabs from '../components/DemoTabs.astro';
-import Features from '../components/Features.astro';
-import HowItWorks from '../components/HowItWorks.astro';
-import Comparison from '../components/Comparison.astro';
 import FounderNote from '../components/FounderNote.astro';
-import CtaBanner from '../components/CtaBanner.astro';
+import { getCollection } from 'astro:content';
+
+// 3 bài blog nổi bật mới nhất cho khối "Mới trên blog".
+const all = await getCollection('blog');
+const featured = all
+  .filter(p => p.data.featured)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+function fmt(d: Date) {
+  return d.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+}
+
+const pillars = [
+  {
+    tag: 'BLOG', href: '/blog', accent: 'var(--primary)',
+    title: 'Khái niệm data, gỡ gọn',
+    desc: 'Metric vs Dimension, semantic layer, build-vs-buy… mỗi bài một khái niệm, kể bằng chuyện công sở Việt thật.',
+  },
+  {
+    tag: 'VIDEO', href: '/video', accent: '#06B6D4',
+    title: 'Kênh Tuấn LA Lab',
+    desc: 'Mỗi tuần một video ngắn: cùng một kiến thức, nhưng kể bằng hình ảnh động cho ai thích xem hơn đọc.',
+  },
+  {
+    tag: 'SẢN PHẨM', href: '/semantix', accent: '#10B981',
+    title: 'Semantix — công cụ mình xây',
+    desc: 'Hỏi dữ liệu bằng tiếng Việt, semantic layer làm lõi để AI hiểu đúng "doanh thu" của riêng công ty bạn.',
+  },
+];
 ---
-<BaseLayout>
-  <Hero />
-  <DemoTabs />
-  <Features />
-  <HowItWorks />
-  <Comparison />
-  <FounderNote />
-  <CtaBanner />
+<BaseLayout
+  title="Tuấn LA Lab — Data & AI cho người Việt"
+  description="Mình là Lê Anh Tuấn, hơn 10 năm làm data. Ở đây mình gỡ từng khái niệm data cho dân công sở Việt bằng chuyện thật — và đang xây Semantix để biến tư duy đó thành công cụ.">
+
+<style>
+  /* ===== Hero cá nhân ===== */
+  .home-hero {
+    padding: 150px 24px 110px;
+    background: linear-gradient(160deg, #0F172A 0%, #2D1B4E 52%, #0F172A 100%);
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .home-hero::before {
+    content: ''; position: absolute; top: -220px; left: 50%; transform: translateX(-50%);
+    width: 900px; height: 900px;
+    background: radial-gradient(circle, rgba(120,58,191,.22) 0%, transparent 70%); pointer-events: none;
+  }
+  .home-hero-inner { max-width: 880px; margin: 0 auto; position: relative; z-index: 1; }
+  .home-hero h1 {
+    font-size: clamp(34px, 5.2vw, 60px); font-weight: 900; color: #fff;
+    line-height: 1.12; letter-spacing: -1.5px; margin-bottom: 22px;
+  }
+  .home-hero h1 .hl {
+    background: linear-gradient(90deg, #9460D4, #C4B5FD);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .home-hero-sub {
+    font-size: clamp(16px, 2vw, 20px); color: #94A3B8; max-width: 660px;
+    margin: 0 auto 38px; line-height: 1.75; font-weight: 400;
+  }
+  .home-hero-sub strong { color: #E2E8F0; font-weight: 600; }
+  .home-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* ===== 3 trụ cột ===== */
+  .pillars { padding: 88px 24px; background: var(--white); }
+  .pillars-grid { max-width: 1080px; margin: 40px auto 0; display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  @media(max-width:820px){ .pillars-grid { grid-template-columns: 1fr; } }
+  .pillar {
+    display: block; text-decoration: none; background: var(--white);
+    border: 1px solid var(--border); border-radius: 18px; padding: 30px 26px;
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+  }
+  .pillar:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+  .pillar-tag { font-size: 12px; font-weight: 800; letter-spacing: 1.4px; }
+  .pillar-title { font-size: 20px; font-weight: 800; color: var(--dark); letter-spacing: -.4px; margin: 12px 0 10px; }
+  .pillar-desc { font-size: 14.5px; color: var(--muted); line-height: 1.7; }
+  .pillar-more { display: inline-block; margin-top: 16px; font-size: 14px; font-weight: 700; color: var(--primary); }
+
+  /* ===== Blog mới ===== */
+  .home-blog { padding: 88px 24px; background: var(--surface); }
+  .home-blog-grid { max-width: 1080px; margin: 40px auto 0; display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  @media(max-width:820px){ .home-blog-grid { grid-template-columns: 1fr; } }
+  .pcard { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+  .pcard:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+  .pcard-cat { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); }
+  .pcard-title { font-size: 17px; font-weight: 700; color: var(--dark); line-height: 1.4; margin: 10px 0 8px; }
+  .pcard-desc { font-size: 14px; color: var(--muted); line-height: 1.6; flex: 1; }
+  .pcard-date { font-size: 12.5px; color: var(--muted-light); margin-top: 14px; }
+  .home-blog-all { text-align: center; margin-top: 36px; }
+
+  /* ===== Teaser Semantix ===== */
+  .stx { padding: 92px 24px; background: linear-gradient(135deg, var(--primary-dark), #2D1B4E); }
+  .stx-inner { max-width: 820px; margin: 0 auto; text-align: center; }
+  .stx-kicker { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C4B5FD; margin-bottom: 14px; }
+  .stx h2 { font-size: clamp(26px,3.6vw,40px); font-weight: 800; color: #fff; letter-spacing: -.7px; line-height: 1.25; margin-bottom: 18px; }
+  .stx p { font-size: 17px; color: #CBB9E8; line-height: 1.75; margin-bottom: 32px; }
+  .stx p strong { color: #fff; }
+</style>
+
+<!-- HERO cá nhân -->
+<section class="home-hero">
+  <div class="home-hero-inner">
+    <div class="badge"><span class="badge-dot"></span>Tuấn LA Lab · Data &amp; AI cho người Việt</div>
+    <h1>Dữ liệu nói dối khi bạn<br/>quên mất <span class="hl">ngữ cảnh</span>.</h1>
+    <p class="home-hero-sub">
+      Mình là <strong>Lê Anh Tuấn</strong> — hơn 10 năm làm data, từ analyst đến trưởng nhóm BI.
+      Ở đây mình gỡ từng khái niệm data cho dân công sở Việt, bằng chuyện thật.
+      Và mình đang xây <strong>Semantix</strong> để biến tư duy đó thành công cụ.
+    </p>
+    <div class="home-cta">
+      <a href="/blog" class="btn btn-primary btn-xl">Đọc blog</a>
+      <a href="/video" class="btn btn-xl" style="color:#E2E8F0;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.18)">Xem video</a>
+      <a href="/semantix" class="btn btn-xl" style="color:#C4B5FD;background:transparent;border:1.5px solid rgba(196,181,253,.4)">Dùng thử Semantix</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3 TRỤ CỘT -->
+<section class="pillars">
+  <div class="section-label">Ở đây có gì</div>
+  <h2 class="section-title">Ba cách mình chia sẻ</h2>
+  <div class="pillars-grid">
+    {pillars.map(p => (
+      <a class="pillar" href={p.href}>
+        <div class="pillar-tag" style={`color:${p.accent}`}>{p.tag}</div>
+        <div class="pillar-title">{p.title}</div>
+        <div class="pillar-desc">{p.desc}</div>
+        <span class="pillar-more">Xem ngay →</span>
+      </a>
+    ))}
+  </div>
+</section>
+
+<!-- BLOG MỚI -->
+{featured.length > 0 && (
+  <section class="home-blog">
+    <div class="section-label">Mới trên blog</div>
+    <h2 class="section-title">Bắt đầu từ đây</h2>
+    <div class="home-blog-grid">
+      {featured.map(p => (
+        <a class="pcard" href={`/blog/${p.slug}`}>
+          <span class="pcard-cat">{p.data.category}</span>
+          <div class="pcard-title">{p.data.title}</div>
+          <div class="pcard-desc">{p.data.description}</div>
+          <div class="pcard-date">{fmt(p.data.pubDate)}</div>
+        </a>
+      ))}
+    </div>
+    <div class="home-blog-all"><a href="/blog" class="btn btn-outline">Xem tất cả bài viết</a></div>
+  </section>
+)}
+
+<!-- LỜI NHẮN NGƯỜI SÁNG LẬP -->
+<FounderNote />
+
+<!-- TEASER SEMANTIX -->
+<section class="stx">
+  <div class="stx-inner">
+    <div class="stx-kicker">Công cụ mình đang xây</div>
+    <h2>Khi tư duy đã đúng, để AI lo phần nặng.</h2>
+    <p>
+      <strong>Semantix</strong> là nơi mình đóng gói cái "ngữ cảnh" đó thành một <strong>semantic layer</strong>:
+      định nghĩa một lần "doanh thu" của công ty bạn nghĩa là gì, rồi hỏi dữ liệu bằng tiếng Việt —
+      AI hiểu đúng, trả lời ngay, dữ liệu không rời khỏi bạn.
+    </p>
+    <a href="/semantix" class="btn btn-white btn-xl">Tìm hiểu Semantix →</a>
+  </div>
+</section>
+
 </BaseLayout>

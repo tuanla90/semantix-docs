@@ -1,7 +1,10 @@
 // Hằng số dùng chung cho SEO / Open Graph / JSON-LD.
 // Origin production đặt ở `site` trong astro.config.mjs (đọc qua Astro.site) — đổi domain ở đó.
 
-export const SITE_NAME = 'Semantix';
+export const SITE_NAME = 'Tuấn LA Lab';
+
+// Kênh YouTube (đang hồi sinh từ @mastergoogletools → Tuấn LA Lab)
+export const YOUTUBE_URL = 'https://www.youtube.com/@mastergoogletools';
 
 // Ảnh chia sẻ mạng xã hội mặc định (1200×630). Cần thêm file: landing/public/og/default.png
 export const DEFAULT_OG_IMAGE = '/og/default.png';
@@ -15,5 +18,5 @@ export const ORG = {
   logo: '/og/logo.png',
   email: 'hello@semantix.vn',
   // Link mạng xã hội chính thức (điền khi có): Zalo OA, LinkedIn, YouTube, Facebook…
-  sameAs: [] as string[],
+  sameAs: ['https://www.youtube.com/@mastergoogletools'] as string[],
 };

@@ -15,7 +15,7 @@
   <text x="80" y="296" fill="#CBD5E1" font-size="29" font-weight="600">Khi mô hình 5 nhóm gặp dữ liệu thật</text>
   <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
   <!-- motif: 5x5 RFM grid -->
-  <g transform="translate(800,150)">
+  <g transform="translate(800,306) scale(0.834)">
     <rect x="0"   y="0"  width="56" height="42" rx="5" fill="#86efac"/>
     <rect x="62"  y="0"  width="56" height="42" rx="5" fill="#86efac"/>
     <rect x="124" y="0"  width="56" height="42" rx="5" fill="#4ade80"/>

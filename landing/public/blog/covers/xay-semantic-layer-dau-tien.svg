@@ -20,7 +20,7 @@
   <text x="80" y="298" fill="#CBD5E1" font-size="30" font-weight="600">Ba con số &#8594; một định nghĩa &#8594; một số</text>
   <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX &#8226; BLOG</text>
   <!-- motif: three conflicting revenue numbers converge into one shared definition, then one number -->
-  <g transform="translate(700,168)">
+  <g transform="translate(700,277) scale(0.988)">
     <!-- three conflicting source numbers -->
     <rect x="0" y="0" width="170" height="50" rx="10" fill="#1E293B" stroke="#475569"/>
     <text x="16" y="31" fill="#94A3B8" font-size="15">Sales</text>

@@ -21,7 +21,7 @@
   <text x="80" y="298" fill="#CBD5E1" font-size="30" font-weight="600">Thấy sớm &amp; tự cảnh báo sắp hết hàng</text>
   <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
   <!-- motif: declining inventory line touches red threshold, bell rings -->
-  <g transform="translate(700,210)">
+  <g transform="translate(700,319) scale(0.986)">
     <!-- chart frame -->
     <rect x="0" y="0" width="400" height="240" rx="14" fill="#0B1220" stroke="#334155"/>
     <!-- threshold line (red) -->

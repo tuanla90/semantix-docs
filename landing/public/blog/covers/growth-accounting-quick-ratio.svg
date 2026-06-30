@@ -17,7 +17,7 @@
   <text x="80" y="372" fill="#5EEAD4" font-size="22" font-weight="500" font-style="italic">(new + resurrected) / churned</text>
   <text x="80" y="524" fill="#5EEAD4" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
   <!-- motif: heartbeat Quick Ratio line crossing the 1,0 baseline -->
-  <g transform="translate(700,150)">
+  <g transform="translate(700,315) scale(0.753)">
     <!-- baseline at 1.0 -->
     <line x1="0" y1="170" x2="440" y2="170" stroke="#FCD34D" stroke-width="2" stroke-dasharray="8 6"/>
     <text x="446" y="176" fill="#FCD34D" font-size="18" font-weight="700">1,0</text>

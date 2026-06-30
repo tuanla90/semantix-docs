@@ -20,7 +20,7 @@
   <text x="80" y="298" fill="#CBD5E1" font-size="28" font-weight="600">Rủi ro ở kiến trúc, không ở model</text>
   <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
   <!-- motif: locked data, AI looks through a control layer, key in owner's hand -->
-  <g transform="translate(720,165)">
+  <g transform="translate(720,274) scale(0.988)">
     <!-- the data vault (locked) -->
     <rect x="0" y="40" width="150" height="170" rx="14" fill="#0B1220" stroke="#334155" stroke-width="2"/>
     <text x="75" y="74" fill="#94A3B8" font-size="15" text-anchor="middle">DỮ LIỆU THÔ</text>

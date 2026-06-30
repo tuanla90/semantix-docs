@@ -21,7 +21,7 @@
   <text x="80" y="298" fill="#CBD5E1" font-size="30" font-weight="600">Thiết kế lấy câu hỏi làm trung tâm</text>
   <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
   <!-- motif: star schema, 1 fact center + 4 dimensions -->
-  <g transform="translate(860,300)">
+  <g transform="translate(860,408) scale(0.986)">
     <line x1="0" y1="0" x2="-150" y2="-110" stroke="#475569" stroke-width="2"/>
     <line x1="0" y1="0" x2="150" y2="-110" stroke="#475569" stroke-width="2"/>
     <line x1="0" y1="0" x2="-150" y2="110" stroke="#475569" stroke-width="2"/>

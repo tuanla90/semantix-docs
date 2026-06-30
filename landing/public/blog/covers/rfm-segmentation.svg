@@ -21,7 +21,7 @@
   <text x="80" y="528" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
 
   <!-- motif: 2x3 segment grid -->
-  <g transform="translate(760,150)">
+  <g transform="translate(760,348) scale(0.695)">
     <rect x="0"   y="0"   width="170" height="92" rx="10" fill="#15803d"/>
     <text x="85"  y="52"  fill="#fff" font-size="18" font-weight="800" text-anchor="middle">Champions</text>
     <rect x="182" y="0"   width="170" height="92" rx="10" fill="#22c55e"/>

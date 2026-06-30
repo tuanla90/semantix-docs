@@ -15,7 +15,7 @@
   <text x="80" y="296" fill="#CBD5E1" font-size="30" font-weight="600">Theo kênh, theo hành vi, activation</text>
   <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
   <!-- motif: funnel + channels -->
-  <g transform="translate(770,165)">
+  <g transform="translate(770,316) scale(0.842)">
     <path d="M0 0 L320 0 L270 56 L50 56 Z" fill="#6366F1"/>
     <path d="M50 64 L270 64 L228 120 L92 120 Z" fill="#818CF8"/>
     <path d="M92 128 L228 128 L196 184 L124 184 Z" fill="#A5B4FC"/>

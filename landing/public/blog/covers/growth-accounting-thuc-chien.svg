@@ -18,7 +18,7 @@
   <text x="80" y="524" fill="#5EEAD4" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
 
   <!-- motif: an assembled growth accounting table (months x rows) + Quick Ratio cell -->
-  <g transform="translate(690,150)">
+  <g transform="translate(690,311) scale(0.818)">
     <!-- column headers -->
     <text x="150" y="14" fill="#94A3B8" font-size="15" font-weight="600" text-anchor="middle">T1</text>
     <text x="240" y="14" fill="#94A3B8" font-size="15" font-weight="600" text-anchor="middle">T2</text>

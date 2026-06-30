@@ -30,7 +30,7 @@
   <text x="80" y="540" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
 
   <!-- motif: ba kênh ads tự nhận công -> một con số ROI thật ở giữa -->
-  <g transform="translate(720,360)">
+  <g transform="translate(720,400) scale(0.792)">
     <!-- three channels each claiming credit -->
     <g transform="translate(-40,-130)">
       <rect x="0" y="0" width="118" height="40" rx="10" fill="#1E293B" stroke="#60A5FA" stroke-width="2"/>

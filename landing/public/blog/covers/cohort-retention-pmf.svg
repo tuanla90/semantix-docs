@@ -15,7 +15,7 @@
   <text x="80" y="296" fill="#CBD5E1" font-size="30" font-weight="600">Đường cong giữ chân kể sự thật</text>
   <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
   <!-- motif: retention curves -->
-  <g transform="translate(740,170)">
+  <g transform="translate(740,321) scale(0.839)">
     <line x1="0" y1="0" x2="0" y2="220" stroke="#475569" stroke-width="2"/>
     <line x1="0" y1="220" x2="360" y2="220" stroke="#475569" stroke-width="2"/>
     <!-- curve A: decays to 0 -->

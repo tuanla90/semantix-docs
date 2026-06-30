@@ -17,7 +17,7 @@
   <text x="80" y="296" fill="#CBD5E1" font-size="29" font-weight="600">Khi cái phễu nói dối bạn</text>
   <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
   <!-- motif: tangled journey vs funnel -->
-  <g transform="translate(800,170)">
+  <g transform="translate(800,323) scale(0.834)">
     <circle cx="40"  cy="20"  r="26" fill="#1E293B" stroke="#6366F1" stroke-width="2"/><text x="40" y="26" fill="#C7D2FE" font-size="14" text-anchor="middle">Xem</text>
     <circle cx="230" cy="20"  r="26" fill="#1E293B" stroke="#6366F1" stroke-width="2"/><text x="230" y="26" fill="#C7D2FE" font-size="14" text-anchor="middle">Giỏ</text>
     <circle cx="230" cy="180" r="26" fill="#1E293B" stroke="#6366F1" stroke-width="2"/><text x="230" y="186" fill="#C7D2FE" font-size="13" text-anchor="middle">T.toán</text>

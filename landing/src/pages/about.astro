@@ -6,24 +6,24 @@ const YT = 'https://www.youtube.com/@mastergoogletools';
 // Niềm tin nghề - rút từ chính cách mình làm việc, không phải tính năng sản phẩm.
 const beliefs = [
   {
-    icon: '📐',
-    title: 'Số nói dối khi quên ngữ cảnh',
-    desc: 'Con số trần trụi - bỏ quên trọng số, định nghĩa, chất lượng đầu vào - sẽ dẫn người đọc đi sai. Việc của người làm data là cấp lại ngữ cảnh đó.',
+    icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#783ABF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
+    title: 'Đừng tin số đứng một mình',
+    desc: 'Một con số đứng một mình thì chưa nói lên gì. Chưa rõ tính kiểu nào, lọc ra sao, dữ liệu đã sạch chưa, kiểu gì cũng có người hiểu sai. Mình nghĩ việc của dân data không phải bê số ra, mà là gắn lại ngữ cảnh đằng sau nó.',
   },
   {
-    icon: '🧱',
-    title: 'Baseline trước khi cầu kỳ',
-    desc: 'Rule-base đơn giản cộng số đủ lớn thường đã đúng ~90%. Đừng sính mô hình phức tạp để lấy thêm vài phần trăm rồi đánh mất sự dễ hiểu.',
+    icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#783ABF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
+    title: 'Cứ làm cái đơn giản trước',
+    desc: 'Hồi mới vào nghề mình hay sính mô hình phức tạp cho đẹp vài phần trăm. Một anh sếp cũ chỉ cho một câu: rule đơn giản với đủ dữ liệu là đã đúng chín mươi phần trăm rồi. Từ đó mình luôn bắt đầu bằng cái dễ hiểu nhất.',
   },
   {
-    icon: '🪜',
-    title: 'Đứng trên vai công cụ đi trước',
-    desc: 'Excel, Power BI, Superset, Great Expectations... mỗi cái giỏi một việc. Mình giữ điểm mạnh của chúng thay vì phủ nhận - chỉ tự xây khi thật sự còn khoảng trống.',
+    icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#783ABF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`,
+    title: 'Công cụ cũ vẫn có chỗ hay',
+    desc: 'Excel, Power BI, Superset, mình mê và xài chán chê từng cái. Nên mình không dìm chúng xuống để khen sản phẩm của mình. Mình giữ lại chỗ chúng làm tốt, chỉ tự xây đúng phần còn thiếu.',
   },
   {
-    icon: '👐',
+    icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#783ABF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
     title: 'Dạy được mới là hiểu thật',
-    desc: 'Gốc sư phạm: giải thích cho người ngoài ngành mà họ gật đầu, lúc đó mình mới thật sự hiểu. Đó là cách mình viết blog và làm video.',
+    desc: 'Mình xuất thân đi dạy. Giải thích một khái niệm cho người ngoài ngành mà họ gật đầu, lúc đó mình mới chắc là mình hiểu. Blog và video của mình đều ra đời từ phép thử đó.',
   },
 ];
 
@@ -32,7 +32,7 @@ const milestones = [
   { year: 'Khởi đầu', text: 'Dân sư phạm: dạy Vật lý lớp 12 (100% học sinh đỗ tốt nghiệp) và lập CLB Guitar ở ĐH Sư phạm Hà Nội. Mê chuyện "giải thích cho người khác hiểu" - thứ theo mình tới tận giờ.' },
   { year: 'BigSchool', text: 'Từ Business Analyst lên COO: quản team sản phẩm 30 người, dựng hạ tầng dữ liệu & báo cáo bằng Google Sheets + SQL, cải tiến quy trình +200%, tự động hoá báo cáo tiết kiệm 25 giờ/tháng. Đây cũng là gốc của kênh Master Google Tools.' },
   { year: 'Viettel', text: 'Rẽ hẳn sang dữ liệu (Data Analyst / Data Science): xây Data Mining Platform, hệ AntiSpam và AI-targeted Marketing, fraud detection bằng ML; góp phần xây Viettel User Profile System - hàng nghìn đặc trưng cho 65 triệu người dùng; dựng hệ BI tự động cho Viettel Construction, tiết kiệm tối thiểu 1 triệu USD/năm. Đào tạo Scala/Spark & SQL/Metabase cho gần 100 nhân sự.' },
-  { year: 'Teko', text: 'Trưởng nhóm BI / Data Stewards trong hệ sinh thái VNLIFE-VNPAY: Project Owner hệ Tracking (kiểu Google Tag Manager), xây Customer Data Platform, Datamart cho VNPAY, hệ kiểm tra data quality, và tự động hoá ETL giúp dựng kho dữ liệu nhanh 30×. Báo cáo full-funnel bằng Growth Accounting, Cohort, RFM, HEART.' },
+  { year: 'Teko', text: 'Trưởng nhóm BI / Data Stewards trong hệ sinh thái VNLIFE-VNPAY. Mình làm Project Owner hệ Tracking tự dựng (kiểu Google Tag Manager): báo cáo từ hệ này khớp số đơn hàng ở backend khoảng 98%, trong khi Google Analytics và các nền tảng quảng cáo chỉ khớp tầm 60% khi đo đa kênh. Nhờ vậy team biết chính xác kênh nào thật sự mang về đơn, thay vì tin con số mà mỗi nền tảng tự nhận về mình. Cùng đó là hệ kiểm tra data quality và tự động hoá ETL giúp dựng kho dữ liệu nhanh gấp 30 lần. Ở vai trò DA, mình hỗ trợ thêm cho Customer Data Platform và Datamart của VNPAY. Báo cáo full-funnel bằng Growth Accounting, Cohort, RFM, HEART.' },
   { year: 'Hôm nay', text: 'Trưởng nhóm BI ở một ngân hàng - đang POC semantic layer, đúng hạt giống của Semantix. Song song: kênh Master Google Tools, tư vấn chuyển đổi số cho SME (Google Sheets → AppSheet → Nocobase), và tự tay xây Semantix.' },
 ];
 
@@ -75,7 +75,8 @@ const teaching = [
   .values-grid { max-width: 1000px; margin: 48px auto 0; display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
   @media(max-width:640px){ .values-grid { grid-template-columns: 1fr; } }
   .value-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 28px; }
-  .value-icon { font-size: 28px; margin-bottom: 14px; }
+  .value-icon { margin-bottom: 14px; line-height: 0; }
+  .value-icon svg { width: 30px; height: 30px; display: block; }
   .value-title { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
   .value-desc  { font-size: 14.5px; color: var(--muted); line-height: 1.65; }
 
@@ -131,7 +132,7 @@ const teaching = [
 <div class="page-hero">
   <div class="badge" style="margin-bottom:20px"><span class="badge-dot"></span>Lê Anh Tuấn · Tuấn LA Lab</div>
   <h1>Hơn 10 năm mình đọc số<br/>để biết chỗ nào đang hỏng</h1>
-  <p>Từ analyst đến trưởng nhóm BI, mình tin một điều: con số trần trụi sẽ nói dối khi ta quên mất ngữ cảnh. Đây là hành trình, niềm tin nghề, và lý do mình xây Semantix.</p>
+  <p>Từ nhân viên phân tích đến trưởng nhóm BI, mình tin một điều đơn giản: con số mà bỏ quên ngữ cảnh là rất dễ làm người ta hiểu sai. Trang này kể lại hành trình đó, và vì sao mình bắt tay xây Semantix.</p>
 </div>
 
 <!-- Intro -->
@@ -140,7 +141,7 @@ const teaching = [
     <div>
       <div class="section-label" style="text-align:left">Mình là ai</div>
       <div class="mission-quote" style="margin-top:16px">
-        "Con số trần trụi sẽ nói dối khi ta quên mất ngữ cảnh."
+        "Con số trần trụi sẽ nói dối khi mình quên mất ngữ cảnh."
       </div>
     </div>
     <div class="mission-body">
@@ -168,7 +169,7 @@ const teaching = [
   <div class="values-grid">
     {beliefs.map(v => (
       <div class="value-card">
-        <div class="value-icon">{v.icon}</div>
+        <div class="value-icon" set:html={v.icon}></div>
         <div class="value-title">{v.title}</div>
         <div class="value-desc">{v.desc}</div>
       </div>
@@ -212,7 +213,7 @@ const teaching = [
   <div class="section-label">Sản Phẩm</div>
   <h2 class="section-title">Mình đang xây Semantix</h2>
   <div class="founder-card">
-    <p class="founder-bio">Sau khi dùng hết những công cụ tốt nhất, mình vẫn thấy một khoảng trống cho doanh nghiệp Việt: người chủ không tự hỏi được dữ liệu của chính mình nếu thiếu một người biết SQL ngồi giữa. <strong>Semantix</strong> là câu trả lời mình đang tự xây - hỏi dữ liệu bằng tiếng Việt, neo trên một <strong>semantic layer</strong> để AI hiểu đúng ngữ cảnh, chạy trên hạ tầng của bạn.</p>
+    <p class="founder-bio">Mình xài đủ các công cụ xịn nhất rồi mà vẫn thấy thiếu một mảnh cho doanh nghiệp Việt: người chủ muốn hỏi dữ liệu của chính mình thì cứ phải nhờ một người biết SQL ngồi giữa. <strong>Semantix</strong> là thứ mình đang xây để gỡ đúng chỗ đó: hỏi dữ liệu bằng tiếng Việt, có một <strong>semantic layer</strong> làm lõi để AI hiểu đúng ngữ cảnh, và chạy thẳng trên hạ tầng của bạn.</p>
     <p class="founder-bio">Sản phẩm còn trẻ và mình hoàn thiện nó mỗi tuần. <a href="/semantix">Xem Semantix →</a></p>
   </div>
 </section>

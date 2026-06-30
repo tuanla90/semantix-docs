@@ -15,7 +15,7 @@
   <text x="80" y="296" fill="#CBD5E1" font-size="30" font-weight="600">Cohort ra tiền &amp; ứng dụng theo ngành</text>
   <text x="80" y="520" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
   <!-- motif: cumulative revenue bars + LTV line -->
-  <g transform="translate(750,150)">
+  <g transform="translate(750,304) scale(0.841)">
     <line x1="0" y1="240" x2="360" y2="240" stroke="#475569" stroke-width="2"/>
     <rect x="10"  y="190" width="44" height="50"  rx="4" fill="#312E81"/>
     <rect x="74"  y="150" width="44" height="90"  rx="4" fill="#4338CA"/>

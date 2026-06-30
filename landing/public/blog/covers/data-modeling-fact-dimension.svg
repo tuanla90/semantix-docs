@@ -16,7 +16,7 @@
   <text x="80" y="212" fill="#94A3B8" font-size="25" font-weight="500">Cách bạn sắp bảng quyết định</text>
   <text x="80" y="246" fill="#94A3B8" font-size="25" font-weight="500">câu hỏi bạn hỏi được</text>
   <!-- star schema illustration -->
-  <g transform="translate(760,300)">
+  <g transform="translate(760,361)">
     <line x1="0" y1="0" x2="-150" y2="-130" stroke="#334155" stroke-width="2"/>
     <line x1="0" y1="0" x2="180" y2="-130" stroke="#334155" stroke-width="2"/>
     <line x1="0" y1="0" x2="-150" y2="130" stroke="#334155" stroke-width="2"/>

@@ -30,7 +30,7 @@
   <text x="80" y="540" fill="#64748B" font-size="20" font-weight="700" letter-spacing="2">SEMANTIX • BLOG</text>
 
   <!-- motif: đường line doanh số tăng vọt theo giờ + đồng hồ khung giờ vàng -->
-  <g transform="translate(700,330)">
+  <g transform="translate(700,414)">
     <!-- TikTok Shop tag -->
     <g transform="translate(8,-150)">
       <rect x="0" y="0" width="150" height="40" rx="10" fill="#1E293B" stroke="#22D3EE" stroke-width="2"/>

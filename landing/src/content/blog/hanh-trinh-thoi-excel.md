@@ -1,9 +1,9 @@
-﻿---
-title: "Từ Excel đến Semantix (Phần 1): những năm bảng tính - và lúc Excel hết gánh nổi"
+---
+title: "Từ Excel đến Semantix: những năm bảng tính - và lúc nó hết gánh nổi"
 code: "uc-008"
 series: "tu-excel-den-semantix"
 seriesOrder: 1
-description: "Mình từng làm mọi báo cáo bằng Excel. Nó tự do, ai cũng dùng được. Rồi một ngày file treo máy, ba người ba số. Phần 1 của series: lúc Excel hết gánh nổi."
+description: "Mình mê Excel tới mức xem thủ thuật cho vui. Làm việc nhóm sinh loạn version, mình qua Google Sheets - tiện, dễ, nhưng rồi bảng tính cũng có trần của nó."
 pubDate: 2025-04-06
 category: "Câu Chuyện & Use Case"
 readTime: 9
@@ -14,54 +14,54 @@ cover: "/blog/covers/hanh-trinh-thoi-excel.svg"
 coverAlt: "Chồng file Excel quá tải, công thức VLOOKUP gãy, và nhiều phiên bản báo cáo lẫn lộn"
 ---
 
-<div class="series-nav">
-  <div class="series-nav-title">🧭 Series Từ Excel đến Semantix · 4 phần</div>
-  <ol>
-    <li class="current">Phần 1 - Những năm bảng tính</li>
-    <li><a href="/blog/hanh-trinh-power-bi-data-studio/">Phần 2 - Lên Power BI &amp; Data Studio</a></li>
-    <li><a href="/blog/hanh-trinh-superset-metabase/">Phần 3 - Sang Superset &amp; Metabase</a></li>
-    <li><a href="/blog/hanh-trinh-tu-xay-semantix/">Phần 4 - Tự xây Semantix &amp; hấp thụ điểm mạnh</a></li>
-  </ol>
-</div>
+Mình nhớ một đêm thứ Năm cách đây mấy năm, hồi còn phụ việc dữ liệu cho một chuỗi mỹ phẩm ở Sài Gòn. 11 giờ khuya, mình mở file `BaoCao_Thang_final_v7_SUACUOI.xlsx` để ráp số doanh thu tháng cho cuộc họp sáng hôm sau. Con trỏ chuột xoay tròn. File nặng gần 80 MB, gõ một ô thôi là Excel đơ mất bốn, năm giây để tính lại hết. Mình cứ ngồi đó, hai tay đặt trên bàn phím, chờ cái phần mềm bắt kịp đầu mình.
 
-> 🎬 Mình vừa kể lại trọn hành trình 10 năm đi qua từng công cụ này thành một video - xem trên kênh **Tuấn LA Lab**.
+Kể vậy không phải để dìm Excel đâu, ngược lại là khác. Excel là nơi mình học tư duy dữ liệu, và mình mê nó tới tận giờ. Đây là phần mở đầu cho câu chuyện mình đi qua từng công cụ một - Excel, rồi Google Sheets, rồi xa hơn nữa - cái nào cũng đúng cho thời của nó, cho tới khi mình tự dựng Semantix. Nhưng muốn hiểu vì sao mình rời đi, phải kể trước cái đã: vì sao mình từng mê tụi nó đến thế.
 
-Mình nhớ một đêm thứ Năm cách đây nhiều năm, khi mình còn phụ việc dữ liệu cho một chuỗi cửa hàng mỹ phẩm ở TP.HCM. 11 giờ khuya, mình mở file `BaoCao_Thang_final_v7_SUACUOI.xlsx` để ráp số doanh thu tháng cho cuộc họp sáng hôm sau. Con quay chuột xoay tròn. File nặng gần 80 MB, mỗi lần mình gõ một ô là Excel "đơ" mất bốn, năm giây để tính lại toàn bộ công thức. Mình ngồi đó, tay để trên bàn phím, *chờ phần mềm bắt kịp suy nghĩ của mình.*
+## Excel: mê tới mức xem thủ thuật cho vui
 
-Mình kể chuyện này không phải để chê Excel. Ngược lại. **Excel là nơi mình học tư duy dữ liệu** - và mình vẫn biết ơn nó tới tận bây giờ. Đây là phần đầu trong câu chuyện về hành trình mình đi qua từng công cụ một, mỗi công cụ đều đúng cho thời của nó, cho tới khi mình tự dựng [Semantix](/docs/vi/free-trial/). Nhưng để hiểu vì sao mình rời đi, trước tiên phải kể vì sao mình đã yêu nó đến thế.
+Nói thật, mình là fan Excel. Không phải kiểu dùng cho xong việc - mình mê nó. Rảnh là lên mạng coi mấy clip thủ thuật. Có người dựng dashboard siêu đẹp, có người viết macro biến bảng tính thành nguyên phần mềm nhập liệu - bấm nút là chạy như app thật, có người làm cả game rắn săn mồi ngay trong mấy ô tính. Coi xong mình chỉ biết phục. Cùng một cái Excel ai cũng có trong máy, mà người ta làm ra được những thứ mình tưởng phải có phần mềm xịn mới làm nổi.
 
-## Vì sao những năm đầu, bảng tính là tất cả những gì mình cần
+Mà mê là có lý do. Hồi mới vào nghề, mình chẳng có đội kỹ thuật, chẳng có database nào cho ra hồn, cũng chẳng có ngân sách mua công cụ. Chỉ có cái laptop với Excel. Vậy mà nó gánh được gần hết:
 
-Khi mình bắt đầu, mình không có đội kỹ thuật, không có database (cơ sở dữ liệu tập trung), không có ngân sách cho công cụ gì cả. Mình chỉ có một laptop và Excel - sau này thêm Google Sheets khi sếp muốn cả nhóm sửa chung. Và thật lòng mà nói, *nó đủ trong một thời gian rất dài.*
+- **Cái gì cũng làm được.** Một ô trống muốn là tiền thì là tiền, muốn là ngày, là ghi chú, hay một công thức cũng xong. Cần chèn thêm cột "ghi chú khuyến mãi" ở giữa? Chèn cái rụp, chẳng ai cản.
+- **Gõ vào, sửa, hỏi - có đáp ngay.** Thấy con số lạ, mình gõ luôn một câu `=AVERAGEIF` kiểm tra. Vài giây ra kết quả, không phải vòng qua ai.
+- **Mở lên là chạy.** Không phải xin quyền IT, không phải chờ ai cài cắm. Máy nào cũng có sẵn.
 
-Cái hay của bảng tính, với mình hồi đó, nằm ở vài thứ:
+Excel mạnh thật. Phần lớn doanh nghiệp Việt chạy cả năm trời chỉ trên Excel - và tới tận bây giờ, rất nhiều công ty mình hỗ trợ chuyển đổi số vẫn đang làm gần như mọi thứ trên Excel. Ở quy mô đó thì đúng là **không cần gì hơn.**
 
-- **Ai cũng dùng được.** Mình không cần dạy ai. Chị kế toán, anh quản lý cửa hàng, bạn marketing - mở file lên là gõ được ngay. Không phải xin quyền IT (bộ phận công nghệ thông tin), không phải chờ cài đặt.
-- **Tự do tuyệt đối.** Một ô trống có thể là tiền, là ngày, là ghi chú, là một công thức. Mình muốn thêm một cột "ghi chú khuyến mãi" giữa chừng? Chèn cái rụp, không ai hỏi.
-- **Nhập - sửa - hỏi tức thì.** Mình thấy số lạ, mình gõ ngay một công thức `=AVERAGEIF` để kiểm tra. Vài giây có câu trả lời. Không vòng vo qua ai.
+## Tới lúc làm việc nhóm, Excel đuối
 
-Nói thẳng: bảng tính là một trong những phần mềm vĩ đại nhất từng được viết ra. Phần lớn doanh nghiệp Việt vận hành cả năm trời chỉ trên Excel hoặc Sheets, và đó là **lựa chọn đúng ở giai đoạn đầu** - mình đã viết kỹ hơn về chuyện này trong [Semantix vs Google Sheets](/blog/vs-google-sheets/). Mình không ở đây để bảo bạn vứt bảng tính đi. Mình ở đây để kể *lúc nào* nó bắt đầu hết gánh nổi, vì mình đã sống qua đúng cái khoảnh khắc đó.
+Vấn đề chỉ ló ra khi không còn mình mình nữa.
 
-## Lúc Excel hết gánh nổi - đúng như mình đã trải
+Cái file đẹp đẽ của mình bắt đầu phải chuyền tay. Mình gửi qua mail, chị kế toán sửa một bản, anh quản lý sửa một bản, rồi gửi lại. Thế là trong máy đẻ ra `v5`, `v6`, `v7_SUACUOI`, rồi tới cái huyền thoại `v7_SUACUOI_THAT`. Chẳng ai biết bản nào mới là bản đúng. Có hôm mình lỡ ráp số lên nhầm bản cũ, mất toi một buổi.
 
-Bức tường không đến trong một ngày. Nó đến từng viên gạch một, và mình chỉ nhận ra mình bị tường chặn khi đã đứng sát mặt nó. Đây là những viên gạch *thật* mình đã va phải.
+`Version` là cái từ mình học cách sợ từ dạo đó. Và chính nó - chứ không phải gì cao siêu - đẩy mình qua Google Sheets.
 
-**File nặng tới mức treo máy.** Khi chuỗi lớn lên từ 3 lên hơn 20 cửa hàng, file đơn hàng vượt vài chục nghìn dòng. Mỗi lần mở phải chờ tính lại, cuộn thì giật, lưu thì hồi hộp sợ crash. Cái file từng giúp mình giờ thành thứ mình *ngại mở.*
+## Google Sheets: nhẹ cả người
 
-**Nhiều người sửa một lúc, loạn version.** Chuyển sang Google Sheets giải được phần "sửa chung", nhưng đẻ ra vấn đề khác. Một người kéo nhầm một cột, cả dashboard (bảng số trực quan) lệch mà không ai biết. Còn thời Excel thì kinh điển hơn: mình gửi file qua email, mỗi người sửa một bản, rồi gửi lại - và mình có `v5`, `v6`, `v7_SUACUOI`, `v7_SUACUOI_THAT`. Không ai biết bản nào là bản đúng. *Version* (phiên bản) là một từ mình học cách sợ.
+Lên Sheets, cái nút version tự gỡ. Một file duy nhất, ai cũng sửa chung trên đó, thấy nhau gõ ngay trước mắt. Hết cảnh đính kèm, hết `SUACUOI_THAT`. Mình share một đường link là cả nhóm vào làm chung.
 
-**VLOOKUP gãy lặng lẽ.** Mình ghép số bán hàng với danh mục sản phẩm bằng `VLOOKUP` (hàm dò tìm giá trị giữa hai bảng theo một cột chung). Nó chạy ngon nhiều tháng. Rồi một tháng, hệ thống xuất file đổi nhẹ tên cột - `Mã SP` thành `Mã sản phẩm`. `VLOOKUP` trỏ sai, doanh thu vài dòng về 0, và **không có một dòng báo lỗi nào.** Mình chỉ phát hiện vì con số tổng trông quá lạ - nếu may.
+Sheets hợp với mình ở chỗ nhẹ, dễ, mở trình duyệt là có, lại miễn phí. Mình tin nó tới mức từng đinh ninh: với mấy doanh nghiệp vừa và nhỏ, Google Sheets là quá đủ. Tin tới mức mình bỏ công xây hẳn một thư viện hàm được đặt tên cho Sheets - gói mấy công thức dài ngoằng lại thành một cái tên gọi cho gọn, để cả nhóm gọi lại được mà khỏi copy đi copy lại, khỏi nơm nớp gõ sai một dấu là gãy. Định nghĩa một lần, ai cũng xài chung. (Bộ thư viện đó mình để dành kể riêng một bài sau.)
 
-**Mỗi tháng, ráp báo cáo hàng giờ bằng copy-paste.** Đây là viên gạch nặng nhất. Cuối tháng, mình tải file từ chỗ bán hàng, file từ kế toán, file tồn kho, dán vào ba sheet, rồi gò một sheet tổng. Một buổi tối trôi qua chỉ để *chép và dán quá khứ* - y như chuyện [báo cáo đến quá muộn để còn kịp là một quyết định](/blog/coo-bao-cao-tuc-thi/).
+## Nhưng Sheets cũng có trần của nó
 
-**Ba người ba số.** Họp sáng, bạn marketing đọc doanh thu *1,2 tỷ*, chị kế toán nói *1,08 tỷ*, sếp nhớ *1,15 tỷ* - cùng một file. Không ai sai. Chỉ là "doanh thu" trong file đó **chưa bao giờ được định nghĩa một lần.** Người này tính trên cột `Tổng tiền`, người kia trên `Đã thu`. Mình mất nửa buổi họp chỉ để cãi nhau xem *số nào mới đúng.*
+Thư viện hàm cứu mình được một quãng dài. Nhưng tới khi dữ liệu lớn lên và câu hỏi khó lên, có những bức tường đặt tên hàm khéo cỡ nào cũng không phá nổi - vì gốc nó nằm chỗ khác.
 
-**Dữ liệu nhiều nguồn, ghép tay.** Cái cuối cùng đẩy mình qua tường: đơn rải khắp Shopee, TikTok Shop, và quầy bán trực tiếp. Mỗi nguồn một định dạng, một kiểu ngày tháng, một cách đặt tên. "Hợp nhất" của mình là tải về, dán vào, rồi nối tay - đúng bài toán [hành vi khách hàng ẩn trong dữ liệu bán](/blog/du-lieu-ban/) mà bảng tính gần như bó tay, vì nó cần ghép nhiều bảng theo khóa chung chứ không phải một công thức nối.
+**File phình ra là ì ạch.** Chuỗi lớn từ 3 lên hơn 20 cửa hàng, đơn hàng vượt vài chục nghìn dòng. Ngay cả Sheets, vốn nhẹ và nhanh là thế, cũng bắt đầu quay vòng tròn mỗi lần mở, cuộn thì khựng. Cái nhẹ ngày nào tự nhiên nặng trịch.
+
+**VLOOKUP gãy mà chẳng kêu một tiếng.** Mình ghép số bán hàng với danh mục sản phẩm bằng `VLOOKUP`, chạy ngon mấy tháng liền. Rồi một tháng, hệ thống xuất file đổi nhẹ tên cột - `Mã SP` thành `Mã sản phẩm`. `VLOOKUP` trỏ trật, doanh thu vài dòng tụt về 0, mà **không có lấy một dòng báo lỗi.** Mình phát hiện chỉ vì con số tổng trông lạ quá - mà đó là còn may.
+
+**Cuối tháng ngồi ráp báo cáo cả buổi bằng copy-paste.** Tải file bán hàng, file kế toán, file tồn kho, dán vào ba sheet, rồi gò tay một sheet tổng. Cả một tối trôi đi chỉ để chép với dán lại quá khứ.
+
+**Ba người đọc ra ba con số.** Họp sáng: bạn marketing đọc doanh thu 1,2 tỷ, chị kế toán bảo 1,08 tỷ, sếp nhớ 1,15 tỷ - cùng một file. Chẳng ai sai. Chỉ là chữ "doanh thu" trong đó **chưa bao giờ được định nghĩa cho dứt khoát một lần.** Người tính trên cột `Tổng tiền`, người tính trên `Đã thu`. Mình mất nửa buổi họp chỉ để cãi xem số nào mới đúng.
+
+**Dữ liệu nằm rải khắp nơi, ghép bằng tay.** Cái cuối cùng đẩy mình qua tường: đơn nằm ở Shopee, TikTok Shop, với cả quầy bán trực tiếp. Mỗi nơi một định dạng, một kiểu ghi ngày, một cách đặt tên. "Hợp nhất" của mình hồi đó là tải về, dán vào, rồi nối tay - mà nối tay thì sai lúc nào không hay.
 
 <div class="viz">
 <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">
   <rect x="20" y="30" width="300" height="240" rx="12" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
-  <text x="170" y="62" fill="#16A34A" font-size="17" font-weight="800" text-anchor="middle">Excel cho mình gì (lúc đầu)</text>
+  <text x="170" y="62" fill="#16A34A" font-size="17" font-weight="800" text-anchor="middle">Bảng tính cho mình gì (lúc đầu)</text>
   <text x="44" y="100" fill="#166534" font-size="14">✓ Ai cũng dùng được, không cần IT</text>
   <text x="44" y="130" fill="#166534" font-size="14">✓ Tự do: ô nào cũng gõ gì cũng được</text>
   <text x="44" y="160" fill="#166534" font-size="14">✓ Nhập - sửa - hỏi tức thì</text>
@@ -69,7 +69,7 @@ Bức tường không đến trong một ngày. Nó đến từng viên gạch m
   <text x="44" y="220" fill="#166534" font-size="14">✓ Nơi mình học tư duy dữ liệu</text>
   <text x="44" y="250" fill="#166534" font-size="14">✓ Hoàn hảo ở quy mô nhỏ</text>
   <rect x="360" y="30" width="300" height="240" rx="12" fill="#FEF2F2" stroke="#EF4444" stroke-width="2"/>
-  <text x="510" y="62" fill="#DC2626" font-size="17" font-weight="800" text-anchor="middle">Excel hết gánh ở đâu</text>
+  <text x="510" y="62" fill="#DC2626" font-size="17" font-weight="800" text-anchor="middle">Bảng tính hết gánh ở đâu</text>
   <text x="384" y="100" fill="#991B1B" font-size="14">✗ File nặng, treo máy khi lớn</text>
   <text x="384" y="130" fill="#991B1B" font-size="14">✗ Nhiều người sửa → loạn version</text>
   <text x="384" y="160" fill="#991B1B" font-size="14">✗ VLOOKUP gãy, lỗi thầm lặng</text>
@@ -77,19 +77,19 @@ Bức tường không đến trong một ngày. Nó đến từng viên gạch m
   <text x="384" y="220" fill="#991B1B" font-size="14">✗ Ba người ba số, không ai chuẩn</text>
   <text x="384" y="250" fill="#991B1B" font-size="14">✗ Đa nguồn (Shopee/TikTok/quầy) ghép tay</text>
 </svg>
-<div class="viz-caption">Cùng một công cụ - điều khiến nó tuyệt vời ở quy mô nhỏ chính là điều khiến nó đuối khi quy mô lớn lên.</div>
+<div class="viz-caption">Cùng một công cụ - hợp ở quy mô nhỏ, lại đuối khi quy mô lớn lên.</div>
 </div>
 
-## Nó không "dở" - chỉ là quy mô đã vượt nó
+## Không phải Excel hay Sheets dở - mình lớn nhanh hơn tụi nó
 
-Đây là điều mình muốn nói thật rõ, vì nó là tinh thần của cả series này. Excel **không thua vì nó yếu.** Nó thua vì nó *quá vạn năng* - cái gì cũng làm được, nên không cái gì có một nguồn sự thật. Sự tự do khiến mình yêu nó ở quy mô ba cửa hàng chính là sự hỗn loạn khiến mình không trụ nổi ở quy mô hai mươi cửa hàng.
+Đây là chỗ mình muốn nói cho rõ, vì nó là tinh thần của cả series. Bảng tính - cả Excel lẫn Sheets - thua không phải vì tụi nó yếu. Tụi nó thua vì cái gì cũng nhét vào được, nên rốt cuộc chẳng có gì là một nguồn sự thật.
 
-Mình hay ví bảng tính như **con dao đa năng Thụy Sĩ.** Tuyệt vời cho trăm việc nhỏ hằng ngày - và mình vẫn giữ một con trong túi tới giờ. Nhưng tới lúc mình cần *xây một ngôi nhà* dữ liệu - nhiều nguồn, nhiều người, nhiều câu hỏi mới mỗi ngày - thì mình cần một bộ đồ nghề khác, *không phải một con dao to hơn.* Cái sai của mình hồi đó không phải đã dùng Excel; cái sai là cố ép Excel làm việc mà nó chưa bao giờ sinh ra để làm.
+Mình hay ví bảng tính với cái xe máy. Ở xứ mình nó chở được tất - sáng đi chợ, chiều đón con, có hôm cõng cả cái tủ lạnh sau yên. Tiện tới mức giờ mình vẫn chạy mỗi ngày. Nhưng tới lúc phải chở hàng cho cả công ty - ngày mấy chuyến, mỗi chuyến một kiểu hàng - thì chẳng con xe máy nào kham nổi. Cái mình cần lúc đó là một chiếc xe tải, chứ không phải một con xe máy to hơn. Sai của mình hồi đó đâu phải là dùng bảng tính - sai là cố ép nó chở thứ nó không gánh nổi.
 
-Và bức tường đó - file treo, loạn version, ba người ba số, đa nguồn ghép tay - chính là thứ đẩy mình đi tìm công cụ tiếp theo. Mình không bỏ Excel vì ghét nó. Mình rời nó như cách ta rời một người thầy đầu tiên: mang theo mọi thứ đã học, để đi xa hơn.
+Và chính mấy bức tường đó - file ì ạch, loạn version, ba người ba số, đa nguồn ghép tay - đẩy mình đi tìm công cụ tiếp theo. Mình không bỏ Excel hay Sheets vì ghét bỏ gì. Giống như rời ông thầy đầu tiên thôi: gói ghém hết những gì học được, rồi đi tiếp.
 
-> Bài học mình rút ra sau những năm bảng tính: một công cụ không "hết thời" - chỉ là *bạn lớn hơn nó.* Biết ơn nó vì đã đưa bạn tới đây, rồi can đảm bước tiếp khi quy mô đã gọi tên.
+> Cái mình ngấm ra sau mấy năm bảng tính: chẳng công cụ nào "hết thời" cả, chỉ là tới lúc mình lớn hơn nó. Cảm ơn nó đã cõng mình tới đây, rồi đủ gan đi tiếp khi việc đã phình to hơn nó.
 
 ---
 
-*Bạn cũng đang ở đúng cái đêm thứ Năm 11 giờ khuya của mình - file treo, số mỗi người một kiểu? [Dùng thử Semantix miễn phí.](/docs/vi/free-trial/) Và đọc tiếp Phần 2, nơi mình kể lần đầu lên [Power BI &amp; Data Studio](/blog/hanh-trinh-power-bi-data-studio/) - đẹp hơn thật, nhưng cũng lộ ra một bức tường mới.*
+*Bạn cũng đang ở đúng cái đêm thứ Năm 11 giờ khuya y như mình - file thì treo, số thì mỗi người một kiểu? Ở những bài sau, mình sẽ kể tiếp chặng rời bảng tính: lên Power BI, qua Superset, rồi tới lúc tự tay dựng Semantix - mỗi công cụ gỡ được một nút, nhưng lại lòi ra một bức tường mới.*

@@ -73,4 +73,14 @@ Giai đoạn đầu ưu tiên **bridge content** (vs-google-sheets, hành-trình
 - **Khẩu ngữ nói**: "nhé", "đấy", "á à", "đúng không?", xưng "bạn / anh em"; "..." cho nhịp nghỉ kịch tính.
 - Vẫn giữ: số VN chính xác, chốt bằng quyết định, không lan man.
 
+## STOP SLOP — soát trước khi chốt bài
+
+Trước khi chốt **blog / script**, chạy skill **Stop Slop** (`.claude/skills/stop-slop/`) để cắt slop cơ học:
+- Bỏ **em-dash** `—` (dùng `,` `.` `:`); bỏ **trạng từ/intensifier** (hoàn toàn, thật ra, thành thật, thú thật, rất, chính, sạch…).
+- Bỏ câu mở **"hắng giọng"/meta** ("đây là điều cốt lõi", "mình muốn nói rõ chỗ này", "bạn biết mình nghĩ gì không?").
+- Bỏ **đối-lập nhị phân** ("không phải X, mà Y" → nói thẳng Y); không **false agency**; không **pull-quote dạng prose**.
+- Chấm 5 chiều (Directness · Rhythm · Trust · Authenticity · Density); < 35/50 thì sửa.
+
+**NGOẠI LỆ — GIỮ NGUYÊN (bản sắc kênh, đừng để skill cắt):** slogan/hook ("ngữ cảnh là vua"), câu cụt nhịp gõ cố ý ("Đều chạy. Đều ra số."), ẩn dụ thesis ("con số trần trụi nói dối"), "..." nhịp nói. Dùng skill ở chế độ **"sửa cơ học, giữ giọng"**, không máy móc cắt.
+
 > **Quy trình chuyển blog → kịch bản (5 bước + check-list + map audio-tag): `video-scripts/BLOG-TO-VIDEO.md`.**

@@ -28,11 +28,11 @@ coverAlt: "Một dấu hỏi đứng trước dẫn tới dữ liệu và biểu
   </ol>
 </div>
 
-Một chủ quán cà phê ở TP.HCM kể với tôi: anh vừa chi mấy chục triệu mua một công cụ BI (Business Intelligence - biến dữ liệu thành quyết định), thuê người kết nối hết POS, sổ kế toán, file chấm công về một chỗ. Tốn hai tuần. Rồi anh mở phần mềm lên, thấy một màn hình dashboard (bảng số trực quan tổng hợp nhiều biểu đồ trên một màn hình) trống trơn chờ anh kéo-thả. Anh ngồi nhìn nó mười phút, rồi nhắn cho tôi một câu: *"Giờ tôi hỏi gì đây?"*
+Một chủ quán cà phê ở Hà Nội kể với tôi: anh vừa chi mấy chục triệu mua một công cụ BI (Business Intelligence - biến dữ liệu thành quyết định), thuê người kết nối hết POS, sổ kế toán, file chấm công về một chỗ. Tốn hai tuần. Rồi anh mở phần mềm lên, thấy một màn hình dashboard (bảng số trực quan tổng hợp nhiều biểu đồ trên một màn hình) trống trơn chờ anh kéo-thả. Anh ngồi nhìn nó mười phút, rồi nhắn cho tôi một câu: *"Giờ tôi hỏi gì đây?"*
 
 Đó là khoảnh khắc đắt nhất trong cả vụ đầu tư đó. Không phải tiền mua phần mềm. Là cái khoảnh khắc nhận ra mình đã mua một cỗ máy trả lời tinh vi - mà chưa hề có một câu hỏi nào để hỏi nó.
 
-Đây là sự thật ngược đời ít người chịu tin: **một đống dữ liệu và biểu đồ không trả lời được câu nào nếu bạn chưa biết mình đang hỏi gì.** Câu hỏi quyết định dữ liệu cần - không bao giờ ngược lại. Mua công cụ và dựng biểu đồ trước, rồi mới đi tìm câu hỏi, là làm mọi thứ đúng *thứ tự ngược*.
+Nói thẳng ra: **một đống dữ liệu và biểu đồ không trả lời được câu nào nếu bạn chưa biết mình đang hỏi gì.** Câu hỏi quyết định dữ liệu cần - không bao giờ ngược lại. Mua công cụ và dựng biểu đồ trước, rồi mới đi tìm câu hỏi, là làm mọi thứ đúng *thứ tự ngược*.
 
 ## Vì sao câu hỏi luôn đến trước
 
@@ -74,7 +74,7 @@ Biết mình đang hỏi *loại* gì giúp bạn không kỳ vọng nhầm - v�
 
 Sai lầm phổ biến: mua công cụ với kỳ vọng nó "tự bảo tôi phải làm gì" (dự đoán/đề xuất), trong khi tất cả những gì bạn từng nhập vào nó chỉ đủ trả lời câu mô tả. Câu hỏi quyết định cả dữ liệu cần *lẫn* mức độ khó của câu trả lời. Phần [bốn tầng phân tích](/blog/tu-duy-du-lieu-la-gi/) ở Phần 1 của series đi sâu hơn vào nấc thang này.
 
-## ... trong Semantix
+## Trong Semantix thì sao
 
 Phần lớn công cụ BI bắt bạn *dựng trước, hỏi sau*: kéo trường vào hàng, vào cột, tô màu - tức là bạn phải biết câu trả lời trông ra sao trước khi biết câu hỏi là gì. Semantix lật ngược điều đó. Bạn gõ thẳng câu hỏi bằng tiếng Việt: *"Khung giờ nào trong tuần qua chi phí nhân công vượt doanh thu?"* - và để hệ thống tự tìm dữ liệu cần, tự dựng biểu đồ phù hợp.
 

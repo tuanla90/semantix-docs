@@ -67,11 +67,11 @@ Trước khi gõ một công thức nào, bạn phải chốt ba định nghĩa.
 Khi ba định nghĩa đã chốt, quy trình là một dây chuyền ba khâu: **(1)** lấy bảng giao dịch thô → **(2)** với mỗi khách, mỗi kỳ, gán đúng một trạng thái bằng cách so với lịch sử → **(3)** đếm số khách (hoặc cộng tiền) theo từng trạng thái, từng kỳ. Kết quả là một bảng như thế này:
 
 <div class="viz">
-<div class="viz-chart" data-chart="growth" data-chart-data='{"periods":["T1","T2","T3","T4"],"series":[{"name":"retained","key":"retained","values":[null,74,96,118]},{"name":"resurrected","key":"resurrected","values":[null,11,18,22]},{"name":"new","key":"new","values":[120,95,88,102]},{"name":"churned","key":"churned","values":[null,46,52,61],"negative":true},{"name":"MAU cuối kỳ","key":"active","values":[120,134,184,265],"type":"line"},{"name":"Quick Ratio","key":"quickRatio","values":[null,2.3,2.0,2.0],"type":"line","yAxis":1}]}'></div>
+<div class="viz-chart" data-chart="growth" data-chart-data='{"periods":["T1","T2","T3","T4"],"series":[{"name":"retained","key":"retained","values":[null,74,128,173]},{"name":"resurrected","key":"resurrected","values":[null,11,18,22]},{"name":"new","key":"new","values":[120,95,88,102]},{"name":"churned","key":"churned","values":[null,46,52,61],"negative":true},{"name":"MAU cuối kỳ","key":"active","values":[120,180,234,297],"type":"line"},{"name":"Quick Ratio","key":"quickRatio","values":[null,2.3,2.0,2.0],"type":"line","yAxis":1}]}'></div>
 <div class="viz-caption">Bảng growth accounting đã lắp ráp: mỗi cột một tháng, mỗi dòng một trạng thái. Quick Ratio = (new + resurrected) / churned. (Số minh họa.)</div>
 </div>
 
-Đọc bảng này theo chiều dọc từng tháng, bạn thấy ngay *dòng chảy*: T4 có 265 khách hoạt động, nhưng đằng sau con số đó là 102 khách mới và 61 khách bỏ đi - không phải một khối tĩnh. Quick Ratio đứng ở 2,0: cứ một khách rời, có hai khách đến hoặc quay lại. Trên ngưỡng 1, doanh nghiệp đang lớn (xem [Phần 2](/blog/growth-accounting-quick-ratio/) về cách đọc chỉ số này).
+Đọc bảng này theo chiều dọc từng tháng, bạn thấy ngay *dòng chảy*: T4 có 297 khách hoạt động, nhưng đằng sau con số đó là 102 khách mới và 61 khách bỏ đi - không phải một khối tĩnh. Quick Ratio đứng ở 2,0: cứ một khách rời, có hai khách đến hoặc quay lại. Trên ngưỡng 1, doanh nghiệp đang lớn (xem [Phần 2](/blog/growth-accounting-quick-ratio/) về cách đọc chỉ số này).
 
 ## CMGR: làm mượt nhiễu tháng để thấy xu hướng nền
 

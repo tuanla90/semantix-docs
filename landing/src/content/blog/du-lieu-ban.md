@@ -35,7 +35,7 @@ Hãy hình dung thế này. Dữ liệu bẩn giống nguyên liệu ôi trong b
 
 *Ví dụ minh hoạ:* shop của bạn bán trên ba sàn. Khi gộp dữ liệu, hệ thống đếm ra "5 kênh": Shopee, shopee, SP, TikTok Shop, Tiktok. Báo cáo chia doanh thu thành 5 dòng, không dòng nào phản ánh đúng thực tế. Bạn nhìn vào và kết luận "Shopee chỉ đóng góp 28% doanh thu" - trong khi cộng cả ba biến thể lại, con số thật là **51%**. Một quyết định cắt ngân sách kênh có thể ra đời từ chính sai lệch này.
 
-Tên khách hàng, tên sản phẩm, tên tỉnh thành - chỗ nào con người gõ tay, chỗ đó sinh biến thể. "Tp. HCM", "TPHCM", "Hồ Chí Minh", "Sài Gòn" là bốn cái tên cho một thành phố. Nếu việc gộp nhiều nguồn này là cơn đau đầu thường trực của bạn, đó đúng là bài toán mà việc [hợp nhất dữ liệu đa kênh](/blog/hop-nhat-da-kenh/) sinh ra để giải.
+Tên khách hàng, tên sản phẩm, tên tỉnh thành - chỗ nào con người gõ tay, chỗ đó sinh biến thể. "Hà Nội", "HN", "Hanoi", "Ha noi" là bốn cái tên cho một thành phố. Nếu việc gộp nhiều nguồn này là cơn đau đầu thường trực của bạn, đó đúng là bài toán mà việc [hợp nhất dữ liệu đa kênh](/blog/hop-nhat-da-kenh/) sinh ra để giải.
 
 ## Ngày tháng và tiền tệ - nơi sai số trông giống số đúng nhất
 

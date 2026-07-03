@@ -17,7 +17,7 @@ Một chị quản lý chuỗi mỹ phẩm 4 cửa hàng kể với tôi câu ch
 
 Phản xạ đầu tiên của chị là tự trách: "Tại mình lười không mở app." Nhưng đó không phải lỗi của chị. **Đó là lỗi thiết kế.** Một dashboard chỉ hữu ích đúng vào khoảnh khắc bạn nhớ mở nó ra - mà con người thì bận, hay quên, và sự cố thì không bao giờ chọn ngày bạn rảnh.
 
-Đây là sự thật ngược đời ít người chịu nhìn thẳng: **dashboard đẹp mấy cũng vô dụng nếu mỗi sáng bạn phải nhớ mở nó ra.** Báo cáo tốt là báo cáo tự tìm đến bạn - nhắn thẳng vào Telegram hoặc Zalo, đúng giờ, mỗi ngày, kể cả hôm bạn đang ở sân bay.
+Nói thẳng: **dashboard đẹp mấy cũng vô dụng nếu mỗi sáng bạn phải nhớ mở nó ra.** Báo cáo tốt là báo cáo tự tìm đến bạn - nhắn thẳng vào Telegram hoặc Zalo, đúng giờ, mỗi ngày, kể cả hôm bạn đang ở sân bay.
 
 ## Vì sao "báo cáo đẩy" thắng "báo cáo kéo"
 

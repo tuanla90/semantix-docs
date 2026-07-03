@@ -24,7 +24,7 @@ Hầu hết người mới bắt đầu với một bảng duy nhất, nhồi t�
 | Mã đơn | Ngày | Sản phẩm | Loại SP | Khách | Tỉnh | Kênh | Doanh thu |
 |---|---|---|---|---|---|---|---|
 | DH001 | 03/03 | Áo khoác A | Áo | Lan | Hà Nội | TikTok Shop | 450.000 |
-| DH002 | 03/03 | Áo khoác A | Áo | Hùng | TP.HCM | Shopee | 450.000 |
+| DH002 | 03/03 | Áo khoác A | Áo | Hùng | Bắc Ninh | Shopee | 450.000 |
 | DH003 | 04/03 | Váy B | Váy | Lan | Hà Nội | TikTok Shop | 320.000 |
 
 Trông gọn gàng. Nhưng nó là một **bảng phẳng** (flat table - một bảng duy nhất gộp mọi thứ), và nó giấu sẵn ba quả bom:
@@ -65,7 +65,7 @@ Với cửa hàng của bạn, bảng fact chính là **bảng đơn hàng**. M�
 | mã_khách | Tên | Tỉnh | Nhóm |
 |---|---|---|---|
 | KH01 | Lan | Hà Nội | Thân thiết |
-| KH02 | Hùng | TP.HCM | Mới |
+| KH02 | Hùng | Bắc Ninh | Mới |
 
 Giờ "Áo khoác A" và "Hà Nội" mỗi cái chỉ tồn tại **đúng một dòng duy nhất**. Lan đổi địa chỉ? Sửa một ô. Gõ chuẩn tên kênh một lần, cả nghìn đơn dùng chung - không còn chuyện "Tik Tok" với "TikTok Shop" tách làm hai.
 

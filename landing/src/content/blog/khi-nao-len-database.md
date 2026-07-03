@@ -63,7 +63,7 @@ Sheets có lịch sử phiên bản, đúng. Nhưng nó là lịch sử *của c
 
 Trong Sheets, bạn nhồi hết vào một bảng phẳng, hoặc dán `VLOOKUP` chồng `VLOOKUP` để giả lập việc nối. Tên khách chép tay vào 200 dòng đơn; sửa một chỗ, 199 chỗ còn lại vẫn sai. Đây không phải lỗi bạn dùng sai - Sheets *không phải* database quan hệ, nó không được sinh ra để làm việc này.
 
-## ... và đường lên nhẹ nhất: không phải tự dựng Postgres, không phải thuê kỹ sư
+## Đường lên nhẹ nhất: không phải tự dựng Postgres, không phải thuê kỹ sư
 
 Đọc tới đây, nỗi sợ thường trực là: "Lên database nghĩa là thuê một kỹ sư, dựng một con **Postgres**, học một đống thứ kỹ thuật." Đó là hình dung cũ - và nó khiến nhiều người ở lại Sheets lâu hơn mức nên.
 

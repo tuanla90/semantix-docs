@@ -28,7 +28,7 @@ coverAlt: "Gương chiếu hậu hiện doanh thu quý đã qua, kính chắn gi
   </ol>
 </div>
 
-Cuối tháng 3, chủ một chuỗi cà phê ở TP.HCM mở báo cáo quý. Doanh thu xuống 18% so với quý trước. Anh triệu tập cả đội, cắt khuyến mãi, đổi menu, gọi điện cho nhà cung cấp. Nhưng đây là sự thật phũ phàng: **con số anh vừa nhìn thấy là tin của ba tháng trước.**
+Cuối tháng 3, chủ một chuỗi cà phê ở Hà Nội mở báo cáo quý. Doanh thu xuống 18% so với quý trước. Anh triệu tập cả đội, cắt khuyến mãi, đổi menu, gọi điện cho nhà cung cấp. Nhưng đây là sự thật phũ phàng: **con số anh vừa nhìn thấy là tin của ba tháng trước.**
 
 Khách đã bắt đầu thưa dần từ giữa tháng 1 - ít người ghé hơn, ngồi ngắn hơn, đơn nhỏ lại. Tín hiệu đã ở đó suốt mười tuần. Chỉ là không ai đo nó. Tới khi doanh thu quý kết sổ và đập vào mắt, cái xe đã trôi qua khúc cua từ lâu.
 
@@ -79,7 +79,7 @@ Một leading metric mà không gắn với hành động chỉ là một vanity
 
 Và con số chỉ tạo ra hành động khi người ta **tin** nó. Một bảng số khô không lay chuyển ai. *"Khách quay lại đang rơi tuần thứ ba liên tiếp, đây là 20 cái tên cụ thể vừa biến mất"* - đó là một câu chuyện, và câu chuyện mới khiến đội ngũ nhấc máy lên. Kể bằng dữ liệu, không chỉ trưng dữ liệu.
 
-## ... trong Semantix
+## Trong Semantix thì sao
 
 Bạn không cần một đội phân tích để theo dõi leading metric. Trong Semantix, bạn định nghĩa "khách quay lại 14 ngày" hay "số dùng thử tuần này" **một lần** trong tầng ngữ nghĩa, rồi hỏi lại mỗi sáng bằng tiếng Việt: *"Tuần này số khách mua lần 2 so với trung bình bốn tuần thế nào?"*.
 

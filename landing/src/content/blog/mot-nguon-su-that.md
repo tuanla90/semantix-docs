@@ -65,7 +65,7 @@ Cụ thể, nó trả lời dứt khoát những câu mà hôm nay mỗi phòng 
 - "Khách hàng mới" là người mua lần đầu trong tháng, hay lần đầu trong đời?
 - "Lợi nhuận" đã trừ phí sàn, phí ship, phí ads chưa?
 
-Khi những câu này có **một** câu trả lời được ghi ra và dùng chung, thì dù Sales hay Finance hay Marketing mở báo cáo, con số "doanh thu" *bắt buộc* ra giống nhau - vì tất cả đang gọi cùng một định nghĩa, chứ không phải tự gõ lại công thức của riêng mình. Cuốn từ điển nghiệp vụ chung không cãi lại bất kỳ ai; nó chỉ làm đúng một việc: bảo đảm mọi người nói cùng một thứ tiếng. Một lần định nghĩa. Dùng mãi mãi.
+Khi những câu này có **một** câu trả lời được ghi ra và dùng chung, thì dù Sales hay Finance hay Marketing mở báo cáo, con số "doanh thu" *bắt buộc* ra giống nhau - vì tất cả đang gọi cùng một định nghĩa, chứ không phải tự gõ lại công thức của riêng mình. Cuốn từ điển nghiệp vụ chung không cãi lại bất kỳ ai; nó chỉ làm đúng một việc: bảo đảm mọi người nói cùng một thứ tiếng. Định nghĩa một lần, dùng mãi.
 
 ## Một nguồn sự thật trong Semantix
 

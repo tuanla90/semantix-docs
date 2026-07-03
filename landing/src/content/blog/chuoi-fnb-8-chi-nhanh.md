@@ -13,7 +13,7 @@ coverAlt: "Tám file Excel từ tám chi nhánh F&B hội tụ về một màn h
 
 *Lưu ý: anh Tâm dưới đây là chân dung minh họa, dựng từ nhiều chủ chuỗi F&B chúng tôi từng trò chuyện - không phải một khách hàng cụ thể. Các con số là ví dụ để bạn hình dung, không phải số liệu thật của bất kỳ ai.*
 
-7 giờ sáng, anh Tâm - chủ một chuỗi cà phê và đồ ăn nhẹ (F&B - Food & Beverage, ngành ăn uống) 8 chi nhánh ở TP.HCM - mở Zalo và thấy đủ 8 file Excel doanh thu hôm qua. Anh thở phào: tám quán, tám báo cáo, mọi thứ đầy đủ. Rồi anh bắt đầu ghép chúng lại, và lần nào cũng vậy - con số tổng chẳng bao giờ khớp với cảm giác trong túi tiền của anh.
+7 giờ sáng, anh Tâm - chủ một chuỗi cà phê và đồ ăn nhẹ (F&B - Food & Beverage, ngành ăn uống) 8 chi nhánh ở Hà Nội - mở Zalo và thấy đủ 8 file Excel doanh thu hôm qua. Anh thở phào: tám quán, tám báo cáo, mọi thứ đầy đủ. Rồi anh bắt đầu ghép chúng lại, và lần nào cũng vậy - con số tổng chẳng bao giờ khớp với cảm giác trong túi tiền của anh.
 
 Phản xạ của anh Tâm rất hợp lý: *"Tám chi nhánh thì tám file là đúng rồi, mình chỉ cần một template chung cho gọn."* Nhưng đây là chỗ ngược đời mà anh mất gần một năm mới nhìn ra: **tám chi nhánh không có nghĩa là tám file Excel - nó có nghĩa là anh đang quản tám phiên bản sự thật khác nhau, mà cứ tưởng là một.** Mỗi quản lý chi nhánh hiểu "doanh thu", "hủy món", "ca lỗ" theo một kiểu riêng. Gộp tám file đó lại không cho anh một bức tranh - nó cho anh một mớ trộn lẫn nhìn *giống như* một bức tranh.
 
@@ -30,9 +30,9 @@ Anh Tâm không thiếu dữ liệu. Mỗi sáng anh ngập trong nó. Vấn đ�
 
 ## "Doanh thu cao nhất chuỗi" - mà lại là quán lỗ nặng nhất
 
-Đây là cú đau đầu tiên. Một sáng, con số tổng cho thấy chi nhánh Quận 1 dẫn đầu doanh thu cả tháng, hơn quán thứ hai chừng 25%. Anh Tâm định thưởng nóng cho quản lý quán đó.
+Đây là cú đau đầu tiên. Một sáng, con số tổng cho thấy chi nhánh Hoàn Kiếm dẫn đầu doanh thu cả tháng, hơn quán thứ hai chừng 25%. Anh Tâm định thưởng nóng cho quản lý quán đó.
 
-May là anh dừng lại hỏi thêm một câu. Hóa ra quán Quận 1 mở tới 11 giờ đêm, ca tối từ 21h đến 23h gần như vắng khách nhưng vẫn phải trả lương 3 nhân viên, điện điều hòa và mặt bằng giờ vàng. *Ví dụ minh họa:* ca tối đóng góp 8% doanh thu nhưng "ngốn" 22% chi phí vận hành của quán. Doanh thu cao là thật. Nhưng sau khi trừ chi phí ca, quán đó **lỗ ca tối đều đặn** - và chính khoản lỗ đó đang được "doanh thu cao" che đi.
+May là anh dừng lại hỏi thêm một câu. Hóa ra quán Hoàn Kiếm mở tới 11 giờ đêm, ca tối từ 21h đến 23h gần như vắng khách nhưng vẫn phải trả lương 3 nhân viên, điện điều hòa và mặt bằng giờ vàng. *Ví dụ minh họa:* ca tối đóng góp 8% doanh thu nhưng "ngốn" 22% chi phí vận hành của quán. Doanh thu cao là thật. Nhưng sau khi trừ chi phí ca, quán đó **lỗ ca tối đều đặn** - và chính khoản lỗ đó đang được "doanh thu cao" che đi.
 
 Vấn đề ở đây là cái bảng tổng của anh chỉ cộng doanh thu, không bao giờ chạm tới "lợi nhuận theo ca". Mà để tính được lợi nhuận theo ca thì tám file Excel phải định nghĩa "ca" giống nhau - điều chưa từng xảy ra.
 
@@ -60,13 +60,13 @@ Vấn đề chưa bao giờ là quán nào giỏi hơn. Vấn đề là **không
 
 Thứ anh cần đến trước tiên là một nơi mà "doanh thu", "ca", "hủy món", "margin" được định nghĩa **đúng một lần** cho cả chuỗi - rồi tám chi nhánh đều phải tuân theo định nghĩa đó. Đây chính là vai trò của một [Semantic Layer](/blog/semantic-layer/) (tầng định nghĩa nghiệp vụ dùng chung): nó là cuốn từ điển nghiệp vụ chung, để khi bất kỳ ai hỏi "doanh thu quán nào cao nhất tháng này", câu trả lời luôn dùng cùng một nghĩa của chữ "doanh thu".
 
-## ... trong Semantix
+## Trong Semantix thì sao
 
 Semantix không phải "một template Excel xịn", cũng không phải con chatbot cắm thẳng vào tám máy POS rồi đoán mò. Nó là hạ tầng để chủ chuỗi F&B nhìn cả tám quán như **một**:
 
 1. **Gộp tám nguồn lúc hỏi.** Kết nối tám điểm bán - KiotViet, Google Sheets, phần mềm POS khác nhau - rồi gộp (union) + làm sạch bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/) ngay lúc truy vấn. Không copy dữ liệu về kho: số ở lại từng quán và luôn mới. Anh Tâm không còn `copy-paste` lúc 7 giờ sáng.
 2. **Định nghĩa một lần.** "Doanh thu thực" = đã thanh toán, đã trừ khuyến mãi, không tính tip; "ca lỗ" = doanh thu ca thấp hơn chi phí ca. Định nghĩa một lần trong Semantic Layer, áp cho cả tám quán. Tám phiên bản sự thật gộp lại thành một.
-3. **Phân quyền theo chi nhánh.** Quản lý quán Quận 1 chỉ thấy số quán Quận 1; anh Tâm thấy toàn chuỗi. Không ai phải gửi file qua Zalo, không ai thấy số không phải của mình. (Cách chia báo cáo mà không lộ dữ liệu nhạy cảm, xem thêm [Chia sẻ báo cáo cho nhân viên mà không lộ data nhạy cảm](/blog/chia-se-bao-cao-khong-lo-data/).)
+3. **Phân quyền theo chi nhánh.** Quản lý quán Hoàn Kiếm chỉ thấy số quán Hoàn Kiếm; anh Tâm thấy toàn chuỗi. Không ai phải gửi file qua Zalo, không ai thấy số không phải của mình. (Cách chia báo cáo mà không lộ dữ liệu nhạy cảm, xem thêm [Chia sẻ báo cáo cho nhân viên mà không lộ data nhạy cảm](/blog/chia-se-bao-cao-khong-lo-data/).)
 
 Sau khi kết nối, buổi sáng của anh Tâm không bắt đầu bằng tám file. Nó bắt đầu bằng một câu hỏi bằng tiếng Việt - *"quán nào lỗ ca nào hôm qua, và món nào bán chạy mà âm margin?"* - và số ra ngay, kèm biểu đồ, đọc chung một định nghĩa. Anh thậm chí đặt lịch để mỗi 7h sáng một bản tóm tắt toàn chuỗi tự gửi về Zalo (xem [Tự động gửi báo cáo hằng ngày qua Telegram/Zalo](/blog/bao-cao-telegram-zalo/)) - trước cả khi anh kịp mở laptop.
 

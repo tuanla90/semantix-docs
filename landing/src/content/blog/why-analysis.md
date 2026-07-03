@@ -62,7 +62,7 @@ Một con số tổng là kết quả của **phép cộng những lực ngượ
 Cách thoát ra là **cắt theo nhiều chiều** (dimension - lát cắt để xoay nhìn con số: theo kênh, khu vực, sản phẩm, nhóm khách) để **khoanh vùng**:
 
 - **Theo kênh:** cú giảm nằm ở Shopee, TikTok Shop, hay cửa hàng offline?
-- **Theo khu vực:** TP.HCM giảm hay tỉnh giảm?
+- **Theo khu vực:** Hà Nội giảm hay tỉnh giảm?
 - **Theo sản phẩm:** một dòng hàng tụt kéo cả tổng, hay tụt đều?
 
 Gần như mọi lần, bạn sẽ thấy cú giảm **không trải đều** - nó dồn vào một hai chỗ. Đây chính là [Pareto 80/20](/blog/pareto-80-20/) áp vào *nguyên nhân*: thường **một nhúm nhỏ kênh/sản phẩm gây ra phần lớn cú giảm**. Tìm ra cái nhúm đó, bạn đã thu hẹp vấn đề từ "cả công ty" xuống "một việc cụ thể".
@@ -71,7 +71,7 @@ Một cảnh báo quan trọng: phân rã cho bạn biết *cái gì* đi cùng 
 
 WHY analysis cũng chính là nấc thứ hai trên [thang trưởng thành phân tích](/blog/tien-hoa-bi/): từ "chuyện gì đã xảy ra" (mô tả) bước lên "vì sao nó xảy ra" (chẩn đoán). Phần lớn doanh nghiệp Việt kẹt ở nấc một - có dashboard đẹp nhưng vẫn trả lời "do thị trường".
 
-## ... trong Semantix
+## Trong Semantix thì sao
 
 Tự tay làm việc này tử tế - bóc doanh thu theo price-volume-mix, rồi cắt chéo theo kênh × khu vực × sản phẩm để khoanh vùng, rồi chạy 5 Whys - là cả buổi viết SQL cho một analyst. Và lần sau con số đổi, bạn lại làm lại từ đầu.
 

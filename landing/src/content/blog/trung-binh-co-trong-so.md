@@ -96,11 +96,11 @@ Với trung bình của các trung bình (ví dụ điểm đánh giá, giá v�
 
 > **Σ(giá trị × trọng số) ÷ Σ trọng số**
 
-Đọc thì hơi "toán", nhưng làm thì cực dễ. Ví dụ điểm đánh giá: chi nhánh Q1 được **4,8 sao** từ **500 lượt**, chi nhánh Q7 được **3,0 sao** từ **20 lượt**. Điểm trung bình toàn hệ thống **không phải** (4,8 + 3,0) ÷ 2 = 3,9. Mà là:
+Đọc thì hơi "toán", nhưng làm thì cực dễ. Ví dụ điểm đánh giá: chi nhánh Hoàn Kiếm được **4,8 sao** từ **500 lượt**, chi nhánh Nam Từ Liêm được **3,0 sao** từ **20 lượt**. Điểm trung bình toàn hệ thống **không phải** (4,8 + 3,0) ÷ 2 = 3,9. Mà là:
 
 > (4,8 × 500 + 3,0 × 20) ÷ (500 + 20) = (2.400 + 60) ÷ 520 ≈ **4,73 sao**
 
-Gần 4,8 hơn nhiều, vì Q1 đông gấp 25 lần. Lấy trung bình đơn giản sẽ "dìm oan" cả thương hiệu chỉ vì một chi nhánh nhỏ mới mở chưa kịp có review.
+Gần 4,8 hơn nhiều, vì Hoàn Kiếm đông gấp 25 lần. Lấy trung bình đơn giản sẽ "dìm oan" cả thương hiệu chỉ vì một chi nhánh nhỏ mới mở chưa kịp có review.
 
 ## Cái bẫy này ẩn ở khắp nơi trong báo cáo SME
 

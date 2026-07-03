@@ -53,7 +53,7 @@ Cả data-driven và data-informed đều có chung một phẩm chất mà HiPP
 Cái bẫy tinh vi ở chỗ: từ bên ngoài, hai việc trông giống hệt nhau. Cùng mở dashboard, cùng nói "theo dữ liệu", cùng trình bày biểu đồ đẹp. Khác biệt nằm ở thứ tự - và bạn tự bắt được mình qua mấy dấu hiệu này:
 
 - **Bạn biết kết luận trước khi mở số.** Nếu bạn đã chắc chắn "phải tăng ngân sách kênh A" rồi mới đi tìm metric (chỉ số đo được) chứng minh, đó là biện minh, không phải phân tích.
-- **Bạn chỉ trích con số có lợi.** Doanh thu kênh A đẹp thì khoe; chi phí kênh A cũng cao thì... không nhắc tới. Tư duy bằng số là nhìn *cả* bức tranh, kể cả mảng làm mình khó chịu.
+- **Bạn chỉ trích con số có lợi.** Doanh thu kênh A đẹp thì khoe; chi phí kênh A cũng cao thì lờ đi, không nhắc tới. Tư duy bằng số là nhìn *cả* bức tranh, kể cả mảng làm mình khó chịu.
 - **Khi số cãi lại, bạn nghi ngờ số chứ không nghi ngờ mình.** "Chắc tracking lỗi", "Tháng này bất thường", "Số này không phản ánh đúng". Đôi khi đúng là số sai thật - nhưng nếu *lần nào* số trái ý bạn cũng "sai", thì vấn đề không nằm ở số.
 
 > Quy tắc vàng: bạn chỉ thật sự data-driven khi có thể kể ra **một lần gần đây dữ liệu khiến bạn đổi quyết định**. Không kể được lần nào - nghĩa là suốt thời gian qua dữ liệu chỉ đang gật đầu với bạn, và một thứ chỉ biết gật đầu thì không phải cố vấn, mà là tấm gương.

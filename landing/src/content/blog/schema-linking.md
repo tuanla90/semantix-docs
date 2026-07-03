@@ -119,7 +119,7 @@ Bạn có thể nhồi cho AI cả nghìn cột kèm mô tả, và nó vẫn đo
 
 Đây cũng là ranh giới phân biệt một công cụ "cắm chatbot thẳng vào database" với một nền tảng nghiêm túc. Chatbot cắm thẳng phải đoán schema mỗi lần hỏi; nền tảng có Semantic Layer thì đã có sẵn bản đồ. Chúng tôi đã mổ xẻ khác biệt này kỹ trong bài [Semantic Layer vs "chatbot cắm thẳng vào database"](/blog/semantic-layer-vs-chatbot-database/) - và vì sao [Semantic Layer là lớp nền giúp AI hiểu đúng](/blog/semantic-layer/) là điều kiện cần, không phải tính năng làm sang.
 
-## ... trong Semantix
+## Trong Semantix thì sao
 
 Semantix không định vị mình là "chatbot đọc schema rồi đoán". Khi bạn cắm dữ liệu vào, quy trình nối từ → bảng/cột đi qua ba bước neo chặt vào ý nghĩa, không thả nổi cho AI suy đoán:
 

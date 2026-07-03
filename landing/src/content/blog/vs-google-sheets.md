@@ -76,7 +76,7 @@ Bạn muốn cho quản lý chi nhánh A xem doanh số riêng chi nhánh A. Nh�
 
 Bạn ẩn cột `Giá vốn` rồi gửi file cho đối tác xem doanh thu. Họ bỏ ẩn trong ba giây, và toàn bộ biên lợi nhuận của bạn nằm gọn trong tay người ngoài. Phân quyền theo dòng - "người này chỉ thấy chi nhánh của họ" - đơn giản là không tồn tại trong cái mô hình một-file-cho-tất-cả.
 
-## ... còn trong Semantix thì sao
+## Còn trong Semantix thì sao
 
 Thứ mình đang xây - gọi là Semantix - dễ định vị nhất bằng **phủ định**: nó **không bắt bạn bỏ Google Sheets**, không bắt dựng kho dữ liệu, không bắt học SQL. Nó dựng ngay trên chính Google Sheets bạn đang dùng - cái sheet là cánh cửa vào, không phải cái trần.
 

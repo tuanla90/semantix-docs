@@ -22,7 +22,7 @@ coverAlt: "Luồng người dùng được chia ngẫu nhiên thành phiên bả
   </ol>
 </div>
 
-Một chủ shop mỹ phẩm ở TP.HCM đổi nút "Mua ngay" trên landing page (trang đích) từ xanh sang cam vào sáng thứ Hai. Cuối tuần, đơn tăng 14%. Anh kết luận chắc nịch: "Màu cam bán tốt hơn." Rồi đổi luôn màu cam cho mọi chiến dịch, mọi kênh.
+Một chủ shop mỹ phẩm ở Hà Nội đổi nút "Mua ngay" trên landing page (trang đích) từ xanh sang cam vào sáng thứ Hai. Cuối tuần, đơn tăng 14%. Anh kết luận chắc nịch: "Màu cam bán tốt hơn." Rồi đổi luôn màu cam cho mọi chiến dịch, mọi kênh.
 
 Phản xạ của bạn lúc này có thể là: "Hợp lý mà - có số liệu hẳn hoi, có gì sai?" Nhưng đây mới đúng là cái bẫy. Tuần đó anh cũng vừa chạy thêm một đợt khuyến mãi, lại trúng dịp lương về đầu tháng. Màu nút chỉ là một trong năm thứ thay đổi cùng lúc. Con số 14% đó *có thật* - nhưng nó không nói gì về cái nút cả.
 

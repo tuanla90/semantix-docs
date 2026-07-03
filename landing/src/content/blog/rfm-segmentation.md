@@ -11,7 +11,7 @@ cover: "/blog/covers/rfm-segmentation.png"
 coverAlt: "Lưới phân khúc khách hàng RFM: Champions, At-Risk, Lost"
 ---
 
-Một chủ shop thời trang ở TP.HCM mở báo cáo cuối quý, lọc top 50 khách chi tiêu nhiều nhất, rồi dồn toàn bộ ngân sách ưu đãi Tết cho nhóm đó: voucher VIP, quà tặng, tin nhắn chăm sóc riêng. Hợp lý, đúng không? Khách chi nhiều thì chăm kỹ.
+Một chủ shop thời trang ở Hà Nội mở báo cáo cuối quý, lọc top 50 khách chi tiêu nhiều nhất, rồi dồn toàn bộ ngân sách ưu đãi Tết cho nhóm đó: voucher VIP, quà tặng, tin nhắn chăm sóc riêng. Hợp lý, đúng không? Khách chi nhiều thì chăm kỹ.
 
 Ba tháng sau, doanh thu vẫn tụt. Lý do: gần một nửa nhóm "top chi tiêu" ấy là những người mua **một lần duy nhất** - một đám cưới, một lần sắm đồ công sở - rồi không bao giờ quay lại. Còn nhóm khách mua đều đặn 2-3 triệu mỗi tháng, những người thật sự nuôi cửa hàng, thì đang lặng lẽ rời đi vì chẳng ai để ý tới họ.
 

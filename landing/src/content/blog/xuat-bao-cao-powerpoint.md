@@ -59,7 +59,7 @@ Vài mẹo thực dụng cho bộ slide họp:
 
 Phần kỹ năng "trình bày số cho người ra quyết định" này tôi mổ xẻ kỹ hơn trong [trình bày số cho sếp](/blog/trinh-bay-so-cho-sep/) - đáng đọc nếu bộ slide của bạn hay bị hỏi ngược. Còn cách chọn đúng loại biểu đồ cho từng thông điệp thì xem [dashboard doanh thu cho chuỗi F&B](/blog/dashboard-doanh-thu-fnb/).
 
-## ... trong Semantix
+## Trong Semantix thì làm thế nào
 
 Trong Semantix, xuất báo cáo PowerPoint không phải một công cụ làm slide tách rời mà bạn phải học thêm. Nó là phần nối dài của dashboard bạn đã dựng - quy trình ba bước:
 

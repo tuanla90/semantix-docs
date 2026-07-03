@@ -96,7 +96,7 @@ Một Semantic Layer áp **bảo mật theo dòng** (row-level security) ngay t�
 
 ## Khác biệt cốt lõi - trong Semantix
 
-Đến đây có một sợi chỉ xuyên suốt cả năm khía cạnh, và nó là điểm dễ hiểu sai nhất.
+Đến đây, cả năm khía cạnh quy về cùng một điểm, và nó là chỗ dễ hiểu sai nhất.
 
 Semantix **không phải chatbot cắm vào database** - mà là AI tra một **cuốn từ điển nghiệp vụ có luật**. Khác biệt không nằm ở việc dùng AI thông minh hơn. Một model to hơn vẫn đoán token theo xác suất; nó chỉ bịa *mượt* hơn, tức là khó phát hiện hơn. Khác biệt nằm ở chỗ **bạn định nghĩa entity (thực thể nghiệp vụ - khách, đơn, sản phẩm), metric (con số đo được như doanh thu, số đơn), quan hệ và luật MỘT LẦN** trong semantic layer - rồi AI sinh SQL *neo vào* đó, thay vì đoán schema từ con số không.
 

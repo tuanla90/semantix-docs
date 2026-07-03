@@ -11,13 +11,13 @@ cover: "/blog/covers/row-level-security.png"
 coverAlt: "Một bảng dữ liệu chung, mỗi người dùng chỉ soi thấy đúng những hàng thuộc về mình"
 ---
 
-Một chuỗi cửa hàng 12 chi nhánh ở TP.HCM muốn các quản lý chi nhánh tự xem số mỗi sáng, không phải nhắn tin xin báo cáo. Nghe đơn giản. Nhưng ngay lập tức có một câu hỏi làm cả ý tưởng đứng hình: nếu mở bảng doanh thu cho quản lý chi nhánh Quận 1, anh ấy cũng thấy luôn số của Quận 7, Thủ Đức, cả 12 chi nhánh. Doanh thu, biên lợi nhuận, lương - của người khác.
+Một chuỗi cửa hàng 12 chi nhánh ở Hà Nội muốn các quản lý chi nhánh tự xem số mỗi sáng, không phải nhắn tin xin báo cáo. Nghe đơn giản. Nhưng ngay lập tức có một câu hỏi làm cả ý tưởng đứng hình: nếu mở bảng doanh thu cho quản lý chi nhánh Hoàn Kiếm, anh ấy cũng thấy luôn số của Nam Từ Liêm, Hà Đông, cả 12 chi nhánh. Doanh thu, biên lợi nhuận, lương - của người khác.
 
 Phản xạ thường thấy lúc này là khoá lại cho chắc: thôi, không mở nữa, ai cần thì xin. An toàn thật. Nhưng cũng vừa giết chết toàn bộ ý tưởng "để mọi người tự xem số". Đây chính là cái thế kẹt mà **Row-Level Security (RLS - phân quyền theo hàng dữ liệu)** sinh ra để gỡ - và nghịch lý ít người chịu tin là: muốn *chia sẻ* dữ liệu rộng hơn, bạn phải *khoá* nó chặt hơn, chứ không phải lỏng hơn.
 
 ## Row-Level Security là gì - và vấn đề gốc nó giải
 
-**Row-Level Security (RLS)**, tạm dịch "phân quyền theo hàng", là cơ chế quyết định *mỗi người được thấy những hàng dữ liệu nào* trong cùng một bảng. Không phải mỗi người một bảng riêng. Cùng một bảng `don_hang`, cùng một báo cáo doanh thu - nhưng khi quản lý Quận 1 mở ra, hệ thống tự lọc chỉ trả về các hàng có `chi_nhanh = "Quận 1"`. Quận 7 mở cùng báo cáo đó, thấy đúng các hàng của Quận 7. Sales A mở danh sách khách, chỉ thấy khách do mình phụ trách.
+**Row-Level Security (RLS)**, tạm dịch "phân quyền theo hàng", là cơ chế quyết định *mỗi người được thấy những hàng dữ liệu nào* trong cùng một bảng. Không phải mỗi người một bảng riêng. Cùng một bảng `don_hang`, cùng một báo cáo doanh thu - nhưng khi quản lý Hoàn Kiếm mở ra, hệ thống tự lọc chỉ trả về các hàng có `chi_nhanh = "Hoàn Kiếm"`. Nam Từ Liêm mở cùng báo cáo đó, thấy đúng các hàng của Nam Từ Liêm. Sales A mở danh sách khách, chỉ thấy khách do mình phụ trách.
 
 Khác biệt với phân quyền thông thường nằm ở độ mịn. Phân quyền kiểu cũ trả lời câu hỏi *"ai được vào báo cáo nào"* - đóng/mở ở cấp cả file, cả màn hình. RLS trả lời câu hỏi sâu hơn một bậc: *"trong cùng một báo cáo ai cũng vào được, mỗi người được thấy những dòng nào"*. Một bên là cánh cửa phòng. Một bên là việc trong phòng đó, mỗi người chỉ đọc được đúng những trang hồ sơ mang tên mình.
 
@@ -27,7 +27,7 @@ Vấn đề gốc rất đời thường: dữ liệu của một công ty vốn
 
 ## Cái bẫy: "tạo cho mỗi người một bản báo cáo riêng"
 
-Khi chưa biết tới RLS, gần như ai cũng rơi vào cùng một giải pháp tưởng-là-hiển-nhiên: thôi thì làm cho mỗi chi nhánh một bản báo cáo riêng. Báo cáo cho Quận 1, báo cáo cho Quận 7, lọc sẵn dữ liệu rồi gửi đúng người. 12 chi nhánh, 12 bản. Sạch sẽ, an toàn.
+Khi chưa biết tới RLS, gần như ai cũng rơi vào cùng một giải pháp tưởng-là-hiển-nhiên: thôi thì làm cho mỗi chi nhánh một bản báo cáo riêng. Báo cáo cho Hoàn Kiếm, báo cáo cho Nam Từ Liêm, lọc sẵn dữ liệu rồi gửi đúng người. 12 chi nhánh, 12 bản. Sạch sẽ, an toàn.
 
 Cho tới khi nó không còn sạch sẽ. 12 bản hôm nay, nhưng tháng sau mở thêm 3 chi nhánh là 15 bản. Có thêm cấp vùng - miền Đông gom 5 chi nhánh, miền Tây gom 4 - lại đẻ ra một lớp báo cáo nữa. Mỗi lần sửa một công thức (đổi cách tính "doanh thu thuần"), bạn phải đi sửa tay 15 chỗ. Quên một chỗ là chi nhánh đó đọc số sai mà không ai hay. Đây đúng là kiểu vấn đề mà việc nhân bản định nghĩa nghiệp vụ ra nhiều nơi luôn gây ra - cùng họ với chuyện một công ty có năm định nghĩa "doanh thu" mà một [Semantic Layer](/blog/semantic-layer/) sinh ra để dẹp.
 
@@ -41,16 +41,16 @@ Cho tới khi nó không còn sạch sẽ. 12 bản hôm nay, nhưng tháng sau 
 
 Cách làm sai: ẩn bớt dòng ở **tầng giao diện**. Báo cáo vẫn lấy về toàn bộ dữ liệu 12 chi nhánh, rồi dùng một bộ lọc trên màn hình để chỉ *hiển thị* chi nhánh của người đang xem. Trông thì đúng. Nhưng dữ liệu của 11 chi nhánh kia *đã được tải về máy người dùng rồi*, chỉ là bị che đi bằng CSS hay một filter mặc định. Ai biết chút kỹ thuật - mở DevTools, gọi thẳng API, hay xuất file - là thấy hết. Che mắt, không phải khoá cửa.
 
-RLS thật làm ở **tầng dữ liệu**: quy tắc lọc được áp ngay khi truy vấn chạm vào database, *trước khi* một byte nào rời khỏi máy chủ. Quản lý Quận 1 hỏi "doanh thu hôm nay", câu truy vấn tự động được gắn thêm điều kiện `WHERE chi_nhanh = 'Quận 1'` ngay tại nguồn. Dữ liệu 11 chi nhánh kia *không bao giờ* được lấy ra, không bao giờ rời server, nên không có gì để lộ.
+RLS thật làm ở **tầng dữ liệu**: quy tắc lọc được áp ngay khi truy vấn chạm vào database, *trước khi* một byte nào rời khỏi máy chủ. Quản lý Hoàn Kiếm hỏi "doanh thu hôm nay", câu truy vấn tự động được gắn thêm điều kiện `WHERE chi_nhanh = 'Hoàn Kiếm'` ngay tại nguồn. Dữ liệu 11 chi nhánh kia *không bao giờ* được lấy ra, không bao giờ rời server, nên không có gì để lộ.
 
 ```sql
 -- Cùng một câu hỏi "doanh thu hôm nay", hai người hỏi:
 -- Hệ thống tự gắn điều kiện theo danh tính người hỏi -
 -- không phải người dùng tự gõ, và không thể bỏ qua.
 
--- Quản lý Quận 1 hỏi  -> WHERE chi_nhanh = 'Quận 1'
--- Quản lý Quận 7 hỏi  -> WHERE chi_nhanh = 'Quận 7'
--- Giám đốc vùng hỏi   -> WHERE chi_nhanh IN ('Quận 1','Quận 7', ...)
+-- Quản lý Hoàn Kiếm hỏi  -> WHERE chi_nhanh = 'Hoàn Kiếm'
+-- Quản lý Nam Từ Liêm hỏi  -> WHERE chi_nhanh = 'Nam Từ Liêm'
+-- Giám đốc vùng hỏi   -> WHERE chi_nhanh IN ('Hoàn Kiếm','Nam Từ Liêm', ...)
 ```
 
 Khác biệt nghe có vẻ kỹ thuật, nhưng hệ quả thì rất thực tế: lọc ở giao diện là một *gợi ý lịch sự* mà người dùng có thể lách; lọc ở tầng dữ liệu là một *bức tường* mà người dùng không chạm tới được. Khi nói chuyện [chia sẻ báo cáo cho nhân viên mà không lộ data nhạy cảm](/blog/chia-se-bao-cao-khong-lo-data/), đây là ranh giới phân định an toàn thật với an toàn giả.

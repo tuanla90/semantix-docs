@@ -29,7 +29,7 @@ coverAlt: "Khối lập phương dữ liệu ba chiều Sản phẩm × Thời g
 </div>
 
 
-Cuộc họp sáng thứ Hai. Bạn vừa đọc xong con số: doanh thu quý vừa rồi **8,4 tỷ**. Tưởng xong. Nhưng sếp bắt đầu hỏi. "Theo từng tháng thì sao?" Bạn lật báo cáo theo tháng. "Theo vùng?" Lật báo cáo theo vùng. "Vùng nào trong tháng 6 yếu nhất?" Bạn ngồi ghép tay. "Cái vùng HCM đó - bóc xuống từng chi nhánh xem chi nhánh nào kéo tụt?" Bạn... hứa chiều gửi.
+Cuộc họp sáng thứ Hai. Bạn vừa đọc xong con số: doanh thu quý vừa rồi **8,4 tỷ**. Tưởng xong. Nhưng sếp bắt đầu hỏi. "Theo từng tháng thì sao?" Bạn lật báo cáo theo tháng. "Theo vùng?" Lật báo cáo theo vùng. "Vùng nào trong tháng 6 yếu nhất?" Bạn ngồi ghép tay. "Cái vùng Hà Nội đó - bóc xuống từng chi nhánh xem chi nhánh nào kéo tụt?" Bạn... hứa chiều gửi.
 
 Phản xạ của hầu hết mọi người: đây là *năm câu hỏi khác nhau*, cần *năm báo cáo khác nhau*, mỗi cái phải làm riêng. Đó chính là chỗ ngộ nhận. Năm câu hỏi đó không phải năm báo cáo - chúng là **năm cách xoay cùng một khối dữ liệu**. Hiểu được cái "khối" đó, bạn sẽ thôi đi làm hai mươi báo cáo rời rạc, và bắt đầu *xoay* một thứ duy nhất.
 
@@ -64,11 +64,11 @@ Cái khối ví dụ ở đây có ba chiều: **Sản phẩm × Thời gian × 
 
 ## Slice & dice: cắt một lát, hoặc cắt nhiều chiều
 
-**Slice (cắt lát - cố định một chiều ở một giá trị, lấy ra một mặt phẳng của khối)** là lấy dao cắt khối một nhát. Cố định Vùng = "HCM", phần còn lại của khối - Sản phẩm × Thời gian *chỉ riêng HCM* - rơi ra thành một mặt phẳng. Bạn vừa **slice** theo vùng HCM.
+**Slice (cắt lát - cố định một chiều ở một giá trị, lấy ra một mặt phẳng của khối)** là lấy dao cắt khối một nhát. Cố định Vùng = "Hà Nội", phần còn lại của khối - Sản phẩm × Thời gian *chỉ riêng Hà Nội* - rơi ra thành một mặt phẳng. Bạn vừa **slice** theo vùng Hà Nội.
 
-**Dice (cắt nhiều chiều - lọc đồng thời theo vài chiều, lấy ra một khối con nhỏ hơn)** là cắt nhiều nhát cùng lúc để lấy một *góc nhỏ* của khối. Vùng = "HCM" **và** Thời gian = "Q2" **và** Sản phẩm = "đồ gia dụng". Ba điều kiện chồng lên, bạn được một khối con bé xíu - đúng cái góc cần soi.
+**Dice (cắt nhiều chiều - lọc đồng thời theo vài chiều, lấy ra một khối con nhỏ hơn)** là cắt nhiều nhát cùng lúc để lấy một *góc nhỏ* của khối. Vùng = "Hà Nội" **và** Thời gian = "Q2" **và** Sản phẩm = "đồ gia dụng". Ba điều kiện chồng lên, bạn được một khối con bé xíu - đúng cái góc cần soi.
 
-*Ví dụ:* "doanh thu đồ gia dụng tại HCM trong Q2" - đó là một **dice** ba chiều. Còn "tất cả doanh thu của riêng HCM" - đó là một **slice** một chiều. Khác nhau ở số nhát cắt.
+*Ví dụ:* "doanh thu đồ gia dụng tại Hà Nội trong Q2" - đó là một **dice** ba chiều. Còn "tất cả doanh thu của riêng Hà Nội" - đó là một **slice** một chiều. Khác nhau ở số nhát cắt.
 
 ## Vì sao tư duy "khối" mạnh hơn "bảng phẳng"
 
@@ -89,8 +89,8 @@ Ngày nay, với một **[Semantic Layer](/blog/semantic-layer/) (tầng ngữ n
 | Drill down | Bóc sâu xuống mức chi tiết hơn | Năm → quý → tháng → ngày |
 | Drill up | Cuộn lên mức tổng quát hơn | Chi nhánh → vùng → toàn quốc |
 | Pivot | Xoay trục, đổi hàng ↔ cột | Vùng-theo-hàng → Tháng-theo-hàng |
-| Slice | Cắt một lát theo một chiều | Chỉ riêng vùng HCM |
-| Dice | Cắt nhiều chiều cùng lúc | HCM × Q2 × đồ gia dụng |
+| Slice | Cắt một lát theo một chiều | Chỉ riêng vùng Hà Nội |
+| Dice | Cắt nhiều chiều cùng lúc | Hà Nội × Q2 × đồ gia dụng |
 
 Lần tới khi sếp dồn năm câu hỏi liên tiếp về cùng một con số, đừng hoảng và đừng mở năm file. Nhận ra: sếp đang *xoay khối*. Bạn chỉ cần một nguồn xoay được - drill để tìm thủ phạm, pivot để đổi góc đọc, slice &amp; dice để soi đúng một mảnh. Một khối, năm cách nhìn, một sự thật.
 

@@ -28,7 +28,7 @@ coverAlt: "Kính lúp soi vào phần dữ liệu hợp ý, bỏ qua phần còn
   </ol>
 </div>
 
-Một chủ shop thời trang ở TP.HCM tin chắc: *"Khách của mình thích mẫu A."* Niềm tin đó có lý do - mẫu A là mẫu chị tự chọn, tự thấy đẹp. Mỗi sáng chị mở báo cáo bán hàng và lọc đúng những ngày mẫu A bán chạy. Chị khoe ảnh mẫu A lên trang, đẩy ads cho mẫu A, nhập thêm mẫu A. Số liệu trong tay chị đầy ắp - và *toàn bộ* đều xác nhận chị đúng.
+Một chủ shop thời trang ở Hà Nội tin chắc: *"Khách của mình thích mẫu A."* Niềm tin đó có lý do - mẫu A là mẫu chị tự chọn, tự thấy đẹp. Mỗi sáng chị mở báo cáo bán hàng và lọc đúng những ngày mẫu A bán chạy. Chị khoe ảnh mẫu A lên trang, đẩy ads cho mẫu A, nhập thêm mẫu A. Số liệu trong tay chị đầy ắp - và *toàn bộ* đều xác nhận chị đúng.
 
 Vấn đề: chị chưa bao giờ lọc những ngày mẫu A ế. Chưa từng nhìn mẫu B đang lặng lẽ bán đều hơn. Chưa từng đếm số khách thêm mẫu A vào giỏ rồi bỏ đi. Kho dữ liệu của chị không nhỏ - nó chỉ bị đọc qua một lăng kính: **chỉ cái gì hợp ý mới được nhìn.** Ba tháng sau, tồn kho mẫu A chất đống, còn mẫu B thì hết hàng mà chị không kịp nhập.
 
@@ -99,7 +99,7 @@ Bạn không thể tắt được thiên kiến - nó chạy tự động dướ
 
 4. **Tách con số khỏi cái neo.** Khi định giá hay đặt mục tiêu, ước lượng từ dữ liệu gốc trước, nói con số tham chiếu sau.
 
-## ... trong Semantix
+## Trong Semantix thì sao
 
 Thiên kiến sống được nhờ một thứ: **chi phí.** Đặt một câu hỏi ngược, một câu khó, một câu có thể chứng minh mình sai - theo lối cũ là tốn nửa ngày của analyst viết SQL, dựng bảng. Nên người ta không hỏi. Người ta chỉ mở lại đúng cái báo cáo hợp ý đã có sẵn.
 

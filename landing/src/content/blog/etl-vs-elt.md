@@ -11,7 +11,7 @@ cover: "/blog/covers/etl-vs-elt.png"
 coverAlt: "Hai luồng xử lý dữ liệu E-T-L và E-L-T với thứ tự khối Transform và Load hoán đổi"
 ---
 
-Một COO (Chief Operating Officer - giám đốc vận hành) ở TP.HCM hỏi đội data một câu tưởng đơn giản: *"Khách mua lần đầu mùa sale tháng 10 có quay lại mua mùa Tết không?"* Câu trả lời không phải một con số. Câu trả lời là: *"Để bọn em dựng lại pipeline (đường ống dữ liệu - quy trình tự động đưa dữ liệu từ nguồn về kho), khoảng ba ngày nữa có."* Tuần sau, chị hỏi một câu khác. Lại ba ngày. Mỗi câu hỏi mới của business là một đơn hàng đặt cho kỹ sư, xếp hàng chờ xử lý.
+Một COO (Chief Operating Officer - giám đốc vận hành) ở Hà Nội hỏi đội data một câu tưởng đơn giản: *"Khách mua lần đầu mùa sale tháng 10 có quay lại mua mùa Tết không?"* Câu trả lời không phải một con số. Câu trả lời là: *"Để bọn em dựng lại pipeline (đường ống dữ liệu - quy trình tự động đưa dữ liệu từ nguồn về kho), khoảng ba ngày nữa có."* Tuần sau, chị hỏi một câu khác. Lại ba ngày. Mỗi câu hỏi mới của business là một đơn hàng đặt cho kỹ sư, xếp hàng chờ xử lý.
 
 Phản xạ đầu tiên là trách đội data làm chậm. Nhưng họ không chậm - họ đang bị một quyết định kiến trúc từ nhiều năm trước trói tay. Quyết định đó nằm gọn trong thứ tự ba chữ cái: **ETL** (Extract, Transform, Load) hay **ELT** (Extract, Load, Transform). Đảo vị trí chữ T và chữ L nghe như chuyện kỹ thuật vặt của dân hạ tầng. Thực ra nó quyết định một điều rất đời: ai trong công ty được phép đặt câu hỏi mới với dữ liệu - chỉ kỹ sư, hay cả bạn.
 

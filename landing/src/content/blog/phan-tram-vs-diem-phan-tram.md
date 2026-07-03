@@ -26,7 +26,7 @@ coverAlt: "Minh hoạ tỷ lệ chuyển đổi từ 10% lên 12%: +2 điểm ph
 
 Tỷ lệ chuyển đổi của bạn tháng này nhích từ 10% lên 12%. Bạn viết vào báo cáo: "tăng 2%". Sếp đọc xong gật gù, thấy bình thường. Đối thủ của bạn cũng nhích y hệt 10% → 12%, nhưng họ viết: "tăng 20%". Và họ được duyệt thêm ngân sách.
 
-Cùng một sự thật. Hai cách nói. Hai số phận.
+Cùng một sự thật, hai cách nói, hai số phận.
 
 Đây là nghịch lý ít người chịu tin: **"tăng 2%" và "tăng 20%" đều mô tả đúng cái nhích 10% → 12% đó - chỉ là chúng đo hai thứ khác nhau.** Một cái đo *chênh lệch tuyệt đối*, một cái đo *thay đổi tương đối*. Trộn lẫn hai khái niệm này - vô tình hay cố ý - là cội nguồn của gần như mọi lần đọc sai một con số phần trăm. Và bạn vấp nó mỗi tuần mà không hề hay.
 

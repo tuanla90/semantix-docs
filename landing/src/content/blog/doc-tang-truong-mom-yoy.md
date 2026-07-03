@@ -30,7 +30,7 @@ Mọi con số "tăng trưởng" đều là một phép so sánh: kỳ này so v
 
 ## Bẫy 1: MoM bị mùa vụ đánh lừa
 
-Hãy hình dung một shop bánh kẹo ở TP.HCM. Doanh thu của họ không phải một đường thẳng - nó có nhịp: vọt lên sát Tết, rồi rơi mạnh ngay sau Tết, ổn định giữa năm. Đây là một bộ số *ví dụ minh hoạ* (đơn vị: triệu đồng):
+Hãy hình dung một shop bánh kẹo ở Hà Nội. Doanh thu của họ không phải một đường thẳng - nó có nhịp: vọt lên sát Tết, rồi rơi mạnh ngay sau Tết, ổn định giữa năm. Đây là một bộ số *ví dụ minh hoạ* (đơn vị: triệu đồng):
 
 <div class="viz">
 <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, sans-serif">

@@ -57,7 +57,7 @@ Một câu hỏi gọn vẫn có thể giấu một cái bẫy đơn vị. "Giá
 
 Đây chính xác là loại lỗi mà bài [Text-to-SQL: vì sao AI viết SQL không bao giờ lỗi mà vẫn trả về số sai](/blog/text-to-sql/) gọi là *lỗi ngữ nghĩa*: câu lệnh chạy trơn tru, ra kết quả, nhưng trả lời sai câu hỏi bạn thực sự muốn hỏi.
 
-## ... trong Semantix
+## Vòng làm rõ trong Semantix
 
 Cần nói rõ trước một điều, vì đây là chỗ dễ hiểu sai nhất. Semantix **không** cố làm AI "thông minh hơn để bớt đoán" - một model to hơn chỉ đoán *mượt* hơn, nghĩa là khó phát hiện hơn. Semantix cũng **không** để AI tự ý lấp mọi khoảng mơ hồ rồi mong nó may mắn đoán trúng ý bạn.
 

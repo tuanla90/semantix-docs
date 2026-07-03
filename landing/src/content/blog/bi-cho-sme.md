@@ -11,7 +11,7 @@ cover: "/blog/covers/bi-cho-sme.png"
 coverAlt: "Dữ liệu rời rạc từ nhiều kênh hội tụ thành một quyết định kinh doanh"
 ---
 
-Một chủ shop thời trang ở TP.HCM mở điện thoại lúc 11 giờ đêm. App Shopee báo doanh thu hôm nay. App TikTok Shop báo một con số khác. KiotViet ở cửa hàng báo con số thứ ba. Cộng lại trên đầu ngón tay được khoảng 38 triệu - chắc vậy. Câu hỏi thật sự trong đầu chị không phải "hôm nay bán được bao nhiêu", mà là: *"Tháng sau nên nhập thêm mẫu nào, bỏ mẫu nào, và Tết tới ôm hàng bao nhiêu thì vừa?"*
+Một chủ shop thời trang ở Hà Nội mở điện thoại lúc 11 giờ đêm. App Shopee báo doanh thu hôm nay. App TikTok Shop báo một con số khác. KiotViet ở cửa hàng báo con số thứ ba. Cộng lại trên đầu ngón tay được khoảng 38 triệu - chắc vậy. Câu hỏi thật sự trong đầu chị không phải "hôm nay bán được bao nhiêu", mà là: *"Tháng sau nên nhập thêm mẫu nào, bỏ mẫu nào, và Tết tới ôm hàng bao nhiêu thì vừa?"*
 
 Chị có đủ số liệu để chết đuối trong đó. Nhưng không có lấy một con số đủ tin để ra quyết định ấy. Phản xạ thường thấy lúc này là tự nhủ "shop mình còn nhỏ, làm gì tới mức cần **Business Intelligence** (BI - biến dữ liệu thành quyết định)". Đó chính xác là hiểu lầm tốn tiền nhất mà một chủ SME có thể mắc - và bài này dành mười phút để gỡ nó.
 
@@ -47,7 +47,7 @@ BI nghiêm túc đi ngược lại: bắt đầu từ **câu hỏi kinh doanh**,
 
 Nói gọn: Excel là cuốn sổ tay chép tay. BI là thư viện có người thủ thư biết đúng mọi định nghĩa. Khi shop còn 50 đơn một ngày, cuốn sổ tay đủ dùng. Khi lên 500 đơn trên ba kênh, cuốn sổ bắt đầu nói dối bạn mà bạn không hay.
 
-> Tôi đi tư vấn chuyển đổi số cho khá nhiều SME đủ ngành - bán hàng, kho, xuất nhập khẩu, may mặc in ấn, cả phòng khám y tế - và lần nào "doanh thu" cũng là chỗ vỡ trận đầu tiên: file của chủ tính cả đơn chưa giao, file kế toán đã trừ đơn hoàn, file kho lại đếm theo số lượng xuất. Ba con số, ba người, ai cũng đúng theo file của mình. Hành trình công cụ tư vấn của tôi đi từ Google Sheets sang AppSheet rồi đến [Nocobase](/blog/nocobase-semantix/), và thứ thực sự dập được mớ lẫn lộn đó không phải công cụ nào "xịn" hơn, mà là khoảnh khắc tôi ngồi xuống tự tay dựng lại cấu trúc dữ liệu theo nghiệp vụ và chốt định nghĩa *một lần*. Đổi tool mà không chốt định nghĩa thì chỉ là đổi chỗ nói dối.
+> Tôi đi tư vấn chuyển đổi số cho khá nhiều SME đủ ngành - bán hàng, kho, xuất nhập khẩu, may mặc in ấn, cả phòng khám y tế - và lần nào "doanh thu" cũng là chỗ vỡ trận đầu tiên: file của chủ tính cả đơn chưa giao, file kế toán đã trừ đơn hoàn, file kho lại đếm theo số lượng xuất. Ba con số, ba người, ai cũng đúng theo file của mình. Tôi đổi tool tư vấn mấy lần, từ Google Sheets sang AppSheet rồi đến [Nocobase](/blog/nocobase-semantix/), và thứ thực sự dập được mớ lẫn lộn đó không phải công cụ nào "xịn" hơn, mà là lúc tôi ngồi xuống tự tay dựng lại cấu trúc dữ liệu theo nghiệp vụ và chốt định nghĩa *một lần*. Đổi tool mà không chốt định nghĩa thì chỉ là đổi chỗ nói dối.
 
 ## Ba câu hỏi BI mọi SME nên trả lời được
 

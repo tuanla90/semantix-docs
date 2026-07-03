@@ -28,7 +28,7 @@ coverAlt: "Thanh tiến độ dữ liệu dừng ở 70% bên nút Quyết đị
   </ol>
 </div>
 
-Một chủ chuỗi cà phê ở TP.HCM phải chọn mặt bằng mới trước thứ Sáu - chủ nhà đang có người khác hỏi. Anh muốn "đủ số liệu mới quyết": lưu lượng người qua lại, sức mua khu vực, doanh thu dự phóng 12 tháng. Anh thuê khảo sát, đợi báo cáo. Thứ Sáu trôi qua. Mặt bằng về tay đối thủ. Anh không hề ra một quyết định sai - anh chỉ *không quyết*, và để hoàn cảnh quyết thay.
+Một chủ chuỗi cà phê ở Hà Nội phải chọn mặt bằng mới trước thứ Sáu - chủ nhà đang có người khác hỏi. Anh muốn "đủ số liệu mới quyết": lưu lượng người qua lại, sức mua khu vực, doanh thu dự phóng 12 tháng. Anh thuê khảo sát, đợi báo cáo. Thứ Sáu trôi qua. Mặt bằng về tay đối thủ. Anh không hề ra một quyết định sai - anh chỉ *không quyết*, và để hoàn cảnh quyết thay.
 
 Đây là sự thật ngược đời khép lại chuỗi bài này: **chờ dữ liệu hoàn hảo cũng là một quyết định - và thường là quyết định tệ nhất.** Suốt tám phần trước, chúng ta học cách bắt dữ liệu phục vụ quyết định. Phần cuối nói về tình huống ngược lại, cái khó nhất: khi dữ liệu *không bao giờ* đủ, mà bạn vẫn phải quyết hôm nay.
 
@@ -91,7 +91,7 @@ Thứ nhất, 30% thông tin cuối cùng tốn nhiều thời gian *nhất* nh�
 
 Hầu hết người làm kinh doanh tính được chi phí của một *quyết định sai*. Rất ít người tính được chi phí của việc *chưa quyết* - dù nó thật không kém. Đó là *cost of delay* (chi phí chờ - thiệt hại sinh ra mỗi ngày một quyết định bị trì hoãn).
 
-*Ví dụ minh hoạ:* một shop thời trang ở TP.HCM lưỡng lự ba tuần có nên nhập sớm bộ sưu tập Tết không, vì "muốn xem thêm dữ liệu xu hướng". Ba tuần đó, đối thủ lên hàng trước, gom luôn nhóm khách mua sớm và toàn bộ lượt tiếp cận tự nhiên trên TikTok Shop. Khi shop quyết xong, giá nhập đã tăng 15% và mùa cao điểm rút ngắn còn một nửa. Báo cáo xu hướng họ chờ đợi *chưa từng* bù nổi khoản đó.
+*Ví dụ minh hoạ:* một shop thời trang ở Hà Nội lưỡng lự ba tuần có nên nhập sớm bộ sưu tập Tết không, vì "muốn xem thêm dữ liệu xu hướng". Ba tuần đó, đối thủ lên hàng trước, gom luôn nhóm khách mua sớm và toàn bộ lượt tiếp cận tự nhiên trên TikTok Shop. Khi shop quyết xong, giá nhập đã tăng 15% và mùa cao điểm rút ngắn còn một nửa. Báo cáo xu hướng họ chờ đợi *chưa từng* bù nổi khoản đó.
 
 Thử lượng hoá nó: nếu chờ thêm một tuần khiến bạn mất khoảng *80 triệu* doanh thu mùa vụ, thì sự "cẩn trọng" ấy có giá 80 triệu - một con số thật, đặt thẳng lên bàn cạnh rủi ro của việc quyết sớm. Đặt hai con số cạnh nhau, bạn mới ra quyết định công bằng. Cũng như khi một [COO cần báo cáo tức thì](/blog/coo-bao-cao-tuc-thi/), giá trị không nằm ở con số đẹp hơn, mà ở con số *kịp lúc* để hành động.
 

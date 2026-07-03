@@ -46,7 +46,7 @@ Vẫn metric "doanh thu", nhưng cắt theo các dimension khác nhau:
 - **Theo kênh:** Shopee bao nhiêu, TikTok Shop bao nhiêu, KiotViet bao nhiêu.
 - **Theo thời gian:** tháng 1, tháng 2... hay so tháng này với tháng trước.
 - **Theo sản phẩm:** áo khoác bán bao nhiêu, váy bao nhiêu.
-- **Theo khu vực:** TP.HCM, Hà Nội, các tỉnh.
+- **Theo khu vực:** Hà Nội, Hải Phòng, các tỉnh.
 
 Một con số tổng - *"doanh thu 3,8 tỷ"* - gần như vô dụng để ra quyết định. Cũng con số đó, cắt theo kênh, lập tức kể một câu chuyện: *Shopee 1,9 tỷ, TikTok Shop 1,4 tỷ, KiotViet 0,5 tỷ.* Giờ bạn mới biết nên dồn ngân sách vào đâu. Cùng một metric, nhiều dimension - đó là toàn bộ nghệ thuật xoay khối Rubik.
 

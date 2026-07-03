@@ -108,7 +108,7 @@ Một **leading indicator** *(chỉ số báo trước - dự báo kết quả t
 
 Input metric đòi hỏi *cả hai*: vừa **báo trước** output, vừa để bạn **trực tiếp điều khiển**. Mọi input tốt đều là leading indicator; nhưng không phải leading indicator nào cũng là input bạn lái được. Bài [leading vs lagging](/blog/leading-lagging-indicator/) đào sâu trục thời gian (trước/sau); bài này đào trục quyền lực (bấm được/không bấm được). Cái bạn thật sự muốn nằm ở giao của cả hai.
 
-## ... trong Semantix
+## Chỗ này Semantix vào việc
 
 Vấn đề thực tế: input metric phải theo dõi **hằng ngày** mới có nghĩa, còn output thì cuối tháng mới chốt sổ. Mà ít ai đủ kỷ luật mở báo cáo mỗi sáng để đếm "số SP lên kệ đúng giờ vàng".
 

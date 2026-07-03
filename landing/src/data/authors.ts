@@ -20,8 +20,8 @@ export const AUTHORS: Record<string, AuthorInfo> = {
       'Hơn 10 năm trong nghề dữ liệu - từ Data Analyst tại một tập đoàn viễn thông ' +
       'đầu ngành, trưởng nhóm DA tại một công ty công nghệ lõi của hệ sinh thái ' +
       'e-commerce, đến trưởng nhóm BI tại một ngân hàng, nơi anh đang đưa semantic ' +
-      'layer thành dự án trọng điểm. Anh giảng dạy GA4, BI trên Google Workspace và ' +
-      'xây app no-code tích hợp AI, đồng thời tư vấn chuyển đổi số qua kênh ' +
+      'layer thành dự án trọng điểm. Anh giảng dạy GA4, BI trên Google Workspace, ' +
+      'BigQuery thực chiến và xây app no-code tích hợp AI, đồng thời tư vấn chuyển đổi số qua kênh ' +
       'mastergoogletools.',
     links: [
       { label: 'GA4 Advanced @ Vietmoz', href: 'https://vietmoz.edu.vn/ga4-advanced/' },
@@ -32,6 +32,10 @@ export const AUTHORS: Record<string, AuthorInfo> = {
       {
         label: 'App AI Chatbot @ Gitiho',
         href: 'https://gitiho.com/khoa-hoc/tao-app-quan-ly-chi-tieu-chuyen-nghiep-tich-hop-ai-chatbot',
+      },
+      {
+        label: 'BigQuery thực chiến: From Zero to Hero @ gpems',
+        href: 'https://gpems.net/course/khoa-hoc-bigquery-thuc-chien-from-zero-to-hero-81',
       },
     ],
   },

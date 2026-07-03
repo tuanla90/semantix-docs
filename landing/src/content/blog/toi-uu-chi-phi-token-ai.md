@@ -71,7 +71,7 @@ Ngay cả sau khi đã bỏ schema thô, phần ngữ cảnh còn lại vẫn th
 
 Khi định nghĩa được **khai báo một lần** và tái dùng, AI không còn phải suy diễn - nó chỉ tra và lắp. Phần token dành cho "nghĩ ra logic" gần như biến mất, và câu trả lời còn nhất quán hơn. Đây là chỗ tối ưu chi phí và chống [ảo giác AI bịa SQL](/blog/llm-bia-sql/) gặp nhau: cùng một hành động - đưa định nghĩa sẵn - vừa cắt token vừa khử lỗi.
 
-## ... trong Semantix
+## Trong Semantix
 
 Đến đây có một sợi chỉ xuyên suốt, và nó là điểm dễ hiểu sai nhất. Cách Semantix cắt chi phí AI **không phải** đi săn "một nhà cung cấp token rẻ hơn", cũng **không phải** ép AI trả lời cụt lủn để bớt chữ. Đổi nhà cung cấp chỉ dời con số, không chạm tới gốc lãng phí; cắt câu trả lời thì làm hỏng đúng thứ bạn cần.
 

@@ -22,7 +22,7 @@ coverAlt: "Đường dự báo nhu cầu kèm khoảng sai số, mức tồn an 
   </ol>
 </div>
 
-Tháng 12, một shop thời trang ở TP.HCM nhìn lại kho và thấy điều vô lý: họ vừa **cháy hàng** mã áo khoác bán chạy nhất - khách hỏi mà không có để bán - *vừa* ôm một núi quần kaki ế, chất đầy gác. Cùng một tháng. Cùng một người đặt hàng. Một bên thiếu, một bên thừa. Nghe như hai vấn đề ngược nhau, nhưng chúng có chung đúng một gốc rễ.
+Tháng 12, một shop thời trang ở Hà Nội nhìn lại kho và thấy điều vô lý: họ vừa **cháy hàng** mã áo khoác bán chạy nhất - khách hỏi mà không có để bán - *vừa* ôm một núi quần kaki ế, chất đầy gác. Cùng một tháng. Cùng một người đặt hàng. Một bên thiếu, một bên thừa. Nghe như hai vấn đề ngược nhau, nhưng chúng có chung đúng một gốc rễ.
 
 Gốc rễ đó là: **đơn đặt hàng được quyết bằng cảm giác.** "Tháng trước bán hết áo khoác nhanh quá, đặt gấp đôi cho chắc" - và cảm giác thì vừa hoảng quá tay ở mã này, vừa quên béng mã kia. Đặt theo cảm giác gần như luôn tạo ra cả hai lỗi cùng lúc: vừa cháy vừa ế.
 

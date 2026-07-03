@@ -89,7 +89,7 @@ Khi năm chiêu kia thất bại, đòn cuối cùng là **đánh người đưa
 
 3. **Tạo môi trường an toàn để số xấu được nói ra.** Đây là việc của người lãnh đạo. Nếu mang tin xấu bị trừng phạt, tổ chức sẽ tự bịt mắt mình. Khen người chỉ ra vấn đề sớm, kể cả vấn đề đó là của chính sếp.
 
-## ... trong Semantix
+## Trong Semantix thì sao
 
 Bốn trong sáu chiêu né sống được nhờ hai kẽ hở: *"số lấy từ đâu, có đáng tin không"* và *"nên nhìn theo thước nào"*. Khi mỗi phòng có một file Excel riêng, một cách tính riêng, hai kẽ hở đó luôn rộng mở - và ai cũng có cớ để cãi nguồn hoặc đổi metric.
 

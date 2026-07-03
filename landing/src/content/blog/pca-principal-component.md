@@ -11,7 +11,7 @@ cover: "/blog/covers/pca-principal-component.png"
 coverAlt: "PCA giảm chiều: nhiều mũi tên chỉ số nén còn hai trục, các cụm điểm tự tách ra"
 ---
 
-Bạn mở một bảng khách hàng. Mỗi dòng là một khách, và có **15 cột chỉ số**: số đơn, tần suất mua, giá trị trung bình mỗi đơn, tổng chi, số ngày từ lần mua cuối, số kênh đã mua, số lần trả hàng, số voucher đã dùng, số lần vào app, số sản phẩm khác nhau đã mua... Bạn cuộn ngang, cuộn dọc, tô màu vài cột. Và rồi bạn nhận ra: **mắt người không nhìn ra nhóm.**
+Bạn mở một bảng khách hàng. Mỗi dòng là một khách, và có **15 cột chỉ số**: số đơn, tần suất mua, giá trị trung bình mỗi đơn, tổng chi, số ngày từ lần mua cuối, số kênh đã mua, số lần trả hàng, số voucher đã dùng, số lần vào app, số sản phẩm khác nhau đã mua. Bạn cuộn ngang, cuộn dọc, tô màu vài cột. Và rồi bạn nhận ra: **mắt người không nhìn ra nhóm.**
 
 Phản xạ đầu tiên là vẽ biểu đồ. Nhưng vẽ biểu đồ gì? Một biểu đồ chỉ có hai trục. Bạn có 15 chiều. Bạn vẽ "số đơn theo tổng chi" thì thấy một đám mây; vẽ "tần suất theo số kênh" thì lại một đám mây khác. Mười lăm chiều nghĩa là **105 cặp biểu đồ** có thể vẽ - và không cái nào kể hết câu chuyện, vì mỗi cái chỉ nhìn được hai chiều một lúc.
 

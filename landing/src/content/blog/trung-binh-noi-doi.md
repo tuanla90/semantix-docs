@@ -28,7 +28,7 @@ coverAlt: "Biểu đồ phân phối lệch với đường trung bình bị ké
   </ol>
 </div>
 
-Một chủ shop mỹ phẩm ở TP.HCM mở báo cáo cuối tháng, thấy một dòng làm chị mừng: **AOV (Average Order Value - giá trị đơn hàng trung bình) = 500k**. Chị suy ra ngay: "Khách mình sộp, mỗi đơn nửa triệu." Thế là chị nhập về một lô combo cao cấp tầm 450k-600k, gom hết tiền hàng vào đó.
+Một chủ shop mỹ phẩm ở Hà Nội mở báo cáo cuối tháng, thấy một dòng làm chị mừng: **AOV (Average Order Value - giá trị đơn hàng trung bình) = 500k**. Chị suy ra ngay: "Khách mình sộp, mỗi đơn nửa triệu." Thế là chị nhập về một lô combo cao cấp tầm 450k-600k, gom hết tiền hàng vào đó.
 
 Một tháng sau, lô combo nằm đắp chiếu. Khi chị bóc dữ liệu ra xem từng đơn, sự thật hiện nguyên hình: **phần lớn khách chỉ chi quanh 150k**. Con số 500k đến từ đâu? Từ vài đơn sỉ - mấy chị bán lại ôm 5-10 triệu một lần - kéo lệch cả mặt bằng. Cái "trung bình 500k" ấy là một con số mà **gần như không khách lẻ nào thật sự chi**.
 

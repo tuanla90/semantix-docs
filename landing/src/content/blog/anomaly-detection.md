@@ -17,7 +17,7 @@ Cuối tháng, bạn ngồi xuống mở báo cáo. Mọi thứ gọn gàng, đ�
 
 ## Vì sao mắt người luôn thua trong cuộc canh số
 
-Chủ shop nào cũng nghĩ mình "để mắt tới số" mỗi ngày. Nhưng hãy thành thật: bạn có *bao nhiêu* con số phải canh? Doanh thu từng kênh, số đơn, tỷ lệ hoàn, tồn kho từng SKU (Stock Keeping Unit - mã định danh từng loại hàng), chi phí ads từng chiến dịch... Cộng lại có khi hàng trăm con số nhảy mỗi ngày. Mắt người không thể quét hết - và càng không thể nhớ "hôm qua con số này ở mức nào để hôm nay biết nó có lệch không".
+Chủ shop nào cũng nghĩ mình "để mắt tới số" mỗi ngày. Nhưng hãy thành thật: bạn có *bao nhiêu* con số phải canh? Doanh thu từng kênh, số đơn, tỷ lệ hoàn, tồn kho từng SKU (Stock Keeping Unit - mã định danh từng loại hàng), chi phí ads từng chiến dịch. Cộng lại có khi hàng trăm con số nhảy mỗi ngày. Mắt người không thể quét hết - và càng không thể nhớ "hôm qua con số này ở mức nào để hôm nay biết nó có lệch không".
 
 **Phát hiện bất thường** lật ngược thế trận. Thay vì bạn ngồi soi từng cột, máy soi *liên tục* cả trăm con số cùng lúc, và **chỉ gọi bạn khi có cái gì đó thật sự lệch khỏi thường lệ**. Bạn chuyển từ vai *người gác đêm phải thức trắng* sang vai *người được đánh thức khi có trộm*.
 

@@ -44,8 +44,8 @@ Quy tắc gọn: **đừng hỏi một con số - hãy hỏi một quyết đị
 
 > "Phân tích RFM (Recency, Frequency, Monetary - phân khúc khách theo lần mua gần nhất, tần suất và số tiền chi) khách hàng. Nhóm Champions (mua gần đây, thường xuyên, giá trị cao) có gì chung về địa lý, kênh mua và loại sản phẩm?"
 
-*Ví dụ kết quả:* nhóm Champions tập trung ở TP.HCM, mua qua app (không phải web), thường bắt đầu từ category A rồi cross-buy sang B.
-**Quyết định ngay:** dồn acquisition vào app users tại TP.HCM, đẩy category A làm "sản phẩm mở màn" dẫn vào funnel.
+*Ví dụ kết quả:* nhóm Champions tập trung ở Hà Nội, mua qua app (không phải web), thường bắt đầu từ category A rồi cross-buy sang B.
+**Quyết định ngay:** dồn acquisition vào app users tại Hà Nội, đẩy category A làm "sản phẩm mở màn" dẫn vào funnel.
 
 ## 3. "Tôi đang mất khách ở đâu trong funnel?"
 

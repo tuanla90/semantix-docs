@@ -66,7 +66,7 @@ Tôi học bài này từ chính lần mình làm hỏng. Thời còn biên tậ
 
 Sở hữu xong con số rồi, câu tiếp theo: **ai được nhìn thấy nó?** Đây là trụ **phân quyền** - quyết định mỗi người trong công ty thấy được lát cắt dữ liệu nào.
 
-Nhiều người tách "bảo mật" ra khỏi "governance", coi như hai chuyện. Sai. Phân quyền chính là governance - nó trả lời câu "ai được xem gì", một trong bốn câu cốt lõi. Quản lý chi nhánh Quận 1 được xem số chi nhánh mình, nhưng không nên thấy lương và biên lợi nhuận của Quận 7. Sales A thấy khách mình phụ trách, không thấy khách của Sales B.
+Nhiều người tách "bảo mật" ra khỏi "governance", coi như hai chuyện. Sai. Phân quyền chính là governance - nó trả lời câu "ai được xem gì", một trong bốn câu cốt lõi. Quản lý chi nhánh Hoàn Kiếm được xem số chi nhánh mình, nhưng không nên thấy lương và biên lợi nhuận của Nam Từ Liêm. Sales A thấy khách mình phụ trách, không thấy khách của Sales B.
 
 Cơ chế làm việc này gọn gàng là **RLS** (Row-Level Security - phân quyền theo hàng dữ liệu, mỗi người chỉ thấy đúng các dòng thuộc phạm vi mình). Như đã mổ kỹ trong bài [muốn chia sẻ dữ liệu rộng hơn, bạn phải khoá nó chặt hơn](/blog/row-level-security/): khoá đúng chỗ - ở tầng dữ liệu, theo hàng - lại chính là điều kiện để bạn *dám* mở số cho cả công ty. Không có phân quyền, bạn kẹt giữa "mở hết thì lộ" và "khoá hết thì tắc". Có nó, governance cho phép self-service mà vẫn ngủ ngon.
 

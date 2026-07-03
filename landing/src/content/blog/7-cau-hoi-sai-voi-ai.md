@@ -83,7 +83,7 @@ Bảy lỗi trên rút lại thành ba nguyên tắc bạn có thể tự kiểm
 
 Và đây là dấu hiệu của một AI thật sự tốt: khi câu hỏi của bạn còn mơ hồ ở chỗ làm **đổi con số**, nó sẽ **hỏi lại** một câu thay vì đoán bừa - đúng như một bác sĩ giỏi hỏi thêm trước khi kê đơn. Một AI trả lời ngay mọi thứ không phải là AI thông minh, mà là [AI đang đoán](/blog/ai-biet-hoi-lai/).
 
-## ... trong Semantix
+## Chuyện này trong Semantix
 
 Cần nói rõ một điều, vì đây là chỗ dễ kỳ vọng sai. Semantix **không** hứa làm AI "thông minh tới mức tự hiểu mọi câu hỏi mơ hồ" - một model to hơn chỉ đoán *mượt* hơn, khó phát hiện sai hơn.
 

@@ -62,7 +62,7 @@ Bạn biết mình muốn kết quả trông thế nào; AI thì không. Không 
 
 Nêu rõ: **dạng** (bảng / biểu đồ đường / cột), **số dòng** (top 10, không phải "tất cả"), **cột muốn thấy**. Một câu mô tả định dạng tiết kiệm cho bạn ba lần hỏi lại.
 
-## ... trong Semantix
+## Trong Semantix thì sao
 
 Cần nói rõ một điều, vì đây là chỗ dễ kỳ vọng sai. Semantix **không** hứa làm AI "thông minh tới mức tự hiểu mọi câu mơ hồ" - một model to hơn chỉ đoán *mượt* hơn, khó phát hiện sai hơn.
 

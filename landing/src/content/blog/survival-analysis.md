@@ -64,7 +64,7 @@ Một con số tổng - "tỷ lệ giữ chân trung bình 30%" - sẽ trộn c�
 
 Đặt một ngưỡng can thiệp đúng chỗ dốc nhất thường rẻ hơn và hiệu quả hơn nhiều so với cố giành lại khách đã rời hẳn.
 
-## ... trong Semantix
+## Trong Semantix thì sao
 
 Nói thẳng cho rõ ràng: **Semantix không có một module Kaplan-Meier hay hazard rate học thuật.** Nếu bạn là nhà nghiên cứu cần ước lượng đường cong sống sót với censoring chuẩn thống kê, khoảng tin cậy và kiểm định log-rank, đó là việc của R hay Python, không phải của Semantix. Chúng tôi không giả vờ ngược lại.
 

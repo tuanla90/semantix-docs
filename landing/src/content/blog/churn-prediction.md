@@ -11,7 +11,7 @@ cover: "/blog/covers/churn-prediction.png"
 coverAlt: "Khoảng cách giữa các lần mua giãn dần và cờ đỏ cảnh báo nguy cơ khách rời"
 ---
 
-Một quán cà phê ở quận 3 có anh khách quen. Hai năm nay, sáng nào anh cũng ghé. Rồi một tuần không thấy. Rồi hai tuần. Đến khi chủ quán nhận ra "ủa lâu rồi không gặp anh ấy", anh đã thành khách quen của một quán mới cách đó hai con đường - và sẽ không quay lại nữa.
+Một quán cà phê ở Đống Đa có anh khách quen. Hai năm nay, sáng nào anh cũng ghé. Rồi một tuần không thấy. Rồi hai tuần. Đến khi chủ quán nhận ra "ủa lâu rồi không gặp anh ấy", anh đã thành khách quen của một quán mới cách đó hai con đường - và sẽ không quay lại nữa.
 
 Đây là nghịch lý ít người chịu tin: **lúc bạn biết một khách đã rời, thì đã quá muộn để giữ.** Báo cáo cuối tháng chỉ cho bạn xem một danh sách người đã đi - như đọc cáo phó. Thứ bạn cần không phải cáo phó, mà là một cái chuông báo *trước khi* họ đi. Đó chính là **churn prediction** (dự đoán khách rời - đoán trước ai sắp ngừng mua dựa trên dấu hiệu sớm).
 

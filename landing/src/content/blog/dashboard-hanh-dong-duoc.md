@@ -23,7 +23,7 @@ coverAlt: "Một dashboard với số kèm mũi tên so sánh và ô đỏ đán
   </ol>
 </div>
 
-Một chủ chuỗi 6 cửa hàng cà phê ở TP.HCM khoe với tôi cái dashboard (bảng số trực quan tổng hợp trên một màn hình) mới dựng: 14 ô số, 8 biểu đồ, màu mè đủ kiểu, tự cập nhật theo dữ liệu bán hàng mỗi đêm. Đẹp thật. Tôi hỏi một câu: "Sáng nay mở nó ra, anh quyết định được điều gì?" Anh im một lúc, rồi cười: "Ờ... thì biết là doanh thu hôm qua 38 triệu."
+Một chủ chuỗi 6 cửa hàng cà phê ở Hà Nội khoe với tôi cái dashboard (bảng số trực quan tổng hợp trên một màn hình) mới dựng: 14 ô số, 8 biểu đồ, màu mè đủ kiểu, tự cập nhật theo dữ liệu bán hàng mỗi đêm. Đẹp thật. Tôi hỏi một câu: "Sáng nay mở nó ra, anh quyết định được điều gì?" Anh im một lúc, rồi cười: "Ờ... thì biết là doanh thu hôm qua 38 triệu."
 
 Đó chính là chỗ ngược đời ít người chịu gọi tên: **một dashboard có thể đầy ắp số đúng mà vẫn hoàn toàn vô dụng.** Nó cho bạn biết *cái gì đã xảy ra*, nhưng không gợi ý bạn *phải làm gì*. Và một bảng số không dẫn tới hành động thì, dù đẹp đến đâu, cũng chỉ là tấm ảnh trang trí cho màn hình.
 

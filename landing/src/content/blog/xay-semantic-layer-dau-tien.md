@@ -83,7 +83,7 @@ Có một metric chuẩn rồi, bạn không dừng lại - nhưng cũng đừng
 
 Mỗi định nghĩa mới đều **đứng trên định nghĩa cũ**, nên cuốn từ điển càng lúc càng dày mà không bao giờ mâu thuẫn với chính nó. Đây cũng là lúc bạn thật sự đang có [một nguồn sự thật](/blog/mot-nguon-su-that/) - không phải vì gom data về một chỗ, mà vì mọi con số đều quy về cùng một bộ định nghĩa gốc. *(Muốn phân biệt rạch ròi metric, dimension và KPI để đặt tên cho đúng? Xem [Metric - Dimension - KPI](/blog/metric-dimension-kpi/).)*
 
-## ... làm việc này trong Semantix
+## Làm việc này trong Semantix
 
 Bạn có thể làm bốn bước trên trên giấy và trong file SQL - nhưng vấn đề cũ quay lại: định nghĩa nằm trong một file thì vẫn là *một người giữ chìa khóa*, ai hỏi cũng phải qua người đó. Semantix không phải "một chatbot AI cắm thẳng vào database rồi mong nó đoán đúng". Nó đặt đúng bốn bước này vào **Ngữ cảnh ngữ nghĩa** - nơi định nghĩa sống tập trung:
 

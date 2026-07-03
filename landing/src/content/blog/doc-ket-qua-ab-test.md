@@ -122,7 +122,7 @@ Gói lại năm cái bẫy thành một quy trình bốn bước, dán lên tư�
 3. **Đọc đúng.** Khi đủ rồi mới mở: chênh lệch có vượt nhiễu không (dải sai số tách hẳn chưa)? Metric chặn có việc gì không?
 4. **Hỏi câu cuối.** *"Khác biệt này đủ lớn để đáng triển khai không?"* Thắng thống kê chưa phải lệnh hành động.
 
-## ... đọc kết quả trong Semantix
+## Đọc kết quả trong Semantix
 
 Năm cái bẫy trên có một điểm chung: chúng sống được nhờ việc **đọc một con số tách rời khỏi bối cảnh** - một "5%" trần trụi không kèm cỡ mẫu, không kèm dải sai số, không kèm metric chặn.
 

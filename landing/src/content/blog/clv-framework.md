@@ -68,7 +68,7 @@ Khi đã có CLV theo phân khúc, ngân sách marketing thôi là "chia đều 
 
 Đây cũng là chỗ CLV khớp với **[RFM segmentation](/blog/rfm-segmentation/)**: RFM cho bạn cách *chia* tệp khách theo hành vi mua, CLV cho bạn biết mỗi nhóm đó *đáng bao nhiêu tiền* để giữ và để kéo. Hai mảnh ghép của cùng một quyết định.
 
-## ... nhưng tính CLV theo phân khúc thường vướng ở khâu dữ liệu
+## Tính CLV theo phân khúc thường vướng ở khâu dữ liệu
 
 Đây là lý do nhiều doanh nghiệp biết rõ lý thuyết trên mà vẫn xài CLV trung bình toàn tệp: dữ liệu nằm rải rác. Doanh thu ở KiotViet, chi phí ads ở Facebook và TikTok, giá vốn trong một file Excel của kế toán, định nghĩa "khách VIP" thì mỗi phòng hiểu một kiểu. Ghép chúng lại để tính CLV cho từng phân khúc là một dự án, không phải một câu hỏi.
 

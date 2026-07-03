@@ -49,7 +49,7 @@ Nếu bạn xếp lịch livestream và phân bổ KOC (Key Opinion Consumer - n
 
 (Logic "doanh số to chưa chắc lời" này không chỉ đúng cho từng giờ - nó là cùng một cái bẫy ở cấp toàn shop, mà chúng tôi mổ xẻ trong [Chủ shop đa kênh: thứ bạn cần không phải một người biết SQL](/blog/chu-shop-da-kenh/). Và nếu bạn muốn truy nguồn rò rỉ đơn theo từng bước phễu, đọc thêm [Funnel Analysis](/blog/funnel-analysis/).)
 
-## ... trong Semantix
+## Đọc số theo giờ trong Semantix
 
 Vấn đề gốc không phải bạn thiếu dữ liệu - TikTok Shop ngập số. Vấn đề là khoảng cách giữa lúc số đổi và lúc bạn đọc được nó. Semantix không phải một con bot cắm thẳng vào sàn rồi đoán mò; nó là **lớp hạ tầng kết nối nguồn rồi gộp + làm sạch bằng [bảng ảo](/blog/bang-ao-gop-du-lieu/) ngay lúc bạn hỏi - không copy dữ liệu về kho, nên số luôn ở nguồn và luôn mới - để bạn hỏi bằng tiếng Việt theo từng giờ**.
 

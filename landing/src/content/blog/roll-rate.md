@@ -44,7 +44,7 @@ Cùng một con số churn tổng có thể trải ra thành một ma trận v�
 
 ## Ví dụ cho SME bán lẻ: khách trượt giữa các phân khúc RFM
 
-Với một chủ shop đa kênh ở TP.HCM, "nhóm" không phải là gì xa lạ - đó chính là các phân khúc [RFM](/blog/rfm-segmentation/) (Recency, Frequency, Monetary - phân khúc khách theo lần mua gần nhất, tần suất và số tiền chi) hoặc các hạng thành viên (tier). Mỗi tháng, bạn chấm lại điểm RFM cho toàn tệp khách rồi xếp họ vào các nhóm: *Champions · Trung thành · Có nguy cơ · Ngủ đông · Rời bỏ.*
+Với một chủ shop đa kênh ở Hà Nội, "nhóm" không phải là gì xa lạ - đó chính là các phân khúc [RFM](/blog/rfm-segmentation/) (Recency, Frequency, Monetary - phân khúc khách theo lần mua gần nhất, tần suất và số tiền chi) hoặc các hạng thành viên (tier). Mỗi tháng, bạn chấm lại điểm RFM cho toàn tệp khách rồi xếp họ vào các nhóm: *Champions · Trung thành · Có nguy cơ · Ngủ đông · Rời bỏ.*
 
 Roll rate biến việc chấm điểm tĩnh ấy thành một **dòng chảy**. Thay vì chỉ biết "tháng này có 1.200 khách Champions", bạn biết: trong số Champions tháng trước, 70% ở lại, 18% tụt xuống Trung thành, và 12% trượt thẳng xuống nhóm có nguy cơ trở xuống. *(Các con số là ví dụ minh họa.)* Mười hai phần trăm Champions đang rời quỹ đạo - đó là tín hiệu mà bảng "tổng số Champions" tháng này không bao giờ chỉ ra, vì lượng Champions mới bù vào có thể che lấp đúng bằng đó.
 
@@ -64,7 +64,7 @@ Churn là một **lagging indicator** (chỉ số báo sau - phản ánh kết q
 
 Một khách Champions hiếm khi biến mất sau một đêm. Họ trượt: Champions → Trung thành → Có nguy cơ → Ngủ đông → mới rời. Con số churn tổng chỉ sáng đèn ở bước cuối. Roll rate sáng đèn ở bước *đầu tiên* - khi một tin nhắn chăm sóc còn rẻ và còn kịp. Nhìn churn để hành động chẳng khác nào lái xe chỉ bằng gương chiếu hậu: bạn chỉ thấy thứ đã ở lại phía sau.
 
-## ... trong Semantix
+## Trong Semantix thì sao
 
 Trước đây, dựng một ma trận roll rate tử tế là việc của analyst: gắn nhãn nhóm cho từng khách ở kỳ trước và kỳ này, ghép cặp theo từng khách, đếm chéo, rồi chia tỷ lệ trên từng hàng - vài chục dòng SQL (Structured Query Language - ngôn ngữ truy vấn cơ sở dữ liệu) và rất dễ sai một mắt xích là cả ma trận lệch.
 

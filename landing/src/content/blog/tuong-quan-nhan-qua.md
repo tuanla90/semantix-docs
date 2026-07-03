@@ -28,7 +28,7 @@ coverAlt: "Hai đường cùng đi lên, dấu khác nhau giữa tương quan v�
   </ol>
 </div>
 
-Một chủ shop thời trang ở TP.HCM mở bảng số 12 tháng và thấy một quy luật đẹp như sách giáo khoa: **tháng nào chi quảng cáo nhiều, tháng đó doanh thu cao.** Chi 50 triệu ads → bán 600 triệu. Chi 80 triệu → bán 950 triệu. Hai cột số đi lên song song, khít nhau từng nhịp.
+Một chủ shop thời trang ở Hà Nội mở bảng số 12 tháng và thấy một quy luật đẹp như sách giáo khoa: **tháng nào chi quảng cáo nhiều, tháng đó doanh thu cao.** Chi 50 triệu ads → bán 600 triệu. Chi 80 triệu → bán 950 triệu. Hai cột số đi lên song song, khít nhau từng nhịp.
 
 Kết luận của anh nghe rất hợp lý: *ads tạo ra doanh thu.* Vậy thì đơn giản - muốn doanh thu cao hơn thì chi ads mạnh hơn. Anh dồn ngân sách vào tháng 7, giữa mùa thấp điểm, để "kích cầu". Kết quả: chi gấp đôi, doanh thu nhích đúng 8%, và tháng đó **lỗ**.
 

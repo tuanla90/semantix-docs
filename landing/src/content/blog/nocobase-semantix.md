@@ -72,7 +72,7 @@ Hệ quả: cái buổi chiều ngồi khai tay ở đầu bài **biến mất**
 
 > Quy tắc vàng: **định nghĩa dữ liệu ở một chỗ duy nhất, càng gần nguồn càng tốt.** NocoBase là chỗ đó; Semantix chỉ đọc lại, không bắt bạn khai lần hai.
 
-## ... trong Semantix
+## Ranh giới: Semantix làm gì với NocoBase, không làm gì
 
 Cần nói rõ để khỏi hiểu sai về phạm vi. Cái Semantix làm với NocoBase **không phải** là "AI tự đoán xem cột nào là doanh thu" - kiểu đoán mò mỗi lần một khác. Cũng **không phải** bắt bạn viết file cấu hình mô tả lại schema bằng tay.
 

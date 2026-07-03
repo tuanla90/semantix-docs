@@ -26,7 +26,7 @@ coverAlt: "Các mảnh ghép từ Excel, Power BI, Superset hội tụ thành Se
 
 > 🎬 Mình vừa kể lại trọn hành trình 10 năm đi qua từng công cụ này thành một video - xem trên kênh **Tuấn LA Lab**.
 
-Có một buổi tối mình nhớ rất rõ. Một chị chủ chuỗi ba cửa hàng F&B ở TP.HCM nhắn cho mình lúc gần 10 giờ: *"Em ơi, doanh thu chi nhánh Quận 7 tuần này tụt, là do ít khách hay do mỗi khách mua ít đi?"*. Mình đã dựng cho chị một dashboard Superset khá đẹp. Nhưng câu hỏi đó *không nằm* trên dashboard. Để trả lời, ai đó phải viết một câu SQL mới - và người đó là mình, lúc 10 giờ tối.
+Có một buổi tối mình nhớ rất rõ. Một chị chủ chuỗi ba cửa hàng F&B ở Hà Nội nhắn cho mình lúc gần 10 giờ: *"Em ơi, doanh thu chi nhánh Nam Từ Liêm tuần này tụt, là do ít khách hay do mỗi khách mua ít đi?"*. Mình đã dựng cho chị một dashboard Superset khá đẹp. Nhưng câu hỏi đó *không nằm* trên dashboard. Để trả lời, ai đó phải viết một câu SQL mới - và người đó là mình, lúc 10 giờ tối.
 
 Mình ngồi gõ SQL, và trong lúc gõ, một ý nghĩ cứ gõ lại trong đầu: **chị ấy không bao giờ tự hỏi được câu này.** Không phải vì chị không đủ thông minh - chị điều hành ba cửa hàng giỏi hơn mình nhiều. Mà vì giữa câu hỏi trong đầu chị và con số trong database, luôn phải có *mình* đứng giữa. Đó là khoảnh khắc mình quyết định tự xây Semantix.
 

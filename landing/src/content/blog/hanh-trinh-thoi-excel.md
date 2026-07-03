@@ -14,7 +14,7 @@ cover: "/blog/covers/hanh-trinh-thoi-excel.png"
 coverAlt: "Chồng file Excel quá tải, công thức VLOOKUP gãy, và nhiều phiên bản báo cáo lẫn lộn"
 ---
 
-Mình nhớ một đêm thứ Năm cách đây mấy năm, hồi còn phụ việc dữ liệu cho một chuỗi mỹ phẩm ở Sài Gòn. 11 giờ khuya, mình mở file `BaoCao_Thang_final_v7_SUACUOI.xlsx` để ráp số doanh thu tháng cho cuộc họp sáng hôm sau. Con trỏ chuột xoay tròn. File nặng gần 80 MB, gõ một ô thôi là Excel đơ mất bốn, năm giây để tính lại hết. Mình cứ ngồi đó, hai tay đặt trên bàn phím, chờ cái phần mềm bắt kịp đầu mình.
+Mình nhớ một đêm thứ Năm cách đây mấy năm, hồi còn phụ việc dữ liệu cho một chuỗi mỹ phẩm ở Hà Nội. 11 giờ khuya, mình mở file `BaoCao_Thang_final_v7_SUACUOI.xlsx` để ráp số doanh thu tháng cho cuộc họp sáng hôm sau. Con trỏ chuột xoay tròn. File nặng gần 80 MB, gõ một ô thôi là Excel đơ mất bốn, năm giây để tính lại hết. Mình cứ ngồi đó, hai tay đặt trên bàn phím, chờ cái phần mềm bắt kịp đầu mình.
 
 Kể vậy không phải để dìm Excel đâu, ngược lại là khác. Excel là nơi mình học tư duy dữ liệu, và mình mê nó tới tận giờ. Đây là phần mở đầu cho câu chuyện mình đi qua từng công cụ một - Excel, rồi Google Sheets, rồi xa hơn nữa - cái nào cũng đúng cho thời của nó, cho tới khi mình tự dựng Semantix. Nhưng muốn hiểu vì sao mình rời đi, phải kể trước cái đã: vì sao mình từng mê tụi nó đến thế.
 

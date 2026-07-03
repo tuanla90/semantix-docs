@@ -13,7 +13,7 @@ coverAlt: "Một bảng tính Google Sheets biến đổi thành mini-dashboard 
 
 *Muốn tự tay làm thử ngay khi đọc xong? [Dùng thử miễn phí với Google Sheets - kết nối và hỏi câu đầu trong dưới 15 phút.](/docs/vi/free-trial/)*
 
-Một chủ shop thời trang ở Gò Vấp từng nói với mình: "Em muốn có cái dashboard (bảng số trực quan) xem doanh thu, nhưng nghe nói phải thuê người dựng *data warehouse* (kho dữ liệu tập trung cho phân tích), chắc vài tuần với chục triệu, thôi để sau." Câu này mình nghe đi nghe lại đến mức thuộc lòng.
+Một chủ shop thời trang ở Cầu Giấy từng nói với mình: "Em muốn có cái dashboard (bảng số trực quan) xem doanh thu, nhưng nghe nói phải thuê người dựng *data warehouse* (kho dữ liệu tập trung cho phân tích), chắc vài tuần với chục triệu, thôi để sau." Câu này mình nghe đi nghe lại đến mức thuộc lòng.
 
 Và mỗi lần, mình đều hỏi ngược: "Chị đang ghi đơn hàng ở đâu?" - Câu trả lời gần như luôn giống nhau: một file Google Sheets.
 

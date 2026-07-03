@@ -11,7 +11,7 @@ cover: "/blog/covers/chia-se-bao-cao-khong-lo-data.png"
 coverAlt: "Một báo cáo được chia tới nhiều người, mỗi người chỉ thấy lát cắt dữ liệu của mình, phần còn lại bị che mờ"
 ---
 
-Tối thứ Sáu. Anh chủ một chuỗi 4 cửa hàng mở file Excel doanh thu tổng, rồi bắt đầu một nghi thức quen thuộc: copy sheet ra, xóa cột lương, xóa biên lợi nhuận, lọc chỉ giữ chi nhánh Quận 7, lưu thành `bao-cao-Q7.xlsx`. Lặp lại cho Quận 1, Thủ Đức, Gò Vấp. Bốn file, bốn lần xóa cột, bốn lần "ủa file này mình cắt cột margin chưa nhỉ?". Đến file thứ ba thì anh không chắc nữa, nên mở lại từ đầu cho chắc. 40 phút mỗi tuần, chỉ để *giấu bớt* dữ liệu trước khi dám gửi đi. *(Cột "margin" ở đây là biên lợi nhuận.)*
+Tối thứ Sáu. Anh chủ một chuỗi 4 cửa hàng mở file Excel doanh thu tổng, rồi bắt đầu một nghi thức quen thuộc: copy sheet ra, xóa cột lương, xóa biên lợi nhuận, lọc chỉ giữ chi nhánh Nam Từ Liêm, lưu thành `bao-cao-NTL.xlsx`. Lặp lại cho Hoàn Kiếm, Hà Đông, Cầu Giấy. Bốn file, bốn lần xóa cột, bốn lần "ủa file này mình cắt cột margin chưa nhỉ?". Đến file thứ ba thì anh không chắc nữa, nên mở lại từ đầu cho chắc. 40 phút mỗi tuần, chỉ để *giấu bớt* dữ liệu trước khi dám gửi đi. *(Cột "margin" ở đây là biên lợi nhuận.)*
 
 Phản xạ của bạn lúc này có thể là: "Thôi để mình tự làm báo cáo cho chắc, gửi tay từng người, vậy mới kiểm soát được ai thấy gì." Nghe an toàn. Nhưng đây là chỗ ngược đời ít người chịu nhìn thẳng: **chính cái việc giấu thủ công đó đang vừa rò rỉ data vừa bóp nghẹt năng suất của cả đội.** Bạn tưởng đang kiểm soát, thực ra đang làm thủ kho cho dữ liệu của chính mình - và làm sai.
 
@@ -35,7 +35,7 @@ Làm tay nghĩa là: mỗi tuần lọc đơn theo từng `mã_nhân_viên`, xu�
 
 ## Quản lý chi nhánh chỉ thấy chi nhánh mình - không thấy bức tranh toàn công ty
 
-Đây là tình huống của anh chủ chuỗi đầu bài. Quản lý Quận 7 cần thấy đầy đủ doanh thu, đơn hoàn, tồn kho *của Quận 7* để điều hành - nhưng không cần (và không nên) thấy chi nhánh Quận 1 đang lời gấp đôi.
+Đây là tình huống của anh chủ chuỗi đầu bài. Quản lý Nam Từ Liêm cần thấy đầy đủ doanh thu, đơn hoàn, tồn kho *của Nam Từ Liêm* để điều hành - nhưng không cần (và không nên) thấy chi nhánh Hoàn Kiếm đang lời gấp đôi.
 
 *Ví dụ minh hoạ:* Quy tắc một dòng - *"quản lý chỉ thấy hàng có `chi_nhánh` = chi nhánh được gán cho họ"*. Người quản lý vùng phụ trách 2 chi nhánh thì gán 2 mã, họ thấy gộp đúng 2 cái đó. Bạn - chủ - đăng nhập thì thấy cả 4, vì vai trò của bạn là toàn quyền. Cùng một dashboard tồn kho, mỗi cấp thấy đúng tầm của mình.
 
@@ -53,7 +53,7 @@ Trước khi nói cách làm đúng, phải gọi tên ba cái bẫy đã làm r
 
 **Bẫy 1 - Quên cắt một cột.** Bạn xóa cột `lương` nhưng để sót cột `chi_phí_nhân_sự` - từ đó người ta tính ngược ra lương. Hoặc đơn giản hơn: cuộn ngang chưa hết, cột margin nằm ở cột T mà mắt bạn dừng ở cột P. Một lần sót, lộ vĩnh viễn.
 
-**Bẫy 2 - Gửi nhầm file.** File `bao-cao-Q7.xlsx` và `bao-cao-Q1.xlsx` nằm cạnh nhau trong cùng thư mục, tên gần giống. 11 giờ đêm, mệt, bạn kéo nhầm file Q1 đầy đủ margin vào tin nhắn gửi cho quản lý Q7. Không có nút thu hồi nào cứu được data đã rời tay bạn.
+**Bẫy 2 - Gửi nhầm file.** File `bao-cao-NTL.xlsx` và `bao-cao-HK.xlsx` nằm cạnh nhau trong cùng thư mục, tên gần giống. 11 giờ đêm, mệt, bạn kéo nhầm file Hoàn Kiếm đầy đủ margin vào tin nhắn gửi cho quản lý Nam Từ Liêm. Không có nút thu hồi nào cứu được data đã rời tay bạn.
 
 **Bẫy 3 - Bản sao lỗi thời.** Bạn gửi file tháng 5 cho quản lý chi nhánh. Sang tháng 6 số liệu đổi, nhưng file cũ vẫn nằm trong máy họ, trong nhóm chat, trong email. Cả công ty đang ra quyết định trên *nhiều phiên bản sự thật* khác nhau - đúng cái bệnh "ba người ba con số" mà việc [hợp nhất về một nguồn sự thật](/blog/hop-nhat-da-kenh/) sinh ra để chữa.
 
@@ -67,7 +67,7 @@ Semantix không phải "công cụ giúp bạn cắt Excel cho nhanh hơn". Ngư
 2. **Ai đăng nhập, hệ thống tự lọc.** Khi một người mở dashboard, Semantix đọc danh tính họ, áp quy tắc, và chỉ trả về đúng phần dữ liệu của họ - *trước khi* số hiện lên màn hình. Họ không thể cuộn ngang ra cột bị ẩn, vì cột đó chưa bao giờ được gửi tới máy họ.
 3. **Cùng một báo cáo, nhiều góc nhìn.** Bạn xây một dashboard. Tám sale, bốn quản lý, hai kế toán cùng mở một đường link - mỗi người thấy một lát cắt khác nhau, tự động, theo thời gian thực. Số đổi thì cả tám người thấy số mới cùng lúc. Không bản nào lỗi thời.
 
-Vì quy tắc nằm chung một chỗ với [định nghĩa nghiệp vụ](/blog/semantic-layer/) - "doanh thu", "lương", "biên lợi nhuận" là gì - nên phân quyền nhất quán với mọi cách bạn hỏi số: qua dashboard, qua câu hỏi tiếng Việt, hay qua [báo cáo tự gửi về Telegram/Zalo](/blog/bao-cao-telegram-zalo/) mỗi sáng. Quản lý Q7 nhận báo cáo tự động về Zalo cũng chỉ thấy số Q7 - vì quy tắc theo người, không theo kênh gửi.
+Vì quy tắc nằm chung một chỗ với [định nghĩa nghiệp vụ](/blog/semantic-layer/) - "doanh thu", "lương", "biên lợi nhuận" là gì - nên phân quyền nhất quán với mọi cách bạn hỏi số: qua dashboard, qua câu hỏi tiếng Việt, hay qua [báo cáo tự gửi về Telegram/Zalo](/blog/bao-cao-telegram-zalo/) mỗi sáng. Quản lý Nam Từ Liêm nhận báo cáo tự động về Zalo cũng chỉ thấy số Nam Từ Liêm - vì quy tắc theo người, không theo kênh gửi.
 
 ## Tóm lại
 

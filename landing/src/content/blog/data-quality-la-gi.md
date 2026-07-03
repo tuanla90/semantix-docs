@@ -57,7 +57,7 @@ Vấn đề nằm ở chỗ từ "ổn" gộp chung quá nhiều thứ. Nó là 
 
 **Nhất quán** (*consistency* - đồng nhất giữa các nguồn và bản ghi) hỏi: cùng một thực thể có được biểu diễn giống nhau ở mọi nơi không?
 
-*Ví dụ minh hoạ:* khách "Nguyễn Văn An" ở sheet bán hàng, "Nguyen Van An" ở CRM, "NV An" ở file giao hàng - ba cái tên cho một người. Khi tính giá trị trọn đời của khách, hệ thống chia anh ấy thành ba khách nhỏ, không ai đủ "VIP" để được chăm. Tương tự, "TP.HCM", "TPHCM", "Hồ Chí Minh", "Sài Gòn" là bốn cái tên cho một thành phố. Mỗi nguồn đều *tự nó* đúng - nhưng ghép lại thì lệch.
+*Ví dụ minh hoạ:* khách "Nguyễn Văn An" ở sheet bán hàng, "Nguyen Van An" ở CRM, "NV An" ở file giao hàng - ba cái tên cho một người. Khi tính giá trị trọn đời của khách, hệ thống chia anh ấy thành ba khách nhỏ, không ai đủ "VIP" để được chăm. Tương tự, "Hà Nội", "HN", "Hanoi", "Ha noi" là bốn cách viết cho một thành phố. Mỗi nguồn đều *tự nó* đúng - nhưng ghép lại thì lệch.
 
 ## Kịp thời (timeliness) - số của hôm nay hay của ba ngày trước
 
@@ -106,7 +106,7 @@ Chiều **Kịp thời** thì cần dữ liệu luôn ở nguồn và mới - th
 |---|---|---|
 | Chính xác (accuracy) | Số có khớp sự thật ngoài đời | Tồn kho ghi 120 nhưng thực có 84 |
 | Đầy đủ (completeness) | Có thiếu ô / dòng / khoảng thời gian | 12% đơn trống cột phí ship |
-| Nhất quán (consistency) | Cùng thực thể, một cách biểu diễn | "TP.HCM" vs "TPHCM" vs "Sài Gòn" |
+| Nhất quán (consistency) | Cùng thực thể, một cách biểu diễn | "Hà Nội" vs "HN" vs "Hanoi" |
 | Kịp thời (timeliness) | Đủ mới so với lúc ra quyết định | Báo cáo tồn kho trễ ba ngày |
 | Hợp lệ (validity) | Đúng định dạng & miền giá trị | Tuổi 220, ngày `45838`, số lượng âm |
 | Duy nhất (uniqueness) | Một thực thể, đúng một bản ghi | 200 đơn export trùng, doanh thu phồng 18% |

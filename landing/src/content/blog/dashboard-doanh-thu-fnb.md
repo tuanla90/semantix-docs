@@ -62,13 +62,13 @@ Hàng trên cùng là **các thẻ số lớn** (KPI card) - thứ bạn liếc 
 Biểu đồ trung tâm nên là một cột so doanh thu các chi nhánh - xếp hạng để thấy ngay quán nào dẫn đầu, quán nào cần cứu:
 
 <div class="viz">
-<div class="viz-chart" data-chart="bar" data-chart-data='{"categories":["Bến Thành","Q3","Tân Bình","Bình Thạnh","Thủ Đức","Q7","Gò Vấp","Q10"],"unit":" tỷ","series":[{"name":"Doanh thu/tháng","values":[2.4,2.1,1.9,1.8,1.6,1.5,1.3,1.1]}]}'></div>
+<div class="viz-chart" data-chart="bar" data-chart-data='{"categories":["Hoàn Kiếm","Đống Đa","Cầu Giấy","Tây Hồ","Hà Đông","Nam Từ Liêm","Ba Đình","Thanh Xuân"],"unit":" tỷ","series":[{"name":"Doanh thu/tháng","values":[2.4,2.1,1.9,1.8,1.6,1.5,1.3,1.1]}]}'></div>
 <div class="viz-caption">Doanh thu theo chi nhánh (số minh họa): xếp hạng để thấy ngay quán nào dẫn đầu, quán nào cần cứu - nhưng nhớ doanh thu cao chưa chắc lãi cao, phải soi tiếp biên lợi nhuận từng quán.</div>
 </div>
 
-Nhưng dừng ở biểu đồ này là rơi đúng cái bẫy quen thuộc: **quán doanh thu cao nhất có thể lại là quán lỗ nặng nhất.** Quán Bến Thành dẫn đầu bảng trên có thể đang mở tới 11 giờ đêm, ca tối gần như vắng khách mà vẫn trả lương ba nhân viên và tiền điều hòa giờ vàng - doanh thu cao là thật, nhưng sau khi trừ chi phí ca thì lỗ đều đặn. Cái cột cao đang *che* khoản lỗ đó.
+Nhưng dừng ở biểu đồ này là rơi đúng cái bẫy quen thuộc: **quán doanh thu cao nhất có thể lại là quán lỗ nặng nhất.** Quán Hoàn Kiếm dẫn đầu bảng trên có thể đang mở tới 11 giờ đêm, ca tối gần như vắng khách mà vẫn trả lương ba nhân viên và tiền điều hòa giờ vàng - doanh thu cao là thật, nhưng sau khi trừ chi phí ca thì lỗ đều đặn. Cái cột cao đang *che* khoản lỗ đó.
 
-Cách duy nhất để không bị lừa là **khoan xuống** (drill-down - bấm vào một con số tổng để xem chi tiết từng lớp bên dưới). Từ cột "Bến Thành", bấm vào để xem:
+Cách duy nhất để không bị lừa là **khoan xuống** (drill-down - bấm vào một con số tổng để xem chi tiết từng lớp bên dưới). Từ cột "Hoàn Kiếm", bấm vào để xem:
 
 - **Theo khung giờ:** ca nào ra lời, ca nào ngốn chi phí. Có khi ca tối đóng góp 8% doanh thu nhưng "ăn" 22% chi phí vận hành *(ví dụ minh họa)* - đủ để bạn quyết định đóng cửa sớm hơn một tiếng.
 - **Theo món:** món nào kéo khách mà margin mỏng. Một món đá xay khuyến mãi có thể đứng đầu bảng số lượng nhưng **margin âm** - càng bán càng lỗ, "chạy" chỉ vì đang chương trình mua-1-tặng-1 mà không ai ghi rõ.
@@ -79,12 +79,12 @@ Bày drill-down này là điều biến dashboard từ "tấm hình để ngắm
 
 Dashboard đẹp mà chỉ mình bạn xem thì vẫn là nút thắt cổ chai - sáng nào quản lý quán cũng phải hỏi bạn "quán em hôm qua thế nào". Hai việc cuối khép vòng lặp:
 
-- **Phân quyền theo chi nhánh.** Quản lý quán Q7 chỉ thấy số quán Q7; bạn thấy toàn chuỗi. Không ai gửi file qua Zalo, không ai thấy số không phải của mình. (Cách chia báo cáo mà không lộ dữ liệu nhạy cảm, xem [Chia sẻ báo cáo cho nhân viên mà không lộ data nhạy cảm](/blog/chia-se-bao-cao-khong-lo-data/).)
+- **Phân quyền theo chi nhánh.** Quản lý quán Nam Từ Liêm chỉ thấy số quán Nam Từ Liêm; bạn thấy toàn chuỗi. Không ai gửi file qua Zalo, không ai thấy số không phải của mình. (Cách chia báo cáo mà không lộ dữ liệu nhạy cảm, xem [Chia sẻ báo cáo cho nhân viên mà không lộ data nhạy cảm](/blog/chia-se-bao-cao-khong-lo-data/).)
 - **Cảnh báo tự động.** Đừng bắt mình mở dashboard mỗi giờ để rình bất thường. Đặt ngưỡng: "quán nào doanh thu rớt quá 20% so cùng kỳ tuần trước thì bắn tin Zalo cho tôi". Dashboard tự canh, bạn chỉ nhận tin khi có chuyện đáng nhận.
 
 Đến đây, buổi sáng của bạn không còn bắt đầu bằng tám tin nhắn xin số. Nó bắt đầu bằng một màn hình đã sẵn số của cả tám quán - hoặc bằng một tin Zalo báo đúng quán đang cần bạn để mắt.
 
-## ... trong Semantix
+## Làm với Semantix
 
 Semantix không phải "một template Excel xịn hơn", cũng không phải con chatbot cắm thẳng vào tám máy POS rồi đoán mò. Nó là nơi bốn bước trên gói lại thành một quy trình:
 

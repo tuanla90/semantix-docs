@@ -22,7 +22,7 @@ coverAlt: "Đường doanh thu theo tháng với các đỉnh Tết lặp lại 
   </ol>
 </div>
 
-Tháng 2, một chủ shop bánh mứt ở Gò Vấp nhìn doanh thu nhảy gấp ba so với tháng 1 và quyết định nhập gấp đôi hàng cho năm sau. Tháng 3, vẫn người đó nhìn doanh thu rơi 70% so với tháng 2 và hoảng loạn cắt giảm nhân sự. Cả hai quyết định đều dựa trên một con số có thật. Và cả hai đều sai.
+Tháng 2, một chủ shop bánh mứt ở Cầu Giấy nhìn doanh thu nhảy gấp ba so với tháng 1 và quyết định nhập gấp đôi hàng cho năm sau. Tháng 3, vẫn người đó nhìn doanh thu rơi 70% so với tháng 2 và hoảng loạn cắt giảm nhân sự. Cả hai quyết định đều dựa trên một con số có thật. Và cả hai đều sai.
 
 Đây là nghịch lý ít người chịu tin: **so doanh thu tháng này với tháng trước - vào mùa Tết - là cách tự lừa mình tinh vi nhất.** Bạn không đo sức khỏe của doanh nghiệp. Bạn chỉ đang đo cái lịch.
 
@@ -85,7 +85,7 @@ Khi bạn biết tháng 2 năm nào cũng gấp ba và tháng 11 năm nào cũng
 
 Phân tích mùa vụ ăn khớp tự nhiên với [cohort analysis](/blog/cohort-analysis/): cohort cho bạn biết *khách giữ chân ra sao theo thời gian*, còn seasonality cho biết *khi nào họ sẽ quay lại mua*. Ghép hai cái lại, bạn dự được cả ai sẽ mua lẫn lúc nào họ mua.
 
-## ... trong Semantix
+## Trong Semantix thì sao
 
 Vấn đề gốc không phải bạn thiếu dữ liệu - mọi shop đều có lịch sử doanh thu theo tháng. Vấn đề là tách seasonality khỏi trend bằng tay thì cực: phải dựng pivot nhiều năm, canh lệch Tết âm lịch, tính hệ số mùa cho từng tháng. Semantix không phải một con bot đoán mò xu hướng; nó là **lớp ngữ nghĩa hiểu "cùng kỳ năm trước" và "mùa Tết" nghĩa là gì trong dữ liệu của bạn**, để bạn hỏi thẳng bằng tiếng Việt:
 

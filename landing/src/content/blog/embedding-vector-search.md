@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/embedding-vector-search.svg"
+cover: "/blog/covers/embedding-vector-search.png"
 coverAlt: "Các câu chữ trở thành điểm trong không gian, cụm gần nghĩa nằm gần nhau, một mũi tên tìm kiếm"
 ---
 

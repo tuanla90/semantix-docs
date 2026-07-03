@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/khi-nao-len-database.svg"
+cover: "/blog/covers/khi-nao-len-database.png"
 coverAlt: "Một bảng tính Google Sheets quá tải với mũi tên đi lên một database gọn gàng"
 ---
 

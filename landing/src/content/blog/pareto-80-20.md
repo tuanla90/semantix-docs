@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 12
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/pareto-80-20.svg"
+cover: "/blog/covers/pareto-80-20.png"
 coverAlt: "Biểu đồ Pareto: ít sản phẩm đầu tạo phần lớn doanh thu, đường tích luỹ chạm 80%"
 ---
 

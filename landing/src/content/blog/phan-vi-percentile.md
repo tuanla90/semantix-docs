@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/phan-vi-percentile.svg"
+cover: "/blog/covers/phan-vi-percentile.png"
 coverAlt: "Phân phối thời gian với các vạch P50, P90, P99 và đuôi phải tô đỏ"
 ---
 

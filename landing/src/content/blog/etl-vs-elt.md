@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/etl-vs-elt.svg"
+cover: "/blog/covers/etl-vs-elt.png"
 coverAlt: "Hai luồng xử lý dữ liệu E-T-L và E-L-T với thứ tự khối Transform và Load hoán đổi"
 ---
 

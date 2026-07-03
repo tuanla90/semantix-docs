@@ -7,7 +7,7 @@ category: "Câu Chuyện & Use Case"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/chu-shop-da-kenh.svg"
+cover: "/blog/covers/chu-shop-da-kenh.png"
 coverAlt: "Chủ shop đa kênh hỏi tiếng Việt, AI trả lời bằng biểu đồ từ ba sàn hội tụ"
 ---
 

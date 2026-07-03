@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/goodhart-guardrail-metrics.svg"
+cover: "/blog/covers/goodhart-guardrail-metrics.png"
 coverAlt: "Một mũi tên KPI vọt lên trong khi một chỉ số khác tụt xuống, có một vạch guardrail giữ thăng bằng"
 ---
 

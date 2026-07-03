@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: true
-cover: "/blog/covers/canh-bao-kpi.svg"
+cover: "/blog/covers/canh-bao-kpi.png"
 coverAlt: "Đường KPI tụt dần chạm vạch ngưỡng đỏ và bật ra một chuông cảnh báo"
 ---
 

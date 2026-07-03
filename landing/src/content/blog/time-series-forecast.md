@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/time-series-forecast.svg"
+cover: "/blog/covers/time-series-forecast.png"
 coverAlt: "Đường doanh thu thực tế nối sang đoạn dự báo nét đứt, kèm dải tin cậy loe rộng dần về tương lai"
 ---
 

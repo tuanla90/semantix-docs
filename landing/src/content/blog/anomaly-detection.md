@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/anomaly-detection.svg"
+cover: "/blog/covers/anomaly-detection.png"
 coverAlt: "Đường doanh thu ổn định trong dải bình thường với một đỉnh đỏ vọt ra ngoài ngưỡng kèm chuông cảnh báo"
 ---
 

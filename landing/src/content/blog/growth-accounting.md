@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 12
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/growth-accounting.svg"
+cover: "/blog/covers/growth-accounting.png"
 coverAlt: "Biểu đồ cột chồng growth accounting: new, resurrected, retained dương và churned âm dưới trục 0"
 ---
 

@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/cohort-behavioral.svg"
+cover: "/blog/covers/cohort-behavioral.png"
 coverAlt: "Phễu hành vi từ truy cập đến activation và giữ chân"
 ---
 

@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/du-lieu-ban-giet-model.svg"
+cover: "/blog/covers/du-lieu-ban-giet-model.png"
 coverAlt: "Dữ liệu bẩn đưa vào model cho ra số sai, đối lại dữ liệu sạch giúp accuracy tăng"
 ---
 

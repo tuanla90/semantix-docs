@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/churn-prediction.svg"
+cover: "/blog/covers/churn-prediction.png"
 coverAlt: "Khoảng cách giữa các lần mua giãn dần và cờ đỏ cảnh báo nguy cơ khách rời"
 ---
 

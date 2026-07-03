@@ -9,7 +9,7 @@ author: "Lê Anh Tuấn"
 featured: false
 series: "khung-do-luong"
 seriesOrder: 3
-cover: "/blog/covers/khung-san-pham-vs-marketing.svg"
+cover: "/blog/covers/khung-san-pham-vs-marketing.png"
 coverAlt: "Hai làn marketing và sản phẩm hội tụ về một hành trình khách chung với một bản đồ duy nhất"
 ---
 

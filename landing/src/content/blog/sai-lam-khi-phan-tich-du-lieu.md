@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/sai-lam-khi-phan-tich-du-lieu.svg"
+cover: "/blog/covers/sai-lam-khi-phan-tich-du-lieu.png"
 coverAlt: "Một biểu đồ bị đọc sai và cái bẫy ẩn sau con số trung bình"
 ---
 

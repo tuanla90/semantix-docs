@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/row-level-security.svg"
+cover: "/blog/covers/row-level-security.png"
 coverAlt: "Một bảng dữ liệu chung, mỗi người dùng chỉ soi thấy đúng những hàng thuộc về mình"
 ---
 

@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/vintage-analysis.svg"
+cover: "/blog/covers/vintage-analysis.png"
 coverAlt: "Nhiều đường lứa theo tháng phát hành so ở cùng mốc tuổi đời"
 ---
 

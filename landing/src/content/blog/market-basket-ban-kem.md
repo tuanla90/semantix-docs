@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/market-basket-ban-kem.svg"
+cover: "/blog/covers/market-basket-ban-kem.png"
 coverAlt: "Giỏ hàng và các sản phẩm nối nhau bằng đường, minh hoạ phân tích Market Basket"
 ---
 

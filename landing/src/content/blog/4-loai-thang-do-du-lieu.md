@@ -9,7 +9,7 @@ seriesOrder: 1
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/4-loai-thang-do-du-lieu.svg"
+cover: "/blog/covers/4-loai-thang-do-du-lieu.png"
 coverAlt: "Bốn nấc thang đo dữ liệu từ định danh đến tỉ lệ, mức phép tính được phép tăng dần"
 ---
 

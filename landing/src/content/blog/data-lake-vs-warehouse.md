@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/data-lake-vs-warehouse.svg"
+cover: "/blog/covers/data-lake-vs-warehouse.png"
 coverAlt: "Một bên là hồ dữ liệu thô lộn xộn, một bên là kho dữ liệu xếp ngăn nắp, ở giữa là badge vs"
 ---
 

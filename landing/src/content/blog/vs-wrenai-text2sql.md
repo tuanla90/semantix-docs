@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 11
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/vs-wrenai-text2sql.svg"
+cover: "/blog/covers/vs-wrenai-text2sql.png"
 coverAlt: "Ba cách hỏi dữ liệu bằng ngôn ngữ tự nhiên: text-to-SQL thuần, WrenAI và Semantix - phân định ở Semantic Layer"
 ---
 

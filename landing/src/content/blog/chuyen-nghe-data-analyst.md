@@ -7,7 +7,7 @@ category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/chuyen-nghe-data-analyst.svg"
+cover: "/blog/covers/chuyen-nghe-data-analyst.png"
 coverAlt: "Kỳ vọng nghề Data Analyst là biểu đồ đẹp, thực tế là đống dữ liệu bẩn và công việc lặp lại"
 ---
 

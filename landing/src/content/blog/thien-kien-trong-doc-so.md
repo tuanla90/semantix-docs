@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/thien-kien-trong-doc-so.svg"
+cover: "/blog/covers/thien-kien-trong-doc-so.png"
 coverAlt: "Kính lúp soi vào phần dữ liệu hợp ý, bỏ qua phần còn lại mờ đi"
 ---
 

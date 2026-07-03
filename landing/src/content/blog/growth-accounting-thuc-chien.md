@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/growth-accounting-thuc-chien.svg"
+cover: "/blog/covers/growth-accounting-thuc-chien.png"
 coverAlt: "Một bảng growth accounting đã dựng xong: các tháng nhân với dòng new/retained/resurrected/churned và một ô Quick Ratio"
 ---
 

@@ -10,7 +10,7 @@ readTime: 9
 author: "Lê Anh Tuấn"
 authorTitle: "Nhà sáng lập Semantix"
 featured: false
-cover: "/blog/covers/hanh-trinh-superset-metabase.svg"
+cover: "/blog/covers/hanh-trinh-superset-metabase.png"
 coverAlt: "Server tự host: tự do nhưng kèm bánh răng vận hành và đồng hồ chi phí ẩn"
 ---
 

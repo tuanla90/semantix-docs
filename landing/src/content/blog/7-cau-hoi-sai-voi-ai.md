@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/7-cau-hoi-sai-voi-ai.svg"
+cover: "/blog/covers/7-cau-hoi-sai-voi-ai.png"
 coverAlt: "Bong bóng câu hỏi mơ hồ gạch đỏ chuyển thành câu hỏi rõ ràng tick xanh"
 ---
 

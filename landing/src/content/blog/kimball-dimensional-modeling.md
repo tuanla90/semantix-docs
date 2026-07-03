@@ -9,7 +9,7 @@ seriesOrder: 3
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/kimball-dimensional-modeling.svg"
+cover: "/blog/covers/kimball-dimensional-modeling.png"
 coverAlt: "Sơ đồ star schema theo Kimball: một bảng fact trung tâm nối tới bốn bảng dimension xung quanh"
 ---
 

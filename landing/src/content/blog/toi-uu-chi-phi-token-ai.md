@@ -7,7 +7,7 @@ category: "AI & Công Nghệ"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/toi-uu-chi-phi-token-ai.svg"
+cover: "/blog/covers/toi-uu-chi-phi-token-ai.png"
 coverAlt: "Cột chi phí token cao bị một lớp lọc ngữ cảnh cắt xuống thấp hơn nhiều"
 ---
 

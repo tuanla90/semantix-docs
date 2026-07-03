@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/theo-doi-ton-kho-realtime.svg"
+cover: "/blog/covers/theo-doi-ton-kho-realtime.png"
 coverAlt: "Đường tồn kho giảm dần chạm vạch ngưỡng đỏ, kèm một chuông cảnh báo bật sáng"
 ---
 

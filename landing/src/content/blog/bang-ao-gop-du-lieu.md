@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/bang-ao-gop-du-lieu.svg"
+cover: "/blog/covers/bang-ao-gop-du-lieu.png"
 coverAlt: "Ba bảng nguồn từ ba kênh gộp vào một bảng ảo ở giữa, không copy, dữ liệu real-time"
 ---
 

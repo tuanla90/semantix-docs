@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/thue-doi-data-hay-ai-bi.svg"
+cover: "/blog/covers/thue-doi-data-hay-ai-bi.png"
 coverAlt: "Hai con đường: một bên là đội data nhiều người, chậm và đắt; một bên là hỏi AI BI và nhận trả lời ngay"
 ---
 

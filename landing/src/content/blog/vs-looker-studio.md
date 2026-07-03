@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/vs-looker-studio.svg"
+cover: "/blog/covers/vs-looker-studio.png"
 coverAlt: "Dashboard Looker khoá trong vòng tròn hệ sinh thái Google, đối lập với hỏi-đáp đa nguồn của Semantix"
 ---
 

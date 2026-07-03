@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/gio-hang-bo-quen.svg"
+cover: "/blog/covers/gio-hang-bo-quen.png"
 coverAlt: "Một giỏ hàng đầy ắp bị bỏ lại ngay trước nút thanh toán, khách quay lưng đi"
 ---
 

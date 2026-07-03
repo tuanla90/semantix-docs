@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/rag-la-gi.svg"
+cover: "/blog/covers/rag-la-gi.png"
 coverAlt: "Một câu hỏi đi qua bước tra cứu kho tài liệu trước khi trở thành câu trả lời có dẫn nguồn"
 ---
 

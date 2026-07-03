@@ -7,7 +7,7 @@ category: "AI & Công Nghệ"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/schema-linking.svg"
+cover: "/blog/covers/schema-linking.png"
 coverAlt: "Câu hỏi tiếng Việt được nối tới đúng bảng và cột trong sơ đồ database"
 ---
 

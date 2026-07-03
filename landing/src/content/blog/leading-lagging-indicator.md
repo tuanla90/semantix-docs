@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/leading-lagging-indicator.svg"
+cover: "/blog/covers/leading-lagging-indicator.png"
 coverAlt: "Gương chiếu hậu hiện doanh thu quý đã qua, kính chắn gió hiện tín hiệu báo trước phía trước"
 ---
 

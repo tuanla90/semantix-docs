@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/vs-dashboard-saas-co-san.svg"
+cover: "/blog/covers/vs-dashboard-saas-co-san.png"
 coverAlt: "Nhiều dashboard rời rạc Shopee, TikTok Shop, KiotViet so với một màn hình gộp hỏi-đáp"
 ---
 

@@ -9,7 +9,7 @@ seriesOrder: 5
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/business-metrics-vs-customer-metrics.svg"
+cover: "/blog/covers/business-metrics-vs-customer-metrics.png"
 coverAlt: "Một đồng xu hai mặt - một mặt là doanh thu của doanh nghiệp, mặt kia là trái tim hài lòng của khách hàng"
 ---
 

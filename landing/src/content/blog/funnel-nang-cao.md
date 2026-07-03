@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 13
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/funnel-nang-cao.svg"
+cover: "/blog/covers/funnel-nang-cao.png"
 coverAlt: "Mô hình phễu thẳng so với hành trình khách thật đầy vòng lặp và đường tắt"
 ---
 

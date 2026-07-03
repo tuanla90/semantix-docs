@@ -10,7 +10,7 @@ readTime: 9
 author: "Lê Anh Tuấn"
 authorTitle: "Nhà sáng lập Semantix"
 featured: true
-cover: "/blog/covers/hanh-trinh-thoi-excel.svg"
+cover: "/blog/covers/hanh-trinh-thoi-excel.png"
 coverAlt: "Chồng file Excel quá tải, công thức VLOOKUP gãy, và nhiều phiên bản báo cáo lẫn lộn"
 ---
 

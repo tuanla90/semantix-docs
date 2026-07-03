@@ -7,7 +7,7 @@ category: "AI & Công Nghệ"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/dual-agent-debate.svg"
+cover: "/blog/covers/dual-agent-debate.png"
 coverAlt: "Hai node AI đối thoại và soát chéo nhau, hội tụ về một kết luận được đánh dấu đúng"
 ---
 

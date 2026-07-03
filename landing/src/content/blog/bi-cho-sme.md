@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/bi-cho-sme.svg"
+cover: "/blog/covers/bi-cho-sme.png"
 coverAlt: "Dữ liệu rời rạc từ nhiều kênh hội tụ thành một quyết định kinh doanh"
 ---
 

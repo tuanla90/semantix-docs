@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/thiet-ke-ab-test.svg"
+cover: "/blog/covers/thiet-ke-ab-test.png"
 coverAlt: "Luồng người dùng được chia ngẫu nhiên thành phiên bản A và B, rồi đo metric chính để chọn người thắng"
 ---
 

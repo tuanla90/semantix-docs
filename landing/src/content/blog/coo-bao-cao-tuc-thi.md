@@ -7,7 +7,7 @@ category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/coo-bao-cao-tuc-thi.svg"
+cover: "/blog/covers/coo-bao-cao-tuc-thi.png"
 coverAlt: "Chồng báo cáo và lịch tuần dày đặc thu lại thành một màn hình trả lời tức thì"
 ---
 

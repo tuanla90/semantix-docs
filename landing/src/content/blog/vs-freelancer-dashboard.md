@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/vs-freelancer-dashboard.svg"
+cover: "/blog/covers/vs-freelancer-dashboard.png"
 coverAlt: "Một dashboard tĩnh bị đóng băng như ảnh chụp quá khứ, đặt cạnh một luồng hỏi-đáp động bằng tiếng Việt"
 ---
 

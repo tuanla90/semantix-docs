@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/outlier-rac-hay-mo-vang.svg"
+cover: "/blog/covers/outlier-rac-hay-mo-vang.png"
 coverAlt: "Đám điểm dữ liệu bình thường và một điểm ngoại lệ nổi bật: rác hay mỏ vàng?"
 ---
 

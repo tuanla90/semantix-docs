@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/data-catalog-tu-dien-du-lieu.svg"
+cover: "/blog/covers/data-catalog-tu-dien-du-lieu.png"
 coverAlt: "Cuốn từ điển dữ liệu mở ra các thẻ mục lục mô tả từng bảng và cột trong kho dữ liệu"
 ---
 

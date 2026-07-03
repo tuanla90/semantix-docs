@@ -9,7 +9,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/dashboard-hanh-dong-duoc.svg"
+cover: "/blog/covers/dashboard-hanh-dong-duoc.png"
 coverAlt: "Một dashboard với số kèm mũi tên so sánh và ô đỏ đánh dấu vượt ngưỡng"
 ---
 

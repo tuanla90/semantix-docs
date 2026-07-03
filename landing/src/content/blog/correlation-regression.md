@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/correlation-regression.svg"
+cover: "/blog/covers/correlation-regression.png"
 coverAlt: "Đám điểm scatter chi quảng cáo và doanh thu, một đường khớp nét đứt xuyên qua giữa đám điểm"
 ---
 

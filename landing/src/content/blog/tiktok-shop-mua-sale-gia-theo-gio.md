@@ -7,7 +7,7 @@ category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/tiktok-shop-mua-sale-gia-theo-gio.svg"
+cover: "/blog/covers/tiktok-shop-mua-sale-gia-theo-gio.png"
 coverAlt: "Đường line doanh số tăng vọt theo từng giờ trong đêm sale TikTok Shop, đồng hồ chỉ khung giờ vàng"
 ---
 

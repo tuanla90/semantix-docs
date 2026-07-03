@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: true
-cover: "/blog/covers/vanity-metrics.svg"
+cover: "/blog/covers/vanity-metrics.png"
 coverAlt: "Số to lấp lánh của lượt xem đặt cạnh con số nhỏ nhưng thật của lợi nhuận"
 ---
 

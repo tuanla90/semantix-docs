@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/heart-framework.svg"
+cover: "/blog/covers/heart-framework.png"
 coverAlt: "Ngũ giác radar 5 trục đo năm chiều trải nghiệm, hai vòng so sánh quý này với quý trước"
 series: "khung-do-luong"
 seriesOrder: 2

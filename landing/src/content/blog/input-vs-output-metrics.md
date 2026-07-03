@@ -9,7 +9,7 @@ seriesOrder: 4
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/input-vs-output-metrics.svg"
+cover: "/blog/covers/input-vs-output-metrics.png"
 coverAlt: "Các nút bấm input lái được nối bằng mũi tên tới một đồng hồ output đo doanh thu"
 ---
 

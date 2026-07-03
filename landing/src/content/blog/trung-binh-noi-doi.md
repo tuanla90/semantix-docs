@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/trung-binh-noi-doi.svg"
+cover: "/blog/covers/trung-binh-noi-doi.png"
 coverAlt: "Biểu đồ phân phối lệch với đường trung bình bị kéo lệch khỏi trung vị"
 ---
 

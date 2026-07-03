@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/xay-semantic-layer-dau-tien.svg"
+cover: "/blog/covers/xay-semantic-layer-dau-tien.png"
 coverAlt: "Ba con số doanh thu khác nhau quy về một định nghĩa chung rồi ra một con số duy nhất"
 ---
 

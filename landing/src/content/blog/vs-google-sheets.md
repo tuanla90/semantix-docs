@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 12
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/vs-google-sheets.svg"
+cover: "/blog/covers/vs-google-sheets.png"
 coverAlt: "Một bảng tính tĩnh với dấu hỏi nằm ngoài khung, mũi tên chuyển sang câu hỏi tiếng Việt cho ra câu trả lời động"
 ---
 

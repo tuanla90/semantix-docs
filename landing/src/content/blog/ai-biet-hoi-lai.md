@@ -7,7 +7,7 @@ category: "AI & Công Nghệ"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/ai-biet-hoi-lai.svg"
+cover: "/blog/covers/ai-biet-hoi-lai.png"
 coverAlt: "AI trả lại một câu hỏi làm rõ trong bong bóng hội thoại trước khi đưa ra con số doanh thu"
 ---
 

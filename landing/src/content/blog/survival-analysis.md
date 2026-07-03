@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/survival-analysis.svg"
+cover: "/blog/covers/survival-analysis.png"
 coverAlt: "Ba đường cong sống sót giảm dần: một phẳng ra ở mức cao, một rơi gần như thẳng đứng"
 ---
 

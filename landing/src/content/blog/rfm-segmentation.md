@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/rfm-segmentation.svg"
+cover: "/blog/covers/rfm-segmentation.png"
 coverAlt: "Lưới phân khúc khách hàng RFM: Champions, At-Risk, Lost"
 ---
 

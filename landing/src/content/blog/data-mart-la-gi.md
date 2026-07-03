@@ -9,7 +9,7 @@ seriesOrder: 9
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/data-mart-la-gi.svg"
+cover: "/blog/covers/data-mart-la-gi.png"
 coverAlt: "Một siêu thị lớn tượng trưng cho data warehouse, bên cạnh là một quầy nhỏ chuyên đề cắt ra từ đó tượng trưng cho data mart"
 ---
 

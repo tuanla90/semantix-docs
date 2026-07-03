@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/hippo-vs-thu-nghiem.svg"
+cover: "/blog/covers/hippo-vs-thu-nghiem.png"
 coverAlt: "Ý kiến của sếp to chiếm cả phòng họp, đối lại là hai biến thể A/B nhỏ nhưng có con số bằng chứng"
 ---
 

@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 12
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/growth-accounting-revenue.svg"
+cover: "/blog/covers/growth-accounting-revenue.png"
 coverAlt: "Biểu đồ waterfall doanh thu: new, expansion, resurrected cộng vào, contraction và churned trừ đi, với nhãn NRR lớn hơn 100%"
 ---
 

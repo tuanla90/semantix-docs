@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/mot-nguon-su-that.svg"
+cover: "/blog/covers/mot-nguon-su-that.png"
 coverAlt: "Năm phòng ban mỗi nơi một con số doanh thu khác nhau quy về một định nghĩa chung"
 ---
 

@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/funnel-analysis.svg"
+cover: "/blog/covers/funnel-analysis.png"
 coverAlt: "Phễu chuyển đổi thu hẹp dần qua 4 bước với một điểm rò rỉ chính được đánh dấu"
 ---
 

@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/data-governance.svg"
+cover: "/blog/covers/data-governance.png"
 coverAlt: "Mỗi con số gắn với một người chủ và một khoá phân quyền - sơ đồ quản trị dữ liệu cho SME"
 ---
 

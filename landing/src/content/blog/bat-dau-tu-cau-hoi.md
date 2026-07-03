@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/bat-dau-tu-cau-hoi.svg"
+cover: "/blog/covers/bat-dau-tu-cau-hoi.png"
 coverAlt: "Một dấu hỏi đứng trước dẫn tới dữ liệu và biểu đồ - câu hỏi đến trước"
 ---
 

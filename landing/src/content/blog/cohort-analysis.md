@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/cohort-analysis.svg"
+cover: "/blog/covers/cohort-analysis.png"
 coverAlt: "Bảng heatmap cohort giữ chân khách hàng theo tháng"
 ---
 

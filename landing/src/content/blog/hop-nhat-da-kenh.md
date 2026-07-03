@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/hop-nhat-da-kenh.svg"
+cover: "/blog/covers/hop-nhat-da-kenh.png"
 coverAlt: "Ba nguồn Shopee, TikTok Shop, KiotViet hội tụ về một nguồn sự thật chuẩn hóa"
 ---
 

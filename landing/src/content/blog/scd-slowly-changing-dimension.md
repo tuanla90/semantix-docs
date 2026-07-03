@@ -9,7 +9,7 @@ seriesOrder: 5
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/scd-slowly-changing-dimension.svg"
+cover: "/blog/covers/scd-slowly-changing-dimension.png"
 coverAlt: "Một bản ghi khách hàng đổi giá trị tỉnh theo thời gian: ghi đè một dòng so với thêm dòng mới giữ lịch sử"
 ---
 

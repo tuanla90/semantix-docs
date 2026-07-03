@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/oltp-vs-olap.svg"
+cover: "/blog/covers/oltp-vs-olap.png"
 coverAlt: "Database giao dịch với nhiều ghi nhỏ đặt cạnh database phân tích tổng hợp lớn, hai luồng được tách riêng"
 ---
 

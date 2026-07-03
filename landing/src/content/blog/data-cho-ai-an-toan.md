@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/data-cho-ai-an-toan.svg"
+cover: "/blog/covers/data-cho-ai-an-toan.png"
 coverAlt: "Dữ liệu được khoá sau một lớp kiểm soát, AI chỉ nhìn qua tầng được phép, chìa khoá nằm trong tay doanh nghiệp"
 ---
 

@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/doc-ket-qua-ab-test.svg"
+cover: "/blog/covers/doc-ket-qua-ab-test.png"
 coverAlt: "Hai cột A/B với dải sai số chồng lấn nhau - chưa chắc đã khác biệt thật"
 ---
 

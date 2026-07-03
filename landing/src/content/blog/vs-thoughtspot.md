@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/vs-thoughtspot.svg"
+cover: "/blog/covers/vs-thoughtspot.png"
 coverAlt: "Bản đồ định vị: Semantix ở góc AI cao và hợp túi tiền SME"
 ---
 

@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/vs-looker-studio-pro.svg"
+cover: "/blog/covers/vs-looker-studio-pro.png"
 coverAlt: "Huy hiệu PRO và bảng giá đối chiếu per-user của Looker Studio Pro với giá phẳng theo workspace của Semantix"
 ---
 

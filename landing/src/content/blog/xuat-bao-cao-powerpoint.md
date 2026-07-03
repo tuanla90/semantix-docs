@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/xuat-bao-cao-powerpoint.svg"
+cover: "/blog/covers/xuat-bao-cao-powerpoint.png"
 coverAlt: "Một dashboard biến thành bộ slide PowerPoint chỉ với một cú nhấp"
 ---
 

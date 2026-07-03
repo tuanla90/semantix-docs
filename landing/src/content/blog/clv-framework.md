@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/clv-framework.svg"
+cover: "/blog/covers/clv-framework.png"
 coverAlt: "Các cột CLV theo phân khúc cao thấp khác nhau dưới một đường trần ngân sách CAC"
 ---
 

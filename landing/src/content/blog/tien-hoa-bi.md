@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/tien-hoa-bi.svg"
+cover: "/blog/covers/tien-hoa-bi.png"
 coverAlt: "Bốn nấc trưởng thành của BI tăng dần theo trục độ trưởng thành và lợi thế cạnh tranh"
 ---
 

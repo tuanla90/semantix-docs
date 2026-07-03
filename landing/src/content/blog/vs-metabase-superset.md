@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: true
-cover: "/blog/covers/vs-metabase-superset.svg"
+cover: "/blog/covers/vs-metabase-superset.png"
 coverAlt: "License $0 nhưng chi phí ẩn ở vận hành, kỹ sư và tự xây AI"
 ---
 

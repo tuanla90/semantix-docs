@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/du-bao-la-gi.svg"
+cover: "/blog/covers/du-bao-la-gi.png"
 coverAlt: "Đường doanh thu thực tế nối sang đường dự báo nét đứt, kèm dải sai số loe rộng dần về tương lai"
 ---
 

@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/roll-rate.svg"
+cover: "/blog/covers/roll-rate.png"
 coverAlt: "Ma trận roll rate: lưới ô tô đậm dần theo đường chéo với mũi tên trượt xuống"
 ---
 

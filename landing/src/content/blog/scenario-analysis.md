@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/scenario-analysis.svg"
+cover: "/blog/covers/scenario-analysis.png"
 coverAlt: "Một điểm xuất phát toả ra ba đường phân kỳ - xanh đi lên, lam đi ngang, đỏ đi xuống - minh hoạ ba kịch bản doanh thu"
 ---
 

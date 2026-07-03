@@ -7,7 +7,7 @@ category: "AI & Công Nghệ"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/multi-provider-byok.svg"
+cover: "/blog/covers/multi-provider-byok.png"
 coverAlt: "Một bộ định tuyến tới nhiều nhà cung cấp AI, chìa khoá nằm trong tay người dùng"
 ---
 

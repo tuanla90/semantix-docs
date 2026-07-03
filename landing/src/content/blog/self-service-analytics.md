@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/self-service-analytics.svg"
+cover: "/blog/covers/self-service-analytics.png"
 coverAlt: "Người làm kinh doanh tự gõ câu hỏi tiếng Việt và nhận biểu đồ ngay, không qua trung gian đội data"
 ---
 

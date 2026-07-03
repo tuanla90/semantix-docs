@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/tco-cong-cu-bi.svg"
+cover: "/blog/covers/tco-cong-cu-bi.png"
 coverAlt: "Tảng băng chi phí: phần nổi là license 0đ, phần chìm là người, vận hành và thời gian"
 ---
 

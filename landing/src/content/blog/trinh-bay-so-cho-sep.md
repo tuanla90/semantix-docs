@@ -9,7 +9,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/trinh-bay-so-cho-sep.svg"
+cover: "/blog/covers/trinh-bay-so-cho-sep.png"
 coverAlt: "Một slide với một thông điệp duy nhất, mũi tên dẫn thẳng tới một hành động"
 ---
 

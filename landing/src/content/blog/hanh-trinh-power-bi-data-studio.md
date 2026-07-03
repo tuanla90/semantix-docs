@@ -10,7 +10,7 @@ readTime: 9
 author: "Lê Anh Tuấn"
 authorTitle: "Nhà sáng lập Semantix"
 featured: false
-cover: "/blog/covers/hanh-trinh-power-bi-data-studio.svg"
+cover: "/blog/covers/hanh-trinh-power-bi-data-studio.png"
 coverAlt: "Dashboard đẹp với biểu đồ tương tác, nhưng một câu hỏi mới bị ổ khóa chặn lại"
 ---
 

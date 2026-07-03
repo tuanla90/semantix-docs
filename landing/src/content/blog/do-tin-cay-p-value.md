@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/do-tin-cay-p-value.svg"
+cover: "/blog/covers/do-tin-cay-p-value.png"
 coverAlt: "Điểm ước lượng tỉ lệ chuyển đổi kèm hai thanh khoảng tin cậy: một dải rộng khi mẫu nhỏ và một dải hẹp khi mẫu lớn"
 ---
 

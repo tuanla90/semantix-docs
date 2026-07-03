@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/doc-hinh-dang-phan-phoi.svg"
+cover: "/blog/covers/doc-hinh-dang-phan-phoi.png"
 coverAlt: "Bốn dạng histogram: phân phối chuẩn, lệch phải, đuôi dài và hai đỉnh"
 ---
 

@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/pca-principal-component.svg"
+cover: "/blog/covers/pca-principal-component.png"
 coverAlt: "PCA giảm chiều: nhiều mũi tên chỉ số nén còn hai trục, các cụm điểm tự tách ra"
 ---
 

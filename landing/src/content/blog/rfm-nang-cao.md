@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 13
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/rfm-nang-cao.svg"
+cover: "/blog/covers/rfm-nang-cao.png"
 coverAlt: "Lưới RFM 5×5 đầy đủ với 11 nhóm khách và ma trận dịch chuyển"
 ---
 

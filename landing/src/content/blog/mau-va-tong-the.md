@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/mau-va-tong-the.svg"
+cover: "/blog/covers/mau-va-tong-the.png"
 coverAlt: "Vài chấm sáng tượng trưng cho mẫu nhỏ đặt cạnh một đám đông dày đặc tượng trưng cho tổng thể"
 ---
 

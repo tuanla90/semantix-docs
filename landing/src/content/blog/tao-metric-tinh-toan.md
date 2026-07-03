@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/tao-metric-tinh-toan.svg"
+cover: "/blog/covers/tao-metric-tinh-toan.png"
 coverAlt: "Hai cột gốc doanh thu và giá vốn đi qua một công thức trừ, cho ra metric lợi nhuận gộp dùng chung"
 ---
 

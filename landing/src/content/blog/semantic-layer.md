@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: true
-cover: "/blog/covers/semantic-layer.svg"
+cover: "/blog/covers/semantic-layer.png"
 coverAlt: "Ba định nghĩa doanh thu rời rạc hợp nhất thành một con số chuẩn"
 ---
 

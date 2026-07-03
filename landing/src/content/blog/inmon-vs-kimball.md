@@ -10,7 +10,7 @@ readTime: 10
 author: "Lê Anh Tuấn"
 authorTitle: "Nhà sáng lập Semantix"
 featured: false
-cover: "/blog/covers/inmon-vs-kimball.svg"
+cover: "/blog/covers/inmon-vs-kimball.png"
 coverAlt: "Hai cách dựng kho dữ liệu: Inmon từ trên xuống (một kho trung tâm chia ra data mart) và Kimball từ dưới lên (các data mart ghép lại)"
 ---
 

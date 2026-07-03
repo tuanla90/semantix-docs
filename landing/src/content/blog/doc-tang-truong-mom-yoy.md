@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/doc-tang-truong-mom-yoy.svg"
+cover: "/blog/covers/doc-tang-truong-mom-yoy.png"
 coverAlt: "Hai mũi tên tăng trưởng: MoM đi lên ảo, YoY đi xuống thật, trên cùng một bộ dữ liệu mùa vụ"
 ---
 

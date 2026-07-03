@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/de-dup-khach-hang-truoc-khi-tinh-ltv.svg"
+cover: "/blog/covers/de-dup-khach-hang-truoc-khi-tinh-ltv.png"
 coverAlt: "Năm thẻ hồ sơ khách hàng trùng nhau được gộp lại thành một khách duy nhất"
 ---
 

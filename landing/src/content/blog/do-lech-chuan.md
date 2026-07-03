@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/do-lech-chuan.svg"
+cover: "/blog/covers/do-lech-chuan.png"
 coverAlt: "Hai đường chuông cùng đỉnh trung bình: một đường hẹp gọn, một đường rộng bè"
 ---
 

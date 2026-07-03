@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/dashboard-doanh-thu-fnb.svg"
+cover: "/blog/covers/dashboard-doanh-thu-fnb.png"
 coverAlt: "Dashboard doanh thu chuỗi F&B với cột doanh thu từng chi nhánh và thẻ KPI"
 ---
 

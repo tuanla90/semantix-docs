@@ -9,7 +9,7 @@ seriesOrder: 2
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/star-vs-snowflake-schema.svg"
+cover: "/blog/covers/star-vs-snowflake-schema.png"
 coverAlt: "Sơ đồ so sánh star schema hình ngôi sao với snowflake schema hình bông tuyết"
 ---
 

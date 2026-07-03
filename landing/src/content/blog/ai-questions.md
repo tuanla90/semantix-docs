@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/ai-questions.svg"
+cover: "/blog/covers/ai-questions.png"
 coverAlt: "Câu hỏi dữ liệu tốt: có đối chiếu và gắn với quyết định"
 ---
 

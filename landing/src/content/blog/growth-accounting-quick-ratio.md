@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/growth-accounting-quick-ratio.svg"
+cover: "/blog/covers/growth-accounting-quick-ratio.png"
 coverAlt: "Đường Quick Ratio dạng nhịp tim cắt qua lằn ngang 1,0 với vùng trên xanh và vùng dưới đỏ"
 ---
 

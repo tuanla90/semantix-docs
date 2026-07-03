@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 11
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/vs-powerbi-tableau.svg"
+cover: "/blog/covers/vs-powerbi-tableau.png"
 coverAlt: "Chi phí Power BI và Tableau tăng theo số người dùng, Semantix giữ phẳng"
 ---
 

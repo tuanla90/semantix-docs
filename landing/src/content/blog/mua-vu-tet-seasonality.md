@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/mua-vu-tet-seasonality.svg"
+cover: "/blog/covers/mua-vu-tet-seasonality.png"
 coverAlt: "Đường doanh thu theo tháng với các đỉnh Tết lặp lại qua nhiều năm"
 ---
 

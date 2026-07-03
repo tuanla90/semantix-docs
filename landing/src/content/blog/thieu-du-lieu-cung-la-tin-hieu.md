@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/thieu-du-lieu-cung-la-tin-hieu.svg"
+cover: "/blog/covers/thieu-du-lieu-cung-la-tin-hieu.png"
 coverAlt: "Bảng dữ liệu có những ô trống được tô sáng như tín hiệu, bên cạnh là một cột cờ đã_trống vừa được thêm vào"
 ---
 

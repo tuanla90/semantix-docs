@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/du-bao-ton-kho-thuc-chien.svg"
+cover: "/blog/covers/du-bao-ton-kho-thuc-chien.png"
 coverAlt: "Đường dự báo nhu cầu kèm khoảng sai số, mức tồn an toàn và mũi tên đặt hàng"
 ---
 

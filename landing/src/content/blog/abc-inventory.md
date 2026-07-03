@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/abc-inventory.svg"
+cover: "/blog/covers/abc-inventory.png"
 coverAlt: "Đường tích luỹ Pareto chia kho hàng thành ba vùng A, B, C theo giá trị vốn tồn"
 ---
 

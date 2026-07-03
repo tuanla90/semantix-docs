@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/aarrr-pirate-metrics.svg"
+cover: "/blog/covers/aarrr-pirate-metrics.png"
 coverAlt: "Phễu AARRR năm tầng, mỗi tầng một màu: Acquisition, Activation, Retention, Referral, Revenue"
 ---
 

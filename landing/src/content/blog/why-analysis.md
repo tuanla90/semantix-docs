@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/why-analysis.svg"
+cover: "/blog/covers/why-analysis.png"
 coverAlt: "Một con số doanh thu lớn tách thành các cột đóng góp waterfall: giá, lượng khách, đơn trung bình"
 ---
 

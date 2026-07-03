@@ -7,7 +7,7 @@ category: "AI & Công Nghệ"
 readTime: 11
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/kien-truc-text2sql-4-lop.svg"
+cover: "/blog/covers/kien-truc-text2sql-4-lop.png"
 coverAlt: "Câu hỏi tiếng Việt đi qua bốn tầng lọc rồi ra câu lệnh SQL đúng định nghĩa nghiệp vụ"
 ---
 

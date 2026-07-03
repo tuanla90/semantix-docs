@@ -7,7 +7,7 @@ category: "AI & Công Nghệ"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/semantic-layer-vs-chatbot-database.svg"
+cover: "/blog/covers/semantic-layer-vs-chatbot-database.png"
 coverAlt: "Hai luồng: database nối thẳng tới AI bằng mũi tên rối kèm dấu hỏi, đối lại database đi qua Semantic Layer rồi mới tới AI gọn gàng"
 ---
 

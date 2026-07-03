@@ -7,7 +7,7 @@ category: "AI & Công Nghệ"
 readTime: 13
 author: "Lê Anh Tuấn"
 featured: true
-cover: "/blog/covers/llm-bia-sql.svg"
+cover: "/blog/covers/llm-bia-sql.png"
 coverAlt: "Một khối SQL có dòng bịa được đánh dấu đỏ, đối lại lá chắn các tầng chặn ảo giác"
 ---
 

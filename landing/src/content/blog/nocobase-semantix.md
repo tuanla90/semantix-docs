@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/nocobase-semantix.svg"
+cover: "/blog/covers/nocobase-semantix.png"
 coverAlt: "Định nghĩa dữ liệu trong NocoBase được Semantix đọc thẳng để dựng sẵn mô hình"
 ---
 

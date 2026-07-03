@@ -9,7 +9,7 @@ seriesOrder: 3
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: true
-cover: "/blog/covers/dong-tien-vs-loi-nhuan.svg"
+cover: "/blog/covers/dong-tien-vs-loi-nhuan.png"
 coverAlt: "Đường lợi nhuận sổ sách đi lên trong khi đường tiền mặt thực tụt xuống dưới 0"
 ---
 

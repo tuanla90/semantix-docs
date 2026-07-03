@@ -9,7 +9,7 @@ seriesOrder: 1
 readTime: 7
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/dimension-table-vs-dimension.svg"
+cover: "/blog/covers/dimension-table-vs-dimension.png"
 coverAlt: "Một bảng dữ liệu bên trái, các góc cắt tỏa ra từ nó sang phải"
 ---
 

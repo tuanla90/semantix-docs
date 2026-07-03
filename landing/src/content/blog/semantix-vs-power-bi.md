@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 13
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/semantix-vs-power-bi.svg"
+cover: "/blog/covers/semantix-vs-power-bi.png"
 coverAlt: "Hai cột so sánh: một bên là measure DAX và license Pro theo user, một bên là câu hỏi tiếng Việt cho ra câu trả lời ngay"
 ---
 

@@ -7,7 +7,7 @@ category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/bi-analyst-dinh-nghia-metric.svg"
+cover: "/blog/covers/bi-analyst-dinh-nghia-metric.png"
 coverAlt: "Một khối định nghĩa metric ở giữa, nhiều người dùng truy vấn xung quanh đều rút về cùng một con số"
 ---
 

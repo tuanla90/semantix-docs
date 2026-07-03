@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: true
-cover: "/blog/covers/bao-cao-telegram-zalo.svg"
+cover: "/blog/covers/bao-cao-telegram-zalo.png"
 coverAlt: "Một tin nhắn báo cáo doanh thu kèm biểu đồ mini tự gửi vào điện thoại đúng giờ sáng"
 ---
 

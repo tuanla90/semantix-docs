@@ -7,7 +7,7 @@ category: "AI & Công Nghệ"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/on-premise-vs-cloud-ai-bi.svg"
+cover: "/blog/covers/on-premise-vs-cloud-ai-bi.png"
 coverAlt: "Hai cách triển khai AI BI: bên trái dữ liệu đi lên đám mây của bên thứ ba, bên phải dữ liệu và AI cùng nằm trong tòa nhà máy chủ nội bộ của doanh nghiệp"
 ---
 

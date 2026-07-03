@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/tuong-quan-nhan-qua.svg"
+cover: "/blog/covers/tuong-quan-nhan-qua.png"
 coverAlt: "Hai đường cùng đi lên, dấu khác nhau giữa tương quan và nhân quả, một yếu tố thứ ba ẩn phía sau"
 ---
 

@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/data-warehouse-sme.svg"
+cover: "/blog/covers/data-warehouse-sme.png"
 coverAlt: "Một nhà kho dữ liệu khổng lồ với dấu hỏi 'có cần?' đặt cạnh một chiếc hộp gọn vừa đủ cho SME"
 ---
 

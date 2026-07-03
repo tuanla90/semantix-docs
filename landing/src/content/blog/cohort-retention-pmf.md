@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/cohort-retention-pmf.svg"
+cover: "/blog/covers/cohort-retention-pmf.png"
 coverAlt: "Ba đường cong giữ chân: churn về 0, phẳng ở mức PMF, và đi lên (negative churn)"
 ---
 

@@ -7,7 +7,7 @@ category: "Câu Chuyện & Use Case"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/marketing-do-roi-ads.svg"
+cover: "/blog/covers/marketing-do-roi-ads.png"
 coverAlt: "Ba kênh ads Facebook, TikTok, Google mỗi kênh tự nhận công, hội tụ về một con số ROI thật ở giữa"
 ---
 

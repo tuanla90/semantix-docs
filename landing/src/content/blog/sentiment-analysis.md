@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/sentiment-analysis.svg"
+cover: "/blog/covers/sentiment-analysis.png"
 coverAlt: "Các bong bóng review được phân loại tích cực, trung tính, tiêu cực rồi xếp thành cột chồng theo thời gian"
 ---
 

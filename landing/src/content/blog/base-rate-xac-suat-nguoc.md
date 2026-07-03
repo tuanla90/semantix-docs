@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/base-rate-xac-suat-nguoc.svg"
+cover: "/blog/covers/base-rate-xac-suat-nguoc.png"
 coverAlt: "Lưới ô vuông: vài ô đỏ là gian lận thật, rất nhiều ô vàng là cảnh báo oan"
 ---
 

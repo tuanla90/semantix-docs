@@ -9,7 +9,7 @@ seriesOrder: 6
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/ne-so-lieu-bat-tien.svg"
+cover: "/blog/covers/ne-so-lieu-bat-tien.png"
 coverAlt: "Một con số bất tiện trên biểu đồ bị nhiều bàn tay xua đi và những gương mặt quay đi nơi khác"
 ---
 

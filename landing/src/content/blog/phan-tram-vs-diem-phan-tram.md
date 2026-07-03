@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: true
-cover: "/blog/covers/phan-tram-vs-diem-phan-tram.svg"
+cover: "/blog/covers/phan-tram-vs-diem-phan-tram.png"
 coverAlt: "Minh hoạ tỷ lệ chuyển đổi từ 10% lên 12%: +2 điểm phần trăm so với +20% tăng tương đối"
 ---
 

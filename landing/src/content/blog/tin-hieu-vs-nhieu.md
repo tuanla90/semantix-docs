@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/tin-hieu-vs-nhieu.svg"
+cover: "/blog/covers/tin-hieu-vs-nhieu.png"
 coverAlt: "Đường doanh thu dao động quanh mức trung bình với dải bình thường, một điểm vượt dải nổi bật là tín hiệu thật"
 ---
 

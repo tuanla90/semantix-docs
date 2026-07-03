@@ -9,7 +9,7 @@ seriesOrder: 8
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/data-quality-la-gi.svg"
+cover: "/blog/covers/data-quality-la-gi.png"
 coverAlt: "Radar sáu chiều chất lượng dữ liệu - đường trước khi dọn lệch nặng so với đường sau khi chuẩn hóa"
 ---
 

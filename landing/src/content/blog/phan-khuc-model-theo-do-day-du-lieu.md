@@ -7,7 +7,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/phan-khuc-model-theo-do-day-du-lieu.svg"
+cover: "/blog/covers/phan-khuc-model-theo-do-day-du-lieu.png"
 coverAlt: "Một khối dữ liệu gộp tách thành các nhóm theo độ đầy, accuracy tăng dần"
 ---
 

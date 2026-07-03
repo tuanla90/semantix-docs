@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 11
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/text-to-sql.svg"
+cover: "/blog/covers/text-to-sql.png"
 coverAlt: "Câu hỏi tiếng Việt được chuyển thành câu lệnh SQL đúng định nghĩa"
 ---
 

@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/metric-dimension-kpi.svg"
+cover: "/blog/covers/metric-dimension-kpi.png"
 coverAlt: "Một con số được cắt theo nhiều lát cắt và gắn một vạch mục tiêu phía trên"
 ---
 

@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/tu-duy-du-lieu-la-gi.svg"
+cover: "/blog/covers/tu-duy-du-lieu-la-gi.png"
 coverAlt: "Bộ não cảm tính và một con số làm đổi hướng mũi tên quyết định"
 ---
 

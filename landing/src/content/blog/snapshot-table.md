@@ -9,7 +9,7 @@ seriesOrder: 6
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/snapshot-table.svg"
+cover: "/blog/covers/snapshot-table.png"
 coverAlt: "Máy ảnh chụp trạng thái kho theo từng ngày - ẩn dụ snapshot table chụp ảnh trạng thái định kỳ"
 ---
 

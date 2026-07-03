@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/trung-binh-co-trong-so.svg"
+cover: "/blog/covers/trung-binh-co-trong-so.png"
 coverAlt: "Cái cân lệch giữa một nhóm to và một nhóm nhỏ, trung bình thật nghiêng hẳn về nhóm to"
 ---
 

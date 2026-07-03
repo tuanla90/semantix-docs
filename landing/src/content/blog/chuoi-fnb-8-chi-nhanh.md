@@ -7,7 +7,7 @@ category: "Câu Chuyện & Use Case"
 readTime: 10
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/chuoi-fnb-8-chi-nhanh.svg"
+cover: "/blog/covers/chuoi-fnb-8-chi-nhanh.png"
 coverAlt: "Tám file Excel từ tám chi nhánh F&B hội tụ về một màn hình báo cáo duy nhất"
 ---
 

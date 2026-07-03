@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/data-modeling-fact-dimension.svg"
+cover: "/blog/covers/data-modeling-fact-dimension.png"
 coverAlt: "Sơ đồ star schema: một bảng fact trung tâm nối tới các bảng dimension xung quanh"
 ---
 

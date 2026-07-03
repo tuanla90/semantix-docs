@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 8
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/du-lieu-ban.svg"
+cover: "/blog/covers/du-lieu-ban.png"
 coverAlt: "Các dòng dữ liệu lộn xộn, trùng lặp và lệch chuẩn được làm sạch thành một bảng gọn gàng"
 ---
 

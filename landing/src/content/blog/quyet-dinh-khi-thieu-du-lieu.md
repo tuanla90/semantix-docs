@@ -9,7 +9,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/quyet-dinh-khi-thieu-du-lieu.svg"
+cover: "/blog/covers/quyet-dinh-khi-thieu-du-lieu.png"
 coverAlt: "Thanh tiến độ dữ liệu dừng ở 70% bên nút Quyết định, đối lập với một vòng xoáy chờ mãi không quyết"
 ---
 

@@ -7,7 +7,7 @@ category: "So Sánh & Lựa Chọn"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/checklist-chon-bi-cho-sme.svg"
+cover: "/blog/covers/checklist-chon-bi-cho-sme.png"
 coverAlt: "Checklist 7 ô tick - 7 câu hỏi một chủ SME phải tự trả lời trước khi chọn công cụ BI"
 ---
 

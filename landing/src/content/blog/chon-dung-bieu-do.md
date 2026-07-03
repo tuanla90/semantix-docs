@@ -9,7 +9,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/chon-dung-bieu-do.svg"
+cover: "/blog/covers/chon-dung-bieu-do.png"
 coverAlt: "Vài loại biểu đồ cột, đường, tròn kèm dấu tick và dấu x cho loại nên và không nên dùng"
 ---
 

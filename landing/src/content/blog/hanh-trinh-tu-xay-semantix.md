@@ -10,7 +10,7 @@ readTime: 10
 author: "Lê Anh Tuấn"
 authorTitle: "Nhà sáng lập Semantix"
 featured: false
-cover: "/blog/covers/hanh-trinh-tu-xay-semantix.svg"
+cover: "/blog/covers/hanh-trinh-tu-xay-semantix.png"
 coverAlt: "Các mảnh ghép từ Excel, Power BI, Superset hội tụ thành Semantix trả lời câu hỏi tiếng Việt"
 ---
 

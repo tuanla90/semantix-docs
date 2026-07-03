@@ -7,7 +7,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 7
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/google-sheets-dashboard.svg"
+cover: "/blog/covers/google-sheets-dashboard.png"
 coverAlt: "Một bảng tính Google Sheets biến đổi thành mini-dashboard qua mũi tên"
 ---
 

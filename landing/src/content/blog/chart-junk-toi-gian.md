@@ -9,7 +9,7 @@ category: "Hướng Dẫn Thực Chiến"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/chart-junk-toi-gian.svg"
+cover: "/blog/covers/chart-junk-toi-gian.png"
 coverAlt: "Một biểu đồ 3D loè loẹt rối mắt biến thành biểu đồ phẳng sạch dễ đọc"
 ---
 

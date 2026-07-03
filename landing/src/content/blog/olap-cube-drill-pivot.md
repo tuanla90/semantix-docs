@@ -9,7 +9,7 @@ seriesOrder: 7
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/olap-cube-drill-pivot.svg"
+cover: "/blog/covers/olap-cube-drill-pivot.png"
 coverAlt: "Khối lập phương dữ liệu ba chiều Sản phẩm × Thời gian × Vùng với các mũi tên minh họa drill down, pivot và slice"
 ---
 

@@ -7,7 +7,7 @@ category: "Kiến Thức Nền Tảng"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/bao-ve-du-lieu-ca-nhan-nghi-dinh-13.svg"
+cover: "/blog/covers/bao-ve-du-lieu-ca-nhan-nghi-dinh-13.png"
 coverAlt: "Hồ sơ khách hàng gồm số điện thoại và tên được khoá bảo vệ, kèm dấu tích thể hiện sự đồng ý"
 ---
 

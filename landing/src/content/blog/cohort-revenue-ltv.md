@@ -9,7 +9,7 @@ category: "Phân Tích Dữ Liệu"
 readTime: 9
 author: "Lê Anh Tuấn"
 featured: false
-cover: "/blog/covers/cohort-revenue-ltv.svg"
+cover: "/blog/covers/cohort-revenue-ltv.png"
 coverAlt: "Doanh thu tích luỹ theo cohort vượt qua đường chi phí thu hút khách"
 ---
 

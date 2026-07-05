@@ -1,0 +1,35 @@
+<!doctype html><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+ *{margin:0;box-sizing:border-box} html,body{width:1200px;height:630px} body{font-family:'Inter',system-ui,Arial,sans-serif;--accT:#67E8F9;--acc:#22D3EE;--acc2:#0891B2;color:#fff;overflow:hidden;position:relative;background:linear-gradient(150deg,#0B1120 0%,#0F1729 55%,#0A0F1C 100%)}
+ .dots{position:absolute;inset:0;background-image:radial-gradient(color-mix(in srgb,var(--accT) 13%,transparent) 1.1px,transparent 1.1px);background-size:28px 28px;opacity:.42;z-index:1}
+ .glow{position:absolute;right:-40px;top:-80px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--acc2) 24%,transparent),transparent 62%);z-index:1}
+ .wrap{position:absolute;left:0;top:0;bottom:0;width:540px;padding:70px 0 70px 76px;display:flex;flex-direction:column;justify-content:center;z-index:3}
+ .kicker{display:flex;align-items:center;gap:13px;color:var(--accT);font-weight:800;font-size:19px;letter-spacing:3px;text-transform:uppercase}
+ .kicker::before{content:'';width:34px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+ h1{font-weight:900;font-size:52px;line-height:1.08;letter-spacing:-1.3px;margin:22px 0 0;max-width:440px}
+ .sub{margin-top:18px;font-size:22px;font-weight:500;color:#9AA7BD;max-width:420px;line-height:1.4}
+ .foot{position:absolute;left:76px;bottom:48px;color:#64748B;font-weight:800;font-size:17px;letter-spacing:3px;z-index:3}.foot b{color:#E2E8F0}
+ .rule{position:absolute;left:0;bottom:0;height:6px;width:100%;z-index:3;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+ .viz{position:absolute;z-index:2}
+ .chartviz{right:40px;top:72px;bottom:72px;width:600px}
+ .svgviz{right:48px;top:50%;transform:translateY(-50%);width:440px;height:440px;display:flex;align-items:center;justify-content:center}
+ .svgviz .md{width:430px;height:430px;overflow:visible}
+ .md .lnk{stroke:color-mix(in srgb,var(--accT) 42%,transparent);stroke-width:2;fill:none}
+ .md .arr{stroke:color-mix(in srgb,var(--accT) 60%,transparent);stroke-width:2.5;marker-end:none}
+ .md .ts{fill:var(--accT);font-weight:800;font-size:12px;letter-spacing:1px;font-family:Inter}
+ .md .tl{fill:#E2E8F0;font-weight:800;font-size:18px;font-family:Inter}
+ .panel{right:74px;top:50%;transform:translateY(-50%);width:236px;height:236px;border-radius:40px;position:absolute;z-index:2;background:color-mix(in srgb,var(--acc) 16%,transparent);border:1px solid color-mix(in srgb,var(--accT) 40%,transparent);display:flex;align-items:center;justify-content:center;box-shadow:0 36px 90px color-mix(in srgb,var(--acc) 26%,transparent)}
+ .panel svg{width:128px;height:128px}
+</style>
+<div class="dots"></div><div class="glow"></div>
+<div class="wrap"><div class="kicker">Phân tích dữ liệu</div><h1>Tương quan không phải nhân quả</h1><div class="sub">vì sao 'càng chạy ads càng đông khách' có thể là một kết luận sai đắt tiền.</div></div>
+<div class="viz svgviz"><svg viewBox="0 0 440 440" class="md"><defs><marker id="ca" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--accT)"/></marker><marker id="cr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#F87171"/></marker></defs>
+   <rect x="18" y="118" width="140" height="66" rx="14" style="fill:color-mix(in srgb,var(--acc) 24%,#0B1120);stroke:color-mix(in srgb,var(--accT) 50%,transparent);stroke-width:2"/><text x="88" y="158" class="tl" text-anchor="middle" style="font-size:19px">Chạy ads</text>
+   <rect x="282" y="118" width="140" height="66" rx="14" style="fill:color-mix(in srgb,var(--acc) 24%,#0B1120);stroke:color-mix(in srgb,var(--accT) 50%,transparent);stroke-width:2"/><text x="352" y="158" class="tl" text-anchor="middle" style="font-size:18px">Đông khách</text>
+   <path d="M160 151 L276 151" style="fill:none;stroke:#F87171;stroke-width:3;stroke-dasharray:9 7" marker-end="url(#cr)"/>
+   <circle cx="220" cy="118" r="21" style="fill:#0B1220;stroke:#F87171;stroke-width:2.5"/><text x="220" y="127" text-anchor="middle" style="fill:#F87171;font-weight:900;font-size:23px;font-family:Inter">?</text>
+   <rect x="150" y="300" width="140" height="70" rx="14" style="fill:color-mix(in srgb,var(--acc) 24%,#0B1120);stroke:var(--accT);stroke-width:2.5"/><text x="220" y="332" class="ts" text-anchor="middle" style="fill:var(--accT);font-size:12px">YẾU TỐ ẨN</text><text x="220" y="354" class="tl" text-anchor="middle" style="font-size:15px">Mùa vụ</text>
+   <path d="M186 300 C 150 254 112 214 92 186" class="lnk" fill="none" stroke-width="2.5" marker-end="url(#ca)"/>
+   <path d="M254 300 C 290 254 328 214 348 186" class="lnk" fill="none" stroke-width="2.5" marker-end="url(#ca)"/></svg></div><div class="rule"></div><div class="foot"><b>TUẤN LA LAB</b> · BLOG</div>

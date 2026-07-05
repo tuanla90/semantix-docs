@@ -1,0 +1,85 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><title>Sửa bài (local) · Tuấn LA Lab</title>
+<style>
+ *{box-sizing:border-box} html,body{height:100%;margin:0}
+ body{font-family:Inter,'Segoe UI',Arial,sans-serif;display:flex;flex-direction:column;background:#0f172a;color:#e2e8f0}
+ header{display:flex;align-items:center;gap:12px;padding:10px 16px;background:#111a2e;border-bottom:1px solid #243049;flex-wrap:wrap}
+ header b{color:#fff;font-size:14px}
+ select{background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:8px;padding:6px 10px;font:inherit;max-width:420px}
+ .status{font-size:13px;font-weight:600;color:#8b9ab3;min-width:130px}
+ .status.ok{color:#5eead4} .status.err{color:#fca5a5} .status.saving{color:#fcd34d}
+ .spacer{flex:1}
+ .hint{font-size:12px;color:#64748b}
+ a.gh{color:#c4b5fd;text-decoration:none;font-size:13px;font-weight:600}
+ a.gh:hover{text-decoration:underline}
+ main{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:0}
+ .pane{min-height:0;display:flex;flex-direction:column}
+ .pane-h{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;padding:6px 14px;background:#0b1120;border-bottom:1px solid #243049}
+ textarea{flex:1;border:0;border-right:1px solid #243049;background:#0b1120;color:#dbe3ee;
+   font:13.5px/1.75 'JetBrains Mono','Consolas','Courier New',monospace;padding:18px;resize:none;outline:none;tab-size:2}
+ iframe{flex:1;width:100%;border:0;background:#fff}
+</style></head><body>
+<header>
+ <b>✏️ Sửa bài (local)</b>
+ <select id="pick" title="Chọn bài"></select>
+ <span id="status" class="status">—</span>
+ <span class="spacer"></span>
+ <span class="hint">Tự lưu khi ngừng gõ · Ctrl+S lưu ngay</span>
+ <a class="gh" href="/video">🎬 Sửa video →</a>
+ <a class="gh" id="ghlink" target="_blank" rel="noopener">Mở trên GitHub ↗</a>
+</header>
+<main>
+ <div class="pane">
+   <div class="pane-h">Nội dung (Markdown) — sửa là tự ghi vào file</div>
+   <textarea id="ed" spellcheck="false" placeholder="Chọn bài ở thanh trên..."></textarea>
+ </div>
+ <div class="pane">
+   <div class="pane-h">Preview thật (Astro) — tự cập nhật sau khi lưu</div>
+   <iframe id="pv" title="preview"></iframe>
+ </div>
+</main>
+<script>
+const PREVIEW = "__PREVIEW__";
+const EDIT_BASE = "https://github.com/tuanla90/semantix-docs/edit/main/landing/src/content/blog";
+const $ = s => document.querySelector(s);
+const ed = $('#ed'), pv = $('#pv'), pick = $('#pick'), statusEl = $('#status'), gh = $('#ghlink');
+let slug = new URLSearchParams(location.search).get('slug') || '';
+let timer = null, loading = false;
+
+const pad = n => String(n).padStart(2,'0');
+const now = () => { const d = new Date(); return pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds()); };
+const setStatus = (t, cls) => { statusEl.textContent = t; statusEl.className = 'status ' + (cls||''); };
+
+async function loadList(){
+  const { slugs } = await (await fetch('/api/list')).json();
+  if (!slug && slugs.length) slug = slugs[0];
+  pick.innerHTML = slugs.map(s => `<option value="${s}"${s===slug?' selected':''}>${s}</option>`).join('');
+}
+async function loadSlug(s){
+  loading = true; slug = s; setStatus('đang mở...', 'saving');
+  const d = await (await fetch('/api/load?slug=' + encodeURIComponent(s))).json();
+  if (d.error){ setStatus('lỗi: ' + d.error, 'err'); loading = false; return; }
+  ed.value = d.content;
+  pv.src = PREVIEW + '/blog/' + s + '/';
+  gh.href = EDIT_BASE + '/' + s + '.md';
+  history.replaceState(null, '', '?slug=' + s);
+  setStatus('đã mở', 'ok'); loading = false;
+}
+async function save(){
+  if (loading || !slug) return;
+  setStatus('đang lưu...', 'saving');
+  try{
+    const d = await (await fetch('/api/save', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ slug, content: ed.value })
+    })).json();
+    if (d.ok){ setStatus('đã lưu ' + now(), 'ok'); pv.src = PREVIEW + '/blog/' + slug + '/?t=' + Date.now(); }
+    else setStatus('lỗi: ' + (d.error || '?'), 'err');
+  }catch(e){ setStatus('lỗi mạng: ' + e, 'err'); }
+}
+
+ed.addEventListener('input', () => { clearTimeout(timer); setStatus('chưa lưu...', 'saving'); timer = setTimeout(save, 700); });
+ed.addEventListener('keydown', e => { if ((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==='s'){ e.preventDefault(); clearTimeout(timer); save(); } });
+pick.addEventListener('change', () => loadSlug(pick.value));
+
+(async () => { await loadList(); if (slug) await loadSlug(slug); })();
+</script></body></html>

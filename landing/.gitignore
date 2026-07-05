@@ -4,3 +4,7 @@ dist/
 
 # Screenshot tool — chứa thông tin đăng nhập, không commit
 scripts/screenshots/screens.config.mjs
+
+# Cover tooling (local)
+cover-admin.html
+cover-poc/

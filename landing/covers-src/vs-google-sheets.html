@@ -1,0 +1,32 @@
+<!doctype html><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+ *{margin:0;box-sizing:border-box} html,body{width:1200px;height:630px} body{font-family:'Inter',system-ui,Arial,sans-serif;--accT:#FCD34D;--acc:#F59E0B;--acc2:#FB923C;color:#fff;overflow:hidden;position:relative;background:linear-gradient(150deg,#0B1120 0%,#0F1729 55%,#0A0F1C 100%)}
+ .dots{position:absolute;inset:0;background-image:radial-gradient(color-mix(in srgb,var(--accT) 13%,transparent) 1.1px,transparent 1.1px);background-size:28px 28px;opacity:.42;z-index:1}
+ .glow{position:absolute;right:-40px;top:-80px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--acc2) 24%,transparent),transparent 62%);z-index:1}
+ .wrap{position:absolute;left:0;top:0;bottom:0;width:540px;padding:70px 0 70px 76px;display:flex;flex-direction:column;justify-content:center;z-index:3}
+ .kicker{display:flex;align-items:center;gap:13px;color:var(--accT);font-weight:800;font-size:19px;letter-spacing:3px;text-transform:uppercase}
+ .kicker::before{content:'';width:34px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+ h1{font-weight:900;font-size:52px;line-height:1.08;letter-spacing:-1.3px;margin:22px 0 0;max-width:440px}
+ .sub{margin-top:18px;font-size:22px;font-weight:500;color:#9AA7BD;max-width:420px;line-height:1.4}
+ .foot{position:absolute;left:76px;bottom:48px;color:#64748B;font-weight:800;font-size:17px;letter-spacing:3px;z-index:3}.foot b{color:#E2E8F0}
+ .rule{position:absolute;left:0;bottom:0;height:6px;width:100%;z-index:3;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+ .viz{position:absolute;z-index:2}
+ .chartviz{right:40px;top:72px;bottom:72px;width:600px}
+ .svgviz{right:48px;top:50%;transform:translateY(-50%);width:440px;height:440px;display:flex;align-items:center;justify-content:center}
+ .svgviz .md{width:430px;height:430px;overflow:visible}
+ .md .lnk{stroke:color-mix(in srgb,var(--accT) 42%,transparent);stroke-width:2;fill:none}
+ .md .arr{stroke:color-mix(in srgb,var(--accT) 60%,transparent);stroke-width:2.5;marker-end:none}
+ .md .ts{fill:var(--accT);font-weight:800;font-size:12px;letter-spacing:1px;font-family:Inter}
+ .md .tl{fill:#E2E8F0;font-weight:800;font-size:18px;font-family:Inter}
+ .panel{right:74px;top:50%;transform:translateY(-50%);width:236px;height:236px;border-radius:40px;position:absolute;z-index:2;background:color-mix(in srgb,var(--acc) 16%,transparent);border:1px solid color-mix(in srgb,var(--accT) 40%,transparent);display:flex;align-items:center;justify-content:center;box-shadow:0 36px 90px color-mix(in srgb,var(--acc) 26%,transparent)}
+ .panel svg{width:128px;height:128px}
+</style>
+<div class="dots"></div><div class="glow"></div>
+<div class="wrap"><div class="kicker">So sánh &amp; lựa chọn</div><h1>Semantix vs Google Sheets</h1><div class="sub">đối thủ thật của BI không phải Power BI.</div></div>
+<div class="viz svgviz"><svg viewBox="0 0 440 440" class="md">
+     <g transform="rotate(-5 96 220)"><rect x="4" y="72" width="184" height="296" rx="20" style="fill:color-mix(in srgb,#64748B 13%,#0B1120);stroke:color-mix(in srgb,#94A3B8 38%,transparent);stroke-width:2"/><circle cx="96" cy="116" r="21" style="fill:color-mix(in srgb,#EF4444 22%,#0B1120);stroke:#F87171;stroke-width:2"/><path d="M88 108 l16 16 M104 108 l-16 16" style="stroke:#F87171;stroke-width:3;stroke-linecap:round"/><text x="96" y="190" text-anchor="middle" class="tl" style="font-size:20px;fill:#CBD5E1">Google Sheets</text><circle cx="40" cy="258" r="5" style="fill:#64748B"/><rect x="56" y="253" width="92" height="9" rx="4" style="fill:color-mix(in srgb,#94A3B8 20%,transparent)"/><circle cx="40" cy="296" r="5" style="fill:#64748B"/><rect x="56" y="291" width="92" height="9" rx="4" style="fill:color-mix(in srgb,#94A3B8 20%,transparent)"/><circle cx="40" cy="334" r="5" style="fill:#64748B"/><rect x="56" y="329" width="92" height="9" rx="4" style="fill:color-mix(in srgb,#94A3B8 20%,transparent)"/></g>
+     <g transform="rotate(5 344 220)"><rect x="252" y="72" width="184" height="296" rx="20" style="fill:color-mix(in srgb,var(--acc) 22%,#0B1120);stroke:var(--accT);stroke-width:2.5"/><circle cx="344" cy="116" r="21" style="fill:color-mix(in srgb,var(--acc) 34%,#0B1120);stroke:var(--accT);stroke-width:2"/><path d="M335 116 l7 8 12 -15" style="fill:none;stroke:var(--accT);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"/><text x="344" y="190" text-anchor="middle" class="tl" style="font-size:23px;fill:var(--accT)">Semantix</text><circle cx="288" cy="258" r="5" style="fill:var(--accT)"/><rect x="304" y="253" width="92" height="9" rx="4" style="fill:color-mix(in srgb,var(--acc) 55%,transparent)"/><circle cx="288" cy="296" r="5" style="fill:var(--accT)"/><rect x="304" y="291" width="92" height="9" rx="4" style="fill:color-mix(in srgb,var(--acc) 55%,transparent)"/><circle cx="288" cy="334" r="5" style="fill:var(--accT)"/><rect x="304" y="329" width="92" height="9" rx="4" style="fill:color-mix(in srgb,var(--acc) 55%,transparent)"/></g>
+     <circle cx="220" cy="220" r="50" style="fill:#0B1120;stroke:var(--accT);stroke-width:3.5;filter:drop-shadow(0 0 16px color-mix(in srgb,var(--acc) 75%,transparent))"/>
+     <text x="220" y="233" text-anchor="middle" style="fill:#fff;font-weight:900;font-size:30px;font-family:Inter">VS</text></svg></div><div class="rule"></div><div class="foot"><b>TUẤN LA LAB</b> · BLOG</div>

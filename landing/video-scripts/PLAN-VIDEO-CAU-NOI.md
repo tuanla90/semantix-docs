@@ -4,6 +4,39 @@
 > Nhịp đã chốt: **burst rồi giảm**. Slate: **6 video**. Sau giai đoạn này → series "mỗi tuần một khái niệm".
 > Giọng & quy ước: `STYLE.md`, `BLOG-TO-VIDEO.md`. Bản sắc/đối tượng: sub cũ = back-office SME Việt (kế toán, kho, HC, marketing) quen Google Sheets/Looker.
 
+## ⚡ Trạng thái sản xuất (cập nhật 2026-07-03)
+
+**Cả 6 video cầu nối + 1 tập series pilot ĐÃ có script (`content.py`) + thumbnail. Nút thắt duy nhất còn lại: RENDER** (chỉ làm khi user nói "render" — [[render-only-on-request]]).
+
+| # | Slug | Script | Thumb | PUBLISH | Render mp4 |
+|---|------|--------|-------|---------|-----------|
+| E1 | tu-cong-cu-den-tu-duy | ✅ 14 beat | ✅ | ✅ | ❌ chưa |
+| E2 | hanh-trinh-cong-cu | ✅ 16 | ✅ | ✅ | ❌ |
+| E3 | google-sheets-dung-tran | ✅ 14 | ✅ | ✅ | ❌ |
+| E4 | dashboard-linh-hoat-hoa-roi | ✅ 14 | ✅ | ✅ | ❌ |
+| E5 | metric-dimension-kpi | ✅ 14 | ✅ | ✅ | ✅ long+short |
+| E6 | ai-viet-sql-nghe-data | ✅ 14 | ✅ | ✅ | ❌ |
+| S1 | mot-nguon-su-that (series) | ✅ 7 | ✅ | ❌ thiếu | ✅ |
+
+**Việc còn lại:** (1) render E1-E4,E6 (chờ "render"); (2) viết `mot-nguon-su-that.PUBLISH.md`; (3) khởi động dây chuyền SERIES bên dưới.
+
+## 🎬 Slate SERIES "mỗi tuần một khái niệm" (đề xuất 8 tập đầu)
+
+Mỗi tập = script (`content.py`) + thumbnail (`thumb.json` → `gen-thumb`). Hook mạnh · dễ kinetic · neo war story thật.
+
+| Tập | Slug blog nguồn | Hook thumbnail | Layout thumb | War story neo |
+|-----|-----------------|----------------|--------------|---------------|
+| S1 | mot-nguon-su-that | "3 con số doanh thu, ai đúng?" | highlight | semantic layer @ngân hàng (ĐÃ render) |
+| S2 | 4-loai-thang-do-du-lieu | "Đừng tính trung bình mã sản phẩm" | cards/bignum | chấm câu hỏi theo ma trận đề |
+| S3 | phan-tram-vs-diem-phan-tram | "18%→22% KHÔNG phải tăng 10%" | question | báo cáo sai vì lẫn % |
+| S4 | trung-binh-noi-doi | "Trung bình là kẻ nói dối" | question | trọng số khác nhau |
+| S5 | leading-lagging-indicator | "Lái xe bằng gương chiếu hậu" | vs/split | — |
+| S6 | tin-hieu-vs-nhieu | "Đừng phản ứng với mọi dao động" | chart | vật lý: tín hiệu/nhiễu |
+| S7 | data-modeling-fact-dimension | "Cách sắp bảng quyết định câu bạn hỏi được" | mockup | tự xây DB job ngoài |
+| S8 | llm-bia-sql | "AI viết SQL mà bịa cả cột" | code | — |
+
+Nhịp: 1 long-form/tuần (cùng giờ) + 1-2 short. Kho đủ chạy ~1 năm (Phân Tích 52 + Kiến Thức 45 bài). Quy trình 1 tập: **content-writer** (blog→`content.py`) → thumb.json + `gen-thumb` → **content-check** → render (khi OK) → **content-publish**.
+
 ## 1. Mục tiêu giai đoạn cầu nối
 Giai đoạn này là **đường dốc tâm lý**, kéo khán giả từ *"tôi đến vì mẹo Google tools"* → *"tôi muốn tư duy data đúng"*. Bốn việc phải đạt:
 1. Báo hiệu **kênh sống lại** + người dẫn vẫn là Tuấn quen thuộc, đáng tin.

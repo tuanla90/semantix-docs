@@ -1,0 +1,41 @@
+<!doctype html><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+ *{margin:0;box-sizing:border-box} html,body{width:1200px;height:630px} body{font-family:'Inter',system-ui,Arial,sans-serif;--accT:#C4B5FD;--acc:#8B5CF6;--acc2:#6366F1;color:#fff;overflow:hidden;position:relative;background:linear-gradient(150deg,#0B1120 0%,#0F1729 55%,#0A0F1C 100%)}
+ .dots{position:absolute;inset:0;background-image:radial-gradient(color-mix(in srgb,var(--accT) 13%,transparent) 1.1px,transparent 1.1px);background-size:28px 28px;opacity:.42;z-index:1}
+ .glow{position:absolute;right:-40px;top:-80px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--acc2) 24%,transparent),transparent 62%);z-index:1}
+ .wrap{position:absolute;left:0;top:0;bottom:0;width:540px;padding:70px 0 70px 76px;display:flex;flex-direction:column;justify-content:center;z-index:3}
+ .kicker{display:flex;align-items:center;gap:13px;color:var(--accT);font-weight:800;font-size:19px;letter-spacing:3px;text-transform:uppercase}
+ .kicker::before{content:'';width:34px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+ h1{font-weight:900;font-size:52px;line-height:1.08;letter-spacing:-1.3px;margin:22px 0 0;max-width:440px}
+ .sub{margin-top:18px;font-size:22px;font-weight:500;color:#9AA7BD;max-width:420px;line-height:1.4}
+ .foot{position:absolute;left:76px;bottom:48px;color:#64748B;font-weight:800;font-size:17px;letter-spacing:3px;z-index:3}.foot b{color:#E2E8F0}
+ .rule{position:absolute;left:0;bottom:0;height:6px;width:100%;z-index:3;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+ .viz{position:absolute;z-index:2}
+ .chartviz{right:40px;top:72px;bottom:72px;width:600px}
+ .svgviz{right:48px;top:50%;transform:translateY(-50%);width:440px;height:440px;display:flex;align-items:center;justify-content:center}
+ .svgviz .md{width:430px;height:430px;overflow:visible}
+ .md .lnk{stroke:color-mix(in srgb,var(--accT) 42%,transparent);stroke-width:2;fill:none}
+ .md .arr{stroke:color-mix(in srgb,var(--accT) 60%,transparent);stroke-width:2.5;marker-end:none}
+ .md .ts{fill:var(--accT);font-weight:800;font-size:12px;letter-spacing:1px;font-family:Inter}
+ .md .tl{fill:#E2E8F0;font-weight:800;font-size:18px;font-family:Inter}
+ .panel{right:74px;top:50%;transform:translateY(-50%);width:236px;height:236px;border-radius:40px;position:absolute;z-index:2;background:color-mix(in srgb,var(--acc) 16%,transparent);border:1px solid color-mix(in srgb,var(--accT) 40%,transparent);display:flex;align-items:center;justify-content:center;box-shadow:0 36px 90px color-mix(in srgb,var(--acc) 26%,transparent)}
+ .panel svg{width:128px;height:128px}
+</style>
+<div class="dots"></div><div class="glow"></div>
+<div class="wrap"><div class="kicker">Kiến thức nền tảng</div><h1>Thống kê mô tả (Phần 3)</h1><div class="sub">đọc hình dạng phân phối - chuẩn, lệch, đuôi dài, hai đỉnh.</div></div>
+<div class="viz chartviz" id="viz"></div><div class="rule"></div><div class="foot"><b>TUẤN LA LAB</b> · BLOG</div><script>window.addEventListener('load',function(){if(!window.echarts)return;var el=document.getElementById('viz');
+   var xs=[],ys=[],y2=[],SH='bimodal';
+   for(var i=0;i<=48;i++){var x=(i-24)/7,v;
+     if(SH==='skewed'){var t=i/48*4.2;v=t*t*Math.exp(-t)*180;}
+     else if(SH==='bimodal'){v=(Math.exp(-Math.pow((i-15)/5.5,2)/2)+0.82*Math.exp(-Math.pow((i-34)/5.5,2)/2))*100;}
+     else{v=Math.exp(-x*x/2)*100;}
+     xs.push(i);ys.push(+v.toFixed(2));
+     if(SH==='sample')y2.push(+(Math.exp(-Math.pow((i-24)/4,2)/2)*100).toFixed(2));}
+   var mark=SH==='bimodal'||SH==='sample'?[]:(SH==='skewed'?[{xAxis:9},{xAxis:17}]:SH==='spread'?[{xAxis:17},{xAxis:31}]:SH==='percentile'?[{xAxis:24},{xAxis:33},{xAxis:41}]:SH==='tail'?[{xAxis:34}]:[{xAxis:24}]);
+   var area={type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'#8B5CF66b'},{offset:1,color:'#8B5CF600'}]};
+   var series=[{type:'line',data:ys,smooth:true,symbol:'none',lineStyle:{width:4,color:'#8B5CF6'},areaStyle:{color:area},markLine:{silent:true,symbol:'none',lineStyle:{color:'#C4B5FD',width:2,type:'dashed'},label:{show:false},data:mark}}];
+   if(SH==='sample')series.push({type:'line',data:y2,smooth:true,symbol:'none',lineStyle:{width:3.5,color:'#C4B5FD'},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'#C4B5FD55'},{offset:1,color:'#C4B5FD00'}]}}});
+   if(SH==='tail')series.push({type:'line',data:xs.map(function(_,ii){return ii>=34?ys[ii]:null;}),smooth:true,symbol:'none',lineStyle:{width:0},areaStyle:{color:'#F8717155'},z:1});
+   echarts.init(el).setOption({animation:false,backgroundColor:'transparent',grid:{left:6,right:6,top:22,bottom:20},xAxis:{type:'category',data:xs,show:false},yAxis:{type:'value',show:false},series:series});});</script>

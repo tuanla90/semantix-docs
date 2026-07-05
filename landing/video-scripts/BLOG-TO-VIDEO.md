@@ -35,21 +35,52 @@ Bê nguyên blog (văn viết) lên video (văn nói) = người xem lướt sau
 | Guide | Cơ chế cụ thể |
 |---|---|
 | `...` ngừng nhịp | `\n` trong `content.py` BEATS |
-| ▸ ghi chú giọng / beat | `TONE` dict trong `content.py` → audio-tag ElevenLabs lúc `gen_audio` |
+| ▸ ghi chú giọng / beat | **`[tag]` inline trong BEATS** (ngay trước câu cần đổi giọng) → audio-tag ElevenLabs lúc `gen_audio`. KHÔNG dùng dict `TONE` riêng nữa. |
 | 🅰️ On-screen từ khoá | `scenes.json` moments (kit element) — **số nói = số item hiện** |
 | 🎬 Visual | `scenes.json` bg / custom / chart |
 | Câu thần chú | beat chốt + `cta` element |
 
-### ▸ Ghi chú giọng → audio-tag ElevenLabs v3 (dùng khi re-voice)
-| Ghi chú đạo diễn | Tag / cách đọc |
+### ▸ Cảm xúc = `[tag]` inline trong BEATS (bộ tag đã duyệt)
+Cắm tag **ngay trước câu cần đổi giọng**, ~1 tag/beat (tối đa 2 nếu beat có 2 khúc cảm xúc), beat kể/giảng đều thì để trần. Bài mẫu: `videos/mot-nguon-su-that/content.py`, `videos/trung-binh-noi-doi/content.py`.
+
+| Cảm xúc | Tag |
 |---|---|
 | bức xúc, nhanh | `[annoyed]` / `[frustrated]` |
 | trầm, tâm sự | `[thoughtful]` |
 | vỡ oà / phát hiện | `[surprised]` / `[excited]` |
-| châm biếm nhẹ | `[sarcastic]` (hoặc nhấn nhá) |
-| chốt chắc nịch | đọc chậm, dứt khoát (không tag) |
+| châm biếm nhẹ | `[sarcastic]` |
+| chốt chắc nịch | `[confident]` |
+| ngập ngừng | `[hesitant]` |
 
-> **THỰC TẾ (2026-06): Eleven v3 chưa mở API** → tài khoản thường chỉ có v2.5/multilingual_v2 = **KHÔNG đọc được audio-tag**. `gen_audio` STRIP tag trước khi gửi; cảm xúc đến từ **voice_settings** (stability ~0.35, style ~0.4) + dấu câu. Bảng tag trên để dành cho khi v3 mở. VieNeu cũng không có tag.
+> KHÔNG tự chế tag ngoài bảng. Ghi chú cấu trúc (KINETIC/SHORT-ABLE) KHÔNG phải tag - để ở `scenes.json`/ghi chú sản xuất, đừng nhét vào BEATS.
+
+> **THỰC TẾ (2026-07): v3 ĐÃ MỞ API — kênh dùng `eleven_v3` + Instant Voice Clone (giọng `WnVHQmxNaS8EDl4dLjTf`).** Tag ĂN THẬT: `gen_audio` GIỮ tag khi `MODEL` kết thúc `v3` (dòng 44) và lọc tag khỏi caption (dòng 128). Đọc biểu cảm theo tag, phát âm tiếng Việt chuẩn hơn turbo.
+> Giọng Professional/PVC (`WDaJnnNx5FI1IkQ7eV9e`) CHƯA hỗ trợ v3 (chỉ fine-tune `turbo_v2_5`/`flash_v2_5`) và phát âm sai vài từ (khoan→khoản, nhớ→nhờ) → không dùng. Khi ElevenLabs mở PVC-on-v3 thì cân lại (giống giọng thật hơn).
+> Lịch sử: trước 2026-07 v3 chưa mở, tag bị strip, cảm xúc chỉ từ voice_settings + dấu câu.
+
+### 🎨 Icon + chart trong scenes.json — MẶC ĐỊNH mỗi cảnh phải có visual
+> **LUẬT CỨNG:** mỗi `moment` (mỗi cảnh) PHẢI có ít nhất 1 visual — icon / chart / lottie / cards / chips / flow / recap. **Cảnh chỉ có chữ trơn (text/label/caption) = THIẾU, phải thêm icon.** Ưu tiên: beat khái niệm → `el:icons` (hàng tile hero) hoặc `el:icon`; đồ vật/vai trò → icon quen (bảng dưới).
+> **Chart** (bar/line/gauge/donut...): dùng khi beat có **số liệu so sánh hoặc xu hướng thật** (vd 3 con số doanh thu lệch nhau, % đạt mục tiêu). Beat khái niệm thuần thì icon là đủ, đừng ép chart. Chart cũng tính là "visual" thoả luật trên.
+
+Kit đã tích hợp lucide (~1700 icon, gọi theo tên: `"database"`, `"bar-chart-3"`, `"Settings2"` đều nhận; sai tên sẽ hiện `?tên` đỏ trên hình — soát trong Studio, comp `demo-kit` là catalog sống).
+- `chips`: item 3 phần tử `["KPI", "warn", "target"]` (tên icon đứng cuối).
+- `chip` / từng card trong `cards` / từng node trong `flow` / `cta`: thêm `"icon": "<tên>"`.
+- Element riêng: `{"el":"icon", name, color, label?, size?, variant?, grad?}` (tile đơn) và `{"el":"icons", items:[{name,color,label,variant?,grad?}]}` (hàng tile kiểu "Model / Dữ liệu / Agent" — bố cục hero mạnh nhất, ưu tiên cho beat khái niệm).
+- `variant` nền tile: `glass` (mặc định, kính tối) · `soft` (nền màu nhạt) · `white` (nền trắng trong nhẹ) · `solid` (nền đặc + icon trắng) · `none` (icon trơn). `grad: true` = icon stroke gradient đơn sắc (pha trắng → màu gốc).
+  - ⚠️ **Tile đứng riêng (`el:icon`) trên nền video tối: dùng `glass` (hoặc `none`/`solid`), TRÁNH `soft`** — soft là nền màu nhạt + icon cùng màu → tương phản thấp, nhìn như ô trống/mờ. Size tile riêng nên ≥ 14.
+  - ⚠️ **Chỉ dùng tên icon CÓ trong lucide đang cài** (v1.23.0 lẫn tên cũ/mới: có `TriangleAlert`/`CircleAlert` nhưng KHÔNG có `CircleHelp`/`FileWarning`). Validate tên trước khi ghi, sai tên hiện `?tên` đỏ.
+  - ✅ **ĐÃ FIX lỗi gốc "icon rỗng ruột"** (dấu `!`, nút calculator, vạch `≠`, tally biến mất): gradient stroke trong `LIcon` đổi từ `objectBoundingBox` → `gradientUnits="userSpaceOnUse"` (bbox nét thẳng đứng/ngang = 0 nên gradient cũ không tô được). Giờ nét thẳng hiện đủ. Vẫn nên ưu tiên icon bóng-đặc dễ nhận + tránh `tally-*` (quá mảnh).
+  - ✅ **Tự kiểm icon:** `npx remotion still src/index.ts <slug>-Long out/chk.png --frame=<n>` render 1 frame ra ảnh rồi NHÌN, đừng đoán.
+- Quy ước icon quen: Sales=`briefcase` · Kế toán/Finance=`calculator` · Marketing=`megaphone` · Metric=`gauge` · Dimension=`layers` · KPI=`target` · đơn hàng=`package` · kho/lưu=`library` · định nghĩa=`book-open` · Theo dõi (CTA)=`bell-ring` · Xem video (CTA)=`play` (CTA có icon thì bỏ "▶" trong chữ).
+
+## ⚙️ Gotchas kỹ thuật render (Remotion) — đã vấp & fix
+- **Nhạc nền KHÔNG fade cuối video:** `<Audio loop volume={hàm}>` — Remotion trả frame theo TỪNG VÒNG LẶP nhạc, nên điều kiện fade cuối (`f > total - outF`) không bao giờ đúng. **Fix: tính volume bằng `useCurrentFrame()` (frame toàn video) ra một SỐ**, rồi `volume={số}` (xem `LongForm`/`ShortForm` trong `Root.tsx`).
+- **Fade tiếng nói ăn mất từ cuối:** `voiceVol` fade-out dài (0.5s) fade luôn từ cuối câu → "nuốt chữ". Fade ngắn (~0.2s, `/6`) để giữ từ; độ mượt lấy từ **im lặng đệm sau voice** (holdSec + SECTION_GAP), không phải từ fade dài.
+- **Chuyển cảnh gấp/nuốt chữ:** nới `holdSec` (per-beat trong scenes.json, ~1.0s) + `SECTION_GAP` (Root, ~0.8s) + cross-fade moment (`XFADE` trong `Beat`) + gap giữ nhãn beat trước (`<Pad label={beat.bg}/>`, không chớp wordmark).
+- **Đuôi video cho logo kênh:** `OUTRO_PAD` (~4.5s) + fade nhạc `outF` (~4s) để có khoảng ambient cuối overlay logo.
+- **short-outro audio lệch tên:** `gen_audio` từng ghi `beat-short-outro.mp3` nhưng `outro.json` trỏ `short-outro.mp3` → render short 404. Đã fix trong `gen()`.
+- **Re-voice 1 beat:** `python gen_audio.py <slug> <beat>` — chỉ gen beat đó, giữ audio/timings phần còn lại (sửa 1 câu không voice lại cả bài).
+- **`atWord` neo theo giọng:** đổi lời script → kiểm `atWord` trong scenes còn khớp từ trong timings.json không (không thì moment lệch nhịp).
 
 ## Check-list (trước khi chốt script)
 - [ ] Vứt hết định nghĩa hàn lâm rườm rà?

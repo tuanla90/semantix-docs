@@ -60,3 +60,33 @@ collections:
       - { label: "Series (nếu có)", name: "series", widget: "string", required: false }
       - { label: "Thứ tự trong series", name: "seriesOrder", widget: "number", required: false, value_type: "int" }
       - { label: "Nội dung", name: "body", widget: "markdown" }
+
+  # ---- Script lời thoại video (script.json) — sửa bằng FORM, không vỡ cú pháp ----
+  - name: "scripts"
+    label: "Script Voice (video)"
+    label_singular: "Script"
+    description: "Sửa lời thoại video. Giữ [tag] cảm xúc đầu câu (vd [thoughtful]) + xuống dòng = nhịp ngắt. Không tạo mới ở đây (script sinh từ pipeline)."
+    folder: "landing/video-remotion/videos"
+    path: "{{slug}}/script"
+    extension: "json"
+    format: "json"
+    create: false
+    delete: false
+    identifier_field: "slug"
+    summary: "{{slug}}"
+    fields:
+      - { label: "Video (slug)", name: "slug", widget: "string" }
+      - label: "Các đoạn (beat) — lời thoại"
+        name: "beats"
+        widget: "list"
+        fields:
+          - { label: "ID beat", name: "id", widget: "string" }
+          - { label: "Lời thoại", name: "text", widget: "text", hint: "Giữ [tag] cảm xúc đầu câu; mỗi lần xuống dòng = 1 nhịp ngắt nghỉ." }
+      - { label: "Short outro (nếu có)", name: "shortOutro", widget: "text", required: false }
+      - label: "Phát âm riêng (PRON) — tuỳ chọn"
+        name: "pron"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Từ", name: "word", widget: "string" }
+          - { label: "Đọc là", name: "say", widget: "string" }

@@ -62,7 +62,8 @@ Chưa kịp dựng thì: mời collaborator (bước 4) → họ mở `github.co
 ---
 
 ## Lưu ý
-- **Script/scenes video** (`content.py`, `scenes.json`) KHÔNG ở Decap — để editor local (`localhost:8124`). Người kia chỉ lo **blog**.
+- **2 collection**: **Bài Blog** (`.md`, form) + **Script Voice** (`script.json`, form — sửa lời thoại từng beat, giữ `[tag]` + xuống dòng = nhịp ngắt). **Scenes** (`scenes.json`) vẫn để editor local `localhost:8124/scenes` (JSON lồng sâu, không đưa vào Decap).
+- **Nguồn lời thoại giờ là `videos/<slug>/script.json`** — `gen_audio`/`scaffold` ưu tiên đọc nó (fallback `content.py`). Sửa qua Decap (form) hoặc sửa file trực tiếp. Nếu ai sửa `content.py` local (editor 8124 / content-writer) thì chạy `python scripts/script-json.py <slug>` để cập nhật lại `script.json` trước khi render (tránh lệch nguồn).
 - **Đụng độ**: git = last-commit-wins theo file; 2 người hiếm khi sửa cùng 1 bài → ổn.
 - **Cover PNG** sinh tự động (không upload qua CMS) → để trống field cover khi tạo bài mới, sinh cover sau.
 - Trang `/admin` (Decap, blog, share) KHÁC `localhost:8124/admin` (dashboard video, local).

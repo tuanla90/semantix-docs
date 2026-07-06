@@ -34,7 +34,23 @@ collections:
     format: "frontmatter"
     slug: "{{slug}}"
     summary: "{{title}}  ·  {{pubDate}}  ·  {{category}}"
-    sortable_fields: ["pubDate", "title", "category"]
+    # Sắp xếp: mặc định MỚI NHẤT trước; vẫn bấm sort theo tiêu đề/danh mục được
+    sortable_fields:
+      fields: [pubDate, title, category]
+      default: { field: pubDate, direction: descending }
+    # Nút lọc nhanh: Nổi bật + từng danh mục (pattern = regex, khớp tên danh mục)
+    view_filters:
+      - { label: "⭐ Nổi bật", field: featured, pattern: true }
+      - { label: "Kiến Thức Nền Tảng", field: category, pattern: "Kiến Thức Nền Tảng" }
+      - { label: "Phân Tích Dữ Liệu", field: category, pattern: "Phân Tích Dữ Liệu" }
+      - { label: "Hướng Dẫn Thực Chiến", field: category, pattern: "Hướng Dẫn Thực Chiến" }
+      - { label: "AI & Công Nghệ", field: category, pattern: "AI & Công Nghệ" }
+      - { label: "So Sánh & Lựa Chọn", field: category, pattern: "So Sánh & Lựa Chọn" }
+      - { label: "Câu Chuyện & Use Case", field: category, pattern: "Câu Chuyện & Use Case" }
+    # Gom nhóm: theo chủ đề hoặc theo năm (\d{4} tách năm từ pubDate)
+    view_groups:
+      - { label: "Theo chủ đề", field: category }
+      - { label: "Theo năm", field: pubDate, pattern: '\d{4}' }
     fields:
       - { label: "Tiêu đề", name: "title", widget: "string" }
       - { label: "Mô tả (preview/SEO)", name: "description", widget: "text" }
@@ -73,6 +89,10 @@ collections:
     delete: false
     identifier_field: "slug"
     summary: "{{slug}}"
+    # Sort theo slug (A→Z); Sveltia còn TỰ thêm sort theo ngày sửa (commit Git) trong UI
+    sortable_fields:
+      fields: [slug]
+      default: { field: slug, direction: ascending }
     fields:
       - { label: "Video (slug)", name: "slug", widget: "string" }
       - label: "Các đoạn (beat) — lời thoại"

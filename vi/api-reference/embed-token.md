@@ -2,17 +2,17 @@
 
 Tạo JWT token đã ký để nhúng dashboard Semantix vào ứng dụng bên ngoài qua iframe.
 
----
+***
 
 ## Endpoint
 
-```
+```plain
 POST /api/v1/embed/token
 Authorization: Bearer sk_live_your_api_key
 Content-Type: application/json
 ```
 
----
+***
 
 ## Request Body
 
@@ -25,21 +25,21 @@ Content-Type: application/json
     "region": "HCM"
   },
   "userContext": {
-    "name": "Nguyễn Văn A",
+    "name": "Nguyễn Văn B",
     "email": "nguyen@customer.com"
   }
 }
 ```
 
 | Trường | Kiểu | Bắt Buộc | Mô Tả |
-|--------|------|---------|--------|
+| --- | --- | --- | --- |
 | `dashboardId` | string | ✅ | ID của dashboard muốn nhúng |
 | `expiryDays` | number | ❌ | Số ngày token hợp lệ (1-365, mặc định: 30) |
 | `expiryMinutes` | number | ❌ | Số phút token hợp lệ (thay thế `expiryDays` cho token ngắn hạn) |
 | `lockedFilters` | object | ❌ | Bộ lọc cố định — người xem không thể thay đổi |
 | `userContext` | object | ❌ | Thông tin người xem để hiển thị trong audit log |
 
----
+***
 
 ## Response
 
@@ -53,7 +53,7 @@ Content-Type: application/json
 }
 ```
 
----
+***
 
 ## Render Dashboard Qua iframe
 
@@ -71,11 +71,12 @@ Sau khi có token, render trong frontend:
 ```
 
 **Format URL embed:**
-```
+
+```plain
 https://{domain}/vi/embed/dashboard/{dashboardId}?token={token}
 ```
 
----
+***
 
 ## Locked Filters (Bộ Lọc Cố Định)
 
@@ -92,6 +93,7 @@ https://{domain}/vi/embed/dashboard/{dashboardId}?token={token}
 ```
 
 **Cách hoạt động:**
+
 1. Token được ký với `lockedFilters`
 2. Khi render dashboard, Semantix đọc filters từ token
 3. Áp dụng `WHERE customer_id = '12345' AND region = 'HCM' AND year = 2026` vào tất cả queries
@@ -106,24 +108,24 @@ const token = await createEmbedToken('dash_abc123', {
 });
 ```
 
----
+***
 
 ## Thời Hạn Token
 
 | Scenario | Cấu Hình | Lý Do |
-|----------|----------|-------|
+| --- | --- | --- |
 | Dashboard nhúng trong app của khách hàng | `expiryDays: 30` | Token sống qua nhiều session |
 | Dashboard nhúng cho mỗi lần xem | `expiryMinutes: 60` | Bảo mật cao hơn |
 | Dashboard public (không cần auth) | `expiryDays: 365` | Luôn accessible |
 | Dashboard nhạy cảm | `expiryMinutes: 15` | Giảm rủi ro nếu token bị lộ |
 
----
+***
 
 ## Workflow Backend → Frontend
 
 **Không bao giờ tạo embed token ở frontend** — API key sẽ bị lộ trong source code.
 
-```
+```plain
 Frontend (React/Vue)        Backend Server           Semantix API
        │                         │                        │
        │── Request dashboard ──→ │                        │
@@ -203,13 +205,14 @@ function EmbeddedDashboard({ dashboardId }) {
 }
 ```
 
----
+***
 
 ## Xử Lý Token Hết Hạn
 
 Token hết hạn → iframe hiển thị màn hình "Token expired". Xử lý:
 
 1. Lắng nghe `message` event từ iframe:
+
 ```javascript
 window.addEventListener('message', (event) => {
   if (event.data.type === 'SEMANTIX_TOKEN_EXPIRED') {
@@ -220,18 +223,19 @@ window.addEventListener('message', (event) => {
 ```
 
 2. Hoặc set interval refresh token trước khi hết hạn:
+
 ```javascript
 // Refresh token 5 phút trước khi hết hạn
 const refreshEarly = expiryMs - 5 * 60 * 1000;
 setTimeout(() => refreshEmbedToken(), refreshEarly);
 ```
 
----
+***
 
 ## Lỗi Thường Gặp
 
 | HTTP Status | Error | Giải Pháp |
-|-------------|-------|-----------|
+| --- | --- | --- |
 | `400` | "dashboardId is required" | Kiểm tra request body |
 | `403` | "API key missing scope: manage:embeds" | Tạo key với scope `manage:embeds` |
 | `404` | "Dashboard not found" | Kiểm tra dashboardId đúng không |

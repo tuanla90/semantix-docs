@@ -15,7 +15,7 @@ const BLOG_DIR = path.join(__dirname, 'src', 'content', 'blog');
 const VIDEO_DIR = path.join(__dirname, 'video-remotion', 'videos');
 const HTML_BLOG = path.join(__dirname, 'edit-tool.html');
 const HTML_VIDEO = path.join(__dirname, 'edit-video.html');
-const PORT = Number(process.env.EDIT_PORT) || 8124;
+const PORT = Number(process.env.EDIT_PORT || process.env.PORT) || 8124;
 const PREVIEW = process.env.PREVIEW_ORIGIN || 'http://localhost:8123';
 const STUDIO = process.env.STUDIO_ORIGIN || 'http://localhost:3000';   // Remotion Studio (nhúng iframe cho scenes editor)
 

@@ -38,6 +38,11 @@ function splitTitle(title) {
 }
 
 const hasMp4 = (slug) => { try { return fs.readdirSync(path.join(VOUT, slug)).some(f => f.endsWith('.mp4')); } catch { return false; } };
+// voice AI THẬT: gen_audio.py ghi beats.json trỏ .mp3; scaffold.py chỉ ghi .wav (câm, nhạc/sfx preview).
+const realVoice = (slug) => {
+  try { const bj = JSON.parse(fs.readFileSync(path.join(VIDEOS, slug, 'beats.json'), 'utf8'));
+    return Array.isArray(bj) && bj.length > 0 && /\.mp3$/i.test(bj[0].audio || ''); } catch { return false; }
+};
 
 export function scanAll() {
   const rows = fs.readdirSync(BLOG).filter(f => f.endsWith('.md')).map(f => {
@@ -65,7 +70,8 @@ export function scanAll() {
     .map(slug => ({
       slug,
       scenes: exists(path.join(VIDEOS, slug, 'scenes.json')),
-      voiced: exists(path.join(VIDEOS, slug, 'beats.json')),
+      scaffolded: exists(path.join(VIDEOS, slug, 'beats.json')),   // có track audio (câm scaffold HOẶC voice thật)
+      voiced: realVoice(slug),                                     // CHỈ true khi có voice AI (.mp3)
       thumb: exists(path.join(VOUT, slug, 'thumb.png')) ? `video-remotion/out/${slug}/thumb.png` : '',
       render: hasMp4(slug),
       publish: exists(path.join(VSCRIPTS, slug + '.PUBLISH.md')),
@@ -74,7 +80,7 @@ export function scanAll() {
 
   const blogToVideos = {};
   for (const v of videoList) for (const b of v.sources) (blogToVideos[b] ||= []).push(v.slug);
-  const vidInfo = (vs) => { const v = videoList.find(x => x.slug === vs) || {}; return { slug: vs, scenes: !!v.scenes, voiced: !!v.voiced, thumb: v.thumb || '', render: !!v.render, publish: !!v.publish }; };
+  const vidInfo = (vs) => { const v = videoList.find(x => x.slug === vs) || {}; return { slug: vs, scenes: !!v.scenes, scaffolded: !!v.scaffolded, voiced: !!v.voiced, thumb: v.thumb || '', render: !!v.render, publish: !!v.publish }; };
   for (const r of rows) {
     r.vids = (blogToVideos[r.slug] || []).map(vidInfo);
     const tv = r.vids.find(v => v.thumb); r.vthumb = tv ? tv.thumb : '';
@@ -90,12 +96,13 @@ export function scanAll() {
   return { rows: allRows, cats, stamp: Date.now() };
 }
 
-// trạng thái pipeline tổng hợp của 1 dòng: none < script < scenes < voiced < render < publish
+// trạng thái pipeline tổng hợp của 1 dòng: none < script < scenes < scaffold < voiced < render < publish
 function vstate(vids) {
   if (!vids.length) return 'none';
   if (vids.some(v => v.publish)) return 'publish';
   if (vids.some(v => v.render)) return 'render';
   if (vids.some(v => v.voiced)) return 'voiced';
+  if (vids.some(v => v.scaffolded)) return 'scaffold';   // có nhạc/sfx (track câm) nhưng CHƯA voice AI
   if (vids.some(v => v.scenes)) return 'scenes';
   return 'script';
 }

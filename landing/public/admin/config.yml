@@ -120,12 +120,14 @@ collections:
       - name: "readme"
         label: "README.md"
         file: "vi/README.md"
+        format: "raw"
         media_folder: ""
         public_folder: ""
         fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
       - name: "about"
         label: "about.md"
         file: "vi/about.md"
+        format: "raw"
         media_folder: ""
         public_folder: ""
         fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
@@ -135,6 +137,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/admin"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -147,6 +150,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/ai-chat"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -159,6 +163,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/api-reference"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -171,6 +176,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/connections"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -183,6 +189,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/contexts"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -195,6 +202,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/dashboards"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -207,6 +215,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/data-portal"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -219,6 +228,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/deep-dives"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -231,6 +241,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/free-trial"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -243,6 +254,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/getting-started"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -255,6 +267,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/notifications"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -267,6 +280,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/studio"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -279,6 +293,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/support"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -291,6 +306,7 @@ collections:
     label_singular: "Trang"
     folder: "vi/user-guide"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -304,12 +320,14 @@ collections:
       - name: "readme"
         label: "README.md"
         file: "en/README.md"
+        format: "raw"
         media_folder: ""
         public_folder: ""
         fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
       - name: "about"
         label: "about.md"
         file: "en/about.md"
+        format: "raw"
         media_folder: ""
         public_folder: ""
         fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
@@ -319,6 +337,7 @@ collections:
     label_singular: "Trang"
     folder: "en/admin"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -331,6 +350,7 @@ collections:
     label_singular: "Trang"
     folder: "en/ai-chat"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -343,6 +363,7 @@ collections:
     label_singular: "Trang"
     folder: "en/api-reference"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -355,6 +376,7 @@ collections:
     label_singular: "Trang"
     folder: "en/connections"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -367,6 +389,7 @@ collections:
     label_singular: "Trang"
     folder: "en/contexts"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -379,6 +402,7 @@ collections:
     label_singular: "Trang"
     folder: "en/dashboards"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -391,6 +415,7 @@ collections:
     label_singular: "Trang"
     folder: "en/data-portal"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -403,6 +428,7 @@ collections:
     label_singular: "Trang"
     folder: "en/deep-dives"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -415,6 +441,7 @@ collections:
     label_singular: "Trang"
     folder: "en/getting-started"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -427,6 +454,7 @@ collections:
     label_singular: "Trang"
     folder: "en/notifications"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -439,6 +467,7 @@ collections:
     label_singular: "Trang"
     folder: "en/studio"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -451,6 +480,7 @@ collections:
     label_singular: "Trang"
     folder: "en/support"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""
@@ -463,6 +493,7 @@ collections:
     label_singular: "Trang"
     folder: "en/user-guide"
     extension: "md"
+    format: "raw"
     create: true
     delete: false
     media_folder: ""

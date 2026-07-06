@@ -109,3 +109,35 @@ collections:
         fields:
           - { label: "Từ", name: "word", widget: "string" }
           - { label: "Đọc là", name: "say", widget: "string" }
+
+  # ---- Docs GitBook (song ngữ) — sửa qua CMS -> commit repo -> GitBook Git Sync tự cập nhật ----
+  # Sveltia CHƯA có nested UI (cây), nên dùng path {{dirname}}/{{filename}} để đọc/ghi đúng file trong
+  # thư mục con (list phẳng). Chỉ field 'body' -> ghi Markdown THUẦN, không chèn frontmatter (kiểu VitePress).
+  # Ảnh: media_folder rỗng = lưu cạnh file .md, GitBook render path tương đối. Tiêu đề = dòng '# ' đầu bài.
+  - name: "docs-vi"
+    label: "Docs GitBook (VI)"
+    label_singular: "Trang docs VI"
+    description: "Sửa tài liệu tiếng Việt (thư mục vi/). Tiêu đề lấy từ dòng '# ' đầu bài. Tạo TRANG MỚI thì nhớ tự thêm link vào Mục Lục vi/SUMMARY.md (CMS không tự thêm). Ảnh kéo-thả lưu cạnh file."
+    folder: "vi"
+    path: "{{dirname}}/{{filename}}"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en"
+    label: "Docs GitBook (EN)"
+    label_singular: "Trang docs EN"
+    description: "Edit English docs (en/ folder). Title comes from the leading '# ' line. When creating a NEW page, remember to add its link to en/SUMMARY.md manually (CMS won't). Images are stored next to the .md file."
+    folder: "en"
+    path: "{{dirname}}/{{filename}}"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Content (Markdown)", name: "body", widget: "markdown" }

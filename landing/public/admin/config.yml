@@ -110,16 +110,30 @@ collections:
           - { label: "Từ", name: "word", widget: "string" }
           - { label: "Đọc là", name: "say", widget: "string" }
 
-  # ---- Docs GitBook (song ngữ) — sửa qua CMS -> commit repo -> GitBook Git Sync tự cập nhật ----
-  # Sveltia CHƯA có nested UI (cây), nên dùng path {{dirname}}/{{filename}} để đọc/ghi đúng file trong
-  # thư mục con (list phẳng). Chỉ field 'body' -> ghi Markdown THUẦN, không chèn frontmatter (kiểu VitePress).
-  # Ảnh: media_folder rỗng = lưu cạnh file .md, GitBook render path tương đối. Tiêu đề = dòng '# ' đầu bài.
-  - name: "docs-vi"
-    label: "Docs GitBook (VI)"
-    label_singular: "Trang docs VI"
-    description: "Sửa tài liệu tiếng Việt (thư mục vi/). Tiêu đề lấy từ dòng '# ' đầu bài. Tạo TRANG MỚI thì nhớ tự thêm link vào Mục Lục vi/SUMMARY.md (CMS không tự thêm). Ảnh kéo-thả lưu cạnh file."
-    folder: "vi"
-    path: "{{dirname}}/{{filename}}"
+  # ==== Docs GitBook (song ngữ) — Sveltia CHƯA đọc đệ quy nên tách 1 collection / thư mục ====
+  # Body-only -> Markdown thuần (không frontmatter). media_folder rỗng -> ảnh cạnh file (GitBook render tương đối).
+  # Tạo trang mới nhớ tự thêm link vào <lang>/SUMMARY.md (CMS không tự thêm).
+
+  - name: "docs-vi-root"
+    label: "VI · (Gốc)"
+    files:
+      - name: "readme"
+        label: "README.md"
+        file: "vi/README.md"
+        media_folder: ""
+        public_folder: ""
+        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
+      - name: "about"
+        label: "about.md"
+        file: "vi/about.md"
+        media_folder: ""
+        public_folder: ""
+        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
+
+  - name: "docs-vi-admin"
+    label: "VI · Admin"
+    label_singular: "Trang"
+    folder: "vi/admin"
     extension: "md"
     create: true
     delete: false
@@ -128,16 +142,330 @@ collections:
     fields:
       - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
 
-  - name: "docs-en"
-    label: "Docs GitBook (EN)"
-    label_singular: "Trang docs EN"
-    description: "Edit English docs (en/ folder). Title comes from the leading '# ' line. When creating a NEW page, remember to add its link to en/SUMMARY.md manually (CMS won't). Images are stored next to the .md file."
-    folder: "en"
-    path: "{{dirname}}/{{filename}}"
+  - name: "docs-vi-ai-chat"
+    label: "VI · Ai Chat"
+    label_singular: "Trang"
+    folder: "vi/ai-chat"
     extension: "md"
     create: true
     delete: false
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Content (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-api-reference"
+    label: "VI · Api Reference"
+    label_singular: "Trang"
+    folder: "vi/api-reference"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-connections"
+    label: "VI · Connections"
+    label_singular: "Trang"
+    folder: "vi/connections"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-contexts"
+    label: "VI · Contexts"
+    label_singular: "Trang"
+    folder: "vi/contexts"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-dashboards"
+    label: "VI · Dashboards"
+    label_singular: "Trang"
+    folder: "vi/dashboards"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-data-portal"
+    label: "VI · Data Portal"
+    label_singular: "Trang"
+    folder: "vi/data-portal"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-deep-dives"
+    label: "VI · Deep Dives"
+    label_singular: "Trang"
+    folder: "vi/deep-dives"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-free-trial"
+    label: "VI · Free Trial"
+    label_singular: "Trang"
+    folder: "vi/free-trial"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-getting-started"
+    label: "VI · Getting Started"
+    label_singular: "Trang"
+    folder: "vi/getting-started"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-notifications"
+    label: "VI · Notifications"
+    label_singular: "Trang"
+    folder: "vi/notifications"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-studio"
+    label: "VI · Studio"
+    label_singular: "Trang"
+    folder: "vi/studio"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-support"
+    label: "VI · Support"
+    label_singular: "Trang"
+    folder: "vi/support"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-vi-user-guide"
+    label: "VI · User Guide"
+    label_singular: "Trang"
+    folder: "vi/user-guide"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-root"
+    label: "EN · (Gốc)"
+    files:
+      - name: "readme"
+        label: "README.md"
+        file: "en/README.md"
+        media_folder: ""
+        public_folder: ""
+        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
+      - name: "about"
+        label: "about.md"
+        file: "en/about.md"
+        media_folder: ""
+        public_folder: ""
+        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
+
+  - name: "docs-en-admin"
+    label: "EN · Admin"
+    label_singular: "Trang"
+    folder: "en/admin"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-ai-chat"
+    label: "EN · Ai Chat"
+    label_singular: "Trang"
+    folder: "en/ai-chat"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-api-reference"
+    label: "EN · Api Reference"
+    label_singular: "Trang"
+    folder: "en/api-reference"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-connections"
+    label: "EN · Connections"
+    label_singular: "Trang"
+    folder: "en/connections"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-contexts"
+    label: "EN · Contexts"
+    label_singular: "Trang"
+    folder: "en/contexts"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-dashboards"
+    label: "EN · Dashboards"
+    label_singular: "Trang"
+    folder: "en/dashboards"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-data-portal"
+    label: "EN · Data Portal"
+    label_singular: "Trang"
+    folder: "en/data-portal"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-deep-dives"
+    label: "EN · Deep Dives"
+    label_singular: "Trang"
+    folder: "en/deep-dives"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-getting-started"
+    label: "EN · Getting Started"
+    label_singular: "Trang"
+    folder: "en/getting-started"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-notifications"
+    label: "EN · Notifications"
+    label_singular: "Trang"
+    folder: "en/notifications"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-studio"
+    label: "EN · Studio"
+    label_singular: "Trang"
+    folder: "en/studio"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-support"
+    label: "EN · Support"
+    label_singular: "Trang"
+    folder: "en/support"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+
+  - name: "docs-en-user-guide"
+    label: "EN · User Guide"
+    label_singular: "Trang"
+    folder: "en/user-guide"
+    extension: "md"
+    create: true
+    delete: false
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }

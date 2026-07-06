@@ -1,0 +1,62 @@
+# Decap CMS — quản trị blog Tuấn LA Lab (git-based: Save = commit vào repo -> auto deploy).
+# Repo gốc = semantix-docs; dự án astro nằm trong landing/ nên đường dẫn tính TỪ GỐC REPO.
+backend:
+  name: github
+  repo: tuanla90/semantix-docs
+  branch: main
+  # >>> ĐIỀN sau khi dựng OAuth proxy (xem landing/DECAP-SETUP.md) <<<
+  # base_url: https://<oauth-worker>.workers.dev
+
+# Cho phép test tại chỗ trước khi có OAuth:  cd landing && npx decap-server  (rồi mở /admin?local)
+local_backend: true
+
+# ảnh chèn trong thân bài (cover PNG sinh tự động, không quản ở đây)
+media_folder: "landing/public/uploads"
+public_folder: "/uploads"
+
+# slug sạch ASCII (bỏ dấu tiếng Việt): "Một nguồn sự thật" -> mot-nguon-su-that
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+# editorial_workflow: mỗi bài đang sửa nằm ở NHÁNH riêng (cms/blog-<slug>) -> KHÔNG deploy.
+# Kéo bài sang cột "Ready" rồi bấm "Publish" mới merge vào main = 1 deploy. Sửa/lưu bao nhiêu lần cũng không deploy.
+publish_mode: editorial_workflow
+
+collections:
+  - name: "blog"
+    label: "Bài Blog"
+    label_singular: "Bài"
+    description: "Sửa/tạo bài blog. Bấm Publish = commit vào repo, site tự build lại."
+    folder: "landing/src/content/blog"
+    create: true
+    delete: false
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    summary: "{{title}}  ·  {{pubDate}}  ·  {{category}}"
+    sortable_fields: ["pubDate", "title", "category"]
+    fields:
+      - { label: "Tiêu đề", name: "title", widget: "string" }
+      - { label: "Mô tả (preview/SEO)", name: "description", widget: "text" }
+      - { label: "Ngày đăng", name: "pubDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: true }
+      - label: "Chủ đề"
+        name: "category"
+        widget: "select"
+        options:
+          - "Kiến Thức Nền Tảng"
+          - "Phân Tích Dữ Liệu"
+          - "Hướng Dẫn Thực Chiến"
+          - "AI & Công Nghệ"
+          - "So Sánh & Lựa Chọn"
+          - "Câu Chuyện & Use Case"
+      - { label: "Thời gian đọc (phút)", name: "readTime", widget: "number", default: 7, value_type: "int", min: 1 }
+      - { label: "Tác giả", name: "author", widget: "string", default: "Lê Anh Tuấn", required: false }
+      - { label: "Chức danh tác giả", name: "authorTitle", widget: "string", default: "Nhà sáng lập Semantix", required: false }
+      - { label: "Nổi bật (featured)", name: "featured", widget: "boolean", default: false, required: false }
+      - { label: "Ảnh cover (đường dẫn)", name: "cover", widget: "string", required: false, hint: "vd /blog/covers/<slug>.png — cover thường sinh tự động, để trống nếu chưa có" }
+      - { label: "Cover alt", name: "coverAlt", widget: "string", required: false }
+      - { label: "Mã (code, nội bộ)", name: "code", widget: "string", required: false }
+      - { label: "Series (nếu có)", name: "series", widget: "string", required: false }
+      - { label: "Thứ tự trong series", name: "seriesOrder", widget: "number", required: false, value_type: "int" }
+      - { label: "Nội dung", name: "body", widget: "markdown" }

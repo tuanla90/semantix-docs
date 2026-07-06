@@ -1,0 +1,189 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quản lý nội dung · Tuấn LA Lab</title>
+<style>
+ :root{--bg:#0b0f1a;--panel:#111a2e;--panel2:#0f1729;--line:#22304d;--text:#e6edf7;--muted:#8b9ab3;--accent:#783ABF;--accent2:#a06be0;
+   --green:#22c55e;--amber:#f59e0b;--cyan:#06b6d4;--red:#ef4444;--slate:#3a465e}
+ *{box-sizing:border-box}
+ body{margin:0;font-family:Inter,'Segoe UI',system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);font-size:14px}
+ a{color:inherit}
+ header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0d1424,#0b0f1a);border-bottom:1px solid var(--line);
+   padding:12px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+ header h1{font-size:17px;margin:0;font-weight:800;letter-spacing:-.01em}
+ header h1 b{color:var(--accent2)}
+ .count{color:var(--muted);font-size:13px}
+ .spacer{flex:1}
+ .prog{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+ .bar{width:160px;height:7px;border-radius:100px;background:#1b2740;overflow:hidden}
+ .bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+ select,input,button{font:inherit;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:7px 11px}
+ input#q{width:210px}
+ button{cursor:pointer;font-weight:600}
+ button.p{background:var(--accent);border-color:var(--accent)}
+ button:hover{border-color:var(--accent)}
+ #save{font-size:12px;color:var(--muted);min-width:96px}
+ main{padding:16px 22px 80px}
+ .group-h{margin:22px 0 10px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);display:flex;gap:9px;align-items:center}
+ .group-h .n{background:#1b2740;color:var(--muted);border-radius:100px;padding:1px 9px;font-size:11px}
+ .card{display:grid;grid-template-columns:132px 1fr 300px 260px;gap:16px;background:var(--panel);border:1px solid var(--line);
+   border-radius:14px;padding:14px;margin-bottom:10px;align-items:start}
+ .card.flagged{border-color:#7c2d12;background:linear-gradient(180deg,#1a1410,var(--panel))}
+ .card.videoonly{border-style:dashed}
+ .thumb{width:132px;height:74px;border-radius:9px;background:#070b14;object-fit:cover;display:block;border:1px solid var(--line);cursor:zoom-in}
+ .thumb.ph{display:flex;align-items:center;justify-content:center;color:#33415c;font-size:11px}
+ .ttl{font-weight:800;font-size:15px;line-height:1.3;color:#fff;text-decoration:none}
+ .ttl:hover{color:var(--accent2)}
+ .ttl.vid{color:var(--accent2)}
+ .sub{color:var(--muted);font-size:12.5px;margin-top:4px;line-height:1.45}
+ .meta{color:#5f6f8c;font-size:11px;margin-top:6px;font-family:ui-monospace,monospace}
+ .acts{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
+ .acts a{font-size:11.5px;font-weight:700;text-decoration:none;padding:4px 9px;border-radius:7px;background:#1b2740;color:#c7d3e8;border:1px solid var(--line)}
+ .acts a:hover{border-color:var(--accent);color:#fff}
+ .acts a.off{opacity:.4;pointer-events:none}
+ /* pipeline */
+ .pipe{display:flex;flex-direction:column;gap:8px}
+ .steps{display:flex;align-items:center;gap:0}
+ .step{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;position:relative}
+ .step .dot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;
+   background:#141d30;border:1.5px solid var(--slate);color:#4a5871;z-index:2}
+ .step.on .dot{background:var(--green);border-color:var(--green);color:#04150a}
+ .step .lb{font-size:9.5px;font-weight:700;color:#5f6f8c;text-transform:uppercase;letter-spacing:.4px}
+ .step.on .lb{color:#a7f3c4}
+ .step:not(:last-child):after{content:"";position:absolute;top:13px;left:50%;width:100%;height:2px;background:var(--slate);z-index:1}
+ .step.on:not(:last-child):after{background:var(--green)}
+ .novideo{color:#5f6f8c;font-size:12px;font-style:italic;padding-top:6px}
+ .vlinks{display:flex;gap:5px;flex-wrap:wrap;margin-top:2px}
+ .vlinks a{font-size:11px;font-weight:700;text-decoration:none;padding:3px 8px;border-radius:6px}
+ .vlinks a.script{background:#3b2168;color:#d6bcfb} .vlinks a.scenes{background:#0e4d5c;color:#9be9f7}
+ .vlinks a.off{background:#161f33;color:#4a5871;pointer-events:none}
+ /* note */
+ .note textarea{width:100%;height:66px;background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:9px;
+   font:inherit;font-size:12.5px;color:var(--text);resize:vertical}
+ .ctrls{display:flex;align-items:center;gap:14px;margin-top:8px;flex-wrap:wrap}
+ .chk{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;cursor:pointer;color:var(--muted)}
+ .chk input{width:15px;height:15px;accent-color:var(--accent)}
+ .chk.flag input{accent-color:var(--amber)} .chk.flag{color:#fcd34d}
+ #lb{display:none;position:fixed;inset:0;background:rgba(2,6,16,.94);z-index:60;align-items:center;justify-content:center;cursor:zoom-out}
+ #lb img{max-width:94vw;max-height:94vh;border-radius:10px}
+ .empty{color:var(--muted);text-align:center;padding:60px;font-size:15px}
+</style></head><body>
+<header>
+ <h1>Quản lý nội dung <b>· Tuấn LA Lab</b></h1>
+ <span class="count" id="count">…</span>
+ <div class="prog" title="Tỉ lệ bài đã có video render"><div class="bar"><i id="pbar" style="width:0"></i></div><span id="ptext"></span></div>
+ <span class="spacer"></span>
+ <label class="count">Lọc <select id="filter"></select></label>
+ <input id="q" placeholder="Tìm tiêu đề / slug…">
+ <span id="save">●</span>
+ <button id="refresh" title="Quét lại filesystem">↻ Làm mới</button>
+</header>
+<main id="main"><div class="empty">Đang tải…</div></main>
+<div id="lb"><img id="lbimg" alt=""></div>
+<script>
+const BLOG_URL='https://tuanla90.github.io/semantix-docs/blog';
+const EDIT_GH='https://github.com/tuanla90/semantix-docs/edit/main/landing/src/content/blog';
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+let DATA=[], CATS=[], STATE={}, timer=null;
+
+const STEPS=[['script','script'],['scenes','scenes'],['voice','voice'],['render','render'],['publish','publish']];
+function stepsOf(r){
+  const v=r.vids||[]; if(!v.length) return null;
+  return {script:true, scenes:v.some(x=>x.scenes), voice:v.some(x=>x.voiced), render:v.some(x=>x.render), publish:v.some(x=>x.publish)};
+}
+const STATE_ORDER={none:0,script:1,scenes:2,voiced:3,render:4,publish:5};
+const GROUPS=[
+ ['flag','⚠ Cần sửa', r=>st(r).flag],
+ ['todo','Chưa dựng video', r=>r.vstate==='none'||r.vstate==='script'],
+ ['wip','Đang dở (scenes → render)', r=>['scenes','voiced','render'].includes(r.vstate)],
+ ['done','Đã render / đăng', r=>['publish'].includes(r.vstate)||(r.vstate==='render')],
+ ['blog','Blog thuần (chưa làm video)', r=>!(r.vids||[]).length],
+];
+function st(r){return STATE[r.slug]||{};}
+
+async function load(){
+  const [d,s]=await Promise.all([fetch('/api/admin-data').then(r=>r.json()),fetch('/api/admin-state').then(r=>r.json())]);
+  DATA=d.rows||[]; CATS=d.cats||[]; STATE=s||{};
+  // migrate localStorage cũ 1 lần
+  if(!Object.keys(STATE).length){try{const old=JSON.parse(localStorage.getItem('cover-admin-v1')||'{}');if(Object.keys(old).length){STATE=old;persist();}}catch{}}
+  buildFilter(); render();
+}
+function buildFilter(){
+  const f=$('#filter');
+  f.innerHTML='<option value="all">Tất cả</option><option value="flag">⚠ Cần sửa</option><option value="note">Có ghi chú</option>'
+   +'<optgroup label="Pipeline"><option value="v:none">Chưa có video</option><option value="v:script">Có script</option><option value="v:scenes">Có scenes</option><option value="v:voiced">Đã voice</option><option value="v:render">Đã render</option><option value="v:publish">Đã publish</option><option value="vr:0">Video chưa review</option><option value="vr:1">Video đã review</option></optgroup>'
+   +(CATS.length?'<optgroup label="Chủ đề">'+CATS.map(c=>`<option value="cat:${esc(c)}">${esc(c)}</option>`).join('')+'</optgroup>':'');
+}
+function pass(r,f,q){
+  const s=st(r);
+  if(f==='flag'&&!s.flag) return false;
+  if(f==='note'&&!(s.note&&s.note.trim())) return false;
+  if(f.startsWith('v:')&&r.vstate!==f.slice(2)) return false;
+  if(f==='vr:1'&&!s.vreview) return false;
+  if(f==='vr:0'&&!((r.vids||[]).length&&!s.vreview)) return false;
+  if(f.startsWith('cat:')&&r.cat!==f.slice(4)) return false;
+  if(q&&!((r.title||'')+' '+r.slug).toLowerCase().includes(q)) return false;
+  return true;
+}
+function card(r){
+  const s=st(r), sp=stepsOf(r);
+  const thumb=r.vthumb?`<img class="thumb" loading="lazy" src="${r.vthumb}?v=${DATA.stamp||''}" onclick="zoom(this.src)">`
+    :(r.png?`<img class="thumb" loading="lazy" src="${r.png}" onerror="this.className='thumb ph';this.textContent='no cover'" onclick="zoom(this.src)">`
+    :`<div class="thumb ph">video</div>`);
+  const title=r.isVideoOnly
+    ?`<div class="ttl vid">🎬 ${esc(r.slug)}</div><div class="sub">${esc(r.sub)}</div>`
+    :`<a class="ttl" href="${BLOG_URL}/${r.slug}/" target="_blank" rel="noopener">${esc(r.t||r.title)}</a>`
+     +(r.sub?`<div class="sub">${esc(r.sub)}</div>`:'')
+     +`<div class="meta">${esc(r.date)} · ${esc(r.cat)} · ${esc(r.slug)}</div>`
+     +`<div class="acts"><a href="${BLOG_URL}/${r.slug}/" target="_blank" rel="noopener">👁 Xem</a>`
+     +`<a href="/?slug=${r.slug}" target="_blank" rel="noopener">📝 Sửa blog</a>`
+     +`<a href="${EDIT_GH}/${r.slug}.md" target="_blank" rel="noopener">✏️ GitHub</a></div>`;
+  const vslug=(r.vids&&r.vids[0])?r.vids[0].slug:null;
+  const pipe=sp?`<div class="steps">${STEPS.map(([k,lb])=>`<div class="step ${sp[k]?'on':''}"><div class="dot">${sp[k]?'✓':'○'}</div><div class="lb">${lb}</div></div>`).join('')}</div>`
+    +`<div class="vlinks"><a class="script" href="/video?slug=${vslug}" target="_blank" rel="noopener">📝 script</a>`
+    +`<a class="scenes ${sp.scenes?'':'off'}" href="/scenes?slug=${vslug}" target="_blank" rel="noopener">🎬 scenes</a></div>`
+    :`<div class="novideo">— chưa gắn video —</div>`;
+  const note=`<div class="note"><textarea placeholder="Ghi chú / yêu cầu sửa…">${esc(s.note||'')}</textarea>`
+    +`<div class="ctrls"><label class="chk flag"><input type="checkbox" class="cbflag" ${s.flag?'checked':''}> Cần sửa</label>`
+    +(sp?`<label class="chk"><input type="checkbox" class="cbrev" ${s.vreview?'checked':''}> Đã review video</label>`:'')+`</div></div>`;
+  const el=document.createElement('div');
+  el.className='card'+(s.flag?' flagged':'')+(r.isVideoOnly?' videoonly':'');
+  el.innerHTML=`<div>${thumb}</div><div>${title}</div><div class="pipe">${pipe}</div>${note}`;
+  const ta=el.querySelector('textarea'), cf=el.querySelector('.cbflag'), cr=el.querySelector('.cbrev');
+  ta.addEventListener('input',()=>{(STATE[r.slug]||={}).note=ta.value;persist();});
+  cf.addEventListener('change',()=>{(STATE[r.slug]||={}).flag=cf.checked;el.classList.toggle('flagged',cf.checked);persist();recount();});
+  if(cr)cr.addEventListener('change',()=>{(STATE[r.slug]||={}).vreview=cr.checked;persist();});
+  return el;
+}
+function render(){
+  const f=$('#filter').value, q=$('#q').value.toLowerCase().trim(), main=$('#main');
+  const shown=DATA.filter(r=>pass(r,f,q));
+  main.innerHTML='';
+  if(!shown.length){main.innerHTML='<div class="empty">Không có mục nào khớp.</div>';recount();return;}
+  // gán mỗi row vào NHÓM ĐẦU TIÊN khớp (không trùng)
+  const buckets={};
+  for(const r of shown){ for(const [gk,,gf] of GROUPS){ if(gf(r)){ (buckets[gk]||=[]).push(r); break; } } }
+  for(const [gk,gl] of GROUPS){
+    const rs=buckets[gk]; if(!rs||!rs.length) continue;
+    const h=document.createElement('div');h.className='group-h';h.innerHTML=`${esc(gl)} <span class="n">${rs.length}</span>`;
+    main.appendChild(h);
+    rs.forEach(r=>main.appendChild(card(r)));
+  }
+  recount();
+}
+function recount(){
+  const withVid=DATA.filter(r=>(r.vids||[]).length);
+  const rendered=DATA.filter(r=>r.vstate==='render'||r.vstate==='publish');
+  const flags=DATA.filter(r=>st(r).flag).length;
+  $('#count').textContent=`${DATA.length} mục · ${withVid.length} có video · ${flags} cần sửa`;
+  const pct=withVid.length?Math.round(rendered.length/withVid.length*100):0;
+  $('#pbar').style.width=pct+'%'; $('#ptext').textContent=`${rendered.length}/${withVid.length} render`;
+}
+function persist(){clearTimeout(timer);$('#save').textContent='… đang lưu';$('#save').style.color='var(--amber)';
+  timer=setTimeout(async()=>{try{await fetch('/api/admin-state',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(STATE)});$('#save').textContent='✓ đã lưu';$('#save').style.color='var(--green)';}catch{$('#save').textContent='⚠ lỗi lưu';$('#save').style.color='var(--red)';}},500);}
+window.zoom=src=>{$('#lbimg').src=src;$('#lb').style.display='flex';};
+$('#lb').onclick=()=>$('#lb').style.display='none';
+$('#filter').onchange=render; $('#q').oninput=render;
+$('#refresh').onclick=()=>{$('#main').innerHTML='<div class="empty">Đang quét lại…</div>';load();};
+load();
+</script></body></html>

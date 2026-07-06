@@ -8,3 +8,6 @@ scripts/screenshots/screens.config.mjs
 # Cover tooling (local)
 cover-admin.html
 cover-poc/
+
+# admin state (local, đổi thường xuyên)
+admin-state.json

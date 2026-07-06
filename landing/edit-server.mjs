@@ -8,6 +8,7 @@ import http from 'node:http';
 import { readFile, writeFile, readdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { scanAll } from './scripts/scan-content.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BLOG_DIR = path.join(__dirname, 'src', 'content', 'blog');
@@ -84,7 +85,22 @@ const server = http.createServer(async (req, res) => {
       return html(res, scenesPage(slug));
     }
     if (req.method === 'GET' && p === '/admin') {
-      return html(res, await readFile(path.join(__dirname, 'cover-admin.html'), 'utf8'));
+      return html(res, await readFile(path.join(__dirname, 'admin.html'), 'utf8'));
+    }
+    // ---- Admin API: data quét live + state (flags/notes/review) ----
+    if (req.method === 'GET' && p === '/api/admin-data') {
+      try { return json(res, 200, scanAll()); }
+      catch (e) { return json(res, 500, { error: String(e && e.message || e) }); }
+    }
+    if (req.method === 'GET' && p === '/api/admin-state') {
+      try { return json(res, 200, JSON.parse(await readFile(path.join(__dirname, 'admin-state.json'), 'utf8'))); }
+      catch { return json(res, 200, {}); }
+    }
+    if (req.method === 'POST' && p === '/api/admin-state') {
+      const body = (await readBody(req)) || '{}';
+      try { JSON.parse(body); } catch (e) { return json(res, 400, { error: 'JSON lỗi: ' + e.message }); }
+      await writeFile(path.join(__dirname, 'admin-state.json'), body, 'utf8');
+      return json(res, 200, { ok: true });
     }
     // ---- Ảnh tĩnh cho cover-admin: /public/*, /video-remotion/out/* (chỉ ảnh, có chặn traversal) ----
     if (req.method === 'GET' && (p.startsWith('/public/') || p.startsWith('/video-remotion/'))) {

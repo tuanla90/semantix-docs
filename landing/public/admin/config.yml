@@ -123,14 +123,14 @@ collections:
         format: "raw"
         media_folder: ""
         public_folder: ""
-        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
+        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }]
       - name: "about"
         label: "about.md"
         file: "vi/about.md"
         format: "raw"
         media_folder: ""
         public_folder: ""
-        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
+        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }]
 
   - name: "docs-vi-admin"
     label: "VI · Admin"
@@ -143,7 +143,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-ai-chat"
     label: "VI · Ai Chat"
@@ -156,7 +156,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-api-reference"
     label: "VI · Api Reference"
@@ -169,7 +169,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-connections"
     label: "VI · Connections"
@@ -182,7 +182,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-contexts"
     label: "VI · Contexts"
@@ -195,7 +195,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-dashboards"
     label: "VI · Dashboards"
@@ -208,7 +208,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-data-portal"
     label: "VI · Data Portal"
@@ -221,7 +221,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-deep-dives"
     label: "VI · Deep Dives"
@@ -234,7 +234,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-free-trial"
     label: "VI · Free Trial"
@@ -247,7 +247,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-getting-started"
     label: "VI · Getting Started"
@@ -260,7 +260,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-notifications"
     label: "VI · Notifications"
@@ -273,7 +273,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-studio"
     label: "VI · Studio"
@@ -286,7 +286,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-support"
     label: "VI · Support"
@@ -299,7 +299,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-vi-user-guide"
     label: "VI · User Guide"
@@ -312,7 +312,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-root"
     label: "EN · (Gốc)"
@@ -323,14 +323,14 @@ collections:
         format: "raw"
         media_folder: ""
         public_folder: ""
-        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
+        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }]
       - name: "about"
         label: "about.md"
         file: "en/about.md"
         format: "raw"
         media_folder: ""
         public_folder: ""
-        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "markdown" }]
+        fields: [{ label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }]
 
   - name: "docs-en-admin"
     label: "EN · Admin"
@@ -343,7 +343,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-ai-chat"
     label: "EN · Ai Chat"
@@ -356,7 +356,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-api-reference"
     label: "EN · Api Reference"
@@ -369,7 +369,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-connections"
     label: "EN · Connections"
@@ -382,7 +382,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-contexts"
     label: "EN · Contexts"
@@ -395,7 +395,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-dashboards"
     label: "EN · Dashboards"
@@ -408,7 +408,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-data-portal"
     label: "EN · Data Portal"
@@ -421,7 +421,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-deep-dives"
     label: "EN · Deep Dives"
@@ -434,7 +434,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-getting-started"
     label: "EN · Getting Started"
@@ -447,7 +447,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-notifications"
     label: "EN · Notifications"
@@ -460,7 +460,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-studio"
     label: "EN · Studio"
@@ -473,7 +473,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-support"
     label: "EN · Support"
@@ -486,7 +486,7 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }
 
   - name: "docs-en-user-guide"
     label: "EN · User Guide"
@@ -499,4 +499,4 @@ collections:
     media_folder: ""
     public_folder: ""
     fields:
-      - { label: "Nội dung (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Nội dung (Markdown)", name: "body", widget: "code", default_language: "markdown", allow_language_selection: false, output_code_only: true }

@@ -4,8 +4,7 @@ backend:
   name: github
   repo: tuanla90/semantix-docs
   branch: main
-  # >>> ĐIỀN sau khi dựng OAuth proxy (xem landing/DECAP-SETUP.md) <<<
-  # base_url: https://<oauth-worker>.workers.dev
+  base_url: https://semantix-docs-production.up.railway.app
 
 # Cho phép test tại chỗ trước khi có OAuth:  cd landing && npx decap-server  (rồi mở /admin?local)
 local_backend: true

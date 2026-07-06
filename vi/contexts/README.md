@@ -1,6 +1,6 @@
 # Contexts & Row-Level Security
 
-Hướng dẫn chuyên sâu về Semantic Context — lớp ngữ nghĩa kết nối database với AI — và Row-Level Security để kiểm soát phạm vi dữ liệu theo người dùng.
+Hướng dẫn chuyên sâu về Semantic Context - lớp ngữ nghĩa kết nối database với AI - và Row-Level Security để kiểm soát phạm vi dữ liệu theo người dùng.
 
 ---
 

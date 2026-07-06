@@ -1,12 +1,14 @@
-# Decap CMS — quản trị blog Tuấn LA Lab (git-based: Save = commit vào repo -> auto deploy).
+# Sveltia CMS — quản trị blog Tuấn LA Lab (git-based: Save = commit vào repo -> auto deploy).
 # Repo gốc = semantix-docs; dự án astro nằm trong landing/ nên đường dẫn tính TỪ GỐC REPO.
 backend:
   name: github
   repo: tuanla90/semantix-docs
   branch: main
-  base_url: https://semantix-docs-production.up.railway.app
+  # Đăng nhập bằng GitHub Personal Access Token (PAT) — KHÔNG cần OAuth proxy (đã bỏ Railway).
+  # Mỗi người tự tạo token có quyền ghi repo này rồi dán vào CMS. Không có gì để deploy -> hết block.
+  auth_methods: [token]
 
-# Cho phép test tại chỗ trước khi có OAuth:  cd landing && npx decap-server  (rồi mở /admin?local)
+# Cho phép test tại chỗ:  cd landing && npx sveltia-cms-proxy-server  (rồi mở /admin?local)
 local_backend: true
 
 # ảnh chèn trong thân bài (cover PNG sinh tự động, không quản ở đây)

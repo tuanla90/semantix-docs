@@ -4,6 +4,34 @@
 > File này = plan điều phối SHIP (cái nào lên trước/sau). KHÔNG phải script. Render chỉ khi user nói "render" ([[render-only-on-request]]).
 > Nguồn đối chiếu: `PLAN-VIDEO-CAU-NOI.md` + quét filesystem `video-remotion/videos/*/`, `video-remotion/out/*/`, `video-scripts/*.PUBLISH.md`.
 
+## 0. VOICE — đã gen xong 20 video (cập nhật 2026-07-22)
+
+Gen voice ElevenLabs `eleven_v3` (voice clone `WnVHQ…`, SPEED 1.1) cho **toàn bộ 12 video còn thiếu** (5 bridge + 7 series); 2 video cũ (metric-dimension-kpi, mot-nguon-su-that) đã có từ trước → **14/14 slate cũ có voice thật** (`public/audio/<slug>/beat-*.mp3` + `beats.json`/`timings.json`/`outro.json`).
+
+- **Chi phí thật:** v3 ≈ **0.5 credit/ký tự**. 12 video slate cũ = **18,921 credit**.
+- **Đã verify (không nghe):** số mp3 khớp số beat, caption KHÔNG lẫn audio-tag `[..]`, timing/thời lượng hợp lý. **Chưa verify tai** — cần nghe Studio (phát âm, cảm xúc tag, "Sơ-men-tích").
+- **Caveat series S2–S8:** script điểm review giọng 42–45/50, CHƯA qua content-check cuối. Nếu sửa lời → re-voice lẻ: `python gen_audio.py <slug> <beat>` (chỉ gen beat đó, giữ phần đã duyệt).
+- Voice xong ⇒ 14 slate cũ giờ chỉ còn **RENDER** (chờ user nói "render"; scenes.json đã có sẵn cả 14).
+
+**BATCH 1 video MỚI (6 bài, 2026-07-22)** — sinh bằng `video-pipeline` (content.py + thumb.json + soát giọng score 44–45), rồi gen voice v3:
+`vanity-metrics`, `correlation-regression`, `pareto-80-20` (3 khái niệm) + `rag-la-gi`, `text-to-sql`, `7-cau-hoi-sai-voi-ai` (3 AI/LLM).
+- Chi phí: **14,309 credit** (~22.8 phút voice; các bài dài 3–5'). Tổng đã tiêu phiên này = **33,230**; còn **68,008 / 130,487**.
+- Verify không-nghe OK (mp3 đủ, caption sạch tag). **Còn THIẾU để render:** `scenes.json` + thumbnail PNG (video-pipeline chưa dựng scenes). Khâu kế = build scenes.json (dùng kit) → duyệt Studio → render (chờ "render").
+
+**BATCH 2+3 video MỚI (12 bài, 2026-07-23)** — cùng dây chuyền video-pipeline (score 43–45) + gen voice v3:
+khái niệm: `base-rate-xac-suat-nguoc`, `outlier-rac-hay-mo-vang`, `dong-tien-vs-loi-nhuan`, `goodhart-guardrail-metrics`, `trinh-bay-so-cho-sep`, `funnel-analysis`; AI: `embedding-vector-search`, `data-cho-ai-an-toan`, `ai-biet-hoi-lai`, `churn-prediction`, `time-series-forecast`, `sentiment-analysis`.
+- Chi phí: **32,015 credit**. Tổng phiên = **65,245**; còn **35,993 / 130,487**. Verify không-nghe OK.
+- **Bài học pipeline:** video dài 3–5' → gen loạt phải chạy **background** (`run_in_background`), foreground Bash cap 10' chỉ đủ ~2 video. Gặp 1 `ConnectionResetError` (proxy chập) giữa batch → `|| break` dừng, gen lại video đó là xong.
+- **Tồn kho:** 18 video mới (batch 1+2+3) đều có voice nhưng **chưa scenes.json → chưa render**. Voice là thứ có deadline credit; scenes/render làm sau 27/07 vẫn được.
+
+**BATCH 4 video MỚI (12 bài, 2026-07-23)** — batch voice CUỐI (vét credit tháng này):
+khái niệm/thực chiến: `sai-lam-khi-phan-tich-du-lieu`, `hippo-vs-thu-nghiem`, `market-basket-ban-kem`, `do-lech-chuan`, `chon-dung-bieu-do`, `rfm-nang-cao`, `cohort-analysis`, `gio-hang-bo-quen`, `mau-va-tong-the`; AI: `du-lieu-ban-giet-model`, `data-catalog-tu-dien-du-lieu`, `dual-agent-debate`.
+- Chi phí: **28,406 credit**. **Tổng phiên = 93,651; còn 7,587 / 130,487** (giữ làm quỹ re-voice sửa lẻ trước reset 27/07). Verify không-nghe OK cả 12.
+- **`gen_audio.py` đã thêm retry** (backoff 2/4/6s cho lỗi mạng/5xx; 4xx vẫn fail ngay) — batch nền không còn đứt vì `ConnectionResetError`.
+- **`cohort-analysis` THIẾU `thumb.json`**: agent thumbnail trong workflow bị treo 27' → đã TaskStop; script (content.py) + voice OK, chỉ cần gen lại thumbnail (không tốn credit).
+
+**TỔNG KHO VOICE = 44 video** (2 có sẵn + 42 gen phiên 2026-07-22→23: 12 slate cũ + 30 video mới). 30 video mới (batch 1–4) đều **chưa có scenes.json** → khâu kế = build scenes → render (không deadline credit).
+
 ## 1. Bảng trạng thái THẬT (quét filesystem 2026-07-03)
 
 Đánh dấu theo file thực tế, KHÔNG theo bảng cũ.

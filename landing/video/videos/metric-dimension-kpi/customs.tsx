@@ -2,7 +2,7 @@
 // { el: "custom", name: "<key>" }. Most videos won't need this file at all.
 import React from "react";
 import {useCurrentFrame, interpolate} from "remotion";
-import {C, useVmin} from "../../src/ui";
+import {C, useVmin} from "blog2video/ui";
 
 // Beat 01 — three translucent slices rotating in 3D (the "Rubik data cube" metaphor).
 const SlicesCube: React.FC = () => {

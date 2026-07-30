@@ -1,0 +1,48 @@
+{
+  "$schema": "./node_modules/blog2video/video.config.schema.json",
+  "fps": 30,
+  "brand": {
+    "name": "Tuấn LA Lab",
+    "label": "TUẤN LA LAB · DATA 101",
+    "sig": "Tuấn LA Lab",
+    "accent": "#783ABF",
+    "bubble": "#C4B5FD",
+    "wordmark": { "pre": "Tuấn ", "em": "LA", "post": " Lab" },
+    "tagline": "DATA · AI · MỖI TUẦN MỘT KHÁI NIỆM"
+  },
+  "audio": {
+    "bed": "audio/music/suong-sach.mp3",
+    "bedVolume": 0.15,
+    "sfxDir": "audio/sfx",
+    "whoosh": "whoosh.wav"
+  },
+  "pacing": {
+    "introPad": 2.2,
+    "sectionGap": 0.8,
+    "outroPad": 4.5,
+    "shortGap": 0.33,
+    "shortTail": 1.2,
+    "leadIn": 0.4,
+    "whooshLead": 0.89
+  },
+  "thumb": {
+    "person": "thumb/tuan-crop.png",
+    "logo": "thumb/logo-LA.svg",
+    "logoWhite": "thumb/logo-white.png"
+  },
+  "categories": [
+    { "name": "Kiến Thức Nền Tảng",    "accT": "#C4B5FD", "acc": "#8B5CF6", "acc2": "#6366F1" },
+    { "name": "Phân Tích Dữ Liệu",     "accT": "#67E8F9", "acc": "#22D3EE", "acc2": "#0891B2" },
+    { "name": "Hướng Dẫn Thực Chiến",  "accT": "#6EE7B7", "acc": "#10B981", "acc2": "#34D399" },
+    { "name": "AI & Công Nghệ",        "accT": "#F0ABFC", "acc": "#D946EF", "acc2": "#A855F7" },
+    { "name": "So Sánh & Lựa Chọn",    "accT": "#FCD34D", "acc": "#F59E0B", "acc2": "#FB923C" },
+    { "name": "Câu Chuyện & Use Case", "accT": "#FDA4AF", "acc": "#FB7185", "acc2": "#F43F5E" }
+  ],
+  "paths": {
+    "videos": "videos",
+    "out": "out",
+    "public": "public",
+    "src": "src",
+    "thumbSrc": "../thumb-src"
+  }
+}

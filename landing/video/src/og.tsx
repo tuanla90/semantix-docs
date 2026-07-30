@@ -3,8 +3,8 @@
 //   npx remotion still src/thumb.ts og-logo    ../public/og/logo.png    --browser-executable=<CHROME> --image-format=png
 import React from "react";
 import {AbsoluteFill, Img, staticFile} from "remotion";
-import {C, INTER} from "./ui";
-import {BRAND} from "./brand";
+import {C, INTER} from "blog2video/ui";
+import {BRAND} from "blog2video/config";
 
 // Nền aurora (option B) — khớp tông tím thumbnail mới.
 const AURORA =

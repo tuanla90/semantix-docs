@@ -5,10 +5,8 @@
 // giant focal number.
 import React from "react";
 import {AbsoluteFill, Img, staticFile} from "remotion";
-import {C, INTER, Bg} from "./ui";
-import {BRAND} from "./brand";
-
-const PURPLE = BRAND.accent; // tím chuẩn = màu logo LA (single source: brand.ts)
+import {C, INTER, Bg} from "blog2video/ui";
+import {BRAND} from "blog2video/config";
 
 export type ThumbData = {
   category: string;                       // topic badge
@@ -21,6 +19,7 @@ export type ThumbData = {
 
 export const Thumbnail: React.FC<{d: ThumbData; width: number; height: number}> = ({d, width, height}) => {
   const v = Math.min(width, height) / 100;
+  const PURPLE = BRAND.accent;  // đọc trong component: config nạp sau khi module import xong
   return (
     <AbsoluteFill style={{background: C.bg, fontFamily: INTER, color: C.text}}>
       {/* Aurora kép (option B) — glow violet góc trên-trái + tím-magenta góc phải làm nổi chủ đề */}

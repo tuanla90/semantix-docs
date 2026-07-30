@@ -1,6 +1,6 @@
 # landing/video — nội dung video kênh Tuấn LA Lab
 
-Thư mục này chỉ chứa **nội dung + brand**. Máy móc dựng video nằm ở repo riêng `blog2video` và vào đây qua `node_modules`.
+Thư mục này chỉ chứa **nội dung + brand**. Máy móc dựng video nằm ở repo riêng [`blog-to-video`](https://github.com/tuanla90/blog-to-video) và vào đây qua `node_modules`.
 
 ## Ở đây có gì
 
@@ -40,7 +40,9 @@ Dùng `npm run …` chứ đừng `npx blog2video …`: npx hỏi registry npm t
 
 ## Nối với engine
 
-`package.json` đang trỏ `"blog2video": "file:../../../blog2video"` — sửa engine là thấy ngay, nhưng phải chạy `npm run build:lib` bên engine để `dist/` cập nhật. Khi engine ổn định thì đổi sang `github:<user>/blog2video#v0.1.0`.
+`package.json` đang trỏ `"blog2video": "file:../../../blog2video"` — sửa engine là thấy ngay, nhưng phải chạy `npm run build:lib` bên engine để `dist/` cập nhật.
+
+Khi muốn đóng băng engine cho repo này thì đổi sang `"blog2video": "github:tuanla90/blog-to-video#v0.1.0"` rồi `npm install` lại. Từ lúc đó sửa engine KHÔNG lan sang đây nữa cho tới khi bump tag.
 
 - Cấu hình từng field: `blog2video/docs/CONFIG.md`
 - Gotcha khi dựng (Chrome bị chặn, onnxruntime, proxy MITM): `blog2video/docs/PIPELINE.md`

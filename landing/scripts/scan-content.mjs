@@ -7,8 +7,8 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..'); // landing/
 const BLOG = path.join(ROOT, 'src/content/blog');
-const VIDEOS = path.join(ROOT, 'video-remotion/videos');
-const VOUT = path.join(ROOT, 'video-remotion/out');
+const VIDEOS = path.join(ROOT, 'video/videos');
+const VOUT = path.join(ROOT, 'video/out');
 const VSCRIPTS = path.join(ROOT, 'video-scripts');
 
 const exists = (p) => { try { fs.accessSync(p); return true; } catch { return false; } };
@@ -72,7 +72,7 @@ export function scanAll() {
       scenes: exists(path.join(VIDEOS, slug, 'scenes.json')),
       scaffolded: exists(path.join(VIDEOS, slug, 'beats.json')),   // có track audio (câm scaffold HOẶC voice thật)
       voiced: realVoice(slug),                                     // CHỈ true khi có voice AI (.mp3)
-      thumb: exists(path.join(VOUT, slug, 'thumb.png')) ? `video-remotion/out/${slug}/thumb.png` : '',
+      thumb: exists(path.join(VOUT, slug, 'thumb.png')) ? `video/out/${slug}/thumb.png` : '',
       render: hasMp4(slug),
       publish: exists(path.join(VSCRIPTS, slug + '.PUBLISH.md')),
       sources: sourcesOf(slug),

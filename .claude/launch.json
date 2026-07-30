@@ -7,6 +7,18 @@
       "runtimeArgs": ["landing/edit-server.mjs"],
       "port": 8124,
       "autoPort": true
+    },
+    {
+      "name": "astro",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "landing", "run", "dev", "--", "--port", "8123"],
+      "port": 8123
+    },
+    {
+      "name": "studio",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "landing/video", "run", "studio"],
+      "port": 3000
     }
   ]
 }

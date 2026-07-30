@@ -1,6 +1,6 @@
 # Gói đăng — Cái dashboard "cho chọn mọi thứ" mình từng tự hào — và vì sao user bỏ dùng (dashboard-linh-hoat-hoa-roi)
 
-E4 · Cầu nối · WAR STORY (chốt Chặng 1). Lời chuẩn: `video-remotion/videos/dashboard-linh-hoat-hoa-roi/content.py`.
+E4 · Cầu nối · WAR STORY (chốt Chặng 1). Lời chuẩn: `video/videos/dashboard-linh-hoat-hoa-roi/content.py`.
 Tông: tâm sự lão làng, tự nhận lỗi. Thông điệp lõi: **"linh hoạt quá hoá rối" → tư duy/ngữ cảnh > tính năng → động lực làm tính năng AI.**
 War story THẬT (author bible #6): template Looker Studio cho user tự chọn Dim/metric/rate — chạy được nhưng đa số thấy khó hiểu, drill-down phải setup lại. Nguồn nền: blog `self-service-analytics`.
 Chapters/timestamp dưới đây là **ƯỚC LƯỢNG** — chốt lại sau khi render & biết thời lượng thật.

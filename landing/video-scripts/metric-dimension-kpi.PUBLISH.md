@@ -1,7 +1,7 @@
 # Gói đăng — Metric, Dimension, KPI (vkt-006)
 
-Sản phẩm render: `video-remotion/out/metric-long.mp4` (16:9, ~3:29) · `video-remotion/out/metric-short.mp4` (9:16, ~23s).
-Giọng: Vbee **giọng cá nhân** `n_hanoi_male_tuanla2_education_vc` · tốc độ 1.0. Nội dung: đã thêm 'cột ngày' (dimension đổi số) + dẫn KPI liền mạch. Lời chuẩn: `video-remotion/content.py`.
+Sản phẩm render: `video/out/metric-long.mp4` (16:9, ~3:29) · `video/out/metric-short.mp4` (9:16, ~23s).
+Giọng: Vbee **giọng cá nhân** `n_hanoi_male_tuanla2_education_vc` · tốc độ 1.0. Nội dung: đã thêm 'cột ngày' (dimension đổi số) + dẫn KPI liền mạch. Lời chuẩn: `video/content.py`.
 
 ## YouTube (long-form)
 

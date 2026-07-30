@@ -1,7 +1,7 @@
 # Tuấn LA Lab — Brand & Logo Brief
 
 Chốt 2026-06-25. Đây là nguồn duy nhất cho nhận diện kênh/video. Khi dựng video, các
-giá trị này nạp vào `video-remotion/src/brand.ts` để mọi clip tự gắn (logo, màu, CTA).
+giá trị này nạp vào `video/video.config.json` (khối `brand`) để mọi clip tự gắn (logo, màu, CTA).
 
 ## 1. Bản chất
 - **Kênh**: rebrand từ `@mastergoogletools` (~1.6k sub) → hướng **data & AI cho doanh nghiệp Việt**, không bó hẹp Google Sheets.
@@ -30,7 +30,7 @@ Monogram **LA** ghép hai ẩn dụ qua **không gian âm**:
 | Semantic (giữ từ kit) | đúng `#00BC7D` · cảnh báo `#FE9A00` · sai `#FF6467` |
 
 - Biến thể bắt buộc: **trắng trên tím** (chính), **tím trên trắng**, **trắng trên nền tối**, **đơn sắc đen/trắng**.
-- Cập nhật `brand.ts` primary `#783ABF` (thay token kit cũ `#AD46FF`).
+- Cập nhật `brand.accent` = `#783ABF` (thay token kit cũ `#AD46FF`).
 
 ## 4. Cần giao (deliverables)
 1. **Master logo** (chi tiết) — bản màu + đơn sắc trắng + đơn sắc đen. Định dạng **SVG** (gốc) + PNG.
@@ -54,7 +54,7 @@ Monogram **LA** ghép hai ẩn dụ qua **không gian âm**:
 
 ## Thumbnail (chuẩn) — 1280×720
 
-Component data-driven: `video-remotion/src/thumbnail.tsx`; data mỗi video: `videos/<slug>/thumb.json`
+Component data-driven: `video/src/thumbnail.tsx`; data mỗi video: `videos/<slug>/thumb.json`
 `{category, kicker, bigNum, label, question:{pre,em}, person}`.
 Render: `npx remotion still src/thumb.ts thumb-<slug> out/<slug>/thumb.png --browser-executable="$CHROME"`.
 

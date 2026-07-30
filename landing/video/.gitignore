@@ -1,0 +1,14 @@
+node_modules/
+out/
+public/audio/
+public/lottie/
+.venv-whisper/
+.venv-tts/
+__pycache__/
+*.pyc
+.env
+src/videos.gen.ts
+package-lock.json
+
+# test artifacts (local)
+voice-test/

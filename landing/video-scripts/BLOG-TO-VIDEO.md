@@ -1,7 +1,7 @@
 # Blog → Video: Quy trình viết kịch bản (Blog-to-Video Protocol)
 
 > Nguồn: cẩm nang "script-writing-guide" (Antigravity brain) + góp ý chuyên gia MKT (2026-06).
-> File này = **QUY TRÌNH**. Tông giọng chi tiết → `../STYLE.md` §TÔNG GIỌNG. Cơ chế kit/scenes → `../video-remotion/NOTES.md`.
+> File này = **QUY TRÌNH**. Tông giọng chi tiết → `../STYLE.md` §TÔNG GIỌNG. Cơ chế kit/scenes → `blog2video/docs/PIPELINE.md` (repo engine).
 
 Bê nguyên blog (văn viết) lên video (văn nói) = người xem lướt sau 3 giây. Video cần **nhịp nhanh · trực quan · cảm xúc**.
 

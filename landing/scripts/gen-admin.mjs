@@ -8,8 +8,8 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..'); // landing/
 const BLOG = path.join(ROOT, 'src/content/blog');
-const VIDEOS = path.join(ROOT, 'video-remotion/videos');
-const VOUT = path.join(ROOT, 'video-remotion/out');
+const VIDEOS = path.join(ROOT, 'video/videos');
+const VOUT = path.join(ROOT, 'video/out');
 
 const BLOG_URL = 'https://tuanla90.github.io/semantix-docs/blog';
 const EDIT_LOCAL = 'http://localhost:8124';          // blog editor:  /?slug=
@@ -73,7 +73,7 @@ const videoList = (exists(VIDEOS) ? fs.readdirSync(VIDEOS) : [])
   .map(slug => ({
     slug,
     built: exists(path.join(VIDEOS, slug, 'scenes.json')),
-    thumb: exists(path.join(VOUT, slug, 'thumb.png')) ? `video-remotion/out/${slug}/thumb.png` : '',
+    thumb: exists(path.join(VOUT, slug, 'thumb.png')) ? `video/out/${slug}/thumb.png` : '',
     render: hasMp4(slug),
     publish: exists(path.join(VSCRIPTS, slug + '.PUBLISH.md')),
     sources: sourcesOf(slug),

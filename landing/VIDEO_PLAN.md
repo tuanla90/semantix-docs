@@ -66,7 +66,7 @@ Mỗi video = **4–7 "beat" độc lập**, mỗi beat 45–90s, **mỗi beat c
 - **Glow:** từ khoá nhấn dùng `text-shadow` **xanh `#227FE1`** nhẹ — "phát sáng", không loè.
 
 #### Lớp "polish" — bắt buộc để trông cao cấp, không phẳng (thêm 2026-06-24)
-Nền đen trơn + fade đơn = trông nghiệp dư. Đã chuẩn hoá trong `video-remotion/src/ui.tsx` (`Bg`, `FadeUp`):
+Nền đen trơn + fade đơn = trông nghiệp dư. Đã chuẩn hoá trong `video/src/ui.tsx` (`Bg`, `FadeUp`):
 - **Nền chiều sâu:** radial-gradient (sáng giữa, tối mép) + 2–3 **quầng sáng (orb)** màu brand (`accent`/`purple`/`good`) blur mạnh, opacity 8–18%, **trôi nhẹ** theo sin(frame) → khung không "chết".
 - **Grain:** lớp SVG `feTurbulence` opacity ~5%, `mixBlendMode: overlay` → khử banding, thêm texture.
 - **Lưới** mờ hơn (opacity .25) + **mask radial** để mép tan vào nền.
@@ -111,7 +111,7 @@ Dashboard/biểu đồ cột, dòng SQL/Text-to-SQL hiện mượt, số đếm 
 
 > Bước 3 (timestamp) là điểm dễ bị quên nhất. Không có nó, kinetic typography phải canh tay từng từ — bất khả thi ở quy mô.
 >
-> ⚠️ **Thực tế trên máy này (2026-06-24):** `faster-whisper`/`ctranslate2` **segfault khi load model** (cả global lẫn venv sạch — lỗi native với Python 3.13 + setup doanh nghiệp). Đã thay bằng **forced-alignment bằng năng lượng âm thanh** (`video-remotion/align.py`, dùng PyAV — không ML, không crash): vì ta **đã có text chính xác**, chỉ cần căn THỜI GIAN, không cần phiên âm. Cách này còn *chính xác hơn* Whisper cho tiếng Việt (Whisper có thể nghe sai chữ). Muốn ASR thật (khi không có sẵn text): chạy Whisper qua WSL/Docker/Python 3.11.
+> ⚠️ **Thực tế trên máy này (2026-06-24):** `faster-whisper`/`ctranslate2` **segfault khi load model** (cả global lẫn venv sạch — lỗi native với Python 3.13 + setup doanh nghiệp). Đã thay bằng **forced-alignment bằng năng lượng âm thanh** (`video/align.py`, dùng PyAV — không ML, không crash): vì ta **đã có text chính xác**, chỉ cần căn THỜI GIAN, không cần phiên âm. Cách này còn *chính xác hơn* Whisper cho tiếng Việt (Whisper có thể nghe sai chữ). Muốn ASR thật (khi không có sẵn text): chạy Whisper qua WSL/Docker/Python 3.11.
 
 **Khuyến nghị khởi động:** làm **TAY 1 video end-to-end** trước (xác nhận chất lượng giọng Vbee với từ chuyên ngành + nhịp). Ưng rồi mới scaffold Remotion. Đừng dựng pipeline tự động trước khi 1 video chứng minh được view/giữ chân.
 

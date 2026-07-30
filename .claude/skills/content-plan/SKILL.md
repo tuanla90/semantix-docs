@@ -15,7 +15,7 @@ Vai: người lên lịch & điều phối nội dung. Mục tiêu: **hồi sinh
 1. **Quét trạng thái thật:**
    - `landing/drafts/*.md` — blog đã viết, chờ đăng.
    - `landing/src/content/blog/*.md` — blog đã live (đọc `pubDate`, `category`, `featured`).
-   - `landing/video-remotion/videos/*/` — video: có `content.py`? `scenes.json`? render `out/<slug>/`?
+   - `landing/video/videos/*/` — video: có `content.py`? `scenes.json`? render `out/<slug>/`?
 2. **Đối chiếu** với slate/plan → cái gì xong, cái gì thiếu, cái gì đang dở.
 3. **Gợi ý batch tiếp theo** theo nguyên tắc:
    - **Bridge trước** (đừng phủ định sub Sheets cũ: "Sheets tuyệt — đây là chỗ nó đụng trần") → rồi series "mỗi tuần một khái niệm".

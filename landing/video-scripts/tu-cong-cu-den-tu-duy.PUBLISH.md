@@ -1,6 +1,6 @@
 # Gói đăng — Vì sao mình biến mất 1 năm & đổi hướng kênh (tu-cong-cu-den-tu-duy)
 
-Video CÁ NHÂN / reset kênh (không port từ blog). Lời chuẩn: `video-remotion/videos/tu-cong-cu-den-tu-duy/content.py`.
+Video CÁ NHÂN / reset kênh (không port từ blog). Lời chuẩn: `video/videos/tu-cong-cu-den-tu-duy/content.py`.
 Tông: tâm sự lão làng. Thông điệp lõi: **từ chia sẻ công cụ → chia sẻ cách tư duy; ngữ cảnh là vua.**
 Chapters/timestamp dưới đây là **ƯỚC LƯỢNG** — chốt lại sau khi render & biết thời lượng thật.
 

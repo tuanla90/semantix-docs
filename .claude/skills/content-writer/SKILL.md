@@ -22,7 +22,7 @@ Vai: cây bút của kênh. Viết như **Lê Anh Tuấn** — "data analyst lã
 
 ## Đầu ra
 - **Blog mới** → `landing/drafts/<slug>.md` (frontmatter đủ schema; **KHÔNG** tự đưa vào `src/content/blog` — xem [[blog-drafts-workflow]]).
-- **Script video** → `landing/video-remotion/videos/<slug>/content.py` (BEATS + ORDER + TONE + PRON) + gói đăng `landing/video-scripts/<slug>.PUBLISH.md`.
+- **Script video** → `landing/video/videos/<slug>/content.py` (BEATS + ORDER + TONE + PRON) + gói đăng `landing/video-scripts/<slug>.PUBLISH.md`.
 
 ## Bắt buộc trước khi giao
 Chạy skill **stop-slop** (sửa slop cơ học: em-dash, trạng từ, "hắng giọng", đối-lập nhị phân, pull-quote prose). **GIỮ** ngoại lệ: slogan/hook ("ngữ cảnh là vua"), câu cụt nhịp gõ cố ý, "..." nhịp nói. Tự chấm 5 chiều; < 35/50 thì sửa.

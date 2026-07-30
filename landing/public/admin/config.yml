@@ -83,7 +83,7 @@ collections:
     label: "Script Voice (video)"
     label_singular: "Script"
     description: "Sửa lời thoại video. Giữ [tag] cảm xúc đầu câu (vd [thoughtful]) + xuống dòng = nhịp ngắt. Không tạo mới ở đây (script sinh từ pipeline)."
-    folder: "landing/video-remotion/videos"
+    folder: "landing/video/videos"
     path: "{{slug}}/script"
     extension: "json"
     format: "json"

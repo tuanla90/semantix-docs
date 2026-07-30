@@ -17,7 +17,7 @@
     {
       "name": "studio",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "landing/video-remotion", "run", "studio"],
+      "runtimeArgs": ["--prefix", "landing/video", "run", "studio"],
       "port": 3000
     }
   ]

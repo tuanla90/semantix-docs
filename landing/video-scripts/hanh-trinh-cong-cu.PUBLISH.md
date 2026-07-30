@@ -1,7 +1,7 @@
 # Gói đăng — Hành trình công cụ: 10 năm Excel → Sheets → Power BI → Superset → và vì sao tự xây (hanh-trinh-cong-cu)
 
 Video **E2** trong loạt cầu nối (xem `PLAN-VIDEO-CAU-NOI.md`). Vai trò: **GẮN KẾT** lại sub cũ thời Google Sheets.
-Lời chuẩn: `video-remotion/videos/hanh-trinh-cong-cu/content.py`.
+Lời chuẩn: `video/videos/hanh-trinh-cong-cu/content.py`.
 Port & rút từ series blog 4 phần *Từ Excel đến Semantix* (`hanh-trinh-thoi-excel`, `hanh-trinh-power-bi-data-studio`, `hanh-trinh-superset-metabase`, `hanh-trinh-tu-xay-semantix`).
 Tông: tâm sự lão làng. Thông điệp lõi: **tôn vinh từng công cụ — mỗi cái có một cái trần; cái chung nằm TRÊN mọi công cụ = tư duy / ngữ cảnh.**
 Chapters/timestamp dưới đây là **ƯỚC LƯỢNG** — chốt lại sau khi render & biết thời lượng thật.

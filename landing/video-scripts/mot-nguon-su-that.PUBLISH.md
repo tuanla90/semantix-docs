@@ -1,7 +1,7 @@
 # Gói đăng — Một nguồn sự thật / Semantic Layer (vkt-009)
 
-Sản phẩm render: `video-remotion/out/mot-nguon-su-that/long.mp4` (16:9, ~3:20) · `.../short.mp4` (9:16, ~25s).
-Giọng: **ElevenLabs eleven_v3 + Instant clone** (giọng Tuấn), tốc độ hậu kỳ 1.1×. Lời chuẩn: `video-remotion/videos/mot-nguon-su-that/content.py`.
+Sản phẩm render: `video/out/mot-nguon-su-that/long.mp4` (16:9, ~3:20) · `.../short.mp4` (9:16, ~25s).
+Giọng: **ElevenLabs eleven_v3 + Instant clone** (giọng Tuấn), tốc độ hậu kỳ 1.1×. Lời chuẩn: `video/videos/mot-nguon-su-that/content.py`.
 Chapters/timestamp là **ƯỚC LƯỢNG** — chốt lại sau khi xem thời lượng thật.
 
 ## YouTube (long-form)

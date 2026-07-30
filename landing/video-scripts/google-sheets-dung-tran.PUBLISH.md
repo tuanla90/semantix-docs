@@ -1,7 +1,7 @@
 # Gói đăng — Google Sheets làm báo cáo: tuyệt — cho tới 4 cái trần này (google-sheets-dung-tran)
 
 Video CẦU NỐI E3 (slate `PLAN-VIDEO-CAU-NOI.md`). Vai trò: bài "sân nhà" cho khán giả Sheets cũ.
-Lời chuẩn: `video-remotion/videos/google-sheets-dung-tran/content.py`.
+Lời chuẩn: `video/videos/google-sheets-dung-tran/content.py`.
 Nguồn blog: `vs-google-sheets`, `google-sheets-dashboard`.
 Tông: tâm sự lão làng. Thông điệp lõi: **Sheets tuyệt để bắt đầu; nó chỉ đụng 4 cái trần khi bạn lớn lên → lúc đó cái thiếu là CẤU TRÚC & TƯ DUY data, không phải công thức xịn hơn.**
 Bắc cầu (STYLE §3): ĐỪNG phủ định Sheets/khán giả cũ — "đụng trần là tin vui, nghĩa là bạn đang lớn".

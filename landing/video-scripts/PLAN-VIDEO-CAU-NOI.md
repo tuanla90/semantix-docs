@@ -99,7 +99,7 @@ Kênh nhỏ → **đừng bám số tuyệt đối**. Chuyển khi: (a) đã đ�
 3. **E4** — War story dashboard "cho chọn mọi thứ".
 4. **E6** — AI viết SQL, DA còn cửa? (E5 đã có).
 
-Mỗi script → `video-remotion/videos/<slug>/content.py` (BEATS + ORDER + TONE + PRON) + gói đăng `video-scripts/<slug>.PUBLISH.md`. Slug đề xuất: E2 `hanh-trinh-cong-cu`, E3 `google-sheets-dung-tran`, E4 `dashboard-linh-hoat-hoa-roi`, E6 `ai-viet-sql-nghe-data`.
+Mỗi script → `video/videos/<slug>/content.py` (BEATS + ORDER + TONE + PRON) + gói đăng `video-scripts/<slug>.PUBLISH.md`. Slug đề xuất: E2 `hanh-trinh-cong-cu`, E3 `google-sheets-dung-tran`, E4 `dashboard-linh-hoat-hoa-roi`, E6 `ai-viet-sql-nghe-data`.
 
 ---
 Liên quan: `STYLE.md`, `BLOG-TO-VIDEO.md`, `metric-dimension-kpi.PUBLISH.md`, `tu-cong-cu-den-tu-duy.PUBLISH.md`. Memory: video-production-plan, author-le-anh-tuan, semantix-site-personal-hub.

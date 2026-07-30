@@ -12,7 +12,7 @@ import { scanAll } from './scripts/scan-content.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BLOG_DIR = path.join(__dirname, 'src', 'content', 'blog');
-const VIDEO_DIR = path.join(__dirname, 'video-remotion', 'videos');
+const VIDEO_DIR = path.join(__dirname, 'video', 'videos');
 const HTML_BLOG = path.join(__dirname, 'edit-tool.html');
 const HTML_VIDEO = path.join(__dirname, 'edit-video.html');
 const PORT = Number(process.env.EDIT_PORT || process.env.PORT) || 8124;
@@ -102,8 +102,8 @@ const server = http.createServer(async (req, res) => {
       await writeFile(path.join(__dirname, 'admin-state.json'), body, 'utf8');
       return json(res, 200, { ok: true });
     }
-    // ---- Ảnh tĩnh cho cover-admin: /public/*, /video-remotion/out/* (chỉ ảnh, có chặn traversal) ----
-    if (req.method === 'GET' && (p.startsWith('/public/') || p.startsWith('/video-remotion/'))) {
+    // ---- Ảnh tĩnh cho cover-admin: /public/*, /video/out/* (chỉ ảnh, có chặn traversal) ----
+    if (req.method === 'GET' && (p.startsWith('/public/') || p.startsWith('/video/'))) {
       const full = path.join(__dirname, decodeURIComponent(p.replace(/^\/+/, '')));
       if (!full.startsWith(__dirname)) { res.writeHead(403); return res.end('no'); }
       const MIME = { '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg', '.svg':'image/svg+xml', '.webp':'image/webp', '.gif':'image/gif' };

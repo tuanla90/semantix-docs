@@ -2,7 +2,7 @@
 
 > Chốt 2026-07-03. Kênh: **Tuấn LA Lab** (~1.6k sub, ngủ ~1 năm). Nhịp: **burst rồi giảm**.
 > File này = plan điều phối SHIP (cái nào lên trước/sau). KHÔNG phải script. Render chỉ khi user nói "render" ([[render-only-on-request]]).
-> Nguồn đối chiếu: `PLAN-VIDEO-CAU-NOI.md` + quét filesystem `video-remotion/videos/*/`, `video-remotion/out/*/`, `video-scripts/*.PUBLISH.md`.
+> Nguồn đối chiếu: `PLAN-VIDEO-CAU-NOI.md` + quét filesystem `video/videos/*/`, `video/out/*/`, `video-scripts/*.PUBLISH.md`.
 
 ## 0. VOICE — đã gen xong 20 video (cập nhật 2026-07-22)
 

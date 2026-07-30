@@ -1,6 +1,6 @@
 # Gói đăng — AI viết SQL giỏi hơn mình, nghề Data Analyst còn cửa không? (ai-viet-sql-nghe-data)
 
-E6 — video LĂNG KÍNH / bắt trend (slate cầu nối, xem `PLAN-VIDEO-CAU-NOI.md`). Lời chuẩn: `video-remotion/videos/ai-viet-sql-nghe-data/content.py`.
+E6 — video LĂNG KÍNH / bắt trend (slate cầu nối, xem `PLAN-VIDEO-CAU-NOI.md`). Lời chuẩn: `video/videos/ai-viet-sql-nghe-data/content.py`.
 Tông: tâm sự lão làng, ĐIỀM ĐẠM — không hù doạ "AI cướp việc". Thông điệp lõi: **AI viết được query nhưng không tự biết ngữ cảnh nghiệp vụ → nghề data dịch từ "viết query" sang "định nghĩa ngữ cảnh & đặt câu hỏi đúng"; ngữ cảnh là vua.**
 Đào sâu nỗi sợ đã nhá ở E1 (`tu-cong-cu-den-tu-duy`), không mâu thuẫn. Lời hiệu triệu vào series "mỗi tuần một khái niệm".
 Chapters/timestamp dưới đây là **ƯỚC LƯỢNG** — chốt lại sau khi render & biết thời lượng thật.

@@ -34,7 +34,9 @@ npm run thumb -- llm-bia-sql
 npm run build -- llm-bia-sql --no-render
 ```
 
-Sau mỗi lần nâng cấp engine chạy `npm run sync-assets` — copy lottie vào `public/`, vì Remotion `staticFile()` không với tới `node_modules`.
+Sau mỗi lần nâng cấp engine chạy `npm run sync-assets` — copy lottie + sfx vào `public/`, vì Remotion `staticFile()` không với tới `node_modules`. Nhạc nền (`public/audio/music/`) là của riêng repo này, engine không đụng tới.
+
+Dùng `npm run …` chứ đừng `npx blog2video …`: npx hỏi registry npm trước và hay treo sau proxy công ty.
 
 ## Nối với engine
 

@@ -6,6 +6,9 @@
   "scripts": {
     "registry": "blog2video registry",
     "studio": "blog2video studio",
+    "scaffold": "blog2video scaffold",
+    "audio": "blog2video audio",
+    "align": "blog2video align",
     "edit": "blog2video edit",
     "thumb": "blog2video thumb",
     "build": "blog2video build",

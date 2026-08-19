@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Diff & Review Viewer — Semantix Blog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Diff Match Patch & Marked JS -->
+  <script src="https://cdn.jsdelivr.net/npm/diff-match-patch@1.0.5/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    
+    ins {
+      background-color: rgba(34, 197, 94, 0.25);
+      color: #86efac;
+      text-decoration: none;
+      border-bottom: 2px solid #22c55e;
+      border-radius: 2px;
+      padding: 1px 3px;
+      font-weight: 500;
+    }
+    del {
+      background-color: rgba(239, 68, 68, 0.25);
+      color: #fca5a5;
+      text-decoration: line-through;
+      border-bottom: 2px solid #ef4444;
+      border-radius: 2px;
+      padding: 1px 3px;
+    }
+
+    .prose-custom p { margin-bottom: 0.95rem; line-height: 1.8; font-size: 0.95rem; }
+    .prose-custom h2 { font-size: 1.25rem; font-weight: 700; margin-top: 1.75rem; margin-bottom: 0.75rem; color: #f8fafc; border-bottom: 1px solid #1e293b; padding-bottom: 0.35rem; }
+    .prose-custom h3 { font-size: 1.1rem; font-weight: 600; margin-top: 1.35rem; margin-bottom: 0.5rem; color: #e2e8f0; }
+    .prose-custom ul, .prose-custom ol { margin-left: 1.35rem; margin-bottom: 1rem; }
+    .prose-custom li { margin-bottom: 0.4rem; line-height: 1.7; }
+    .prose-custom pre { background: #090d16; border: 1px solid #1e293b; border-radius: 0.5rem; padding: 0.85rem 1rem; margin-bottom: 1rem; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
+    .prose-custom code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; background: #1e293b; padding: 0.15rem 0.35rem; border-radius: 0.25rem; color: #38bdf8; }
+    .prose-custom table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; font-size: 0.875rem; }
+    .prose-custom th, .prose-custom td { border: 1px solid #334155; padding: 0.6rem 0.85rem; text-align: left; }
+    .prose-custom th { background: #1e293b; color: #f1f5f9; }
+    .prose-custom blockquote { border-left: 3px solid #6366f1; padding-left: 1rem; color: #cbd5e1; font-style: italic; margin-bottom: 1rem; background: rgba(99, 102, 241, 0.05); padding-top: 0.5rem; padding-bottom: 0.5rem; border-radius: 0 0.375rem 0.375rem 0; }
+  </style>
+</head>
+<body class="h-full flex flex-col antialiased">
+
+  <!-- Header & Live Controls -->
+  <header class="bg-slate-900 border-b border-slate-800 px-6 py-3 flex flex-wrap items-center justify-between gap-4 sticky top-0 z-50">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/20">
+        Δ
+      </div>
+      <div>
+        <h1 class="text-base font-bold text-slate-100 flex items-center gap-2">
+          Content Dynamic Diff Viewer
+          <span id="serverBadge" class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 border border-slate-700">Đang khởi tạo...</span>
+        </h1>
+        <p class="text-xs text-slate-400">Toàn bộ 91 dòng bài viết · Đối chiếu trực tiếp từng từ ngữ · F5 cập nhật ngay</p>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="flex items-center flex-wrap gap-3">
+      <!-- Article Selector -->
+      <div class="flex items-center gap-2 bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 shadow-inner">
+        <label class="text-xs text-slate-400 font-medium">Bài viết:</label>
+        <select id="slugSelect" onchange="onSlugChange()" class="bg-transparent text-xs text-slate-200 font-medium focus:outline-none cursor-pointer max-w-[240px]">
+          <option value="semantic-layer" selected>semantic-layer</option>
+        </select>
+      </div>
+
+      <!-- Git Baseline Selector -->
+      <div class="flex items-center gap-2 bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 shadow-inner">
+        <label class="text-xs text-slate-400 font-medium">Mốc đối chiếu (Cột Trái):</label>
+        <select id="refSelect" onchange="loadArticleData()" class="bg-transparent text-xs text-indigo-300 font-semibold focus:outline-none cursor-pointer">
+          <option value="HEAD~1" selected>HEAD~1 (Commit cũ trước khi sửa)</option>
+          <option value="HEAD">HEAD (Commit vừa đẩy lên)</option>
+          <option value="main">main (Nhánh chính)</option>
+        </select>
+      </div>
+
+      <!-- Sync Scroll Toggle -->
+      <label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer bg-slate-800/60 hover:bg-slate-800 px-3 py-1.5 rounded-lg transition border border-slate-700/50">
+        <input type="checkbox" id="syncScroll" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600 focus:ring-0">
+        <span>Cuộn đồng bộ</span>
+      </label>
+
+      <!-- View Modes -->
+      <div class="flex bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs">
+        <button id="btnSplit" class="px-3 py-1 rounded-md bg-indigo-600 text-white font-medium shadow transition" onclick="switchView('split')">Song song (Split)</button>
+        <button id="btnInline" class="px-3 py-1 rounded-md text-slate-400 hover:text-slate-200 font-medium transition" onclick="switchView('inline')">Diff Inline (Trộn)</button>
+      </div>
+
+      <!-- Live Refresh Button -->
+      <button onclick="loadArticleData()" class="flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 transition">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        <span>F5 Làm mới</span>
+      </button>
+
+      <!-- Copy Action -->
+      <button onclick="copyCurrentMarkdown()" class="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-3.5 py-1.5 rounded-lg shadow-lg shadow-emerald-600/20 transition">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+        <span>Copy Markdown</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Diagnostics Bar -->
+  <section class="bg-slate-900/80 border-b border-slate-800 px-6 py-2.5 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-6 text-slate-400">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+          <span>Bản đối chiếu (<span id="refLabel">HEAD~1</span>): <strong id="statOrig" class="text-slate-200">-- từ · -- dòng</strong></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+          <span>Bản file trên máy: <strong id="statLive" class="text-emerald-300">-- từ · -- dòng</strong></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="diffStatusDot" class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+          <span>Độ khác biệt: <strong id="statDiffPct" class="text-amber-300">--%</strong></span>
+        </div>
+      </div>
+      
+      <!-- Auto-detected Slop Indicators -->
+      <div id="slopBadges" class="flex items-center gap-2 flex-wrap text-[11px]">
+        <span id="badgeEmDash" class="px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">Đang quét ký tự —...</span>
+        <span id="badgeGlossary" class="px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">Đang quét ngoặc từ vựng...</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Side by Side Split Container -->
+  <main id="splitViewContainer" class="flex-1 flex overflow-hidden">
+    
+    <!-- LEFT PANEL: Original / Baseline Version -->
+    <div id="leftPane" class="w-1/2 flex flex-col border-r border-slate-800 bg-slate-950 overflow-y-auto">
+      <div class="sticky top-0 bg-slate-900/95 backdrop-blur border-b border-slate-800 px-6 py-2 flex items-center justify-between z-10">
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-mono text-xs font-semibold">CỘT TRÁI (BẢN ĐỐI CHIẾU)</span>
+        </div>
+        <span id="leftFileLabel" class="text-[11px] font-mono text-indigo-400 bg-indigo-950/40 px-2 py-0.5 rounded border border-indigo-800/40">git:HEAD~1</span>
+      </div>
+      
+      <div id="leftContent" class="p-8 prose-custom text-slate-300">
+        <div class="text-slate-500 text-sm">Đang tải toàn bộ bài viết...</div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: Live Updated Version on Disk -->
+    <div id="rightPane" class="w-1/2 flex flex-col bg-slate-900/30 overflow-y-auto">
+      <div class="sticky top-0 bg-slate-900/95 backdrop-blur border-b border-slate-800 px-6 py-2 flex items-center justify-between z-10">
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-xs font-semibold">CỘT PHẢI (BẢN LIVE TRÊN MÁY)</span>
+        </div>
+        <span id="rightFileLabel" class="text-[11px] font-mono text-slate-400 bg-slate-800 px-2 py-0.5 rounded">src/content/blog/semantic-layer.md</span>
+      </div>
+
+      <div id="rightContent" class="p-8 prose-custom text-slate-200">
+        <div class="text-slate-500 text-sm">Đang tải toàn bộ bài viết...</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Inline Unified Diff Container -->
+  <main id="inlineViewContainer" class="flex-1 overflow-y-auto bg-slate-950 p-8 hidden">
+    <div class="max-w-4xl mx-auto bg-slate-900/80 border border-slate-800 rounded-xl p-8 prose-custom text-slate-200 shadow-2xl">
+      <h2 class="text-base font-mono text-indigo-400 mb-4 pb-2 border-b border-slate-800 flex items-center justify-between">
+        <span>Tự Động Tính Word-Level Diff (Toàn bộ bài viết)</span>
+        <span class="text-xs text-slate-400 font-normal">Xanh = Thêm mới · Đỏ = Đã xóa</span>
+      </h2>
+      <div id="inlineDiffContent" class="font-mono text-xs leading-relaxed bg-slate-950 p-5 rounded-lg border border-slate-800 whitespace-pre-wrap"></div>
+    </div>
+  </main>
+
+  <script>
+    // State
+    let currentSlug = 'semantic-layer';
+    let originalText = '';
+    let liveText = '';
+
+    // 1. Initialize
+    async function init() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('slug')) {
+        currentSlug = urlParams.get('slug');
+      }
+      if (urlParams.get('ref')) {
+        document.getElementById('refSelect').value = urlParams.get('ref');
+      }
+
+      // Populate slug list from /api/list if edit-server is running
+      try {
+        const res = await fetch('/api/list');
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.slugs && data.slugs.length > 0) {
+            populateSlugSelect(data.slugs);
+          }
+          setServerStatus(true);
+        } else {
+          setServerStatus(false);
+        }
+      } catch {
+        setServerStatus(false);
+      }
+
+      await loadArticleData();
+    }
+
+    function setServerStatus(online) {
+      const badge = document.getElementById('serverBadge');
+      if (online) {
+        badge.className = 'text-[11px] font-medium px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
+        badge.textContent = '● Edit Server Live (Port 8124)';
+      } else {
+        badge.className = 'text-[11px] font-medium px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20';
+        badge.textContent = '○ Standalone Mode (Full Content Loaded)';
+      }
+    }
+
+    function populateSlugSelect(slugs) {
+      const select = document.getElementById('slugSelect');
+      select.innerHTML = '';
+      slugs.forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s;
+        opt.textContent = s;
+        if (s === currentSlug) opt.selected = true;
+        select.appendChild(opt);
+      });
+    }
+
+    function onSlugChange() {
+      const select = document.getElementById('slugSelect');
+      currentSlug = select.value;
+      const newUrl = new URL(window.location);
+      newUrl.searchParams.set('slug', currentSlug);
+      window.history.pushState({}, '', newUrl);
+      loadArticleData();
+    }
+
+    // 2. Fetch Data
+    async function loadArticleData() {
+      const ref = document.getElementById('refSelect').value || 'HEAD~1';
+      document.getElementById('refLabel').textContent = ref;
+      document.getElementById('leftFileLabel').textContent = `git:${ref}:${currentSlug}.md`;
+      document.getElementById('rightFileLabel').textContent = `src/content/blog/${currentSlug}.md`;
+
+      try {
+        // Fetch Live Working File from server
+        const liveRes = await fetch(`/api/load?slug=${currentSlug}`);
+        if (liveRes.ok) {
+          const liveData = await liveRes.json();
+          liveText = liveData.content || '';
+        } else {
+          liveText = getFullLiveFallback(currentSlug);
+        }
+
+        // Fetch Git Baseline Ref from server
+        const gitRes = await fetch(`/api/git-load?slug=${currentSlug}&ref=${encodeURIComponent(ref)}`);
+        if (gitRes.ok) {
+          const gitData = await gitRes.json();
+          originalText = gitData.content || '';
+        } else {
+          originalText = (ref === 'HEAD') ? liveText : getFullOriginalFallback(currentSlug);
+        }
+      } catch {
+        liveText = getFullLiveFallback(currentSlug);
+        originalText = (ref === 'HEAD') ? liveText : getFullOriginalFallback(currentSlug);
+      }
+
+      renderDynamicDiff();
+    }
+
+    // 3. Dynamic Diff & Render Engine
+    function renderDynamicDiff() {
+      const origWords = countWords(originalText);
+      const origLines = originalText ? originalText.split('\n').length : 0;
+      const liveWords = countWords(liveText);
+      const liveLines = liveText ? liveText.split('\n').length : 0;
+
+      document.getElementById('statOrig').textContent = `${origWords.toLocaleString()} từ · ${origLines} dòng`;
+      document.getElementById('statLive').textContent = `${liveWords.toLocaleString()} từ · ${liveLines} dòng`;
+
+      // Slop diagnostics
+      const origEmDashes = (originalText.match(/—/g) || []).length;
+      const liveEmDashes = (liveText.match(/—/g) || []).length;
+      const origGlossaries = (originalText.match(/\([A-Z][a-zA-Z\s]*\s*[-–]\s*[^)]+\)/g) || []).length;
+      const liveGlossaries = (liveText.match(/\([A-Z][a-zA-Z\s]*\s*[-–]\s*[^)]+\)/g) || []).length;
+
+      const badgeEmDash = document.getElementById('badgeEmDash');
+      if (liveEmDashes === 0) {
+        badgeEmDash.className = 'px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium';
+        badgeEmDash.textContent = `✓ 0 ký tự gạch dài (—)`;
+      } else {
+        badgeEmDash.className = 'px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20 font-medium';
+        badgeEmDash.textContent = `⚠ Còn ${liveEmDashes} ký tự gạch dài (—)`;
+      }
+
+      const badgeGlossary = document.getElementById('badgeGlossary');
+      if (liveGlossaries === 0) {
+        badgeGlossary.className = 'px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium';
+        badgeGlossary.textContent = `✓ 0 ngoặc tra từ điển`;
+      } else {
+        badgeGlossary.className = 'px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-medium';
+        badgeGlossary.textContent = `Còn ${liveGlossaries} ngoặc từ vựng`;
+      }
+
+      // Compute Word-level diff
+      const dmp = new diff_match_patch();
+      const diffs = dmp.diff_main(originalText, liveText);
+      dmp.diff_cleanupSemantic(diffs);
+
+      let changedChars = 0;
+      for (let d of diffs) {
+        if (d[0] !== 0) changedChars += d[1].length;
+      }
+      const totalChars = Math.max(originalText.length, liveText.length) || 1;
+      const pct = Math.round((changedChars / totalChars) * 100);
+
+      const statDot = document.getElementById('diffStatusDot');
+      const statDiffPct = document.getElementById('statDiffPct');
+      if (changedChars === 0) {
+        statDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400';
+        statDiffPct.className = 'text-emerald-300';
+        statDiffPct.textContent = '0% (Đồng bộ hoàn toàn)';
+      } else {
+        statDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
+        statDiffPct.className = 'text-amber-300';
+        statDiffPct.textContent = `${pct}% khác biệt`;
+      }
+
+      // Render Markdown for both columns
+      document.getElementById('leftContent').innerHTML = marked.parse(originalText || '*(Không có nội dung đối chiếu)*');
+      document.getElementById('rightContent').innerHTML = marked.parse(liveText || '*(File rỗng)*');
+
+      // Render Inline Diff
+      if (changedChars === 0) {
+        document.getElementById('inlineDiffContent').innerHTML = '<div class="text-emerald-400 font-sans text-sm p-4 bg-emerald-950/20 border border-emerald-800/40 rounded-lg">✓ Hai bản hoàn toàn giống nhau 100%. Không có sự khác biệt nào giữa file trên máy và mốc Git đã chọn.</div>';
+      } else {
+        let inlineHtml = '';
+        for (let i = 0; i < diffs.length; i++) {
+          const op = diffs[i][0];
+          const text = escapeHtml(diffs[i][1]).replace(/\n/g, '<br/>');
+          if (op === 1) {
+            inlineHtml += '<ins>' + text + '</ins>';
+          } else if (op === -1) {
+            inlineHtml += '<del>' + text + '</del>';
+          } else {
+            inlineHtml += '<span>' + text + '</span>';
+          }
+        }
+        document.getElementById('inlineDiffContent').innerHTML = inlineHtml;
+      }
+    }
+
+    function countWords(str) {
+      return (str.trim().match(/\S+/g) || []).length;
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function switchView(mode) {
+      const split = document.getElementById('splitViewContainer');
+      const inline = document.getElementById('inlineViewContainer');
+      const btnSplit = document.getElementById('btnSplit');
+      const btnInline = document.getElementById('btnInline');
+
+      if (mode === 'split') {
+        split.classList.remove('hidden');
+        inline.classList.add('hidden');
+        btnSplit.className = 'px-3 py-1 rounded-md bg-indigo-600 text-white font-medium shadow transition';
+        btnInline.className = 'px-3 py-1 rounded-md text-slate-400 hover:text-slate-200 font-medium transition';
+      } else {
+        split.classList.add('hidden');
+        inline.classList.remove('hidden');
+        btnInline.className = 'px-3 py-1 rounded-md bg-indigo-600 text-white font-medium shadow transition';
+        btnSplit.className = 'px-3 py-1 rounded-md text-slate-400 hover:text-slate-200 font-medium transition';
+      }
+    }
+
+    // Synchronized scroll
+    const leftPane = document.getElementById('leftPane');
+    const rightPane = document.getElementById('rightPane');
+    const syncScrollCheckbox = document.getElementById('syncScroll');
+    let isSyncingLeft = false, isSyncingRight = false;
+
+    leftPane.addEventListener('scroll', () => {
+      if (!syncScrollCheckbox.checked || isSyncingLeft) return;
+      isSyncingRight = true;
+      const pct = leftPane.scrollTop / (leftPane.scrollHeight - leftPane.clientHeight);
+      rightPane.scrollTop = pct * (rightPane.scrollHeight - rightPane.clientHeight);
+      setTimeout(() => { isSyncingRight = false; }, 40);
+    });
+
+    rightPane.addEventListener('scroll', () => {
+      if (!syncScrollCheckbox.checked || isSyncingRight) return;
+      isSyncingLeft = true;
+      const pct = rightPane.scrollTop / (rightPane.scrollHeight - rightPane.clientHeight);
+      leftPane.scrollTop = pct * (leftPane.scrollHeight - leftPane.clientHeight);
+      setTimeout(() => { isSyncingLeft = false; }, 40);
+    });
+
+    function copyCurrentMarkdown() {
+      navigator.clipboard.writeText(liveText).then(() => {
+        alert('Đã copy toàn bộ nội dung bài viết vào Clipboard!');
+      });
+    }
+
+    // COMPLETE 91-LINE VERBATIM CONTENT OF SEMANTIC-LAYER.MD
+    function getFullLiveFallback(slug) {
+      return `---
+title: "Semantic Layer: vì sao công ty bạn có ba con số doanh thu và không số nào sai"
+code: "kt-001"
+description: "Phòng Sales nói 4,2 tỷ. Finance nói 3,8 tỷ. Data Team nói 4,05 tỷ. Cả ba đều đúng. Đây là lỗ hổng mà Semantic Layer sinh ra để xử lý, và là nền tảng phải có trước khi nghĩ tới AI."
+pubDate: 2026-05-12
+category: "Kiến Thức Nền Tảng"
+readTime: 8
+author: "Lê Anh Tuấn"
+featured: true
+cover: "/blog/covers/semantic-layer.png"
+coverAlt: "Ba định nghĩa doanh thu rời rạc hợp nhất thành một con số chuẩn"
+---
+
+Sáng thứ Hai đầu tháng, trong buổi họp giao ban, phòng Sales báo cáo doanh thu tháng trước đạt 4,2 tỷ. Kế toán trưởng mở sổ phụ ngân hàng đối chiếu: tiền thực về tài khoản chỉ có 3,8 tỷ, vì còn phí sàn, thuế, và mấy trăm đơn COD shipper chưa chuyển tiền. Sếp quay sang Data Team thì nhận con số thứ ba: 4,05 tỷ, do hệ thống đã trừ lượng hàng khách gửi trả trong tuần. Cả ba đều **đúng**. Mỗi bên chỉ đang đo một góc khác nhau của cùng một chữ "doanh thu".
+
+Nhiều người gặp cảnh này thường nghĩ do dữ liệu bị bẩn, hoặc công ty thiếu một công cụ BI (Business Intelligence, phần mềm biến dữ liệu thành báo cáo và quyết định) xịn hơn. Vấn đề thực sự không nằm ở dữ liệu hay công cụ, mà ở chỗ chưa ai định nghĩa "doanh thu" tại một nơi duy nhất. Đó chính là việc của tầng định nghĩa nghiệp vụ dùng chung: **Semantic Layer**.
+
+## Vấn đề: dữ liệu thô không nói ngôn ngữ của người dùng
+
+Khi bạn mở bảng \`orders\`, màn hình hiện ra hàng chục cột: \`order_id\`, \`created_at\`, \`status\`, \`gross_amount\`, \`discount_amount\`, \`refund_amount\`, \`shipping_fee\`, \`voucher_platform\`. Dữ liệu nằm đó, nhưng "doanh thu" của bạn là con số nào?
+
+- \`gross_amount\` trước chiết khấu hay sau chiết khấu?
+- Đơn COD đã giao nhưng bưu tá còn cầm tiền có tính vào hôm nay không?
+- Phần voucher do sàn tài trợ hạch toán vào đâu?
+- Đơn hoàn trả thì trừ ngay lúc khách bấm hoàn, hay đợi hết hạn đổi trả?
+
+Mỗi phòng ban, mỗi analyst âm thầm chọn một cách trả lời trong câu SQL của mình. Chỉ cần người này lọc \`WHERE status = 'delivered'\` trong khi người kia lọc \`'completed'\`, hai báo cáo đã lệch nhau trên dưới 20%. Câu lệnh nào chạy cũng trơn tru, biểu đồ nào vẽ cũng đẹp, và đó là nguồn gốc của ba con số trong phòng họp.
+
+## Semantic Layer: cuốn từ điển nghiệp vụ cho cả công ty
+
+Cách dễ hình dung nhất: Semantic Layer là cuốn từ điển nghiệp vụ đặt giữa dữ liệu thô và người dùng cuối. Tại đây, bạn chốt công thức cho mỗi khái niệm đúng một lần:
+
+\`\`\`sql
+-- Định nghĩa chuẩn cho Doanh Thu Thuần
+doanh_thu_thuan = SUM(gross_amount - discount_amount - voucher_shop)
+                  WHERE status IN ('completed', 'delivered')
+                  AND payment_status = 'settled'
+                  AND is_test_order = false
+\`\`\`
+
+Từ đó trở đi, bất kỳ ai trong tổ chức, dù viết SQL, mở dashboard BI, hay hỏi bằng tiếng Việt qua AI, đều nhận về cùng một con số. Sales, Finance và ban giám đốc không còn mất thời gian cãi nhau xem ai đúng, vì tất cả đang đọc chung một công thức.
+
+Đây không phải trào lưu mới nổi. Các giải pháp như dbt, Cube hay LookML ra đời chính để giải bài toán metrics layer này. Nếu Semantic Layer là từ điển nghiệp vụ, thì người anh em của nó, [data catalog: cuốn từ điển cho chính dữ liệu của bạn](/blog/data-catalog-tu-dien-du-lieu/), lo phần ghi rõ mỗi bảng và cột thực sự chứa gì. Trong kỷ nguyên AI phân tích dữ liệu, tầng ngữ nghĩa này còn quan trọng gấp bội.
+
+Mình nói điều này từ chỗ đang thấm đòn. Ở ngân hàng mình đang làm việc, nghiệp vụ phức tạp hơn thương mại điện tử rất nhiều: một "số dư", một "khách hàng hoạt động" có thể hiểu theo dăm bảy kiểu tùy khối nghiệp vụ, tùy sản phẩm. Càng làm BI quy mô lớn, mình càng thấy rõ: thiếu một tầng định nghĩa dùng chung thì dashboard tiền tỷ dựng lên cũng chỉ là nơi trưng bày những con số cãi nhau ở phiên bản đắt tiền hơn. Vì thế mình đang đẩy dự án POC Semantic Layer thành hạt nhân trọng điểm tại trung tâm chuyển đổi số, để kéo cả tổ chức về cùng [một nguồn sự thật](/blog/mot-nguon-su-that/) thay vì để mỗi người tự diễn giải dữ liệu thô theo ý mình.
+
+## Vì sao Semantic Layer là nền tảng bắt buộc của AI?
+
+### 1. AI cần ngữ cảnh, nếu không nó sẽ đoán mò
+
+Khi bạn hỏi AI "doanh thu tháng trước là bao nhiêu?", bản thân mô hình ngôn ngữ không tự biết \`doanh_thu\` của công ty bạn tương ứng với cột nào và cần trừ những khoản gì. Nếu không có Semantic Layer, AI sẽ đoán, và mỗi lần hỏi nó lại đoán một kiểu.
+
+> 🎬 Trong video *"AI viết SQL giỏi hơn mình: nghề Data Analyst còn cửa không?"* trên kênh **Tuấn LA Lab**, mình từng chia sẻ: AI viết truy vấn rất nhanh, nhưng nó không tự hiểu ngữ cảnh kinh doanh của công ty bạn. Ngữ cảnh đó chỉ người làm nghề mới cung cấp được, và đó chính là nhiệm vụ cốt lõi của Semantic Layer.
+
+Đây là điểm mấu chốt: lỗi nguy hiểm nhất của AI không phải là viết sai cú pháp SQL, loại lỗi này database sẽ tự chặn ngay. Nguy hiểm nhất là AI viết ra một câu SQL chạy trơn tru, trả về con số tròn trịa, nhưng kết quả sai hoàn toàn mà không hề có cảnh báo. Semantic Layer là chốt chặn khử được loại lỗi "số sai trông như đúng" này. *(Mình có phân tích chi tiết cơ chế này trong bài [Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi mà vẫn trả về số sai](/blog/text-to-sql/)).*
+
+Những hệ thống AI hỏi đáp dữ liệu hàng đầu hiện nay như WrenAI hay SuperSonic của Tencent đều được thiết kế xoay quanh Semantic Layer, chứ không gắn trực tiếp mô hình vào cơ sở dữ liệu thô.
+
+### 2. Phân quyền tập trung, tới từng dòng dữ liệu
+
+Semantic Layer cho phép kiểm soát quyền truy cập dữ liệu ngay tại tầng định nghĩa. Quản lý chi nhánh miền Bắc chỉ xem được dữ liệu miền Bắc, dù họ tra cứu trên dashboard hay hỏi trợ lý AI. Việc bảo mật không còn phụ thuộc vào việc từng analyst có nhớ gài điều kiện \`WHERE\` hay không.
+
+### 3. Tốc độ phân tích tăng theo cấp số nhân
+
+Thay vì mỗi câu hỏi phát sinh phải chờ một chuyên viên viết truy vấn mới, logic kinh doanh trở thành tài sản dùng chung. Khi các chỉ số \`doanh_thu\`, \`khach_hang_hoat_dong\`, \`ty_le_chuyen_doi\` đã được chuẩn hóa, cả tổ chức có thể tra cứu và phân tích ngay lập tức mà không cần biết viết mã SQL.
+
+## Semantic Layer trong Semantix
+
+Semantix được thiết kế xoay quanh Semantic Layer ngay từ đầu để đảm bảo AI luôn hiểu đúng nghiệp vụ trước khi sinh truy vấn:
+
+1. **Data Admin định nghĩa** Data Model, Metrics và Contexts một lần duy nhất trong Studio.
+2. **AI tiếp nhận toàn bộ ngữ cảnh** nghiệp vụ trước khi tạo câu lệnh truy vấn.
+3. **Kết quả trả về đồng nhất** cho mọi người dùng, bất kể câu hỏi được diễn đạt theo cách nào.
+
+Vì vậy Semantix không phải "một chatbot AI cắm vào database", mà là hạ tầng để tổ chức tự phục vụ thông tin một cách an toàn, chính xác và mở rộng được.
+
+## Tóm lại
+
+| Không có Semantic Layer | Có Semantic Layer |
+|---|---|
+| Mỗi phòng ban tính doanh thu theo thói quen riêng | Một định nghĩa duy nhất cho toàn tổ chức |
+| AI đoán mò logic bảng biểu, dễ sinh lỗi "số sai trông như đúng" | AI hiểu đúng ngữ cảnh nghiệp vụ từ đầu |
+| Mỗi câu hỏi mới phải chờ viết truy vấn SQL mới | Logic tái sử dụng liên tục, phản hồi tức thì |
+| Bảo mật dữ liệu phụ thuộc vào từng truy vấn rời rạc | Row-Level Security (phân quyền theo từng dòng dữ liệu) tập trung |
+
+Nếu bạn đang chuẩn bị triển khai AI Analytics, câu hỏi đầu tiên cần đặt ra không phải là "dùng AI nào tốt nhất?", mà là **"Công ty mình đã có định nghĩa thống nhất cho các chỉ số cốt lõi hay chưa?"**. Khi làm rõ được điều này, bạn đã đi trước phần lớn các doanh nghiệp trên thị trường. Để bắt tay xây dựng chỉ số đầu tiên, bạn có thể tham khảo hướng dẫn từng bước trong bài [Xây Semantic Layer đầu tiên](/blog/xay-semantic-layer-dau-tien/), bắt đầu từ đúng một metric cụ thể.
+
+---
+
+*Muốn tìm hiểu cách Semantix thiết lập Semantic Layer cho doanh nghiệp của bạn trong dưới 1 giờ? [Đặt lịch demo ngay.](/docs/vi/free-trial/)*`;
+    }
+
+    // ORIGINAL HISTORICAL VERSION (BEFORE REWRITING)
+    function getFullOriginalFallback(slug) {
+      return `---
+title: "Semantic Layer: vì sao công ty bạn có ba con số doanh thu - và không số nào sai"
+code: "kt-001"
+description: "Phòng Sales nói 4,2 tỷ. Finance nói 3,8 tỷ. Data Team nói 4,05 tỷ. Cả ba đều đúng. Đây là lỗ hổng mà Semantic Layer sinh ra để bịt - và vì sao nó là thứ phải có trước cả AI."
+pubDate: 2026-05-12
+category: "Kiến Thức Nền Tảng"
+readTime: 8
+author: "Lê Anh Tuấn"
+featured: true
+cover: "/blog/covers/semantic-layer.png"
+coverAlt: "Ba định nghĩa doanh thu rời rạc hợp nhất thành một con số chuẩn"
+---
+
+Phòng Sales nói doanh thu tháng trước là 4,2 tỷ. Phòng Finance nói 3,8 tỷ. CEO hỏi Data Team thì được con số thứ ba: 4,05 tỷ. Cả ba đều **đúng** - họ chỉ đang đo những thứ khác nhau mà ai cũng gọi là "doanh thu".
+
+Phản xạ thường thấy khi gặp cảnh này là đổ cho dữ liệu bẩn, hoặc nghĩ "chắc cần một công cụ BI (Business Intelligence - biến dữ liệu thành quyết định) xịn hơn". Cả hai đều sai. Vấn đề không nằm ở dữ liệu, cũng không ở công cụ. Vấn đề là **chưa ai từng định nghĩa "doanh thu" ở một chỗ duy nhất** - và đó chính xác là việc của **Semantic Layer** (tầng định nghĩa nghiệp vụ dùng chung).
+
+## Vấn đề: dữ liệu thô không nói được ngôn ngữ của người dùng
+
+Khi bạn mở bảng \`orders\`, bạn thấy hàng trăm cột: \`order_id\`, \`created_at\`, \`status\`, \`gross_amount\`, \`discount_amount\`, \`refund_amount\`, \`tax\`... Dữ liệu nằm đó, nhưng "doanh thu" của bạn là con số nào?
+
+- \`gross_amount\` trước chiết khấu?
+- \`gross_amount - discount_amount\` sau chiết khấu?
+- Trừ thêm \`refund_amount\` cho đơn hoàn hàng?
+- Và \`status = 'completed'\` hay tính tất cả trạng thái?
+
+Bốn lựa chọn trên cho ra bốn con số lệch nhau tới 15-20%. Mỗi phòng ban, mỗi analyst lặng lẽ chọn một cách khác nhau trong câu SQL (Structured Query Language - ngôn ngữ truy vấn cơ sở dữ liệu) của họ - và không ai thấy mình sai, vì câu nào cũng chạy ra số. Đó là nguồn gốc của ba con số trong phòng họp.
+
+## Semantic Layer: một cuốn từ điển nghiệp vụ cho cả công ty
+
+Cách dễ hình dung nhất: Semantic Layer là **cuốn từ điển nghiệp vụ** đặt giữa dữ liệu thô và mọi người dùng. Tại đây, bạn định nghĩa mỗi khái niệm đúng một lần:
+
+\`\`\`sql
+doanh_thu = SUM(gross_amount - discount_amount)
+            WHERE status IN ('completed', 'delivered')
+            AND refund_amount = 0
+\`\`\`
+
+Từ đó trở đi, bất kỳ ai trong tổ chức - dù hỏi bằng SQL, bằng BI tool, hay bằng tiếng Việt qua AI - đều nhận về **cùng một con số**. Sales, Finance, CEO không còn cãi nhau xem ai đúng, vì tất cả đang đọc cùng một định nghĩa. **Một lần định nghĩa. Dùng mãi mãi.**
+
+Đây không phải khái niệm bên lề. Phong trào "metrics layer" / "semantic layer" (dbt, Cube, LookML...) ra đời đúng để giải bài toán này. Nếu semantic layer là từ điển *nghiệp vụ*, thì người anh em của nó - [data catalog, cuốn từ điển cho chính dữ liệu của bạn](/blog/data-catalog-tu-dien-du-lieu/) - lo phần ghi rõ mỗi bảng, mỗi cột thực sự chứa gì. Và như sẽ thấy ở dưới, semantic layer còn quan trọng gấp đôi trong thời đại AI.
+
+Mình nói cái này từ chỗ đang thấm đòn. Ở một ngân hàng mình đang làm, nghiệp vụ phức tạp hơn e-commerce nhiều lần - một "số dư", một "khách hàng hoạt động" có thể hiểu theo dăm bảy kiểu tùy phòng ban, tùy sản phẩm. Càng làm BI ở đây mình càng thấy rõ: thiếu một tầng định nghĩa dùng chung thì mọi dashboard đẹp đến mấy cũng chỉ là ba con số cãi nhau ở phiên bản cao cấp hơn. Vì thế mình đang POC semantic layer để đưa nó thành dự án trọng điểm của trung tâm chuyển đổi số. Bản chất nó là cách bắt cả tổ chức cùng đọc [một nguồn sự thật](/blog/mot-nguon-su-that/) thay vì mỗi người tự dịch dữ liệu thô theo ý mình.
+
+## Vì sao Semantic Layer quan trọng hơn bao giờ hết
+
+### 1. AI cần ngữ cảnh, nếu không nó sẽ đoán
+
+Khi bạn hỏi AI "doanh thu tháng trước là bao nhiêu?", bản thân AI không biết \`doanh_thu\` của công ty bạn là cột nào, trừ những gì. Nếu không có Semantic Layer, nó **đoán** - và mỗi lần hỏi lại đoán một kiểu.
+
+> 🎬 **Mình kể chuyện này bằng giọng trong video** *"AI viết SQL giỏi hơn mình - nghề Data Analyst còn cửa không?"*: AI viết được câu query, nhưng nó không tự biết "doanh thu" công ty bạn tính kiểu gì. Cái ngữ cảnh đó chỉ người hiểu nghề mới cấp được - và đó chính là việc của semantic layer. Tìm **"Tuấn LA Lab"** trên YouTube.
+
+Đây là chỗ chí mạng: lỗi đáng sợ nhất của AI không phải viết SQL hỏng (loại đó database tự chặn). Mà là viết một câu SQL chạy ngon lành, trả về một con số tròn trịa - và **sai**, không một dòng cảnh báo. Semantic Layer là thứ duy nhất khử được loại lỗi "số sai trông như đúng" này. *(Mình mổ xẻ kỹ cái bẫy này trong bài [Text-to-SQL: vì sao AI viết SQL gần như không bao giờ lỗi mà vẫn trả về số sai](/blog/text-to-sql/).)*
+
+Không phải ngẫu nhiên mà những hệ AI hỏi-đáp dữ liệu mạnh nhất thế giới - WrenAI, hay SuperSonic của Tencent - đều được xây *quanh* một semantic layer, chứ không phải gắn AI thẳng vào database.
+
+### 2. Bảo mật theo dòng, tập trung một chỗ
+
+Semantic Layer cho phép kiểm soát ai thấy dữ liệu nào ngay tại tầng định nghĩa. Quản lý miền Bắc chỉ thấy số liệu miền Bắc - dù họ mở dashboard (bảng số trực quan) hay hỏi AI cùng một câu. Bảo mật không còn phụ thuộc vào việc từng analyst có nhớ thêm điều kiện \`WHERE\` hay không.
+
+### 3. Tốc độ phân tích tăng theo cấp số nhân
+
+Thay vì mỗi câu hỏi mới đòi một analyst viết SQL mới, logic nghiệp vụ trở thành **tài sản tái sử dụng**. Một khi đã định nghĩa \`doanh_thu\`, \`khách_hàng_hoạt_động\`, \`tỷ_lệ_chuyển_đổi\`, cả tổ chức dùng được ngay - kể cả người không biết một dòng SQL.
+
+## Semantic Layer trong Semantix
+
+Semantix được xây từ đầu xoay quanh Semantic Layer. Thay vì hỏi AI rồi nhận SQL và *hy vọng* nó đúng, quy trình là:
+
+1. **Data Admin định nghĩa** Data Model, Metrics, Contexts trong Studio (một lần).
+2. **AI hiểu** ngữ cảnh nghiệp vụ *trước* khi tạo truy vấn.
+3. **Kết quả nhất quán** bất kể ai hỏi, hỏi khi nào, hỏi thế nào.
+
+Đó là lý do Semantix không phải "một chatbot AI cắm vào database", mà là hạ tầng để tổ chức tự phục vụ thông tin một cách an toàn, chính xác và mở rộng được.
+
+## Tóm lại
+
+| Không có Semantic Layer | Có Semantic Layer |
+|---|---|
+| Mỗi người tính doanh thu một kiểu | Một định nghĩa duy nhất cho toàn tổ chức |
+| AI đoán mò logic nghiệp vụ → số sai mà trông đúng | AI hiểu đúng ngữ cảnh từ đầu |
+| SQL mới cho mỗi câu hỏi mới | Logic tái sử dụng, trả lời tức thì |
+| Bảo mật phụ thuộc từng truy vấn | Row-Level Security (RLS - phân quyền theo hàng, mỗi người chỉ thấy đúng dòng được phép) tập trung |
+
+Nếu bạn đang cân nhắc triển khai AI Analytics, câu hỏi đầu tiên không phải "AI nào tốt nhất?" - mà là **"Công ty mình đã có một định nghĩa thống nhất cho 'doanh thu' chưa?"** Trả lời được câu đó, bạn đã đi trước phần lớn doanh nghiệp. Và nếu muốn bắt tay dựng định nghĩa đầu tiên ngay hôm nay, mình có hướng dẫn từng bước trong [Xây Semantic Layer đầu tiên](/blog/xay-semantic-layer-dau-tien/) - bắt đầu bằng đúng một metric, không phải cả vũ trụ.
+
+---
+
+*Muốn tìm hiểu cách Semantix dựng Semantic Layer cho doanh nghiệp của bạn trong dưới 1 giờ? [Đặt lịch demo ngay.](/docs/vi/free-trial/)*`;
+    }
+
+    init();
+  </script>
+</body>
+</html>

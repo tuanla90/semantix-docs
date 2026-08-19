@@ -10,8 +10,12 @@ const BLOG = path.join(ROOT, 'src/content/blog');
 const VIDEOS = path.join(ROOT, 'video/videos');
 const VOUT = path.join(ROOT, 'video/out');
 const VSCRIPTS = path.join(ROOT, 'video-scripts');
+const DRAFTS = path.join(ROOT, 'drafts');
+const DECKS = path.join(ROOT, 'video-decks');
 
 const exists = (p) => { try { fs.accessSync(p); return true; } catch { return false; } };
+// deck HTML chấp nhận 2 tên: deck.html (chuẩn) hoặc slide.html (bản cũ)
+const hasDeck = (slug) => ['deck.html', 'slide.html'].some(f => exists(path.join(DECKS, slug, f)));
 
 function fm(raw) {
   raw = raw.replace(/^﻿/, '').replace(/\r\n/g, '\n');
@@ -53,8 +57,28 @@ export function scanAll() {
       slug, title: d.title || slug, t, sub: sub || d.description || '',
       date: d.pubDate || '', cat: d.category || '',
       png: `public/blog/covers/${slug}.png`, vids: [], vthumb: '',
+      ag: exists(path.join(DRAFTS, slug + '.ag.md')),
+      deck: hasDeck(slug),
     };
   }).sort((a, b) => String(a.date).localeCompare(String(b.date)));
+
+  // Bài nháp trong drafts/ (chưa promote). Bỏ file HOA (README, PLAN-*, ANTIGRAVITY-BRIEF) và *.ag.md.
+  const draftRows = (exists(DRAFTS) ? fs.readdirSync(DRAFTS) : [])
+    .filter(f => f.endsWith('.md') && !f.endsWith('.ag.md') && /^[a-z0-9]/.test(f))
+    .map(f => {
+      const slug = f.replace(/\.md$/, '');
+      const d = fm(fs.readFileSync(path.join(DRAFTS, f), 'utf8'));
+      const { t, sub } = splitTitle(d.title);
+      return {
+        slug, title: d.title || slug, t: t || slug, sub: sub || d.description || '',
+        date: d.pubDate || '', cat: d.category || '', isDraft: true,
+        png: exists(path.join(ROOT, 'public/blog/covers', slug + '.png')) ? `public/blog/covers/${slug}.png` : '',
+        vids: [], vthumb: '', vstate: 'none',
+        ag: exists(path.join(DRAFTS, slug + '.ag.md')),
+        deck: hasDeck(slug),
+      };
+    })
+    .sort((a, b) => a.slug.localeCompare(b.slug));
 
   const blogSet = new Set(rows.map(r => r.slug));
   const sourcesOf = (videoSlug) => {
@@ -91,8 +115,19 @@ export function scanAll() {
     slug: v.slug, title: v.slug, t: v.slug, sub: 'Video gốc - không gắn blog', date: '', cat: 'VIDEO',
     png: '', isVideoOnly: true, vids: [vidInfo(v.slug)], vthumb: v.thumb, vstate: vstate([vidInfo(v.slug)]),
   }));
-  const allRows = [...videoRows, ...rows];
-  const cats = [...new Set(allRows.map(r => r.cat).filter(c => c && c !== 'VIDEO'))].sort();
+  const blogSlugSet = new Set(rows.map(r => r.slug));
+  const shownDrafts = draftRows.filter(r => !blogSlugSet.has(r.slug));
+  // Deck mồ côi: có slide HTML nhưng không gắn blog/draft nào (vd deck cá nhân) — vẫn hiện để xem được
+  const taken = new Set([...blogSlugSet, ...shownDrafts.map(r => r.slug), ...videoRows.map(r => r.slug)]);
+  const deckOnly = (exists(DECKS) ? fs.readdirSync(DECKS, { withFileTypes: true }) : [])
+    .filter(d => d.isDirectory() && hasDeck(d.name) && !taken.has(d.name))
+    .map(d => ({
+      slug: d.name, title: d.name, t: d.name, sub: 'Slide thuần - không gắn blog', date: '', cat: 'SLIDE',
+      png: '', isDeckOnly: true, vids: [], vthumb: '', vstate: 'none', ag: false, deck: true,
+    }))
+    .sort((a, b) => a.slug.localeCompare(b.slug));
+  const allRows = [...videoRows, ...shownDrafts, ...deckOnly, ...rows];
+  const cats = [...new Set(allRows.map(r => r.cat).filter(c => c && c !== 'VIDEO' && c !== 'SLIDE'))].sort();
   return { rows: allRows, cats, stamp: Date.now() };
 }
 

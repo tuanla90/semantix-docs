@@ -6,15 +6,19 @@
 // Ghi thẳng file thật -> git là chỗ hoàn tác nếu lỡ tay.
 import http from 'node:http';
 import { readFile, writeFile, readdir } from 'node:fs/promises';
+import { exec } from 'node:child_process';
+import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { scanAll } from './scripts/scan-content.mjs';
 
+const execAsync = promisify(exec);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BLOG_DIR = path.join(__dirname, 'src', 'content', 'blog');
 const VIDEO_DIR = path.join(__dirname, 'video', 'videos');
 const HTML_BLOG = path.join(__dirname, 'edit-tool.html');
 const HTML_VIDEO = path.join(__dirname, 'edit-video.html');
+const HTML_DIFF = path.join(__dirname, 'content-diff-viewer.html');
 const PORT = Number(process.env.EDIT_PORT || process.env.PORT) || 8124;
 const PREVIEW = process.env.PREVIEW_ORIGIN || 'http://localhost:8123';
 const STUDIO = process.env.STUDIO_ORIGIN || 'http://localhost:3000';   // Remotion Studio (nhúng iframe cho scenes editor)
@@ -76,6 +80,9 @@ const server = http.createServer(async (req, res) => {
     if (req.method === 'GET' && (p === '/' || p === '/edit')) {
       return html(res, (await readFile(HTML_BLOG, 'utf8')).replaceAll('__PREVIEW__', PREVIEW));
     }
+    if (req.method === 'GET' && (p === '/diff' || p === '/review')) {
+      return html(res, await readFile(HTML_DIFF, 'utf8'));
+    }
     if (req.method === 'GET' && p === '/video') {
       return html(res, await readFile(HTML_VIDEO, 'utf8'));
     }
@@ -86,6 +93,52 @@ const server = http.createServer(async (req, res) => {
     }
     if (req.method === 'GET' && p === '/admin') {
       return html(res, await readFile(path.join(__dirname, 'admin.html'), 'utf8'));
+    }
+    // ---- Deck slide (video-decks/<slug>/deck.html là file standalone, serve thẳng) + kịch bản nói ----
+    if (req.method === 'GET' && p === '/deck') {
+      const slug = u.searchParams.get('slug');
+      if (!okSlug(slug)) return html(res, '<body style="font-family:sans-serif;background:#0c0d11;color:#e6e6ea;padding:24px">Thiếu/không hợp lệ slug. Dùng <code>/deck?slug=&lt;slug&gt;</code></body>');
+      for (const f of ['deck.html', 'slide.html']) {
+        try { return html(res, await readFile(path.join(__dirname, 'video-decks', slug, f), 'utf8')); } catch {}
+      }
+      res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' }); return res.end(`chưa có deck: video-decks/${slug}/deck.html`);
+    }
+    if (req.method === 'GET' && p === '/deck-script') {
+      const slug = u.searchParams.get('slug');
+      if (!okSlug(slug)) { res.writeHead(400); return res.end('slug?'); }
+      try {
+        res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+        return res.end(await readFile(path.join(__dirname, 'video-decks', slug, 'kich-ban-noi.md'), 'utf8'));
+      } catch { res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' }); return res.end(`chưa có kịch bản: video-decks/${slug}/kich-ban-noi.md`); }
+    }
+    // ---- Drafts API (đọc-only, cho diff viewer so bản AG) ----
+    if (req.method === 'GET' && p === '/api/draft-list') {
+      try {
+        const files = (await readdir(path.join(__dirname, 'drafts')))
+          .filter(f => f.endsWith('.md') && !f.endsWith('.ag.md') && /^[a-z0-9]/.test(f));
+        return json(res, 200, { slugs: files.map(f => f.slice(0, -3)).sort() });
+      } catch { return json(res, 200, { slugs: [] }); }
+    }
+    if (req.method === 'GET' && p === '/api/draft-load') {
+      const slug = u.searchParams.get('slug');
+      const ag = u.searchParams.get('ag') === '1';
+      if (!okSlug(slug)) return json(res, 400, { error: 'slug không hợp lệ' });
+      const file = slug + (ag ? '.ag.md' : '.md');
+      try { return json(res, 200, { slug, content: await readFile(path.join(__dirname, 'drafts', file), 'utf8') }); }
+      catch { return json(res, 404, { error: `chưa có drafts/${file}` }); }
+    }
+    // ---- Git load: lấy bản gốc trong Git (mặc định HEAD, hoặc HEAD~1, main...) ----
+    if (req.method === 'GET' && p === '/api/git-load') {
+      const slug = u.searchParams.get('slug');
+      const ref = u.searchParams.get('ref') || 'HEAD';
+      if (!okSlug(slug)) return json(res, 400, { error: 'slug không hợp lệ' });
+      try {
+        const relPath = `landing/src/content/blog/${slug}.md`;
+        const { stdout } = await execAsync(`git show ${ref}:"${relPath}"`);
+        return json(res, 200, { slug, ref, content: stdout });
+      } catch (e) {
+        return json(res, 500, { error: `Không lấy được Git history (${ref}): ` + (e && e.message || e) });
+      }
     }
     // ---- Admin API: data quét live + state (flags/notes/review) ----
     if (req.method === 'GET' && p === '/api/admin-data') {
@@ -179,5 +232,6 @@ server.listen(PORT, () => {
   console.log(`\n  Admin:      http://localhost:${PORT}/admin`);
   console.log(`  Sua blog:   http://localhost:${PORT}/?slug=<slug>        (can: npm run dev @8123)`);
   console.log(`  Sua script: http://localhost:${PORT}/video?slug=<slug>`);
-  console.log(`  Sua scenes: http://localhost:${PORT}/scenes?slug=<slug>  (can: npm run studio @3000)\n`);
+  console.log(`  Sua scenes: http://localhost:${PORT}/scenes?slug=<slug>  (can: npm run studio @3000)`);
+  console.log(`  Xem deck:   http://localhost:${PORT}/deck?slug=<slug>   (+ /deck-script?slug=<slug>)\n`);
 });

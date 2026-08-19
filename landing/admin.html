@@ -89,6 +89,13 @@
  .acts a{font-size:11.5px;font-weight:700;text-decoration:none;padding:5px 10px;border-radius:7px;background:#18233b;color:#c7d3e8;border:1px solid var(--line);transition:.15s}
  .acts a:hover{border-color:var(--accent2);color:#fff;background:#1e2c47}
  .acts a.off{opacity:.35;pointer-events:none}
+ .acts .pill{font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:7px;background:#161f33;color:#43506e;border:1px dashed var(--line)}
+ .acts .pill.on{background:#123024;color:var(--green);border:1px solid #1f5c40}
+ .acts a.pill.on:hover{background:#1a4632;color:#8ff0bb;border-color:var(--green)}
+ .acts a.deckon{background:#3b2168;color:#d6bcfb;border-color:#4a2a80}
+ .acts a.deckon:hover{background:#4a2a80;color:#fff}
+ .card.draft{border-style:dashed;border-color:#4b3a20}
+ .ttl.draft{color:#f7cf8a}
  /* pipeline stepper */
  .pipe{display:flex;flex-direction:column;gap:10px}
  .steps{display:flex;align-items:flex-start;gap:0}
@@ -153,11 +160,12 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 let DATA=[], CATS=[], STATE={}, STAMP='', timer=null;
 // bộ lọc nhiều điều kiện: trong 1 nhóm = OR, giữa các nhóm = AND
-const FILTERS={status:new Set(),pipe:new Set(),cat:new Set()};
+const FILTERS={status:new Set(),pipe:new Set(),doc:new Set(),cat:new Set()};
 let COLLAPSED=new Set(); try{COLLAPSED=new Set(JSON.parse(localStorage.getItem('admin-collapsed-v1')||'[]'));}catch{}
 function saveCollapsed(){try{localStorage.setItem('admin-collapsed-v1',JSON.stringify([...COLLAPSED]));}catch{}}
 const STATUS_F=[['flag','⚠ Cần sửa'],['note','Có ghi chú'],['vr0','Video chưa review'],['vr1','Video đã review']];
 const PIPE_F=[['none','Chưa có video'],['script','Có script'],['scenes','Có scenes'],['scaffold','Có nhạc/sfx (chưa voice AI)'],['voiced','Đã voice AI'],['render','Đã render'],['publish','Đã publish']];
+const DOC_F=[['draft','Bản nháp'],['ag','Đã enrich AG'],['ag0','Chưa enrich AG'],['deck','Có HTML slide'],['deck0','Chưa có slide']];
 
 const STEPS=[['script','script'],['scenes','scenes'],['scaffold','nhạc/sfx'],['voice','voice AI'],['render','render'],['publish','publish']];
 function stepsOf(r){
@@ -166,6 +174,8 @@ function stepsOf(r){
 }
 const GROUPS=[
  ['flag','⚠ Cần sửa', r=>st(r).flag],
+ ['draft','📝 Nháp (drafts/ — chưa promote)', r=>r.isDraft],
+ ['deckonly','🖥 Slide thuần (không gắn blog)', r=>r.isDeckOnly],
  ['todo','Chưa dựng video', r=>r.vstate==='none'||r.vstate==='script'],
  ['wip','Đang dở (scenes → render)', r=>['scenes','scaffold','voiced','render'].includes(r.vstate)],
  ['done','Đã render / đăng', r=>['publish'].includes(r.vstate)||(r.vstate==='render')],
@@ -183,7 +193,8 @@ function buildFilter(){
   const mk=(g,items)=>items.map(([v,lb])=>`<label class="chip"><input type="checkbox" data-g="${g}" value="${esc(v)}">${esc(lb)}</label>`).join('');
   $('#filters').innerHTML=
     `<div class="facet"><span class="fl">Trạng thái</span>${mk('status',STATUS_F)}</div>`
-   +`<div class="facet"><span class="fl">Pipeline</span>${mk('pipe',PIPE_F)}</div>`
+   +`<div class="facet"><span class="fl">Pipeline video</span>${mk('pipe',PIPE_F)}</div>`
+   +`<div class="facet"><span class="fl">Quy trình bài</span>${mk('doc',DOC_F)}</div>`
    +(CATS.length?`<div class="facet"><span class="fl">Chủ đề</span>${mk('cat',CATS.map(c=>[c,c]))}</div>`:'')
    +`<button class="clearf" id="clearf">✕ Xoá lọc</button>`;
   $('#filters').querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change',()=>{
@@ -195,7 +206,7 @@ function buildFilter(){
   });
   updateFiltBtn();
 }
-function activeCount(){return FILTERS.status.size+FILTERS.pipe.size+FILTERS.cat.size;}
+function activeCount(){return FILTERS.status.size+FILTERS.pipe.size+FILTERS.doc.size+FILTERS.cat.size;}
 function updateFiltBtn(){const n=activeCount();$('#togglef').innerHTML='☰ Lọc'+(n?` <span class="fc">${n}</span>`:'');}
 function pass(r,q){
   const s=st(r), F=FILTERS;
@@ -210,6 +221,16 @@ function pass(r,q){
   }
   // Pipeline: OR trong nhóm (mỗi giá trị = 1 vstate)
   if(F.pipe.size&&!F.pipe.has(r.vstate)) return false;
+  // Quy trình bài (AG / slide / nháp): OR trong nhóm, bỏ qua dòng video-only
+  if(F.doc.size){
+    let ok=false;
+    if(F.doc.has('draft')&&r.isDraft) ok=true;
+    if(F.doc.has('ag')&&r.ag) ok=true;
+    if(F.doc.has('ag0')&&!r.ag&&!r.isVideoOnly&&!r.isDeckOnly) ok=true;
+    if(F.doc.has('deck')&&r.deck) ok=true;
+    if(F.doc.has('deck0')&&!r.deck&&!r.isVideoOnly&&!r.isDeckOnly) ok=true;
+    if(!ok) return false;
+  }
   // Chủ đề: OR trong nhóm
   if(F.cat.size&&!F.cat.has(r.cat)) return false;
   if(q&&!((r.title||'')+' '+r.slug).toLowerCase().includes(q)) return false;
@@ -229,15 +250,28 @@ function card(r){
   let media;
   if(r.isVideoOnly) media=tile(r.vthumb,'Thumb YT','yt',true);
   else media=tile(r.png,'Cover','',false)+(hasVideo?tile(r.vthumb,'Thumb YT','yt',true):'');
+  // quy trình bài: badge AG (drafts/<slug>.ag.md) + nút xem HTML slide (video-decks/<slug>/deck.html)
+  const docActs=r.isVideoOnly?'':
+     (r.isDeckOnly?'':(r.ag
+       ?`<a class="pill on" href="/diff?slug=${r.slug}&ref=__ag__" target="_blank" rel="noopener" title="So bản AG với bản gốc (drafts/${esc(r.slug)}.ag.md)">🪄 AG ✓</a>`
+       :`<span class="pill" title="chưa có drafts/${esc(r.slug)}.ag.md">🪄 AG –</span>`))
+    +`<a class="${r.deck?'deckon':'off'}" href="/deck?slug=${r.slug}" target="_blank" rel="noopener" title="${r.deck?'mở':'chưa có'} video-decks/${esc(r.slug)}/deck.html">🖥 Slide</a>`
+    +(r.deck?`<a href="/deck-script?slug=${r.slug}" target="_blank" rel="noopener">🎤 Kịch bản</a>`:'');
   const title=r.isVideoOnly
     ?`<div class="ttl vid">🎬 ${esc(r.slug)}</div><div class="sub">${esc(r.sub)}</div>`
+    :(r.isDraft||r.isDeckOnly)
+    ?`<div class="ttl draft">${r.isDeckOnly?'🖥':'📝'} ${esc(r.t||r.title)}</div>`
+     +(r.sub?`<div class="sub">${esc(r.sub)}</div>`:'')
+     +`<div class="meta">${esc(r.date)} · ${esc(r.cat||'nháp')} · ${r.isDeckOnly?`video-decks/${esc(r.slug)}/`:`drafts/${esc(r.slug)}.md`}</div>`
+     +`<div class="acts">${docActs}</div>`
     :`<a class="ttl" href="${BLOG_URL}/${r.slug}/" target="_blank" rel="noopener">${esc(r.t||r.title)}</a>`
      +(r.sub?`<div class="sub">${esc(r.sub)}</div>`:'')
      +`<div class="meta">${esc(r.date)} · ${esc(r.cat)} · ${esc(r.slug)}</div>`
      +`<div class="acts"><a href="${BLOG_URL}/${r.slug}/" target="_blank" rel="noopener">👁 Xem</a>`
      +`<a href="${CMS_URL}/${r.slug}" target="_blank" rel="noopener">🌐 CMS</a>`
      +`<a href="/?slug=${r.slug}" target="_blank" rel="noopener">📝 Sửa local</a>`
-     +`<a href="${EDIT_GH}/${r.slug}.md" target="_blank" rel="noopener">✏️ GitHub</a></div>`;
+     +`<a href="${EDIT_GH}/${r.slug}.md" target="_blank" rel="noopener">✏️ GitHub</a>`
+     +`<a href="/diff?slug=${r.slug}" target="_blank" rel="noopener" title="So sánh file trên máy với mốc Git">Δ Diff</a>${docActs}</div>`;
   const vslug=(r.vids&&r.vids[0])?r.vids[0].slug:null;
   const stepEls=sp?STEPS.map(([k,lb],i)=>{
     const on=sp[k], nxt=STEPS[i+1]&&sp[STEPS[i+1][0]];
@@ -251,7 +285,7 @@ function card(r){
     +`<div class="ctrls"><label class="chk flag"><input type="checkbox" class="cbflag" ${s.flag?'checked':''}> Cần sửa</label>`
     +(sp?`<label class="chk"><input type="checkbox" class="cbrev" ${s.vreview?'checked':''}> Đã review video</label>`:'')+`</div></div>`;
   const el=document.createElement('div');
-  el.className='card'+(s.flag?' flagged':'')+(r.isVideoOnly?' videoonly':'');
+  el.className='card'+(s.flag?' flagged':'')+(r.isVideoOnly?' videoonly':'')+((r.isDraft||r.isDeckOnly)?' draft':'');
   el.innerHTML=`<div class="media">${media}</div><div>${title}</div><div class="pipe">${pipe}</div>${note}`;
   const ta=el.querySelector('textarea'), cf=el.querySelector('.cbflag'), cr=el.querySelector('.cbrev');
   ta.addEventListener('input',()=>{(STATE[r.slug]||={}).note=ta.value;persist();});
@@ -286,7 +320,8 @@ function recount(){
   const withVid=DATA.filter(r=>(r.vids||[]).length);
   const rendered=DATA.filter(r=>r.vstate==='render'||r.vstate==='publish');
   const flags=DATA.filter(r=>st(r).flag).length;
-  $('#count').textContent=`${DATA.length} mục · ${withVid.length} có video · ${flags} cần sửa`;
+  const decks=DATA.filter(r=>r.deck).length;
+  $('#count').textContent=`${DATA.length} mục · ${withVid.length} có video · ${decks} slide · ${flags} cần sửa`;
   const pct=withVid.length?Math.round(rendered.length/withVid.length*100):0;
   $('#pbar').style.width=pct+'%'; $('#ptext').textContent=`${rendered.length}/${withVid.length} render`;
 }

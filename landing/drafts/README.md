@@ -12,11 +12,15 @@ Dây chuyền 5 bước cho một bài mới. Chỉ bước 2 làm tay, còn l�
 
 Sau bước 4: promote bài từ `drafts/` sang `src/content/blog/` theo luồng riêng (Claude không tự promote). Sau bước 5: mở `deck.html` bằng Chrome, bấm `F` fullscreen, quay OBS với webcam góc dưới-phải — nói trực tiếp, không render video.
 
+## Theo dõi trên trang admin
+
+Chạy `npm run edit` (trong `landing/`) rồi mở `http://localhost:8124/admin`: bài nháp hiện nhóm "📝 Nháp", mỗi bài có badge **🪄 AG** (đã có `<slug>.ag.md` chưa — khi có, bấm vào pill là mở diff so bản AG với bản gốc) và nút **🖥 Slide** — bấm là mở thẳng deck HTML (`/deck?slug=<slug>`), kèm **🎤 Kịch bản** nói. Lọc theo các trạng thái này ở facet "Quy trình bài".
+
 ## Quy ước file trong thư mục này
 
 - `<slug>.md` — bản đang chốt (thô lúc đầu, thành bản merge sau bước 3).
 - `<slug>.ag.md` — bản Antigravity, giữ tới khi bài publish rồi mới dọn.
-- Soi diff hai bản bằng mắt: mở `landing/content-diff-viewer.html` trong Chrome, dán hai bản vào.
+- Soi diff bằng mắt sau khi merge: bấm **Δ Diff** trên trang admin (hoặc mở `http://localhost:8124/diff?slug=<slug>`) — cột trái là mốc Git chọn được (HEAD~1/HEAD/main), cột phải là file đang có trên máy, kèm chỉ số % khác biệt và quét em-dash.
 
 ## Vì sao phải merge (bước 3)?
 

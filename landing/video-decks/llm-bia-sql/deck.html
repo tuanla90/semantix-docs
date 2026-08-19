@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deck · Ảo giác AI: LLM bịa SQL — Tuấn LA Lab</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accT:#F0ABFC; --acc:#D946EF; --acc2:#A855F7; --brand:#783ABF;
+  --red:#FF3B4E; --red2:#FF2740; --green:#34d399; --kw:#c084fc;
+  --ink:#E2E8F0; --mut:#9AA7BD; --mut2:#64748B; --line:#1e293b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;background:#05060a;overflow:hidden;font-family:'Inter',system-ui,Arial,sans-serif;color:#fff}
+#viewport{position:fixed;inset:0}
+/* base 1920x1080 stage, scaled to fit */
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center;
+  background:
+   radial-gradient(48% 46% at 12% 16%,color-mix(in srgb,var(--acc) 30%,transparent),transparent 60%),
+   radial-gradient(52% 52% at 88% 90%,color-mix(in srgb,var(--acc2) 32%,transparent),transparent 60%),
+   linear-gradient(150deg,#0B1120 0%,#0F1729 55%,#0A0F1C 100%);
+  overflow:hidden}
+#stage::before{content:'';position:absolute;inset:0;z-index:0;
+  background-image:radial-gradient(color-mix(in srgb,var(--accT) 12%,transparent) 1.2px,transparent 1.2px);
+  background-size:30px 30px;opacity:.42}
+.blob{position:absolute;border-radius:50%;z-index:0;filter:blur(2px);pointer-events:none}
+.blob.a{right:-120px;top:-160px;width:720px;height:720px;background:radial-gradient(circle,color-mix(in srgb,var(--acc2) 22%,transparent),transparent 62%)}
+.blob.b{left:-180px;bottom:-220px;width:640px;height:640px;background:radial-gradient(circle,color-mix(in srgb,var(--acc) 16%,transparent),transparent 62%)}
+
+/* slides */
+.slide{position:absolute;inset:0;z-index:2;opacity:0;visibility:hidden;transition:opacity .45s ease}
+.slide.active{opacity:1;visibility:visible}
+.pad{position:absolute;left:120px;top:96px;right:120px;bottom:112px}
+.pad.tight{left:120px;right:120px}
+
+/* brand + chrome */
+.brand{position:absolute;right:56px;top:44px;z-index:6;display:flex;align-items:center;gap:12px;background:var(--brand);border-radius:15px;padding:11px 22px 11px 18px;box-shadow:0 14px 40px rgba(120,58,191,.35)}
+.brand .dot{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#fff,#e9d5ff);display:flex;align-items:center;justify-content:center;color:var(--brand);font-weight:900;font-size:19px}
+.brand span{font-weight:800;font-size:24px;letter-spacing:.2px}
+.baseline{position:absolute;left:0;right:0;bottom:0;height:9px;z-index:6;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+#progress{position:absolute;left:0;top:0;height:5px;z-index:7;width:0;background:linear-gradient(90deg,var(--acc),var(--accT));transition:width .35s ease;box-shadow:0 0 14px color-mix(in srgb,var(--acc) 70%,transparent)}
+#counter{position:absolute;left:56px;bottom:40px;z-index:6;font-weight:800;font-size:20px;letter-spacing:2px;color:var(--mut2)}
+#counter b{color:var(--ink)}
+.chrome-hidden #counter,.chrome-hidden .brand{opacity:0;transition:opacity .3s}
+
+/* kicker / headings */
+.kicker{display:flex;align-items:center;gap:15px;color:var(--accT);font-weight:800;font-size:26px;letter-spacing:5px;text-transform:uppercase}
+.kicker::before{content:'';width:44px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+h1{font-weight:900;letter-spacing:-3px;line-height:.98}
+.big{font-weight:900;letter-spacing:-1.5px;line-height:1.05;font-size:84px}
+.sub{color:var(--mut);font-weight:500;font-size:34px;line-height:1.4}
+.rd{color:var(--red);text-shadow:0 0 34px rgba(255,59,78,.6)}
+.pp{color:var(--accT)}
+.key{color:#fff;background:linear-gradient(90deg,var(--acc),var(--acc2));padding:2px 22px;border-radius:16px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.muted{color:var(--mut)}
+
+/* reveal animation */
+.r{opacity:0;transform:translateY(28px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1)}
+.r.on{opacity:1;transform:none}
+.r.blur{filter:blur(6px)}.r.blur.on{filter:blur(0)}
+.r.scale{transform:translateY(14px) scale(.96)}.r.scale.on{transform:none}
+
+/* code window */
+.win{border-radius:18px;background:#0B1020;border:1px solid color-mix(in srgb,var(--accT) 34%,transparent);
+  box-shadow:0 0 60px color-mix(in srgb,var(--acc) 26%,transparent),0 30px 60px rgba(0,0,0,.5);overflow:hidden;font-family:'JetBrains Mono',monospace}
+.win .bar{height:44px;background:#0a0f1c;display:flex;align-items:center;gap:8px;padding:0 18px;border-bottom:1px solid var(--line)}
+.wd{width:13px;height:13px;border-radius:50%}
+.win pre{margin:0;padding:30px 30px;font-size:38px;line-height:1.55;font-weight:600;color:var(--ink)}
+.cmt{color:var(--mut2)} .kwd{color:var(--kw)} .str{color:var(--green)}
+.hl{color:var(--red);text-shadow:0 0 18px rgba(255,59,78,.7)}
+
+/* chips / pills */
+.pill{display:inline-block;background:color-mix(in srgb,var(--acc) 18%,transparent);border:1px solid color-mix(in srgb,var(--accT) 42%,transparent);color:var(--accT);font-weight:800;font-size:30px;padding:12px 26px;border-radius:100px}
+.stamp{display:inline-flex;align-items:center;gap:16px;font-weight:900;font-size:72px;color:var(--red2);text-shadow:0 0 40px rgba(255,39,64,.5)}
+
+/* metaphor shelves */
+.shelf{display:flex;gap:16px;align-items:flex-end}
+.box{width:120px;height:120px;border-radius:14px;background:color-mix(in srgb,var(--acc) 16%,#0B1120);border:2px solid color-mix(in srgb,var(--accT) 45%,transparent);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:34px;color:var(--ink)}
+.box.ghost{background:transparent;border-style:dashed;border-color:var(--red);color:var(--red);opacity:.9}
+
+/* two numbers */
+.numrow{display:flex;gap:70px;align-items:stretch}
+.numcard{background:rgba(255,255,255,.04);border:2px solid var(--cc,#334155);border-radius:22px;padding:26px 40px;min-width:360px}
+.numcard .nl{font-weight:800;font-size:26px;letter-spacing:1px;color:var(--mut)}
+.numcard .nv{font-weight:900;font-size:96px;letter-spacing:-3px;line-height:1.05;margin-top:6px}
+.numcard .nn{font-weight:600;font-size:24px;color:var(--mut2);margin-top:8px}
+
+/* defense list */
+.deflist{display:flex;flex-direction:column;gap:20px;max-width:1180px}
+.defrow{display:flex;align-items:center;gap:28px;background:rgba(255,255,255,.035);border:1px solid var(--line);border-left:6px solid var(--acc);border-radius:16px;padding:20px 30px}
+.defrow .dn{flex:none;width:56px;height:56px;border-radius:50%;background:color-mix(in srgb,var(--acc) 22%,transparent);border:1px solid color-mix(in srgb,var(--accT) 50%,transparent);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:30px;color:var(--accT)}
+.defrow .dt{font-weight:800;font-size:34px;color:var(--ink)}
+.defrow .da{margin-left:auto;font-weight:600;font-size:26px;color:var(--mut)}
+.defrow .da b{color:var(--accT)}
+
+/* webcam safe-zone guide */
+#guide{position:absolute;z-index:9;right:56px;bottom:56px;width:470px;height:470px;border:3px dashed color-mix(in srgb,var(--accT) 70%,transparent);border-radius:24px;display:none;align-items:flex-start;justify-content:center;background:color-mix(in srgb,var(--acc) 6%,transparent)}
+#guide.show{display:flex}
+#guide span{margin-top:16px;font-weight:800;font-size:22px;letter-spacing:1px;color:var(--accT);background:rgba(0,0,0,.4);padding:6px 16px;border-radius:100px}
+
+/* hint toast */
+#hint{position:absolute;left:50%;bottom:36px;transform:translateX(-50%);z-index:10;background:rgba(10,14,26,.82);border:1px solid var(--line);border-radius:100px;padding:12px 26px;font-size:22px;font-weight:700;color:var(--mut);letter-spacing:.3px;transition:opacity .5s;backdrop-filter:blur(4px)}
+#hint b{color:var(--ink)} #hint.gone{opacity:0}
+
+/* glow pulse for the thesis word */
+@keyframes gp{0%,100%{text-shadow:0 0 24px color-mix(in srgb,var(--acc) 55%,transparent)}50%{text-shadow:0 0 46px color-mix(in srgb,var(--acc) 90%,transparent)}}
+.pulse.on{animation:gp 2.4s ease-in-out infinite}
+</style>
+</head>
+<body>
+<div id="viewport">
+ <div id="stage">
+  <div class="blob a"></div><div class="blob b"></div>
+  <div id="progress"></div>
+  <div class="brand"><span class="dot">LA</span><span>Tuấn LA Lab</span></div>
+  <div class="baseline"></div>
+  <div id="counter"><b>1</b> / 11</div>
+  <div id="guide"><span>vùng chừa cho mặt · OBS (bấm G ẩn/hiện)</span></div>
+  <div id="hint">→ / Space chuyển · <b>F</b> toàn màn hình · <b>G</b> vùng chừa mặt · <b>H</b> ẩn chữ</div>
+
+  <!-- 1. HOOK -->
+  <section class="slide" data-note="Chào anh em. Bạn hỏi AI một câu về dữ liệu. Vài giây sau nó trả về câu SQL gọn gàng, đúng cú pháp từng dấu phẩy. Chỉ có một vấn đề: cái cột nó gọi tới, trong database của bạn không hề tồn tại.">
+   <div class="pad">
+    <div class="kicker r" data-step="0">Ảo giác AI</div>
+    <h1 class="r" data-step="0" style="font-size:150px;margin-top:34px">AI viết SQL<br>đẹp long lanh.</h1>
+    <h1 class="r" data-step="1" style="font-size:150px;margin-top:14px">Mà <span class="rd">bịa cả cột.</span></h1>
+    <div class="sub r" data-step="2" style="margin-top:40px;max-width:1000px">Vì sao mô hình tự tin gọi tới thứ không tồn tại, và cơ chế nào chặn nó.</div>
+   </div>
+  </section>
+
+  <!-- 2. THE SCENE -->
+  <section class="slide" data-note="Bạn hỏi: giá trị vòng đời trung bình của khách VIP là bao nhiêu. Nó trả về câu này. Đẹp, thụt lề chuẩn. Chỉ là hai cột nó gọi tới, database của bạn không hề có. AI vừa bịa ra cả hai, rất tự tin, không một dòng cảnh báo.">
+   <div class="pad">
+    <div class="kicker r" data-step="0">Hiện trường</div>
+    <div class="sub r" data-step="0" style="margin-top:26px;max-width:760px">Bạn hỏi: <span class="pp">“LTV trung bình của khách VIP là bao nhiêu?”</span></div>
+    <div class="win r scale" data-step="1" style="margin-top:40px;max-width:1120px">
+     <div class="bar"><span class="wd" style="background:#ef4444"></span><span class="wd" style="background:#f59e0b"></span><span class="wd" style="background:#10b981"></span></div>
+     <pre><span class="kwd">SELECT</span> <span class="kwd">AVG</span>(<span class="hl">customer_lifetime_value</span>)
+<span class="kwd">FROM</span> customers
+<span class="kwd">WHERE</span> <span class="hl">segment</span> = <span class="str">'VIP'</span>;</pre>
+    </div>
+    <div class="sub r" data-step="2" style="margin-top:34px;max-width:1240px"><span class="rd" style="font-weight:800">2 cột này trong kho của bạn không hề tồn tại.</span> AI bịa ra. Không một lời “tôi không chắc”.</div>
+   </div>
+  </section>
+
+  <!-- 3. WRONG REFLEX -->
+  <section class="slide" data-note="Phản xạ đầu tiên thường là: chắc model còn yếu, đổi con xịn hơn là xong. Không phải. Đây không phải lỗi vặt của một model dở. Nó là bản chất của cách mọi LLM hoạt động.">
+   <div class="pad">
+    <div class="sub r" data-step="0" style="font-size:40px">Phản xạ đầu tiên của bạn:</div>
+    <div class="r" data-step="0" style="margin-top:26px"><span class="pill" style="font-size:40px;padding:18px 36px">“Chắc model yếu, đổi con xịn hơn là xong.”</span></div>
+    <div class="stamp r scale" data-step="1" style="margin-top:64px">✕ Không phải.</div>
+    <div class="big r" data-step="2" style="margin-top:40px;max-width:1200px">Không phải lỗi một model dở.<br>Là <span class="key">bản chất</span> của cách mọi LLM chạy.</div>
+   </div>
+  </section>
+
+  <!-- 4. WHY -->
+  <section class="slide" data-note="Phải nhớ LLM đang làm gì. Nó không tra database của bạn. Nó đoán chữ tiếp theo nào nghe hợp lý nhất, dựa trên hàng tỷ dòng nó từng đọc. Nó thấy cả nghìn database trên mạng có cột tên như thế, nên với nó viết ra là hợp lý nhất, bất kể kho của bạn có hay không.">
+   <div class="pad">
+    <div class="kicker r" data-step="0">Vì sao nó bịa</div>
+    <div class="big r" data-step="1" style="margin-top:34px">LLM <span class="rd">không tra</span> database của bạn.</div>
+    <div class="big r" data-step="2" style="margin-top:26px">Nó <span class="pp">đoán chữ tiếp theo</span> nào nghe hợp lý nhất.</div>
+    <div class="sub r" data-step="3" style="margin-top:44px;max-width:1180px">Trên mạng có cả nghìn kho dữ liệu đặt cột tên <span style="font-family:'JetBrains Mono',monospace;color:var(--ink)">customer_lifetime_value</span>. Nên với nó, viết ra là <span class="pp">lựa chọn thống kê hợp lý nhất</span> — dù kho của bạn có hay không.</div>
+   </div>
+  </section>
+
+  <!-- 5. METAPHOR -->
+  <section class="slide" data-note="Hình dung AI như một nhân viên mới cực kỳ tự tin, ngày đầu đi làm mà không ai đưa sơ đồ kho. Bạn bảo: lấy giúp anh số ở kệ B7. Cậu chưa từng thấy kho của bạn, nhưng kho nào cậu từng làm cũng có kệ B7. Thế là cậu gật đầu chắc nịch, bê về một thùng hàng, trông rất chuyên nghiệp. Chỉ là kho của bạn đánh số tới B5 là hết. Cậu lấp khoảng trống bằng thứ nghe hợp lý, không phải thứ có thật.">
+   <div class="pad">
+    <div class="kicker r" data-step="0">Ẩn dụ</div>
+    <div class="big r" data-step="0" style="margin-top:30px;max-width:1150px">AI = <span class="pp">nhân viên mới cực tự tin</span>, ngày đầu đi làm mà không ai đưa <b>sơ đồ kho</b>.</div>
+    <div class="sub r" data-step="1" style="margin-top:40px;font-size:38px">Bạn bảo: <span class="pp">“Lấy giúp anh số ở kệ B7.”</span></div>
+    <div class="shelf r" data-step="2" style="margin-top:34px">
+     <div class="box">B1</div><div class="box">B2</div><div class="box">B3</div><div class="box">B4</div><div class="box">B5</div>
+     <div style="width:40px"></div><div class="box ghost">B7?</div>
+    </div>
+    <div class="sub r" data-step="3" style="margin-top:36px;max-width:1240px">Kho của bạn đánh số tới <b style="color:var(--ink)">B5</b> là hết. Cậu lấp khoảng trống bằng thứ <span class="rd">nghe hợp lý</span>, không phải thứ <span class="pp">có thật</span>.</div>
+   </div>
+  </section>
+
+  <!-- 6. IT GETS WORSE -->
+  <section class="slide" data-note="Mà bịa cột thì còn may, chạy lên là văng lỗi ngay, mình biết đường mà sửa. Đáng sợ là mấy kiểu chạy ngon mà số vẫn sai. Nối nhầm hai bảng, mỗi đơn bị đếm lặp theo số dòng sản phẩm, doanh thu thổi phồng mà không ai hay.">
+   <div class="pad">
+    <div class="sub r" data-step="0" style="font-size:40px">Bịa cột còn <span class="pp">may</span> — chạy lên văng lỗi ngay, biết đường sửa.</div>
+    <div class="big r" data-step="1" style="margin-top:34px">Đáng sợ: <span class="rd">chạy ngon mà số vẫn sai.</span></div>
+    <div class="r" data-step="2" style="margin-top:44px;display:flex;gap:26px;align-items:center;flex-wrap:wrap;max-width:1180px">
+     <span class="pill">Nối nhầm 2 bảng</span><span style="font-size:44px;color:var(--mut2)">→</span>
+     <span class="pill">mỗi đơn đếm lặp</span><span style="font-size:44px;color:var(--mut2)">→</span>
+     <span class="stamp" style="font-size:48px">doanh thu thổi phồng</span>
+    </div>
+    <div class="sub r" data-step="3" style="margin-top:40px">Một khách mua 3 món trong 1 đơn → doanh thu <b style="color:var(--red)">×3</b>. Bảng vẫn đẹp. Không ai hay.</div>
+   </div>
+  </section>
+
+  <!-- 7. MOST EXPENSIVE -->
+  <section class="slide" data-note="Đắt nhất là kiểu đoán định nghĩa nghiệp vụ, vì nó chạm thẳng vào con số đưa lên bàn họp. Bạn hỏi doanh thu tháng này. Trừ chiết khấu chưa? Tính đơn hoàn không? AI không biết, nó đoán. Lần này lấy số gộp, lần sau trừ chiết khấu. Hai con số lệch nhau mười lăm phần trăm, cả hai đều đúng cú pháp, bạn không cách nào biết lần nào theo định nghĩa thật của mình.">
+   <div class="pad">
+    <div class="kicker r" data-step="0">Kiểu đắt nhất</div>
+    <div class="big r" data-step="0" style="margin-top:28px">AI <span class="rd">đoán định nghĩa nghiệp vụ.</span></div>
+    <div class="sub r" data-step="1" style="margin-top:34px;font-size:36px">“Doanh thu tháng này” — <span class="pp">trừ chiết khấu chưa? tính đơn hoàn không?</span></div>
+    <div class="numrow r scale" data-step="2" style="margin-top:44px">
+     <div class="numcard" style="--cc:#334155"><div class="nl">LẦN 1 · gộp</div><div class="nv count" data-to="4.2" data-dec="1">0</div><div class="nn">tỷ · gross_amount</div></div>
+     <div style="display:flex;align-items:center;font-size:64px;color:var(--mut2);font-weight:900">≠</div>
+     <div class="numcard" style="--cc:#7f1d2b"><div class="nl" style="color:#fca5a5">LẦN 2 · trừ chiết khấu</div><div class="nv count" data-to="3.8" data-dec="1" style="color:#fca5a5">0</div><div class="nn">tỷ · cùng câu hỏi</div></div>
+    </div>
+    <div class="sub r" data-step="3" style="margin-top:34px;max-width:1240px">Lệch <b style="color:var(--red)">15%</b>. Cả hai “đúng cú pháp”. Bạn không biết lần nào là định nghĩa thật của mình.</div>
+   </div>
+  </section>
+
+  <!-- 8. WAR STORY -->
+  <section class="slide" data-note="Mình gặp đúng cái bẫy này mỗi ngày ở một ngân hàng mình đang làm. Nghiệp vụ banking phức tạp tới mức chữ doanh thu không có một nghĩa: nó tách theo sản phẩm, theo thời điểm ghi nhận, theo đơn đã hay chưa tất toán. Gắn thẳng LLM vào kho mà không có lớp neo định nghĩa, nó sẽ đoán bừa một nhánh rồi trả về con số trông rất dứt khoát. Đó là lý do mình đẩy cái POC semantic layer thành dự án trọng điểm.">
+   <div class="pad">
+    <div class="kicker r" data-step="0">Chuyện thật</div>
+    <div class="big r" data-step="0" style="margin-top:34px;font-size:76px;max-width:1180px">Mình gặp cái bẫy này <span class="pp">mỗi ngày</span>, ở một ngân hàng mình đang làm.</div>
+    <div class="sub r" data-step="1" style="margin-top:40px;max-width:1150px">Nghiệp vụ banking phức tới mức <b style="color:var(--ink)">“doanh thu” không có một nghĩa</b> — tách theo sản phẩm, theo thời điểm ghi nhận, theo đơn đã / chưa tất toán.</div>
+    <div class="sub r" data-step="2" style="margin-top:30px;max-width:1150px">Gắn thẳng LLM vào kho, thiếu lớp neo định nghĩa → nó đoán bừa một nhánh, trả về con số <span class="rd">trông rất dứt khoát</span>.</div>
+   </div>
+  </section>
+
+  <!-- 9. WRONG FIX vs RIGHT FIX -->
+  <section class="slide" data-note="Nên cách chặn không phải đi tìm một AI thông minh hơn. Model to hơn vẫn đoán, nó chỉ bịa mượt hơn thôi, khó phát hiện hơn. Cách làm ngược lại: đừng làm AI giỏi hơn, mà thu hẹp không gian nó được phép xoay xở, tới khi gần như hết chỗ bịa.">
+   <div class="pad">
+    <div class="big r" data-step="0" style="max-width:1200px"><span class="muted">Cách chặn</span> <span class="rd">KHÔNG</span> phải tìm một AI thông minh hơn.</div>
+    <div class="sub r" data-step="1" style="margin-top:26px;max-width:1150px">Model to hơn vẫn đoán token. Nó chỉ bịa <span class="rd">mượt hơn</span> — khó phát hiện hơn.</div>
+    <div class="big r scale" data-step="2" style="margin-top:64px;font-size:92px;max-width:1250px">Mà: <span class="key pulse" data-step="2">thu hẹp không gian</span> để AI hết chỗ bịa.</div>
+   </div>
+  </section>
+
+  <!-- 10. FIVE DEFENSES -->
+  <section class="slide" data-note="Mỗi tuyến phòng thủ thu hẹp một chiều. Schema thực: thu hẹp những gì AI được gọi tới. Quan hệ khai báo: thu hẹp cách nó nối bảng. Forbidden combinations: thu hẹp phép tính nó được làm. Semantic layer: thu hẹp định nghĩa nó được dùng. Vòng làm rõ: thu hẹp những câu nó được tự ý trả lời. Nhân viên mới đáng tin không phải vì thông minh hơn, mà vì cuối cùng có người đưa cho cậu sơ đồ kho thật.">
+   <div class="pad tight" style="top:80px">
+    <div class="kicker r" data-step="0">5 tuyến — mỗi tuyến thu hẹp một chiều</div>
+    <div class="deflist" style="margin-top:30px">
+     <div class="defrow r" data-step="1"><div class="dn">1</div><div class="dt">Schema thực + validate tên</div><div class="da">thu hẹp <b>cái gì được gọi tới</b></div></div>
+     <div class="defrow r" data-step="2"><div class="dn">2</div><div class="dt">Quan hệ khai báo sẵn</div><div class="da">thu hẹp <b>cách nối bảng</b></div></div>
+     <div class="defrow r" data-step="3"><div class="dn">3</div><div class="dt">Forbidden combinations</div><div class="da">thu hẹp <b>phép tính được làm</b></div></div>
+     <div class="defrow r" data-step="4"><div class="dn">4</div><div class="dt">Semantic Layer — 1 định nghĩa chuẩn</div><div class="da">thu hẹp <b>định nghĩa được dùng</b></div></div>
+     <div class="defrow r" data-step="5"><div class="dn">5</div><div class="dt">Vòng làm rõ trước khi trả lời</div><div class="da">thu hẹp <b>câu được tự ý trả</b></div></div>
+    </div>
+   </div>
+  </section>
+
+  <!-- 11. CLOSE -->
+  <section class="slide" data-note="Nhân viên mới đáng tin vì cuối cùng có ai đưa cho cậu sơ đồ kho thật. Nên lần tới ai hứa gắn AI thẳng vào database là hỏi gì cũng trả lời được, bạn hỏi lại một câu thôi: thế khi nó không chắc, nó đoán hay nó dừng lại? Kênh mình mỗi tuần một khái niệm, thấy hữu ích thì theo dõi nhé.">
+   <div class="pad">
+    <div class="sub r" data-step="0" style="font-size:38px;max-width:1150px">Nhân viên mới đáng tin không vì thông minh hơn — vì cuối cùng có người đưa cho cậu <span class="pp">sơ đồ kho thật</span>.</div>
+    <div class="big r" data-step="1" style="margin-top:48px;font-size:70px;max-width:1250px">Lần tới ai hứa “gắn AI thẳng vào DB, hỏi gì cũng trả lời được”…</div>
+    <div class="big r scale" data-step="2" style="margin-top:30px;font-size:82px;max-width:1250px">hỏi lại: khi nó không chắc, nó <span class="rd">đoán</span> hay nó <span class="pp">dừng lại?</span></div>
+    <div class="r" data-step="3" style="margin-top:56px;display:flex;align-items:center;gap:20px">
+     <span class="dot" style="width:44px;height:44px;border-radius:11px;background:var(--brand);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px">LA</span>
+     <span style="font-weight:800;font-size:34px">Tuấn LA Lab</span>
+     <span style="color:var(--mut2);font-size:30px">· mỗi tuần một khái niệm data · <b style="color:var(--accT)">theo dõi nhé</b></span>
+    </div>
+   </div>
+  </section>
+
+ </div>
+</div>
+
+<script>
+(function(){
+  const stage=document.getElementById('stage');
+  const slides=[...stage.querySelectorAll('.slide')];
+  const bar=document.getElementById('progress');
+  const counter=document.getElementById('counter');
+  const guide=document.getElementById('guide');
+  const hint=document.getElementById('hint');
+  const vp=document.getElementById('viewport');
+  let si=0, step=0;
+
+  function fit(){
+    const s=Math.min(innerWidth/1920, innerHeight/1080);
+    stage.style.transform='translate(-50%,-50%) scale('+s+')';
+  }
+  addEventListener('resize',fit); fit();
+
+  function maxStep(sl){let m=0;sl.querySelectorAll('[data-step]').forEach(e=>{m=Math.max(m,+e.dataset.step)});return m;}
+
+  function runCount(el){
+    if(el.classList.contains('done'))return;
+    el.classList.add('done');
+    const to=parseFloat(el.dataset.to), dec=+(el.dataset.dec||0);
+    const t0=performance.now(), dur=750;
+    function tick(t){
+      let k=Math.min(1,(t-t0)/dur); k=1-Math.pow(1-k,3);
+      el.textContent=(to*k).toFixed(dec);
+      if(k<1)requestAnimationFrame(tick); else el.textContent=to.toFixed(dec);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function render(){
+    slides.forEach((sl,i)=>{
+      const on=i===si; sl.classList.toggle('active',on);
+      sl.querySelectorAll('[data-step]').forEach(e=>{
+        e.classList.toggle('on', on && (+e.dataset.step)<=step);
+      });
+    });
+    bar.style.width=(((si+ (maxStep(slides[si])? step/(maxStep(slides[si])+1):0))+ (maxStep(slides[si])?0:1))/slides.length*100)+'%';
+    counter.innerHTML='<b>'+(si+1)+'</b> / '+slides.length;
+    slides[si].querySelectorAll('.count.on').forEach(runCount);
+  }
+  function next(){ if(step<maxStep(slides[si])){step++;} else if(si<slides.length-1){si++;step=0;} else return; render(); }
+  function prev(){ if(step>0){step--;} else if(si>0){si--;step=maxStep(slides[si]);} else return; render(); }
+  function go(i){ si=Math.max(0,Math.min(slides.length-1,i)); step=0; render(); }
+
+  let hintTimer=setTimeout(()=>hint.classList.add('gone'),5200);
+  function killHint(){clearTimeout(hintTimer);hint.classList.add('gone');}
+
+  addEventListener('keydown',e=>{
+    const k=e.key;
+    if(k==='ArrowRight'||k===' '||k==='PageDown'||k==='ArrowDown'){e.preventDefault();next();killHint();}
+    else if(k==='ArrowLeft'||k==='PageUp'||k==='ArrowUp'){e.preventDefault();prev();}
+    else if(k==='Home'){go(0);} else if(k==='End'){go(slides.length-1);}
+    else if(k==='f'||k==='F'){ if(!document.fullscreenElement)vp.requestFullscreen&&vp.requestFullscreen(); else document.exitFullscreen&&document.exitFullscreen(); }
+    else if(k==='g'||k==='G'){guide.classList.toggle('show');}
+    else if(k==='h'||k==='H'){stage.classList.toggle('chrome-hidden');}
+  });
+  // click halves to navigate (touchpad friendly)
+  vp.addEventListener('click',e=>{ if(e.clientX < innerWidth*0.35)prev(); else next(); killHint(); });
+
+  render();
+})();
+</script>
+</body>
+</html>

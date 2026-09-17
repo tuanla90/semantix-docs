@@ -12,11 +12,11 @@ Dashboard là không gian tổng hợp các biểu đồ, số liệu KPI và b�
 |----------------|------------|
 | **Tạo & Quản lý** | Tạo mới, đặt tên, mô tả, sao chép, xóa dashboard |
 | **Thêm nội dung** | Ghim từ AI Chat, thêm widget thủ công, import từ kết quả phân tích |
-| **Chỉnh sửa widget** | Thay đổi loại biểu đồ, cấu hình trục, màu sắc, tiêu đề, SQL |
+| **Chỉnh sửa widget** | Chỉnh sửa trực tiếp tại chỗ (In-place Editor), đổi loại biểu đồ, trục, SQL, AI styling |
 | **Bố cục** | Kéo thả di chuyển, thay đổi kích thước, sắp xếp theo nhóm |
 | **Tương tác xem** | Hover xem tooltip, zoom, drill-down, xem SQL, tải dữ liệu widget |
-| **Lọc dữ liệu** | Global filter áp dụng toàn dashboard, filter riêng theo widget |
-| **Làm mới dữ liệu** | Refresh thủ công, auto-refresh theo chu kỳ, xóa cache |
+| **Lọc dữ liệu** | Global filter, Date Range Picker đôi kiểu đặt phòng, tự động ánh xạ Grain thời gian |
+| **Làm mới dữ liệu** | Refresh thủ công, auto-refresh, xóa cache, dự toán chi phí quét (Refresh Cost Estimation) |
 | **Chia sẻ** | Public link, chia sẻ với user cụ thể, nhúng iframe vào app ngoài |
 | **Xuất** | Export PDF, tải dữ liệu widget (CSV/Excel), Scheduled Reports qua email |
 | **Cài đặt** | Auto-refresh, cache TTL, phân quyền, chuyển sang chế độ Fullscreen |
@@ -177,6 +177,17 @@ Kiểm soát cách dữ liệu được trực quan hóa:
 | **Show Border** | Hiển thị/ẩn đường viền widget |
 | **Background Color** | Màu nền widget |
 | **Header Style** | Style của thanh tiêu đề |
+
+### Chỉnh Sửa Trực Tiếp Tại Chỗ (In-Place Widget Editing)
+
+Thay vì phải chuyển trang hay mở tab trình duyệt mới làm mất bối cảnh bảng điều khiển, Semantix hỗ trợ trải nghiệm **In-place Widget Editor** trực tiếp:
+
+* **Kích hoạt tức thì ngay trên Dashboard**: Nhấp biểu tượng bánh răng ⚙️ hoặc chọn **⋮ → Edit Widget** trên bất kỳ thẻ biểu đồ nào để mở hộp thoại tùy biến (`ChartCustomizationDialog`) dưới dạng modal nổi.
+* **Xem trước trực tiếp (Live Preview Canvas)**: Mọi thao tác đổi loại biểu đồ, cấu hình lại trục X/Y, ẩn hiện nhãn hoặc đổi bảng màu đều cập nhật ngay lập tức trên khung preview bên cạnh.
+* **Trợ lý AI hỗ trợ phong cách biểu đồ (AI Chart Styling)**: Thanh công cụ AI tích hợp sẵn gợi ý trực quan hóa phù hợp nhất với hình thái và đặc tính của tập dữ liệu hiện tại.
+* **Tính toán nhanh trên bảng (Table Calculations)**: Hỗ trợ tính tổng tích lũy (Running Total), tỷ trọng phần trăm (% of Total) hoặc độ lệch kỳ trước trực tiếp trên snapshot dữ liệu mà không cần chỉnh sửa câu lệnh SQL.
+* **Xem và sao chép SQL gốc**: Tab SQL của modal cho phép kiểm tra chi tiết câu truy vấn đang thực thi và chi phí dữ liệu tương ứng.
+* **Áp dụng tức thì**: Bấm **Save** để lưu thay đổi và cập nhật lại widget trên Dashboard mà không cần tải lại toàn bộ trang.
 
 ---
 
@@ -363,6 +374,42 @@ Tất cả biểu đồ tự động lọc: tháng 6, chi nhánh Hà Nội
 - Nhấn **×** bên cạnh giá trị đã chọn → xóa điều kiện lọc đó.
 - Nhấn **Reset All** → trả về giá trị mặc định của tất cả filter.
 
+### Bộ Chọn Khoảng Thời Gian Đôi Kiểu Đặt Phòng (Dual-Pane Booking Date Range Picker)
+
+Khi sử dụng Global Filter để lọc dữ liệu theo khoảng ngày, Semantix mang đến trải nghiệm **Dual-pane Date Range Picker** lấy cảm hứng từ giao diện đặt phòng du lịch hiện đại:
+
+```
+┌──────────────────────────────────────┬──────────────────────────────────────┐
+│  ◀   Tháng 08 / 2026                 │      Tháng 09 / 2026   ▶             │
+├──────────────────────────────────────┼──────────────────────────────────────┤
+│  T2  T3  T4  T5  T6  T7  CN          │  T2  T3  T4  T5  T6  T7  CN          │
+│   3   4   5   6   7   8   9          │       1   2   3   4   5   6          │
+│  10  11  12  13 [14] 15  16          │   7   8   9  10  11  12  13          │
+│  17  18  19  20  21  22  23          │  14  15  16  17 [18] 19  20          │
+│  24  25  26  27  28  29  30          │  21  22  23  24  25  26  27          │
+│  31                                  │  28  29  30                          │
+├──────────────────────────────────────┴──────────────────────────────────────┤
+│ [Presets: 7 ngày qua | Tháng này | Quý này | YTD]        [ Hủy ] [ Áp dụng ]│
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+* **Hai khung lịch trực quan hiển thị song song**: Khung bên trái chọn ngày bắt đầu (*Start Date*), khung bên phải chọn ngày kết thúc (*End Date*).
+* **Điều hướng tháng độc lập (Independent Navigation)**: Việc chuyển tháng hoặc nhảy năm ở một bên không kéo giật hoặc làm thay đổi góc nhìn của bên còn lại.
+* **Presets thời gian động phong phú**: Chọn nhanh các khoảng thời gian quen thuộc chỉ bằng 1 cú nhấp: *Hôm nay, Hôm qua, 7 ngày qua, 30 ngày qua, Tháng này, Quý này, Năm nay, YTD (Từ đầu năm đến nay)*.
+* **Kiểm tra tính hợp lệ tự động**: Ngăn chặn chọn ngày kết thúc đứng trước ngày bắt đầu; tự động hỗ trợ chọn phạm vi ngày đơn khi cần xem số liệu của một ngày cụ thể.
+
+### Nhận Diện Trục Thời Gian & Ánh Xạ Grain Tự Động (Auto Grain Mapping)
+
+Một Dashboard thường kết hợp nhiều dạng biểu đồ khác nhau. Khi người dùng thay đổi bộ lọc kỳ phân tích toàn cục (**Global Time Grain**: Ngày, Tuần, Tháng, Quý, Năm), Semantix áp dụng cơ chế tự động nhận diện thông minh:
+
+1. **Tự động nhận diện biểu đồ có trục thời gian**:
+   - Hệ thống quét cấu hình của từng biểu đồ: các biểu đồ có khai báo `timeRange`, `queryConfig.timeFilters`, hoặc các cột dữ liệu thời gian (`date`, `created_at`, `thang`, `ngay`).
+   - Nhận diện chính xác cả các biểu đồ cột (Column Chart) mà AI sinh ra có cột ngày tháng nằm trong danh mục `dimensions`.
+2. **Ánh xạ chu kỳ đồng bộ**:
+   - Tự động chuyển đổi mức độ tổng hợp của tất cả biểu đồ chuỗi thời gian tương thích sang Grain được chọn (ví dụ: toàn bộ biểu đồ đường và cột đồng loạt chuyển từ dữ liệu *Theo Tháng* sang *Theo Tuần*).
+3. **Loại trừ thông minh các widget không phù hợp**:
+   - Hệ thống tự động bỏ qua các widget không có trục thời gian cần nhóm lại để tránh lỗi truy vấn, bao gồm: thẻ KPI Scorecard, biểu đồ tỷ lệ Donut/Pie, biểu đồ phễu Funnel, Radar, Treemap và các bảng dữ liệu tĩnh.
+
 ---
 
 ## 8. Auto-Refresh — Tự Động Làm Mới
@@ -399,6 +446,40 @@ Nhấn nút **🔄 Refresh** (biểu tượng mũi tên vòng tròn) ở góc tr
 - Cập nhật tất cả biểu đồ cùng lúc.
 
 Dùng khi bạn biết dữ liệu vừa được cập nhật (ví dụ: pipeline ETL vừa chạy xong) và muốn xem ngay kết quả mới nhất mà không cần chờ cache hết hạn.
+
+### Dự Toán Chi Phí Làm Mới Dashboard (Refresh Cost Estimation)
+
+Làm mới toàn bộ Dashboard có thể tiêu tốn tài nguyên tính toán đáng kể trên kho dữ liệu (Data Warehouse như BigQuery, Snowflake, ClickHouse). Để giúp người dùng và doanh nghiệp chủ động kiểm soát chi phí, Semantix cung cấp bảng **Dự toán chi phí làm mới** trước khi bấm làm mới:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ 💳 Dự Toán Chi Phí Làm Mới Toàn Bộ Dashboard                           │
+├────────────────────────────────────────────────────────────────────────┤
+│ • Tổng dung lượng quét dự kiến:  1.42 GB                               │
+│ • Chi phí truy vấn ước tính:     ~$0.0071 USD (Phân cấp: Thấp 🟢)     │
+│ • Cơ sở định giá:                8 widget đo thực tế, 2 widget dry-run │
+│                                                                        │
+│ ℹ️ Chi tiết theo từng Widget:                                         │
+│   1. [Biểu đồ đường] Doanh thu 30 ngày:  420 MB (Thực tế lúc 08:30)    │
+│   2. [Biểu đồ cột] Doanh thu theo kênh:  310 MB (Thực tế lúc 08:30)    │
+│   3. [Bảng] Đơn hàng cần xử lý:          690 MB (Dry-run mới nhất)     │
+│   4. [Thẻ Text] Tiêu đề & chú thích:     0 MB   (Không tốn chi phí)    │
+│                                                                        │
+│ [ Chi Tiết Phân Tích ]                                  [ Làm Mới Ngay ]│
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+#### Các Nguyên Tắc Minh Bạch Của Bảng Dự Toán
+
+1. **Kết hợp kép giữa Đo Thực Tế & Dry-Run**:
+   - Với widget đã chạy trước đó và không thay đổi cấu hình, hệ thống lấy dung lượng quét thực tế từ lần làm mới gần nhất (`actualBytes`).
+   - Với widget mới thêm hoặc có thay đổi bộ lọc, hệ thống thực hiện truy vấn thử nghiệm không tốn phí (*dry-run*) trên database engine để đo dung lượng quét trước (`dryRunBytes`).
+2. **Cảnh báo sai lệch dung lượng (`Divergence Alert`)**:
+   - Nếu dung lượng dry-run hôm nay lệch vượt mức an toàn (mặc định > 20%) so với lần làm mới trước, hệ thống sẽ gắn nhãn cảnh báo để bạn xem xét trước khi bấm làm mới.
+3. **Phân cấp chi phí trực quan (Query Cost Tiers)**:
+   - Gắn nhãn màu sắc rõ ràng (Xanh: < 100MB, Vàng: 100MB - 1GB, Cam: 1GB - 10GB, Đỏ: > 10GB) giúp nhận diện ngay các truy vấn nặng.
+4. **Minh bạch các widget không thể định giá**:
+   - Nếu có widget kết nối nguồn dữ liệu không hỗ trợ đo trước, hệ thống sẽ nêu rõ số lượng widget không định giá được thay vì âm thầm tính bằng 0.
 
 ---
 

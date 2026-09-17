@@ -78,33 +78,75 @@ https://{domain}/vi/embed/dashboard/{dashboardId}?token={token}
 
 ***
 
-## Locked Filters (Bộ Lọc Cố Định)
+## Cơ Chế Bộ Lọc Khóa (Locked Filters - S22)
 
-`lockedFilters` nhúng điều kiện lọc vào trong token — người xem không thể bypass:
+`lockedFilters` là cơ chế bảo mật cấp cơ sở dữ liệu được tích hợp trực tiếp vào quy trình ký và thẩm định JWT của Semantix (`lib/embed-tokens.ts`).
+
+### Cấu Trúc JWT Payload Sau Khi Ký
+Khi API sinh mã nhúng, máy chủ mã hóa và đóng dấu các claims bảo mật:
 
 ```json
 {
-  "lockedFilters": {
+  "iss": "semantix-embed",
+  "did": "dash_abc123",
+  "tv": 1,
+  "lf": {
     "customer_id": "12345",
     "region": "HCM",
     "year": 2026
-  }
+  },
+  "uid": "usr_sec_admin_01",
+  "iat": 1719039600,
+  "exp": 1719043200
 }
 ```
 
-**Cách hoạt động:**
+| Claim | Tên Đầy Đủ | Mục Đích Bảo Mật |
+|---|---|---|
+| `did` | Dashboard ID | Định danh dashboard được cấp phép nhúng |
+| `tv` | Token Version | Phiên bản token (dùng để thu hồi token tức thì khi cần) |
+| `lf` | Locked Filters (S22) | Bộ lọc dòng bắt buộc, ký bằng khóa bí mật `EMBED_JWT_SECRET` |
+| `uid` | Issued By User ID (S02) | Danh tính người phát hành token, dùng để kế thừa ngữ cảnh kiểm toán và RLS |
 
-1. Token được ký với `lockedFilters`
-2. Khi render dashboard, Semantix đọc filters từ token
-3. Áp dụng `WHERE customer_id = '12345' AND region = 'HCM' AND year = 2026` vào tất cả queries
-4. Người xem chỉ thấy dữ liệu đúng với filters đó
+### Nguyên Tắc Hoạt Động Phía Máy Chủ (Server-side RLS Enforcement)
+1. **Kiểm định chữ ký:** Máy chủ xác thực chữ ký HMAC-SHA256 bằng khóa bí mật `EMBED_JWT_SECRET` (hoặc `AUTH_SECRET`). Token hết hạn hoặc bị sửa đổi bất kỳ ký tự nào sẽ bị từ chối ngay.
+2. **Chuyển đổi thành RLS Base CTE:** Khi thực thi truy vấn dữ liệu cho các widget, Semantix tự động bóc tách claim `lf` và ép buộc vào Base CTE của câu truy vấn:
+   ```sql
+   WITH base_view AS (
+       SELECT * FROM core_sales
+       WHERE customer_id = '12345' AND region = 'HCM' AND year = 2026
+   )
+   SELECT category, SUM(amount) AS total FROM base_view GROUP BY category;
+   ```
+3. **Chống giả mạo:** Bộ lọc khóa không thể bị ghi đè bởi bất kỳ query parameter hay body payload nào do client gửi lên.
 
-**Use case multi-tenant:**
+### Trải Nghiệm Giao Diện Nhúng (Client-side Embed Behavior)
+- **Chế độ chỉ đọc (Read-Only State):** Trên giao diện dashboard nhúng, các giá trị trong `lockedFilters` hiển thị dưới dạng huy hiệu cố định có biểu tượng ổ khóa (🔒).
+- **Vô hiệu hóa chỉnh sửa:** Người dùng bên ngoài không thể xóa nhãn lọc, không thể bấm vào menu để đổi giá trị.
+- **Bộ lọc bổ sung:** Mọi thao tác lọc bổ sung từ người dùng (nếu giao diện không ẩn thanh lọc) sẽ được nối thêm qua toán tử `AND` vào truy vấn, đảm bảo không bao giờ mở rộng ra ngoài phạm vi dữ liệu đã khóa.
+
+### Ví Dụ Tích Hợp Đa Khách Hàng (Multi-Tenant)
 
 ```javascript
-// Mỗi khách hàng chỉ thấy data của họ
-const token = await createEmbedToken('dash_abc123', {
-  customer_id: currentUser.tenantId,
+// Server của bạn tạo token cho từng khách hàng cụ thể
+const tokenResponse = await fetch('https://semantix.company.com/api/v1/embed/token', {
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${process.env.SEMANTIX_API_KEY}`,
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    dashboardId: 'dash_financial_summary',
+    expiryMinutes: 120,
+    lockedFilters: {
+      tenant_id: currentSession.tenantId,
+      branch_code: currentSession.branchCode,
+    },
+    userContext: {
+      userId: currentSession.userId,
+      email: currentSession.email,
+    },
+  }),
 });
 ```
 

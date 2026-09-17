@@ -164,38 +164,100 @@ function EmbeddedDashboard({ dashboardId }) {
 
 ---
 
-## Locked Filters — Cô Lập Dữ Liệu
+## Locked Filters — Cơ Chế Bộ Lọc Khóa (S22)
 
-`lockedFilters` nhúng điều kiện lọc vào trong token — người xem không thể bypass:
+Trong môi trường ngân hàng và Multi-tenant SaaS, **Bộ Lọc Khóa (Locked Filters - S22)** là giải pháp cốt lõi để cô lập dữ liệu tuyệt đối giữa các tổ chức, chi nhánh hoặc đối tác:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    KIẾN TRÚC LOCKED FILTERS (S22)                           │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  1. Backend ứng dụng:                                                       │
+│     Định nghĩa `lockedFilters: { tenant_id: "T123", branch: "HN" }`         │
+│     Máy chủ Semantix ký token JWT (claim `lf`, `uid`, `tv`)                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  2. Máy chủ Semantix (Server-side Enforcement):                             │
+│     • Giải mã & thẩm định chữ ký bí mật qua `EMBED_JWT_SECRET`              │
+│     • Tự động chuyển đổi `lockedFilters` thành bộ lọc dòng RLS cưỡng chế    │
+│     • Chèn trực tiếp vào Base CTE của mọi truy vấn trong Dashboard          │
+│     • Miễn nhiễm hoàn toàn với các tham số thao túng từ client             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  3. Giao diện nhúng (Client-side Embed UI):                                 │
+│     • Bộ lọc hiển thị cố định với biểu tượng ổ khóa 🔒 (Read-only badge)   │
+│     • Người xem KHÔNG THỂ gỡ bỏ, đổi giá trị hay vượt rào dữ liệu           │
+│     • Bộ lọc tương tác phụ chỉ có thể thu hẹp thêm dữ liệu (AND logic)      │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 1. Định nghĩa Bộ Lọc Khóa trong Payload Token
+Bộ lọc khóa được truyền trực tiếp trong payload khi yêu cầu tạo Embed Token từ Backend server:
 
 ```json
 {
+  "dashboardId": "dash_abc123",
+  "expiryMinutes": 60,
   "lockedFilters": {
-    "customer_id": "12345",
-    "region": "HN",
-    "year": 2026
+    "customer_id": "CUST_98765",
+    "branch_code": "CN_HOANKIEM",
+    "status": "ACTIVE"
   }
 }
 ```
 
-Khi render, Semantix tự động thêm:
+Token sinh ra chứa claim `lf` được mã hóa và ký bảo mật.
+
+### 2. Ép Buộc Base CTE Phía Máy Chủ (Server-side Base CTE Injection)
+Khi client gửi yêu cầu tải dữ liệu cho các biểu đồ (Widgets) trong dashboard nhúng:
+- Máy chủ Semantix thẩm định chữ ký JWT của token. Nếu token bị giả mạo hoặc hết hạn, yêu cầu bị từ chối ngay lập tức (`HTTP 401/403`).
+- Semantix phân giải các điều kiện trong `lockedFilters` và chèn cưỡng chế vào **Base CTE** hoặc mệnh đề `WHERE` cơ sở của câu lệnh SQL trước khi gửi xuống cơ sở dữ liệu:
+
 ```sql
-WHERE customer_id = '12345' AND region = 'HN' AND year = 2026
+-- Ví dụ câu truy vấn được Semantix tự động cấu trúc lại phía máy chủ:
+WITH base_view AS (
+    SELECT * 
+    FROM analytics.fact_customer_transactions
+    -- ÉP BUỘC TỪ LOCKED FILTERS (S22) — Bất khả xâm phạm từ Client
+    WHERE customer_id = 'CUST_98765' 
+      AND branch_code = 'CN_HOANKIEM'
+      AND status = 'ACTIVE'
+)
+SELECT 
+    transaction_date,
+    SUM(amount) AS total_amount
+FROM base_view
+GROUP BY transaction_date;
 ```
 
-**Use case multi-tenant SaaS:**
+Dù người dùng có sử dụng Developer Tools hay gửi request API tùy biến, họ **không bao giờ có thể truy cập vượt ngoài phạm vi của Base CTE**.
+
+### 3. Trải Nghiệm Giao Diện Nhúng (Client-side Embed UI)
+- **Hiển thị Read-Only trực quan:** Trên thanh công cụ lọc của Dashboard, các bộ lọc khóa được hiển thị dưới dạng nhãn chỉ đọc kèm biểu tượng ổ khóa (🔒). Nút xóa bộ lọc (x) và menu chọn giá trị bị vô hiệu hóa hoàn toàn.
+- **Tương tác an toàn (Additive Filters):** Người xem bên ngoài vẫn có thể sử dụng các bộ lọc tương tác bổ sung (ví dụ: lọc khoảng thời gian, nhóm sản phẩm). Các bộ lọc bổ sung này được kết hợp bằng toán tử `AND` với bộ lọc khóa, chỉ cho phép xem sâu hơn tập dữ liệu được cấp quyền, tuyệt đối không thể mở rộng phạm vi dữ liệu.
+
+### 4. Các Tình Huống Ứng Dụng Điển Hình
+
+**Multi-tenant SaaS Portal:**
 ```javascript
-// Mỗi khách hàng của bạn chỉ thấy data của họ
+// Đảm bảo khách hàng công ty A không bao giờ thấy số liệu công ty B
 lockedFilters: {
-  tenant_id: currentTenant.id,
+  tenant_id: session.currentTenantId,
 }
 ```
 
-**Use case phân quyền theo chi nhánh:**
+**Ngân hàng & Chi nhánh Phân tán:**
 ```javascript
+// Giám đốc chi nhánh chỉ xem dữ liệu trong phạm vi phụ trách
 lockedFilters: {
-  branch_code: currentUser.branch,
-  department: currentUser.department,
+  branch_code: user.branchCode,
+  region: user.region,
+}
+```
+
+**Phân quyền Cán bộ Tín dụng:**
+```javascript
+// Cán bộ quan hệ khách hàng (RM) chỉ xem danh mục khách hàng được phân công
+lockedFilters: {
+  assigned_officer_id: officer.id,
 }
 ```
 

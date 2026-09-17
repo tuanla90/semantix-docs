@@ -56,75 +56,97 @@ Xem cấu hình Nginx mẫu: [Yêu Cầu Hệ Thống](../getting-started/requir
 
 ---
 
-## Phân Quyền Truy Cập (RBAC)
+## Gói Bảo Mật Doanh Nghiệp Cấp Ngân Hàng (Security Pack)
 
-Semantix dùng **Role-Based Access Control**:
+Để đáp ứng tiêu chuẩn an toàn thông tin khắt khe của các tổ chức tài chính và ngân hàng, Semantix triển khai bộ tiêu chuẩn bảo mật chuyên sâu (**Security Pack S02/S04/S22/S26**):
 
-- Mỗi người dùng có một **Role**
-- Role quyết định những tính năng nào user được phép dùng
-- Admin có thể tạo Role tùy chỉnh với permissions cụ thể
-
-**Ví dụ phân quyền theo vai trò:**
-
-| Role | Permissions | Dùng Cho |
-|------|-------------|---------|
-| Viewer | `view:dashboards`, `use:chat` | Nhân viên xem báo cáo |
-| Analyst | + `edit:dashboards`, `view:data_models` | Data analyst |
-| Data Engineer | + `manage:connections`, `manage:pipelines` | Kỹ sư dữ liệu |
-| Admin | `admin:all` | Quản trị viên hệ thống |
-
----
-
-## Row-Level Security (RLS)
-
-Giới hạn dữ liệu người dùng thấy dựa trên thuộc tính cá nhân:
-
-```sql
--- Tự động thêm vào mọi query của user có chi_nhanh = "HN"
-WHERE chi_nhanh = 'HN'
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                 SEMANTIX ENTERPRISE SECURITY ARCHITECTURE                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  Kênh phân phối:     Public Share  │   Embed Token   │  Scheduled Reports   │
+│  Danh tính & RLS:    Token Creator │   Claim `uid`   │  Report Owner (rid)  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  Lớp phòng thủ 1:    Khử khuẩn & Kiểm định sâu SQL Identifiers (S26)        │
+│                      • Chặn NUL, control chars, quotes, dấu ngắt lệnh       │
+│                      • Quote theo dialect (BigQuery, PostgreSQL, MSSQL)     │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  Lớp phòng thủ 2:    Bộ lọc khóa Base CTE (Locked Filters - S22)            │
+│                      • Ép buộc điều kiện phân vùng/tenant vào lõi SQL       │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  Lớp phòng thủ 3:    Kiểm soát rò rỉ SQL & Context (view_context)           │
+│                      • Ẩn mã SQL, công thức, prompt, engine errors          │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-Người dùng không biết filter này tồn tại — họ chỉ thấy dữ liệu được phép xem.
+---
 
-Xem chi tiết: [Row-Level Security](../contexts/rls.md)
+## Ép Buộc Row-Level Security (RLS) Trên Mọi Kênh Phân Phối
+
+Row-Level Security (RLS) tại Semantix không chỉ áp dụng trong phiên làm việc trực tiếp của người dùng mà được **áp đặt cưỡng chế trên toàn bộ các kênh phân phối dữ liệu**:
+
+1. **Liên kết chia sẻ công khai (Public Share Links):**
+   - Khi một dashboard hoặc báo cáo được chia sẻ qua liên kết public, truy vấn ngầm định **không** chạy với quyền quản trị vô hạn.
+   - Hệ thống tự động kế thừa ngữ cảnh phân quyền và chính sách RLS từ tài khoản của người tạo liên kết (Creator Context) hoặc áp đặt bộ lọc giới hạn công khai. Dữ liệu nhạy cảm ngoài phạm vi cho phép sẽ bị chặn hoàn toàn ở tầng cơ sở dữ liệu.
+
+2. **Mã nhúng ứng dụng (Embed Token - S02 & S22):**
+   - Mã nhúng JWT được ký bằng thuật toán HMAC-SHA256 với khóa bí mật `EMBED_JWT_SECRET`.
+   - Máy chủ tự động gắn danh tính người phát hành vào claim bí mật `uid` (S02). Mọi truy vấn từ dashboard nhúng đều được thẩm định danh tính này.
+   - Áp đặt **Locked Filters (S22)**: Các điều kiện lọc bảo mật (như `customer_id`, `branch_code`, `organization_id`) được nhúng trực tiếp trong claim `lf` của token. Phía máy chủ tự động chuyển các bộ lọc này thành mệnh đề RLS bắt buộc trong Base CTE của truy vấn SQL. Người xem qua iframe không thể gỡ bỏ hoặc chỉnh sửa các bộ lọc này.
+
+3. **Báo cáo định kỳ tự động (Scheduled Reports - S04):**
+   - Báo cáo gửi email định kỳ chạy dưới dạng tác vụ nền (background job) không có phiên người dùng tương tác trực tiếp.
+   - Hệ thống tạo token kết xuất nội bộ mang claim `rid` (Report ID). Quyền đọc dữ liệu và chính sách RLS được trích xuất nghiêm ngặt từ chủ sở hữu cấu hình lịch báo cáo (Report Owner) đã được kiểm toán trong cơ sở dữ liệu.
 
 ---
 
-## SSO & MFA
+## Khử Khuẩn & Kiểm Tra SQL Identifiers Sâu (S26)
 
-Semantix tích hợp với IdP của công ty (Okta, Azure AD, Google Workspace...) — tận dụng toàn bộ chính sách bảo mật đã có:
+Để ngăn chặn tuyệt đối các cuộc tấn công chèn mã SQL Injection thông qua tên cột lọc, tham số định danh và tham số thời gian, Semantix áp dụng cơ chế xác thực **Fail-Closed 3 lớp**:
 
-- **MFA** từ IdP tự động áp dụng cho Semantix
-- **Session timeout** đồng bộ với IdP
-- **Auto-deactivate**: Khi vô hiệu hóa user trong Okta, họ tự động mất quyền truy cập Semantix
+### 1. Quy tắc từ chối định danh độc hại (`isSafeFilterIdentifier`)
+Mọi tên cột bộ lọc do client gửi lên (bao gồm cả cột ngày `_mappedColumn` trong khoảng ngày toàn cục) phải vượt qua bộ kiểm tra nghiêm ngặt:
+- **Độ dài tối đa:** 256 ký tự (`MAX_FILTER_IDENTIFIER_LENGTH = 256`).
+- **Cấm tuyệt đối các ký tự đóng/mở định danh:** Dấu nháy kép (`"`), dấu nháy đơn (`'`), backtick (`` ` ``), ngoặc vuông (`[` và `]`).
+- **Cấm ký tự escape và ngắt lệnh:** Dấu gạch chéo ngược (`\`), dấu chấm phẩy (`;`).
+- **Cấm ký tự điều khiển & byte độc hại:** Ký tự điều khiển ASCII `\x00-\x1f`, byte NUL (`\0`), ký tự khoảng trắng không hợp lệ trong tên cột.
+- **Cấm cú pháp chú thích SQL:** `--`, `/*`, `*/`.
 
-Xem chi tiết: [SSO Configuration](sso.md)
+### 2. Khử khuẩn cấu trúc bộ lọc (`sanitizeChartFilters`)
+- Client chỉ được phép gửi các trường hợp lệ: `{ column, operator, value, value2, values }`.
+- Mọi trường độc hại hoặc thuộc tính nâng cao do kẻ tấn công cố tình chèn thêm (ví dụ: `type: 'sql'`, `sqlExpression`) sẽ bị loại bỏ hoàn toàn trước khi chuyển sang bộ phân giải truy vấn (Query Engine).
+- Đối với tham số khoảng ngày toàn cục, thuộc tính `_mappedColumn` nếu không hợp lệ sẽ bị hủy ngay lập tức (không suy đoán thay thế). Chu kỳ thời gian (`grain`) bị giới hạn trong tập đóng an toàn: `auto`, `day`, `week`, `month`, `quarter`, `year`.
+
+### 3. Quote định danh chuẩn hóa theo Dialect
+Tên cột sau khi được kiểm tra an toàn sẽ được đóng ngoặc bảo vệ (quote) tự động theo từng hệ quản trị cơ sở dữ liệu cụ thể (`quoteAlias`):
+- **PostgreSQL / DuckDB / Google Sheets:** `"column_name"`
+- **Google BigQuery / MySQL / ClickHouse / Databricks:** `` `column_name` ``
+- **Microsoft SQL Server:** `[column_name]`
+
+Nếu tên cột không khớp với danh sách cột được phép truy cập trong Model hoặc Data View, bộ lọc sẽ bị loại bỏ (fail-closed) và ghi log cảnh báo trên máy chủ, ngăn chặn việc rò rỉ dữ liệu thông qua kỹ thuật SQL Error-based Injection.
 
 ---
 
-## Audit Logs (Nhật Ký Kiểm Toán)
+## Bảo Vệ Quyền Riêng Tư Dữ Liệu: Zero Data Retention
 
-Mọi thao tác được ghi lại trong audit trail bất biến:
+Semantix được thiết kế theo kiến trúc **Zero Data Retention** đối với các mô hình AI:
 
-| Loại Sự Kiện | Được Ghi |
-|-------------|---------|
-| Authentication | Đăng nhập thành công/thất bại, SSO login, logout |
-| User Management | Tạo/xóa/sửa user, thay đổi role |
-| Data Access | Mọi query chạy qua AI Chat và API |
-| Configuration | Thay đổi connection, data model, metric |
-| Admin Actions | Tạo/thu hồi API key, thay đổi cài đặt |
-
-Xem chi tiết: [Audit Logs](audit-logs.md)
+- **AI không bao giờ tiếp cận dữ liệu thô (Raw Business Data):** Khi người dùng đặt câu hỏi, Semantix chỉ trích xuất và gửi cho AI mô hình ngữ nghĩa (Semantic Metadata) gồm: tên bảng, tên cột, kiểu dữ liệu, mô tả kinh doanh và các quy tắc nghiệp vụ (metrics/calculated fields).
+- **Không gửi bản ghi thực tế:** Dữ liệu giao dịch, số dư tài khoản, số định danh khách hàng (PII) KHÔNG BAO GIỜ bị đẩy ra ngoài qua các prompt AI.
+- **Truy vấn chạy tại chỗ:** Câu lệnh SQL sinh ra bởi AI được gửi về và thực thi trực tiếp trên Data Warehouse / Database nội bộ của doanh nghiệp.
+- **Kết quả trả thẳng về trình duyệt:** Dữ liệu trả về từ database đi thẳng tới client hoặc ứng dụng của người dùng. AI hoàn toàn không nhìn thấy và không lưu trữ kết quả của các câu truy vấn.
 
 ---
 
-## Cô Lập Dữ Liệu Giữa Tenants (Multi-tenant)
+## Phân Quyền Truy Cập (RBAC) & Kiểm Soát Ngữ Cảnh
 
-Nếu triển khai Semantix cho nhiều công ty/bộ phận:
+Semantix kết hợp chặt chẽ giữa **Role-Based Access Control (RBAC)** và quyền kiểm soát kỹ thuật:
 
-- Dùng **Embed Token với Locked Filters** để cô lập dữ liệu theo tenant
-- Mỗi tenant chỉ thấy data của mình qua `customer_id = {{tenant_id}}`
-- Token được ký server-side — user không thể giả mạo
+- Mỗi người dùng được gán một hoặc nhiều **Role** với danh sách quyền hạn (Permissions) cụ thể.
+- **Quyền `view_context`:** Quyền bảo mật then chốt xác định xem người dùng có được phép xem mã SQL thô, logic tính toán nội bộ và nhật ký suy luận của AI hay không.
+- **Phân tách thẩm quyền:** Người dùng nghiệp vụ (Business Viewer) chỉ xem kết quả phân tích số liệu và biểu đồ, trong khi chuyên viên dữ liệu (Data Analyst / Engineer) mới có thẩm quyền kiểm tra mã SQL và cấu trúc dữ liệu.
+
+Xem chi tiết hướng dẫn chống rò rỉ SQL: [Kiểm Soát & Chống Rò Rỉ SQL](sql-leak-prevention.md)
 
 ---
 

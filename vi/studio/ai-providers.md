@@ -22,7 +22,8 @@ Bạn có thể cấu hình nhiều Provider — mỗi AI Assistant có thể ch
 |----------|-----------|---------|
 | **OpenAI** | LLM + Embedding | Phổ biến nhất, chất lượng cao, hỗ trợ tiếng Việt tốt |
 | **Anthropic** | LLM | Claude Sonnet/Opus — lý luận tốt, ít "hallucination" |
-| **Google Gemini** | LLM + Embedding | Hỗ trợ ngữ cảnh rất dài (1M token), đa phương thức |
+| **Google Gemini (API Key)** | LLM + Embedding | Dùng khóa API cho Google AI Studio, ngữ cảnh dài |
+| **Google Vertex AI (ADC)** | LLM + Embedding | Chuẩn ngân hàng/doanh nghiệp, dùng danh tính máy chủ (không cần API key) |
 | **DeepSeek** | LLM | Model mã nguồn mở hiệu suất cao, chi phí thấp |
 | **Ollama** | LLM (local) | Self-hosted — không gửi dữ liệu ra ngoài |
 | **Custom / Local** | LLM | Bất kỳ model nào có OpenAI-compatible API |
@@ -121,7 +122,9 @@ Nhấn **Save**. Provider xuất hiện trong danh sách.
 
 > Anthropic không có Embedding model — cần kết hợp với OpenAI hoặc Gemini cho Knowledge Base.
 
-### Google Gemini
+### Google Gemini (AI Studio API Key)
+
+Dùng cho môi trường thử nghiệm hoặc tổ chức sử dụng khóa API trực tiếp từ Google AI Studio.
 
 **Lấy API Key:**
 1. Vào [aistudio.google.com](https://aistudio.google.com).
@@ -140,6 +143,63 @@ Nhấn **Save**. Provider xuất hiện trong danh sách.
 - `gemini-1.5-pro` — ngữ cảnh 2M token, mạnh nhất
 - `gemini-1.5-flash` — rất nhanh, chi phí thấp
 - `gemini-2.0-flash-exp` — thế hệ mới, thử nghiệm
+
+---
+
+### Google Vertex AI (ADC / Service Account) — Chuẩn Doanh Nghiệp & Ngân Hàng
+
+Dành riêng cho **môi trường doanh nghiệp và tổ chức tài chính** yêu cầu tuân thủ an toàn thông tin khắt khe:
+- **Loại bỏ hoàn toàn API Key tĩnh:** Không lưu trữ API Key trong database Semantix.
+- **Khai thác danh tính máy chủ (Application Default Credentials - ADC):** Semantix mượn danh tính IAM Service Account được gắn cho VM/GKE/Cloud Run hoặc thông qua **Workload Identity Federation (WIF)** khi triển khai On-Premises.
+- **Tuân thủ cấp doanh nghiệp:** Cam kết bảo mật dữ liệu cấp GCP Enterprise SLA, hỗ trợ VPC Service Controls, và ghi nhật ký kiểm toán tập trung trong GCP Cloud Audit Logs.
+
+#### Điều Kiện Kích Hoạt Máy Chủ
+Vì chế độ ADC sử dụng danh tính Google của chính máy chủ, tính năng này được bảo vệ bởi cờ môi trường (Environment Gate) trên máy chủ:
+
+```bash
+# Thêm vào file .env trên máy chủ Semantix và khởi động lại dịch vụ:
+SEMANTIX_ALLOW_ADC_CONNECTIONS=1
+```
+
+#### Bước 1 — Cấu Hình Quyền Trên Google Cloud Console
+1. Bật Vertex AI API trên GCP Project:
+   ```bash
+   gcloud services enable aiplatform.googleapis.com --project=YOUR_PROJECT_ID
+   ```
+2. Gán quyền thực thi Vertex AI cho Service Account của máy chủ:
+   ```bash
+   gcloud projects add-iam-policy-binding YOUR_PROJECT_ID \
+     --member="serviceAccount:semantix-runtime@YOUR_PROJECT_ID.iam.gserviceaccount.com" \
+     --role="roles/aiplatform.user"
+   ```
+   *(Nếu chạy On-Premises qua WIF, xem thêm [Hướng dẫn WIF BigQuery & Vertex](../connections/bigquery.md) để map danh tính IdP vào Service Account này).*
+
+#### Bước 2 — Cấu Hình Trong Giao Diện Semantix
+1. Vào **Studio → DSAI → AI Providers → New Provider**.
+2. Chọn Provider: **Google Vertex AI (ADC)**.
+3. Điền thông tin cấu hình:
+
+| Trường | Bắt Buộc | Giá Trị Mẫu | Mô Tả |
+|---|:---:|---|---|
+| **Name** | Có | `Vertex AI Production` | Tên gợi nhớ trong Semantix |
+| **Provider** | Có | `Google Vertex AI (ADC)` | Nhà cung cấp Vertex AI không dùng key |
+| **Project ID** | Có | `bank-analytics-prod` | GCP Project ID chạy Vertex AI |
+| **Location** | Tùy chọn | `us-central1` hoặc `asia-southeast1` | Region triển khai model (mặc định: `us-central1`) |
+| **Default Model** | Tùy chọn | `gemini-1.5-flash` | Model ngôn ngữ mặc định (hỗ trợ `gemini-1.5-pro`, `gemini-2.0-flash`, `gemini-3.5-flash`) |
+| **Default Embedding Model** | Tùy chọn | `text-embedding-005` | Model vector embedding mặc định (768 dimensions) |
+
+*(Lưu ý: Biểu mẫu hoàn toàn không có ô nhập API Key — hệ thống tự động bóc tách và loại bỏ mọi chuỗi bí mật nếu có).*
+
+4. Nhấn **Test Provider**: Semantix sẽ thực hiện một lượt gọi sinh văn bản ngắn trực tiếp đến Vertex AI endpoint để thẩm định danh tính ADC.
+5. Nhấn **Save**.
+
+#### Yêu Cầu Tường Lửa Mạng (Egress Firewall)
+Nếu máy chủ Semantix chạy trong mạng On-Premises có kiểm soát tường lửa chặt chẽ, mở cổng `HTTPS (443)` tới các domain sau:
+- `aiplatform.googleapis.com`
+- `{location}-aiplatform.googleapis.com` (ví dụ: `us-central1-aiplatform.googleapis.com` hoặc `asia-southeast1-aiplatform.googleapis.com`)
+- `oauth2.googleapis.com` (xác thực token)
+
+---
 
 ### DeepSeek
 

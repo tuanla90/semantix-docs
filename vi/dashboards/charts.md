@@ -4,18 +4,20 @@ Mỗi loại widget phục vụ một mục đích phân tích khác nhau. Trang
 
 ---
 
-## Cách Mở Widget Editor
+## Cách Mở Widget Editor & Chỉnh Sửa Trực Tiếp Tại Chỗ (In-Place Widget Editing)
 
-**Thêm widget mới:**
-Dashboard → nhấn **Edit** → nhấn **+ Add Widget** → chọn loại widget.
+Semantix cho phép bạn tùy biến biểu đồ trực tiếp trên Dashboard mà không cần chuyển sang tab mới hay rời khỏi luồng phân tích hiện tại:
 
-**Chỉnh sửa widget hiện có:**
-Di chuột lên widget → nhấn **⚙️** ở góc tiêu đề → hoặc nhấn **⋮ → Edit Widget**.
+* **Chỉnh sửa widget hiện có**: Di chuột lên widget → nhấn biểu tượng bánh răng **⚙️** hoặc chọn **⋮ → Edit Widget** để mở hộp thoại tùy biến nổi (`ChartCustomizationDialog`).
+* **Thêm widget mới**: Nhấn **Edit Dashboard** → nhấn **+ Add Widget** → chọn mẫu biểu đồ.
+* **Xem trước thời gian thực (Live Preview Canvas)**: Mọi tinh chỉnh về loại biểu đồ, trục dữ liệu, màu sắc và tiêu đề đều hiển thị kết quả lập tức.
+* **Gợi ý tạo kiểu thông minh (AI Styling)**: Trợ lý AI tự động gợi ý cách trình bày và chọn loại biểu đồ tối ưu nhất theo cấu trúc dữ liệu.
+* **Tính toán bảng trực tiếp (Table Calculations)**: Thiết lập Running Total, % of Total hoặc chênh lệch kỳ trước ngay trên editor.
 
-Widget Editor có 3 tab:
-- **Query**: Viết câu hỏi NL hoặc SQL thủ công
-- **Visualization**: Tất cả tùy chọn hiển thị biểu đồ
-- **Settings**: Tên widget, cache TTL, làm mới
+Hộp thoại Widget Editor gồm 3 tab chuyên dụng:
+- **Query**: Đặt câu hỏi bằng ngôn ngữ tự nhiên hoặc viết câu lệnh SQL thủ công kèm xem trước dữ liệu.
+- **Visualization**: Toàn bộ tùy chọn định hình biểu đồ, cấu hình trục, màu sắc và quy tắc định dạng.
+- **Settings**: Đặt tên widget, mô tả, cấu hình bộ nhớ cache (TTL) và chu kỳ tự làm mới.
 
 ---
 
@@ -925,7 +927,26 @@ Widget Editor → **Visualization** → **Reference Lines** → **Add Line**
 
 ---
 
-## 14. Chọn Đúng Loại Biểu Đồ — Bảng Quyết Định Nhanh
+## 14. Nhận Diện Trục Thời Gian & Hỗ Trợ Grain Mapping Của Biểu Đồ
+
+Khi sử dụng bộ lọc thời gian toàn cục (**Global Time Grain** hoặc **Dual-pane Booking Date Range Picker**), hệ thống Semantix tự động phân tích cấu trúc của từng widget để quyết định cách thức ánh xạ dữ liệu:
+
+### Bảng Khả Năng Hỗ Trợ Grain Mapping Theo Loại Biểu Đồ
+
+| Loại Biểu Đồ | Hỗ Trợ Grain Mapping? | Cơ Chế Xử Lý Của Semantix |
+|--------------|------------------------|----------------------------|
+| **Line Chart** | Có ✅ | Nhận diện trục thời gian và tự động nhóm lại theo Ngày/Tuần/Tháng/Quý/Năm |
+| **Bar / Column Chart** | Có ✅ | Tự động quét cột ngày trong dimension để gom cụm theo chu kỳ tương ứng |
+| **Area Chart** | Có ✅ | Tự động đồng bộ hóa trục hoành với Grain được chọn |
+| **Scorecard** | Không ❌ | Chỉ hiển thị số liệu tổng hợp và % delta kỳ trước, không có trục thời gian phân đoạn |
+| **Pie / Donut** | Không ❌ | Hiển thị tỷ trọng thành phần tĩnh, tự động loại trừ khỏi Grain Mapping |
+| **Table** | Có điều kiện ⚠️ | Chỉ ánh xạ nếu bảng có cột thời gian đóng vai trò bộ lọc chính |
+| **Funnel / Radar / Treemap** | Không ❌ | Cấu trúc phân cấp hoặc đa trục phi thời gian, tự động bỏ qua để tránh lỗi truy vấn |
+
+> [!TIP]
+> **Bộ chọn ngày đôi (Dual-pane Booking Date Range Picker)**: Khi chọn khoảng ngày trên thanh lọc toàn cục, bạn có thể xem song song 2 tháng với điều hướng độc lập, giúp việc so sánh dữ liệu giữa các mốc thời gian trở nên nhanh chóng và chuẩn xác.
+
+## 15. Chọn Đúng Loại Biểu Đồ — Bảng Quyết Định Nhanh
 
 | Câu Hỏi Phân Tích | Loại Biểu Đồ Tốt Nhất | Thay Thế |
 |-------------------|----------------------|---------|

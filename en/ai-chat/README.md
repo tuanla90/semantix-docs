@@ -249,3 +249,14 @@ Use terminology consistent with how your Data Model is named (column Labels, Met
 | **Query timeout** | Queries running over 60 seconds are cancelled |
 | **Real-time data** | Depends on Connection Cache TTL — default is 1 hour cache |
 | **Languages** | All languages supported — English is well-optimized with GPT-4o and Claude |
+
+---
+
+## Related Guides & Advanced Features
+
+- [Slash Commands & AI Skills Overview](skills-overview.md) — Master the `/` command menu and on-demand analytical skills.
+- [Metric Diagnostics (`/metric-diagnostics`)](metric-diagnostics.md) — Root-cause decomposition and the 5-criteria P-N-R-M-C rubric.
+- [Query Transparency & Debug Pipeline](transparency-and-debug.md) — Persistent execution status bar, cost guardrails, and technical specs drawer.
+- [Advanced Analysis Overview](advanced-analysis.md) — Specialized multi-dimensional analytics.
+- [Cohort Analysis](cohort.md) | [Funnel Conversion](funnel.md) | [RFM Segmentation](rfm.md)
+

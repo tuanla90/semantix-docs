@@ -164,38 +164,100 @@ function EmbeddedDashboard({ dashboardId }) {
 
 ---
 
-## Locked Filters — Data Isolation
+## Locked Filters — Data Isolation Architecture (S22)
 
-`lockedFilters` bakes filter conditions directly into the token — viewers cannot bypass them:
+In enterprise banking and multi-tenant SaaS deployments, **Locked Filters (S22)** represent the core security mechanism for achieving cryptographic data isolation across tenants, branches, and organizational units:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    LOCKED FILTERS ARCHITECTURE (S22)                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  1. Application Backend:                                                    │
+│     Defines `lockedFilters: { tenant_id: "T123", branch: "NYC" }`           │
+│     Semantix API signs JWT token (claims `lf`, `uid`, `tv`)                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  2. Semantix Query Server (Server-Side Enforcement):                        │
+│     • Verifies HMAC-SHA256 signature using `EMBED_JWT_SECRET`               │
+│     • Compiles `lockedFilters` directly into enforced Row-Level Security    │
+│     • Injects constraints into the Base CTE of every generated SQL query    │
+│     • Completely immune to client-side tampering or parameter injection    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  3. Embedded Frontend UI (Client-Side Experience):                          │
+│     • Locked filters render as read-only badges with a lock icon 🔒         │
+│     • External viewers CANNOT delete, change values, or bypass boundaries   │
+│     • Additional user filters can only further constrain data (AND logic)   │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 1. Defining Locked Filters in Token Payload
+Locked filters are declared in the backend payload when issuing an Embed Token:
 
 ```json
 {
+  "dashboardId": "dash_abc123",
+  "expiryMinutes": 60,
   "lockedFilters": {
-    "customer_id": "12345",
-    "region": "North",
-    "year": 2026
+    "customer_id": "CUST_98765",
+    "branch_code": "BR_MANHATTAN",
+    "status": "ACTIVE"
   }
 }
 ```
 
-When rendering, Semantix automatically adds:
+The generated token encapsulates the secure `lf` (Locked Filters) claim signed with `EMBED_JWT_SECRET`.
+
+### 2. Server-Side Base CTE Enforcement (SQL Rewriting)
+When the embedded client requests chart widget data:
+- Semantix cryptographically validates the token signature. If the token has expired or been modified, the request is terminated with `401 Unauthorized` or `403 Forbidden`.
+- The Semantic Compiler extracts the `lf` payload and injects it directly into the **Base Common Table Expression (CTE)** or base `WHERE` clause before query dispatch:
+
 ```sql
-WHERE customer_id = '12345' AND region = 'North' AND year = 2026
+-- Query automatically restructured server-side by Semantix:
+WITH base_view AS (
+    SELECT * 
+    FROM analytics.fact_customer_transactions
+    -- ENFORCED BY LOCKED FILTERS (S22) — Immutable from Client
+    WHERE customer_id = 'CUST_98765' 
+      AND branch_code = 'BR_MANHATTAN'
+      AND status = 'ACTIVE'
+)
+SELECT 
+    transaction_date,
+    SUM(amount) AS total_amount
+FROM base_view
+GROUP BY transaction_date;
 ```
 
-**Multi-tenant SaaS use case:**
+Even if an adversary uses browser developer tools, intercepting proxies, or forged WebSocket frames, they **can never read or query records outside the Base CTE scope**.
+
+### 3. Embedded Frontend Experience (Client UI)
+- **Visual Read-Only Indicators**: In the dashboard filter bar, locked filters are permanently displayed as read-only badge chips marked with a lock icon (🔒). The remove button (`×`) and value dropdown picker are completely disabled.
+- **Additive Filtering Logic (AND Logic)**: Viewers can still interact with optional filters configured on the dashboard (such as temporal date-range pickers or category selectors). All user-selected filters are joined with the locked filters using the logical `AND` operator, ensuring users can only drill deeper into their permitted dataset without expanding its scope.
+
+### 4. Enterprise Production Scenarios
+
+**Multi-Tenant SaaS Application:**
 ```javascript
-// Each of your customers only sees their own data
+// Guarantee Tenant A never accesses Tenant B data
 lockedFilters: {
-  tenant_id: currentTenant.id,
+  tenant_id: session.currentTenantId,
 }
 ```
 
-**Branch-based access control use case:**
+**Banking & Regional Branches:**
 ```javascript
+// Regional directors are restricted strictly to their branch data
 lockedFilters: {
-  branch_code: currentUser.branch,
-  department: currentUser.department,
+  branch_code: user.branchCode,
+  region: user.region,
+}
+```
+
+**Loan Officer Portfolio Segregation:**
+```javascript
+// Relationship managers view only loans assigned to their officer ID
+lockedFilters: {
+  assigned_officer_id: officer.id,
 }
 ```
 

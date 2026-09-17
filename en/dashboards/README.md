@@ -12,11 +12,11 @@ A Dashboard is a space that combines charts, KPI numbers, and data tables into a
 |---------------|---------|
 | **Create & Manage** | Create new, rename, describe, duplicate, delete dashboards |
 | **Add Content** | Pin from AI Chat, add widgets manually, import from analysis results |
-| **Edit Widgets** | Change chart type, configure axes, colors, titles, SQL |
+| **Edit Widgets** | In-place editor (`ChartCustomizationDialog`), change chart type, configure axes, SQL, AI styling |
 | **Layout** | Drag-and-drop, resize, organize into groups |
 | **Interact While Viewing** | Hover tooltips, zoom, drill-down, view SQL, download widget data |
-| **Filter Data** | Global filters applied across the dashboard, per-widget filters |
-| **Refresh Data** | Manual refresh, auto-refresh on a schedule, clear cache |
+| **Filter Data** | Global filters, Dual-pane Booking Date Range Picker, automatic time-grain mapping |
+| **Refresh Data** | Manual refresh, auto-refresh, clear cache, pre-run Refresh Cost Estimation |
 | **Share** | Public link, share with specific users, embed via iframe in external apps |
 | **Export** | Export PDF, download widget data (CSV/Excel), Scheduled Reports via email |
 | **Settings** | Auto-refresh, cache TTL, permissions, fullscreen mode |
@@ -177,6 +177,17 @@ Controls how data is visualized:
 | **Show Border** | Show/hide widget border |
 | **Background Color** | Widget background color |
 | **Header Style** | Style of the title bar |
+
+### In-Place Widget Editing (`ChartCustomizationDialog`)
+
+Rather than navigating away or opening new browser tabs that break analytical context, Semantix offers seamless **in-place widget customization**:
+
+* **Instant Activation on Canvas**: Click the gear icon ⚙️ or select **⋮ → Edit Widget** on any card to launch the `ChartCustomizationDialog` modal without leaving the dashboard.
+* **Live Preview Canvas**: Every configuration change—switching chart types, remapping X/Y axes, toggling data labels, or choosing new color palettes—renders immediately on the adjacent live preview panel.
+* **Visual AI Chart Styling**: The built-in AI assistant analyzes dataset geometry and cardinality to propose optimal visual representations and color harmonies with a single click.
+* **Inline Table Calculations**: Compute running totals, percentage of total, or period-over-period differences directly on data snapshots without altering the underlying SQL.
+* **Raw SQL Inspection**: Inspect the executing query and review estimated data scan metrics inside the modal's SQL tab.
+* **Instant Application**: Click **Save** to update the widget on the live dashboard canvas instantly without a full-page reload.
 
 ---
 
@@ -354,6 +365,47 @@ Users can change filters at any time (even without Edit Mode):
 All charts automatically filter: June, Hanoi branch
 ```
 
+### Clear / Reset Filters
+
+- Click **×** beside a selected value → removes that specific filter condition.
+- Click **Reset All** → reverts all global filters back to their initial default values.
+
+### Dual-Pane Booking Date Range Picker
+
+When filtering dashboards across date intervals, Semantix delivers an intuitive **Dual-pane Date Range Picker** inspired by premier modern travel booking interfaces:
+
+```
+┌──────────────────────────────────────┬──────────────────────────────────────┐
+│  ◀   August 2026                     │      September 2026   ▶              │
+├──────────────────────────────────────┼──────────────────────────────────────┤
+│  Mo  Tu  We  Th  Fr  Sa  Su          │  Mo  Tu  We  Th  Fr  Sa  Su          │
+│   3   4   5   6   7   8   9          │       1   2   3   4   5   6          │
+│  10  11  12  13 [14] 15  16          │   7   8   9  10  11  12  13          │
+│  17  18  19  20  21  22  23          │  14  15  16  17 [18] 19  20          │
+│  24  25  26  27  28  29  30          │  21  22  23  24  25  26  27          │
+│  31                                  │  28  29  30                          │
+├──────────────────────────────────────┴──────────────────────────────────────┤
+│ [Presets: Last 7 Days | This Month | This Quarter | YTD]   [ Cancel ] [ Apply ]│
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+* **Side-by-Side Dual Calendar Months**: Left pane sets the Start Date; right pane sets the End Date simultaneously with clear visual range highlighting.
+* **Independent Calendar Navigation**: Moving months or switching years in one pane does not jump or disrupt the visible window of the companion pane.
+* **Rich Dynamic Timeframe Presets**: Select common periods in a single click: *Today, Yesterday, Last 7 Days, Last 30 Days, This Month, This Quarter, This Year, Year to Date (YTD)*.
+* **Automated Boundary Validation**: Guarantees that end dates cannot precede start dates and supports single-day bounds for point-in-time analysis.
+
+### Automatic Time-Axis Detection & Dynamic Grain Mapping
+
+Dashboards often combine diverse visualization types. When a user selects a global temporal aggregation level (**Global Time Grain**: Day, Week, Month, Quarter, Year), Semantix automatically coordinates compatible charts:
+
+1. **Intelligent Time-Axis Detection**:
+   - The engine inspects each widget configuration: widgets declaring `timeRange`, `queryConfig.timeFilters`, or temporal columns (`date`, `created_at`, `timestamp`, `month`).
+   - Accurately detects AI-generated Column and Bar charts that position dates along categorical dimensions.
+2. **Synchronized Granular Time Mapping**:
+   - Automatically synchronizes aggregation bucket sizes across all compatible time-series widgets to the selected grain (e.g., all line and bar charts switch synchronously from *Monthly* to *Weekly*).
+3. **Safe Exclusion of Static Widgets**:
+   - Automatically bypasses widgets that lack a re-aggregatable time axis to avoid query errors or malformed SQL, including: KPI Scorecards, Donut/Pie charts, Funnels, Radars, Treemaps, and static lookup tables.
+
 ---
 
 ## 8. Auto-Refresh
@@ -381,6 +433,53 @@ When Auto-refresh is on:
 - A small countdown timer shows on the Dashboard (e.g. "Refreshing in 4:32").
 - When it reaches 0: all widgets fetch new data simultaneously.
 - Refresh happens **in the background** — no disruption to the viewer.
+
+### Manual Refresh
+
+Click the **🔄 Refresh** button (circular arrows icon) in the top-right corner of the Dashboard:
+- Invalidates and purges cache across **all widgets** on the Dashboard.
+- Re-executes analytical queries against the underlying database engine.
+- Simultaneously refreshes all charts and tables.
+
+Use manual refresh when you know an upstream ETL pipeline has completed and you want to view the latest data immediately without waiting for cache expiration.
+
+### Dashboard Refresh Cost Estimation
+
+Refreshing an entire dashboard can consume substantial cloud compute and scan resources across enterprise data warehouses (such as Google BigQuery, Snowflake, and ClickHouse). To maintain cost predictability and prevent accidental runaway queries, Semantix generates a **Refresh Cost Estimation** modal prior to executing full dashboard re-runs:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ 💳 Pre-Run Dashboard Refresh Cost Estimation                           │
+├────────────────────────────────────────────────────────────────────────┤
+│ • Total Estimated Scan Volume:   1.42 GB                               │
+│ • Estimated Query Compute Cost:  ~$0.0071 USD (Tier: Low 🟢)           │
+│ • Pricing Basis:                 8 actual execution, 2 dry-run widgets │
+│                                                                        │
+│ ℹ️ Granular Breakdown per Widget:                                      │
+│   1. [Line Chart] 30-Day Revenue:      420 MB (Actual at 08:30)        │
+│   2. [Bar Chart] Revenue by Channel:   310 MB (Actual at 08:30)        │
+│   3. [Table] Orders Pending Action:    690 MB (Latest Dry-Run)         │
+│   4. [Text Card] Title & Caveats:      0 MB   (Zero compute)           │
+│                                                                        │
+│ [ Cost Breakdown Details ]                               [ Refresh Now ]│
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+#### Transparency Principles of the Cost Estimator
+
+1. **Dual-Basis Computation (Actual Telemetry & Dry-Runs)**:
+   - For unmodified widgets with recent history, Semantix retrieves actual execution bytes (`actualBytes`) logged from the prior run.
+   - For newly added widgets or widgets with modified filters, the engine dispatches zero-cost metadata dry-run queries (`dryRunBytes`) to pre-calculate scan volume before physical execution.
+2. **Scan Divergence Alerts (`Divergence Alert`)**:
+   - If estimated dry-run bytes deviate significantly (default threshold > 20%) from historical averages—suggesting data volume spikes or inefficient partition scans—the modal flags a warning for administrator review before execution.
+3. **Query Cost Tier Categorization**:
+   - Widgets and total scan volumes are classified into color-coded cost tiers:
+     * **Green**: `< 100 MB` (Negligible)
+     * **Yellow**: `100 MB – 1 GB` (Moderate)
+     * **Orange**: `1 GB – 10 GB` (Substantial)
+     * **Red**: `> 10 GB` (High Impact / Heavy Scan)
+4. **Transparent Unpriced Widget Tracking**:
+   - For database engines that do not expose dry-run scan metrics, Semantix explicitly reports the count of unpriced widgets rather than silently assuming zero cost.
 
 ---
 

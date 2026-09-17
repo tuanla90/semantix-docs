@@ -94,7 +94,46 @@ Tab **Advanced Analysis** → thêm các loại phân tích đặc biệt:
 | **Funnel Analysis** | Theo dõi tỷ lệ chuyển đổi qua các bước | Cột bước, cột người dùng, cột thời gian |
 | **Pareto Analysis** | Phân tích 80/20 | Cột khách hàng/sản phẩm, cột giá trị |
 
-### Bước 7 — Lưu Context
+### Bước 7 — Các Trường Ngữ Nghĩa Mở Rộng (Extended Semantics)
+
+Để AI Assistant hiểu sâu sắc ngôn ngữ chuyên ngành và tránh các sai sót tai hại trong phân tích, Semantix cung cấp 4 trường ngữ nghĩa mở rộng trên từng Cột (`ColumnContext`) và Chỉ số (`MetricContext`):
+
+#### 1. Anti-Synonyms ("X không có nghĩa là Y")
+- **Ý nghĩa:** Danh sách từ đồng nghĩa (`synonyms`) thông thường chỉ cho AI biết một từ mang nghĩa gì. Tuy nhiên, các sai lầm đắt giá nhất trong thực tế lại xuất phát từ việc **AI nhầm lẫn giữa các thuật ngữ nghiệp vụ gần giống nhau** (Negative Disambiguation).
+- **Cấu trúc:** Gồm `term` (từ kiêng kỵ) và `note` (lý do khác biệt).
+- **Ví dụ thực tế:**
+  - Cột `du_no` (Dư nợ tín dụng):
+    - *Anti-synonym:* `term: "doanh số giải ngân"`, `note: "đây là số tiền cho vay phát sinh mới ở bảng khế ước nhận nợ, không phải dư nợ hiện tại"`.
+  - Metric `tong_doanh_thu` (Tổng doanh thu):
+    - *Anti-synonym:* `term: "tiền thực thu"`, `note: "doanh thu chưa trừ công nợ phải thu, không phản ánh dòng tiền mặt thực tế"`.
+  - Cột `trang_thai_active` (Khách hàng Active):
+    - *Anti-synonym:* `term: "tất cả khách hàng"`, `note: "chỉ tính khách có phát sinh giao dịch trong 30 ngày gần nhất"`.
+- **Cơ chế Prompt Clamping:** Để tránh quá tải token, Semantix tự động chọn lọc tối đa **3 anti-synonyms** tiêu biểu nhất trên mỗi trường khi đưa vào Prompt của AI.
+
+#### 2. Bẫy Nghiệp Vụ (Gotchas)
+- **Ý nghĩa:** Những cảnh báo và điều kiêng kỵ ngắn gọn dành cho AI khi tiếp cận dữ liệu của cột hoặc chỉ số đó.
+- **Ví dụ thực tế:**
+  - *"Cột tỷ lệ hoặc giá trị trung bình tuyệt đối không được dùng hàm SUM."*
+  - *"Dư nợ là chỉ số số dư thời điểm (snapshot), không được cộng dồn qua các tháng."*
+  - *"Giá trị NULL ở cột điểm đánh giá nghĩa là khách hàng chưa chấm điểm, không phải điểm 0."*
+  - *"Bảng có thể chứa giao dịch thử nghiệm với mã chi nhánh TEST, phải loại trừ."*
+- **Cơ chế Prompt Clamping:** Hệ thống giới hạn tối đa **2 gotchas** quan trọng nhất (tối đa 120 ký tự/mục) nạp vào schema prompt của Assistant.
+
+#### 3. Gợi Ý Cho AI (aiHint)
+- **Ý nghĩa:** Chỉ dẫn đặc thù cho trợ lý AI khi xử lý câu hỏi liên quan đến cột hoặc chỉ số này.
+- **Ví dụ thực tế:**
+  - `aiHint`: *"Khi người dùng hỏi chung chung về doanh số, mặc định nhóm theo tháng và dùng cột ngay_ghi_nhan."*
+  - `aiHint`: *"Luôn bọc hàm COALESCE(..., 0) khi tính toán trên cột chiết khấu vì có nhiều dòng NULL."*
+
+#### 4. Metadata Quản Trị Từ Đồng Nghĩa (synonymMeta)
+- **Ý nghĩa:** Lưu vết nguồn gốc và mức độ tin cậy của từng từ đồng nghĩa phục vụ kiểm toán và phê duyệt:
+  - `source`: Nguồn gốc — `'human'` (do chuyên viên nhập tay) hoặc `'learned'` (do AI tự đúc kết từ hội thoại người dùng).
+  - `confidence`: Điểm tin cậy từ 0.0 đến 1.0 (nhập tay mặc định 1.0).
+  - `evidenceCount`: Số lần quan sát thấy người dùng sử dụng từ khóa này trong thực tế.
+  - `updatedAt`: Thời điểm cập nhật lần cuối.
+- **Nguyên tắc an toàn:** `synonymMeta` chỉ phục vụ giao diện quản trị và quy trình xét duyệt đề xuất; **tuyệt đối không đưa vào prompt** để giữ prompt luôn tinh gọn.
+
+### Bước 8 — Lưu Context
 
 Nhấn **Save**.
 

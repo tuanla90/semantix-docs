@@ -4,18 +4,20 @@ Each widget type serves a different analytical purpose. This page covers everyth
 
 ---
 
-## Opening the Widget Editor
+## Opening the Widget Editor & In-Place Customization (`ChartCustomizationDialog`)
 
-**Add a new widget:**
-Dashboard → click **Edit** → click **+ Add Widget** → select a widget type.
+Semantix enables live chart customization directly on the active Dashboard canvas without losing your analytical focus:
 
-**Edit an existing widget:**
-Hover over the widget → click **⚙️** in the title corner → or click **⋮ → Edit Widget**.
+* **Edit Existing Widgets**: Hover over any widget → click the gear icon **⚙️** or select **⋮ → Edit Widget** to launch the `ChartCustomizationDialog` modal.
+* **Add New Widgets**: Click **Edit Dashboard** → click **+ Add Widget** → select a chart template.
+* **Live Preview Canvas**: Real-time rendering as you modify chart types, map dimensions/metrics, adjust color palettes, or toggle labels.
+* **Visual AI Chart Styling**: The built-in AI assistant automatically analyzes data cardinality and recommends the most effective visualization structure.
+* **Inline Table Calculations**: Calculate Running Totals, % of Total, or prior-period variance directly in the editor without modifying SQL.
 
-The Widget Editor has 3 tabs:
-- **Query**: Write a natural language question or raw SQL
-- **Visualization**: All chart display options
-- **Settings**: Widget name, cache TTL, refresh
+The Widget Editor provides 3 dedicated configuration tabs:
+- **Query**: Natural language prompt input or manual SQL editor with live data previews.
+- **Visualization**: Complete chart formatting, axis bounds, color palettes, and conditional rules.
+- **Settings**: Widget title, description, cache TTL overrides, and independent refresh schedules.
 
 ---
 
@@ -924,7 +926,28 @@ Widget Editor → **Visualization** → **Reference Lines** → **Add Line**
 
 ---
 
-## 14. Choosing the Right Chart — Quick Decision Table
+## 14. Time-Axis Detection & Chart Grain Mapping Support
+
+When applying a global temporal filter (**Global Time Grain** or the **Dual-pane Booking Date Range Picker**), Semantix automatically inspects the internal geometry of each widget to determine dynamic grain mapping behavior:
+
+### Grain Mapping Support Matrix by Chart Type
+
+| Chart Type | Grain Mapping Support? | Semantix Resolution Mechanism |
+|------------|------------------------|--------------------------------|
+| **Line Chart** | Yes ✅ | Detects temporal X-axis and synchronizes aggregation to Day/Week/Month/Quarter/Year |
+| **Bar / Column Chart** | Yes ✅ | Scans categorical dimensions for date columns and aggregates buckets to the active grain |
+| **Area Chart** | Yes ✅ | Synchronizes horizontal continuous axis with the selected temporal grain |
+| **Scorecard** | No ❌ | Displays aggregate total and prior-period delta; contains no segmented time axis |
+| **Pie / Donut** | No ❌ | Represents static part-to-whole proportions; automatically excluded from grain mapping |
+| **Table** | Conditional ⚠️ | Mapped only if the underlying table query uses a temporal column as its primary grain |
+| **Funnel / Radar / Treemap** | No ❌ | Hierarchical or multi-axial non-temporal structure; safely bypassed to prevent SQL errors |
+
+> [!TIP]
+> **Dual-Pane Booking Date Range Picker**: When selecting date boundaries in the global filter bar, side-by-side calendars with independent month navigation ensure rapid and error-free comparative analysis across temporal windows.
+
+---
+
+## 15. Choosing the Right Chart — Quick Decision Table
 
 | Analytical Question | Best Chart | Alternative |
 |--------------------|-----------|-------------|

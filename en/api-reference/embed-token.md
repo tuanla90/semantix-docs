@@ -77,32 +77,75 @@ https://{domain}/en/embed/dashboard/{dashboardId}?token={token}
 
 ---
 
-## Locked Filters (Fixed Filters)
+## Locked Filters Architecture (S22)
 
-`lockedFilters` bakes filter conditions into the token — viewers cannot bypass them:
+`lockedFilters` is a database-grade security mechanism integrated directly into Semantix's JWT signing and validation pipeline (`lib/embed-tokens.ts`).
+
+### Signed JWT Payload Structure
+When your backend requests an embed token, the Semantix server cryptographically signs the security claims into the JWT payload:
 
 ```json
 {
-  "lockedFilters": {
+  "iss": "semantix-embed",
+  "did": "dash_abc123",
+  "tv": 1,
+  "lf": {
     "customer_id": "12345",
     "region": "West",
     "year": 2026
-  }
+  },
+  "uid": "usr_sec_admin_01",
+  "iat": 1719039600,
+  "exp": 1719043200
 }
 ```
 
-**How it works:**
-1. Token is signed with the `lockedFilters`
-2. When rendering the dashboard, Semantix reads filters from the token
-3. Applies `WHERE customer_id = '12345' AND region = 'West' AND year = 2026` to all queries
-4. Viewers only see data that matches those filters
+| Claim | Full Name | Security Purpose |
+|---|---|---|
+| `did` | Dashboard ID | Identifier of the authorized dashboard resource |
+| `tv` | Token Version | Version marker utilized for instant token revocation |
+| `lf` | Locked Filters (S22) | Mandatory row-level filter object, signed with `EMBED_JWT_SECRET` |
+| `uid` | Issued By User ID (S02) | Identity of the token issuer, binding audit logs and RLS inheritance |
 
-**Multi-tenant use case:**
+### Server-Side RLS Enforcement Principles
+1. **Cryptographic Validation**: The server validates the HMAC-SHA256 signature using `EMBED_JWT_SECRET` (or `AUTH_SECRET`). Any token tampering or expiration immediately aborts the request (`401/403`).
+2. **Base CTE Constraint Injection**: When executing widget queries, Semantix compiles the `lf` claim directly into the Base Common Table Expression (CTE) of the SQL query:
+   ```sql
+   WITH base_view AS (
+       SELECT * FROM core_sales
+       WHERE customer_id = '12345' AND region = 'West' AND year = 2026
+   )
+   SELECT category, SUM(amount) AS total FROM base_view GROUP BY category;
+   ```
+3. **Tamper-Proof Guarantee**: Locked filter constraints cannot be overridden, broadened, or replaced by client query parameters, WebSocket messages, or request bodies.
+
+### Embedded Client Experience (UI Behavior)
+- **Read-Only Lock Badges**: Inside the embedded dashboard, locked filter values are rendered as non-removable chip badges displaying a lock icon (🔒).
+- **Disabled Interactions**: External users cannot remove the badge chips or alter values through dropdown menus.
+- **Additive Filters Only**: Any additional interactive filters applied by the user are appended using the SQL `AND` operator, ensuring data visibility can only be restricted further, never expanded.
+
+### Multi-Tenant Server Integration Example
 
 ```javascript
-// Each customer sees only their own data
-const token = await createEmbedToken('dash_abc123', {
-  customer_id: currentUser.tenantId,
+// Your backend generates a tenant-isolated token for the authenticated user
+const tokenResponse = await fetch('https://semantix.company.com/api/v1/embed/token', {
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${process.env.SEMANTIX_API_KEY}`,
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    dashboardId: 'dash_financial_summary',
+    expiryMinutes: 120,
+    lockedFilters: {
+      tenant_id: currentSession.tenantId,
+      branch_code: currentSession.branchCode,
+    },
+    userContext: {
+      userId: currentSession.userId,
+      email: currentSession.email,
+    },
+  }),
 });
 ```
 

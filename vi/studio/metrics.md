@@ -77,6 +77,66 @@ Metric là định nghĩa chuẩn hóa các chỉ số hiệu suất (KPI) của
 
 ---
 
+## Mẫu Công Thức Chỉ Số Hai Vế (Metric Formula Templates)
+
+Bên cạnh các chỉ số cơ bản tính từ một cột vật lý (Basic Metric), Semantix cung cấp hệ thống **Mẫu công thức hai vế (Two-Metric Formula Templates)**. Thay vì để người dùng viết tự do các biểu thức SQL phức tạp dễ gây lỗi khi gộp dòng, Semantix chuẩn hóa công thức thành 2 vế độc lập: **Vế A (Numerator / Metric thứ nhất)** và **Vế B (Denominator / Metric thứ hai)**.
+
+Mô hình này giúp bảo toàn đồ thị phụ thuộc giữa các chỉ số, hỗ trợ tính toán chính xác bảo mật RLS, chống lỗi chia cho 0, và đồng bộ tự động với cơ chế bọc snapshot số dư.
+
+### 1. Chi Tiết 4 Mẫu Công Thức Chuẩn
+
+| Mẫu | Ký Hiệu Hiển Thị | Công Thức Toán Học | SQL Biên Dịch Tự Động | Đơn Vị Đo Lường |
+|---|---|---|---|---|
+| **Tổng (Sum)** | `A + B` | $[A] + [B]$ | `(COALESCE(A, 0) + COALESCE(B, 0))` | Giữ nguyên đơn vị của A & B (currency, number) |
+| **Chênh Lệch (Difference)** | `A − B` | $[A] - [B]$ | `(COALESCE(A, 0) - COALESCE(B, 0))` | Giữ nguyên đơn vị của A & B (currency, number) |
+| **Tăng Trưởng (Growth %)** | `A ÷ B − 1` | $\frac{[A] - [B]}{[B]}$ | `(A / NULLIF(B, 0) - 1)` | Tỷ lệ phần trăm (`percent`) |
+| **Biên / Tỷ Suất (Margin %)** | `(A − B) ÷ A` | $\frac{[A] - [B]}{[A]}$ | `((A - B) / NULLIF(A, 0))` | Tỷ lệ phần trăm (`percent`) |
+| *(Mặc định) Tỷ Lệ (Ratio)* | `A ÷ B` | $\frac{[A]}{[B]}$ | `A / NULLIF(B, 0)` | Tỷ lệ phần trăm (`percent`) hoặc số thập phân |
+
+> [!NOTE]
+> **Bảo Vệ Tính Toàn Vẹn Số Liệu:**
+> - **Chống lỗi chia cho 0:** Các mẫu phép chia (`growth`, `margin`, `ratio`) luôn được bọc hàm `NULLIF(..., 0)` ở mẫu số, ngăn chặn hoàn toàn lỗi sập truy vấn database (`division by zero`).
+> - **Xử lý thiếu dòng dữ liệu (Null Handling):** Phép cộng (`sum`) và phép trừ (`difference`) tự động bọc `COALESCE(..., 0)`. Ví dụ: trong một ngày chỉ có dòng tiền vào mà không có dòng tiền ra, công thức dòng tiền ròng vẫn trả về đúng giá trị thu vào thay vì bị biến thành `NULL`.
+> - **Kiểm soát xung đột thời gian (Temporal Conflict Guard):** Hệ thống chủ động ngăn chặn việc cộng/trừ giữa một chỉ số số dư thời điểm (Snapshot như dư nợ, tồn kho) với một chỉ số luồng phát sinh trong kỳ (Period như doanh thu bán hàng).
+
+---
+
+### 2. Cách Cấu Hình Trên Giao Diện Studio
+
+1. Trong Data Model, chuyển sang tab **Metrics** → Nhấn **New Metric**.
+2. Tại mục **Formula Type (Loại công thức)**, chọn **Two-Metric Formula** (hoặc Ratio).
+3. Tại mục **Template (Mẫu công thức)**, chọn 1 trong các mẫu:
+   - `Sum (Tổng)`
+   - `Difference (Chênh lệch)`
+   - `Growth % (Tăng trưởng)`
+   - `Margin % (Biên / Tỷ suất)`
+4. Chọn **Metric Vế A** và **Metric Vế B** từ danh sách các Metric đã có sẵn trong Model.
+5. Xem trước (Preview) công thức và SQL được sinh tự động ngay bên dưới.
+6. Nhấn **Save Metric**.
+
+---
+
+### 3. Cách AI Tự Động Nhận Diện Mẫu Công Thức
+
+Khi người dùng sử dụng tính năng **Generate Metrics by AI** hoặc trò chuyện với trợ lý thông minh:
+
+#### Cơ chế khớp ngữ nghĩa (Semantic Intent Matching):
+AI của Semantix được huấn luyện để phân tích ngôn ngữ tự nhiên và tự động ánh xạ vào đúng template:
+- Nhận diện **Sum (`template: "sum"`):** Các từ khóa *"tổng của A và B"*, *"A cộng B"*, *"total transaction = inflow + outflow"*.
+- Nhận diện **Difference (`template: "difference"`):** Các từ khóa *"lợi nhuận = doanh thu trừ chi phí"*, *"chênh lệch thu chi"*, *"dòng tiền ròng"*, *"net amount = A - B"*.
+- Nhận diện **Growth (`template: "growth"`):** Các từ khóa *"tăng trưởng doanh thu"*, *"tỷ lệ tăng trưởng so với kỳ trước"*, *"growth rate of A vs B"*.
+- Nhận diện **Margin (`template: "margin"`):** Các từ khóa *"biên lợi nhuận gộp"*, *"gross margin"*, *"tỷ suất lợi nhuận trên doanh thu"*.
+- Nhận diện **Ratio (`template: "ratio"`):** Các từ khóa *"trung bình mỗi đơn"*, *"doanh thu trên khách hàng"*, *"tỷ lệ chuyển đổi"*, *"A per B"*.
+
+#### Quy trình tự động phân giải phụ thuộc (Dependency Resolution):
+1. **Kiểm tra chỉ số thành phần:** AI kiểm tra xem cả hai chỉ số A và B đã tồn tại trong Data Model chưa.
+2. **Tự động sinh chỉ số nền tảng:** Nếu một hoặc cả hai chỉ số thành phần chưa có (ví dụ: yêu cầu tính *Lợi nhuận gộp = Doanh thu - Chi phí*, nhưng Model mới chỉ có cột `revenue` và `cost` thô), AI sẽ:
+   - Tự động tạo trước 2 Basic Metrics: `Tổng doanh thu` (`SUM(revenue)`) và `Tổng chi phí` (`SUM(cost)`).
+   - Tiếp theo, tạo Two-Metric Formula với template `difference` tham chiếu đến ID của 2 metric vừa tạo.
+3. Không bao giờ biến công thức hai vế thành một biểu thức custom chắp vá thiếu cấu trúc.
+
+---
+
 ## Ví Dụ Metrics Thường Gặp
 
 ### Metrics Cho Bảng Đơn Hàng

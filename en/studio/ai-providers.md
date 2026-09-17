@@ -22,7 +22,8 @@ You can configure multiple Providers — each AI Assistant can select its own Pr
 |----------|------------|-------|
 | **OpenAI** | LLM + Embedding | Most popular, high quality, great multilingual support |
 | **Anthropic** | LLM | Claude Sonnet/Opus — strong reasoning, low hallucination |
-| **Google Gemini** | LLM + Embedding | Very long context (1M tokens), multimodal |
+| **Google Gemini (API Key)** | LLM + Embedding | Uses API keys for Google AI Studio, long context window |
+| **Google Vertex AI (ADC)** | LLM + Embedding | Banking & enterprise standard; uses server identity (no static API key) |
 | **DeepSeek** | LLM | High-performance open-source model, very low cost |
 | **Ollama** | LLM (local) | Self-hosted — no data leaves your server |
 | **Custom / Local** | LLM | Any model with an OpenAI-compatible API |
@@ -121,7 +122,9 @@ Click **Save**. The Provider appears in the list.
 
 > Anthropic has no Embedding model — combine with OpenAI or Gemini for Knowledge Bases.
 
-### Google Gemini
+### Google Gemini (AI Studio API Key)
+
+Used for rapid prototyping, testing environments, or organizations utilizing direct API keys from Google AI Studio.
 
 **Get an API Key:**
 1. Go to [aistudio.google.com](https://aistudio.google.com).
@@ -140,6 +143,63 @@ Click **Save**. The Provider appears in the list.
 - `gemini-1.5-pro` — 2M token context, most capable
 - `gemini-1.5-flash` — very fast, low cost
 - `gemini-2.0-flash-exp` — next generation, experimental
+
+---
+
+### Google Vertex AI (ADC / Service Account) — Enterprise & Banking Standard
+
+Designed specifically for **enterprise environments and financial institutions** subject to strict security and data governance compliance:
+- **Zero Static API Keys**: No sensitive API keys are ever persisted in the Semantix database.
+- **Server Identity via Application Default Credentials (ADC)**: Semantix leverages the IAM Service Account identity attached to the underlying VM/GKE/Cloud Run instance, or federated via **Workload Identity Federation (WIF)** for on-premises deployments.
+- **Enterprise-Grade Compliance**: Backed by Google Cloud Enterprise SLAs, VPC Service Controls, and centralized audit trails via GCP Cloud Audit Logs.
+
+#### Server-Side Activation Requirement
+Because ADC utilizes the server's underlying Google Cloud identity, this feature is safeguarded by an explicit environment gate on the Semantix host:
+
+```bash
+# Add to the .env file on your Semantix host server and restart services:
+SEMANTIX_ALLOW_ADC_CONNECTIONS=1
+```
+
+#### Step 1 — Configure Permissions on Google Cloud Console
+1. Enable the Vertex AI API in your GCP project:
+   ```bash
+   gcloud services enable aiplatform.googleapis.com --project=YOUR_PROJECT_ID
+   ```
+2. Grant the Vertex AI user role to your runtime Service Account:
+   ```bash
+   gcloud projects add-iam-policy-binding YOUR_PROJECT_ID \
+     --member="serviceAccount:semantix-runtime@YOUR_PROJECT_ID.iam.gserviceaccount.com" \
+     --role="roles/aiplatform.user"
+   ```
+   *(For on-premises servers using Workload Identity Federation, see the [BigQuery & Vertex WIF Guide](../connections/bigquery.md) to map your on-premises IdP to this Service Account).*
+
+#### Step 2 — Configure in the Semantix UI
+1. Navigate to **Studio → DSAI → AI Providers → New Provider**.
+2. Select Provider: **Google Vertex AI (ADC)**.
+3. Configure the fields:
+
+| Field | Required | Example Value | Description |
+|---|:---:|---|---|
+| **Name** | Yes | `Vertex AI Production` | Friendly name in Semantix |
+| **Provider** | Yes | `Google Vertex AI (ADC)` | Keyless Vertex AI provider |
+| **Project ID** | Yes | `bank-analytics-prod` | GCP Project ID hosting Vertex AI |
+| **Location** | Optional | `us-central1` or `asia-southeast1` | Model deployment region (default: `us-central1`) |
+| **Default Model** | Optional | `gemini-1.5-flash` | Default language model (supports `gemini-1.5-pro`, `gemini-2.0-flash`, `gemini-3.5-flash`) |
+| **Default Embedding Model** | Optional | `text-embedding-005` | Default vector embedding model (768 dimensions) |
+
+*(Note: The configuration form has no API Key input field — the system automatically sanitizes and ignores any secret string).*
+
+4. Click **Test Provider**: Semantix initiates a lightweight completion call directly against the Vertex AI endpoint to validate ADC permissions.
+5. Click **Save**.
+
+#### Egress Firewall Requirements
+If your Semantix host operates within an on-premises network with egress firewall filtering, allow outbound **HTTPS (port 443)** access to:
+- `aiplatform.googleapis.com`
+- `{location}-aiplatform.googleapis.com` (e.g., `us-central1-aiplatform.googleapis.com` or `asia-southeast1-aiplatform.googleapis.com`)
+- `oauth2.googleapis.com` (token authentication and exchange)
+
+---
 
 ### DeepSeek
 

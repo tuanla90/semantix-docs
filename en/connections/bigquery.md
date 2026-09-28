@@ -206,36 +206,116 @@ Semantix can also connect to BigQuery through a **Google Apps Script** acting as
 ### Step 1: Create a Google Apps Script
 1. Open [script.google.com](https://script.google.com) → **New Project**.
 2. Name the project: `Semantix BigQuery Connector`.
-3. Replace the default code with the proxy script:
+3. Replace the default code with the proxy script below. Semantix sends every request with an `action` field, and the script must route on it — a script that runs whatever SQL it receives would turn Semantix's free metadata reads into billed queries.
 
 ```javascript
+/**
+ * Semantix BigQuery proxy. Every request carries an `action`:
+ *   get_projects, get_datasets, get_tables  — browse the warehouse
+ *   execute_query                           — run a query, return headers + rows
+ *   estimate_cost                           — dry run: bytes the query would scan
+ *   dry_run_columns                         — dry run: the result's columns (free)
+ */
 function doPost(e) {
   try {
-    const payload = JSON.parse(e.postData.contents);
-    const projectId = payload.projectId;
-    const sql = payload.sql;
-    
-    const request = {
-      query: sql,
-      useLegacySql: false,
-      timeoutMs: 60000
-    };
-    
-    const response = BigQuery.Jobs.query(request, projectId);
-    
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: true, data: response }))
-      .setMimeType(ContentService.MimeType.JSON);
-      
+    if (!e.postData || !e.postData.contents) throw new Error('No post data received');
+    const data = JSON.parse(e.postData.contents);
+    switch (data.action) {
+      case 'get_projects':    return listProjects();
+      case 'get_datasets':    return listDatasets(data);
+      case 'get_tables':      return listTables(data);
+      case 'execute_query':   return executeQuery(data);
+      case 'estimate_cost':   return dryRun(data, false);
+      case 'dry_run_columns': return dryRun(data, true);
+      default: return json({ status: 'error', message: 'Unknown action: ' + data.action });
+    }
   } catch (err) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: false, error: err.message }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return json({ status: 'error', message: String((err && err.message) || err) });
   }
+}
+
+function listProjects() {
+  const projects = (BigQuery.Projects.list().projects || []).map(p => ({
+    id: p.projectReference.projectId,
+    name: p.friendlyName || p.projectReference.projectId
+  }));
+  return json({ status: 'success', projects: projects });
+}
+
+function listDatasets(data) {
+  if (!data.projectId) throw new Error('Missing projectId');
+  const datasets = (BigQuery.Datasets.list(data.projectId).datasets || []).map(d => ({
+    id: d.datasetReference.datasetId,
+    location: d.location
+  }));
+  return json({ status: 'success', datasets: datasets });
+}
+
+function listTables(data) {
+  if (!data.projectId || !data.datasetId) throw new Error('Missing projectId or datasetId');
+  const tables = (BigQuery.Tables.list(data.projectId, data.datasetId).tables || []).map(t => ({
+    id: t.tableReference.tableId,
+    type: t.type
+  }));
+  return json({ status: 'success', tables: tables });
+}
+
+function executeQuery(data) {
+  if (!data.sql || !data.projectId) throw new Error('Missing SQL or projectId');
+  let job = BigQuery.Jobs.query({ query: data.sql, useLegacySql: false }, data.projectId);
+  const jobId = job.jobReference.jobId;
+  let wait = 500;
+  while (!job.jobComplete) {
+    Utilities.sleep(wait);
+    wait = Math.min(wait * 2, 5000);
+    job = BigQuery.Jobs.getQueryResults(data.projectId, jobId);
+  }
+  let headers = [];
+  let rows = [];
+  let pageToken = null;
+  do {
+    const page = BigQuery.Jobs.getQueryResults(data.projectId, jobId, { pageToken: pageToken });
+    if (headers.length === 0 && page.schema && page.schema.fields) {
+      headers = page.schema.fields.map(f => f.name);
+    }
+    (page.rows || []).forEach(row => {
+      const record = {};
+      row.f.forEach((cell, i) => { record[headers[i]] = cell.v; });
+      rows.push(record);
+    });
+    pageToken = page.pageToken;
+  } while (pageToken);
+  return json({ status: 'success', headers: headers, rows: rows });
+}
+
+/**
+ * A dry run only plans the query: nothing is scanned or billed, and no job is
+ * kept — do not call Jobs.get afterwards (it answers "Not found"). The answer
+ * must NOT carry rows, jobComplete or totalRows: Semantix reads those as
+ * "the query really ran".
+ */
+function dryRun(data, withColumns) {
+  if (!data.sql || !data.projectId) throw new Error('Missing SQL or projectId');
+  const job = BigQuery.Jobs.insert({
+    configuration: { dryRun: true, query: { query: data.sql, useLegacySql: false } }
+  }, data.projectId);
+  const stats = job.statistics || {};
+  const bytes = stats.totalBytesProcessed || (stats.query && stats.query.totalBytesProcessed) || '0';
+  if (!withColumns) return json({ status: 'success', totalBytesProcessed: bytes });
+  const schema = stats.query && stats.query.schema;
+  if (!schema || !schema.fields) throw new Error('Dry run returned no result schema');
+  return json({ status: 'success', schema: schema, totalBytesProcessed: bytes });
+}
+
+function json(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 ```
 
 4. Under **Services (+)** → enable the **BigQuery API**.
+
+> **Upgrading an older script.** Scripts written before September 2026 (a single `doPost` that runs every SQL it receives) keep working: Semantix wraps the column probe in `LIMIT 1`, so a sync costs no more than it used to. But Semantix cannot read a SQL table's columns for free through them, so **Schema Editor → Visible Columns → Quick sort → Source order** refuses to run and says why, instead of spending a billed query. Replace the script with the one above and redeploy (**Deploy → Manage deployments → Edit → New version**, same URL) to make column reads free.
 
 ### Step 2: Deploy the Apps Script
 1. Click **Deploy → New deployment**.

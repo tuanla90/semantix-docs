@@ -200,6 +200,145 @@ services:
 
 ## Phương Thức 2: Google Apps Script Proxy (Cho Google Workspace)
 
+Semantix cũng kết nối được BigQuery qua một **Google Apps Script** làm proxy: script chạy truy vấn bằng chính tài khoản Google của bạn, không cần key file service account.
+
+### Bước 1: Tạo Google Apps Script
+1. Mở [script.google.com](https://script.google.com) → **New Project**.
+2. Đặt tên dự án: `Semantix BigQuery Connector`.
+3. Thay toàn bộ code mặc định bằng script proxy bên dưới. Mỗi yêu cầu Semantix gửi đều có trường `action`, và script phải định tuyến theo nó — một script chạy mọi câu SQL nhận được sẽ biến các lần Semantix đọc cấu trúc miễn phí thành truy vấn tính phí.
+
+```javascript
+/**
+ * Proxy BigQuery cho Semantix. Mỗi yêu cầu có một `action`:
+ *   get_projects, get_datasets, get_tables  — duyệt kho
+ *   execute_query                           — chạy truy vấn, trả headers + rows
+ *   estimate_cost                           — dry run: số byte truy vấn sẽ quét
+ *   dry_run_columns                         — dry run: danh sách cột kết quả (miễn phí)
+ */
+function doPost(e) {
+  try {
+    if (!e.postData || !e.postData.contents) throw new Error('No post data received');
+    const data = JSON.parse(e.postData.contents);
+    switch (data.action) {
+      case 'get_projects':    return listProjects();
+      case 'get_datasets':    return listDatasets(data);
+      case 'get_tables':      return listTables(data);
+      case 'execute_query':   return executeQuery(data);
+      case 'estimate_cost':   return dryRun(data, false);
+      case 'dry_run_columns': return dryRun(data, true);
+      default: return json({ status: 'error', message: 'Unknown action: ' + data.action });
+    }
+  } catch (err) {
+    return json({ status: 'error', message: String((err && err.message) || err) });
+  }
+}
+
+function listProjects() {
+  const projects = (BigQuery.Projects.list().projects || []).map(p => ({
+    id: p.projectReference.projectId,
+    name: p.friendlyName || p.projectReference.projectId
+  }));
+  return json({ status: 'success', projects: projects });
+}
+
+function listDatasets(data) {
+  if (!data.projectId) throw new Error('Missing projectId');
+  const datasets = (BigQuery.Datasets.list(data.projectId).datasets || []).map(d => ({
+    id: d.datasetReference.datasetId,
+    location: d.location
+  }));
+  return json({ status: 'success', datasets: datasets });
+}
+
+function listTables(data) {
+  if (!data.projectId || !data.datasetId) throw new Error('Missing projectId or datasetId');
+  const tables = (BigQuery.Tables.list(data.projectId, data.datasetId).tables || []).map(t => ({
+    id: t.tableReference.tableId,
+    type: t.type
+  }));
+  return json({ status: 'success', tables: tables });
+}
+
+function executeQuery(data) {
+  if (!data.sql || !data.projectId) throw new Error('Missing SQL or projectId');
+  let job = BigQuery.Jobs.query({ query: data.sql, useLegacySql: false }, data.projectId);
+  const jobId = job.jobReference.jobId;
+  let wait = 500;
+  while (!job.jobComplete) {
+    Utilities.sleep(wait);
+    wait = Math.min(wait * 2, 5000);
+    job = BigQuery.Jobs.getQueryResults(data.projectId, jobId);
+  }
+  let headers = [];
+  let rows = [];
+  let pageToken = null;
+  do {
+    const page = BigQuery.Jobs.getQueryResults(data.projectId, jobId, { pageToken: pageToken });
+    if (headers.length === 0 && page.schema && page.schema.fields) {
+      headers = page.schema.fields.map(f => f.name);
+    }
+    (page.rows || []).forEach(row => {
+      const record = {};
+      row.f.forEach((cell, i) => { record[headers[i]] = cell.v; });
+      rows.push(record);
+    });
+    pageToken = page.pageToken;
+  } while (pageToken);
+  return json({ status: 'success', headers: headers, rows: rows });
+}
+
+/**
+ * Dry run chỉ lập kế hoạch truy vấn: không quét, không tính phí, không giữ job
+ * — đừng gọi Jobs.get sau đó (sẽ báo "Not found"). Câu trả lời KHÔNG được có
+ * rows, jobComplete hay totalRows: Semantix hiểu những trường đó là
+ * "truy vấn đã chạy thật".
+ */
+function dryRun(data, withColumns) {
+  if (!data.sql || !data.projectId) throw new Error('Missing SQL or projectId');
+  const job = BigQuery.Jobs.insert({
+    configuration: { dryRun: true, query: { query: data.sql, useLegacySql: false } }
+  }, data.projectId);
+  const stats = job.statistics || {};
+  const bytes = stats.totalBytesProcessed || (stats.query && stats.query.totalBytesProcessed) || '0';
+  if (!withColumns) return json({ status: 'success', totalBytesProcessed: bytes });
+  const schema = stats.query && stats.query.schema;
+  if (!schema || !schema.fields) throw new Error('Dry run returned no result schema');
+  return json({ status: 'success', schema: schema, totalBytesProcessed: bytes });
+}
+
+function json(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+```
+
+4. Ở **Services (+)** → bật **BigQuery API**.
+
+> **Nâng cấp script cũ.** Script viết trước tháng 9/2026 (một hàm `doPost` chạy mọi câu SQL nhận được) vẫn dùng được: Semantix bọc câu dò cột trong `LIMIT 1`, nên Đồng bộ không tốn hơn trước. Nhưng qua script cũ Semantix không đọc được cột của bảng SQL miễn phí, nên **Schema Editor → Cột hiển thị → Sắp xếp nhanh → Về thứ tự nguồn** sẽ từ chối và nêu lý do thay vì chạy truy vấn tính phí. Thay script bằng bản ở trên rồi triển khai lại (**Deploy → Manage deployments → Edit → New version**, giữ nguyên URL) để việc đọc cột được miễn phí.
+
+### Bước 2: Triển khai Apps Script
+1. Nhấn **Deploy → New deployment**.
+2. Chọn loại: **Web app**.
+3. Cấu hình:
+   - **Execute as**: Me (tài khoản Google của bạn).
+   - **Who has access**: Anyone.
+4. Nhấn **Deploy** → sao chép **Web App URL** (`https://script.google.com/macros/s/XXXXX/exec`).
+
+### Bước 3: Cấp quyền BigQuery
+Tài khoản Google chạy Apps Script phải có các role BigQuery:
+1. Google Cloud Console → **IAM & Admin → IAM**.
+2. Tìm email tài khoản Google.
+3. Gán:
+   - **BigQuery Data Viewer** — đọc bảng và view.
+   - **BigQuery Job User** — chạy job truy vấn.
+
+### Bước 4: Kết nối trong Semantix
+1. Vào **Studio → DE → Connections → New Connection**.
+2. Chọn **BigQuery**.
+3. Dán **Web App URL** vào ô `Webhook URL`.
+4. Nhập **Project ID**.
+5. Nhấn **Test Connection** → **Save**.
+
 ---
 
 ## Cách Tìm Project ID
